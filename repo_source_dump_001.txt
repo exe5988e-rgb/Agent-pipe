@@ -120,7 +120,7 @@ from pathlib import Path
 WATCH_DIR = Path.home() / "workflows"
 CONFIG = Path.home() / "repo_target.json"
 
-OUTPUT = "repo source dump (B).txt"
+OUTPUT = "repo source dev b.txt"
 MAX_SIZE = 500 * 1024
 INTERVAL = 2
 
@@ -176,7 +176,7 @@ def split_dump(repo_path):
     sections = text.split("//===== TERMUXFILE:")
 
     # remove old chunks
-    for old in repo_path.glob("repo_source_dump_*.txt"):
+    for old in repo_path.glob("repo source dev b_*.txt"):
         old.unlink()
 
     part = 1
@@ -191,7 +191,7 @@ def split_dump(repo_path):
 
         if len((current + block).encode()) > MAX_SIZE:
 
-            outfile = repo_path / f"repo_source_dump_{part:03}.txt"
+            outfile = repo_path / f"repo source dev b_{part:03}.txt"
             outfile.write_text(current)
 
             print("Created:", outfile.name)
@@ -205,7 +205,7 @@ def split_dump(repo_path):
 
     if current:
 
-        outfile = repo_path / f"repo_source_dump_{part:03}.txt"
+        outfile = repo_path / f"repo source dev b_{part:03}.txt"
         outfile.write_text(current)
 
         print("Created:", outfile.name)

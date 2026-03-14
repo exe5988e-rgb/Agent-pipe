@@ -1,0 +1,263 @@
+//===== TERMUXFILE: ai-code.py =====
+import os
+import re
+import sys
+import subprocess
+
+# ===== Only match TERMUXFILE headers =====
+# Example: //===== TERMUXFILE: path =====
+FILE_HEADER = re.compile(
+    r"^[ \t]*//\s*={5,}\s*TERMUXFILE:\s*(.+?)\s*={5,}\s*$",
+    re.IGNORECASE | re.MULTILINE
+)
+
+def sanitize(path):
+    path = path.strip().replace("\\", "/")
+
+    if ".." in path or path.startswith("/") or re.match(r"^[A-Za-z]:", path):
+        raise ValueError(f"Unsafe path: {path}")
+
+    return path
+
+def parse_ai_output(text):
+    matches = list(FILE_HEADER.finditer(text))
+    files = {}
+
+    for i, match in enumerate(matches):
+        file_path = sanitize(match.group(1))
+
+        start = match.end()
+        end = matches[i + 1].start() if i + 1 < len(matches) else len(text)
+
+        code = text[start:end].strip("\n")
+
+        if not code.strip():
+            continue
+
+        if file_path in files:
+            print(f"🔁 Overwriting duplicate file: {file_path}")
+
+        files[file_path] = code
+
+    return files
+
+def write_files(files):
+    for path, content in files.items():
+        dir_path = os.path.dirname(path)
+        if dir_path:
+            os.makedirs(dir_path, exist_ok=True)
+
+        with open(path, "w", encoding="utf-8", newline="\n") as f:
+            f.write(content.rstrip() + "\n")
+
+        print(f"✅ Written: {path}")
+
+def is_git_repo():
+    try:
+        subprocess.run(
+            ["git", "rev-parse", "--is-inside-work-tree"],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            check=True
+        )
+        return True
+    except subprocess.CalledProcessError:
+        return False
+
+def auto_commit(message="AI: generate project files"):
+    if not is_git_repo():
+        print("ℹ️ Not a git repository, skipping commit")
+        return
+
+    try:
+        subprocess.run(["git", "add", "."], check=True)
+        subprocess.run(["git", "commit", "-m", message], check=True)
+        print("📝 Git commit created")
+    except subprocess.CalledProcessError:
+        print("ℹ️ Nothing to commit")
+
+def main():
+    if len(sys.argv) != 2:
+        print("Usage:")
+        print("  python ai-code.py ai-output.txt")
+        sys.exit(1)
+
+    input_file = sys.argv[1]
+
+    if not os.path.exists(input_file):
+        print(f"❌ File not found: {input_file}")
+        sys.exit(1)
+
+    with open(input_file, "r", encoding="utf-8") as f:
+        text = f.read()
+
+    files = parse_ai_output(text)
+
+    print(f"\n📦 Detected {len(files)} TERMUXFILE entries")
+
+    for path in files:
+        print(" -", path)
+
+    if not files:
+        print("⚠️ No TERMUXFILE entries detected")
+        sys.exit(1)
+
+    write_files(files)
+    auto_commit()
+
+if __name__ == "__main__":
+    main()
+
+
+//===== TERMUXFILE: repo_src.py =====
+#!/usr/bin/env python3
+
+import time
+import json
+import subprocess
+from pathlib import Path
+
+WATCH_DIR = Path.home() / "workflows"
+CONFIG = Path.home() / "repo_target.json"
+
+OUTPUT = "repo source dev b.txt"
+MAX_SIZE = 500 * 1024
+INTERVAL = 2
+
+
+def load_repo():
+    return json.loads(CONFIG.read_text())
+
+
+def file_state(root):
+
+    state = {}
+
+    for f in root.rglob("*"):
+        if f.is_file():
+            state[str(f)] = f.stat().st_mtime
+
+    return state
+
+
+def generate_dump(root, output):
+
+    with open(output, "w", encoding="utf-8") as out:
+
+        for f in root.rglob("*"):
+
+            if not f.is_file():
+                continue
+
+            if ".git" in str(f):
+                continue
+
+            try:
+
+                rel = f.relative_to(root)
+
+                out.write(f"\n//===== TERMUXFILE: {rel} =====\n")
+                out.write(f.read_text(errors="ignore"))
+                out.write("\n")
+
+            except:
+                pass
+
+
+def split_dump(repo_path):
+
+    dump_file = repo_path / OUTPUT
+
+    if not dump_file.exists():
+        return
+
+    text = dump_file.read_text(errors="ignore")
+
+    sections = text.split("//===== TERMUXFILE:")
+
+    # remove old chunks
+    for old in repo_path.glob("repo source dev b_*.txt"):
+        old.unlink()
+
+    part = 1
+    current = ""
+
+    for section in sections:
+
+        if not section.strip():
+            continue
+
+        block = "//===== TERMUXFILE:" + section
+
+        if len((current + block).encode()) > MAX_SIZE:
+
+            outfile = repo_path / f"repo source dev b_{part:03}.txt"
+            outfile.write_text(current)
+
+            print("Created:", outfile.name)
+
+            part += 1
+            current = block
+
+        else:
+
+            current += block
+
+    if current:
+
+        outfile = repo_path / f"repo source dev b_{part:03}.txt"
+        outfile.write_text(current)
+
+        print("Created:", outfile.name)
+
+
+def git_push(repo):
+
+    path = repo["path"]
+
+    subprocess.run(["git", "-C", path, "add", "."], check=False)
+    subprocess.run(["git", "-C", path, "commit", "-m", "auto repo dump"], check=False)
+    subprocess.run(["git", "-C", path, "push"], check=False)
+
+
+def main():
+
+    print("Starting repo dump watcher\n")
+
+    repo = load_repo()
+
+    print("Current repo:", repo["name"])
+
+    last = file_state(WATCH_DIR)
+
+    while True:
+
+        time.sleep(INTERVAL)
+
+        new = file_state(WATCH_DIR)
+
+        if new != last:
+
+            repo = load_repo()
+
+            print("Change detected")
+            print("Target repo:", repo["name"])
+
+            repo_path = Path(repo["path"])
+
+            dump_file = repo_path / OUTPUT
+
+            generate_dump(WATCH_DIR, dump_file)
+
+            split_dump(repo_path)
+
+            git_push(repo)
+
+            print("Push complete\n")
+
+            last = new
+
+
+if __name__ == "__main__":
+    main()
+

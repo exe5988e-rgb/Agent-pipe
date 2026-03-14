@@ -1,3 +1,358 @@
+//===== TERMUXFILE: claude_bridge.py =====
+#!/usr/bin/env python3
+"""
+claude_bridge.py  —  Phone B Termux server
+Samsung Galaxy A10s  —  720x1520
+
+Fix v6:
+  - type_prompt() now uses ADBKeyboard broadcast (am broadcast -a ADB_INPUT_TEXT)
+    instead of 'adb shell input text'. ADBKeyboard handles any length and any
+    character — confirmed working on Phone B (tap_3tap_3 typed successfully).
+  - Spaces encoded as %s for ADBKeyboard (same convention as input text).
+  - Special shell chars stripped to avoid broadcast arg parsing issues.
+"""
+
+import json
+import subprocess
+import time
+import re
+from http.server import HTTPServer, BaseHTTPRequestHandler
+from pathlib import Path
+
+PORT          = 8890
+CLAUDE_PKG    = "com.anthropic.claude"
+POLL_INTERVAL = 2.0
+STABLE_COUNT  = 2
+MAX_WAIT      = 120
+SCREEN_W      = 720
+SCREEN_H      = 1520
+ADB_SERIAL    = "192.168.29.110:43241"
+
+LOG_DIR = Path.home() / ".jarvis_logs"
+LOG_DIR.mkdir(exist_ok=True)
+
+# ── ADB helpers ───────────────────────────────────────────────────────────────
+
+def adb(*args, timeout=20) -> subprocess.CompletedProcess:
+    return subprocess.run(["adb", "-s", ADB_SERIAL] + list(str(a) for a in args),
+                          capture_output=True, timeout=timeout)
+
+def shell(*args, timeout=20) -> str:
+    r = adb("shell", *args, timeout=timeout)
+    return r.stdout.decode(errors="replace").strip()
+
+def ui_dump() -> str:
+    shell("uiautomator", "dump", "/sdcard/uidump.xml")
+    r = adb("shell", "cat", "/sdcard/uidump.xml", timeout=10)
+    return r.stdout.decode(errors="replace")
+
+def tap(x, y):
+    shell("input", "tap", str(x), str(y))
+    time.sleep(0.4)
+
+def keyevent(code):
+    shell("input", "keyevent", str(code))
+    time.sleep(0.3)
+
+# ── ADBKeyboard typing ────────────────────────────────────────────────────────
+# Uses: am broadcast -a ADB_INPUT_TEXT --es msg "<text>"
+# Confirmed working on Phone B. Handles any length, no truncation.
+# ADBKeyboard must be set as active IME (already done).
+
+def adb_type(text: str):
+    """
+    Type text into the currently focused field using ADBKeyboard broadcast.
+    Encodes spaces as %s (ADBKeyboard convention).
+    Strips characters that break the broadcast --es arg parsing.
+    """
+    safe = (text
+            .replace("\\", "")
+            .replace('"', "")
+            .replace("'", "")
+            .replace("`", "")
+            .replace("&", "and")
+            .replace("|", " ")
+            .replace(";", " ")
+            .replace("\n", " ")
+            .replace(" ", "%s"))
+
+    # Split into 500-char chunks — ADBKeyboard handles long text but
+    # chunking avoids any broadcast arg length limits on older Android
+    chunk_size = 500
+    chunks = [safe[i:i+chunk_size] for i in range(0, len(safe), chunk_size)]
+
+    for i, chunk in enumerate(chunks):
+        result = shell(
+            "am", "broadcast",
+            "-a", "ADB_INPUT_TEXT",
+            "--es", "msg", chunk,
+            timeout=15
+        )
+        print(f"[bridge] typed chunk {i+1}/{len(chunks)} ({len(chunk)} chars): {result}")
+        if len(chunks) > 1:
+            time.sleep(0.3)
+
+def type_prompt(text: str):
+    """Tap the input field, clear it, type the full prompt via ADBKeyboard."""
+    dump = ui_dump()
+    x, y = find_input_bounds(dump)
+
+    # Focus the field
+    tap(x, y)
+    time.sleep(0.5)
+
+    # Clear existing text
+    keyevent("KEYCODE_CTRL_A")
+    time.sleep(0.2)
+    keyevent("KEYCODE_DEL")
+    time.sleep(0.3)
+
+    # Type via ADBKeyboard
+    adb_type(text)
+    time.sleep(0.8)
+
+    # Verify something landed
+    dump2 = ui_dump()
+    field_text = re.search(
+        r'class="android\.widget\.EditText"[^>]*text="([^"]{5,})"', dump2
+    )
+    if field_text:
+        print(f"[bridge] Field confirmed: {field_text.group(1)[:60]!r}")
+    else:
+        print("[bridge] WARNING: field appears empty after typing")
+
+# ── Claude app control ────────────────────────────────────────────────────────
+
+def ensure_claude_foreground():
+    top = shell("dumpsys", "activity", "activities", "|", "grep", "mCurrentFocus")
+    if CLAUDE_PKG not in top:
+        print("[bridge] Launching Claude...")
+        shell("monkey", "-p", CLAUDE_PKG, "-c",
+              "android.intent.category.LAUNCHER", "1")
+        time.sleep(4)
+    else:
+        print("[bridge] Claude already foreground")
+
+def start_new_conversation():
+    print("[bridge] Starting new conversation...")
+    keyevent(4)
+    time.sleep(1)
+
+    tap(670, 80)
+    time.sleep(2)
+
+    dump = ui_dump()
+    if "New conversation" in dump or "Message Claude" in dump or "Send a message" in dump:
+        print("[bridge] New conversation ready")
+        return
+
+    tap(360, 80)
+    time.sleep(2)
+    print("[bridge] New conversation fallback done")
+
+def find_input_bounds(dump_xml: str):
+    m = re.search(
+        r'class="android\.widget\.EditText"[^>]*bounds="\[(\d+),(\d+)\]\[(\d+),(\d+)\]"',
+        dump_xml
+    )
+    if m:
+        x = (int(m.group(1)) + int(m.group(3))) // 2
+        y = (int(m.group(2)) + int(m.group(4))) // 2
+        print(f"[bridge] Found EditText at ({x},{y})")
+        return x, y
+    return 320, 1440
+
+def tap_send():
+    keyevent("66")
+    time.sleep(1.5)
+
+# ── Response extraction ───────────────────────────────────────────────────────
+
+SKIP_TEXTS = {
+    "Send a message",
+    "Message Claude",
+    "New conversation",
+    "Chat with Claude",
+    "Chat with Claude\u2026",
+    "Chat with Claude...",
+    "Reply to Claude\u2026",
+    "Attach",
+    "Send",
+    "Stop",
+    "Retry",
+    "Claude can make mistakes.",
+    "Please double check responses.",
+    "Sonnet 4.6",
+    "Today",
+    "New chat",
+    "Chats",
+    "Projects",
+    "Artifacts",
+    "Recents",
+    "Search Chats",
+    "Select",
+    "Open menu",
+}
+
+SKIP_PREFIXES = (
+    "You are a mobile",
+    "You are an Android",
+    "Your job:",
+    "TASK:",
+    "SCREEN",
+    "HISTORY",
+    "ACTION",
+    "Available Actions",
+    "Navigation Strategy",
+    "Output ONLY",
+    "Choose ONE",
+    "RECENT ACTIONS",
+    "WARNING:",
+)
+
+def is_still_generating(dump_xml: str) -> bool:
+    return 'content-desc="Stop"' in dump_xml or "Stop generating" in dump_xml
+
+def extract_last_response(dump_xml: str) -> str:
+    texts = re.findall(r'text="([^"]{3,})"', dump_xml)
+    candidates = [
+        t for t in texts
+        if t not in SKIP_TEXTS
+        and not any(t.startswith(p) for p in SKIP_PREFIXES)
+        and not t.startswith("  ")
+    ]
+    return candidates[-1] if candidates else ""
+
+def extract_action_from_response(full_text: str) -> str:
+    lines = full_text.strip().splitlines()
+    action_re = re.compile(
+        r"^\s*(tap\s+\d+|tap\s+\d+[,x]\d+|type\s+.+|swipe\s+(up|down|left|right)"
+        r"|back|home|enter|done)\s*$",
+        re.I
+    )
+    for line in lines:
+        if action_re.match(line.strip()):
+            return line.strip()
+    for line in reversed(lines):
+        if line.strip():
+            return line.strip()
+    return full_text.strip()
+
+def wait_for_response(prompt_preview: str) -> str:
+    print(f"[bridge] Waiting for: {prompt_preview[:50]!r}")
+    last_text = ""
+    stable    = 0
+    deadline  = time.time() + MAX_WAIT
+
+    time.sleep(4)
+
+    while time.time() < deadline:
+        dump = ui_dump()
+
+        if is_still_generating(dump):
+            print("[bridge] ...generating...")
+            stable = 0
+            time.sleep(POLL_INTERVAL)
+            continue
+
+        current = extract_last_response(dump)
+
+        if current and current == last_text:
+            stable += 1
+            print(f"[bridge] Stable {stable}/{STABLE_COUNT}: {current[:60]!r}")
+            if stable >= STABLE_COUNT:
+                action = extract_action_from_response(current)
+                print(f"[bridge] Done. Action: {action!r}")
+                return action
+        else:
+            stable    = 0
+            last_text = current
+            if current:
+                print(f"[bridge] Response: {current[:60]!r}")
+
+        time.sleep(POLL_INTERVAL)
+
+    print("[bridge] Timeout")
+    return last_text or "home"
+
+def get_claude_response(prompt: str) -> str:
+    ensure_claude_foreground()
+    time.sleep(1)
+    start_new_conversation()
+    time.sleep(1)
+    type_prompt(prompt)
+    tap_send()
+    return wait_for_response(prompt)
+
+# ── HTTP server ───────────────────────────────────────────────────────────────
+
+class BridgeHandler(BaseHTTPRequestHandler):
+
+    def log_message(self, fmt, *args):
+        print(f"[bridge] {fmt % args}")
+
+    def send_json(self, code, data):
+        body = json.dumps(data).encode()
+        self.send_response(code)
+        self.send_header("Content-Type", "application/json")
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.end_headers()
+        self.wfile.write(body)
+
+    def do_GET(self):
+        if self.path == "/health":
+            self.send_json(200, {"success": True, "service": "claude_bridge",
+                                 "screen": f"{SCREEN_W}x{SCREEN_H}",
+                                 "phone_b": ADB_SERIAL})
+        else:
+            self.send_json(404, {"error": "not found"})
+
+    def do_POST(self):
+        length = int(self.headers.get("Content-Length", 0))
+        body   = self.rfile.read(length)
+        try:
+            data = json.loads(body.decode())
+        except Exception:
+            self.send_json(400, {"success": False, "error": "invalid JSON"})
+            return
+
+        if self.path == "/chat":
+            prompt = data.get("prompt", "").strip()
+            if not prompt:
+                self.send_json(400, {"success": False, "error": "missing prompt"})
+                return
+
+            print(f"\n[bridge] ══ PROMPT ══\n{prompt[:300]}\n{'='*40}")
+            try:
+                response = get_claude_response(prompt)
+                print(f"[bridge] ══ ACTION ══\n{response}\n{'='*40}\n")
+                self.send_json(200, {"success": True, "response": response})
+            except Exception as e:
+                import traceback
+                traceback.print_exc()
+                self.send_json(500, {"success": False, "error": str(e)})
+        else:
+            self.send_json(404, {"error": "not found"})
+
+# ── Main ─────────────────────────────────────────────────────────────────────
+
+if __name__ == "__main__":
+    print("╔══════════════════════════════════════════════════════╗")
+    print("║  JARVIS CLAUDE BRIDGE  —  Phone B (Galaxy A10s)     ║")
+    print("╚══════════════════════════════════════════════════════╝")
+    print(f"  Screen : {SCREEN_W}x{SCREEN_H}")
+    print(f"  Port   : {PORT}")
+    print(f"  ADB    : {ADB_SERIAL}")
+    print(f"  IME    : ADBKeyboard")
+    print()
+    server = HTTPServer(("0.0.0.0", PORT), BridgeHandler)
+    try:
+        server.serve_forever()
+    except KeyboardInterrupt:
+        print("\n[bridge] Stopped.")
+        server.shutdown()
+
+
 //===== TERMUXFILE: ai-code.py =====
 import os
 import re
@@ -109,6 +464,52 @@ if __name__ == "__main__":
     main()
 
 
+//===== TERMUXFILE: repo_select.py =====
+#!/usr/bin/env python3
+
+import json
+from pathlib import Path
+
+CONFIG = Path.home() / "repo_target.json"
+
+REPOS = {
+    "1": {
+        "name": "JarvisMerged",
+        "path": str(Path.home() / "JarvisMerged"),
+        "url": "https://github.com/exe5988e-rgb/JarvisMerged.git"
+    },
+    "2": {
+        "name": "Devtools",
+        "path": str(Path.home() / "Devtools"),
+        "url": "https://github.com/amirshams8/Devtools.git"
+    },
+    "3": {
+        "name": "Agent-pipe",
+        "path": str(Path.home() / "Agent-pipe"),
+        "url": "https://github.com/exe5988e-rgb/Agent-pipe.git"
+    }
+}
+
+print("\nSelect repo:\n")
+
+for k,v in REPOS.items():
+    print(f"{k} -> {v['name']}")
+
+choice = input("\nChoice: ").strip()
+
+if choice not in REPOS:
+    print("Invalid choice")
+    exit()
+
+repo = REPOS[choice]
+
+CONFIG.write_text(json.dumps(repo, indent=2))
+
+print("\nSelected repo:")
+print(repo["name"])
+print("\nWatcher will now push to this repo.\n")
+
+
 //===== TERMUXFILE: repo_src.py =====
 #!/usr/bin/env python3
 
@@ -217,7 +618,8 @@ def git_push(repo):
 
     subprocess.run(["git", "-C", path, "add", "."], check=False)
     subprocess.run(["git", "-C", path, "commit", "-m", "auto repo dump"], check=False)
-    subprocess.run(["git", "-C", path, "push"], check=False)
+    # --set-upstream handles first push and all subsequent pushes
+    subprocess.run(["git", "-C", path, "push", "--set-upstream", "origin", "main"], check=False)
 
 
 def main():

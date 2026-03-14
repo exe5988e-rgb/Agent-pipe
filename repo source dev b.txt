@@ -110,6 +110,52 @@ if __name__ == "__main__":
     main()
 
 
+//===== TERMUXFILE: repo_select.py =====
+#!/usr/bin/env python3
+
+import json
+from pathlib import Path
+
+CONFIG = Path.home() / "repo_target.json"
+
+REPOS = {
+    "1": {
+        "name": "JarvisMerged",
+        "path": str(Path.home() / "JarvisMerged"),
+        "url": "https://github.com/exe5988e-rgb/JarvisMerged.git"
+    },
+    "2": {
+        "name": "Devtools",
+        "path": str(Path.home() / "Devtools"),
+        "url": "https://github.com/amirshams8/Devtools.git"
+    },
+    "3": {
+        "name": "Agent-pipe",
+        "path": str(Path.home() / "Agent-pipe"),
+        "url": "https://github.com/exe5988e-rgb/Agent-pipe.git"
+    }
+}
+
+print("\nSelect repo:\n")
+
+for k,v in REPOS.items():
+    print(f"{k} -> {v['name']}")
+
+choice = input("\nChoice: ").strip()
+
+if choice not in REPOS:
+    print("Invalid choice")
+    exit()
+
+repo = REPOS[choice]
+
+CONFIG.write_text(json.dumps(repo, indent=2))
+
+print("\nSelected repo:")
+print(repo["name"])
+print("\nWatcher will now push to this repo.\n")
+
+
 //===== TERMUXFILE: repo_src.py =====
 #!/usr/bin/env python3
 

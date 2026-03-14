@@ -264,7 +264,8 @@ def git_push(repo):
 
     subprocess.run(["git", "-C", path, "add", "."], check=False)
     subprocess.run(["git", "-C", path, "commit", "-m", "auto repo dump"], check=False)
-    subprocess.run(["git", "-C", path, "push"], check=False)
+    # --set-upstream handles first push and all subsequent pushes
+    subprocess.run(["git", "-C", path, "push", "--set-upstream", "origin", "main"], check=False)
 
 
 def main():

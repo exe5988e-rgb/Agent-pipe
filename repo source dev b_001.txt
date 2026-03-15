@@ -332,25 +332,29 @@ _OPEN_TASK_RE = re.compile(
 
 _SCREEN_RE = re.compile(r"Screen\s*:\s*(.+)", re.IGNORECASE)
 
+# Exact set — no substring matching to avoid "YouTube home" triggering bypass
 _LAUNCHER_SCREENS = {
-    "home screen", "launcher", "home screen launcher",
-    "app drawer", "home", "lock screen",
+    "home screen launcher",
+    "app drawer",
+    "home screen",
+    "launcher",
+    "lock screen",
 }
 
 def _is_on_launcher(prompt: str) -> bool:
-    """Returns True only if the prompt Screen line shows home/launcher."""
+    """Exact match only — prevents YouTube/WhatsApp home screens triggering bypass."""
     m = _SCREEN_RE.search(prompt)
     if not m:
         return False
     screen = m.group(1).strip().lower()
-    return any(s in screen for s in _LAUNCHER_SCREENS)
+    screen = screen.split("(")[0].strip()
+    print(f"[bridge] OPT4 screen: {screen!r} is_launcher={screen in _LAUNCHER_SCREENS}")
+    return screen in _LAUNCHER_SCREENS
 
 def extract_task_app(prompt: str):
     """
-    Return package only if:
-      1. Task starts with open/launch/start
-      2. Current screen is home/launcher
-    Otherwise return None — fall through to Claude.
+    Return package only if task starts with open/launch AND screen is launcher.
+    Exact screen match prevents false positives inside apps.
     """
     if not _is_on_launcher(prompt):
         return None

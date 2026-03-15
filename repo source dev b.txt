@@ -331,19 +331,41 @@ _OPEN_TASK_RE = re.compile(
     re.IGNORECASE
 )
 
+_SCREEN_RE = re.compile(r"Screen\s*:\s*(.+)", re.IGNORECASE)
+
+# Exact set — no substring matching to avoid "YouTube home" triggering bypass
+_LAUNCHER_SCREENS = {
+    "home screen launcher",
+    "app drawer",
+    "home screen",
+    "launcher",
+    "lock screen",
+}
+
+def _is_on_launcher(prompt: str) -> bool:
+    """Exact match only — prevents YouTube/WhatsApp home screens triggering bypass."""
+    m = _SCREEN_RE.search(prompt)
+    if not m:
+        return False
+    screen = m.group(1).strip().lower()
+    screen = screen.split("(")[0].strip()
+    print(f"[bridge] OPT4 screen: {screen!r} is_launcher={screen in _LAUNCHER_SCREENS}")
+    return screen in _LAUNCHER_SCREENS
+
 def extract_task_app(prompt: str):
     """
-    If prompt is a simple open/launch task for a known app, return the
-    package name. Otherwise return None to fall through to Claude.
+    Return package only if task starts with open/launch AND screen is launcher.
+    Exact screen match prevents false positives inside apps.
     """
+    if not _is_on_launcher(prompt):
+        return None
     m = _OPEN_TASK_RE.search(prompt)
     if not m:
         return None
     app_name = m.group(1).strip().lower()
-    # Direct match
-    if app_name in APP_PACKAGES:
-        return APP_PACKAGES[app_name]
-    # Partial match — e.g. "open whatsapp messenger" → "whatsapp"
+    first_word = app_name.split()[0] if app_name else ""
+    if first_word in APP_PACKAGES:
+        return APP_PACKAGES[first_word]
     for key, pkg in APP_PACKAGES.items():
         if key in app_name:
             return pkg
@@ -1030,6 +1052,152 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+//===== TERMUXFILE: test/jarvis-agent/reasoning/prompt_builder.py =====
+"""
+reasoning/prompt_builder.py  --  Jarvis Agent  (Phase 3, navigation-aware)
+===========================================================================
+Fix v2:
+  - type action added to ACTION_MENU
+  - Navigation strategy updated with in-app search instructions
+  - Screen context improved: YouTube, WhatsApp specific descriptions
+  - retry_reason passed as-is (no "not understood" wrapper)
+"""
+
+SYSTEM_HEADER = (
+    "You are an Android control agent.\n"
+    "Choose ONE action. Reply with ONLY the action. No explanation. No punctuation."
+)
+
+ACTION_MENU = """\
+Available Actions:
+  tap <id>         -- tap element by number (e.g. tap 3)
+  type <text>      -- type text into focused input field (e.g. type hello world)
+  swipe up         -- scroll down OR open app drawer
+  swipe down       -- scroll up OR close app drawer
+  swipe left       -- go to next home screen page
+  swipe right      -- go to previous home screen page
+  back             -- press back button
+  home             -- go to home screen
+  done             -- task is complete
+
+Rules:
+  - Output exactly one line
+  - For tap, write ONLY: tap <number>  (e.g. tap 3)
+  - Do NOT write element names: tap 3 is CORRECT, tap Search is WRONG
+  - Do NOT explain your choice\
+"""
+
+NAVIGATION_STRATEGY = """\
+Navigation Strategy:
+  On home screen / launcher:
+    - If target app visible: tap it directly
+    - If not visible: swipe up to open app drawer, then tap the app
+
+  Inside an app to search for something:
+    - Look for elements with text: Search, Search YouTube, Find, 🔍
+    - Tap the search element first
+    - Then use: type <your search query>
+    - After typing, look for a submit/search button or use: enter
+
+  General rules:
+    - If you already tried an action and nothing changed: try a DIFFERENT element
+    - Never tap the same element more than once in a row
+    - Once task is fully complete: output done\
+"""
+
+
+def _screen_context(ui_elements: list) -> str:
+    if not ui_elements:
+        return "Screen: unknown (no elements detected)"
+
+    packages = {el.get("package", "") for el in ui_elements}
+    texts    = [el.get("text", "").lower() for el in ui_elements]
+    texts_set = set(texts)
+
+    # Detect app drawer
+    if any("launcher" in p or "nexus" in p or "pixel" in p for p in packages):
+        if any(t in texts_set for t in ["all apps", "app drawer", "search apps"]):
+            return "Screen: app drawer"
+        return "Screen: home screen launcher"
+
+    # Detect Termux
+    if any("termux" in p for p in packages):
+        return "Screen: Termux terminal (press home first to reach launcher)"
+
+    # Detect settings
+    if any("settings" in p for p in packages):
+        return "Screen: Settings"
+
+    # Detect YouTube
+    if any("youtube" in p for p in packages):
+        if any("search youtube" in t or "search" == t for t in texts):
+            return "Screen: YouTube home (tap Search element then type your query)"
+        if any("search" in t for t in texts):
+            return "Screen: YouTube search (type your search query)"
+        return "Screen: YouTube (look for Search element to find videos)"
+
+    # Detect WhatsApp
+    if any("whatsapp" in p for p in packages):
+        if any(t in texts_set for t in ["type a message", "message", "type a message\u2026"]):
+            return "Screen: WhatsApp conversation (type message then tap send)"
+        if any(t in texts_set for t in ["chats", "new chat"]):
+            return "Screen: WhatsApp home (tap New Chat to start a conversation)"
+        return "Screen: WhatsApp"
+
+    # Generic: show dominant package
+    pkg_counts = {}
+    for el in ui_elements:
+        p = el.get("package", "")
+        if p:
+            pkg_counts[p] = pkg_counts.get(p, 0) + 1
+    if pkg_counts:
+        dominant = max(pkg_counts, key=pkg_counts.get)
+        app_name = dominant.split(".")[-1].capitalize()
+        return f"Screen: {app_name}"
+
+    return "Screen: unknown"
+
+
+def build_prompt(task: str, ui_elements: list, history: list = None,
+                 retry_reason: str = None) -> str:
+    lines = [
+        SYSTEM_HEADER,
+        "",
+        f"TASK: {task}",
+        "",
+        _screen_context(ui_elements),
+        "",
+        "SCREEN ELEMENTS:",
+    ]
+
+    if ui_elements:
+        for el in ui_elements:
+            lines.append(f"  {el['id']}  {el['text']}")
+    else:
+        lines.append("  (no elements -- screen may be loading, try swipe or home)")
+
+    if retry_reason:
+        lines += [
+            "",
+            f"WARNING: {retry_reason}",
+            "Reply with ONLY: tap <number>  OR  type <text>  OR  swipe up/down/left/right  OR  back  OR  home  OR  done",
+        ]
+
+    if history:
+        lines += ["", "RECENT ACTIONS:"] + [f"  {h}" for h in history[-4:]]
+
+    lines += [
+        "",
+        NAVIGATION_STRATEGY,
+        "",
+        ACTION_MENU,
+        "",
+        "Your action:",
+    ]
+
+    return "\n".join(lines)
 
 
 //===== TERMUXFILE: test/jarvis-agent/reasoning/llm_client.py =====

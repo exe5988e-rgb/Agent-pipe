@@ -1,0 +1,1026 @@
+//===== TERMUXFILE: workflows/test/jarvis-agent/reasoning/action_parser.py =====
+"""
+reasoning/action_parser.py  --  Jarvis Agent  (Phase 2, interface-fixed)
+=========================================================================
+Output schema matches from_action() in executor/input_event.py exactly.
+
+CONTRACTS (do not change without updating input_event.py from_action):
+
+  tap by element id  : {"action":"tap", "target": int}
+  tap by coordinate  : {"action":"tap", "x": int, "y": int}
+  swipe by direction : {"action":"swipe", "direction": str}
+  swipe by coords    : {"action":"swipe", "x1":int,"y1":int,"x2":int,"y2":int,"duration_ms":int}
+  type text          : {"action":"type", "text": str}
+  key events         : {"action":"back"} / {"action":"home"} / {"action":"enter"}
+  terminal           : {"action":"done"}
+  parse failure      : {"action":"retry", "_warn": str}   <-- NOT "home"
+
+Phase-2 additions:
+  1. normalize_llm_output() -- strips markdown / "Action:" prefixes
+  2. Fuzzy name->id resolution when LLM outputs "tap WhatsApp"
+  3. Retry on parse fail instead of silent home fallback
+  4. UI-TARS structured call support (AST fallback)
+
+All tap results carry exactly: {"action":"tap","target":int}
+OR {"action":"tap","x":int,"y":int}  -- nothing else for tap.
+"""
+
+from __future__ import annotations
+
+import re
+import ast
+import logging
+from difflib import SequenceMatcher
+from typing import Optional
+
+# -- Logging ------------------------------------------------------------------
+
+log = logging.getLogger("action_parser")
+if not log.handlers:
+    _h = logging.StreamHandler()
+    _h.setFormatter(logging.Formatter("[parser] %(levelname)s %(message)s"))
+    log.addHandler(_h)
+log.setLevel(logging.DEBUG)
+
+# -- Constants ----------------------------------------------------------------
+
+_FUZZY_THRESHOLD = 0.60
+
+# -- Regex: prototype plain-text grammar --------------------------------------
+
+# TAP by id -- accepts: tap 1 / tap [1] / tap[1] / tap [ 1 ] / tap [1] WhatsApp
+_TAP_ID    = re.compile(r"\btap\s*\[?\s*(\d+)\s*\]?",          re.I)
+_TAP_XY    = re.compile(r"\btap\s+(\d+)\s*[,x]\s*(\d+)",       re.I)
+_CLICK_XY  = re.compile(r"\bclick\s+(\d{2,4})\s*[,]\s*(\d{3,4})", re.I)
+_TYPE      = re.compile(r"\b(?:type|input|write|send)\s+(.+)", re.I)
+_SWIPE_DIR = re.compile(r"\b(?:swipe|scroll)\s+(up|down|left|right)", re.I)
+_BACK      = re.compile(r"\b(back|press_back)\b",               re.I)
+_HOME      = re.compile(r"\b(home|press_home)\b",               re.I)
+_ENTER     = re.compile(r"\benter\b",                           re.I)
+_DONE      = re.compile(r"\b(done|finished|complete|success)\b",re.I)
+
+# Name-only tap: "tap WhatsApp" / "open Chrome"
+_TAP_NAME  = re.compile(
+    r"^\s*(?:tap|click|open|select|press|launch)\s+([A-Za-z][A-Za-z0-9_\s\-]{0,30})\s*$",
+    re.I,
+)
+
+# -- Regex: UI-TARS structured syntax -----------------------------------------
+
+_TARS_CLICK  = re.compile(
+    r"(?:click|left_single|left_double)\s*\(\s*(?:start_box|point)\s*=\s*['\"]?\((\d+)\s*,\s*(\d+)\)",
+    re.I,
+)
+_TARS_TYPE   = re.compile(r"type\s*\(\s*content\s*=\s*['\"](.+?)['\"]", re.I)
+_TARS_DONE   = re.compile(r"finished\s*\(",                              re.I)
+_TARS_BACK   = re.compile(r"press_back\s*\(",                            re.I)
+_TARS_HOME   = re.compile(r"press_home\s*\(",                            re.I)
+_TARS_SCROLL = re.compile(r"scroll\s*\(.*?direction\s*=\s*['\"](\w+)['\"]", re.I)
+
+_RE_QUOTED = re.compile(r'["\u201c\u201d`](.+?)["\u201c\u201d`]')
+
+_SWIPE_DELTAS = {
+    "up":    (0, -600),
+    "down":  (0,  600),
+    "left":  (-400, 0),
+    "right": ( 400, 0),
+}
+
+
+def _swipe_from_dir(direction: str) -> dict:
+    dx, dy = _SWIPE_DELTAS.get(direction.lower(), (0, -600))
+    return {"action": "swipe",
+            "x1": 540, "y1": 1200,
+            "x2": 540 + dx, "y2": 1200 + dy,
+            "duration_ms": 400}
+
+
+# -- Layer 1: Normalizer ------------------------------------------------------
+
+def normalize_llm_output(text: str) -> str:
+    """
+    Strip LLM noise before regex parsing.
+    - Take first non-empty line
+    - Strip markdown bold / italic / backtick wrappers
+    - Strip leading 'Action:' / 'Output:' / 'Response:' labels
+    """
+    if not text:
+        return ""
+    for line in text.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        line = re.sub(r"^\*{1,2}|^\`{1,3}|\*{1,2}$|\`{1,3}$", "", line).strip()
+        line = re.sub(r"^(action|output|response|answer)\s*:\s*", "", line, flags=re.I).strip()
+        if line:
+            log.debug("normalized: %r", line)
+            return line
+    return ""
+
+
+# -- Fuzzy name resolution ----------------------------------------------------
+
+def _fuzzy_ratio(a: str, b: str) -> float:
+    return SequenceMatcher(None, a.lower(), b.lower()).ratio()
+
+
+def _name_to_id(name: str, ui_elements: list) -> Optional[int]:
+    """
+    Fuzzy-match name against ui_elements texts.
+    Returns element id (int) or None if no match above threshold.
+    """
+    if not ui_elements or not name:
+        return None
+    name_lc = name.lower().strip()
+    best_el, best_score = None, 0.0
+    for el in ui_elements:
+        el_text = str(el.get("text", "")).strip()
+        if not el_text:
+            continue
+        el_lc = el_text.lower()
+        if name_lc == el_lc:
+            log.debug("exact name match: %r -> id=%s", name, el.get("id"))
+            return el["id"]
+        score = 0.95 if (el_lc.startswith(name_lc) or name_lc.startswith(el_lc)) \
+                else _fuzzy_ratio(name_lc, el_lc)
+        if score > best_score:
+            best_score, best_el = score, el
+    if best_score >= _FUZZY_THRESHOLD and best_el:
+        log.debug("fuzzy match: %r -> id=%s (%.2f)", name, best_el.get("id"), best_score)
+        return best_el["id"]
+    log.debug("no match for %r (best=%.2f)", name, best_score)
+    return None
+
+
+# -- UI-TARS AST fallback -----------------------------------------------------
+
+def _tars_ast_parse(line: str) -> Optional[dict]:
+    try:
+        node = ast.parse(line.strip(), mode="eval")
+        if not isinstance(node, ast.Expression):
+            return None
+        call = node.body
+        if not isinstance(call, ast.Call):
+            return None
+        func_name = (call.func.id if isinstance(call.func, ast.Name)
+                     else call.func.attr if isinstance(call.func, ast.Attribute)
+                     else None)
+        kwargs = {}
+        for kw in call.keywords:
+            if isinstance(kw.value, ast.Constant):
+                kwargs[kw.arg] = kw.value.value
+            elif isinstance(kw.value, ast.Str):
+                kwargs[kw.arg] = kw.value.s
+        return {"function": func_name, "args": kwargs}
+    except Exception:
+        return None
+
+
+def _from_tars_ast(parsed: Optional[dict]) -> Optional[dict]:
+    if parsed is None:
+        return None
+    fn   = (parsed.get("function") or "").lower()
+    args = parsed.get("args", {})
+    if fn in ("click", "left_single", "left_double", "hover"):
+        box = args.get("start_box") or args.get("point")
+        if box:
+            coords = re.findall(r"\d+", str(box))
+            if len(coords) >= 2:
+                return {"action": "tap", "x": int(coords[0]), "y": int(coords[1])}
+    elif fn == "type":
+        return {"action": "type", "text": args.get("content", "")}
+    elif fn == "finished":
+        return {"action": "done"}
+    elif fn == "press_back":
+        return {"action": "back"}
+    elif fn == "press_home":
+        return {"action": "home"}
+    elif fn == "scroll":
+        return _swipe_from_dir(args.get("direction", "down"))
+    return None
+
+
+# -- Per-line parser ----------------------------------------------------------
+
+def _parse_line(line: str, ui_elements: list) -> Optional[dict]:
+    if re.match(r"action\s*:", line, re.I):
+        line = re.sub(r"^action\s*:\s*", "", line, flags=re.I).strip()
+
+    m = _TAP_XY.search(line)
+    if m:
+        return {"action": "tap", "x": int(m.group(1)), "y": int(m.group(2))}
+
+    m = _CLICK_XY.search(line)
+    if m:
+        return {"action": "tap", "x": int(m.group(1)), "y": int(m.group(2))}
+
+    m = _TAP_ID.search(line)
+    if m:
+        return {"action": "tap", "target": int(m.group(1))}
+
+    m = _TAP_NAME.match(line)
+    if m:
+        name  = m.group(1).strip()
+        el_id = _name_to_id(name, ui_elements)
+        if el_id is not None:
+            return {"action": "tap", "target": el_id}
+        log.warning("name tap %r not in UI -> retry", name)
+        return {"action": "retry", "_warn": f"element {name!r} not found in UI"}
+
+    m = _TYPE.search(line)
+    if m:
+        raw  = m.group(1).strip()
+        qm   = _RE_QUOTED.search(raw)
+        text = qm.group(1) if qm else raw
+        return {"action": "type", "text": text}
+
+    m = _SWIPE_DIR.search(line)
+    if m:
+        return _swipe_from_dir(m.group(1))
+
+    if _BACK.search(line):  return {"action": "back"}
+    if _HOME.search(line):  return {"action": "home"}
+    if _ENTER.search(line): return {"action": "enter"}
+    if _DONE.search(line):  return {"action": "done"}
+
+    m = _TARS_CLICK.search(line)
+    if m:
+        return {"action": "tap", "x": int(m.group(1)), "y": int(m.group(2))}
+
+    m = _TARS_TYPE.search(line)
+    if m:
+        return {"action": "type", "text": m.group(1)}
+
+    if _TARS_DONE.search(line):  return {"action": "done"}
+    if _TARS_BACK.search(line):  return {"action": "back"}
+    if _TARS_HOME.search(line):  return {"action": "home"}
+
+    m = _TARS_SCROLL.search(line)
+    if m:
+        return _swipe_from_dir(m.group(1))
+
+    result = _from_tars_ast(_tars_ast_parse(line))
+    if result:
+        return result
+
+    return None
+
+
+# -- Public API ---------------------------------------------------------------
+
+def parse_action(llm_output: str, ui_elements: Optional[list] = None) -> dict:
+    """
+    Parse raw LLM output -> action dict.
+
+    Schema guaranteed to match from_action() in executor/input_event.py:
+      {"action":"tap","target":int}         -- tap by element id
+      {"action":"tap","x":int,"y":int}      -- tap by coordinate
+      {"action":"swipe",...}                -- swipe
+      {"action":"type","text":str}          -- type
+      {"action":"back|home|enter|done"}     -- keys / terminal
+      {"action":"retry","_warn":str}        -- parse failure (NOT "home")
+    """
+    if ui_elements is None:
+        ui_elements = []
+
+    if not llm_output or not llm_output.strip():
+        log.warning("empty LLM output -> retry")
+        return {"action": "retry", "_warn": "empty LLM output"}
+
+    normalized = normalize_llm_output(llm_output)
+    seen = set()
+    for line in ([normalized] + [l.strip() for l in llm_output.splitlines()]):
+        if not line or line in seen:
+            continue
+        seen.add(line)
+        result = _parse_line(line, ui_elements)
+        if result is not None:
+            log.info("parsed %r -> %s", line[:60], result)
+            return result
+
+    log.warning("unrecognised output -> retry")
+    return {
+        "action": "retry",
+        "_warn" : f"unrecognised: {llm_output.strip()[:60]!r}",
+    }
+
+
+# -- Self-test ----------------------------------------------------------------
+
+if __name__ == "__main__":
+    logging.basicConfig(level=logging.WARNING)
+
+    _UI = [
+        {"id": 1, "text": "WhatsApp", "x": 160,  "y": 1200},
+        {"id": 2, "text": "Chrome",   "x": 480,  "y": 1200},
+        {"id": 3, "text": "Camera",   "x": 800,  "y": 1200},
+        {"id": 4, "text": "Settings", "x": 160,  "y": 1600},
+        {"id": 5, "text": "YouTube",  "x": 480,  "y": 1600},
+        {"id": 6, "text": "Files",    "x": 800,  "y": 1600},
+        {"id": 7, "text": "Search",   "x": 540,  "y":  200},
+    ]
+
+    _CASES = [
+        ("tap 1",              "tap",   1,    None),
+        ("tap [1]",            "tap",   1,    None),
+        ("tap[1]",             "tap",   1,    None),
+        ("tap [ 1 ]",          "tap",   1,    None),
+        ("tap [1] WhatsApp",   "tap",   1,    None),
+        ("tap 5 YouTube",      "tap",   5,    None),
+        ("tap WhatsApp",       "tap",   1,    None),
+        ("open Camera",        "tap",   3,    None),
+        ("select youtube",     "tap",   5,    None),
+        ("tap 540,960",        "tap",   None, 540),
+        ("back",               "back",  None, None),
+        ("home",               "home",  None, None),
+        ("done",               "done",  None, None),
+        ("finished",           "done",  None, None),
+        ("swipe up",           "swipe", None, None),
+        ("scroll down",        "swipe", None, None),
+        ("type hello world",   "type",  None, None),
+        ("Action: tap [1]",    "tap",   1,    None),
+        ("**tap 2**",          "tap",   2,    None),
+        ("",                   "retry", None, None),
+        ("gibberish xyz abc",  "retry", None, None),
+        ("click(start_box='(160,1200)')", "tap", None, 160),
+        ("finished()",         "done",  None, None),
+        ("press_back()",       "back",  None, None),
+    ]
+
+    passed = failed = 0
+    print("\n" + "=" * 62)
+    print("  ACTION PARSER SELF-TEST  (interface-contract edition)")
+    print("=" * 62)
+    for raw, exp_act, exp_tgt, exp_x in _CASES:
+        r   = parse_action(raw, _UI)
+        act = r.get("action")
+        tgt = r.get("target")
+        x   = r.get("x")
+        ok  = (act == exp_act
+               and (exp_tgt is None or tgt == exp_tgt)
+               and (exp_x   is None or x   == exp_x))
+        sym = "PASS" if ok else "FAIL"
+        if ok: passed += 1
+        else:  failed += 1
+        detail = f"act={act}"
+        if tgt is not None: detail += f" target={tgt}"
+        if x   is not None: detail += f" x={x}"
+        w = r.get("_warn")
+        if w: detail += f"  WARN:{w}"
+        print(f"  {sym}  {raw!r:42s} -> {detail}")
+        if not ok:
+            print(f"       EXPECTED act={exp_act} target={exp_tgt} x={exp_x}")
+    print("=" * 62)
+    print(f"  {passed} passed  |  {failed} failed")
+    print("=" * 62 + "\n")
+    import sys
+    sys.exit(1 if failed else 0)
+
+
+//===== TERMUXFILE: workflows/test/jarvis-agent/reasoning/prompt_builder.py =====
+"""
+reasoning/prompt_builder.py  --  Jarvis Agent  (Phase 2, interface-fixed)
+==========================================================================
+Hardened grammar: ONLY "tap <id>" in output.
+retry_reason: bad LLM output fed back as correction hint.
+"""
+
+SYSTEM_HEADER = (
+    "You are an Android control agent.\n"
+    "Choose ONE action. Reply with ONLY the action. No explanation. No punctuation."
+)
+
+ACTION_MENU = (
+    "Available Actions:\n"
+    "  tap <id>    (e.g. tap 1)   -- use the NUMBER, not the name\n"
+    "  back\n"
+    "  home\n"
+    "  done\n\n"
+    "Rules:\n"
+    "  - Output exactly one line\n"
+    "  - For tap, write ONLY: tap <number>  (e.g. tap 3)\n"
+    "  - Do NOT write element names: tap WhatsApp is WRONG\n"
+    "  - Do NOT explain your choice"
+)
+
+
+def build_prompt(task: str, ui_elements: list, history: list = None,
+                 retry_reason: str = None) -> str:
+    lines = [SYSTEM_HEADER, "", f"TASK: {task}", "", "SCREEN ELEMENTS:"]
+    for el in ui_elements:
+        lines.append(f"  {el['id']}  {el['text']}")
+
+    if retry_reason:
+        lines += [
+            "",
+            f"WARNING: Your last output was not understood: '{retry_reason}'",
+            "Reply with ONLY: tap <number>  OR  back  OR  home  OR  done",
+        ]
+
+    if history:
+        lines += ["", "RECENT ACTIONS:"] + [f"  {h}" for h in history[-4:]]
+
+    lines += ["", ACTION_MENU, "", "Your action:"]
+    return "\n".join(lines)
+
+
+//===== TERMUXFILE: workflows/test/jarvis-agent/agent/controller.py =====
+"""
+agent/controller.py  --  Jarvis Agent  (Phase 3)
+=================================================
+Key changes vs Phase 2:
+  - parse_ui() now called with adb_device argument (live UIAutomator2)
+  - _is_goal_achieved() wired to real is_goal_achieved() from ui_parser
+  - Empty UI list handled: agent re-prompts instead of crashing
+  - adb_device passed through all the way from run() to parse_ui()
+"""
+
+import sys, os, time, argparse
+from typing import Optional
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, ROOT)
+
+from perception.screen_capture import capture_screen
+from perception.ui_parser       import parse_ui, is_goal_achieved   # real parser
+from reasoning.prompt_builder   import build_prompt
+from reasoning.llm_client       import generate, health_check
+from reasoning.action_parser    import parse_action
+from executor.adb_executor      import execute
+from agent.state                import AgentState
+
+DEFAULT_DEVICE = "192.168.29.48:44047"
+DEFAULT_TASK   = "Open WhatsApp"
+DEFAULT_MODEL  = os.path.expanduser(
+    "~/ai-workspace/llama.cpp/models/Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf"
+)
+LOOP_SLEEP_SEC = 1.5
+MAX_RETRIES    = 3
+
+
+# -- Validation layer ---------------------------------------------------------
+
+def _validate_action(action: dict, ui_elements: list) -> Optional[str]:
+    act = action.get("action", "")
+    if act == "tap":
+        tid = action.get("target")
+        x   = action.get("x")
+        if tid is not None:
+            el = next((e for e in ui_elements if e.get("id") == tid), None)
+            if el is None:
+                return f"tap target id={tid} not in UI list ({len(ui_elements)} elements)"
+        elif x is None:
+            return "tap has neither 'target' nor 'x'/'y'"
+    elif act == "type":
+        if not action.get("text"):
+            return "type action has empty text"
+    return None
+
+
+# -- Single step --------------------------------------------------------------
+
+def run_step(state: AgentState, device: str, model_path: str,
+             retry_reason: str = None) -> str:
+    """Returns: "ok" | "retry:<text>" | "done" | "error:<msg>" """
+    print(f"\n{'='*55}\n  STEP {state.step+1}  |  {state.task}\n{'='*55}")
+
+    # Screenshot
+    try:
+        img_path = capture_screen(adb_device=device)
+        state.last_screen = img_path
+    except Exception as e:
+        return f"error:screencap: {e}"
+
+    # Live UI parse (Phase 3: real UIAutomator2, not mock)
+    try:
+        ui = parse_ui(img_path, adb_device=device)
+        state.last_ui = ui
+    except Exception as e:
+        return f"error:ui_parse: {e}"
+
+    # Handle empty UI -- device may be animating, retry
+    if not ui:
+        print("[step] UI empty -- device may be mid-transition, retrying")
+        return f"retry:empty UI list"
+
+    # Goal check BEFORE prompting LLM (saves a round-trip if already done)
+    if is_goal_achieved(state.task, device, ui):
+        state.done = True
+        return "done"
+
+    prompt = build_prompt(state.task, ui,
+                          history=state.history,
+                          retry_reason=retry_reason)
+
+    # LLM
+    try:
+        llm_output = generate(prompt, model_path=model_path)
+    except Exception as e:
+        return f"error:llm: {e}"
+
+    print(f"[step] LLM raw : {llm_output!r}")
+
+    action = parse_action(llm_output, ui)
+    print(f"[step] Parsed  : {action}")
+
+    if action.get("action") == "retry":
+        return f"retry:{llm_output.strip()[:80]}"
+
+    err = _validate_action(action, ui)
+    if err:
+        print(f"[step] VALIDATION FAIL: {err}")
+        return f"retry:{llm_output.strip()[:80]}"
+
+    execute(action, ui, adb_device=device)
+    state.record(action, ui)
+
+    if action.get("action") == "done":
+        state.done = True
+        return "done"
+
+    print(f"[step] {state.summary()}")
+    return "ok"
+
+
+# -- Main loop ----------------------------------------------------------------
+
+def run(task: str, device: str, model_path: str, max_steps: int = 20):
+    print(f"\n{'#'*55}")
+    print(f"  JARVIS AGENT  --  {task}")
+    print(f"  Device : {device}")
+    print(f"  Model  : {os.path.basename(model_path)}")
+    print(f"{'#'*55}\n")
+
+    hc = health_check()
+    print(f"[init] backends: {hc}")
+    if not any([hc["proxy"], hc["llamafile"], hc["binary"]]):
+        print("[init] WARNING: no LLM backend. Run: bash ~/jarvis_server_init.sh")
+
+    state        = AgentState(task=task, max_steps=max_steps)
+    retry_count  = 0
+    retry_reason = None
+
+    while not state.is_finished():
+        try:
+            result = run_step(state, device=device, model_path=model_path,
+                              retry_reason=retry_reason)
+        except KeyboardInterrupt:
+            print("\n[controller] Interrupted.")
+            break
+        except Exception as e:
+            print(f"[controller] Unhandled: {e}")
+            time.sleep(3)
+            state.step += 1
+            retry_count = 0; retry_reason = None
+            continue
+
+        if result == "done":
+            print(f"\n[controller] Task complete in {state.step} steps.")
+            break
+
+        elif result == "ok":
+            retry_count = 0; retry_reason = None
+            time.sleep(LOOP_SLEEP_SEC)
+
+        elif result.startswith("retry:"):
+            retry_reason = result[len("retry:"):]
+            retry_count += 1
+            print(f"[controller] Retry {retry_count}/{MAX_RETRIES} -- reason: {retry_reason!r}")
+            if retry_count >= MAX_RETRIES:
+                print("[controller] RETRY BUDGET EXHAUSTED -- pressing HOME, stopping.")
+                execute({"action": "home"}, [], adb_device=device)
+                break
+            time.sleep(0.5)
+
+        elif result.startswith("error:"):
+            msg = result[len("error:"):]
+            print(f"[controller] Error: {msg} -- retrying in 3s")
+            time.sleep(3)
+            state.step += 1
+            retry_count = 0; retry_reason = None
+
+    print(f"\n[controller] History ({state.step} steps):")
+    for i, h in enumerate(state.history, 1):
+        print(f"  {i}. {h}")
+
+
+if __name__ == "__main__":
+    p = argparse.ArgumentParser()
+    p.add_argument("--task",      default=DEFAULT_TASK)
+    p.add_argument("--device",    default=DEFAULT_DEVICE)
+    p.add_argument("--model",     default=DEFAULT_MODEL)
+    p.add_argument("--max-steps", default=20, type=int)
+    args = p.parse_args()
+    run(args.task, args.device, args.model, args.max_steps)
+
+
+//===== TERMUXFILE: workflows/test/jarvis-agent/perception/ui_parser.py =====
+"""
+perception/ui_parser.py  --  Jarvis Agent  (Phase 3)
+=====================================================
+Real UIAutomator2 UI parser via ADB.
+Directly replaces ui_mock_parser.py -- same parse_ui() signature.
+
+Implementation based on AppAgent and_controller.py:
+  - traverse_tree() pattern for clickable + focusable element extraction
+  - MIN_DIST deduplication (merges elements at nearly identical centres)
+  - get_xml() dump+pull pattern adapted for our adb_device string
+
+Key differences from AppAgent:
+  - No config.yaml dependency -- constants inline
+  - Returns [{id, text, x, y, bounds, package, cls, clickable}] directly
+    (our agent's native element dict format)
+  - id is 1-based integer (not AppAgent's uid string)
+  - Fallback: dumpsys window visibility check when uiautomator fails
+  - NEVER returns mock/static data
+
+Goal detection:
+  - get_top_activity() via dumpsys (DroidBot device.py pattern)
+  - task_implies_package() maps task string -> expected package prefix
+  - is_goal_achieved() called by controller each step
+"""
+
+from __future__ import annotations
+
+import os
+import re
+import subprocess
+import tempfile
+import xml.etree.ElementTree as ET
+from typing import Optional
+
+# -- Config -------------------------------------------------------------------
+
+# AppAgent MIN_DIST: skip elements whose centres are within this pixel distance
+# of an already-added element. Prevents duplicate entries for nested views.
+MIN_DIST = 30
+
+# On-device XML dump path (AppAgent uses /sdcard/ too)
+_DUMP_PATH = "/sdcard/jarvis_ui_dump.xml"
+
+# ADB timeouts
+_DUMP_TIMEOUT  = 20   # uiautomator dump can be slow
+_FETCH_TIMEOUT = 10
+
+# System packages to ignore entirely
+_SKIP_PACKAGES = {"com.android.systemui"}
+
+
+# -- ADB helpers --------------------------------------------------------------
+
+def _adb(device_serial: str, *args, timeout: int = 15) -> subprocess.CompletedProcess:
+    cmd = ["adb", "-s", device_serial] + [str(a) for a in args]
+    return subprocess.run(cmd, capture_output=True, timeout=timeout)
+
+
+def _shell(device_serial: str, *args, timeout: int = 15) -> str:
+    r = _adb(device_serial, "shell", *args, timeout=timeout)
+    return r.stdout.decode(errors="replace").strip()
+
+
+# -- AppAgent traverse_tree (adapted) -----------------------------------------
+
+def _get_elem_id(elem) -> str:
+    """
+    AppAgent get_id_from_element() -- stable uid string for dedup.
+    Used internally; not exposed in our output dict.
+    """
+    bounds = elem.attrib.get("bounds", "[0,0][0,0]")[1:-1].split("][")
+    try:
+        x1, y1 = map(int, bounds[0].split(","))
+        x2, y2 = map(int, bounds[1].split(","))
+    except Exception:
+        x1 = y1 = x2 = y2 = 0
+    w, h = x2 - x1, y2 - y1
+
+    rid = elem.attrib.get("resource-id", "")
+    if rid:
+        uid = rid.replace(":", ".").replace("/", "_")
+    else:
+        uid = f"{elem.attrib.get('class', 'view')}_{w}_{h}"
+
+    desc = elem.attrib.get("content-desc", "")
+    if desc and len(desc) < 20:
+        uid += "_" + desc.replace("/", "_").replace(" ", "").replace(":", "_")
+
+    return uid
+
+
+def _parse_bounds(bounds_str: str) -> Optional[tuple]:
+    """
+    Parse '[x1,y1][x2,y2]' -> (x1, y1, x2, y2).
+    AppAgent and_controller.py uses the same split pattern.
+    """
+    try:
+        parts = bounds_str[1:-1].split("][")
+        x1, y1 = map(int, parts[0].split(","))
+        x2, y2 = map(int, parts[1].split(","))
+        return x1, y1, x2, y2
+    except Exception:
+        return None
+
+
+def _centre(x1, y1, x2, y2) -> tuple:
+    return (x1 + x2) // 2, (y1 + y2) // 2
+
+
+def _traverse_tree(xml_path: str, attrib: str) -> list:
+    """
+    AppAgent traverse_tree() adapted:
+    - Walks XML file via iterparse (memory efficient)
+    - Collects nodes where attrib == "true"
+    - Deduplicates by MIN_DIST centre proximity
+    - Returns list of raw dicts with bounds + metadata
+    """
+    collected = []  # list of (centre_x, centre_y, elem_attribs)
+    path = []
+
+    for event, elem in ET.iterparse(xml_path, ["start", "end"]):
+        if event == "start":
+            path.append(elem)
+
+            if elem.attrib.get(attrib) == "true":
+                bounds_str = elem.attrib.get("bounds", "")
+                bounds = _parse_bounds(bounds_str)
+                if not bounds:
+                    continue
+
+                x1, y1, x2, y2 = bounds
+                cx, cy = _centre(x1, y1, x2, y2)
+
+                # Skip zero-area elements
+                if (x2 - x1) * (y2 - y1) < 100:
+                    continue
+
+                # Skip system UI
+                pkg = elem.attrib.get("package", "")
+                if pkg in _SKIP_PACKAGES:
+                    continue
+
+                # AppAgent MIN_DIST dedup
+                too_close = False
+                for c in collected:
+                    dist = ((cx - c["cx"]) ** 2 + (cy - c["cy"]) ** 2) ** 0.5
+                    if dist <= MIN_DIST:
+                        too_close = True
+                        break
+                if too_close:
+                    continue
+
+                # Label: prefer text, then content-desc
+                text  = elem.attrib.get("text", "").strip()
+                desc  = elem.attrib.get("content-desc", "").strip()
+                label = text or desc
+
+                collected.append({
+                    "cx"       : cx,
+                    "cy"       : cy,
+                    "x1"       : x1, "y1": y1, "x2": x2, "y2": y2,
+                    "text"     : label,
+                    "package"  : pkg,
+                    "cls"      : elem.attrib.get("class", ""),
+                    "clickable": elem.attrib.get("clickable") == "true",
+                    "resource_id": elem.attrib.get("resource-id", ""),
+                })
+
+        if event == "end":
+            if path:
+                path.pop()
+
+    return collected
+
+
+# -- XML fetch ----------------------------------------------------------------
+
+def _fetch_xml(device_serial: str) -> Optional[str]:
+    """
+    AppAgent get_xml() pattern:
+      1. uiautomator dump to /sdcard/
+      2. pull to local temp file
+      3. return local path
+
+    Returns local XML path or None on failure.
+    """
+    # Step 1: dump
+    dump_result = _shell(
+        device_serial, "uiautomator", "dump", _DUMP_PATH,
+        timeout=_DUMP_TIMEOUT
+    )
+    if "ERROR" in dump_result.upper() or not dump_result:
+        print(f"[ui_parser] uiautomator dump failed: {dump_result!r}")
+        return None
+
+    # Step 2: pull to temp file
+    tmp = tempfile.NamedTemporaryFile(suffix=".xml", delete=False)
+    tmp.close()
+
+    pull = _adb(device_serial, "pull", _DUMP_PATH, tmp.name, timeout=_FETCH_TIMEOUT)
+    if pull.returncode != 0:
+        print(f"[ui_parser] pull failed: {pull.stderr.decode(errors='replace').strip()}")
+        os.unlink(tmp.name)
+        return None
+
+    return tmp.name
+
+
+# -- Merge clickable + focusable (AppAgent task_executor.py pattern) ----------
+
+def _merge_elem_lists(clickable: list, focusable: list) -> list:
+    """
+    AppAgent task_executor.py lines 3181-3194:
+    Start with clickable list, add focusable elements that aren't
+    too close to any already-added element.
+    """
+    merged = list(clickable)
+    for f in focusable:
+        too_close = False
+        for c in merged:
+            dist = ((f["cx"] - c["cx"]) ** 2 + (f["cy"] - c["cy"]) ** 2) ** 0.5
+            if dist <= MIN_DIST:
+                too_close = True
+                break
+        if not too_close:
+            merged.append(f)
+    return merged
+
+
+# -- Public: parse_ui (drop-in replacement for ui_mock_parser.parse_ui) -------
+
+def parse_ui(image_path: str, adb_device: str = None) -> list:
+    """
+    Parse live UI from device via UIAutomator2 dump.
+    AppAgent-style: clickable + focusable elements, MIN_DIST dedup.
+
+    Args:
+        image_path : screenshot path (kept for API compat, not used here)
+        adb_device : ADB device serial e.g. "192.168.29.48:44047"
+                     Required for real parsing. If None, returns [].
+
+    Returns:
+        List of element dicts, 1-based id, sorted top-left to bottom-right:
+        [{
+            "id"       : int,       # 1-based, stable within this call
+            "text"     : str,       # display label (text or content-desc)
+            "x"        : int,       # tap centre x
+            "y"        : int,       # tap centre y
+            "bounds"   : (x1,y1,x2,y2),
+            "package"  : str,
+            "cls"      : str,
+            "clickable": bool,
+            "resource_id": str,
+        }]
+        Returns [] if dump fails -- controller handles empty UI gracefully.
+    """
+    if not adb_device:
+        print("[ui_parser] WARNING: no adb_device provided -- returning empty UI")
+        return []
+
+    xml_path = _fetch_xml(adb_device)
+    if not xml_path:
+        print("[ui_parser] XML fetch failed -- returning empty UI")
+        return []
+
+    try:
+        clickable  = _traverse_tree(xml_path, "clickable")
+        focusable  = _traverse_tree(xml_path, "focusable")
+        raw        = _merge_elem_lists(clickable, focusable)
+    except Exception as e:
+        print(f"[ui_parser] parse error: {e}")
+        return []
+    finally:
+        try:
+            os.unlink(xml_path)
+        except Exception:
+            pass
+
+    if not raw:
+        print("[ui_parser] WARNING: no elements found in UI dump")
+        return []
+
+    # Sort top-left to bottom-right (AppAgent ordering, consistent with prompt)
+    raw.sort(key=lambda e: (e["y"], e["x"]))
+
+    # Assign 1-based IDs
+    elements = []
+    for i, r in enumerate(raw, 1):
+        elements.append({
+            "id"        : i,
+            "text"      : r["text"] or f"element_{i}",
+            "x"         : r["cx"],
+            "y"         : r["cy"],
+            "bounds"    : (r["x1"], r["y1"], r["x2"], r["y2"]),
+            "package"   : r["package"],
+            "cls"       : r["cls"],
+            "clickable" : r["clickable"],
+            "resource_id": r["resource_id"],
+        })
+
+    print(f"[ui_parser] live -- {len(elements)} elements from {adb_device}")
+    return elements
+
+
+# -- Goal detection -----------------------------------------------------------
+
+# Task keyword -> package prefix mapping
+# Extend this dict as you add more tasks
+_TASK_PACKAGE_MAP = {
+    "whatsapp"  : "com.whatsapp",
+    "chrome"    : "com.android.chrome",
+    "youtube"   : "com.google.android.youtube",
+    "camera"    : "com.android.camera",
+    "settings"  : "com.android.settings",
+    "gmail"     : "com.google.android.gm",
+    "maps"      : "com.google.android.apps.maps",
+    "instagram" : "com.instagram.android",
+    "twitter"   : "com.twitter.android",
+    "spotify"   : "com.spotify.music",
+    "telegram"  : "org.telegram.messenger",
+    "photos"    : "com.google.android.apps.photos",
+    "files"     : "com.google.android.apps.nbu.files",
+    "calculator": "com.google.android.calculator",
+    "calendar"  : "com.google.android.calendar",
+    "clock"     : "com.google.android.deskclock",
+    "contacts"  : "com.google.android.contacts",
+    "phone"     : "com.google.android.dialer",
+    "messages"  : "com.google.android.apps.messaging",
+}
+
+
+def get_top_activity(device_serial: str) -> Optional[str]:
+    """
+    DroidBot device.py get_top_activity_name() pattern.
+    Returns 'com.whatsapp/.HomeActivity' style string or None.
+    """
+    out = _shell(device_serial, "dumpsys", "activity", "activities", timeout=10)
+
+    # DroidBot regex: look for top of history stack
+    m = re.search(
+        r"\*\s*Hist\s*#\d+:\s*ActivityRecord\{[^ ]+\s+[^ ]+\s+([^ ]+)\s+t\d+\}",
+        out
+    )
+    if m:
+        return m.group(1)
+
+    # Fallback: mResumedActivity (works on more Android versions)
+    m = re.search(r"mResumedActivity[:\s]+ActivityRecord\{[^ ]+\s+[^ ]+\s+([^ ]+)", out)
+    if m:
+        return m.group(1)
+
+    return None
+
+
+def task_implies_package(task: str) -> Optional[str]:
+    """
+    Map task string to expected package prefix.
+    e.g. "Open WhatsApp" -> "com.whatsapp"
+    Returns None if task doesn't imply a specific app.
+    """
+    task_lc = task.lower()
+    for keyword, package in _TASK_PACKAGE_MAP.items():
+        if keyword in task_lc:
+            return package
+    return None
+
+
+def is_goal_achieved(task: str, device_serial: str, ui_elements: list) -> bool:
+    """
+    Goal detection for controller.py _is_goal_achieved().
+
+    Strategy (in order):
+    1. Activity check: top activity package matches task's expected package
+    2. UI element check: expected app name appears in live UI elements
+       (catches cases where dumpsys regex fails on some Android versions)
+
+    Returns True if goal is likely achieved, False otherwise.
+    """
+    expected_pkg = task_implies_package(task)
+    if not expected_pkg:
+        # No package mapping -- can't auto-detect, rely on LLM "done"
+        return False
+
+    # Strategy 1: activity package check
+    activity = get_top_activity(device_serial)
+    if activity:
+        # activity is like "com.whatsapp/.HomeActivity"
+        current_pkg = activity.split("/")[0]
+        if current_pkg.startswith(expected_pkg):
+            print(f"[goal] achieved via activity: {activity}")
+            return True
+
+    # Strategy 2: UI element majority check
+    # When the app is open, MOST elements belong to its package.
+    # A single icon on the home screen also carries the app's package, so
+    # we require >50% of elements from the expected package to confirm
+    # the app is actually in the foreground (not just an icon on launcher).
+    if ui_elements:
+        match_count = sum(
+            1 for el in ui_elements
+            if el.get("package", "").startswith(expected_pkg)
+        )
+        ratio = match_count / len(ui_elements)
+        if ratio >= 0.5:
+            print(f"[goal] achieved via UI majority ({match_count}/{len(ui_elements)} = {ratio:.0%})")
+            return True
+
+    return False
+

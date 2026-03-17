@@ -19013,6 +19013,90 @@
           "y": 2744
         }
       ]
+    },
+    "583c296ce79a": {
+      "screen_id": "583c296ce79a",
+      "package": "com.android.vending",
+      "activity": "com.android.vending/.AssetBrowserActivity",
+      "name": "vending_assetbrowseractivity",
+      "labels": [
+        "Change profile picture.",
+        "Manage your Google Account"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Change profile picture.",
+          "resource_id": "com.android.vending:id/0_resource_name_obfuscated",
+          "cls": "android.widget.FrameLayout",
+          "x": 620,
+          "y": 447
+        },
+        {
+          "text": "Manage your Google Account",
+          "resource_id": "com.android.vending:id/0_resource_name_obfuscated",
+          "cls": "android.widget.Button",
+          "x": 619,
+          "y": 818
+        },
+        {
+          "text": "",
+          "resource_id": "com.android.vending:id/0_resource_name_obfuscated",
+          "cls": "android.view.ViewGroup",
+          "x": 620,
+          "y": 1042
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.FrameLayout",
+          "x": 620,
+          "y": 1424
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.FrameLayout",
+          "x": 620,
+          "y": 1662
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.FrameLayout",
+          "x": 620,
+          "y": 1865
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.FrameLayout",
+          "x": 620,
+          "y": 2068
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.FrameLayout",
+          "x": 620,
+          "y": 2271
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.FrameLayout",
+          "x": 620,
+          "y": 2474
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.FrameLayout",
+          "x": 620,
+          "y": 2675
+        }
+      ]
     }
   },
   "transitions": {
@@ -19236,7 +19320,8 @@
     "7571051ef9ea|element_598_2385": "8853acfb0c72",
     "7571051ef9ea|element_1208_2120": "68dbc2f46e71",
     "7571051ef9ea|element_1208_2385": "04321b652bb5",
-    "7571051ef9ea|element_946_237": "e45a3fbcbc8c"
+    "7571051ef9ea|element_946_237": "e45a3fbcbc8c",
+    "7571051ef9ea|element_1114_237": "583c296ce79a"
   }
 }
 

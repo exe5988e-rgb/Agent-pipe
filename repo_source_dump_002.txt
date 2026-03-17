@@ -42006,7 +42006,7 @@
         "Choose area",
         "element_30"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {
@@ -45111,7 +45111,8 @@
     "90b2e5af0eb8|tap:element_7": "9331db4b6d02",
     "be9769a7d6b5|back": "3012bc5865d3",
     "3012bc5865d3|back": "26544eec0abc",
-    "26544eec0abc|swipe": "dbe1dfad9ec0"
+    "26544eec0abc|swipe": "dbe1dfad9ec0",
+    "dbe1dfad9ec0|tap:element_9": "f68c7157ae35"
   }
 }
 

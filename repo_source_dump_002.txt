@@ -25180,7 +25180,7 @@
         "Card menu Ashish Chanchlani admits Ekaki led to \u2018huge loss\u2019, reveals writing Stranger Things-like scene 3 years ago | Interview",
         "element_20"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {
@@ -26144,7 +26144,8 @@
     "d4c06a03f487|tap:element_6": "5d7a9179dd74",
     "5d7a9179dd74|tap:element_7": "17687597cdcc",
     "00f1f507607b|tap:Start voice search": "ac5e0b570c7c",
-    "ac5e0b570c7c|type": "7e24cdda1771"
+    "ac5e0b570c7c|type": "7e24cdda1771",
+    "7e24cdda1771|tap:element_7": "00f1f507607b"
   }
 }
 

@@ -9922,6 +9922,124 @@ java.lang.IllegalArgumentException: Argument expected after "text"
 [parser] DEBUG normalized: 'tap 6'
 [parser] INFO parsed 'tap 6' -> {'action': 'tap', 'target': 6}
 
+########################################################
+  JARVIS  |  Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 239 screens (0 tainted), 296 transitions
+    whatsapp             137 screens
+    youtube              51 screens
+    vending              21 screens
+    chrome               12 screens
+    settings             6 screens
+    termux               5 screens
+    launcher             5 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+  TransitionMemory: 296 transitions (252 confirmed, threshold=2)
+[init] task_apps (ordered): ['chrome', 'whatsapp']
+
+========================================================
+  STEP 1  |  Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3602749 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=58e885a4cc16 elements=26
+[step] UI: ['Clock', '12', ':', '13', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[OPT4v2] launcher -> launching chrome (com.android.chrome)
+[llm] OPT4v2 am start: com.android.chrome
+[OPT4v2] app_index -> 1/2
+
+========================================================
+  STEP 2  |  Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (395560 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 45 elements from 192.168.29.48:34011
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=a0f21c2115d6 elements=45
+[step] UI: ['Open the homepage', 'element_2', 'google.com/search?q=weather+today+ranchi&oq=weather+today+&gs_lcrp=EgZjaHJvbWUqDQgBEAAYgwEYsQMYgAQyBggAEEUYOTINCAEQABiDARixAxiABDIHCAIQABiABDIKCAMQABixAxiABDI', 'See 20 tabs', 'Customise and control Google Chrome', 'element_6', 'Google', 'Google Account: Amir Shams (amirshamse8@gmail.com)']
+[tm] transition changed: 4203f6dd32c9|opt4_launch:chrome 00f1f507 -> ec2d5cc0
+[map] transition: launcher_launcher --[opt4_launch:chrome]--> chrome_main
+[map] screen: chrome_main (ec2d5cc0)
+[skill] matched: 'open chrome and go to'  score=1.00  act_match=True
+[skill] cannot resolve tap target: 'support.google.com/youtube/answer/7640706?hl=%@'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 3'
+[step] LLM: 'tap 3'
+[step] action: {'action': 'tap', 'target': 3}
+[input] dispatching: TouchEvent(x=592, y=237)
+[input] adb -s 192.168.29.48:34011 shell input tap 592 237
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[step] step=2/30 done=False history=['opt4_launch:chrome', 'tap [3] google.com/search?q=weather+today+ranchi&oq=weather+today+&gs_lcrp=EgZjaHJvbWUqDQgBEAAYgwEYsQMYgAQyBggAEEUYOTINCAEQABiDARixAxiABDIHCAIQABiABDIKCAMQABixAxiABDI']
+
+========================================================
+  STEP 3  |  Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1164416 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 22 elements from 192.168.29.48:34011
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=ea2f8e1f1e66 elements=22
+[step] UI: ['element_1', 'element_2', 'Search Google or type URL', 'Start voice search', 'Search with your camera using Google Lens', '16 suggested items in list below.', 'element_7', 'Share link to search results page for: weather today ranchi. Source: google.com']
+[map] new screen: chrome_main (557559bbb916)
+[map] transition: chrome_main --[tap:See 20 tabs]--> chrome_main
+[map] screen: chrome_main (557559bb)
+[skill] matched: 'open chrome and go to'  score=1.00  act_match=True
+[skill] cannot resolve tap target: 'support.google.com/youtube/answer/7640706?hl=%@'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'type wikipedia.org'
+[step] LLM: 'type wikipedia.org'
+[step] action: {'action': 'type', 'text': 'wikipedia.org'}
+[input] dispatching: SetTextEvent('wikipedia.org')
+[input] adb -s 192.168.29.48:34011 shell input text wikipedia.org
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[step] step=3/30 done=False history=['opt4_launch:chrome', 'tap [3] google.com/search?q=weather+today+ranchi&oq=weather+today+&gs_lcrp=EgZjaHJvbWUqDQgBEAAYgwEYsQMYgAQyBggAEEUYOTINCAEQABiDARixAxiABDIHCAIQABiABDIKCAMQABixAxiABDI', "type 'wikipedia.org'"]
+
+========================================================
+  STEP 4  |  Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1155963 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 11 elements from 192.168.29.48:34011
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=889695b1c754 elements=11
+[step] UI: ['element_1', 'element_2', 'wikipedia.org', 'Clear input', '4 suggested items in list below.', 'element_6', 'element_7', 'element_8']
+[map] new screen: chrome_main (8f57bf05dc92)
+[map] transition: chrome_main --[type]--> chrome_main
+[map] screen: chrome_main (8f57bf05)
+[skill] matched: 'open chrome and go to'  score=1.00  act_match=True
+[skill] cannot resolve tap target: 'support.google.com/youtube/answer/7640706?hl=%@'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 6'
+[step] LLM: 'tap 6'
+[step] action: {'action': 'tap', 'target': 6}
+[input] dispatching: TouchEvent(x=620, y=433)
+[input] adb -s 192.168.29.48:34011 shell input tap 620 433
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[step] step=4/30 done=False history=['opt4_launch:chrome', 'tap [3] google.com/search?q=weather+today+ranchi&oq=weather+today+&gs_lcrp=EgZjaHJvbWUqDQgBEAAYgwEYsQMYgAQyBggAEEUYOTINCAEQABiDARixAxiABDIHCAIQABiABDIKCAMQABixAxiABDI', "type 'wikipedia.org'", 'tap [6] element_6']
+
+========================================================
+  STEP 5  |  Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (310166 bytes)
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash
@@ -11443,253 +11561,5 @@ echo "📦 llamafile can run models directly!"
 echo ""
 echo "Start server with:"
 echo "  ./llamafile -m ~/ai-workspace/llama.cpp/models/Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf --server --port 8080 --host 127.0.0.1"
-
-
-//===== TERMUXFILE: test/llamafile_proxy.py =====
-#!/usr/bin/env python3
-"""
-ENHANCED PROXY - Executes commands in Termux properly via file queue
-Works around Android sandbox limitations
-"""
-from http.server import HTTPServer, BaseHTTPRequestHandler
-import json
-import requests
-import subprocess
-import os
-import time
-from pathlib import Path
-
-LLAMAFILE_URL = "http://127.0.0.1:8080"
-PORT = 8888
-
-# Command queue directory
-QUEUE_DIR = Path.home() / ".jarvis_queue"
-QUEUE_DIR.mkdir(exist_ok=True)
-
-class EnhancedProxyHandler(BaseHTTPRequestHandler):
-    def log_message(self, format, *args):
-        print(f"[{self.log_date_time_string()}] {format % args}")
-    
-    def send_json(self, code, data):
-        response = json.dumps(data, indent=2).encode()
-        self.send_response(code)
-        self.send_header('Content-Type', 'application/json')
-        self.send_header('Access-Control-Allow-Origin', '*')
-        self.end_headers()
-        self.wfile.write(response)
-    
-    def do_OPTIONS(self):
-        self.send_response(200)
-        self.send_header('Access-Control-Allow-Origin', '*')
-        self.send_header('Access-Control-Allow-Methods', 'GET, POST')
-        self.send_header('Access-Control-Allow-Headers', 'Content-Type')
-        self.end_headers()
-    
-    def do_GET(self):
-        if self.path == '/health':
-            try:
-                response = requests.get(f"{LLAMAFILE_URL}/health", timeout=2)
-                if response.status_code == 200:
-                    self.send_json(200, {
-                        "status": "healthy",
-                        "model": "Qwen2.5-Coder-3B",
-                        "backend": "llamafile",
-                        "executor": "enhanced"
-                    })
-                else:
-                    self.send_json(503, {"status": "unhealthy"})
-            except:
-                self.send_json(503, {"status": "unhealthy"})
-        else:
-            self.send_json(404, {"error": "Not found"})
-    
-    def do_POST(self):
-        try:
-            content_length = int(self.headers['Content-Length'])
-            body = self.rfile.read(content_length)
-            data = json.loads(body.decode())
-            
-            # ======= CHAT ENDPOINT =======
-            if self.path == '/chat_sync':
-                query = data.get('query', '').strip()
-                if not query:
-                    self.send_json(400, {"error": "Missing query"})
-                    return
-                
-                print(f"\n[CHAT] {query}")
-                
-                response = requests.post(
-                    f"{LLAMAFILE_URL}/v1/chat/completions",
-                    json={
-                        "messages": [{"role": "user", "content": query}],
-                        "max_tokens": 100,
-                        "temperature": 0.7
-                    },
-                    timeout=30
-                )
-                
-                if response.status_code != 200:
-                    self.send_json(500, {"success": False, "error": "LLM error"})
-                    return
-                
-                result = response.json()
-                text = result['choices'][0]['message']['content']
-                print(f"[RESPONSE] {text}")
-                
-                self.send_json(200, {"success": True, "response": text})
-            
-            # ======= COMMAND GENERATION =======
-            elif self.path == '/generate_sync':
-                query = data.get('query', '').strip()
-                if not query:
-                    self.send_json(400, {"error": "Missing query"})
-                    return
-                
-                print(f"\n[GENERATE] {query}")
-                
-                prompt = f"""Generate a Termux/Android shell command for: {query}
-
-Requirements:
-- Single line command only
-- Use Termux-compatible syntax
-- No placeholders or variables
-- Use termux-* commands when appropriate (termux-notification, termux-toast, etc.)
-- Output ONLY the command
-
-Command:"""
-                
-                response = requests.post(
-                    f"{LLAMAFILE_URL}/v1/chat/completions",
-                    json={
-                        "messages": [{"role": "user", "content": prompt}],
-                        "max_tokens": 50,
-                        "temperature": 0.3,
-                        "stop": ["\n"]
-                    },
-                    timeout=30
-                )
-                
-                if response.status_code != 200:
-                    self.send_json(500, {"success": False, "error": "LLM error"})
-                    return
-                
-                result = response.json()
-                command = result['choices'][0]['message']['content'].strip().strip('`"\'')
-                
-                print(f"[COMMAND] {command}")
-                
-                self.send_json(200, {
-                    "success": True,
-                    "command": command,
-                    "response": command
-                })
-            
-            # ======= ENHANCED COMMAND EXECUTION =======
-            elif self.path == '/execute':
-                command = data.get('command', '').strip()
-                if not command:
-                    self.send_json(400, {"error": "Missing command"})
-                    return
-                
-                print(f"\n[EXECUTE] {command}")
-                
-                # Try multiple execution methods
-                
-                # Method 1: Direct execution (works for simple commands)
-                try:
-                    result = subprocess.run(
-                        command,
-                        shell=True,
-                        capture_output=True,
-                        text=True,
-                        timeout=30,
-                        cwd=str(Path.home())  # Execute in home directory
-                    )
-                    
-                    output = result.stdout + result.stderr
-                    success = result.returncode == 0
-                    
-                    print(f"[EXIT CODE] {result.returncode}")
-                    if output:
-                        print(f"[OUTPUT] {output[:200]}")
-                    
-                    self.send_json(200, {
-                        "success": success,
-                        "output": output if output else "Command executed successfully (no output)",
-                        "exit_code": result.returncode,
-                        "method": "direct"
-                    })
-                    
-                except subprocess.TimeoutExpired:
-                    # Method 2: Queue for background execution
-                    cmd_id = int(time.time() * 1000)
-                    cmd_file = QUEUE_DIR / f"cmd_{cmd_id}.sh"
-                    result_file = QUEUE_DIR / f"result_{cmd_id}.txt"
-                    
-                    # Write command to queue
-                    cmd_file.write_text(f"""#!/bin/bash
-cd ~
-{command} > {result_file} 2>&1
-echo "EXIT_CODE=$?" >> {result_file}
-""")
-                    cmd_file.chmod(0o755)
-                    
-                    # Execute in background
-                    subprocess.Popen([str(cmd_file)], start_new_session=True)
-                    
-                    self.send_json(200, {
-                        "success": True,
-                        "output": f"Command queued for execution (ID: {cmd_id})\nCheck {result_file} for results",
-                        "exit_code": 0,
-                        "method": "queued",
-                        "result_file": str(result_file)
-                    })
-                    
-                except Exception as e:
-                    print(f"[ERROR] {e}")
-                    self.send_json(500, {
-                        "success": False,
-                        "error": f"Execution failed: {e}\n\nTip: For complex commands, use Termux directly.",
-                        "exit_code": -1
-                    })
-            
-            else:
-                self.send_json(404, {"error": "Endpoint not found"})
-                
-        except Exception as e:
-            print(f"[ERROR] {e}")
-            import traceback
-            traceback.print_exc()
-            self.send_json(500, {"error": str(e)})
-
-if __name__ == '__main__':
-    print("="*70)
-    print("ENHANCED JARVIS PROXY SERVER")
-    print("="*70)
-    print(f"Port: {PORT}")
-    print(f"Backend: {LLAMAFILE_URL}")
-    print(f"Queue: {QUEUE_DIR}")
-    print()
-    print("Features:")
-    print("  ✅ Direct command execution")
-    print("  ✅ Background queue for long commands")
-    print("  ✅ Proper working directory (~)")
-    print("  ✅ Termux-API compatible")
-    print()
-    print("Endpoints:")
-    print("  GET  /health")
-    print("  POST /chat_sync")
-    print("  POST /generate_sync")
-    print("  POST /execute")
-    print("="*70)
-    print()
-    
-    server = HTTPServer(('0.0.0.0', PORT), EnhancedProxyHandler)
-    
-    try:
-        server.serve_forever()
-    except KeyboardInterrupt:
-        print("\n🛑 Shutting down...")
-        server.shutdown()
 
 

@@ -34434,6 +34434,58 @@
           "resource_id": "js-link-box-ru"
         }
       ]
+    },
+    "e341b6be3d43": {
+      "screen_id": "e341b6be3d43",
+      "package": "com.android.launcher",
+      "activity": "com.android.launcher/.Launcher",
+      "name": "launcher_launcher",
+      "labels": [
+        "element_1",
+        "element_2",
+        "element_3",
+        "Termux",
+        "Claude"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 619,
+          "y": 1709,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_2",
+          "x": 619,
+          "y": 754,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.android.launcher:id/folder_header"
+        },
+        {
+          "text": "element_3",
+          "x": 619,
+          "y": 1870,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Termux",
+          "x": 276,
+          "y": 1141,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Claude",
+          "x": 619,
+          "y": 1141,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -34759,7 +34811,8 @@
     "efa43c0a8f87|opt4_launch:settings": "225fda90f5ad",
     "efa43c0a8f87|opt4_launch:chrome": "58c13236645d",
     "efa43c0a8f87|opt4_launch:play store": "06c59ed8f4e7",
-    "06c59ed8f4e7|back": "efa43c0a8f87"
+    "06c59ed8f4e7|back": "efa43c0a8f87",
+    "efa43c0a8f87|tap:Instagram": "e341b6be3d43"
   }
 }
 

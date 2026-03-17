@@ -19960,7 +19960,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 20,
+      "visits": 21,
       "tainted": false,
       "elements": [
         {
@@ -22745,7 +22745,7 @@
         "Create",
         "Subscriptions"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {
@@ -23238,7 +23238,7 @@
     "307d903852e1|type": "b128d851f827",
     "b128d851f827|tap:None": "366c9a634a55",
     "366c9a634a55|type": "9068f3819b2b",
-    "4203f6dd32c9|opt4_launch:youtube": "f65869ba650d",
+    "4203f6dd32c9|opt4_launch:youtube": "8e74d0f0627a",
     "4203f6dd32c9|opt4_launch:settings": "f3100103b174",
     "4203f6dd32c9|opt4_launch:chrome": "aa1600c67941",
     "4203f6dd32c9|opt4_launch:play store": "06c59ed8f4e7",

@@ -33211,6 +33211,42 @@
       "visits": 1,
       "tainted": false,
       "elements": []
+    },
+    "e3ddf99df86f": {
+      "screen_id": "e3ddf99df86f",
+      "package": "com.android.launcher",
+      "activity": "com.android.launcher/.Launcher",
+      "name": "launcher_launcher",
+      "labels": [
+        "Navigate up",
+        "element_2",
+        "element_3"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "element_2",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.truecaller:id/menu"
+        },
+        {
+          "text": "element_3",
+          "x": 620,
+          "y": 1666,
+          "cls": "android.widget.ScrollView",
+          "resource_id": "com.truecaller:id/content"
+        }
+      ]
     }
   },
   "transitions": {
@@ -33525,7 +33561,7 @@
     "de32cdc23c0d|back": "4203f6dd32c9",
     "468f775ed5c9|tap:Search": "30d320eab354",
     "30d320eab354|tap:time": "aa4068217749",
-    "aa4068217749|tap:element_6": "a878aeaaaae9",
+    "aa4068217749|tap:element_6": "e3ddf99df86f",
     "752389f3a0d3|swipe": "0718819ac4b4",
     "0718819ac4b4|back": "aa4068217749"
   }

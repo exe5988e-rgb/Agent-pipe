@@ -8307,7 +8307,9 @@ java.lang.IllegalArgumentException: Argument expected after "text"
 [llm] Phone B (Claude): 'tap 3'
 [step] LLM: 'tap 3'
 [step] action: {'action': 'tap', 'target': 3}
-[input] dispatching: TouchEvent(x=634, y=223)
+[input] dispatching: TouchEvent(x=634, y=223)[parser] DEBUG normalized: 'tap 4'
+[parser] INFO parsed 'tap 4' -> {'action': 'tap', 'target': 4}
+
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash

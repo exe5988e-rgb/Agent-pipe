@@ -40020,6 +40020,307 @@
           "resource_id": ""
         }
       ]
+    },
+    "11d2472beb7c": {
+      "screen_id": "11d2472beb7c",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Open the homepage",
+        "element_2",
+        "element_3",
+        "google.com/search?q=restaurants+near+me+open+now+within+0.2+mi&client=ms-android-oneplus-terr1-rso3&hs=ojC&sca_esv=4ae20d8bd47daad1&sxsrf=ANbL-n5yVUuhq_Uh0a5R",
+        "See 21 tabs",
+        "Customise and control Google Chrome",
+        "element_7",
+        "Google",
+        "Google Account: Amir Shams (amirshamse8@gmail.com)",
+        "Search Labs",
+        "Google Search",
+        "element_12",
+        "Clear Search",
+        "Search by voice",
+        "restaurants near me open now within 0.2 mi",
+        "element_16",
+        "element_17",
+        "element_18",
+        "element_19",
+        "element_20",
+        "element_21",
+        "element_22",
+        "element_23",
+        "element_24",
+        "element_25",
+        "element_26",
+        "element_27",
+        "\u092e\u0947\u0930\u0947 \u0928\u093f\u0915\u091f \u0915\u0947 \u0930\u0947\u0938\u094d\u0924\u0930\u093e\u0902 \u0905\u092c 0.2 \u092e\u0940\u0932 \u0915\u0947 \u092d\u0940\u0924\u0930 \u0916\u0941\u0932\u0924\u0947 \u0939\u0948\u0902",
+        "element_29",
+        "How location is used"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "element_2",
+          "x": 620,
+          "y": 1455,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.android.chrome:id/compositor_view_holder"
+        },
+        {
+          "text": "element_3",
+          "x": 224,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "google.com/search?q=restaurants+near+me+open+now+within+0.2+mi&client=ms-android-oneplus-terr1-rso3&hs=ojC&sca_esv=4ae20d8bd47daad1&sxsrf=ANbL-n5yVUuhq_Uh0a5R",
+          "x": 592,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "See 21 tabs",
+          "x": 988,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 1526,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Google",
+          "x": 621,
+          "y": 457,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Google Account: Amir Shams (amirshamse8@gmail.com)",
+          "x": 1128,
+          "y": 448,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Search Labs",
+          "x": 99,
+          "y": 447,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Google Search",
+          "x": 140,
+          "y": 632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_12",
+          "x": 621,
+          "y": 639,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Clear Search",
+          "x": 929,
+          "y": 632,
+          "cls": "android.widget.Button",
+          "resource_id": "tsuid_kFW5afJ00pq-vQ-kwe_hBg_3"
+        },
+        {
+          "text": "Search by voice",
+          "x": 1100,
+          "y": 632,
+          "cls": "android.widget.Button",
+          "resource_id": "Q7Ulpb"
+        },
+        {
+          "text": "restaurants near me open now within 0.2 mi",
+          "x": 535,
+          "y": 632,
+          "cls": "android.widget.EditText",
+          "resource_id": ""
+        },
+        {
+          "text": "element_16",
+          "x": 620,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_17",
+          "x": 152,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_18",
+          "x": 621,
+          "y": 716,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_19",
+          "x": 358,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_20",
+          "x": 532,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_21",
+          "x": 762,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_22",
+          "x": 1039,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_23",
+          "x": 1213,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_24",
+          "x": 620,
+          "y": 975,
+          "cls": "android.view.View",
+          "resource_id": "hdtb-sc"
+        },
+        {
+          "text": "element_25",
+          "x": 556,
+          "y": 980,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_26",
+          "x": 227,
+          "y": 980,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_27",
+          "x": 887,
+          "y": 980,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "\u092e\u0947\u0930\u0947 \u0928\u093f\u0915\u091f \u0915\u0947 \u0930\u0947\u0938\u094d\u0924\u0930\u093e\u0902 \u0905\u092c 0.2 \u092e\u0940\u0932 \u0915\u0947 \u092d\u0940\u0924\u0930 \u0916\u0941\u0932\u0924\u0947 \u0939\u0948\u0902",
+          "x": 691,
+          "y": 1222,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_29",
+          "x": 1156,
+          "y": 1215,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "How location is used",
+          "x": 1155,
+          "y": 1477,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Use precise location",
+          "x": 365,
+          "y": 1582,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_32",
+          "x": 620,
+          "y": 2206,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "About this result",
+          "x": 1153,
+          "y": 1792,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Change language to Hindi",
+          "x": 559,
+          "y": 1792,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Listen",
+          "x": 719,
+          "y": 1792,
+          "cls": "android.widget.ToggleButton",
+          "resource_id": ""
+        },
+        {
+          "text": "element_36",
+          "x": 621,
+          "y": 2301,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Show more AI Overview",
+          "x": 620,
+          "y": 2696,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -40367,7 +40668,8 @@
     "523b15b7d0c6|swipe": "8cd8d5199600",
     "8cd8d5199600|swipe": "5d3e492581c0",
     "5d3e492581c0|tap:element_10": "e3dda089efe1",
-    "e3dda089efe1|tap:element_16": "05b096cda1cf"
+    "e3dda089efe1|tap:element_16": "05b096cda1cf",
+    "05b096cda1cf|tap:element_32": "11d2472beb7c"
   }
 }
 

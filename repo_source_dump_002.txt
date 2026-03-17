@@ -31733,7 +31733,7 @@
         "See 20 tabs",
         "Customise and control Google Chrome"
       ],
-      "visits": 7,
+      "visits": 8,
       "tainted": false,
       "elements": [
         {

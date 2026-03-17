@@ -10970,5 +10970,7 @@ RuntimeError: No LLM backend available.
 ========================================================
 [device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (193016 bytes)[parser] DEBUG normalized: 'back'
 [parser] INFO parsed 'back' -> {'action': 'back'}
+[parser] DEBUG normalized: 'tap 5'
+[parser] INFO parsed 'tap 5' -> {'action': 'tap', 'target': 5}
 
 

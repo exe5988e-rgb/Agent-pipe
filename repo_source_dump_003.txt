@@ -4025,32 +4025,27 @@ if __name__ == "__main__":
 
 //===== TERMUXFILE: keep_awake.sh =====
 #!/data/data/com.termux/files/usr/bin/bash
-# keep_awake.sh — prevents screen sleep by simulating activity every 15 seconds
-# Run in background: bash keep_awake.sh "192.168.29.48:34011" &
-# Stop with: kill $AWAKE_PID  or  pkill -f keep_awake.sh
+# keep_awake.sh — wakes screen ONLY if it goes off. Never touches screen when on.
+# Safe to run alongside the agent — only fires when screen is already dark.
 
 DEVICE="${1:-192.168.29.48:34011}"
 ADB="/data/data/com.termux/files/usr/bin/adb"
-INTERVAL=15
+INTERVAL=10
 
-echo "[keepawake] started for $DEVICE (interval=${INTERVAL}s) PID=$$"
+echo "[keepawake] started PID=$$ device=$DEVICE"
 
 while true; do
-    # Check if screen is on
-    STATE=$($ADB -s "$DEVICE" shell dumpsys power 2>/dev/null | grep -c "mHoldingDisplaySuspendBlocker=true")
+    # Check screen state
+    STATE=$($ADB -s "$DEVICE" shell dumpsys power 2>/dev/null | grep "mHoldingDisplaySuspendBlocker=true" | wc -l)
 
     if [ "$STATE" -eq 0 ]; then
-        # Screen is off — wake it with KEYCODE_WAKEUP (never locks)
+        # Screen is OFF — wake it, don't touch anything else
+        echo "[keepawake] $(date +%H:%M:%S) screen off — waking"
         $ADB -s "$DEVICE" shell input keyevent 224 2>/dev/null
         sleep 1
-        # Dismiss keyguard
         $ADB -s "$DEVICE" shell wm dismiss-keyguard 2>/dev/null
-        echo "[keepawake] $(date +%H:%M:%S) screen was off — woke it"
-    else
-        # Screen is on — send a tiny movement to reset inactivity timer
-        # Move mouse by 0 pixels (triggers activity without moving anything)
-        $ADB -s "$DEVICE" shell input touchscreen swipe 500 1400 500 1400 100 2>/dev/null
     fi
+    # Screen is ON — do absolutely nothing, let agent work
 
     sleep $INTERVAL
 done

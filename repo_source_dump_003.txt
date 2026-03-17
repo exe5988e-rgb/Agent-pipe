@@ -3260,6 +3260,8 @@ if __name__ == "__main__":
 [14:03:26] 
 [14/33] [2★] [settings] Open Settings and go to Display
 [14:05:01]   PASS  91.0s  skills=6
+[14:05:06] 
+[15/33] [2★] [settings] Open Settings and go to Notifications
 
 
 //===== TERMUXFILE: tap_logger.py =====

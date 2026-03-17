@@ -42557,7 +42557,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 2,
+      "visits": 3,
       "tainted": false,
       "elements": [
         {
@@ -45099,7 +45099,7 @@
     "a6c245bb7216|swipe": "be9769a7d6b5",
     "4e3d027411e1|swipe": "7be8acd10806",
     "7be8acd10806|tap:element_10": "f68c7157ae35",
-    "f68c7157ae35|tap:Rooftop restaurants in Dhanbad": "26544eec0abc",
+    "f68c7157ae35|tap:Rooftop restaurants in Dhanbad": "0bb5585ab8d0",
     "0bb5585ab8d0|opt4_launch:chrome": "90b2e5af0eb8",
     "245d2f71b329|opt4_launch:whatsapp": "3949001d1ca1",
     "3949001d1ca1|retry": "f6971c299e21",

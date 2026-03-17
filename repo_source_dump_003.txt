@@ -10182,7 +10182,20 @@ java.lang.IllegalArgumentException: Argument expected after "text"
 [ui_parser] cache miss -- full uiautomator dump
 [ui_parser] full parse -- 23 elements from 192.168.29.48:34011
 [mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=96b4468dd461 elements=23
-[step] UI: ['element_1', 'Wikipedia', 'element_3', 'Play', 'element_5', 'Search', 'English', 'English 7,141,000+ articles']
+[step] UI: ['element_1', 'Wikipedia', 'element_3', 'Play', 'element_5', 'Search', 'English', 'English 7,141,000+ articles']Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 311, in run
+    run_step(state, device=device, model_path=model_path)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 267, in run_step
+    llm_out = generate(prompt, model_path=model_path)
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/reasoning/llm_client.py", line 109, in generate
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash

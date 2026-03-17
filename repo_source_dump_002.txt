@@ -33647,7 +33647,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 3,
+      "visits": 4,
       "tainted": false,
       "elements": [
         {
@@ -34366,6 +34366,74 @@
           "resource_id": ""
         }
       ]
+    },
+    "58c13236645d": {
+      "screen_id": "58c13236645d",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Wikipedia",
+        "element_2",
+        "Play",
+        "English 7,141,000+ articles",
+        "\u65e5\u672c\u8a9e 1,491,000+ \u8a18\u4e8b",
+        "Deutsch 3.099.000+ Artikel",
+        "\u0420\u0443\u0441\u0441\u043a\u0438\u0439 2\u00a0087\u00a0000+ \u0441\u0442\u0430\u0442\u0435\u0439"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Wikipedia",
+          "x": 620,
+          "y": 1327,
+          "cls": "android.webkit.WebView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_2",
+          "x": 621,
+          "y": 385,
+          "cls": "android.view.View",
+          "resource_id": "wikipedia25-video"
+        },
+        {
+          "text": "Play",
+          "x": 621,
+          "y": 552,
+          "cls": "android.widget.Button",
+          "resource_id": "wikipedia25-play-button"
+        },
+        {
+          "text": "English 7,141,000+ articles",
+          "x": 234,
+          "y": 1208,
+          "cls": "android.view.View",
+          "resource_id": "js-link-box-en"
+        },
+        {
+          "text": "\u65e5\u672c\u8a9e 1,491,000+ \u8a18\u4e8b",
+          "x": 615,
+          "y": 1208,
+          "cls": "android.view.View",
+          "resource_id": "js-link-box-ja"
+        },
+        {
+          "text": "Deutsch 3.099.000+ Artikel",
+          "x": 993,
+          "y": 1208,
+          "cls": "android.view.View",
+          "resource_id": "js-link-box-de"
+        },
+        {
+          "text": "\u0420\u0443\u0441\u0441\u043a\u0438\u0439 2\u00a0087\u00a0000+ \u0441\u0442\u0430\u0442\u0435\u0439",
+          "x": 234,
+          "y": 1488,
+          "cls": "android.view.View",
+          "resource_id": "js-link-box-ru"
+        }
+      ]
     }
   },
   "transitions": {
@@ -34688,7 +34756,8 @@
     "955fca488005|type": "a0a54922f458",
     "efa43c0a8f87|opt4_launch:whatsapp": "b37f4f8d4aed",
     "efa43c0a8f87|opt4_launch:youtube": "1dbfe781af53",
-    "efa43c0a8f87|opt4_launch:settings": "225fda90f5ad"
+    "efa43c0a8f87|opt4_launch:settings": "225fda90f5ad",
+    "efa43c0a8f87|opt4_launch:chrome": "58c13236645d"
   }
 }
 

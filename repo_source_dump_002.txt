@@ -17107,6 +17107,161 @@
           "y": 727
         }
       ]
+    },
+    "1aac69f7e1ea": {
+      "screen_id": "1aac69f7e1ea",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/com.google.android.apps.youtube.app.watchwhile.InternalMainActivity",
+      "name": "youtube_internalmainactivity",
+      "labels": [
+        "Voice search",
+        "Edit suggestion funk criminal slowed",
+        "Edit suggestion funk criminal ultra slowed",
+        "Edit suggestion funk criminal edit",
+        "Edit suggestion funk criminal edit audio",
+        "Edit suggestion funk criminal edit tutorial",
+        "Edit suggestion funk criminal icedmane",
+        "Edit suggestion funk criminal mega slowed",
+        "Edit suggestion funk criminal slowed reverb",
+        "Edit suggestion funk criminal ringtone"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Voice search",
+          "resource_id": "com.google.android.youtube:id/fab",
+          "cls": "android.widget.ImageView",
+          "x": 1114,
+          "y": 1655
+        },
+        {
+          "text": "",
+          "resource_id": "com.google.android.youtube:id/linearLayout",
+          "cls": "android.view.ViewGroup",
+          "x": 620,
+          "y": 391
+        },
+        {
+          "text": "Edit suggestion funk criminal slowed",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion",
+          "cls": "android.widget.ImageView",
+          "x": 1156,
+          "y": 391
+        },
+        {
+          "text": "",
+          "resource_id": "com.google.android.youtube:id/linearLayout",
+          "cls": "android.view.ViewGroup",
+          "x": 620,
+          "y": 559
+        },
+        {
+          "text": "Edit suggestion funk criminal ultra slowed",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion",
+          "cls": "android.widget.ImageView",
+          "x": 1156,
+          "y": 559
+        },
+        {
+          "text": "",
+          "resource_id": "com.google.android.youtube:id/linearLayout",
+          "cls": "android.view.ViewGroup",
+          "x": 620,
+          "y": 727
+        },
+        {
+          "text": "Edit suggestion funk criminal edit",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion",
+          "cls": "android.widget.ImageView",
+          "x": 1156,
+          "y": 727
+        },
+        {
+          "text": "",
+          "resource_id": "com.google.android.youtube:id/linearLayout",
+          "cls": "android.view.ViewGroup",
+          "x": 620,
+          "y": 895
+        },
+        {
+          "text": "Edit suggestion funk criminal edit audio",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion",
+          "cls": "android.widget.ImageView",
+          "x": 1156,
+          "y": 895
+        },
+        {
+          "text": "",
+          "resource_id": "com.google.android.youtube:id/linearLayout",
+          "cls": "android.view.ViewGroup",
+          "x": 620,
+          "y": 1063
+        },
+        {
+          "text": "Edit suggestion funk criminal edit tutorial",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion",
+          "cls": "android.widget.ImageView",
+          "x": 1156,
+          "y": 1063
+        },
+        {
+          "text": "",
+          "resource_id": "com.google.android.youtube:id/linearLayout",
+          "cls": "android.view.ViewGroup",
+          "x": 620,
+          "y": 1231
+        },
+        {
+          "text": "Edit suggestion funk criminal icedmane",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion",
+          "cls": "android.widget.ImageView",
+          "x": 1156,
+          "y": 1231
+        },
+        {
+          "text": "",
+          "resource_id": "com.google.android.youtube:id/linearLayout",
+          "cls": "android.view.ViewGroup",
+          "x": 620,
+          "y": 1399
+        },
+        {
+          "text": "Edit suggestion funk criminal mega slowed",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion",
+          "cls": "android.widget.ImageView",
+          "x": 1156,
+          "y": 1399
+        },
+        {
+          "text": "",
+          "resource_id": "com.google.android.youtube:id/linearLayout",
+          "cls": "android.view.ViewGroup",
+          "x": 620,
+          "y": 1567
+        },
+        {
+          "text": "Edit suggestion funk criminal slowed reverb",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion",
+          "cls": "android.widget.ImageView",
+          "x": 1156,
+          "y": 1567
+        },
+        {
+          "text": "",
+          "resource_id": "com.google.android.youtube:id/linearLayout",
+          "cls": "android.view.ViewGroup",
+          "x": 620,
+          "y": 1688
+        },
+        {
+          "text": "Edit suggestion funk criminal ringtone",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion",
+          "cls": "android.widget.ImageView",
+          "x": 1156,
+          "y": 1688
+        }
+      ]
     }
   },
   "transitions": {
@@ -17317,7 +17472,8 @@
     "bf229eb46cda|Edit suggestion tiki tiki slowed": "c3507cfcd293",
     "bf229eb46cda|Edit suggestion funk universo slowed": "ea18d524183b",
     "bf229eb46cda|Edit suggestion luz roja": "7ef217436dcb",
-    "bf229eb46cda|Edit suggestion funk criminal": "f911caa9edca"
+    "bf229eb46cda|Edit suggestion funk criminal": "f911caa9edca",
+    "bf229eb46cda|Edit suggestion funk sereno": "1aac69f7e1ea"
   }
 }
 

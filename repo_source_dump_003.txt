@@ -3262,6 +3262,9 @@ if __name__ == "__main__":
 [14:05:01]   PASS  91.0s  skills=6
 [14:05:06] 
 [15/33] [2★] [settings] Open Settings and go to Notifications
+[14:07:01]   PASS  112.4s  skills=6
+[14:07:06] 
+[16/33] [2★] [settings] Open Settings and check battery percentage
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4429,7 +4432,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-17T14:05:01.294068",
+  "run_at": "2026-03-17T14:07:01.912358",
   "skills_before": 6,
   "skills_current": 6,
   "results": [
@@ -4556,6 +4559,15 @@ if __name__ == "__main__":
       "difficulty": 2,
       "success": true,
       "elapsed_s": 91.0,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Open Settings and go to Notifications",
+      "category": "settings",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 112.4,
       "error": null,
       "retried": false
     }
@@ -6674,6 +6686,128 @@ Traceback (most recent call last):
 RuntimeError: No LLM backend available.
   Phone B offline? Check: curl http://192.168.29.110:8890/health
   Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+########################################################
+  JARVIS  |  Open Settings and go to Notifications
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 271 screens (0 tainted), 328 transitions
+    whatsapp             142 screens
+    youtube              54 screens
+    chrome               22 screens
+    vending              21 screens
+    settings             14 screens
+    launcher             8 screens
+    termux               7 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+    dialer               1 screens
+  TransitionMemory: 328 transitions (253 confirmed, threshold=2)
+[init] task_apps (ordered): ['settings']
+
+========================================================
+  STEP 1  |  Open Settings and go to Notifications
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3600153 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=f8ffc4542216 elements=26
+[step] UI: ['Clock', '14', ':', '05', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[OPT4v2] launcher -> launching settings (com.android.settings)
+[llm] OPT4v2 am start: com.android.settings
+[OPT4v2] app_index -> 1/1
+
+========================================================
+  STEP 2  |  Open Settings and go to Notifications
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (320167 bytes)
+[OPT7] predicted next screen: settings_oplussettingshomepageactivity (8c512c8b)
+[ui_parser] activity=com.android.settings/.Settings$DisplaySettingsActivity
+[ui_parser] signal='com.android.settings/.Settings$DisplaySettingsActivity'
+[mem] miss (unknown): com.android.settings/.Settings$DisplaySettingsActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 12 elements from 192.168.29.48:34011
+[mem] stored com.android.settings/.Settings$DisplaySettingsActivity hash=6dab1ecddaa9 elements=12
+[step] UI: ['Back', 'element_2', 'element_3', 'element_4', 'element_5', 'element_6', 'element_7', 'element_8']
+[map] new screen: settings_settings$displaysettingsactivity (2b412b36d6a6)
+[tm] transition changed: 4203f6dd32c9|opt4_launch:settings 8c512c8b -> 2b412b36
+[map] transition: launcher_launcher --[opt4_launch:settings]--> settings_settings$displaysettingsactivity
+[map] screen: settings_settings$displaysettingsactivity (2b412b36)
+[skill] matched: 'open settings and go'  score=1.00  act_match=False
+[skill] cannot resolve tap target: 'Search'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B unreachable: timed out
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 3  |  Open Settings and go to Notifications
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3600813 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] HIT com.android.launcher/.Launcher hash=f8ffc4542216 hits=1 elements=26
+[step] UI: ['Clock', '14', ':', '05', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[skill] matched: 'open settings and go'  score=1.00  act_match=False
+[skill] executing 4 steps from memory
+[skill] action: {'action': 'tap', 'target': 18}
+[input] dispatching: TouchEvent(x=620, y=1573)
+[input] adb -s 192.168.29.48:34011 shell input tap 620 1573
+[skill] action: {'action': 'type', 'text': '$QUERY'}
+[input] dispatching: SetTextEvent('$QUERY')
+[input] adb -s 192.168.29.48:34011 shell input text $QUERY
+[input] stderr: Exception occurred while executing 'text':
+java.lang.IllegalArgumentException: Argument expected after "text"
+	at com.android.modules.utils.BasicShellCommandHandler.getNextArgRequired(BasicShellCommandHandler.java:295)
+	at com.android.server.input.InputShellCommand.runText(InputShellCommand.java:382)
+	at com.android.server.input.InputShellCommand.onCommand(InputShellCommand.java:307)
+	at com.android.modules.utils.BasicShellCommandHandler.exec(BasicShellCommandHandler.java:97)
+	at android.os.ShellCommand.exec(ShellCommand.java:38)
+	at com.android.server.input.InputManagerService.onShellCommand(InputManagerService.java:4107)
+	at android.os.Binder.shellCommand(Binder.java:1164)
+	at android.os.Binder.onTransact(Binder.java:966)
+	at android.hardware.input.IInputManager$Stub.onTransact(IInputManager.java:1576)
+	at android.os.Binder.execTransactInternal(Binder.java:1444)
+	at android.os.Binder.execTransact(Binder.java:1378)
+[skill] action: {'action': 'tap', 'target': 5}
+[input] dispatching: TouchEvent(x=1052, y=377)
+[input] adb -s 192.168.29.48:34011 shell input tap 1052 377
+[skill] action: {'action': 'done'}
+[input] DONE — no dispatch
+[skill] done — skipped Claude
+[step] step=6/8 done=True history=['opt4_launch:settings', 'tap [18] Google Search', "type '$QUERY'", 'tap [5] element_5', 'done']
+
+[controller] done in 6 steps
+
+[controller] history:
+  1. opt4_launch:settings
+  2. tap [18] Google Search
+  3. type '$QUERY'
+  4. tap [5] element_5
+  5. done
+
+  Screen Map: 272 screens (0 tainted), 328 transitions
+    whatsapp             142 screens
+    youtube              54 screens
+    chrome               22 screens
+    vending              21 screens
+    settings             15 screens
+    launcher             8 screens
+    termux               7 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+    dialer               1 screens
+  TransitionMemory: 328 transitions (252 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

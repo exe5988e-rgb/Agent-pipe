@@ -2784,41 +2784,16 @@ if __name__ == "__main__":
 }
 
 //===== TERMUXFILE: gauntlet_log.txt =====
-[10:41:12] 
+[10:46:28] 
 ╔══════════════════════════════════════════════════════════════╗
 ║   JARVIS GAUNTLET RUNNER  — Overnight Mode                  ║
 ║   Device  : 192.168.29.48:34011                              ║
 ║   Tasks   : 1                                                ║
 ║   Skills  : 0                                                ║
-║   Started : 2026-03-17 10:41:12                              ║
+║   Started : 2026-03-17 10:46:28                              ║
 ╚══════════════════════════════════════════════════════════════╝
 
-[10:41:12]   Preparing device...
-[10:41:18]   Phone B bridge: ✓ reachable
-[10:41:18] 
-════════════════════════════════════════════════════════════════
-[10:41:18]   TASK 1/1  [1★]  [whatsapp]  timeout=255s
-[10:41:18]   Open WhatsApp
-[10:41:18] ════════════════════════════════════════════════════════════════
-[10:41:24] 
-  ✗ FAIL  |  0.3s  |  skills: 0
-[10:41:24]   Error: returncode=1
-[10:41:24]   Recovering device...
-[10:41:31] 
-╔══════════════════════════════════════════════════════════════╗
-║   GAUNTLET COMPLETE                                         ║
-╠══════════════════════════════════════════════════════════════╣
-║  Tasks    : 1                                                ║
-║  Passed   : 0                                                ║
-║  Failed   : 1                                                ║
-║  Skills   : 0 → 0 (+0)                                       ║
-║  Duration : 0m 18s                                             ║
-╠══════════════════════════════════════════════════════════════╣
-[10:41:31] ║  ✗ Open WhatsApp                                        0.3s  ║
-[10:41:31] ╚══════════════════════════════════════════════════════════════╝
-[10:41:31] 
-  Report: /data/data/com.termux/files/home/workflows/gauntlet_report.json
-[10:41:31]   Log   : /data/data/com.termux/files/home/workflows/gauntlet_log.txt
+[10:46:28]   Preparing device...
 
 
 //===== TERMUXFILE: tap_logger.py =====

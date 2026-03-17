@@ -20614,7 +20614,7 @@
         "element_14",
         "element_15"
       ],
-      "visits": 2,
+      "visits": 3,
       "tainted": false,
       "elements": [
         {
@@ -33695,7 +33695,8 @@
     "aa4068217749|tap:element_6": "e3ddf99df86f",
     "752389f3a0d3|swipe": "0718819ac4b4",
     "0718819ac4b4|back": "aa4068217749",
-    "e3ddf99df86f|opt4_launch:whatsapp": "24f4242fbb4f"
+    "e3ddf99df86f|opt4_launch:whatsapp": "24f4242fbb4f",
+    "1b272452b866|tap:More options": "307d903852e1"
   }
 }
 

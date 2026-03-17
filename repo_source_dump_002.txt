@@ -32054,6 +32054,178 @@
           "resource_id": "com.android.chrome:id/reader_mode_menu_id"
         }
       ]
+    },
+    "54001c27a626": {
+      "screen_id": "54001c27a626",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Open the homepage",
+        "element_2",
+        "Signed in as Amir Shams. amirshamse8@gmail.com. Opens settings.",
+        "See 21 tabs",
+        "Customise and control Google Chrome",
+        "Search Google or type URL",
+        "Start voice search",
+        "Search with your camera using Google Lens",
+        "Ask AI Mode",
+        "New Incognito tab",
+        "element_11",
+        "Directory listing for /: [::]",
+        "Build APK \u00b7 exe5988e-rgb/JarvisMerged@d5529f8: github.com",
+        "Google: google.com",
+        "Wikipedia: wikipedia.org",
+        ": 192.168.29.110",
+        "element_17",
+        "Share CopilotKit/OpenGenerativeUI: Open-Source Generative UI Framework",
+        "Card menu CopilotKit/OpenGenerativeUI: Open-Source Generative UI Framework",
+        "element_20"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "element_2",
+          "x": 620,
+          "y": 1455,
+          "cls": "androidx.recyclerview.widget.RecyclerView",
+          "resource_id": "com.android.chrome:id/feed_stream_recycler_view"
+        },
+        {
+          "text": "Signed in as Amir Shams. amirshamse8@gmail.com. Opens settings.",
+          "x": 813,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/optional_toolbar_button"
+        },
+        {
+          "text": "See 21 tabs",
+          "x": 988,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        },
+        {
+          "text": "Search Google or type URL",
+          "x": 529,
+          "y": 755,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/search_box_text"
+        },
+        {
+          "text": "Start voice search",
+          "x": 890,
+          "y": 755,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.android.chrome:id/voice_search_button"
+        },
+        {
+          "text": "Search with your camera using Google Lens",
+          "x": 1058,
+          "y": 755,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.android.chrome:id/lens_camera_button"
+        },
+        {
+          "text": "Ask AI Mode",
+          "x": 331,
+          "y": 990,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/composeplate_button"
+        },
+        {
+          "text": "New Incognito tab",
+          "x": 909,
+          "y": 990,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/incognito_button"
+        },
+        {
+          "text": "element_11",
+          "x": 620,
+          "y": 1366,
+          "cls": "android.widget.HorizontalScrollView",
+          "resource_id": "com.android.chrome:id/mv_tiles_container"
+        },
+        {
+          "text": "Directory listing for /: [::]",
+          "x": 238,
+          "y": 1357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Build APK \u00b7 exe5988e-rgb/JarvisMerged@d5529f8: github.com",
+          "x": 504,
+          "y": 1357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Google: google.com",
+          "x": 770,
+          "y": 1357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Wikipedia: wikipedia.org",
+          "x": 1036,
+          "y": 1357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": ": 192.168.29.110",
+          "x": 1173,
+          "y": 1357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_17",
+          "x": 620,
+          "y": 1955,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Share CopilotKit/OpenGenerativeUI: Open-Source Generative UI Framework",
+          "x": 929,
+          "y": 2193,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Card menu CopilotKit/OpenGenerativeUI: Open-Source Generative UI Framework",
+          "x": 1097,
+          "y": 2193,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_20",
+          "x": 620,
+          "y": 2526,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -32360,7 +32532,8 @@
     "eb691f0a02c2|tap:element_3": "0ffd7f03efc6",
     "0ffd7f03efc6|long press": "eb691f0a02c2",
     "eb691f0a02c2|tap:3": "0ffd7f03efc6",
-    "0ffd7f03efc6|tap:23": "5086bd87137e"
+    "0ffd7f03efc6|tap:23": "5086bd87137e",
+    "5086bd87137e|tap:element_8": "54001c27a626"
   }
 }
 

@@ -3219,7 +3219,7 @@
       "activity": "com.whatsapp/.home.ui.HomeActivity",
       "name": "whatsapp_homeactivity",
       "labels": [],
-      "visits": 11,
+      "visits": 12,
       "elements": []
     },
     "dc2700ccd673": {
@@ -22196,7 +22196,8 @@
     "4203f6dd32c9|opt4_launch:youtube": "bf3964237b0d",
     "4203f6dd32c9|opt4_launch:settings": "f3100103b174",
     "4203f6dd32c9|opt4_launch:chrome": "aa1600c67941",
-    "4203f6dd32c9|opt4_launch:play store": "06c59ed8f4e7"
+    "4203f6dd32c9|opt4_launch:play store": "06c59ed8f4e7",
+    "7c51d7e864c3|tap:You": "47d448eaba6d"
   }
 }
 

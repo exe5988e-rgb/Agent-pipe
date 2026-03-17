@@ -2844,6 +2844,7 @@ if __name__ == "__main__":
 [11:14:26]   PASS  36.6s  skills=0
 [11:14:31] 
 [4/33] [1★] [chrome] Open Chrome
+[11:15:11]   PASS  36.6s  skills=0
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4011,7 +4012,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-17T11:14:26.380094",
+  "run_at": "2026-03-17T11:15:11.161493",
   "skills_before": 0,
   "skills_current": 0,
   "results": [
@@ -4036,6 +4037,15 @@ if __name__ == "__main__":
     {
       "task": "Open Settings",
       "category": "settings",
+      "difficulty": 1,
+      "success": true,
+      "elapsed_s": 36.6,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Open Chrome",
+      "category": "chrome",
       "difficulty": 1,
       "success": true,
       "elapsed_s": 36.6,
@@ -4393,6 +4403,82 @@ RuntimeError: No LLM backend available.
     unknown              1 screens
     settings             1 screens
   TransitionMemory: 250 transitions (242 confirmed, threshold=2)
+[parser] DEBUG normalized: 'done'
+[parser] INFO parsed 'done' -> {'action': 'done'}
+
+########################################################
+  JARVIS  |  Open Chrome
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 183 screens (0 tainted), 250 transitions
+    whatsapp             130 screens
+    youtube              29 screens
+    vending              15 screens
+    launcher             4 screens
+    termux               3 screens
+    unknown              1 screens
+    settings             1 screens
+  TransitionMemory: 250 transitions (242 confirmed, threshold=2)
+[init] task_apps (ordered): ['chrome']
+
+========================================================
+  STEP 1  |  Open Chrome
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3591980 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=19cfde2aa158 elements=26
+[step] UI: ['Clock', '11', ':', '14', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[OPT4v2] launcher -> launching chrome (com.android.chrome)
+[llm] OPT4v2 am start: com.android.chrome
+[OPT4v2] app_index -> 1/1
+
+========================================================
+  STEP 2  |  Open Chrome
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (457021 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 17 elements from 192.168.29.48:34011
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=ade2af9ed94a elements=17
+[step] UI: ['Open the homepage', 'element_2', 'support.google.com/youtube/answer/7640706?hl=%@', 'See 19 tabs', 'Customise and control Google Chrome', 'element_6', 'Main menu', 'YouTube Help']
+[map] new screen: chrome_main (aa1600c67941)
+[map] transition: launcher_launcher --[opt4_launch:chrome]--> chrome_main
+[map] screen: chrome_main (aa1600c6)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'done'
+[step] LLM: 'done'
+[step] action: {'action': 'done'}
+[input] DONE — no dispatch
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[skill] too few steps to save
+[step] step=2/5 done=True history=['opt4_launch:chrome', 'done']
+
+[controller] done in 2 steps
+
+[controller] history:
+  1. opt4_launch:chrome
+  2. done
+
+  Screen Map: 184 screens (0 tainted), 251 transitions
+    whatsapp             130 screens
+    youtube              29 screens
+    vending              15 screens
+    launcher             4 screens
+    termux               3 screens
+    unknown              1 screens
+    settings             1 screens
+    chrome               1 screens
+  TransitionMemory: 251 transitions (242 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

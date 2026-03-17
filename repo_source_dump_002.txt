@@ -31370,6 +31370,106 @@
           "resource_id": ""
         }
       ]
+    },
+    "8f57bf05dc92": {
+      "screen_id": "8f57bf05dc92",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "element_1",
+        "element_2",
+        "wikipedia.org",
+        "Clear input",
+        "4 suggested items in list below.",
+        "element_6",
+        "element_7",
+        "element_8",
+        "Refine: wikipedia.org/wiki/castle",
+        "element_10",
+        "Refine: wikipedia.org/wiki/main_page"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 620,
+          "y": 1455,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_2",
+          "x": 126,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "wikipedia.org",
+          "x": 634,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "Clear input",
+          "x": 1128,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/delete_button"
+        },
+        {
+          "text": "4 suggested items in list below.",
+          "x": 620,
+          "y": 741,
+          "cls": "androidx.recyclerview.widget.RecyclerView",
+          "resource_id": "com.android.chrome:id/omnibox_suggestions_dropdown"
+        },
+        {
+          "text": "element_6",
+          "x": 620,
+          "y": 433,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 629,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "element_8",
+          "x": 620,
+          "y": 825,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: wikipedia.org/wiki/castle",
+          "x": 1128,
+          "y": 825,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_10",
+          "x": 620,
+          "y": 1021,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: wikipedia.org/wiki/main_page",
+          "x": 1128,
+          "y": 1021,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -31669,7 +31769,8 @@
     "963eb2fb8785|tap:element_5": "8bd4aa0f7819",
     "fc36bc1fb8c7|tap:element_3": "e78c6d4ab5c3",
     "e78c6d4ab5c3|tap:Minimised player": "d8b0a05d806b",
-    "ec2d5cc0aa50|tap:See 20 tabs": "557559bbb916"
+    "ec2d5cc0aa50|tap:See 20 tabs": "557559bbb916",
+    "557559bbb916|type": "8f57bf05dc92"
   }
 }
 

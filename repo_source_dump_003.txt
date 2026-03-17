@@ -5431,6 +5431,8 @@ RuntimeError: No LLM backend available.
     settings             1 screens
     chrome               1 screens
   TransitionMemory: 255 transitions (243 confirmed, threshold=2)
+[parser] DEBUG normalized: 'tap 3'
+[parser] INFO parsed 'tap 3' -> {'action': 'tap', 'target': 3}
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

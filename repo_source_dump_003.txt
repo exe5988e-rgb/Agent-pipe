@@ -2865,6 +2865,11 @@ if __name__ == "__main__":
 [10:12:49]   TASK 6/33  [1★]  [phone]  timeout=255s
 [10:12:49]   Open Phone app
 [10:12:49] ════════════════════════════════════════════════════════════════
+[10:12:54] 
+  ✗ FAIL  |  0.3s  |  skills: 0
+[10:12:54]   Error: returncode=1
+[10:12:54]   Retrying once...
+[10:12:54]   Recovering device...
 
 
 //===== TERMUXFILE: tap_logger.py =====

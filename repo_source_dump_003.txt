@@ -2977,9 +2977,9 @@ if __name__ == "__main__":
     "last_seen": 1773728339.0529592
   },
   "082a9e286aa7|type": {
-    "to": "678cb33200f5",
+    "to": "809b16402d47",
     "count": 1,
-    "last_seen": 1773728434.9564176
+    "last_seen": 1773729473.071188
   },
   "344055367907|tap:Expand Mini Player": {
     "to": "e9824755943d",
@@ -3121,6 +3121,7 @@ if __name__ == "__main__":
 [12:07:18]   PASS  247.3s  skills=5
 [12:07:23] 
 [28/33] [4★] [whatsapp] Send a WhatsApp message to Mummy saying Good night
+[12:07:53]   PASS  27.2s  skills=5
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4288,7 +4289,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-17T12:07:18.476104",
+  "run_at": "2026-03-17T12:07:53.960388",
   "skills_before": 0,
   "skills_current": 5,
   "results": [
@@ -4532,6 +4533,15 @@ if __name__ == "__main__":
       "difficulty": 3,
       "success": true,
       "elapsed_s": 247.3,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Send a WhatsApp message to Mummy saying Good night",
+      "category": "whatsapp",
+      "difficulty": 4,
+      "success": true,
+      "elapsed_s": 27.2,
       "error": null,
       "retried": false
     }
@@ -9268,6 +9278,113 @@ RuntimeError: No LLM backend available.
     unknown              1 screens
     wirelesssettings     1 screens
   TransitionMemory: 292 transitions (251 confirmed, threshold=2)
+
+########################################################
+  JARVIS  |  Send a WhatsApp message to Mummy saying Good night
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 233 screens (0 tainted), 292 transitions
+    whatsapp             136 screens
+    youtube              46 screens
+    vending              21 screens
+    chrome               12 screens
+    settings             6 screens
+    termux               5 screens
+    launcher             5 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+  TransitionMemory: 292 transitions (251 confirmed, threshold=2)
+[init] task_apps (ordered): ['whatsapp']
+
+========================================================
+  STEP 1  |  Send a WhatsApp message to Mummy saying Good night
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3603527 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=233851900651 elements=26
+[step] UI: ['Clock', '12', ':', '07', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[OPT4v2] launcher -> launching whatsapp (com.whatsapp)
+[llm] OPT4v2 am start: com.whatsapp
+[OPT4v2] app_index -> 1/1
+
+========================================================
+  STEP 2  |  Send a WhatsApp message to Mummy saying Good night
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1575779 bytes)
+[ui_parser] activity=com.whatsapp/.Conversation
+[ui_parser] signal='com.whatsapp/.Conversation'
+[mem] miss (unknown): com.whatsapp/.Conversation
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 16 elements from 192.168.29.48:34011
+[mem] stored com.whatsapp/.Conversation hash=9f491658b421 elements=16
+[step] UI: ['element_1', 'Back', 'element_3', 'Video call', 'Voice call', 'More options', 'element_7', 'element_8']
+[map] screen: whatsapp_conversation (082a9e28)
+[policy] send_message phase1: 'Good night' -> tap [16] + type
+[policy] matched — executing 2 actions directly
+[policy] action: {'action': 'tap', 'target': 16}
+[input] dispatching: TouchEvent(x=362, y=1625)
+[input] adb -s 192.168.29.48:34011 shell input tap 362 1625
+[mem] invalidated com.whatsapp/.Conversation
+[policy] action: {'action': 'type', 'text': 'Good night'}
+[input] dispatching: SetTextEvent('Good night')
+[input] adb -s 192.168.29.48:34011 shell input text Good%snight
+[policy] done — skipped Claude entirely
+[step] step=3/15 done=False history=['opt4_launch:whatsapp', 'tap [16] Message', "type 'Good night'"]
+
+========================================================
+  STEP 4  |  Send a WhatsApp message to Mummy saying Good night
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1571962 bytes)
+[ui_parser] activity=com.whatsapp/.Conversation
+[ui_parser] signal='com.whatsapp/.Conversation'
+[mem] miss (unknown): com.whatsapp/.Conversation
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 14 elements from 192.168.29.48:34011
+[mem] stored com.whatsapp/.Conversation hash=4b402d704ea5 elements=14
+[step] UI: ['element_1', 'Back', 'element_3', 'Video call', 'Voice call', 'More options', 'element_7', 'element_8']
+[map] new screen: whatsapp_conversation (809b16402d47)
+[tm] transition changed: 082a9e286aa7|type 678cb332 -> 809b1640
+[map] transition: whatsapp_conversation --[type]--> whatsapp_conversation
+[map] screen: whatsapp_conversation (809b1640)
+[policy] send_message phase2: tapping Send [13]
+[policy] matched — executing 2 actions directly
+[policy] action: {'action': 'tap', 'target': 13}
+[input] dispatching: TouchEvent(x=1141, y=1626)
+[input] adb -s 192.168.29.48:34011 shell input tap 1141 1626
+[mem] invalidated com.whatsapp/.Conversation
+[policy] action: {'action': 'done'}
+[input] DONE — no dispatch
+[policy] done — skipped Claude entirely
+[step] step=5/15 done=True history=['opt4_launch:whatsapp', 'tap [16] Message', "type 'Good night'", 'tap [13] Send', 'done']
+
+[controller] done in 5 steps
+
+[controller] history:
+  1. opt4_launch:whatsapp
+  2. tap [16] Message
+  3. type 'Good night'
+  4. tap [13] Send
+  5. done
+
+  Screen Map: 234 screens (0 tainted), 292 transitions
+    whatsapp             137 screens
+    youtube              46 screens
+    vending              21 screens
+    chrome               12 screens
+    settings             6 screens
+    termux               5 screens
+    launcher             5 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+  TransitionMemory: 292 transitions (252 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

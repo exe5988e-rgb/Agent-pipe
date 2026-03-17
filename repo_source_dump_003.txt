@@ -2816,6 +2816,8 @@ if __name__ == "__main__":
 [11:02:25]   Recovering...
 [11:02:37]   Retry: FAIL  0.3s
 [11:02:37]   Recovering...
+[11:02:47] 
+[5/33] [1★] [playstore] Open Play Store
 
 
 //===== TERMUXFILE: tap_logger.py =====

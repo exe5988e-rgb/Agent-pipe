@@ -3155,6 +3155,11 @@ if __name__ == "__main__":
     "to": "a0a54922f458",
     "count": 1,
     "last_seen": 1773730889.306318
+  },
+  "efa43c0a8f87|opt4_launch:whatsapp": {
+    "to": "b37f4f8d4aed",
+    "count": 1,
+    "last_seen": 1773735486.30663
   }
 }
 
@@ -3165,6 +3170,7 @@ if __name__ == "__main__":
 [13:47:47] Bridge: OK
 [13:47:47] 
 [1/33] [1★] [whatsapp] Open WhatsApp
+[13:48:07]   PASS  16.4s  skills=6
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4331,305 +4337,17 @@ if __name__ == "__main__":
 
 //===== TERMUXFILE: gauntlet_report.json =====
 {
-  "run_at": "2026-03-17T12:30:30.830985",
-  "skills_before": 0,
-  "skills_after": 6,
-  "total_elapsed": 4797.3,
+  "in_progress": true,
+  "run_at": "2026-03-17T13:48:07.218671",
+  "skills_before": 6,
+  "skills_current": 6,
   "results": [
     {
       "task": "Open WhatsApp",
       "category": "whatsapp",
       "difficulty": 1,
       "success": true,
-      "elapsed_s": 133.5,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open YouTube",
-      "category": "youtube",
-      "difficulty": 1,
-      "success": true,
-      "elapsed_s": 42.7,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Settings",
-      "category": "settings",
-      "difficulty": 1,
-      "success": true,
-      "elapsed_s": 36.6,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Chrome",
-      "category": "chrome",
-      "difficulty": 1,
-      "success": true,
-      "elapsed_s": 36.6,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Play Store",
-      "category": "playstore",
-      "difficulty": 1,
-      "success": true,
-      "elapsed_s": 37.1,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Phone app",
-      "category": "phone",
-      "difficulty": 1,
-      "success": true,
-      "elapsed_s": 39.7,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Contacts",
-      "category": "phone",
-      "difficulty": 1,
-      "success": true,
-      "elapsed_s": 39.7,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open WhatsApp and go to Calls tab",
-      "category": "whatsapp",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 139.2,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open WhatsApp and go to Updates tab",
-      "category": "whatsapp",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 72.1,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open WhatsApp and search for Mummy in chats",
-      "category": "whatsapp",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 12.9,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open YouTube and go to Subscriptions",
-      "category": "youtube",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 70.8,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Search for MrBeast on YouTube",
-      "category": "youtube",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 251.1,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Settings and go to WiFi",
-      "category": "settings",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 138.9,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Settings and go to Display",
-      "category": "settings",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 79.1,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Settings and go to Notifications",
-      "category": "settings",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 45.1,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Settings and check battery percentage",
-      "category": "settings",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 44.6,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Chrome and go to google.com",
-      "category": "chrome",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 137.8,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Chrome and open a new tab",
-      "category": "chrome",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 101.6,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Search for weather today in Chrome",
-      "category": "chrome",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 264.6,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Search for Spotify on Play Store",
-      "category": "playstore",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 274.6,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Contacts and search for Mummy",
-      "category": "phone",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 79.4,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Send a WhatsApp message to Mummy saying Good morning",
-      "category": "whatsapp",
-      "difficulty": 3,
-      "success": true,
-      "elapsed_s": 85.8,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Send a WhatsApp message to Ayush Kumar saying Hey what's up",
-      "category": "whatsapp",
-      "difficulty": 3,
-      "success": true,
-      "elapsed_s": 23.0,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Send a WhatsApp message to Sadique faridi saying Hello brother",
-      "category": "whatsapp",
-      "difficulty": 3,
-      "success": true,
-      "elapsed_s": 22.3,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Play Warriyo Mortals on YouTube",
-      "category": "youtube",
-      "difficulty": 3,
-      "success": true,
-      "elapsed_s": 312.1,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Search for lofi hip hop on YouTube and play the first video",
-      "category": "youtube",
-      "difficulty": 3,
-      "success": true,
-      "elapsed_s": 418.2,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Search for VLC on Play Store and open its page",
-      "category": "playstore",
-      "difficulty": 3,
-      "success": true,
-      "elapsed_s": 247.3,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Send a WhatsApp message to Mummy saying Good night",
-      "category": "whatsapp",
-      "difficulty": 4,
-      "success": true,
-      "elapsed_s": 27.2,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Play Warriyo Mortals on YouTube",
-      "category": "youtube",
-      "difficulty": 4,
-      "success": true,
-      "elapsed_s": 208.2,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Search for lofi hip hop on YouTube and play the first video",
-      "category": "youtube",
-      "difficulty": 4,
-      "success": true,
-      "elapsed_s": 102.6,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Settings and go to WiFi",
-      "category": "settings",
-      "difficulty": 4,
-      "success": true,
-      "elapsed_s": 15.7,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy",
-      "category": "cross_app",
-      "difficulty": 5,
-      "success": true,
-      "elapsed_s": 596.1,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy",
-      "category": "cross_app",
-      "difficulty": 5,
-      "success": true,
-      "elapsed_s": 392.5,
+      "elapsed_s": 16.4,
       "error": null,
       "retried": false
     }
@@ -4651,7 +4369,7 @@ if __name__ == "__main__":
         "action": "done"
       }
     ],
-    "uses": 3,
+    "uses": 4,
     "version": 2
   },
   {
@@ -4806,6 +4524,88 @@ done
 
 //===== TERMUXFILE: gauntlet_nohup.log =====
 nohup: ignoring input
+
+########################################################
+  JARVIS  |  Open WhatsApp
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 258 screens (0 tainted), 317 transitions
+    whatsapp             140 screens
+    youtube              51 screens
+    vending              21 screens
+    chrome               21 screens
+    settings             11 screens
+    launcher             6 screens
+    termux               5 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+    dialer               1 screens
+  TransitionMemory: 317 transitions (251 confirmed, threshold=2)
+[init] task_apps (ordered): ['whatsapp']
+
+========================================================
+  STEP 1  |  Open WhatsApp
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3879780 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 15 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=33ba42b30171 elements=15
+[step] UI: ['Folder: Tools', 'Instagram', 'Tools', 'Grok', 'Roblox', 'Hollow Knight', 'Discord', 'OC Auto Clicker']
+[map] new screen: launcher_launcher (efa43c0a8f87)
+[map] screen: launcher_launcher (efa43c0a)
+[OPT4v2] launcher -> launching whatsapp (com.whatsapp)
+[llm] OPT4v2 am start: com.whatsapp
+[OPT4v2] app_index -> 1/1
+
+========================================================
+  STEP 2  |  Open WhatsApp
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1864517 bytes)
+[ui_parser] activity=com.whatsapp/.conversation.conversationslist.ArchivedConversationsActivity
+[ui_parser] signal='com.whatsapp/.conversation.conversationslist.ArchivedConversationsActivity'
+[mem] miss (unknown): com.whatsapp/.conversation.conversationslist.ArchivedConversationsActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 31 elements from 192.168.29.48:34011
+[mem] stored com.whatsapp/.conversation.conversationslist.ArchivedConversationsActivity hash=8189a3680057 elements=31
+[step] UI: ['element_1', 'Scan to Pay', 'More options', 'Ask Meta AI or Search', 'Swipe down to reveal additional actions', 'Inbox filters, Radio Group', 'All filter, , selected', 'Unread filter, 1, unselected']
+[map] new screen: whatsapp_homeactivity (b37f4f8d4aed)
+[map] transition: launcher_launcher --[opt4_launch:whatsapp]--> whatsapp_homeactivity
+[map] screen: whatsapp_homeactivity (b37f4f8d)
+[skill] matched: 'open whatsapp and go'  score=1.00  act_match=True
+[skill] executing 2 steps from memory
+[skill] action: {'action': 'tap', 'target': 28}
+[input] dispatching: TouchEvent(x=372, y=2576)
+[input] adb -s 192.168.29.48:34011 shell input tap 372 2576
+[skill] action: {'action': 'done'}
+[input] DONE — no dispatch
+[skill] done — skipped Claude
+[step] step=3/5 done=True history=['opt4_launch:whatsapp', 'tap [28] Updates', 'done']
+
+[controller] done in 3 steps
+
+[controller] history:
+  1. opt4_launch:whatsapp
+  2. tap [28] Updates
+  3. done
+
+  Screen Map: 260 screens (0 tainted), 318 transitions
+    whatsapp             141 screens
+    youtube              51 screens
+    vending              21 screens
+    chrome               21 screens
+    settings             11 screens
+    launcher             7 screens
+    termux               5 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+    dialer               1 screens
+  TransitionMemory: 318 transitions (251 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

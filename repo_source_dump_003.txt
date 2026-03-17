@@ -2804,6 +2804,21 @@ if __name__ == "__main__":
   ✗ FAIL  |  0.2s  |  skills: 0
 [10:46:40]   Error: returncode=1
 [10:46:40]   Recovering device...
+[10:46:47] 
+╔══════════════════════════════════════════════════════════════╗
+║   GAUNTLET COMPLETE                                         ║
+╠══════════════════════════════════════════════════════════════╣
+║  Tasks    : 1                                                ║
+║  Passed   : 0                                                ║
+║  Failed   : 1                                                ║
+║  Skills   : 0 → 0 (+0)                                       ║
+║  Duration : 0m 18s                                             ║
+╠══════════════════════════════════════════════════════════════╣
+[10:46:47] ║  ✗ Open WhatsApp                                        0.2s  ║
+[10:46:47] ╚══════════════════════════════════════════════════════════════╝
+[10:46:47] 
+  Report: /data/data/com.termux/files/home/workflows/gauntlet_report.json
+[10:46:47]   Log   : /data/data/com.termux/files/home/workflows/gauntlet_log.txt
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4143,7 +4158,7 @@ if __name__ == "__main__":
 
 //===== TERMUXFILE: gauntlet_report.json =====
 {
-  "run_at": "2026-03-17T10:41:31.402194",
+  "run_at": "2026-03-17T10:46:47.202785",
   "skills_before": 0,
   "skills_after": 0,
   "total_elapsed": 18.8,
@@ -4153,7 +4168,7 @@ if __name__ == "__main__":
       "category": "whatsapp",
       "difficulty": 1,
       "success": false,
-      "elapsed_s": 0.3,
+      "elapsed_s": 0.2,
       "error": "returncode=1",
       "retried": false
     }

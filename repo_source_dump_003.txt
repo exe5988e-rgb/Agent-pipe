@@ -2795,6 +2795,8 @@ if __name__ == "__main__":
 [11:01:09]   Recovering...
 [11:01:21]   Retry: FAIL  0.2s
 [11:01:21]   Recovering...
+[11:01:31] 
+[2/33] [1★] [youtube] Open YouTube
 
 
 //===== TERMUXFILE: tap_logger.py =====

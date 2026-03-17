@@ -6758,6 +6758,8 @@ java.lang.IllegalArgumentException: Argument expected after "text"
 [parser] INFO parsed 'tap 6' -> {'action': 'tap', 'target': 6}
 [parser] DEBUG normalized: 'type weather today'
 [parser] INFO parsed 'type weather today' -> {'action': 'type', 'text': 'weather today'}
+[parser] DEBUG normalized: 'tap 6'
+[parser] INFO parsed 'tap 6' -> {'action': 'tap', 'target': 6}
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

@@ -40936,6 +40936,272 @@
           "resource_id": ""
         }
       ]
+    },
+    "21323d874bfd": {
+      "screen_id": "21323d874bfd",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "element_1",
+        "element_2",
+        "Search Google or type URL",
+        "Start voice search",
+        "Search with your camera using Google Lens",
+        "element_6",
+        "Refine: restaurants near me open now within 0.2 mi",
+        "element_8",
+        "Refine: yandex",
+        "element_10",
+        "Refine: restaurants near me open now",
+        "Ask AI Mode",
+        "New Incognito tab",
+        "element_14",
+        "Refine: restaurants near me",
+        "element_16",
+        "Refine: best rated restaurants near me",
+        "element_18",
+        "Directory listing for /: [::]",
+        "Wikipedia: wikipedia.org",
+        "Build APK \u00b7 exe5988e-rgb/JarvisMerged@d5529f8: github.com",
+        "Google: google.com",
+        ": 192.168.29.110",
+        "Refine: github",
+        "element_25",
+        "Refine: weather today ranchi",
+        "element_27",
+        "element_28",
+        "Refine: weather today",
+        "Share Robert Downey Jr, Chris Evans Have Avengers Reunion at Oscars"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 620,
+          "y": 1455,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_2",
+          "x": 126,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "Search Google or type URL",
+          "x": 550,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "Start voice search",
+          "x": 960,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/mic_button"
+        },
+        {
+          "text": "Search with your camera using Google Lens",
+          "x": 1128,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/lens_camera_button"
+        },
+        {
+          "text": "element_6",
+          "x": 620,
+          "y": 440,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: restaurants near me open now within 0.2 mi",
+          "x": 1128,
+          "y": 440,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_8",
+          "x": 620,
+          "y": 643,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: yandex",
+          "x": 1128,
+          "y": 643,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_10",
+          "x": 620,
+          "y": 839,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: restaurants near me open now",
+          "x": 1128,
+          "y": 839,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Ask AI Mode",
+          "x": 331,
+          "y": 990,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/composeplate_button"
+        },
+        {
+          "text": "New Incognito tab",
+          "x": 909,
+          "y": 990,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/incognito_button"
+        },
+        {
+          "text": "element_14",
+          "x": 620,
+          "y": 1035,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: restaurants near me",
+          "x": 1128,
+          "y": 1035,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_16",
+          "x": 620,
+          "y": 1231,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: best rated restaurants near me",
+          "x": 1128,
+          "y": 1231,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_18",
+          "x": 620,
+          "y": 1366,
+          "cls": "android.widget.HorizontalScrollView",
+          "resource_id": "com.android.chrome:id/mv_tiles_container"
+        },
+        {
+          "text": "Directory listing for /: [::]",
+          "x": 238,
+          "y": 1357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Wikipedia: wikipedia.org",
+          "x": 504,
+          "y": 1357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Build APK \u00b7 exe5988e-rgb/JarvisMerged@d5529f8: github.com",
+          "x": 770,
+          "y": 1357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Google: google.com",
+          "x": 1036,
+          "y": 1357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": ": 192.168.29.110",
+          "x": 1173,
+          "y": 1357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: github",
+          "x": 1128,
+          "y": 1427,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_25",
+          "x": 620,
+          "y": 1623,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: weather today ranchi",
+          "x": 1128,
+          "y": 1623,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_27",
+          "x": 620,
+          "y": 1913,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "element_28",
+          "x": 620,
+          "y": 1751,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: weather today",
+          "x": 1128,
+          "y": 1751,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Share Robert Downey Jr, Chris Evans Have Avengers Reunion at Oscars",
+          "x": 929,
+          "y": 2109,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Card menu Robert Downey Jr, Chris Evans Have Avengers Reunion at Oscars",
+          "x": 1097,
+          "y": 2109,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "element_32",
+          "x": 620,
+          "y": 2484,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -41289,7 +41555,8 @@
     "a2d4963e4b8c|tap:YouTube": "908354aaf9ec",
     "908354aaf9ec|tap:Notifications, 4 new notifications": "94aa49d6775d",
     "94aa49d6775d|back": "a2d4963e4b8c",
-    "a2d4963e4b8c|tap:WhatsApp": "3012bc5865d3"
+    "a2d4963e4b8c|tap:WhatsApp": "3012bc5865d3",
+    "3012bc5865d3|tap:Start voice search": "21323d874bfd"
   }
 }
 

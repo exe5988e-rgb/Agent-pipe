@@ -19960,7 +19960,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 44,
+      "visits": 45,
       "tainted": false,
       "elements": [
         {
@@ -28788,7 +28788,8 @@
     "082a9e286aa7|type": "678cb33200f5",
     "344055367907|tap:Expand Mini Player": "e9824755943d",
     "e9824755943d|type": "0973acd9a8c9",
-    "0973acd9a8c9|tap:element_7": "36640a54fb64"
+    "0973acd9a8c9|tap:element_7": "36640a54fb64",
+    "36640a54fb64|tap:element_5": "4203f6dd32c9"
   }
 }
 

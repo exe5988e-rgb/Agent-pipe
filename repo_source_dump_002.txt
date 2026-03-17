@@ -19789,6 +19789,145 @@
           "y": 2744
         }
       ]
+    },
+    "bedebea7d14b": {
+      "screen_id": "bedebea7d14b",
+      "package": "com.termux",
+      "activity": "com.termux/.app.TermuxActivity",
+      "name": "termux_termuxactivity",
+      "labels": [
+        "~/workflows $ sleep 2 && python3 test/jarvis-agent/agent/controller.py --task \"Send a WhatsApp message to Mummy saying Hello\" --device \"192.168.29.48:34011\"\n\n########################################################\n  JARVIS  |  Send a WhatsApp message to Mummy saying Hello\n  Device : 192.168.29.48:34011\n########################################################\n\n[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}\n\n  Screen Map: 172 screens (0 tainted), 242 transitions\n    whatsapp             124 screens\n    youtube              28 screens\n    vending              15 screens\n    launcher             3 screens\n    unknown              1 screens\n    termux               1 screens\n  TransitionMemory: 242 transitions (242 confirmed, threshold=2)\n[init] task_apps (ordered): ['whatsapp']\n\n========================================================\n  STEP 1  |  Send a WhatsApp message to Mummy saying Hello\n========================================================\n[device] screenshot \u2192 /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1269937 bytes)\n[ui_parser] activity=com.termux/.app.TermuxActivity\n[ui_parser] signal='com.termux/.app.TermuxActivity'\n[mem] miss (unknown): com.termux/.app.TermuxActivity\n[ui_parser] cache miss -- full uiautomator dump",
+        "ESC",
+        "element_3",
+        "\u2630",
+        "\u21f3",
+        "\u2191",
+        "END",
+        "PGUP",
+        "\u21b9",
+        "CTRL",
+        "ALT",
+        "\u2190",
+        "\u2193",
+        "\u2192",
+        "PGDN"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "~/workflows $ sleep 2 && python3 test/jarvis-agent/agent/controller.py --task \"Send a WhatsApp message to Mummy saying Hello\" --device \"192.168.29.48:34011\"\n\n########################################################\n  JARVIS  |  Send a WhatsApp message to Mummy saying Hello\n  Device : 192.168.29.48:34011\n########################################################\n\n[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}\n\n  Screen Map: 172 screens (0 tainted), 242 transitions\n    whatsapp             124 screens\n    youtube              28 screens\n    vending              15 screens\n    launcher             3 screens\n    unknown              1 screens\n    termux               1 screens\n  TransitionMemory: 242 transitions (242 confirmed, threshold=2)\n[init] task_apps (ordered): ['whatsapp']\n\n========================================================\n  STEP 1  |  Send a WhatsApp message to Mummy saying Hello\n========================================================\n[device] screenshot \u2192 /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1269937 bytes)\n[ui_parser] activity=com.termux/.app.TermuxActivity\n[ui_parser] signal='com.termux/.app.TermuxActivity'\n[mem] miss (unknown): com.termux/.app.TermuxActivity\n[ui_parser] cache miss -- full uiautomator dump",
+          "x": 620,
+          "y": 727,
+          "cls": "android.view.View",
+          "resource_id": "com.termux:id/terminal_view"
+        },
+        {
+          "text": "ESC",
+          "x": 97,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_3",
+          "x": 620,
+          "y": 1447,
+          "cls": "androidx.viewpager.widget.ViewPager",
+          "resource_id": "com.termux:id/terminal_toolbar_view_pager"
+        },
+        {
+          "text": "\u2630",
+          "x": 271,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u21f3",
+          "x": 445,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "HOME",
+          "x": 619,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u2191",
+          "x": 794,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "END",
+          "x": 968,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "PGUP",
+          "x": 1143,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u21b9",
+          "x": 97,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "CTRL",
+          "x": 271,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "ALT",
+          "x": 445,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u2190",
+          "x": 619,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u2193",
+          "x": 794,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u2192",
+          "x": 968,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "PGDN",
+          "x": 1143,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {

@@ -3227,6 +3227,8 @@ if __name__ == "__main__":
 [13:53:20] 
 [8/33] [2★] [whatsapp] Open WhatsApp and go to Calls tab
 [13:53:36]   PASS  13.1s  skills=6
+[13:53:41] 
+[9/33] [2★] [whatsapp] Open WhatsApp and go to Updates tab
 
 
 //===== TERMUXFILE: tap_logger.py =====

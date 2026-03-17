@@ -19960,7 +19960,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 63,
+      "visits": 64,
       "tainted": false,
       "elements": [
         {
@@ -34625,6 +34625,250 @@
           "resource_id": ""
         }
       ]
+    },
+    "e7407a97b9ce": {
+      "screen_id": "e7407a97b9ce",
+      "package": "com.whatsapp",
+      "activity": "com.whatsapp/.home.ui.HomeActivity",
+      "name": "whatsapp_homeactivity",
+      "labels": [
+        "element_1",
+        "Search",
+        "More options",
+        "element_4",
+        "My status, tap to add new status",
+        "Dr Masood Alam Vet, 4 unread statuses",
+        "Asif Mudassir, 0 unread statuses",
+        "element_8",
+        "element_9",
+        "element_10",
+        "You",
+        "EXPLORE",
+        "element_13",
+        "Cravings",
+        "element_15",
+        "Dainik Jagran",
+        "element_17",
+        "No One Cares",
+        "New text status",
+        "element_20",
+        "News - Dainik Bhaskar Hindi - India, Rajasthan, Madhya Pradesh, MP, CG, UP, Bihar, Delhi",
+        "New status update",
+        "element_23",
+        "Dainik Bhaskar Madhya Pradesh News - Hindi, Elections, Local MP, Bhopal, Indore, Jabalpur, Gwalior",
+        "Chats, 1 new notification",
+        "Updates",
+        "Communities",
+        "Calls",
+        "You"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 620,
+          "y": 1286,
+          "cls": "androidx.viewpager.widget.ViewPager",
+          "resource_id": "com.whatsapp:id/pager"
+        },
+        {
+          "text": "Search",
+          "x": 1016,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/menuitem_search"
+        },
+        {
+          "text": "More options",
+          "x": 1170,
+          "y": 237,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/menuitem_overflow"
+        },
+        {
+          "text": "element_4",
+          "x": 620,
+          "y": 752,
+          "cls": "androidx.recyclerview.widget.RecyclerView",
+          "resource_id": "com.whatsapp:id/status_list"
+        },
+        {
+          "text": "My status, tap to add new status",
+          "x": 186,
+          "y": 752,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/status_tile_layout"
+        },
+        {
+          "text": "Dr Masood Alam Vet, 4 unread statuses",
+          "x": 468,
+          "y": 752,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/status_tile_layout"
+        },
+        {
+          "text": "Asif Mudassir, 0 unread statuses",
+          "x": 750,
+          "y": 752,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/status_tile_layout"
+        },
+        {
+          "text": "element_8",
+          "x": 1032,
+          "y": 752,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.whatsapp:id/buttons_layout"
+        },
+        {
+          "text": "element_9",
+          "x": 432,
+          "y": 613,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/wds_profile_picture"
+        },
+        {
+          "text": "element_10",
+          "x": 714,
+          "y": 613,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/wds_profile_picture"
+        },
+        {
+          "text": "You",
+          "x": 193,
+          "y": 683,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/wds_profile_picture"
+        },
+        {
+          "text": "EXPLORE",
+          "x": 1042,
+          "y": 1110,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/addon_button"
+        },
+        {
+          "text": "element_13",
+          "x": 620,
+          "y": 1327,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "Cravings",
+          "x": 140,
+          "y": 1327,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/contact_photo"
+        },
+        {
+          "text": "element_15",
+          "x": 620,
+          "y": 1593,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "Dainik Jagran",
+          "x": 140,
+          "y": 1593,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/contact_photo"
+        },
+        {
+          "text": "element_17",
+          "x": 620,
+          "y": 1859,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "No One Cares",
+          "x": 140,
+          "y": 1859,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/contact_photo"
+        },
+        {
+          "text": "New text status",
+          "x": 1082,
+          "y": 2042,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/extended_mini_fab"
+        },
+        {
+          "text": "element_20",
+          "x": 620,
+          "y": 2125,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "News - Dainik Bhaskar Hindi - India, Rajasthan, Madhya Pradesh, MP, CG, UP, Bihar, Delhi",
+          "x": 140,
+          "y": 2125,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/contact_photo"
+        },
+        {
+          "text": "New status update",
+          "x": 1086,
+          "y": 2280,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/fab"
+        },
+        {
+          "text": "element_23",
+          "x": 620,
+          "y": 2346,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "Dainik Bhaskar Madhya Pradesh News - Hindi, Elections, Local MP, Bhopal, Indore, Jabalpur, Gwalior",
+          "x": 140,
+          "y": 2367,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/contact_photo"
+        },
+        {
+          "text": "Chats, 1 new notification",
+          "x": 124,
+          "y": 2576,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Updates",
+          "x": 372,
+          "y": 2576,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Communities",
+          "x": 620,
+          "y": 2576,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Calls",
+          "x": 868,
+          "y": 2576,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "You",
+          "x": 1116,
+          "y": 2576,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -34870,7 +35114,7 @@
     "866f5ed64950|element_1114_237": "583c296ce79a",
     "866f5ed64950|element_17_419": "583c296ce79a",
     "866f5ed64950|element_246_419": "583c296ce79a",
-    "4203f6dd32c9|opt4_launch:whatsapp": "7c51d7e864c3",
+    "4203f6dd32c9|opt4_launch:whatsapp": "e7407a97b9ce",
     "7c51d7e864c3|tap:element_25": "1b272452b866",
     "7770f0561545|tap:More options": "307d903852e1",
     "307d903852e1|type": "b128d851f827",

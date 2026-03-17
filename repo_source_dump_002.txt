@@ -26416,6 +26416,328 @@
           "resource_id": ""
         }
       ]
+    },
+    "ec2d5cc0aa50": {
+      "screen_id": "ec2d5cc0aa50",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Open the homepage",
+        "element_2",
+        "google.com/search?q=weather+today+ranchi&oq=weather+today+&gs_lcrp=EgZjaHJvbWUqDQgBEAAYgwEYsQMYgAQyBggAEEUYOTINCAEQABiDARixAxiABDIHCAIQABiABDIKCAMQABixAxiABDI",
+        "See 20 tabs",
+        "Customise and control Google Chrome",
+        "element_6",
+        "Google",
+        "Google Account: Amir Shams (amirshamse8@gmail.com)",
+        "Search Labs",
+        "Google Search",
+        "element_11",
+        "Clear Search",
+        "Search by voice",
+        "weather today ranchi",
+        "element_15",
+        "element_16",
+        "element_17",
+        "element_18",
+        "element_19",
+        "element_20",
+        "element_21",
+        "element_22",
+        "\u0935\u0947\u0905\u0925\u0947\u0930 \u091f\u0941\u0921\u0947 \u0930\u093e\u0902\u091a\u0940",
+        "\u0930\u093e\u0902\u091a\u0940 \u0935\u0947\u0905\u0925\u0947\u0930 \u091f\u0941\u0921\u0947 \u0907\u0928 \u0939\u093f\u0902\u0926\u0940",
+        "\u0930\u093e\u0902\u091a\u0940 \u0935\u0947\u0905\u0925\u0947\u0930 \u091f\u0941\u0921\u0947 \u0932\u093e\u0907\u0935",
+        "\u0930\u093e\u0902\u091a\u0940 \u0935\u0947\u0905\u0925\u0947\u0930 \u091f\u0941\u0921\u0947 \u0939\u094c\u0930\u0932\u092f",
+        "Choose area",
+        "element_28",
+        "How location is used",
+        "element_30"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "element_2",
+          "x": 224,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "google.com/search?q=weather+today+ranchi&oq=weather+today+&gs_lcrp=EgZjaHJvbWUqDQgBEAAYgwEYsQMYgAQyBggAEEUYOTINCAEQABiDARixAxiABDIHCAIQABiABDIKCAMQABixAxiABDI",
+          "x": 592,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "See 20 tabs",
+          "x": 988,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        },
+        {
+          "text": "element_6",
+          "x": 620,
+          "y": 1526,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Google",
+          "x": 621,
+          "y": 457,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Google Account: Amir Shams (amirshamse8@gmail.com)",
+          "x": 1128,
+          "y": 448,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Search Labs",
+          "x": 99,
+          "y": 447,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Google Search",
+          "x": 140,
+          "y": 632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_11",
+          "x": 621,
+          "y": 639,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Clear Search",
+          "x": 929,
+          "y": 632,
+          "cls": "android.widget.Button",
+          "resource_id": "tsuid_i_C4aajiGvT3seMPyL2zsQo_3"
+        },
+        {
+          "text": "Search by voice",
+          "x": 1100,
+          "y": 632,
+          "cls": "android.widget.Button",
+          "resource_id": "Q7Ulpb"
+        },
+        {
+          "text": "weather today ranchi",
+          "x": 535,
+          "y": 632,
+          "cls": "android.widget.EditText",
+          "resource_id": ""
+        },
+        {
+          "text": "element_15",
+          "x": 620,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_16",
+          "x": 152,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_17",
+          "x": 621,
+          "y": 716,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_18",
+          "x": 358,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_19",
+          "x": 533,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_20",
+          "x": 764,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_21",
+          "x": 1014,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_22",
+          "x": 1190,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "\u0935\u0947\u0905\u0925\u0947\u0930 \u091f\u0941\u0921\u0947 \u0930\u093e\u0902\u091a\u0940",
+          "x": 232,
+          "y": 1027,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u0930\u093e\u0902\u091a\u0940 \u0935\u0947\u0905\u0925\u0947\u0930 \u091f\u0941\u0921\u0947 \u0907\u0928 \u0939\u093f\u0902\u0926\u0940",
+          "x": 614,
+          "y": 1027,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u0930\u093e\u0902\u091a\u0940 \u0935\u0947\u0905\u0925\u0947\u0930 \u091f\u0941\u0921\u0947 \u0932\u093e\u0907\u0935",
+          "x": 1027,
+          "y": 1027,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u0930\u093e\u0902\u091a\u0940 \u0935\u0947\u0905\u0925\u0947\u0930 \u091f\u0941\u0921\u0947 \u0939\u094c\u0930\u0932\u092f",
+          "x": 1236,
+          "y": 1027,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Choose area",
+          "x": 743,
+          "y": 1265,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_28",
+          "x": 620,
+          "y": 1272,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "How location is used",
+          "x": 1155,
+          "y": 1285,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_30",
+          "x": 620,
+          "y": 2044,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_31",
+          "x": 620,
+          "y": 1470,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "More options for Weather",
+          "x": 1135,
+          "y": 1498,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_33",
+          "x": 620,
+          "y": 2142,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Now, 31\u00b0C, Mostly sunny, Feels like 31\u00b0C",
+          "x": 621,
+          "y": 1747,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_35",
+          "x": 175,
+          "y": 2072,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_36",
+          "x": 371,
+          "y": 2072,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_37",
+          "x": 568,
+          "y": 2072,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_38",
+          "x": 764,
+          "y": 2072,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_39",
+          "x": 959,
+          "y": 2072,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_40",
+          "x": 1156,
+          "y": 2072,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -26692,7 +27014,8 @@
     "00f1f507607b|tap:Start voice search": "62ac838bcb42",
     "ac5e0b570c7c|type": "7e24cdda1771",
     "7e24cdda1771|tap:element_7": "00f1f507607b",
-    "62ac838bcb42|tap:element_11": "aa2019548b51"
+    "62ac838bcb42|tap:element_11": "aa2019548b51",
+    "aa2019548b51|tap:Refine: weather today ranchi": "ec2d5cc0aa50"
   }
 }
 

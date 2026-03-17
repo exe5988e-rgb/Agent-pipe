@@ -3060,6 +3060,8 @@ if __name__ == "__main__":
 [11:50:10] 
 [24/33] [3★] [whatsapp] Send a WhatsApp message to Sadique faridi saying Hello brother
 [11:50:35]   PASS  22.3s  skills=5
+[11:50:40] 
+[25/33] [3★] [youtube] Play Warriyo Mortals on YouTube
 
 
 //===== TERMUXFILE: tap_logger.py =====

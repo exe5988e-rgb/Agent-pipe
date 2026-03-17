@@ -2798,8 +2798,8 @@ if __name__ == "__main__":
   },
   "307d903852e1|type": {
     "to": "b128d851f827",
-    "count": 1,
-    "last_seen": 1773725901.896655
+    "count": 2,
+    "last_seen": 1773728358.4392712
   },
   "b128d851f827|tap:None": {
     "to": "366c9a634a55",
@@ -7684,6 +7684,140 @@ java.lang.IllegalArgumentException: Argument expected after "text"
 [parser] DEBUG normalized: 'tap 23'
 [parser] INFO parsed 'tap 23' -> {'action': 'tap', 'target': 23}
 
+########################################################
+  JARVIS  |  Send a WhatsApp message to Mummy saying Good morning
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 214 screens (0 tainted), 280 transitions
+    whatsapp             132 screens
+    youtube              35 screens
+    vending              20 screens
+    chrome               12 screens
+    settings             6 screens
+    launcher             4 screens
+    termux               3 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+  TransitionMemory: 280 transitions (246 confirmed, threshold=2)
+[init] task_apps (ordered): ['whatsapp']
+
+========================================================
+  STEP 1  |  Send a WhatsApp message to Mummy saying Good morning
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3601174 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=5f3c16c0a6f8 elements=26
+[step] UI: ['Clock', '11', ':', '48', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[OPT4v2] launcher -> launching whatsapp (com.whatsapp)
+[llm] OPT4v2 am start: com.whatsapp
+[OPT4v2] app_index -> 1/1
+
+========================================================
+  STEP 2  |  Send a WhatsApp message to Mummy saying Good morning
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (620434 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 27 elements from 192.168.29.48:34011
+[mem] stored com.whatsapp/.home.ui.HomeActivity hash=71226a108a9f elements=27
+[step] UI: ['element_1', 'Search', 'More options', 'element_4', 'My status updates', 'New status update', 'Asif Mudassir, 0 unread statuses', 'element_8']
+[map] screen: whatsapp_homeactivity (24f4242f)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 23'
+[step] LLM: 'tap 23'
+[step] action: {'action': 'tap', 'target': 23}
+[input] dispatching: TouchEvent(x=124, y=2576)
+[input] adb -s 192.168.29.48:34011 shell input tap 124 2576
+[mem] invalidated com.whatsapp/.home.ui.HomeActivity
+[step] step=2/15 done=False history=['opt4_launch:whatsapp', 'tap [23] Chats, 2 new notifications']
+
+========================================================
+  STEP 3  |  Send a WhatsApp message to Mummy saying Good morning
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (400625 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 31 elements from 192.168.29.48:34011
+[mem] stored com.whatsapp/.home.ui.HomeActivity hash=69e2eaa66370 elements=31
+[step] UI: ['element_1', 'Scan to Pay', 'More options', 'Ask Meta AI or Search', 'Swipe down to reveal additional actions', 'Inbox filters, Radio Group', 'All filter, , selected', 'Unread filter, 2, unselected']
+[map] transition: whatsapp_homeactivity --[tap:Updates]--> whatsapp_homeactivity
+[map] screen: whatsapp_homeactivity (7c51d7e8)
+[policy] search_contact: tapping New chat [24]
+[policy] matched — executing 1 actions directly
+[policy] action: {'action': 'tap', 'target': 24}
+[input] dispatching: TouchEvent(x=1086, y=2280)
+[input] adb -s 192.168.29.48:34011 shell input tap 1086 2280
+[policy] done — skipped Claude entirely
+[step] step=3/15 done=False history=['opt4_launch:whatsapp', 'tap [23] Chats, 2 new notifications', 'tap [24] New chat']
+
+========================================================
+  STEP 4  |  Send a WhatsApp message to Mummy saying Good morning
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (315919 bytes)
+[ui_parser] activity=com.whatsapp/.contact.ui.picker.ContactPicker
+[ui_parser] signal='com.whatsapp/.contact.ui.picker.ContactPicker'
+[mem] miss (unknown): com.whatsapp/.contact.ui.picker.ContactPicker
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 22 elements from 192.168.29.48:34011
+[mem] stored com.whatsapp/.contact.ui.picker.ContactPicker hash=20fa1f5e6963 elements=22
+[step] UI: ['Back', 'Search', 'More options', 'element_4', 'element_5', 'Add new contact via QR code', 'element_7', 'element_8']
+[map] screen: whatsapp_contactpicker (7770f056)
+[policy] contact_picker phase1: tapping Search [2]
+[policy] matched — executing 1 actions directly
+[policy] action: {'action': 'tap', 'target': 2}
+[input] dispatching: TouchEvent(x=1016, y=237)
+[input] adb -s 192.168.29.48:34011 shell input tap 1016 237
+[mem] invalidated com.whatsapp/.contact.ui.picker.ContactPicker
+[policy] done — skipped Claude entirely
+[step] step=4/15 done=False history=['opt4_launch:whatsapp', 'tap [23] Chats, 2 new notifications', 'tap [24] New chat', 'tap [2] Search']
+
+========================================================
+  STEP 5  |  Send a WhatsApp message to Mummy saying Good morning
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1213476 bytes)
+[ui_parser] activity=com.whatsapp/.contact.ui.picker.ContactPicker
+[ui_parser] signal='com.whatsapp/.contact.ui.picker.ContactPicker'
+[mem] miss (unknown): com.whatsapp/.contact.ui.picker.ContactPicker
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 15 elements from 192.168.29.48:34011
+[mem] stored com.whatsapp/.contact.ui.picker.ContactPicker hash=c409caf424e1 elements=15
+[step] UI: ['Search name or number…', 'Show dial pad keyboard', 'Back', 'element_4', 'element_5', 'element_6', 'Add new contact via QR code', 'element_8']
+[map] screen: whatsapp_contactpicker (307d9038)
+[policy] contact_picker phase2: typing 'Mummy'
+[policy] matched — executing 1 actions directly
+[policy] action: {'action': 'type', 'text': 'Mummy'}
+[input] dispatching: SetTextEvent('Mummy')
+[input] adb -s 192.168.29.48:34011 shell input text Mummy
+[mem] invalidated com.whatsapp/.contact.ui.picker.ContactPicker
+[policy] done — skipped Claude entirely
+[step] step=5/15 done=False history=['opt4_launch:whatsapp', 'tap [23] Chats, 2 new notifications', 'tap [24] New chat', 'tap [2] Search', "type 'Mummy'"]
+
+========================================================
+  STEP 6  |  Send a WhatsApp message to Mummy saying Good morning
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1193829 bytes)
+[ui_parser] activity=com.whatsapp/.contact.ui.picker.ContactPicker
+[ui_parser] signal='com.whatsapp/.contact.ui.picker.ContactPicker'
+[mem] miss (unknown): com.whatsapp/.contact.ui.picker.ContactPicker
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 14 elements from 192.168.29.48:34011
+[mem] stored com.whatsapp/.contact.ui.picker.ContactPicker hash=737e3421b4e1 elements=14
+[step] UI: ['Mummy', 'Show dial pad keyboard', 'Back', 'element_4', 'element_5', 'element_6', 'element_7', 'element_8']
+[map] screen: whatsapp_contactpicker (b128d851)
+[policy] contact_picker phase3: tapping first result for 'Mummy'
+[policy] matched — executing 1 actions directly
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash
@@ -12290,370 +12424,5 @@ def from_action(action: dict, ui_elements: list):
         return None
 
     return None
-
-
-//===== TERMUXFILE: jarvis-agent/executor/device.py =====
-"""
-executor/device.py
-
-Extracted from DroidBot/droidbot/device.py
-Source: https://github.com/honeynet/droidbot
-
-What we keep:
-  __init__    serial, output_dir, display_info cache
-  get_width / get_height   (from get_display_info — DroidBot pattern)
-  take_screenshot          (ADB screencap via exec-out, not minicap)
-  key_press                → adb shell input keyevent
-  view_touch               → adb shell input tap
-  view_drag                → adb shell input swipe
-  view_set_text            → adb shell input text
-  get_top_activity_name    (dumpsys, DroidBot regex)
-  unlock                   (simple keyevent wake)
-
-What we drop (all require DroidBot adapters we don't have):
-  All adapter setup (ADB, Minicap, DroidBotApp, Telnet, Logcat, IME)
-  install_app, uninstall_app, send_intent, send_sms, GPS, shake, etc.
-  get_current_state (requires DeviceState import)
-  get_views (requires DroidBotApp or CV module)
-
-ADB calls: raw subprocess instead of DroidBot's ADB adapter class.
-"""
-
-import os
-import re
-import subprocess
-import time
-
-
-class Device:
-    """
-    Minimal ADB device — DroidBot Device interface, ADB-only backend.
-    """
-
-    def __init__(self, device_serial=None, output_dir=None):
-        """
-        DroidBot Device.__init__ signature (subset).
-        :param device_serial: e.g. "192.168.29.48:37891"
-        :param output_dir: local dir to save screenshots
-        """
-        self.serial     = device_serial
-        self.output_dir = output_dir or os.path.expanduser("~/jarvis-agent/screenshots")
-        os.makedirs(self.output_dir, exist_ok=True)
-
-        # DroidBot caches display_info dict — we do the same
-        self.display_info = None
-
-    # ── Raw ADB ──────────────────────────────────────────────────────────────
-
-    def _adb(self, *args, timeout=15) -> subprocess.CompletedProcess:
-        cmd = ["adb", "-s", self.serial] + list(str(a) for a in args)
-        return subprocess.run(cmd, capture_output=True, timeout=timeout)
-
-    def _shell(self, *args, timeout=15) -> str:
-        """Run adb shell, return stdout string. Mirrors DroidBot adb.shell()."""
-        r = self._adb("shell", *args, timeout=timeout)
-        return r.stdout.decode(errors="replace").strip()
-
-    # ── Connection (DroidBot Device.connect / check_connectivity) ────────────
-
-    def connect(self):
-        """Connect WiFi ADB. DroidBot Device.connect() calls adapter.connect()."""
-        result = subprocess.run(
-            ["adb", "connect", self.serial],
-            capture_output=True, text=True, timeout=10
-        )
-        ok = "connected" in result.stdout.lower()
-        print(f"[device] connect {self.serial}: {result.stdout.strip()}")
-        return ok
-
-    def is_connected(self) -> bool:
-        r = subprocess.run(["adb", "devices"], capture_output=True, text=True, timeout=5)
-        return self.serial in r.stdout
-
-    # ── Display info (DroidBot Device.get_display_info / get_width / get_height) ─
-
-    def get_display_info(self, refresh=True) -> dict:
-        """
-        DroidBot Device.get_display_info() calls self.adb.get_display_info().
-        We replicate by parsing `adb shell wm size`.
-        Returns dict with 'width' and 'height' keys (DroidBot format).
-        """
-        if self.display_info is None or refresh:
-            out = self._shell("wm", "size")
-            m = re.search(r"(\d+)x(\d+)", out)
-            if m:
-                self.display_info = {
-                    "width":  int(m.group(1)),
-                    "height": int(m.group(2)),
-                }
-            else:
-                self.display_info = {"width": 1080, "height": 2400}
-            print(f"[device] display_info: {self.display_info}")
-        return self.display_info
-
-    def get_width(self, refresh=False) -> int:
-        """DroidBot Device.get_width()"""
-        return self.get_display_info(refresh=refresh).get("width", 1080)
-
-    def get_height(self, refresh=False) -> int:
-        """DroidBot Device.get_height()"""
-        return self.get_display_info(refresh=refresh).get("height", 2400)
-
-    # ── Screenshot (DroidBot Device.take_screenshot — screencap path) ────────
-
-    def take_screenshot(self, filename="screen.png") -> str:
-        """
-        DroidBot Device.take_screenshot() uses minicap or screencap+pull.
-        We always use exec-out screencap -p (faster, no temp file on device).
-        Returns local path to saved PNG.
-        """
-        local_path = os.path.join(self.output_dir, filename)
-
-        r = self._adb("exec-out", "screencap", "-p", timeout=15)
-        if r.returncode != 0:
-            raise RuntimeError(f"screencap failed: {r.stderr.decode().strip()}")
-        if len(r.stdout) < 100:
-            raise RuntimeError("screencap: empty output")
-
-        with open(local_path, "wb") as f:
-            f.write(r.stdout)
-
-        print(f"[device] screenshot → {local_path} ({len(r.stdout)} bytes)")
-        return local_path
-
-    # ── Input dispatch (DroidBot Device view_touch / view_drag / key_press) ──
-
-    def key_press(self, key_code):
-        """DroidBot Device.key_press() → self.adb.press(key_code)"""
-        from executor.input_event import KeyEvent
-        ev = KeyEvent(name=str(key_code))
-        cmd = ["adb", "-s", self.serial, "shell"] + ev.to_adb_cmd()
-        subprocess.run(cmd, capture_output=True, timeout=10)
-
-    def view_touch(self, x, y):
-        """DroidBot Device.view_touch() → self.adb.touch(x, y)"""
-        self._shell("input", "tap", str(int(x)), str(int(y)))
-
-    def view_long_touch(self, x, y, duration=200):
-        """
-        DroidBot Device.view_long_touch() → self.adb.long_touch(x, y, duration).
-        For agent taps, duration=200ms is fine.
-        """
-        self._shell("input", "swipe",
-                    str(int(x)), str(int(y)),
-                    str(int(x)), str(int(y)),
-                    str(int(duration)))
-
-    def view_drag(self, start_xy, end_xy, duration):
-        """DroidBot Device.view_drag() → self.adb.drag(start_xy, end_xy, duration)"""
-        sx, sy = start_xy
-        ex, ey = end_xy
-        self._shell("input", "swipe",
-                    str(int(sx)), str(int(sy)),
-                    str(int(ex)), str(int(ey)),
-                    str(int(duration)))
-
-    def view_set_text(self, text: str):
-        """DroidBot Device.view_set_text() → adb.type(text)"""
-        safe = (text.replace(" ", "%s")
-                    .replace("'", "\\'")
-                    .replace('"', '\\"'))
-        self._shell("input", "text", safe)
-
-    def unlock(self):
-        """DroidBot Device.unlock() — wake + swipe up."""
-        self._shell("input", "keyevent", "224")   # KEYCODE_WAKEUP
-        time.sleep(0.3)
-        w = self.get_width()
-        h = self.get_height()
-        cx = w // 2
-        self._shell("input", "swipe",
-                    str(cx), str(int(h * 0.8)),
-                    str(cx), str(int(h * 0.2)), "400")
-        time.sleep(0.5)
-
-    # ── Activity info (DroidBot Device.get_top_activity_name) ────────────────
-
-    def get_top_activity_name(self):
-        """
-        DroidBot Device.get_top_activity_name() — same dumpsys regex.
-        """
-        r = self._shell("dumpsys", "activity", "activities")
-        m = re.search(r'\*\s*Hist\s*#\d+:\s*ActivityRecord\{[^ ]+\s*[^ ]+\s*([^ ]+)\s*t\d+\}', r)
-        if m:
-            return m.group(1)
-        return None
-
-    def send_event(self, event):
-        """DroidBot Device.send_event(event) → event.send(self)"""
-        event.send(self)
-
-    def __repr__(self):
-        return f"Device({self.serial})"
-
-
-//===== TERMUXFILE: jarvis-agent/executor/input_manager.py =====
-"""
-executor/input_manager.py
-
-Extracted from DroidBot/droidbot/input_manager.py
-Source: https://github.com/honeynet/droidbot
-
-What we keep:
-  __init__    device reference, event_interval
-  add_event   dispatch one event to device + sleep (DroidBot pattern)
-
-What we drop (all require exploration policies we don't use):
-  get_input_policy (UtgBased*, Greedy*, Replay*, Manual*, Monkey, LLM)
-  start / stop (policy loop runner)
-  app, policy_name, random_input, script_path, profiling_method
-
-New addition:
-  execute_action(action_dict, ui_elements) — agent loop interface.
-  Maps action dicts from action_parser → InputEvent → add_event.
-"""
-
-import time
-from executor.input_event import (
-    InputEvent, KeyEvent, TouchEvent, SwipeEvent, SetTextEvent, from_action
-)
-from executor.device import Device
-
-
-class InputManager:
-    """
-    Dispatches InputEvent objects to device via ADB.
-    DroidBot InputManager interface (policy-free subset).
-    """
-
-    def __init__(self, device: Device, event_interval: float = 0.5):
-        """
-        DroidBot InputManager.__init__ (subset).
-        :param device: Device instance
-        :param event_interval: seconds to sleep after each event (DroidBot default=1s)
-        """
-        self.device         = device
-        self.event_interval = event_interval
-        self.events         = []   # DroidBot keeps event history
-
-    def add_event(self, event: InputEvent) -> bool:
-        """
-        DroidBot InputManager.add_event():
-          1. Appends to self.events
-          2. Calls event_log.start() → device.send_event(event)
-          3. Sleeps event_interval
-          4. Calls event_log.stop()
-
-        We skip EventLog (requires App + DeviceState), keep the core:
-          device.send_event(event) + sleep.
-        """
-        if event is None:
-            return False
-
-        self.events.append(event)
-
-        import subprocess
-        cmd = ["adb", "-s", self.device.serial, "shell"] + event.to_adb_cmd()
-        print(f"[input] {' '.join(cmd)}")
-
-        try:
-            result = subprocess.run(cmd, capture_output=True, text=True, timeout=10)
-            if result.returncode != 0 and result.stderr:
-                print(f"[input] stderr: {result.stderr.strip()}")
-            success = result.returncode == 0
-        except subprocess.TimeoutExpired:
-            print(f"[input] timeout: {event}")
-            success = False
-        except Exception as e:
-            print(f"[input] error: {e}")
-            success = False
-
-        time.sleep(self.event_interval)
-        return success
-
-    # ── Typed helpers (convenience, not in DroidBot InputManager) ────────────
-
-    def tap(self, x: int, y: int) -> bool:
-        return self.add_event(TouchEvent(x=x, y=y))
-
-    def swipe(self, start_x, start_y, end_x, end_y, duration=400) -> bool:
-        return self.add_event(SwipeEvent(
-            start_x=start_x, start_y=start_y,
-            end_x=end_x, end_y=end_y, duration=duration))
-
-    def key(self, name: str) -> bool:
-        return self.add_event(KeyEvent(name=name))
-
-    def type_text(self, text: str) -> bool:
-        return self.add_event(SetTextEvent(text=text))
-
-    def back(self)  -> bool: return self.key("BACK")
-    def home(self)  -> bool: return self.key("HOME")
-    def enter(self) -> bool: return self.key("ENTER")
-
-    # ── Agent interface ───────────────────────────────────────────────────────
-
-    def execute_action(self, action: dict, ui_elements: list) -> bool:
-        """
-        Execute a parsed action dict from action_parser.
-        This is the primary interface called by adb_executor / controller.
-
-        Args:
-            action      : {"action": "tap", "target": 1} etc.
-            ui_elements : current UI element list {id, text, x, y}
-
-        Returns:
-            True if dispatched, False if skipped
-        """
-        act = action.get("action", "").lower()
-
-        if act == "done":
-            print("[input] DONE — no dispatch")
-            return False
-
-        event = from_action(action, ui_elements)
-        if event is None:
-            print(f"[input] cannot build event from: {action}")
-            return False
-
-        print(f"[input] dispatching: {event}")
-        return self.add_event(event)
-
-    def __repr__(self):
-        return f"InputManager(device={self.device.serial}, events={len(self.events)})"
-
-
-//===== TERMUXFILE: jarvis-agent/executor/adb_executor.py =====
-"""
-executor/adb_executor.py
-
-Thin facade — controller.py calls only this.
-Manages module-level Device + InputManager singletons.
-Swap to full DroidBot later by changing only this file.
-"""
-
-import os
-from executor.device        import Device
-from executor.input_manager import InputManager
-
-_device:  Device       = None
-_manager: InputManager = None
-
-def _get_manager(adb_device: str) -> InputManager:
-    global _device, _manager
-    if _manager is None or _device.serial != adb_device:
-        _device  = Device(
-            device_serial = adb_device,
-            output_dir    = os.path.join(os.path.dirname(__file__), "..", "screenshots")
-        )
-        _manager = InputManager(_device, event_interval=0.5)
-    return _manager
-
-def execute(action: dict, ui_elements: list, adb_device: str) -> bool:
-    return _get_manager(adb_device).execute_action(action, ui_elements)
-
-def get_device(adb_device: str) -> Device:
-    _get_manager(adb_device)
-    return _device
 
 

@@ -3611,6 +3611,513 @@ if __name__ == "__main__":
     main()
 
 
+//===== TERMUXFILE: gauntlet_runner.py =====
+#!/usr/bin/env python3
+"""
+gauntlet_runner.py  —  JarvisMinI Overnight Gauntlet Runner
+
+Leave Phone A and Phone B running. Come back in the morning to a
+fully trained skill library and a WhatsApp message with the results.
+
+Features:
+  - Hard per-task timeout (kills hung agent processes)
+  - Device recovery after every task (kill app, go home, wait)
+  - Retry logic: each failed task retried once automatically
+  - Detailed log file: ~/workflows/gauntlet_log.txt (tail -f this)
+  - Final WhatsApp notification to yourself with pass/fail summary
+  - Continues running even if Phone B bridge goes down (retries bridge)
+  - Screen stays on via adb during run
+
+Usage:
+  # Full overnight run — all tasks, notify when done
+  python3 gauntlet_runner.py --device "192.168.29.48:34011" --notify "Mummy"
+
+  # Quick daytime run — single category
+  python3 gauntlet_runner.py --device "192.168.29.48:34011" --category whatsapp
+
+  # Dry run — see task list without executing
+  python3 gauntlet_runner.py --device "192.168.29.48:34011" --dry-run
+
+  # Watch live progress in another terminal
+  tail -f ~/workflows/gauntlet_log.txt
+"""
+
+import argparse
+import json
+import os
+import re
+import signal
+import subprocess
+import sys
+import time
+from datetime import datetime
+from pathlib import Path
+
+ROOT         = Path(__file__).parent
+LOG_FILE     = Path.home() / "workflows" / "gauntlet_log.txt"
+REPORT_FILE  = Path.home() / "workflows" / "gauntlet_report.json"
+SKILLS_FILE  = Path.home() / "workflows" / "skills.json"
+CONTROLLER   = ROOT / "test" / "jarvis-agent" / "agent" / "controller.py"
+DEFAULT_DEV  = "192.168.29.48:34011"
+
+# Per-task timeout in seconds. If agent doesn't finish, it gets killed.
+# Formula: max_steps * 45s per step + 30s buffer
+def task_timeout(max_steps):
+    return max_steps * 45 + 30
+
+# How long to wait between tasks for device to settle
+INTER_TASK_PAUSE = 5
+
+# How many times to retry a failed task before giving up
+MAX_RETRIES = 1
+
+# ── Task registry ─────────────────────────────────────────────────────────────
+
+TASKS = [
+    # Difficulty 1 — OPT4 bypass, instant
+    {"task": "Open WhatsApp",          "category": "whatsapp",  "difficulty": 1, "max_steps": 5},
+    {"task": "Open YouTube",           "category": "youtube",   "difficulty": 1, "max_steps": 5},
+    {"task": "Open Settings",          "category": "settings",  "difficulty": 1, "max_steps": 5},
+    {"task": "Open Chrome",            "category": "chrome",    "difficulty": 1, "max_steps": 5},
+    {"task": "Open Play Store",        "category": "playstore", "difficulty": 1, "max_steps": 5},
+    {"task": "Open Phone app",         "category": "phone",     "difficulty": 1, "max_steps": 5},
+    {"task": "Open Contacts",          "category": "phone",     "difficulty": 1, "max_steps": 5},
+
+    # Difficulty 2 — single navigation step
+    {"task": "Open WhatsApp and go to Calls tab",             "category": "whatsapp",  "difficulty": 2, "max_steps": 8},
+    {"task": "Open WhatsApp and go to Updates tab",           "category": "whatsapp",  "difficulty": 2, "max_steps": 8},
+    {"task": "Open WhatsApp and search for Mummy in chats",   "category": "whatsapp",  "difficulty": 2, "max_steps": 10},
+    {"task": "Open YouTube and go to Subscriptions",          "category": "youtube",   "difficulty": 2, "max_steps": 8},
+    {"task": "Search for MrBeast on YouTube",                 "category": "youtube",   "difficulty": 2, "max_steps": 10},
+    {"task": "Open Settings and go to WiFi",                  "category": "settings",  "difficulty": 2, "max_steps": 8},
+    {"task": "Open Settings and go to Display",               "category": "settings",  "difficulty": 2, "max_steps": 8},
+    {"task": "Open Settings and go to Notifications",         "category": "settings",  "difficulty": 2, "max_steps": 8},
+    {"task": "Open Settings and check battery percentage",    "category": "settings",  "difficulty": 2, "max_steps": 8},
+    {"task": "Open Chrome and go to google.com",              "category": "chrome",    "difficulty": 2, "max_steps": 10},
+    {"task": "Open Chrome and open a new tab",                "category": "chrome",    "difficulty": 2, "max_steps": 8},
+    {"task": "Search for weather today in Chrome",            "category": "chrome",    "difficulty": 2, "max_steps": 10},
+    {"task": "Search for Spotify on Play Store",              "category": "playstore", "difficulty": 2, "max_steps": 10},
+    {"task": "Open Contacts and search for Mummy",            "category": "phone",     "difficulty": 2, "max_steps": 10},
+
+    # Difficulty 3 — multi-step flows
+    {"task": "Send a WhatsApp message to Mummy saying Good morning",            "category": "whatsapp",  "difficulty": 3, "max_steps": 15},
+    {"task": "Send a WhatsApp message to Ayush Kumar saying Hey what's up",     "category": "whatsapp",  "difficulty": 3, "max_steps": 15},
+    {"task": "Send a WhatsApp message to Sadique faridi saying Hello brother",  "category": "whatsapp",  "difficulty": 3, "max_steps": 15},
+    {"task": "Play Warriyo Mortals on YouTube",                                 "category": "youtube",   "difficulty": 3, "max_steps": 12},
+    {"task": "Search for lofi hip hop on YouTube and play the first video",     "category": "youtube",   "difficulty": 3, "max_steps": 12},
+    {"task": "Search for VLC on Play Store and open its page",                  "category": "playstore", "difficulty": 3, "max_steps": 12},
+
+    # Difficulty 4 — repeated runs to build confidence
+    # (same tasks again — second run should use skill library, much faster)
+    {"task": "Send a WhatsApp message to Mummy saying Good night",              "category": "whatsapp",  "difficulty": 4, "max_steps": 15},
+    {"task": "Play Warriyo Mortals on YouTube",                                 "category": "youtube",   "difficulty": 4, "max_steps": 12},
+    {"task": "Search for lofi hip hop on YouTube and play the first video",     "category": "youtube",   "difficulty": 4, "max_steps": 12},
+    {"task": "Open Settings and go to WiFi",                                    "category": "settings",  "difficulty": 4, "max_steps": 8},
+
+    # Difficulty 5 — cross-app (run last, depend on earlier skills)
+    {"task": "Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy",
+     "category": "cross_app", "difficulty": 5, "max_steps": 30},
+    {"task": "Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy",
+     "category": "cross_app", "difficulty": 5, "max_steps": 30},
+]
+
+# ── Logging ───────────────────────────────────────────────────────────────────
+
+def _log(msg, also_print=True):
+    ts   = datetime.now().strftime("%H:%M:%S")
+    line = f"[{ts}] {msg}"
+    LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
+    with open(LOG_FILE, "a") as f:
+        f.write(line + "\n")
+    if also_print:
+        print(line)
+
+# ── ADB helpers ───────────────────────────────────────────────────────────────
+
+def _shell(device, *args, timeout=15):
+    try:
+        r = subprocess.run(
+            ["adb", "-s", device, "shell"] + list(str(a) for a in args),
+            capture_output=True, timeout=timeout
+        )
+        return r.stdout.decode(errors="replace").strip()
+    except Exception:
+        return ""
+
+def go_home(device):
+    _shell(device, "input", "keyevent", "3")
+    time.sleep(1.5)
+
+def keep_screen_on(device):
+    """Prevent screen from sleeping during gauntlet."""
+    _shell(device, "settings", "put", "system", "screen_off_timeout", "2147483647")
+
+def restore_screen_timeout(device):
+    """Restore default 2 minute timeout."""
+    _shell(device, "settings", "put", "system", "screen_off_timeout", "120000")
+
+def wake_screen(device):
+    """Wake screen if it went to sleep."""
+    _shell(device, "input", "keyevent", "26")  # power button
+    time.sleep(0.5)
+    _shell(device, "input", "keyevent", "82")  # unlock
+    time.sleep(0.5)
+
+def kill_all_apps(device):
+    """Force-stop common apps to get clean state."""
+    apps = [
+        "com.whatsapp",
+        "com.google.android.youtube",
+        "com.android.chrome",
+        "com.android.settings",
+        "com.android.vending",
+    ]
+    for app in apps:
+        _shell(device, "am", "force-stop", app)
+    time.sleep(1)
+
+def check_bridge(phone_b_url="http://192.168.29.110:8890"):
+    """Check if Phone B bridge is reachable."""
+    try:
+        import urllib.request
+        with urllib.request.urlopen(f"{phone_b_url}/health", timeout=5) as r:
+            return r.status == 200
+    except Exception:
+        return False
+
+def skills_count():
+    if SKILLS_FILE.exists():
+        try:
+            return len(json.loads(SKILLS_FILE.read_text()))
+        except Exception:
+            pass
+    return 0
+
+# ── Task runner ───────────────────────────────────────────────────────────────
+
+def run_task_with_timeout(task_str, device, max_steps, timeout_s):
+    """
+    Run agent controller as a subprocess with hard timeout.
+    Kills the process if it exceeds timeout_s.
+    Returns (success: bool, elapsed: float, error: str|None)
+    """
+    if not CONTROLLER.exists():
+        return False, 0.0, f"controller not found: {CONTROLLER}"
+
+    cmd = [
+        sys.executable, str(CONTROLLER),
+        "--task",      task_str,
+        "--device",    device,
+        "--max-steps", str(max_steps),
+    ]
+
+    t0   = time.time()
+    proc = None
+
+    try:
+        proc = subprocess.Popen(
+            cmd,
+            stdout=sys.stdout,
+            stderr=sys.stderr,
+        )
+        proc.wait(timeout=timeout_s)
+        elapsed = time.time() - t0
+        success = proc.returncode == 0
+        error   = None if success else f"returncode={proc.returncode}"
+        return success, round(elapsed, 1), error
+
+    except subprocess.TimeoutExpired:
+        elapsed = time.time() - t0
+        _log(f"  ⚠  TIMEOUT after {elapsed:.0f}s — killing process")
+        if proc:
+            try:
+                proc.kill()
+                proc.wait(timeout=5)
+            except Exception:
+                pass
+        return False, round(elapsed, 1), "timeout"
+
+    except Exception as e:
+        elapsed = time.time() - t0
+        return False, round(elapsed, 1), str(e)
+
+
+def recover_device(device):
+    """
+    Best-effort device recovery after a task failure or timeout.
+    Kill apps, go home, wake screen, wait.
+    """
+    _log("  Recovering device...")
+    try:
+        kill_all_apps(device)
+        go_home(device)
+        wake_screen(device)
+        time.sleep(2)
+    except Exception as e:
+        _log(f"  Recovery error (continuing): {e}")
+
+
+# ── Notification ──────────────────────────────────────────────────────────────
+
+def send_whatsapp_notification(device, contact, message):
+    """
+    Send a WhatsApp message to `contact` with `message`.
+    Uses the agent itself to send the notification.
+    """
+    _log(f"  Sending completion notification to {contact}...")
+    task = f"Send a WhatsApp message to {contact} saying {message}"
+    try:
+        success, elapsed, error = run_task_with_timeout(task, device, 15, 120)
+        if success:
+            _log(f"  ✓ Notification sent ({elapsed:.1f}s)")
+        else:
+            _log(f"  ✗ Notification failed: {error}")
+    except Exception as e:
+        _log(f"  ✗ Notification error: {e}")
+
+
+# ── Report ────────────────────────────────────────────────────────────────────
+
+def build_summary_message(results, skills_before, skills_after, elapsed_total):
+    passed  = sum(1 for r in results if r["success"])
+    failed  = len(results) - passed
+    minutes = int(elapsed_total / 60)
+    new_skills = skills_after - skills_before
+
+    lines = [
+        f"Jarvis Gauntlet Complete ✓",
+        f"Tasks: {passed}/{len(results)} passed",
+        f"Failed: {failed}",
+        f"New skills learned: {new_skills}",
+        f"Total skills: {skills_after}",
+        f"Time: {minutes} minutes",
+    ]
+    if failed > 0:
+        failed_tasks = [r["task"][:30] for r in results if not r["success"]]
+        lines.append(f"Failed: {', '.join(failed_tasks[:3])}")
+
+    return " | ".join(lines)
+
+
+def print_final_report(results, skills_before, skills_after, t_total):
+    passed = sum(1 for r in results if r["success"])
+    failed = len(results) - passed
+
+    _log(f"""
+╔══════════════════════════════════════════════════════════════╗
+║   GAUNTLET COMPLETE                                         ║
+╠══════════════════════════════════════════════════════════════╣
+║  Tasks    : {len(results):<49}║
+║  Passed   : {passed:<49}║
+║  Failed   : {failed:<49}║
+║  Skills   : {skills_before} → {skills_after} (+{skills_after-skills_before}){'':<39}║
+║  Duration : {int(t_total//60)}m {int(t_total%60)}s{'':<45}║
+╠══════════════════════════════════════════════════════════════╣""")
+
+    for r in results:
+        icon  = "✓" if r["success"] else "✗"
+        retry = " (retry)" if r.get("retried") else ""
+        t     = r["elapsed_s"]
+        task  = r["task"][:50]
+        _log(f"║  {icon} {task:<50} {t:5.1f}s{retry}  ║")
+
+    _log("╚══════════════════════════════════════════════════════════════╝")
+
+    # Save JSON report
+    report = {
+        "run_at":        datetime.now().isoformat(),
+        "skills_before": skills_before,
+        "skills_after":  skills_after,
+        "total_elapsed": round(t_total, 1),
+        "results":       results,
+    }
+    REPORT_FILE.write_text(json.dumps(report, indent=2))
+    _log(f"\n  Report: {REPORT_FILE}")
+    _log(f"  Log   : {LOG_FILE}")
+
+
+# ── Main ──────────────────────────────────────────────────────────────────────
+
+def main():
+    p = argparse.ArgumentParser(
+        description="JarvisMinI Overnight Gauntlet Runner"
+    )
+    p.add_argument("--device",    default=DEFAULT_DEV)
+    p.add_argument("--category",  default=None,
+                   help="Run only: whatsapp/youtube/settings/chrome/playstore/phone/cross_app")
+    p.add_argument("--difficulty", type=int, default=None,
+                   help="Run only tasks with difficulty <= N")
+    p.add_argument("--notify",    default=None,
+                   help="WhatsApp contact to notify on completion (e.g. 'Mummy')")
+    p.add_argument("--dry-run",   action="store_true",
+                   help="Print task list without running")
+    p.add_argument("--no-retry",  action="store_true",
+                   help="Don't retry failed tasks")
+    p.add_argument("--pause",     type=float, default=INTER_TASK_PAUSE,
+                   help=f"Seconds between tasks (default {INTER_TASK_PAUSE})")
+    args = p.parse_args()
+
+    # Filter tasks
+    tasks = list(TASKS)
+    if args.category:
+        tasks = [t for t in tasks if t["category"] == args.category]
+    if args.difficulty:
+        tasks = [t for t in tasks if t["difficulty"] <= args.difficulty]
+
+    # Sort: easy first, cross-app last
+    tasks.sort(key=lambda t: (t["difficulty"], t["category"] == "cross_app"))
+
+    if not tasks:
+        print("No tasks match filters.")
+        sys.exit(0)
+
+    if args.dry_run:
+        print(f"\n  DRY RUN — {len(tasks)} tasks:\n")
+        total_timeout = 0
+        for i, t in enumerate(tasks, 1):
+            to = task_timeout(t["max_steps"])
+            total_timeout += to
+            print(f"  [{i:2d}] [{t['difficulty']}★] [{t['category']:<10}] "
+                  f"timeout={to}s  {t['task']}")
+        print(f"\n  Total max time: {total_timeout//60:.0f} minutes")
+        return
+
+    # Clear log for new run
+    LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
+    LOG_FILE.write_text("")
+
+    skills_before = skills_count()
+    t_run_start   = time.time()
+
+    _log(f"""
+╔══════════════════════════════════════════════════════════════╗
+║   JARVIS GAUNTLET RUNNER  — Overnight Mode                  ║
+║   Device  : {args.device:<49}║
+║   Tasks   : {len(tasks):<49}║
+║   Skills  : {skills_before:<49}║
+║   Started : {datetime.now().strftime('%Y-%m-%d %H:%M:%S'):<49}║
+╚══════════════════════════════════════════════════════════════╝
+""")
+
+    # Prepare device
+    _log("  Preparing device...")
+    keep_screen_on(args.device)
+    wake_screen(args.device)
+    go_home(args.device)
+    time.sleep(2)
+
+    # Check bridge
+    bridge_ok = check_bridge()
+    _log(f"  Phone B bridge: {'✓ reachable' if bridge_ok else '✗ UNREACHABLE — check bridge!'}")
+    if not bridge_ok:
+        _log("  WARNING: Bridge is down. Tasks will fail without Claude.")
+        _log("  Start bridge: adb shell am startservice ca.zgrs.clipper/.ClipboardService")
+        _log("                python3 ~/claude_bridge.py")
+        _log("  Continuing anyway — some tasks may use policy/skill without bridge.")
+
+    results = []
+
+    for i, task_def in enumerate(tasks, 1):
+        task_str   = task_def["task"]
+        max_steps  = task_def.get("max_steps", 20)
+        difficulty = task_def["difficulty"]
+        category   = task_def["category"]
+        timeout_s  = task_timeout(max_steps)
+
+        _log(f"\n{'═'*64}")
+        _log(f"  TASK {i}/{len(tasks)}  [{difficulty}★]  [{category}]  timeout={timeout_s}s")
+        _log(f"  {task_str}")
+        _log(f"{'═'*64}")
+
+        # Clean state before task
+        wake_screen(args.device)
+        go_home(args.device)
+        time.sleep(1.5)
+
+        # Run task
+        t0 = time.time()
+        success, elapsed, error = run_task_with_timeout(
+            task_str, args.device, max_steps, timeout_s
+        )
+        status = "✓ PASS" if success else "✗ FAIL"
+        _log(f"\n  {status}  |  {elapsed:.1f}s  |  skills: {skills_count()}")
+        if error:
+            _log(f"  Error: {error}")
+
+        result = {
+            "task":       task_str,
+            "category":   category,
+            "difficulty": difficulty,
+            "success":    success,
+            "elapsed_s":  elapsed,
+            "error":      error,
+            "retried":    False,
+        }
+
+        # Retry once on failure
+        if not success and not args.no_retry:
+            _log(f"  Retrying once...")
+            recover_device(args.device)
+            time.sleep(3)
+            wake_screen(args.device)
+            go_home(args.device)
+            time.sleep(1.5)
+
+            success2, elapsed2, error2 = run_task_with_timeout(
+                task_str, args.device, max_steps, timeout_s
+            )
+            status2 = "✓ PASS" if success2 else "✗ FAIL"
+            _log(f"  Retry: {status2}  |  {elapsed2:.1f}s")
+
+            if success2:
+                result["success"]   = True
+                result["elapsed_s"] = elapsed2
+                result["error"]     = None
+                result["retried"]   = True
+            else:
+                result["error"] = f"orig={error} retry={error2}"
+
+        results.append(result)
+
+        # Recovery after any failure
+        if not result["success"]:
+            recover_device(args.device)
+
+        # Save incremental report after each task
+        REPORT_FILE.write_text(json.dumps({
+            "run_at":        datetime.now().isoformat(),
+            "in_progress":   True,
+            "skills_before": skills_before,
+            "skills_current": skills_count(),
+            "results":       results,
+        }, indent=2))
+
+        # Pause between tasks
+        if i < len(tasks):
+            _log(f"  Pausing {args.pause}s...")
+            time.sleep(args.pause)
+
+    t_total       = time.time() - t_run_start
+    skills_after  = skills_count()
+
+    # Restore screen timeout
+    restore_screen_timeout(args.device)
+
+    # Print and save final report
+    print_final_report(results, skills_before, skills_after, t_total)
+
+    # Send WhatsApp notification
+    if args.notify:
+        msg = build_summary_message(results, skills_before, skills_after, t_total)
+        recover_device(args.device)
+        time.sleep(3)
+        send_whatsapp_notification(args.device, args.notify, msg)
+
+
+if __name__ == "__main__":
+    main()
+
+
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash
 #

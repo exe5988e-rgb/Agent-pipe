@@ -37322,6 +37322,90 @@
           "resource_id": ""
         }
       ]
+    },
+    "f6971c299e21": {
+      "screen_id": "f6971c299e21",
+      "package": "com.android.launcher",
+      "activity": "com.android.launcher/.Launcher",
+      "name": "launcher_launcher",
+      "labels": [
+        "ADB",
+        "Bugjaeger",
+        "ExamGOAL",
+        "ChatGPT",
+        "Mind Space",
+        "Phone",
+        "Messages",
+        "Photos",
+        "Camera"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "ADB",
+          "x": 386,
+          "y": 418,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Bugjaeger",
+          "x": 620,
+          "y": 418,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "ExamGOAL",
+          "x": 854,
+          "y": 418,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "ChatGPT",
+          "x": 1088,
+          "y": 418,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Mind Space",
+          "x": 152,
+          "y": 803,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Phone",
+          "x": 269,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Messages",
+          "x": 503,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Photos",
+          "x": 737,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Camera",
+          "x": 971,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {

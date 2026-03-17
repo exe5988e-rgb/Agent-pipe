@@ -2818,8 +2818,8 @@ if __name__ == "__main__":
   },
   "4203f6dd32c9|opt4_launch:settings": {
     "to": "f3100103b174",
-    "count": 1,
-    "last_seen": 1773726241.0604937
+    "count": 2,
+    "last_seen": 1773727059.3024366
   },
   "4203f6dd32c9|opt4_launch:chrome": {
     "to": "aa1600c67941",

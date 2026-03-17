@@ -6360,6 +6360,229 @@ RuntimeError: No LLM backend available.
   STEP 6  |  Send a WhatsApp message to Mummy saying Jarvis Gauntlet done. 33/33 passed. 6 new skills. Total 6 skills. 79 min.
 ========================================================
 [device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1566742 bytes)
+[OPT7] predicted next screen: whatsapp_conversation (366c9a63)
+[ui_parser] activity=com.whatsapp/.Conversation
+[ui_parser] signal='com.whatsapp/.Conversation'
+[mem] miss (unknown): com.whatsapp/.Conversation
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 15 elements from 192.168.29.48:34011
+[mem] stored com.whatsapp/.Conversation hash=9362363249ab elements=15
+[step] UI: ['element_1', 'Back', 'element_3', 'Video call', 'Voice call', 'More options', 'element_7', 'element_8']
+[map] new screen: whatsapp_conversation (955fca488005)
+[tm] transition changed: b128d851f827|tap:None 366c9a63 -> 955fca48
+[map] transition: whatsapp_contactpicker --[tap:None]--> whatsapp_conversation
+[map] screen: whatsapp_conversation (955fca48)
+[policy] send_message phase1: 'Jarvis Gauntlet done. 33/33 passed. 6 new skills. Total 6 skills. 79 min.' -> tap [15] + type
+[policy] matched — executing 2 actions directly
+[policy] action: {'action': 'tap', 'target': 15}
+[input] dispatching: TouchEvent(x=362, y=1625)
+[input] adb -s 192.168.29.48:34011 shell input tap 362 1625
+[mem] invalidated com.whatsapp/.Conversation
+[policy] action: {'action': 'type', 'text': 'Jarvis Gauntlet done. 33/33 passed. 6 new skills. Total 6 skills. 79 min.'}
+[input] dispatching: SetTextEvent('Jarvis Gauntlet done. 33/33 passed. 6 new skills. Total 6 skills. 79 min.')
+[input] adb -s 192.168.29.48:34011 shell input text Jarvis%sGauntlet%sdone.%s33/33%spassed.%s6%snew%sskills.%sTotal%s6%sskills.%s79%smin.
+[policy] done — skipped Claude entirely
+[step] step=7/15 done=False history=['opt4_launch:whatsapp', 'tap [24] New chat', 'tap [2] Search', "type 'Mummy'", 'tap (620,602)', 'tap [15] Message', "type 'Jarvis Gauntlet done. 33/33 passed. 6 new skills. Total 6 skills. 79 min.'"]
+
+========================================================
+  STEP 8  |  Send a WhatsApp message to Mummy saying Jarvis Gauntlet done. 33/33 passed. 6 new skills. Total 6 skills. 79 min.
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1547021 bytes)
+[ui_parser] activity=com.whatsapp/.Conversation
+[ui_parser] signal='com.whatsapp/.Conversation'
+[mem] miss (unknown): com.whatsapp/.Conversation
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 13 elements from 192.168.29.48:34011
+[mem] stored com.whatsapp/.Conversation hash=fc27111652b3 elements=13
+[step] UI: ['element_1', 'Back', 'element_3', 'Video call', 'Voice call', 'More options', 'element_7', 'element_8']
+[map] new screen: whatsapp_conversation (a0a54922f458)
+[map] transition: whatsapp_conversation --[type]--> whatsapp_conversation
+[map] screen: whatsapp_conversation (a0a54922)
+[policy] send_message phase2: tapping Send [13]
+[policy] matched — executing 2 actions directly
+[policy] action: {'action': 'tap', 'target': 13}
+[input] dispatching: TouchEvent(x=1141, y=1626)
+[input] adb -s 192.168.29.48:34011 shell input tap 1141 1626
+[mem] invalidated com.whatsapp/.Conversation
+[policy] action: {'action': 'done'}
+[input] DONE — no dispatch
+[policy] done — skipped Claude entirely
+[step] step=9/15 done=True history=['opt4_launch:whatsapp', 'tap [24] New chat', 'tap [2] Search', "type 'Mummy'", 'tap (620,602)', 'tap [15] Message', "type 'Jarvis Gauntlet done. 33/33 passed. 6 new skills. Total 6 skills. 79 min.'", 'tap [13] Send', 'done']
+
+[controller] done in 9 steps
+
+[controller] history:
+  1. opt4_launch:whatsapp
+  2. tap [24] New chat
+  3. tap [2] Search
+  4. type 'Mummy'
+  5. tap (620,602)
+  6. tap [15] Message
+  7. type 'Jarvis Gauntlet done. 33/33 passed. 6 new skills. Total 6 skills. 79 min.'
+  8. tap [13] Send
+  9. done
+
+  Screen Map: 258 screens (0 tainted), 317 transitions
+    whatsapp             140 screens
+    youtube              51 screens
+    vending              21 screens
+    chrome               21 screens
+    settings             11 screens
+    launcher             6 screens
+    termux               5 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+    dialer               1 screens
+  TransitionMemory: 317 transitions (251 confirmed, threshold=2)
+[11:10:33] GAUNTLET START  2026-03-17 11:10
+[11:10:33] Tasks=33  Skills=0
+[11:10:33] NOTE: keep_awake.sh must be running separately
+[11:10:33] Bridge: OK
+[11:10:33] 
+[1/33] [1★] [whatsapp] Open WhatsApp
+[11:12:50]   PASS  133.5s  skills=0
+[11:12:55] 
+[2/33] [1★] [youtube] Open YouTube
+[11:13:41]   PASS  42.7s  skills=0
+[11:13:46] 
+[3/33] [1★] [settings] Open Settings
+[11:14:26]   PASS  36.6s  skills=0
+[11:14:31] 
+[4/33] [1★] [chrome] Open Chrome
+[11:15:11]   PASS  36.6s  skills=0
+[11:15:16] 
+[5/33] [1★] [playstore] Open Play Store
+[11:15:56]   PASS  37.1s  skills=0
+[11:16:01] 
+[6/33] [1★] [phone] Open Phone app
+[11:16:44]   PASS  39.7s  skills=0
+[11:16:49] 
+[7/33] [1★] [phone] Open Contacts
+[11:17:32]   PASS  39.7s  skills=0
+[11:17:37] 
+[8/33] [2★] [whatsapp] Open WhatsApp and go to Calls tab
+[11:19:59]   PASS  139.2s  skills=0
+[11:20:04] 
+[9/33] [2★] [whatsapp] Open WhatsApp and go to Updates tab
+[11:21:20]   PASS  72.1s  skills=1
+[11:21:25] 
+[10/33] [2★] [whatsapp] Open WhatsApp and search for Mummy in chats
+[11:21:41]   PASS  12.9s  skills=1
+[11:21:46] 
+[11/33] [2★] [youtube] Open YouTube and go to Subscriptions
+[11:23:00]   PASS  70.8s  skills=2
+[11:23:05] 
+[12/33] [2★] [youtube] Search for MrBeast on YouTube
+[11:27:19]   PASS  251.1s  skills=2
+[11:27:24] 
+[13/33] [2★] [settings] Open Settings and go to WiFi
+[11:29:46]   PASS  138.9s  skills=3
+[11:29:51] 
+[14/33] [2★] [settings] Open Settings and go to Display
+[11:31:14]   PASS  79.1s  skills=3
+[11:31:19] 
+[15/33] [2★] [settings] Open Settings and go to Notifications
+[11:32:07]   PASS  45.1s  skills=3
+[11:32:12] 
+[16/33] [2★] [settings] Open Settings and check battery percentage
+[11:33:00]   PASS  44.6s  skills=3
+[11:33:05] 
+[17/33] [2★] [chrome] Open Chrome and go to google.com
+[11:35:26]   PASS  137.8s  skills=4
+[11:35:31] 
+[18/33] [2★] [chrome] Open Chrome and open a new tab
+[11:37:16]   PASS  101.6s  skills=4
+[11:37:21] 
+[19/33] [2★] [chrome] Search for weather today in Chrome
+[11:41:49]   PASS  264.6s  skills=5
+[11:41:54] 
+[20/33] [2★] [playstore] Search for Spotify on Play Store
+[11:46:32]   PASS  274.6s  skills=5
+[11:46:37] 
+[21/33] [2★] [phone] Open Contacts and search for Mummy
+[11:47:59]   PASS  79.4s  skills=5
+[11:48:04] 
+[22/33] [3★] [whatsapp] Send a WhatsApp message to Mummy saying Good morning
+[11:49:33]   PASS  85.8s  skills=5
+[11:49:39] 
+[23/33] [3★] [whatsapp] Send a WhatsApp message to Ayush Kumar saying Hey what's up
+[11:50:05]   PASS  23.0s  skills=5
+[11:50:10] 
+[24/33] [3★] [whatsapp] Send a WhatsApp message to Sadique faridi saying Hello brother
+[11:50:35]   PASS  22.3s  skills=5
+[11:50:40] 
+[25/33] [3★] [youtube] Play Warriyo Mortals on YouTube
+[11:55:56]   PASS  312.1s  skills=5
+[11:56:01] 
+[26/33] [3★] [youtube] Search for lofi hip hop on YouTube and play the first video
+[12:03:02]   PASS  418.2s  skills=5
+[12:03:07] 
+[27/33] [3★] [playstore] Search for VLC on Play Store and open its page
+[12:07:18]   PASS  247.3s  skills=5
+[12:07:23] 
+[28/33] [4★] [whatsapp] Send a WhatsApp message to Mummy saying Good night
+[12:07:53]   PASS  27.2s  skills=5
+[12:07:58] 
+[29/33] [4★] [youtube] Play Warriyo Mortals on YouTube
+[12:11:30]   PASS  208.2s  skills=5
+[12:11:35] 
+[30/33] [4★] [youtube] Search for lofi hip hop on YouTube and play the first video
+[12:13:21]   PASS  102.6s  skills=6
+[12:13:26] 
+[31/33] [4★] [settings] Open Settings and go to WiFi
+[12:13:45]   PASS  15.7s  skills=6
+[12:13:50] 
+[32/33] [5★] [cross_app] Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+[12:23:50]   PASS  596.1s  skills=6
+[12:23:55] 
+[33/33] [5★] [cross_app] Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy
+[12:30:30]   PASS  392.5s  skills=6
+[12:30:30] 
+============================================================
+[12:30:30]   GAUNTLET COMPLETE
+[12:30:30]   Tasks: 33  Passed: 33  Failed: 0
+[12:30:30]   Skills: 0 → 6 (+6)
+[12:30:30]   Time: 79m 57s
+[12:30:30] ============================================================
+[12:30:30]   ✓ [1★] Open WhatsApp                                    133.5s
+[12:30:30]   ✓ [1★] Open YouTube                                      42.7s
+[12:30:30]   ✓ [1★] Open Settings                                     36.6s
+[12:30:30]   ✓ [1★] Open Chrome                                       36.6s
+[12:30:30]   ✓ [1★] Open Play Store                                   37.1s
+[12:30:30]   ✓ [1★] Open Phone app                                    39.7s
+[12:30:30]   ✓ [1★] Open Contacts                                     39.7s
+[12:30:30]   ✓ [2★] Open WhatsApp and go to Calls tab                139.2s
+[12:30:30]   ✓ [2★] Open WhatsApp and go to Updates tab               72.1s
+[12:30:30]   ✓ [2★] Open WhatsApp and search for Mummy in chats       12.9s
+[12:30:30]   ✓ [2★] Open YouTube and go to Subscriptions              70.8s
+[12:30:30]   ✓ [2★] Search for MrBeast on YouTube                    251.1s
+[12:30:30]   ✓ [2★] Open Settings and go to WiFi                     138.9s
+[12:30:30]   ✓ [2★] Open Settings and go to Display                   79.1s
+[12:30:30]   ✓ [2★] Open Settings and go to Notifications             45.1s
+[12:30:30]   ✓ [2★] Open Settings and check battery percentage        44.6s
+[12:30:30]   ✓ [2★] Open Chrome and go to google.com                 137.8s
+[12:30:30]   ✓ [2★] Open Chrome and open a new tab                   101.6s
+[12:30:30]   ✓ [2★] Search for weather today in Chrome               264.6s
+[12:30:30]   ✓ [2★] Search for Spotify on Play Store                 274.6s
+[12:30:30]   ✓ [2★] Open Contacts and search for Mummy                79.4s
+[12:30:30]   ✓ [3★] Send a WhatsApp message to Mummy saying Good mor  85.8s
+[12:30:30]   ✓ [3★] Send a WhatsApp message to Ayush Kumar saying He  23.0s
+[12:30:30]   ✓ [3★] Send a WhatsApp message to Sadique faridi saying  22.3s
+[12:30:30]   ✓ [3★] Play Warriyo Mortals on YouTube                  312.1s
+[12:30:30]   ✓ [3★] Search for lofi hip hop on YouTube and play the  418.2s
+[12:30:30]   ✓ [3★] Search for VLC on Play Store and open its page   247.3s
+[12:30:30]   ✓ [4★] Send a WhatsApp message to Mummy saying Good nig  27.2s
+[12:30:30]   ✓ [4★] Play Warriyo Mortals on YouTube                  208.2s
+[12:30:30]   ✓ [4★] Search for lofi hip hop on YouTube and play the  102.6s
+[12:30:30]   ✓ [4★] Open Settings and go to WiFi                      15.7s
+[12:30:30]   ✓ [5★] Open Chrome, search for wikipedia.org, then open 596.1s
+[12:30:30]   ✓ [5★] Open Settings, check the WiFi network name, then 392.5s
+[12:30:30] ============================================================
+[12:30:30]   Report: /data/data/com.termux/files/home/workflows/gauntlet_report.json
+[12:30:30]   Recovering...
+[12:30:41]   Notifying Mummy...
+[12:31:30]   Notification: sent
+
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash
@@ -9390,332 +9613,4 @@ class TransitionMemory:
         print(f"  TransitionMemory: {st['total_transitions']} transitions "
               f"({st['confirmed']} confirmed, threshold={MIN_OBSERVATIONS})")
 
-
-//===== TERMUXFILE: perception/__pycache__/screen_map.cpython-313.pyc =====
-
-
-    i1                         S r SSKrSSKrSSKrSSKJr  SSKJr  \R                  " 5       S-  S-  r	1 Skr
-/ SQr1 S	kr1 S
-kr
-1 SkrS\S
-\4S jrS\S
-\4S jrS\S
-\4S jrS\S
-\4S jr " S S5      rg)u  
-perception/screen_map.py  —  Screen Understanding + App Navigation Graph
-
-Session 8 fixes:
-  - Canonical screen deduplication: filter-tab variants of HomeActivity all
-    resolve to one canonical screen_id so the graph stays small and coherent.
-  - Unknown-screen filter: screens with package=="unknown" are never registered.
-  - Call-overlay guard: screens whose labels include active-call markers
-    (Turn microphone off / Leave call / WhatsApp voice call) are recognised as
-    a call-overlay variant of their base screen and kept separate but labelled.
-  - get_canonical_id(): returns the highest-visit variant for a given activity
-    so controller.py and transition_memory.py always use a stable anchor node.
-
-Data stored in ~/workflows/screen_map.json:
-  screens:     fingerprinted UI states
-  transitions: (screen_id, action) → screen_id edges
-
-Usage:
-  from perception.screen_map import ScreenMap
-  sm = ScreenMap()
-  screen_id = sm.identify(activity, elements)
-  path = sm.find_path(start_id, target_id)
-    N)Path)Optional	workflowszscreen_map.json>	    123okbackdonehomecancel)z^\d{1,2}:\d{2}(:\d{2})?$z^\d+$z^[+\-]?\d+[\d.,]*$>   buypayblockcleareraseresetdeleteformatlogoutremovereportdisablefactoryunblockpurchase	uninstall
-deactivatesign outturn off>   
-leave call
-minimize calladd person to callturn microphone offwhatsapp voice call>   gifsaudiolinkspollsphotosunreadvideosstickers	documentsadd new list
-manage family
-manage unread
-search familymanage favouritessearch group chatssearch unread chatsall filter, , selectedsearch favourite chatsfamily filter, , unselectedgroups filter, , unselectedunread filter, 0, unselectedunread filter, 2, unselectedfavourites filter, , unselectedtextreturnc                     U R                  5       [        ;   a  g[         H.  n[        R                  " XR                  5       5      (       d  M.    g   g)NTF)lower
-_IGNORE_TEXTS_IGNORE_PATTERNSrematchstrip)r>   pats     C/data/data/com.termux/files/home/workflows/perception/screen_map.py_is_dynamicrI   S   s:    zz|}$
-88C&&       c                 V   ^ U R                  5       m[        U4S j[         5       5      $ )Nc              3   ,   >#    U  H	  oT;   v   M     g 7fN ).0wtls     rH   	<genexpr> _is_dangerous.<locals>.<genexpr>^   s     .
-1Bw
-s   )rA   any
-_DANGER_WORDS)r>   rQ   s    @rH   
-_is_dangerousrV   \   s    	
-B.
-...rJ   labelsc                    ^ U  Vs1 s H  oR                  5       iM     snm[        U4S j[         5       5      $ s  snf )z?Return True if any call-overlay label is present in label list.c              3   J   >#    U  H  oS R                  T5      ;   v   M     g7f) N)join)rO   cllows     rH   rR   $_has_call_overlay.<locals>.<genexpr>d   s     B-ArSXXc]"-As    #)rA   rT   _CALL_OVERLAY_LABELS)rW   lr]   s     @rH   _has_call_overlayra   a   s2    $
-%f779f
-%CB-ABBB &s   ;c                 d    U  Vs/ s H  oR                  5       [        ;  d  M  UPM      sn$ s  snf )z@Remove filter-tab / search-overlay labels before fingerprinting.)rA   _HOME_FILTER_LABELS)rW   r`   s     rH   _strip_filter_labelsrd   g   s&    Fv!2E!EAvFFFs   --c                   <   \ rS rSrSrS rS\4S jrS r\	S\
-S\S\
-4S	 j5       r\	S
-\S\S\
-4S j5       rS\
-S\S\\
-   4S
- jrS\
-S\\   4S jrS\
-S\\
-   4S jrS\
-S\\
-   4S jrSS\S\\
-   4S jjrS\
-S\
-S\
-4S jrSS\
-S\
-S\\   4S jjrS\4S jrS rSrg) 	ScreenMapl   z
-Stores screen fingerprints and navigation graph.
-
-Screen fingerprint:
-  screen_id = md5(package + "/" + activity_tail + "|" + sorted_stable_labels)
-
-Navigation graph:
-  transitions[(screen_id, element_text)] = target_screen_id
-c                 .    U R                  5       U l        g rM   )_load_dataselfs    rH   __init__ScreenMap.__init__w   s    ZZ\
-rJ   r?   c                     [         R                  5       (       a)   [        R                  " [         R	                  5       5      $ 0 0 S.$ ! [
-         a     Nf = f)N)screenstransitions)MAP_FILEexistsjsonloads	read_text	Exceptionrk   s    rH   ri   ScreenMap._load|   sM    ??
-zz("4"4"677 b11  
-
-s   'A 
-AAc                     [         R                  R                  SSS9  [         R                  [        R
-                  " U R                  SS95        g )NT)parentsexist_ok   )indent)rr   parentmkdir
-write_textrt   dumpsrj   rk   s    rH   _saveScreenMap._save   s6    dT:DJJtzz!<=rJ   activityelementsc           	      d   SU ;   a  U R                  S5      S   OU nU R                  S5      S   R                  S5      S   nU Vs/ s HP  nUR                  SS5      (       d  M  [        UR                  SS5      5      (       a  M>  UR                  SS5      PMR     nnSU;   d  SUR                  5       ;   a  [	        U5      nOUn[        [
-        U5      5      nU SU S	S	R                  US
-S 5       3n[        R                  " UR                  5       5      R                  5       S
-S $ s  snf )
-z
-Stable hash for a screen state.
-Filter-tab variants of HomeActivity collapse to one fingerprint.
-Call overlays get their own fingerprint (tainted screen).
-/r   .r>   r   HomeActivityhomeactivity|N      )splitgetrI   rA   rd   sortedsetr[   hashlibmd5encode	hexdigest)	r   r   pkgact_taile
-raw_labelsrW   
-labels_sortedblobs	            rH   fingerprintScreenMap.fingerprint   s    .1H_8>>#&q)(>>#&r*005b9 (0
-'/!uuVR  
-)4QUU625F)G 
-AEE&"x 	 
- X%8>>;K)K)*5FFs6{+
-az388M#2,>#?"@A{{4;;=)335cr::
-s   D-&D-D-labels_alabels_bc                    U  Vs1 s H  o"(       d  M  [        U5      (       a  M  UiM!     nnU Vs1 s H  o"(       d  M  [        U5      (       a  M  UiM!     nnU(       d  g[        X4-  5      [        U5      -  $ s  snf s  snf )z-Overlap ratio between two element label sets.        )rI   len)r   r   tabs        rH   
-similarityScreenMap.similarity   sc     !=1AQk!nQ= =1AQk!nQ=15zCF""	 
->=s   
-A:A:A:
-A?A?A?c                    SU;   a  UR                  S5      S   OUnUS;   d  U(       d  gU R                  X5      nU R                  S   nXE;   a.  XT   R                  SS5      S-   XT   S'   U R	                  5         U$ UR                  S5      S   R                  S	5      S   nU Vs/ s HP  nUR                  S
-S5      (       d  M  [        UR                  S
-S5      5      (       a  M>  UR                  S
-S5      PMR     nn[
-        U5      n	UR                  S	5      S    SU 3R                  5       n
-U	(       a  U
-S
--
-  n
-UUUU
-USS SU	USS  VVVs/ s H0  nUR                  5        VVs0 s H  u  pUS;   d  M
-  X_M     snnPM2     snnnS.XT'   U R	                  5         U	(       a  SOSn
-[        SU
- SU SU
- 35        U$ s  snf s  snnf s  snnnf )z
-Return screen_id for the current state.
-Returns None for screens with unknown package (loading screens etc.)
-Call-overlay screens are registered but labelled as tainted.
-r   r   )unknownr   Nrp   visits   r   r   r>   r   _
-_call_overlay   (   )r>   resource_idclsxy)	screen_idpackager   namerW   r   taintedr   z [CALL OVERLAY]z[map] new screen: z ())
-r   r   rj   r   r   rI   ra   rA   itemsprint)rl   r   r   r   fprp   r   r   rW   r   r   kvflags                 rH   identifyScreenMap.identify   s    ),xhnnS!!$X/!
-
-
-h
-1**Y'
-=$+KOOHa$@1$DGK!JJLI >>#&r*005b9'/
-'/!uuVR  
-)4QUU625F)G 
-AEE&"x 	 
-
- $F+YYs^B'((4::<O#D   %!#CR[$ "#2 'A #$'') C)$!AA ) C&
-
- 	
-
-$+ 
-"4&2$av67	7
-&Cs0   (GG)GG+G;GGGr   c                 >    U R                   S   R                  U5      $ )Nrp   )rj   r   )rl   r   s     rH   
-get_screenScreenMap.get_screen   s    zz)$((33rJ   c                     Su  p#U R                   S   R                  5        HS  u  pEUR                  SS5      U:w  a  M  UR                  SS5      (       a  M6  UR                  SS5      nXc:  d  MO  UnUnMU     U$ )	z
-Return the screen_id with the most visits for a given activity string.
-Used by controller to get a stable anchor when multiple fingerprint
-variants exist for the same activity (e.g. WhatsApp home w/ filter tabs).
-Ignores tainted (call-overlay) screens.
-Nr   rp   r   r   r   Fr   r   )rj   r   r   )rl   r   best_idbest_visitssidsr   s          rH   get_canonical_idScreenMap.get_canonical_id   sz      (jj+113FCuuZ$0uuY&&h"A 4 rJ   r   c                 0   UR                  5       nSu  p4U R                  S   R                  5        H`  u  pVUR                  SS5      (       a  M  X&R                  SS5      R                  5       ;   d  MC  UR                  SS5      nXt:  d  M\  UnUnMb     U$ )	zBFind screen_id by partial name match. Returns highest-visit match.r   rp   r   Fr   r   r   r   )rA   rj   r   r   )rl   r   name_lr   r   r   r   r   s           rH   find_by_nameScreenMap.find_by_name   s    'jj+113FCuuY&&vr*0022EE(A&?"#K!G 4 rJ   rW   c                     Su  p4U R                   S   R                  5        HJ  u  pVUR                  SS5      (       a  M  U R                  XR                  S/ 5      5      nXt:  d  MF  UnUnML     XB:  a  U$ g)zDFind screen_id by element label similarity. Ignores tainted screens.)Nr   rp   r   FrW   N)rj   r   r   r   )rl   rW   	thresholdr   
-best_scorer   r   scores           rH   find_by_labelsScreenMap.find_by_labels  su    'jj+113FCuuY&&OOFEE(B,?@E!"
-
- 4 "NrJ   from_idaction_labelto_idc                    X:X  a  gUb  Uc  gU R                   S   R                  U0 5      nU R                   S   R                  U0 5      nUR                  S5      (       d  UR                  S5      (       a  gU SU 3nU R                   S   nUR                  U5      U:w  aS  X7U'   U R                  5         UR                  SUSS 5      nUR                  SUSS 5      n	[        SU S	U S
-U	 35        gg)uh   
-Record a (screen, action) → screen edge.
-Skips transitions involving tainted (call-overlay) screens.
-Nrp   r   r   rq   r      z[map] transition: z --[z]--> )rj   r   r   r   )
-rl   r   r   r   from_screen	to_screenkeyrq   	from_nameto_names
-             rH   record_transitionScreenMap.record_transition  s    
- ?emjj+//<jj+//r:	??9%%y)A)A	<.)jj/??35($JJL#<I!
-
-fbq	:G&ykl^5	RS )rJ   c                    X:X  a  / $ Ub  Uc  gU R                   S   n0 nUR                  5        H;  u  pgUR                  SS5      u  pUR                  U/ 5      R	                  X45        M=     U/ 4/n
-U1nU
-(       a  U
-R                  S5      u  p[
-        U
-5      U:  a  M+  UR                  U/ 5       H?  u  pX;   a  M  XU4/-   nX:X  a  Us  $ UR                  U5        U
-R	                  X45        MA     U
-(       a  M  g)u   
-BFS over transition graph to find action sequence from_id → to_id.
-Returns list of (action_label, screen_id) tuples or None.
-Nrq   r   r   r   )	rj   r   rsplit
-setdefaultappendpopr   r   add)rl   r   r   	max_depthrq   adjr   targetsrcactionqueuevisitedcurrpathnxtnew_paths                   rH   	find_pathScreenMap.find_path,  s   
- I?emjj/&,,.KC**S!,KCNN3#**F+;< / R=/)1JD4yI%"wwtR0>C=/1<#OC c_-  1	 e rJ   c                 2   U R                   S   nU R                   S   n0 nSnUR                  5        HI  nUR                  SS5      nUR                  US5      S-   X6'   UR                  S5      (       d  MD  US-
-  nMK     [        U5      U[        U5      US.$ )	Nrp   rq   r   r   ?r   r   )
-total_screenstainted_screenstotal_transitions
-by_package)rj   valuesr   r   )rl   rp   rq   by_pkg
-tainted_countr   r   s          rH   statsScreenMap.statsN  s    jj+jj/
-!A%%	3'C **S!,q0FKuuY"
-	 " "%W!.!$[!1!'	
- 	
-rJ   c           	          U R                  5       n[        SUS    SUS    SUS    S35        [        US   R                  5       S	 S
-9 H*  u  p#[        SUR	                  S5      S
-   S SU S35        M,     g )Nz
-  Screen Map: r   z
- screens (r   z tainted), r   z transitionsr   c                     U S   * $ )Nr   rN   )r   s    rH   <lambda>'ScreenMap.print_stats.<locals>.<lambda>e  s
-    1rJ   )r   z    r   r   z<20rZ   z screens)r   r   r   r   r   )rl   str   counts       rH   print_statsScreenMap.print_stats_  s    
-ZZ\
- O!4 5 6&'('()7 	8 !L!1!7!7!9&57JCD3+C0%AB7rJ   )rj   N)g333333?)r   )__name__
-__module____qualname____firstlineno____doc__rm   dictri   r   staticmethodstrlistr   floatr   r   r   r   r   r   r   r   r   r   r  __static_attributes__rN   rJ   rH   rf   rf   l   s9   "
-2t 2> ;c ;T ;c ; ;0 #T #T #e # #0 0 0# 0d4C 4HTN 4 # & # T Xc]  T TC T T0 S (4. D
-t 
-"CrJ   rf   )r
-  r   rt   rD   pathlibr   typingr   r
-   rr   rB   rC   rU   r_   rc   r  boolrI   rV   r  ra   rd   rf   rN   rJ   rH   <module>r     s   0   	  99;$'88
- 
-  *c d / / /
-Cd Ct CG G$ G
-zC zCrJ   
-
-//===== TERMUXFILE: perception/__pycache__/transition_memory.cpython-313.pyc =====
-
-
-    i                     z    S r SSKrSSKrSSKJr  SSKJr  \R                  " 5       S-  S-  rSr	Sr
- " S	 S
-5      rg)u	  
-perception/transition_memory.py  —  OPT 7: UI Transition Prediction
-
-Eliminates the perception wait after known actions by predicting the next
-screen before the dump is complete.
-
-How it works:
-  After every action is executed, record_transition() stores:
-    (current_screen_id, action_description) -> expected_next_screen_id
-
-  Before the next perception step, get_predicted_screen() returns the
-  expected next screen if the action is known. The controller can then:
-    1. Skip the full UI dump if the predicted screen is cached in ScreenMemory
-    2. Return the cached UI immediately (~0ms vs 900ms)
-    3. If prediction is wrong (actual != predicted), record the correction
-
-Integration in controller.py run_step():
-  BEFORE parse_ui():
-    predicted = tm.get_predicted_screen(current_screen_id, last_action_label)
-    if predicted:
-        ui = screen_memory.get_by_screen_id(predicted)
-        if ui: ... use cached UI ...
-
-  AFTER action executes:
-    tm.record(current_screen_id, action_label, new_screen_id)
-
-Data stored in ~/workflows/transition_memory.json
-
-Timing impact (from report targets):
-  Without prediction: 3.7s/step   (dump + parse + wait)
-  With prediction:    2.0s/step   (cache hit → no dump)
-  Novel steps still take full 3.7s (first time on a transition)
-    N)Path)Optional	workflowsztransition_memory.jsong      @   c                       \ rS rSrSrS rS\4S jrS rS\	S\	S	\	4S
- jr
-S\	S\	4S jrS rS\	S\	S\
-\	   4S
- jrS\
-\	   4S jrS\4S jrS\4S jrS\4S jrS rSrg)TransitionMemory1   z
-Stores observed (screen_id, action) -> screen_id transitions
-with confidence counts.
-
-Keys:   "{from_screen_id}|{action_label}"
-Values: {"to": screen_id, "count": int, "last_seen": float}
-c                 <    U R                  5       U l        S U l        g N)_load_data_pendingselfs    J/data/data/com.termux/files/home/workflows/perception/transition_memory.py__init__TransitionMemory.__init__:   s    ZZ\
-)-
-    returnc                     [         R                  5       (       a)   [        R                  " [         R	                  5       5      $ 0 $ ! [
-         a     0 $ f = fr   )TM_FILEexistsjsonloads	read_text	Exceptionr   s    r   r   TransitionMemory._load@   sL    >>
-zz'"3"3"566 	  
-	
-s   'A 
-AAc                     [         R                  R                  SSS9  [         R                  [        R
-                  " U R                  SS95        g )NT)parentsexist_okr   )indent)r   parentmkdir
-write_textr   dumpsr
-   r   s    r   _saveTransitionMemory._saveH   s6    TD94::djj;<r   from_idaction_labelto_idc           
-         U(       a  U(       a  X:X  a  gU SU 3nU R                   R                  U5      nU(       aF  UR                  S5      U:X  a1  UR                  SS5      S-   US'   [        R                  " 5       US'   ObU(       a5  UR                  S5      U:w  a   [        SUSS  S	US   SS
-  SUSS
-  35        US[        R                  " 5       S.U R                   U'   U R	                  5         g)
-ze
-Record an observed transition.
-Called after every action executes and the new screen is identified.
-N|tocount   	last_seenz[tm] transition changed: (       z -> )r-   r.   r0   )r
-   gettimeprintr&   )r   r(   r)   r*   keyentrys         r   recordTransitionMemory.recordN   s    
- ew'7	<.)
-
-s#UYYt_-!&7A!6!:E'N!%E+ 4E11#cr(1tRa)eBQi[: ; #!YY[DJJsO 	
-
-r   c                 <    X[         R                   " 5       4U l        g)z
-Mark that we just executed an action and are waiting for the new screen.
-Call this immediately after the action executes, before the next
-perception step, so the controller can time the transition wait.
-N)r5   r   )r   r(   r)   s      r   set_pendingTransitionMemory.set_pendingj   s     !		<
-r   c                     S U l         g r   )r   r   s    r   
-clear_pendingTransitionMemory.clear_pendingr   s	    
-r   c                     U(       a  U(       d  gU SU 3nU R                   R                  U5      nU(       d  gUR                  SS5      [        :  a  gUS   $ )z
-Return predicted next screen_id if transition is known with sufficient
-confidence, or None if unknown / low confidence.
-
-Only returns predictions with MIN_OBSERVATIONS or more observations.
-Nr,   r.   r   r-   )r
-   r4   MIN_OBSERVATIONS)r   r(   r)   r7   r8   s        r   get_predicted_screen%TransitionMemory.get_predicted_screenw   sU     l)1\N+
-
-s#99Wa #33T{r   c                 f    U R                   (       d  gU R                   u  pnU R                  X5      $ )z
-If set_pending() was called, return the predicted next screen for the
-pending action. Returns None if no pending action or prediction unknown.
-N)r   rC   )r   r(   r)   _s       r   get_pending_prediction'TransitionMemory.get_pending_prediction   s-    
- }}#'== q((??r   c                 p    U R                   (       d  g[        R                  " 5       U R                   S   -
-  $ )z'Seconds since set_pending() was called.g        r   )r   r5   r   s    r   pending_elapsed TransitionMemory.pending_elapsed   s&    }}yy{T]]1---r   screen_map_datac                 "   UR                  S0 5      nUR                  S0 5      nSnUR                  5        H  u  pVUR                  U0 5      nUR                  S5      (       a  M/  UR                  S5      S   nUR                  U0 5      n	U	R                  S5      (       a  Mm  XPR                  ;  d  M~  U[        [
-        R
-                  " 5       SS.U R                  U'   US-
-  nM     U(       a   U R
-                  5         [        S	U S
-35        gg)a  
-Pre-populate TransitionMemory from an existing screen_map.json.
-Uses count=MIN_OBSERVATIONS so seeded transitions are immediately trusted.
-
-Call once after a crawl completes to bootstrap predictions.
-
-Usage:
-    import json
-    from pathlib import Path
-    from perception.transition_memory import TransitionMemory
-
-    sm_data = json.loads((Path.home()/"workflows"/"screen_map.json").read_text())
-    tm = TransitionMemory()
-    tm.seed_from_screen_map(sm_data)
-transitionsscreensr   taintedr,   T)r-   r.   r0   seededr/   z[tm] seeded z transitions from screen_mapN)r4   itemssplitr
-   rB   r5   r&   r6   )
-r   rL   rN   rO   rQ   r7   r*   	to_screenr(   from_screens
-             r   seed_from_screen_map%TransitionMemory.seed_from_screen_map   s      &))-<%)))R8%++-JCE2.I}}Y''iinQ'G!++gr2Ky)) **$!&!1!%!%	#
-
-3 !' .* JJLL(DEF r   c                     [        U R                  5      n[        S U R                  R                  5        5       5      nUUU R                  S LS.$ )Nc              3   ^   #    U  H#  nUR                  S S5      [        :  d  M  Sv   M%     g7f)r.   r   r/   N)r4   rB   ).0es     r   	<genexpr>)TransitionMemory.stats.<locals>.<genexpr>   s.      B#6a55!,0@@ #6s   -	-)total_transitions	confirmedpending)lenr
-   sumvaluesr   )r   totalr_   s      r   statsTransitionMemory.stats   sS    
-
-O B4::#4#4#6 B B	 "'!*!%d!:
- 	
-r   c           	      b    U R                  5       n[        SUS    SUS    S[         S35        g )Nz  TransitionMemory: r^   z transitions (r_   z confirmed, threshold=))re   r6   rB   )r   sts     r   print_statsTransitionMemory.print_stats   sD    
-ZZ\
-$R(;%<$= >[/""89I8J!M 	Nr   )r
-   r   N)__name__
-__module____qualname____firstlineno____doc__r   dictr   r&   strr9   r<   r?   r   rC   rG   floatrJ   rV   re   rj   __static_attributes__ r   r   r   r   1   s    .t =c  S 8=3 =c =
-C s xPS} (@
- @. .+GD +G^
-t 
-Nr   r   )rp   r   r5   pathlibr   typingr   homer   PREDICTION_TIMEOUTrB   r   ru   r   r   <module>rz      sM    D    
-))+
-#&>
->    hN hNr   
 

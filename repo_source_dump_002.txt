@@ -17719,7 +17719,7 @@
       "activity": "com.android.vending/.AssetBrowserActivity",
       "name": "vending_assetbrowseractivity",
       "labels": [],
-      "visits": 12,
+      "visits": 13,
       "tainted": false,
       "elements": [
         {
@@ -19491,7 +19491,8 @@
     "7571051ef9ea|element_946_237": "e45a3fbcbc8c",
     "7571051ef9ea|element_1114_237": "583c296ce79a",
     "7571051ef9ea|element_1085_2604": "8a466f35ef41",
-    "866f5ed64950|element_620_601": "7571051ef9ea"
+    "866f5ed64950|element_620_601": "7571051ef9ea",
+    "866f5ed64950|More results for Top comics": "7571051ef9ea"
   }
 }
 

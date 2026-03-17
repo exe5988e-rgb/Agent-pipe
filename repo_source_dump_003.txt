@@ -7239,7 +7239,9 @@ java.lang.IllegalArgumentException: Argument expected after "text"
 [step] action: {'action': 'tap', 'target': 2}
 [input] dispatching: TouchEvent(x=620, y=549)
 [input] adb -s 192.168.29.48:34011 shell input tap 620 549
-[mem] invalidated com.android.vending/.AssetBrowserActivity
+[mem] invalidated com.android.vending/.AssetBrowserActivity[parser] DEBUG normalized: 'back'
+[parser] INFO parsed 'back' -> {'action': 'back'}
+
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash

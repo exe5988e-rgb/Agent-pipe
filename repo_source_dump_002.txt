@@ -1,3 +1,175 @@
+//===== TERMUXFILE: transition_memory.json =====
+{
+  "e08bf4d7e306|Ask Meta AI or Search": {
+    "to": "09fc92d254ea",
+    "count": 2,
+    "last_seen": 1773712614.253885,
+    "seeded": true
+  },
+  "60d55bb050f1|Unread filter, 2, unselected": {
+    "to": "b64832a67d9e",
+    "count": 2,
+    "last_seen": 1773712614.253894,
+    "seeded": true
+  },
+  "60d55bb050f1|Favourites filter, , unselected": {
+    "to": "b684f2f19636",
+    "count": 2,
+    "last_seen": 1773712614.2538977,
+    "seeded": true
+  },
+  "60d55bb050f1|Groups filter, , unselected": {
+    "to": "8f19d9905311",
+    "count": 2,
+    "last_seen": 1773712614.2538996,
+    "seeded": true
+  },
+  "60d55bb050f1|Family filter, , unselected": {
+    "to": "dc2700ccd673",
+    "count": 2,
+    "last_seen": 1773712614.253901,
+    "seeded": true
+  },
+  "60d55bb050f1|element_620_853": {
+    "to": "615edd501f35",
+    "count": 2,
+    "last_seen": 1773712614.253903,
+    "seeded": true
+  },
+  "60d55bb050f1|element_620_1070": {
+    "to": "d46beeaf5f0e",
+    "count": 2,
+    "last_seen": 1773712614.253905,
+    "seeded": true
+  },
+  "60d55bb050f1|element_126_1070": {
+    "to": "8c53aa0c1c54",
+    "count": 2,
+    "last_seen": 1773712614.253907,
+    "seeded": true
+  },
+  "60d55bb050f1|Door desgin ideas, group profile icon": {
+    "to": "d46beeaf5f0e",
+    "count": 2,
+    "last_seen": 1773712614.2539084,
+    "seeded": true
+  },
+  "60d55bb050f1|element_620_1336": {
+    "to": "574b2e8bd136",
+    "count": 2,
+    "last_seen": 1773712614.25391,
+    "seeded": true
+  },
+  "60d55bb050f1|element_126_1336": {
+    "to": "574b2e8bd136",
+    "count": 2,
+    "last_seen": 1773712614.2539115,
+    "seeded": true
+  },
+  "60d55bb050f1|You": {
+    "to": "8c53aa0c1c54",
+    "count": 2,
+    "last_seen": 1773712614.2539134,
+    "seeded": true
+  },
+  "60d55bb050f1|element_620_1602": {
+    "to": "574b2e8bd136",
+    "count": 2,
+    "last_seen": 1773712614.2539148,
+    "seeded": true
+  },
+  "60d55bb050f1|element_126_1602": {
+    "to": "574b2e8bd136",
+    "count": 2,
+    "last_seen": 1773712614.2539165,
+    "seeded": true
+  },
+  "60d55bb050f1|Sadique faridi picture": {
+    "to": "8c53aa0c1c54",
+    "count": 2,
+    "last_seen": 1773712614.253918,
+    "seeded": true
+  },
+  "60d55bb050f1|element_620_1868": {
+    "to": "574b2e8bd136",
+    "count": 2,
+    "last_seen": 1773712614.2539196,
+    "seeded": true
+  },
+  "60d55bb050f1|element_126_1868": {
+    "to": "574b2e8bd136",
+    "count": 2,
+    "last_seen": 1773712614.253921,
+    "seeded": true
+  },
+  "60d55bb050f1|Physics Wallah - Vidyapeeth picture": {
+    "to": "615edd501f35",
+    "count": 2,
+    "last_seen": 1773712614.2539225,
+    "seeded": true
+  },
+  "60d55bb050f1|element_620_2134": {
+    "to": "b63ca3bf1737",
+    "count": 2,
+    "last_seen": 1773712614.25393,
+    "seeded": true
+  },
+  "60d55bb050f1|element_126_2134": {
+    "to": "b63ca3bf1737",
+    "count": 2,
+    "last_seen": 1773712614.2539315,
+    "seeded": true
+  },
+  "60d55bb050f1|Yash Raj picture": {
+    "to": "615edd501f35",
+    "count": 2,
+    "last_seen": 1773712614.253933,
+    "seeded": true
+  },
+  "60d55bb050f1|element_620_2350": {
+    "to": "b63ca3bf1737",
+    "count": 2,
+    "last_seen": 1773712614.2539346,
+    "seeded": true
+  },
+  "60d55bb050f1|element_126_2357": {
+    "to": "9956da4e9ccd",
+    "count": 2,
+    "last_seen": 1773712614.253943,
+    "seeded": true
+  },
+  "60d55bb050f1|Mummy picture": {
+    "to": "d46beeaf5f0e",
+    "count": 2,
+    "last_seen": 1773712614.2539449,
+    "seeded": true
+  },
+  "60d55bb050f1|New chat": {
+    "to": "6a0b1010fd19",
+    "count": 2,
+    "last_seen": 1773712614.2539465,
+    "seeded": true
+  },
+  "60d55bb050f1|Updates": {
+    "to": "b40bd20388f2",
+    "count": 2,
+    "last_seen": 1773712614.2539482,
+    "seeded": true
+  },
+  "60d55bb050f1|Communities": {
+    "to": "499bbafe05eb",
+    "count": 2,
+    "last_seen": 1773712614.2539496,
+    "seeded": true
+  },
+  "60d55bb050f1|Calls": {
+    "to": "499bbafe05eb",
+    "count": 2,
+    "last_seen": 1773712614.2539513,
+    "seeded": true
+  }
+}
+
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash
 #

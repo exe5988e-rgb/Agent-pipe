@@ -44739,6 +44739,129 @@
           "resource_id": ""
         }
       ]
+    },
+    "966005cab230": {
+      "screen_id": "966005cab230",
+      "package": "com.android.launcher",
+      "activity": "com.android.launcher/.Launcher",
+      "name": "launcher_launcher",
+      "labels": [
+        "MX Player",
+        "Truecaller",
+        "Sound Meter",
+        "FiiO Control",
+        "Wavelet",
+        "YT Music",
+        "QuickEdit",
+        "YouTube",
+        "Chrome",
+        "Phone",
+        "Messages",
+        "Photos",
+        "Camera"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "MX Player",
+          "x": 152,
+          "y": 418,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Truecaller",
+          "x": 620,
+          "y": 418,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Sound Meter",
+          "x": 854,
+          "y": 418,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "FiiO Control",
+          "x": 152,
+          "y": 803,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Wavelet",
+          "x": 386,
+          "y": 803,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "YT Music",
+          "x": 620,
+          "y": 803,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Home",
+          "x": 152,
+          "y": 1188,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "QuickEdit",
+          "x": 386,
+          "y": 1188,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "YouTube",
+          "x": 386,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Chrome",
+          "x": 854,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Phone",
+          "x": 269,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Messages",
+          "x": 503,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Photos",
+          "x": 737,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Camera",
+          "x": 971,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {

@@ -21606,6 +21606,154 @@
           "resource_id": ""
         }
       ]
+    },
+    "aa1600c67941": {
+      "screen_id": "aa1600c67941",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Open the homepage",
+        "element_2",
+        "support.google.com/youtube/answer/7640706?hl=%@",
+        "See 19 tabs",
+        "Customise and control Google Chrome",
+        "element_6",
+        "Main menu",
+        "YouTube Help",
+        "Search Help Center",
+        "Google Account: Amir Shams (amirshamse8@gmail.com)",
+        "Help Center",
+        "Community",
+        "Creator Tips",
+        "Download the YouTube app",
+        "in the app",
+        "Casting",
+        "Pairing"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "element_2",
+          "x": 224,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "support.google.com/youtube/answer/7640706?hl=%@",
+          "x": 592,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "See 19 tabs",
+          "x": 988,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        },
+        {
+          "text": "element_6",
+          "x": 620,
+          "y": 1526,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Main menu",
+          "x": 113,
+          "y": 434,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "YouTube Help",
+          "x": 467,
+          "y": 438,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Search Help Center",
+          "x": 981,
+          "y": 431,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Google Account: Amir Shams (amirshamse8@gmail.com)",
+          "x": 1149,
+          "y": 434,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Help Center",
+          "x": 154,
+          "y": 620,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Community",
+          "x": 454,
+          "y": 616,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Creator Tips",
+          "x": 759,
+          "y": 616,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Download the YouTube app",
+          "x": 435,
+          "y": 1425,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "in the app",
+          "x": 579,
+          "y": 1551,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Casting",
+          "x": 238,
+          "y": 2153,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Pairing",
+          "x": 229,
+          "y": 2503,
+          "cls": "android.view.View",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -21858,7 +22006,8 @@
     "b128d851f827|tap:None": "366c9a634a55",
     "366c9a634a55|type": "9068f3819b2b",
     "4203f6dd32c9|opt4_launch:youtube": "bf3964237b0d",
-    "4203f6dd32c9|opt4_launch:settings": "f3100103b174"
+    "4203f6dd32c9|opt4_launch:settings": "f3100103b174",
+    "4203f6dd32c9|opt4_launch:chrome": "aa1600c67941"
   }
 }
 

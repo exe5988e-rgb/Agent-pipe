@@ -17521,6 +17521,49 @@
           "y": 2567
         }
       ]
+    },
+    "1d7bd6d3f169": {
+      "screen_id": "1d7bd6d3f169",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/com.google.android.apps.youtube.app.settings.SettingsActivity",
+      "name": "youtube_settingsactivity",
+      "labels": [
+        "Add account",
+        "Manage accounts",
+        "Learn more about account options"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Add account",
+          "resource_id": "com.google.android.youtube:id/add_account",
+          "cls": "android.widget.ImageView",
+          "x": 1019,
+          "y": 1131
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.RelativeLayout",
+          "x": 620,
+          "y": 1341
+        },
+        {
+          "text": "Manage accounts",
+          "resource_id": "com.google.android.youtube:id/manage_account_footer",
+          "cls": "android.widget.TextView",
+          "x": 620,
+          "y": 1583
+        },
+        {
+          "text": "Learn more about account options",
+          "resource_id": "com.google.android.youtube:id/accounts_help_link",
+          "cls": "android.widget.TextView",
+          "x": 620,
+          "y": 1751
+        }
+      ]
     }
   },
   "transitions": {
@@ -17734,7 +17777,8 @@
     "bf229eb46cda|Edit suggestion funk criminal": "f911caa9edca",
     "bf229eb46cda|Edit suggestion funk sereno": "1aac69f7e1ea",
     "bf229eb46cda|Edit suggestion te conoci": "6e76c7a9bf3d",
-    "b57a107c23b7|Cast": "09795a0aa8ec"
+    "b57a107c23b7|Cast": "09795a0aa8ec",
+    "b57a107c23b7|Notifications": "1d7bd6d3f169"
   }
 }
 

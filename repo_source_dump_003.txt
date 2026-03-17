@@ -3213,8 +3213,8 @@ if __name__ == "__main__":
   },
   "d8e39632474f|tap:See 21 tabs": {
     "to": "46c9b9fb9f27",
-    "count": 2,
-    "last_seen": 1773737180.7405381
+    "count": 3,
+    "last_seen": 1773737187.7652915
   }
 }
 
@@ -7443,6 +7443,19 @@ RuntimeError: No LLM backend available.
 [ui_parser] signal='com.android.chrome/org.chromium.chrome.browser.settings.SettingsActivity'
 [mem] miss (unknown): com.android.chrome/org.chromium.chrome.browser.settings.SettingsActivity
 [ui_parser] cache miss -- full uiautomator dumpTraceback (most recent call last):
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 311, in run
+    run_step(state, device=device, model_path=model_path)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 267, in run_step
+    llm_out = generate(prompt, model_path=model_path)
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/reasoning/llm_client.py", line 109, in generate
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+Traceback (most recent call last):
   File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 311, in run
     run_step(state, device=device, model_path=model_path)
     ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

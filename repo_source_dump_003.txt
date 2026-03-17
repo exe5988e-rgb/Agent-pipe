@@ -3276,6 +3276,7 @@ if __name__ == "__main__":
 [14:13:28]   PASS  351.6s  skills=6
 [14:13:33] 
 [18/33] [2★] [chrome] Open Chrome and open a new tab
+[14:16:34]   PASS  177.2s  skills=6
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4443,7 +4444,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-17T14:13:28.532687",
+  "run_at": "2026-03-17T14:16:34.040335",
   "skills_before": 6,
   "skills_current": 6,
   "results": [
@@ -4597,6 +4598,15 @@ if __name__ == "__main__":
       "difficulty": 2,
       "success": true,
       "elapsed_s": 351.6,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Open Chrome and open a new tab",
+      "category": "chrome",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 177.2,
       "error": null,
       "retried": false
     }
@@ -7468,6 +7478,85 @@ Traceback (most recent call last):
 RuntimeError: No LLM backend available.
   Phone B offline? Check: curl http://192.168.29.110:8890/health
   Local LLM down? Run:    bash ~/jarvis_server_init.sh
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 311, in run
+    run_step(state, device=device, model_path=model_path)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 267, in run_step
+    llm_out = generate(prompt, model_path=model_path)
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/reasoning/llm_client.py", line 109, in generate
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+[ui_parser] full parse -- 12 elements from 192.168.29.48:34011
+[mem] stored com.android.chrome/org.chromium.chrome.browser.settings.SettingsActivity hash=5a79ee5fe18f elements=12
+[step] UI: ['Navigate up', 'Help and feedback', 'element_3', 'element_4', 'element_5', 'element_6', 'element_7', 'element_8']
+[map] new screen: chrome_settingsactivity (46c9b9fb9f27)
+[map] transition: chrome_main --[tap:See 21 tabs]--> chrome_settingsactivity
+[map] screen: chrome_settingsactivity (46c9b9fb)
+[skill] matched: 'open chrome and go to'  score=1.00  act_match=False
+[skill] cannot resolve tap target: 'support.google.com/youtube/answer/7640706?hl=%@'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B unreachable: timed out
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 7  |  Open Chrome and open a new tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (204192 bytes)
+[ui_parser] activity=com.android.chrome/org.chromium.chrome.browser.settings.SettingsActivity
+[ui_parser] signal='com.android.chrome/org.chromium.chrome.browser.settings.SettingsActivity'
+[mem] HIT com.android.chrome/org.chromium.chrome.browser.settings.SettingsActivity hash=5a79ee5fe18f hits=1 elements=12
+[step] UI: ['Navigate up', 'Help and feedback', 'element_3', 'element_4', 'element_5', 'element_6', 'element_7', 'element_8']
+[map] screen: chrome_settingsactivity (46c9b9fb)
+[skill] matched: 'open chrome and go to'  score=1.00  act_match=False
+[skill] cannot resolve tap target: 'support.google.com/youtube/answer/7640706?hl=%@'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 8  |  Open Chrome and open a new tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (204627 bytes)
+[ui_parser] activity=com.android.chrome/org.chromium.chrome.browser.settings.SettingsActivity
+[ui_parser] signal='com.android.chrome/org.chromium.chrome.browser.settings.SettingsActivity'
+[mem] HIT com.android.chrome/org.chromium.chrome.browser.settings.SettingsActivity hash=5a79ee5fe18f hits=2 elements=12
+[step] UI: ['Navigate up', 'Help and feedback', 'element_3', 'element_4', 'element_5', 'element_6', 'element_7', 'element_8']
+[map] screen: chrome_settingsactivity (46c9b9fb)
+[skill] matched: 'open chrome and go to'  score=1.00  act_match=False
+[skill] cannot resolve tap target: 'support.google.com/youtube/answer/7640706?hl=%@'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+[controller] history:
+  1. opt4_launch:chrome
+  2. tap [3] Signed in as Amir Shams. amirshamse8@gmail.com. Opens settings.
+
+  Screen Map: 275 screens (0 tainted), 329 transitions
+    whatsapp             142 screens
+    youtube              54 screens
+    chrome               25 screens
+    vending              21 screens
+    settings             15 screens
+    launcher             8 screens
+    termux               7 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+    dialer               1 screens
+  TransitionMemory: 329 transitions (254 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

@@ -2787,14 +2787,14 @@ if __name__ == "__main__":
     "last_seen": 1773735859.862318
   },
   "7c51d7e864c3|tap:element_25": {
-    "to": "1b272452b866",
+    "to": "7770f0561545",
     "count": 1,
-    "last_seen": 1773730860.4118464
+    "last_seen": 1773759185.6428525
   },
   "7770f0561545|tap:More options": {
     "to": "307d903852e1",
-    "count": 2,
-    "last_seen": 1773728351.7410634
+    "count": 3,
+    "last_seen": 1773759192.492371
   },
   "307d903852e1|type": {
     "to": "b128d851f827",
@@ -3430,6 +3430,11 @@ if __name__ == "__main__":
     "to": "7c51d7e864c3",
     "count": 1,
     "last_seen": 1773758617.328046
+  },
+  "966005cab230|opt4_launch:whatsapp": {
+    "to": "7c51d7e864c3",
+    "count": 1,
+    "last_seen": 1773759179.597889
   }
 }
 

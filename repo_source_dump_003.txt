@@ -2859,6 +2859,7 @@ if __name__ == "__main__":
 [10:12:22]   Recovering device...
 [10:12:37]   Retry: ✗ FAIL  |  0.2s
 [10:12:37]   Recovering device...
+[10:12:44]   Pausing 5s...
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4198,7 +4199,7 @@ if __name__ == "__main__":
 
 //===== TERMUXFILE: gauntlet_report.json =====
 {
-  "run_at": "2026-03-17T10:12:12.028242",
+  "run_at": "2026-03-17T10:12:44.453582",
   "in_progress": true,
   "skills_before": 0,
   "skills_current": 0,
@@ -4236,6 +4237,15 @@ if __name__ == "__main__":
       "difficulty": 1,
       "success": false,
       "elapsed_s": 0.7,
+      "error": "orig=returncode=1 retry=returncode=1",
+      "retried": false
+    },
+    {
+      "task": "Open Play Store",
+      "category": "playstore",
+      "difficulty": 1,
+      "success": false,
+      "elapsed_s": 0.2,
       "error": "orig=returncode=1 retry=returncode=1",
       "retried": false
     }

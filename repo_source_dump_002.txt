@@ -19960,7 +19960,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 85,
+      "visits": 86,
       "tainted": false,
       "elements": [
         {
@@ -36965,6 +36965,224 @@
           "resource_id": "com.instagram.android:id/profile_tab"
         }
       ]
+    },
+    "79a4aaec41ce": {
+      "screen_id": "79a4aaec41ce",
+      "package": "com.termux",
+      "activity": "com.termux/.app.TermuxActivity",
+      "name": "termux_termuxactivity",
+      "labels": [
+        "Clock",
+        ":",
+        "element_5",
+        "Haze",
+        "29\u200e\u00b0\u200e",
+        "Tue 17 Mar",
+        "At a Glance",
+        "element_10",
+        "element_11",
+        "element_12",
+        "element_13",
+        "element_14",
+        "element_15",
+        "element_16",
+        "element_17",
+        "Google Search",
+        "Play Store",
+        "Weather",
+        "Maps",
+        "Meet (original)",
+        "Phone",
+        "Messages",
+        "Photos",
+        "Camera"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Clock",
+          "x": 620,
+          "y": 418,
+          "cls": "com.android.launcher3.widget.CustomLauncherAppWidgetHostView",
+          "resource_id": ""
+        },
+        {
+          "text": "14",
+          "x": 199,
+          "y": 396,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.oneplus.deskclock:id/local_hour_txt"
+        },
+        {
+          "text": ":",
+          "x": 340,
+          "y": 389,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.oneplus.deskclock:id/local_colon_txt"
+        },
+        {
+          "text": "26",
+          "x": 481,
+          "y": 396,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.oneplus.deskclock:id/local_minutes_txt"
+        },
+        {
+          "text": "element_5",
+          "x": 1052,
+          "y": 377,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.oneplus.deskclock:id/local_weather_description"
+        },
+        {
+          "text": "Haze",
+          "x": 1020,
+          "y": 377,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.oneplus.deskclock:id/iv_weather_type"
+        },
+        {
+          "text": "29\u200e\u00b0\u200e",
+          "x": 1113,
+          "y": 377,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.oneplus.deskclock:id/local_weather_info_txt"
+        },
+        {
+          "text": "Tue 17 Mar",
+          "x": 1000,
+          "y": 459,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.oneplus.deskclock:id/local_date_info_txt"
+        },
+        {
+          "text": "At a Glance",
+          "x": 620,
+          "y": 996,
+          "cls": "com.android.launcher3.widget.CustomLauncherAppWidgetHostView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_10",
+          "x": 411,
+          "y": 995,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_11",
+          "x": 746,
+          "y": 995,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_12",
+          "x": 996,
+          "y": 995,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_13",
+          "x": 147,
+          "y": 1573,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_google_logo"
+        },
+        {
+          "text": "element_14",
+          "x": 452,
+          "y": 1573,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_text_search"
+        },
+        {
+          "text": "element_15",
+          "x": 757,
+          "y": 1573,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_shortcut"
+        },
+        {
+          "text": "element_16",
+          "x": 925,
+          "y": 1573,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_voice_search"
+        },
+        {
+          "text": "element_17",
+          "x": 1093,
+          "y": 1573,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_lens"
+        },
+        {
+          "text": "Google Search",
+          "x": 620,
+          "y": 1573,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_background"
+        },
+        {
+          "text": "Play Store",
+          "x": 152,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Weather",
+          "x": 386,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Maps",
+          "x": 620,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Meet (original)",
+          "x": 854,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Phone",
+          "x": 269,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Messages",
+          "x": 503,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Photos",
+          "x": 737,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Camera",
+          "x": 971,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -37299,7 +37517,8 @@
     "d8e39632474f|tap:See 21 tabs": "46c9b9fb9f27",
     "06c59ed8f4e7|retry": "f024dd6aa1fa",
     "f024dd6aa1fa|retry": "572db9f8d8bd",
-    "572db9f8d8bd|retry": "35187eb4193b"
+    "572db9f8d8bd|retry": "35187eb4193b",
+    "4203f6dd32c9|tap:14": "79a4aaec41ce"
   }
 }
 

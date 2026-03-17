@@ -3230,6 +3230,11 @@ if __name__ == "__main__":
     "to": "35187eb4193b",
     "count": 3,
     "last_seen": 1773737707.4310458
+  },
+  "4203f6dd32c9|tap:14": {
+    "to": "79a4aaec41ce",
+    "count": 1,
+    "last_seen": 1773737791.1279953
   }
 }
 
@@ -8363,6 +8368,10 @@ RuntimeError: No LLM backend available.
 ========================================================
   STEP 7  |  Open Contacts and search for Mummy
 ========================================================[parser] DEBUG normalized: 'tap 1'
+[parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
+[parser] DEBUG normalized: 'tap 1'
+[parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
+[parser] DEBUG normalized: 'tap 1'
 [parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
 
 

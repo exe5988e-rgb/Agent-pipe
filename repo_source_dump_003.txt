@@ -3243,8 +3243,8 @@ if __name__ == "__main__":
   },
   "f6971c299e21|swipe": {
     "to": "a2d4963e4b8c",
-    "count": 1,
-    "last_seen": 1773753211.920892
+    "count": 2,
+    "last_seen": 1773754044.0854344
   },
   "a2d4963e4b8c|tap:A": {
     "to": "abe260fd616f",

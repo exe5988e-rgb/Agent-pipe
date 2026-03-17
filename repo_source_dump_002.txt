@@ -19960,7 +19960,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 73,
+      "visits": 74,
       "tainted": false,
       "elements": [
         {
@@ -35914,6 +35914,194 @@
           "resource_id": ""
         }
       ]
+    },
+    "f6603009c0fa": {
+      "screen_id": "f6603009c0fa",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Open the homepage",
+        "element_2",
+        "wikipedia.org",
+        "See 20 tabs",
+        "Customise and control Google Chrome",
+        "Wikipedia",
+        "element_7",
+        "Play",
+        "element_9",
+        "Search",
+        "English",
+        "English 7,141,000+ articles",
+        "\u65e5\u672c\u8a9e 1,491,000+ \u8a18\u4e8b",
+        "Deutsch 3.099.000+ Artikel",
+        "\u0420\u0443\u0441\u0441\u043a\u0438\u0439 2\u00a0087\u00a0000+ \u0441\u0442\u0430\u0442\u0435\u0439",
+        "Fran\u00e7ais 2\u202f740\u202f000+ articles",
+        "Espa\u00f1ol 2.095.000+ art\u00edculos",
+        "Italiano 1.957.000+ voci",
+        "\u4e2d\u6587 1,524,000+ \u6761\u76ee / \u689d\u76ee",
+        "Portugu\u00eas 1.165.000+ artigos",
+        "Polski 1\u00a0685\u00a0000+ hase\u0142",
+        "Unlock birthday surprises on Wikipedia"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "element_2",
+          "x": 224,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "wikipedia.org",
+          "x": 592,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "See 20 tabs",
+          "x": 988,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        },
+        {
+          "text": "Wikipedia",
+          "x": 620,
+          "y": 1526,
+          "cls": "android.webkit.WebView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_7",
+          "x": 621,
+          "y": 581,
+          "cls": "android.view.View",
+          "resource_id": "wikipedia25-video"
+        },
+        {
+          "text": "Play",
+          "x": 621,
+          "y": 748,
+          "cls": "android.widget.Button",
+          "resource_id": "wikipedia25-play-button"
+        },
+        {
+          "text": "element_9",
+          "x": 523,
+          "y": 1131,
+          "cls": "android.widget.EditText",
+          "resource_id": "searchInput"
+        },
+        {
+          "text": "Search",
+          "x": 1107,
+          "y": 1131,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "English",
+          "x": 988,
+          "y": 1131,
+          "cls": "android.view.View",
+          "resource_id": "searchLanguage"
+        },
+        {
+          "text": "English 7,141,000+ articles",
+          "x": 234,
+          "y": 1404,
+          "cls": "android.view.View",
+          "resource_id": "js-link-box-en"
+        },
+        {
+          "text": "\u65e5\u672c\u8a9e 1,491,000+ \u8a18\u4e8b",
+          "x": 615,
+          "y": 1404,
+          "cls": "android.view.View",
+          "resource_id": "js-link-box-ja"
+        },
+        {
+          "text": "Deutsch 3.099.000+ Artikel",
+          "x": 993,
+          "y": 1404,
+          "cls": "android.view.View",
+          "resource_id": "js-link-box-de"
+        },
+        {
+          "text": "\u0420\u0443\u0441\u0441\u043a\u0438\u0439 2\u00a0087\u00a0000+ \u0441\u0442\u0430\u0442\u0435\u0439",
+          "x": 234,
+          "y": 1684,
+          "cls": "android.view.View",
+          "resource_id": "js-link-box-ru"
+        },
+        {
+          "text": "Fran\u00e7ais 2\u202f740\u202f000+ articles",
+          "x": 615,
+          "y": 1684,
+          "cls": "android.view.View",
+          "resource_id": "js-link-box-fr"
+        },
+        {
+          "text": "Espa\u00f1ol 2.095.000+ art\u00edculos",
+          "x": 993,
+          "y": 1684,
+          "cls": "android.view.View",
+          "resource_id": "js-link-box-es"
+        },
+        {
+          "text": "Italiano 1.957.000+ voci",
+          "x": 234,
+          "y": 1964,
+          "cls": "android.view.View",
+          "resource_id": "js-link-box-it"
+        },
+        {
+          "text": "\u4e2d\u6587 1,524,000+ \u6761\u76ee / \u689d\u76ee",
+          "x": 615,
+          "y": 1964,
+          "cls": "android.view.View",
+          "resource_id": "js-link-box-zh"
+        },
+        {
+          "text": "Portugu\u00eas 1.165.000+ artigos",
+          "x": 993,
+          "y": 1964,
+          "cls": "android.view.View",
+          "resource_id": "js-link-box-pt"
+        },
+        {
+          "text": "Polski 1\u00a0685\u00a0000+ hase\u0142",
+          "x": 234,
+          "y": 2244,
+          "cls": "android.view.View",
+          "resource_id": "js-link-box-pl"
+        },
+        {
+          "text": "Unlock birthday surprises on Wikipedia",
+          "x": 619,
+          "y": 2491,
+          "cls": "android.widget.Button",
+          "resource_id": "wikipedia25-cta-button"
+        }
+      ]
     }
   },
   "transitions": {
@@ -36167,7 +36355,7 @@
     "366c9a634a55|type": "3770450be101",
     "4203f6dd32c9|opt4_launch:youtube": "6d33d4320f5d",
     "4203f6dd32c9|opt4_launch:settings": "225fda90f5ad",
-    "4203f6dd32c9|opt4_launch:chrome": "ec2d5cc0aa50",
+    "4203f6dd32c9|opt4_launch:chrome": "f6603009c0fa",
     "4203f6dd32c9|opt4_launch:play store": "06c59ed8f4e7",
     "7c51d7e864c3|tap:You": "47d448eaba6d",
     "d3d30bd552b1|tap:Communities": "24f4242fbb4f",

@@ -24432,6 +24432,162 @@
           "resource_id": ""
         }
       ]
+    },
+    "bc25f94b5cfd": {
+      "screen_id": "bc25f94b5cfd",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "element_1",
+        "element_2",
+        "google.com",
+        "Clear input",
+        "10 suggested items in list below.",
+        "element_6",
+        "element_7",
+        "Refine: https://accounts.google.com/ServiceLogin?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1",
+        "element_9",
+        "Refine: https://www.google.com/search?q=in+google+meet+how+i+can+take+photo+of+everyone+present&oq=&aqs=chrome.2.69i59l8.16661755j0j15&sourceid=chrome&ie=UTF-8",
+        "element_11",
+        "Refine: https://one.google.com/about/plans?utm_source=g1&utm_medium=paid_media&utm_campaign=storage&gad_source=2&gad_campaignid=22609163186&gclid=CjwKCAjw1N7NBhAoEiwAcPchp6uHnR7mRplniT-VUYOjtRcGvYyKudNUQau6WB0TqS3Sox2NzhLkHxoC4UEQAvD_BwE&gclsrc=aw.ds",
+        "element_13",
+        "Refine: https://news.google.com/read/CBMi0gFBVV95cUxPU2VnUVpyUnpLT1JvTUVnYkZaSHM0YXZIN1ZSb1EtZUdidjM3aFlacHNCZUVRWjVpSmYydWhzU3RfVHR4cDI1enY5VjhnTnlCYmlteklUcnQ4ZDhObUUwOTEzVzFzQlhVeHpUVUwxMGxSWUpTb1RHdmgxeXRLSmZkdFJjVFZZdjg4WW52NzAyUkNRLTJ0LTVvMlNlaEM2SGQzSWZ0N1ZuSnJBMnRmdjd2VFhFLWE0dzdEMjUzQThrYzNiT0ZxSWR2VVRsRW55dTZMYXfSAdcBQVVfeXFMTUU0YklQUGpucHJGUC1KS1B3NFhVNG5kY21XTUFZVzBfVkVMdDlfdjdCTlRJMTZ4bFJrR05iNmFIT2E1dEl1VG1sUC1oVnlLSlZDcDlUNTFRZ085dWpZQ3NzYnlsQU01S245V0wzcFpuN2FuUFg3Qm96SlpBS3RMdFNsNXYyU3VxcGZHU3hRZ1BLOGhBLUIxN0pELW5TeVlYNHZoNVl1bWN0cFhWYVZLU0d5TExoNVlCRHdYeXl3V2RlTmpzYnZkenQ4aW9PeWJHMzdlZk1UQ3M?hl=en-IN&gl=IN&ceid=IN%3Aen",
+        "Refine: https://support.google.com/youtube/answer/7640706?hl=%@",
+        "element_16",
+        "Refine: https://accounts.google.com/b/0/AddMailService",
+        "element_18"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 620,
+          "y": 1427,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_2",
+          "x": 126,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "google.com",
+          "x": 634,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "Clear input",
+          "x": 1128,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/delete_button"
+        },
+        {
+          "text": "10 suggested items in list below.",
+          "x": 620,
+          "y": 1058,
+          "cls": "androidx.recyclerview.widget.RecyclerView",
+          "resource_id": "com.android.chrome:id/omnibox_suggestions_dropdown"
+        },
+        {
+          "text": "element_6",
+          "x": 620,
+          "y": 433,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 629,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: https://accounts.google.com/ServiceLogin?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1",
+          "x": 1128,
+          "y": 629,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_9",
+          "x": 620,
+          "y": 825,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: https://www.google.com/search?q=in+google+meet+how+i+can+take+photo+of+everyone+present&oq=&aqs=chrome.2.69i59l8.16661755j0j15&sourceid=chrome&ie=UTF-8",
+          "x": 1128,
+          "y": 825,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_11",
+          "x": 620,
+          "y": 1021,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: https://one.google.com/about/plans?utm_source=g1&utm_medium=paid_media&utm_campaign=storage&gad_source=2&gad_campaignid=22609163186&gclid=CjwKCAjw1N7NBhAoEiwAcPchp6uHnR7mRplniT-VUYOjtRcGvYyKudNUQau6WB0TqS3Sox2NzhLkHxoC4UEQAvD_BwE&gclsrc=aw.ds",
+          "x": 1128,
+          "y": 1021,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_13",
+          "x": 620,
+          "y": 1217,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: https://news.google.com/read/CBMi0gFBVV95cUxPU2VnUVpyUnpLT1JvTUVnYkZaSHM0YXZIN1ZSb1EtZUdidjM3aFlacHNCZUVRWjVpSmYydWhzU3RfVHR4cDI1enY5VjhnTnlCYmlteklUcnQ4ZDhObUUwOTEzVzFzQlhVeHpUVUwxMGxSWUpTb1RHdmgxeXRLSmZkdFJjVFZZdjg4WW52NzAyUkNRLTJ0LTVvMlNlaEM2SGQzSWZ0N1ZuSnJBMnRmdjd2VFhFLWE0dzdEMjUzQThrYzNiT0ZxSWR2VVRsRW55dTZMYXfSAdcBQVVfeXFMTUU0YklQUGpucHJGUC1KS1B3NFhVNG5kY21XTUFZVzBfVkVMdDlfdjdCTlRJMTZ4bFJrR05iNmFIT2E1dEl1VG1sUC1oVnlLSlZDcDlUNTFRZ085dWpZQ3NzYnlsQU01S245V0wzcFpuN2FuUFg3Qm96SlpBS3RMdFNsNXYyU3VxcGZHU3hRZ1BLOGhBLUIxN0pELW5TeVlYNHZoNVl1bWN0cFhWYVZLU0d5TExoNVlCRHdYeXl3V2RlTmpzYnZkenQ4aW9PeWJHMzdlZk1UQ3M?hl=en-IN&gl=IN&ceid=IN%3Aen",
+          "x": 1128,
+          "y": 1217,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: https://support.google.com/youtube/answer/7640706?hl=%@",
+          "x": 1128,
+          "y": 1413,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_16",
+          "x": 620,
+          "y": 1609,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: https://accounts.google.com/b/0/AddMailService",
+          "x": 1128,
+          "y": 1609,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_18",
+          "x": 620,
+          "y": 1744,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -24700,7 +24856,8 @@
     "1d0f3d79dcfd|tap:element_3": "92250c07bf1a",
     "92250c07bf1a|type": "6aecc338ecf3",
     "ff3d5d3179d0|back": "6aecc338ecf3",
-    "aa1600c67941|tap:See 19 tabs": "c120d24cf7c6"
+    "aa1600c67941|tap:See 19 tabs": "c120d24cf7c6",
+    "c120d24cf7c6|type": "bc25f94b5cfd"
   }
 }
 

@@ -2900,6 +2900,11 @@ if __name__ == "__main__":
     "to": "c120d24cf7c6",
     "count": 1,
     "last_seen": 1773727433.9019275
+  },
+  "c120d24cf7c6|type": {
+    "to": "bc25f94b5cfd",
+    "count": 1,
+    "last_seen": 1773727466.3794284
   }
 }
 

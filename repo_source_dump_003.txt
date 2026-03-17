@@ -2784,53 +2784,12 @@ if __name__ == "__main__":
 }
 
 //===== TERMUXFILE: gauntlet_log.txt =====
-[10:48:50] 
-╔══════════════════════════════════════════════════════════════╗
-║   JARVIS GAUNTLET RUNNER  — Overnight Mode                  ║
-║   Device  : 192.168.29.48:34011                              ║
-║   Tasks   : 33                                               ║
-║   Skills  : 0                                                ║
-║   Started : 2026-03-17 10:48:50                              ║
-╚══════════════════════════════════════════════════════════════╝
-
-[10:48:50]   Preparing device...
-[10:48:55]   Phone B bridge: ✓ reachable
-[10:48:55] 
-════════════════════════════════════════════════════════════════
-[10:48:55]   TASK 1/33  [1★]  [whatsapp]  timeout=255s
-[10:48:55]   Open WhatsApp
-[10:48:55] ════════════════════════════════════════════════════════════════
-[10:49:00] 
-  ✗ FAIL  |  0.2s  |  skills: 0
-[10:49:00]   Error: returncode=1
-[10:49:00]   Retrying once...
-[10:49:00]   Recovering device...
-[10:49:15]   Retry: ✗ FAIL  |  0.2s
-[10:49:15]   Recovering device...
-[10:49:21]   Pausing 5s...
-[10:49:26] 
-════════════════════════════════════════════════════════════════
-[10:49:26]   TASK 2/33  [1★]  [youtube]  timeout=255s
-[10:49:26]   Open YouTube
-[10:49:26] ════════════════════════════════════════════════════════════════
-[10:49:31] 
-  ✗ FAIL  |  0.5s  |  skills: 0
-[10:49:31]   Error: returncode=1
-[10:49:31]   Retrying once...
-[10:49:31]   Recovering device...
-[10:49:49]   Retry: ✗ FAIL  |  0.7s
-[10:49:49]   Recovering device...
-[10:49:56]   Pausing 5s...
-[10:50:01] 
-════════════════════════════════════════════════════════════════
-[10:50:01]   TASK 3/33  [1★]  [settings]  timeout=255s
-[10:50:01]   Open Settings
-[10:50:01] ════════════════════════════════════════════════════════════════
-[10:50:06] 
-  ✗ FAIL  |  0.2s  |  skills: 0
-[10:50:06]   Error: returncode=1
-[10:50:06]   Retrying once...
-[10:50:06]   Recovering device...
+[11:01:06] GAUNTLET START  2026-03-17 11:01
+[11:01:06] Tasks=33  Skills=0
+[11:01:06] NOTE: keep_awake.sh must be running separately
+[11:01:06] Bridge: OK
+[11:01:06] 
+[1/33] [1★] [whatsapp] Open WhatsApp
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4053,26 +4012,6 @@ done
 
 //===== TERMUXFILE: gauntlet_nohup.log =====
 nohup: ignoring input
-Traceback (most recent call last):
-  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 31, in <module>
-    from perception.screen_map         import ScreenMap
-ModuleNotFoundError: No module named 'perception.screen_map'
-Traceback (most recent call last):
-  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 31, in <module>
-    from perception.screen_map         import ScreenMap
-ModuleNotFoundError: No module named 'perception.screen_map'
-Traceback (most recent call last):
-  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 31, in <module>
-    from perception.screen_map         import ScreenMap
-ModuleNotFoundError: No module named 'perception.screen_map'
-Traceback (most recent call last):
-  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 31, in <module>
-    from perception.screen_map         import ScreenMap
-ModuleNotFoundError: No module named 'perception.screen_map'
-Traceback (most recent call last):
-  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 31, in <module>
-    from perception.screen_map         import ScreenMap
-ModuleNotFoundError: No module named 'perception.screen_map'
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

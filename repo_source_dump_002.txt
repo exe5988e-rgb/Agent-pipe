@@ -30384,6 +30384,130 @@
           "resource_id": ""
         }
       ]
+    },
+    "963eb2fb8785": {
+      "screen_id": "963eb2fb8785",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Expand Mini Player",
+        "0 minutes 24 seconds of 1 hour 1 minute 13 seconds",
+        "element_3",
+        "Close",
+        "element_5",
+        "2,101,290 likes",
+        "130,977,710 views",
+        "Premiered on 9 Dec 2019",
+        "Actions menu",
+        "element_10",
+        "Lofi Girl Classic Wearable Plaid, From Lofi Girl, Limited delivery areas",
+        "Lofi Cat Plush, From Lofi Girl, Limited delivery areas",
+        "Chilledcow Plush, From Lofi Girl, Limited delivery areas",
+        "\ud83c\udfbc | Listen on Spotify, Apple music and more\n\u2192  https://fanlink.tv/lof...\u200b\n\n\ud83c\udfad | Create your lofi avatar now\n\u2192  https://bit.ly/lofigir...\u200b\n\n\ud83c\udf0e | Lofi Girl on all social media...more"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Expand Mini Player",
+          "x": 620,
+          "y": 488,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/player_overlays"
+        },
+        {
+          "text": "0 minutes 24 seconds of 1 hour 1 minute 13 seconds",
+          "x": 620,
+          "y": 834,
+          "cls": "android.widget.SeekBar",
+          "resource_id": ""
+        },
+        {
+          "text": "element_3",
+          "x": 620,
+          "y": 944,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.google.android.youtube:id/header_container"
+        },
+        {
+          "text": "Close",
+          "x": 1156,
+          "y": 963,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/close_button"
+        },
+        {
+          "text": "element_5",
+          "x": 620,
+          "y": 1883,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results"
+        },
+        {
+          "text": "2,101,290 likes",
+          "x": 199,
+          "y": 1359,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "130,977,710 views",
+          "x": 620,
+          "y": 1359,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Premiered on 9 Dec 2019",
+          "x": 1041,
+          "y": 1359,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Actions menu",
+          "x": 1078,
+          "y": 1626,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_10",
+          "x": 454,
+          "y": 1626,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Lofi Girl Classic Wearable Plaid, From Lofi Girl, Limited delivery areas",
+          "x": 620,
+          "y": 1808,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Lofi Cat Plush, From Lofi Girl, Limited delivery areas",
+          "x": 620,
+          "y": 1976,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Chilledcow Plush, From Lofi Girl, Limited delivery areas",
+          "x": 620,
+          "y": 2144,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\ud83c\udfbc | Listen on Spotify, Apple music and more\n\u2192  https://fanlink.tv/lof...\u200b\n\n\ud83c\udfad | Create your lofi avatar now\n\u2192  https://bit.ly/lofigir...\u200b\n\n\ud83c\udf0e | Lofi Girl on all social media...more",
+          "x": 620,
+          "y": 2475,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -30678,7 +30802,8 @@
     "27c6192191ae|type": "00ddcc6c2669",
     "00ddcc6c2669|tap:element_7": "90f6cca629c6",
     "90f6cca629c6|tap:Edit suggestion lofi hip hop radio": "3c9076acc8ff",
-    "06c59ed8f4e7|tap:element_4": "f024dd6aa1fa"
+    "06c59ed8f4e7|tap:element_4": "f024dd6aa1fa",
+    "73e58d141483|tap:element_15": "963eb2fb8785"
   }
 }
 

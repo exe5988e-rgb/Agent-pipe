@@ -10413,6 +10413,106 @@ RuntimeError: No LLM backend available.
 [parser] DEBUG normalized: 'tap 22'
 [parser] INFO parsed 'tap 22' -> {'action': 'tap', 'target': 22}
 
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (308488 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] HIT com.android.chrome/com.google.android.apps.chrome.Main hash=96b4468dd461 hits=7 elements=23
+[step] UI: ['element_1', 'Wikipedia', 'element_3', 'Play', 'element_5', 'Search', 'English', 'English 7,141,000+ articles']
+[map] screen: chrome_main (0ffd7f03)
+[skill] matched: 'open chrome and go to'  score=1.00  act_match=True
+[skill] cannot resolve tap target: 'support.google.com/youtube/answer/7640706?hl=%@'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 23'
+[step] LLM: 'tap 23'
+[step] action: {'action': 'tap', 'target': 23}
+[input] dispatching: TouchEvent(x=1156, y=2618)
+[input] adb -s 192.168.29.48:34011 shell input tap 1156 2618
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[step] step=16/30 done=False history=['opt4_launch:chrome', 'tap [3] google.com/search?q=weather+today+ranchi&oq=weather+today+&gs_lcrp=EgZjaHJvbWUqDQgBEAAYgwEYsQMYgAQyBggAEEUYOTINCAEQABiDARixAxiABDIHCAIQABiABDIKCAMQABixAxiABDI', "type 'wikipedia.org'", 'tap [6] element_6', 'long press', 'tap [2] element_2', 'long press', 'tap [3] element_3', 'tap [23] Customise and control Google Chrome']
+
+========================================================
+  STEP 17  |  Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (296905 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 18 elements from 192.168.29.48:34011
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=c3093cb270dd elements=18
+[step] UI: ['element_1', 'Forward', 'Bookmark', 'Download', 'Page info', 'Refresh', 'element_7', 'element_8']
+[map] new screen: chrome_main (5086bd87137e)
+[map] transition: chrome_main --[tap:23]--> chrome_main
+[map] screen: chrome_main (5086bd87)
+[skill] matched: 'open chrome and go to'  score=1.00  act_match=True
+[skill] cannot resolve tap target: 'support.google.com/youtube/answer/7640706?hl=%@'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 7'
+[step] LLM: 'tap 7'
+[step] action: {'action': 'tap', 'target': 7}
+[input] dispatching: TouchEvent(x=767, y=713)
+[input] adb -s 192.168.29.48:34011 shell input tap 767 713
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[step] step=17/30 done=False history=['opt4_launch:chrome', 'tap [3] google.com/search?q=weather+today+ranchi&oq=weather+today+&gs_lcrp=EgZjaHJvbWUqDQgBEAAYgwEYsQMYgAQyBggAEEUYOTINCAEQABiDARixAxiABDIHCAIQABiABDIKCAMQABixAxiABDI', "type 'wikipedia.org'", 'tap [6] element_6', 'long press', 'tap [2] element_2', 'long press', 'tap [3] element_3', 'tap [23] Customise and control Google Chrome', 'tap [7] element_7']
+
+========================================================
+  STEP 18  |  Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (773485 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 20 elements from 192.168.29.48:34011
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=3396bc78e15f elements=20
+[step] UI: ['Open the homepage', 'element_2', 'Signed in as Amir Shams. amirshamse8@gmail.com. Opens settings.', 'See 21 tabs', 'Customise and control Google Chrome', 'Search Google or type URL', 'Start voice search', 'Search with your camera using Google Lens']
+[map] new screen: chrome_main (54001c27a626)
+[map] transition: chrome_main --[tap:element_8]--> chrome_main
+[map] screen: chrome_main (54001c27)
+[skill] matched: 'open chrome and go to'  score=1.00  act_match=True
+[skill] cannot resolve tap target: 'support.google.com/youtube/answer/7640706?hl=%@'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 15'
+[step] LLM: 'tap 15'
+[step] action: {'action': 'tap', 'target': 15}
+[input] dispatching: TouchEvent(x=1036, y=1357)
+[input] adb -s 192.168.29.48:34011 shell input tap 1036 1357
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[step] step=18/30 done=False history=['opt4_launch:chrome', 'tap [3] google.com/search?q=weather+today+ranchi&oq=weather+today+&gs_lcrp=EgZjaHJvbWUqDQgBEAAYgwEYsQMYgAQyBggAEEUYOTINCAEQABiDARixAxiABDIHCAIQABiABDIKCAMQABixAxiABDI', "type 'wikipedia.org'", 'tap [6] element_6', 'long press', 'tap [2] element_2', 'long press', 'tap [3] element_3', 'tap [23] Customise and control Google Chrome', 'tap [7] element_7', 'tap [15] Wikipedia: wikipedia.org']
+
+========================================================
+  STEP 19  |  Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (307185 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 22 elements from 192.168.29.48:34011
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=d1f572dd7858 elements=22
+[step] UI: ['Wikipedia', 'element_2', 'Play', 'element_4', 'Search', 'English', 'English 7,141,000+ articles', '日本語 1,491,000+ 記事']
+[map] new screen: chrome_main (558ab09c987a)
+[map] transition: chrome_main --[tap:: 192.168.29.110]--> chrome_main
+[map] screen: chrome_main (558ab09c)
+[skill] matched: 'open chrome and go to'  score=1.00  act_match=True
+[skill] cannot resolve tap target: 'support.google.com/youtube/answer/7640706?hl=%@'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 22'
+[step] LLM: 'tap 22'
+[step] action: {'action': 'tap', 'target': 22}
+[input] dispatching: TouchEvent(x=1156, y=2618)
+[input] adb -s 192.168.29.48:34011 shell input tap 1156 2618
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[step] step=19/30 done=False history=['opt4_launch:chrome', 'tap [3] google.com/search?q=weather+today+ranchi&oq=weather+today+&gs_lcrp=EgZjaHJvbWUqDQgBEAAYgwEYsQMYgAQyBggAEEUYOTINCAEQABiDARixAxiABDIHCAIQABiABDIKCAMQABixAxiABDI', "type 'wikipedia.org'", 'tap [6] element_6', 'long press', 'tap [2] element_2', 'long press', 'tap [3] element_3', 'tap [23] Customise and control Google Chrome', 'tap [7] element_7', 'tap [15] Wikipedia: wikipedia.org', 'tap [22] Customise and control Google Chrome']
+
+========================================================
+  STEP 20  |  Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (297553 bytes)
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash
@@ -11125,138 +11225,5 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         print("\n[bridge] Stopped.")
         server.shutdown()
-
-
-//===== TERMUXFILE: test/jarvis_server_init.sh =====
-#!/data/data/com.termux/files/usr/bin/bash
-# =====================================================================================================
-#  jarvis_server_init.sh
-#  Starts the complete JARVIS LLM server stack:
-#    1. llamafile model server  (port 8080)
-#    2. llamafile_proxy.py      (port 8888, no-auth — for agent)
-#    3. llamafile_proxy_lan.py  (port 8889, LAN+auth — for Android app)
-#
-#  Usage:
-#    bash ~/jarvis_server_init.sh          # start all
-#    bash ~/jarvis_server_init.sh --pair   # start + enable LAN pairing
-#    bash ~/jarvis_server_init.sh --stop   # kill all
-# =====================================================================================================
-
-MODEL="$HOME/ai-workspace/llama.cpp/models/Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf"
-LLAMAFILE="$HOME/llamafile"
-PROXY_LOCAL="$HOME/llamafile_proxy.py"
-PROXY_LAN="$HOME/llamafile_proxy_lan.py"
-
-LOG_DIR="$HOME/.jarvis_logs"
-mkdir -p "$LOG_DIR"
-
-GREEN="\033[0;32m"; YELLOW="\033[1;33m"; RED="\033[0;31m"; NC="\033[0m"
-log()  { echo -e "${GREEN}[jarvis]${NC} $*"; }
-warn() { echo -e "${YELLOW}[jarvis]${NC} $*"; }
-
-# ── Stop mode ────────────────────────────────────────────────
-if [ "$1" = "--stop" ]; then
-    log "Stopping all JARVIS processes..."
-    pkill -f "llamafile" 2>/dev/null && log "  ✓ llamafile stopped" || true
-    pkill -f "llamafile_proxy" 2>/dev/null && log "  ✓ proxies stopped" || true
-    log "Done."
-    exit 0
-fi
-
-# ── Pre-flight checks ────────────────────────────────────────
-echo ""
-echo "╔══════════════════════════════════════════════════════╗"
-echo "║   🚀 JARVIS SERVER INIT                              ║"
-echo "╚══════════════════════════════════════════════════════╝"
-echo ""
-
-[ -f "$LLAMAFILE" ] || { echo -e "${RED}[error]${NC} llamafile not found at $LLAMAFILE"; echo "Run: bash ~/jarvis_setup.sh"; exit 1; }
-[ -f "$MODEL" ]     || { warn "Model not found: $MODEL"; warn "Agent will fall back to subprocess mode"; }
-[ -f "$PROXY_LOCAL" ] || { warn "llamafile_proxy.py not found at $PROXY_LOCAL"; }
-[ -f "$PROXY_LAN" ]   || { warn "llamafile_proxy_lan.py not found at $PROXY_LAN"; }
-
-# ── Kill stale processes ─────────────────────────────────────
-log "Cleaning up stale processes..."
-pkill -f "llamafile" 2>/dev/null || true
-pkill -f "llamafile_proxy" 2>/dev/null || true
-sleep 1
-
-# ── 1. Start llamafile server ────────────────────────────────
-if [ -f "$MODEL" ]; then
-    log "Starting llamafile server (port 8080)..."
-    nohup "$LLAMAFILE" -m "$MODEL" \
-        --server --port 8080 --host 127.0.0.1 \
-        --ctx-size 4096 --threads 4 \
-        --n-predict 256 \
-        --log-disable \
-        > "$LOG_DIR/llamafile.log" 2>&1 &
-    LLAMAFILE_PID=$!
-    log "  PID: $LLAMAFILE_PID — waiting for model to load..."
-
-    # Wait up to 60s for server to become ready
-    READY=0
-    for i in $(seq 1 30); do
-        sleep 2
-        if curl -sf "http://127.0.0.1:8080/health" > /dev/null 2>&1; then
-            log "  ✓ llamafile ready after ${i}×2s"
-            READY=1; break
-        fi
-        printf "."
-    done
-    echo ""
-    [ $READY -eq 1 ] || warn "llamafile may still be loading — proxy will retry"
-else
-    warn "Skipping llamafile (model missing)"
-fi
-
-# ── 2. Start local proxy (port 8888) ────────────────────────
-if [ -f "$PROXY_LOCAL" ]; then
-    log "Starting local proxy (port 8888)..."
-    nohup python3 "$PROXY_LOCAL" \
-        > "$LOG_DIR/proxy_local.log" 2>&1 &
-    PROXY_PID=$!
-    sleep 1
-    if curl -sf "http://127.0.0.1:8888/health" > /dev/null 2>&1; then
-        log "  ✓ local proxy ready (PID $PROXY_PID)"
-    else
-        warn "  proxy may still be starting — check $LOG_DIR/proxy_local.log"
-    fi
-fi
-
-# ── 3. Start LAN proxy (port 8889) ───────────────────────────
-if [ -f "$PROXY_LAN" ]; then
-    log "Starting LAN proxy (port 8889)..."
-    PAIR_FLAG=""
-    [ "$1" = "--pair" ] && PAIR_FLAG="--pair --duration 300"
-    nohup python3 "$PROXY_LAN" $PAIR_FLAG \
-        > "$LOG_DIR/proxy_lan.log" 2>&1 &
-    LAN_PID=$!
-    sleep 1
-    if curl -sf "http://127.0.0.1:8889/health" > /dev/null 2>&1; then
-        log "  ✓ LAN proxy ready (PID $LAN_PID)"
-    else
-        warn "  LAN proxy starting — check $LOG_DIR/proxy_lan.log"
-    fi
-fi
-
-# ── Summary ──────────────────────────────────────────────────
-echo ""
-echo "╔══════════════════════════════════════════════════════╗"
-echo "║  ✅  JARVIS SERVER STACK RUNNING                     ║"
-echo "╚══════════════════════════════════════════════════════╝"
-echo ""
-log "Endpoints:"
-log "  llamafile  : http://127.0.0.1:8080  (OpenAI-compat)"
-log "  proxy      : http://127.0.0.1:8888  (agent, no-auth)"
-log "  LAN proxy  : http://127.0.0.1:8889  (Android app, auth)"
-echo ""
-log "Logs: $LOG_DIR/"
-echo ""
-log "Test:"
-log "  curl -s http://127.0.0.1:8888/health"
-log "  curl -X POST http://127.0.0.1:8888/chat_sync -H 'Content-Type: application/json' -d '{\"query\":\"hello\"}'"
-echo ""
-[ "$1" = "--pair" ] && log "⚡ Pairing mode ON for 5 minutes — pair from Android app now"
-echo ""
 
 

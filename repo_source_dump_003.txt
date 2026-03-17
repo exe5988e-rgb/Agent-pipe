@@ -6237,6 +6237,8 @@ java.lang.IllegalArgumentException: Argument expected after "text"
     chrome               1 screens
     wirelesssettings     1 screens
   TransitionMemory: 265 transitions (244 confirmed, threshold=2)
+[parser] DEBUG normalized: 'back'
+[parser] INFO parsed 'back' -> {'action': 'back'}
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

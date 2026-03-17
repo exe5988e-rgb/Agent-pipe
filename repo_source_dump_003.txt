@@ -5719,6 +5719,8 @@ RuntimeError: No LLM backend available.
 [parser] INFO parsed 'tap 2' -> {'action': 'tap', 'target': 2}
 [parser] DEBUG normalized: 'type WiFi'
 [parser] INFO parsed 'type WiFi' -> {'action': 'type', 'text': 'WiFi'}
+[parser] DEBUG normalized: 'tap 5'
+[parser] INFO parsed 'tap 5' -> {'action': 'tap', 'target': 5}
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

@@ -3269,6 +3269,8 @@ if __name__ == "__main__":
 [14:07:33] 
 [17/33] [2★] [chrome] Open Chrome and go to google.com
 [14:13:28]   PASS  351.6s  skills=6
+[14:13:33] 
+[18/33] [2★] [chrome] Open Chrome and open a new tab
 
 
 //===== TERMUXFILE: tap_logger.py =====

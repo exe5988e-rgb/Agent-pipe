@@ -23559,6 +23559,16 @@
           "resource_id": "com.google.android.youtube:id/edit_suggestion"
         }
       ]
+    },
+    "8bd4aa0f7819": {
+      "screen_id": "8bd4aa0f7819",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [],
+      "visits": 1,
+      "tainted": false,
+      "elements": []
     }
   },
   "transitions": {
@@ -23819,7 +23829,8 @@
     "f65869ba650d|tap:You": "8e74d0f0627a",
     "8e74d0f0627a|tap:element_4": "f33f9e08caa5",
     "f33f9e08caa5|type": "6d8964ace959",
-    "6d8964ace959|tap:element_7": "501f21096105"
+    "6d8964ace959|tap:element_7": "501f21096105",
+    "501f21096105|tap:Edit suggestion mrbeast gaming": "8bd4aa0f7819"
   }
 }
 

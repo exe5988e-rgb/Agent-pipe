@@ -1,3 +1,203 @@
+//===== TERMUXFILE: jarvis-agent/executor/device.py =====
+"""
+executor/device.py
+
+Extracted from DroidBot/droidbot/device.py
+Source: https://github.com/honeynet/droidbot
+
+What we keep:
+  __init__    serial, output_dir, display_info cache
+  get_width / get_height   (from get_display_info — DroidBot pattern)
+  take_screenshot          (ADB screencap via exec-out, not minicap)
+  key_press                → adb shell input keyevent
+  view_touch               → adb shell input tap
+  view_drag                → adb shell input swipe
+  view_set_text            → adb shell input text
+  get_top_activity_name    (dumpsys, DroidBot regex)
+  unlock                   (simple keyevent wake)
+
+What we drop (all require DroidBot adapters we don't have):
+  All adapter setup (ADB, Minicap, DroidBotApp, Telnet, Logcat, IME)
+  install_app, uninstall_app, send_intent, send_sms, GPS, shake, etc.
+  get_current_state (requires DeviceState import)
+  get_views (requires DroidBotApp or CV module)
+
+ADB calls: raw subprocess instead of DroidBot's ADB adapter class.
+"""
+
+import os
+import re
+import subprocess
+import time
+
+
+class Device:
+    """
+    Minimal ADB device — DroidBot Device interface, ADB-only backend.
+    """
+
+    def __init__(self, device_serial=None, output_dir=None):
+        """
+        DroidBot Device.__init__ signature (subset).
+        :param device_serial: e.g. "192.168.29.48:37891"
+        :param output_dir: local dir to save screenshots
+        """
+        self.serial     = device_serial
+        self.output_dir = output_dir or os.path.expanduser("~/jarvis-agent/screenshots")
+        os.makedirs(self.output_dir, exist_ok=True)
+
+        # DroidBot caches display_info dict — we do the same
+        self.display_info = None
+
+    # ── Raw ADB ──────────────────────────────────────────────────────────────
+
+    def _adb(self, *args, timeout=15) -> subprocess.CompletedProcess:
+        cmd = ["adb", "-s", self.serial] + list(str(a) for a in args)
+        return subprocess.run(cmd, capture_output=True, timeout=timeout)
+
+    def _shell(self, *args, timeout=15) -> str:
+        """Run adb shell, return stdout string. Mirrors DroidBot adb.shell()."""
+        r = self._adb("shell", *args, timeout=timeout)
+        return r.stdout.decode(errors="replace").strip()
+
+    # ── Connection (DroidBot Device.connect / check_connectivity) ────────────
+
+    def connect(self):
+        """Connect WiFi ADB. DroidBot Device.connect() calls adapter.connect()."""
+        result = subprocess.run(
+            ["adb", "connect", self.serial],
+            capture_output=True, text=True, timeout=10
+        )
+        ok = "connected" in result.stdout.lower()
+        print(f"[device] connect {self.serial}: {result.stdout.strip()}")
+        return ok
+
+    def is_connected(self) -> bool:
+        r = subprocess.run(["adb", "devices"], capture_output=True, text=True, timeout=5)
+        return self.serial in r.stdout
+
+    # ── Display info (DroidBot Device.get_display_info / get_width / get_height) ─
+
+    def get_display_info(self, refresh=True) -> dict:
+        """
+        DroidBot Device.get_display_info() calls self.adb.get_display_info().
+        We replicate by parsing `adb shell wm size`.
+        Returns dict with 'width' and 'height' keys (DroidBot format).
+        """
+        if self.display_info is None or refresh:
+            out = self._shell("wm", "size")
+            m = re.search(r"(\d+)x(\d+)", out)
+            if m:
+                self.display_info = {
+                    "width":  int(m.group(1)),
+                    "height": int(m.group(2)),
+                }
+            else:
+                self.display_info = {"width": 1080, "height": 2400}
+            print(f"[device] display_info: {self.display_info}")
+        return self.display_info
+
+    def get_width(self, refresh=False) -> int:
+        """DroidBot Device.get_width()"""
+        return self.get_display_info(refresh=refresh).get("width", 1080)
+
+    def get_height(self, refresh=False) -> int:
+        """DroidBot Device.get_height()"""
+        return self.get_display_info(refresh=refresh).get("height", 2400)
+
+    # ── Screenshot (DroidBot Device.take_screenshot — screencap path) ────────
+
+    def take_screenshot(self, filename="screen.png") -> str:
+        """
+        DroidBot Device.take_screenshot() uses minicap or screencap+pull.
+        We always use exec-out screencap -p (faster, no temp file on device).
+        Returns local path to saved PNG.
+        """
+        local_path = os.path.join(self.output_dir, filename)
+
+        r = self._adb("exec-out", "screencap", "-p", timeout=15)
+        if r.returncode != 0:
+            raise RuntimeError(f"screencap failed: {r.stderr.decode().strip()}")
+        if len(r.stdout) < 100:
+            raise RuntimeError("screencap: empty output")
+
+        with open(local_path, "wb") as f:
+            f.write(r.stdout)
+
+        print(f"[device] screenshot → {local_path} ({len(r.stdout)} bytes)")
+        return local_path
+
+    # ── Input dispatch (DroidBot Device view_touch / view_drag / key_press) ──
+
+    def key_press(self, key_code):
+        """DroidBot Device.key_press() → self.adb.press(key_code)"""
+        from executor.input_event import KeyEvent
+        ev = KeyEvent(name=str(key_code))
+        cmd = ["adb", "-s", self.serial, "shell"] + ev.to_adb_cmd()
+        subprocess.run(cmd, capture_output=True, timeout=10)
+
+    def view_touch(self, x, y):
+        """DroidBot Device.view_touch() → self.adb.touch(x, y)"""
+        self._shell("input", "tap", str(int(x)), str(int(y)))
+
+    def view_long_touch(self, x, y, duration=200):
+        """
+        DroidBot Device.view_long_touch() → self.adb.long_touch(x, y, duration).
+        For agent taps, duration=200ms is fine.
+        """
+        self._shell("input", "swipe",
+                    str(int(x)), str(int(y)),
+                    str(int(x)), str(int(y)),
+                    str(int(duration)))
+
+    def view_drag(self, start_xy, end_xy, duration):
+        """DroidBot Device.view_drag() → self.adb.drag(start_xy, end_xy, duration)"""
+        sx, sy = start_xy
+        ex, ey = end_xy
+        self._shell("input", "swipe",
+                    str(int(sx)), str(int(sy)),
+                    str(int(ex)), str(int(ey)),
+                    str(int(duration)))
+
+    def view_set_text(self, text: str):
+        """DroidBot Device.view_set_text() → adb.type(text)"""
+        safe = (text.replace(" ", "%s")
+                    .replace("'", "\\'")
+                    .replace('"', '\\"'))
+        self._shell("input", "text", safe)
+
+    def unlock(self):
+        """DroidBot Device.unlock() — wake + swipe up."""
+        self._shell("input", "keyevent", "224")   # KEYCODE_WAKEUP
+        time.sleep(0.3)
+        w = self.get_width()
+        h = self.get_height()
+        cx = w // 2
+        self._shell("input", "swipe",
+                    str(cx), str(int(h * 0.8)),
+                    str(cx), str(int(h * 0.2)), "400")
+        time.sleep(0.5)
+
+    # ── Activity info (DroidBot Device.get_top_activity_name) ────────────────
+
+    def get_top_activity_name(self):
+        """
+        DroidBot Device.get_top_activity_name() — same dumpsys regex.
+        """
+        r = self._shell("dumpsys", "activity", "activities")
+        m = re.search(r'\*\s*Hist\s*#\d+:\s*ActivityRecord\{[^ ]+\s*[^ ]+\s*([^ ]+)\s*t\d+\}', r)
+        if m:
+            return m.group(1)
+        return None
+
+    def send_event(self, event):
+        """DroidBot Device.send_event(event) → event.send(self)"""
+        event.send(self)
+
+    def __repr__(self):
+        return f"Device({self.serial})"
+
+
 //===== TERMUXFILE: jarvis-agent/executor/input_manager.py =====
 """
 executor/input_manager.py

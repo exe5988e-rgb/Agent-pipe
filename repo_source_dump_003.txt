@@ -2508,6 +2508,180 @@ if __name__ == "__main__":
     "count": 2,
     "last_seen": 1773717566.1945024,
     "seeded": true
+  },
+  "7571051ef9ea|element_806_419": {
+    "to": "866f5ed64950",
+    "count": 2,
+    "last_seen": 1773718101.3680387,
+    "seeded": true
+  },
+  "7571051ef9ea|element_598_1232": {
+    "to": "5ebd141c4c82",
+    "count": 2,
+    "last_seen": 1773718101.3680513,
+    "seeded": true
+  },
+  "7571051ef9ea|element_598_1804": {
+    "to": "e85d868a15f2",
+    "count": 2,
+    "last_seen": 1773718101.3680573,
+    "seeded": true
+  },
+  "7571051ef9ea|element_598_2120": {
+    "to": "2021bab01443",
+    "count": 2,
+    "last_seen": 1773718101.368062,
+    "seeded": true
+  },
+  "7571051ef9ea|element_598_2385": {
+    "to": "8853acfb0c72",
+    "count": 2,
+    "last_seen": 1773718101.3680656,
+    "seeded": true
+  },
+  "7571051ef9ea|element_1208_2120": {
+    "to": "68dbc2f46e71",
+    "count": 2,
+    "last_seen": 1773718101.3680694,
+    "seeded": true
+  },
+  "7571051ef9ea|element_1208_2385": {
+    "to": "04321b652bb5",
+    "count": 2,
+    "last_seen": 1773718101.3680727,
+    "seeded": true
+  },
+  "7571051ef9ea|element_946_237": {
+    "to": "e45a3fbcbc8c",
+    "count": 2,
+    "last_seen": 1773718101.3680763,
+    "seeded": true
+  },
+  "7571051ef9ea|element_1114_237": {
+    "to": "583c296ce79a",
+    "count": 2,
+    "last_seen": 1773718101.36808,
+    "seeded": true
+  },
+  "7571051ef9ea|element_1085_2604": {
+    "to": "8a466f35ef41",
+    "count": 2,
+    "last_seen": 1773718101.3680832,
+    "seeded": true
+  },
+  "866f5ed64950|element_620_601": {
+    "to": "7571051ef9ea",
+    "count": 2,
+    "last_seen": 1773718101.3680866,
+    "seeded": true
+  },
+  "866f5ed64950|More results for Top comics": {
+    "to": "7571051ef9ea",
+    "count": 2,
+    "last_seen": 1773718101.3680904,
+    "seeded": true
+  },
+  "866f5ed64950|element_200_1062": {
+    "to": "7571051ef9ea",
+    "count": 2,
+    "last_seen": 1773718101.3680937,
+    "seeded": true
+  },
+  "866f5ed64950|element_562_1062": {
+    "to": "7970ab5363e1",
+    "count": 2,
+    "last_seen": 1773718101.3680973,
+    "seeded": true
+  },
+  "866f5ed64950|element_924_1062": {
+    "to": "66891f978e09",
+    "count": 2,
+    "last_seen": 1773718101.3681006,
+    "seeded": true
+  },
+  "866f5ed64950|element_1172_1062": {
+    "to": "66891f978e09",
+    "count": 2,
+    "last_seen": 1773718101.3681042,
+    "seeded": true
+  },
+  "866f5ed64950|element_620_1566": {
+    "to": "7571051ef9ea",
+    "count": 2,
+    "last_seen": 1773718101.3681073,
+    "seeded": true
+  },
+  "866f5ed64950|More results for New and notable comics": {
+    "to": "68dbc2f46e71",
+    "count": 2,
+    "last_seen": 1773718101.368111,
+    "seeded": true
+  },
+  "866f5ed64950|element_213_2030": {
+    "to": "7571051ef9ea",
+    "count": 2,
+    "last_seen": 1773718101.3681147,
+    "seeded": true
+  },
+  "866f5ed64950|element_598_2030": {
+    "to": "041f47639776",
+    "count": 2,
+    "last_seen": 1773718101.368118,
+    "seeded": true
+  },
+  "866f5ed64950|element_983_2030": {
+    "to": "299af40d3f2d",
+    "count": 2,
+    "last_seen": 1773718101.3681216,
+    "seeded": true
+  },
+  "866f5ed64950|element_1208_2030": {
+    "to": "7571051ef9ea",
+    "count": 2,
+    "last_seen": 1773718101.368125,
+    "seeded": true
+  },
+  "866f5ed64950|element_620_2465": {
+    "to": "7571051ef9ea",
+    "count": 2,
+    "last_seen": 1773718101.3681283,
+    "seeded": true
+  },
+  "866f5ed64950|More results for Top-selling comics": {
+    "to": "8a466f35ef41",
+    "count": 2,
+    "last_seen": 1773718101.3681316,
+    "seeded": true
+  },
+  "866f5ed64950|element_515_237": {
+    "to": "7571051ef9ea",
+    "count": 2,
+    "last_seen": 1773718101.368135,
+    "seeded": true
+  },
+  "866f5ed64950|element_154_237": {
+    "to": "7571051ef9ea",
+    "count": 2,
+    "last_seen": 1773718101.3681479,
+    "seeded": true
+  },
+  "866f5ed64950|element_1114_237": {
+    "to": "583c296ce79a",
+    "count": 2,
+    "last_seen": 1773718101.3681517,
+    "seeded": true
+  },
+  "866f5ed64950|element_17_419": {
+    "to": "583c296ce79a",
+    "count": 2,
+    "last_seen": 1773718101.3681545,
+    "seeded": true
+  },
+  "866f5ed64950|element_246_419": {
+    "to": "583c296ce79a",
+    "count": 2,
+    "last_seen": 1773718101.3681617,
+    "seeded": true
   }
 }
 

@@ -2852,6 +2852,11 @@ if __name__ == "__main__":
 [10:12:17]   TASK 5/33  [1★]  [playstore]  timeout=255s
 [10:12:17]   Open Play Store
 [10:12:17] ════════════════════════════════════════════════════════════════
+[10:12:22] 
+  ✗ FAIL  |  0.2s  |  skills: 0
+[10:12:22]   Error: returncode=1
+[10:12:22]   Retrying once...
+[10:12:22]   Recovering device...
 
 
 //===== TERMUXFILE: tap_logger.py =====

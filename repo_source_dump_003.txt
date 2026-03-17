@@ -3205,6 +3205,11 @@ if __name__ == "__main__":
     "to": "4203f6dd32c9",
     "count": 1,
     "last_seen": 1773736459.6914928
+  },
+  "8c512c8be2eb|tap:time": {
+    "to": "60cc3c33942e",
+    "count": 1,
+    "last_seen": 1773736498.81212
   }
 }
 
@@ -3254,6 +3259,7 @@ if __name__ == "__main__":
 [14:03:21]   PASS  157.2s  skills=6
 [14:03:26] 
 [14/33] [2★] [settings] Open Settings and go to Display
+[14:05:01]   PASS  91.0s  skills=6
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4421,7 +4427,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-17T14:03:21.817636",
+  "run_at": "2026-03-17T14:05:01.294068",
   "skills_before": 6,
   "skills_current": 6,
   "results": [
@@ -4541,6 +4547,15 @@ if __name__ == "__main__":
       "elapsed_s": 157.2,
       "error": null,
       "retried": false
+    },
+    {
+      "task": "Open Settings and go to Display",
+      "category": "settings",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 91.0,
+      "error": null,
+      "retried": false
     }
   ]
 }
@@ -4600,7 +4615,7 @@ if __name__ == "__main__":
         "action": "done"
       }
     ],
-    "uses": 5,
+    "uses": 6,
     "version": 2
   },
   {
@@ -6487,6 +6502,163 @@ RuntimeError: No LLM backend available.
 [parser] INFO parsed 'home' -> {'action': 'home'}
 [parser] DEBUG normalized: 'tap 7'
 [parser] INFO parsed 'tap 7' -> {'action': 'tap', 'target': 7}
+
+########################################################
+  JARVIS  |  Open Settings and go to Display
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': False, 'proxy': False, 'llamafile': False, 'binary': None}
+[init] WARNING: no LLM backend reachable!
+
+  Screen Map: 269 screens (0 tainted), 326 transitions
+    whatsapp             142 screens
+    youtube              54 screens
+    chrome               22 screens
+    vending              21 screens
+    settings             13 screens
+    launcher             8 screens
+    termux               6 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+    dialer               1 screens
+  TransitionMemory: 326 transitions (253 confirmed, threshold=2)
+[init] task_apps (ordered): ['settings']
+
+========================================================
+  STEP 1  |  Open Settings and go to Display
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3600465 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 16 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=ee6d1334da47 elements=16
+[step] UI: ['[12:30:41]   Notifying Mummy...\n[12:31:30]   Notification: sent\n^Z\n[1]+  Stopped                    tail -f ~/workflows/gauntlet_log.txt\n~/workflows $ tail -f ~/workflows/gauntlet_log.txt\n[4/33] [1★] [chrome] Open Chrome\n[13:49:45]   PASS  46.4s  skills=6\n[13:49:50]\n[5/33] [1★] [playstore] Open Play Store\n[13:51:00]   PASS  67.2s  skills=6\n[13:51:05]\n[6/33] [1★] [phone] Open Phone app\n[13:51:48]   PASS  39.4s  skills=6\n[13:51:53]\n[7/33] [1★] [phone] Open Contacts\n[13:53:15]   PASS  78.2s  skills=6\n[13:53:20]\n[8/33] [2★] [whatsapp] Open WhatsApp and go to Calls tab\n[13:53:36]   PASS  13.1s  skills=6\n[13:53:41]\n[9/33] [2★] [whatsapp] Open WhatsApp and go to Updates tab\n[13:53:58]   PASS  14.2s  skills=6\n[13:54:03]\n[10/33] [2★] [whatsapp] Open WhatsApp and search for Mummy in chats\n[13:54:20]   PASS  13.6s  skills=6\n[13:54:25]\n[11/33] [2★] [youtube] Open YouTube and go to Subscriptions\n[13:55:48]   PASS  79.2s  skills=6\n[13:55:53]\n[12/33] [2★] [youtube] Search for MrBeast on YouTube\n[14:00:36]   PASS  279.6s  skills=6\n[14:00:41]\n[13/33] [2★] [settings] Open Settings and go to WiFi\n[14:03:21]   PASS  157.2s  skills=6\n[14:03:26]\n[14/33] [2★] [settings] Open Settings and go to Display', 'ESC', 'element_3', '☰', '⇳', 'HOME', '↑', 'END']
+[map] new screen: termux_termuxactivity (04c05dc29d65)
+[map] screen: termux_termuxactivity (04c05dc2)
+[skill] matched: 'open settings and go'  score=1.00  act_match=False
+[skill] cannot resolve tap target: 'Search'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'home'
+[step] LLM: 'home'
+[step] action: {'action': 'home'}
+[input] dispatching: KeyEvent(HOME)
+[input] adb -s 192.168.29.48:34011 shell input keyevent 3
+[mem] invalidated com.android.launcher/.Launcher
+[step] step=1/8 done=False history=['home']
+
+========================================================
+  STEP 2  |  Open Settings and go to Display
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3597328 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=aa34eec42c94 elements=26
+[step] UI: ['Clock', '14', ':', '04', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] transition: termux_termuxactivity --[home]--> launcher_launcher
+[map] screen: launcher_launcher (4203f6dd)
+[OPT4v2] launcher -> launching settings (com.android.settings)
+[llm] OPT4v2 am start: com.android.settings
+[OPT4v2] app_index -> 1/1
+
+========================================================
+  STEP 3  |  Open Settings and go to Display
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1160293 bytes)
+[OPT7] predicted next screen: settings_oplussettingshomepageactivity (8c512c8b)
+[ui_parser] activity=com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity
+[ui_parser] signal='com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity'
+[mem] miss (unknown): com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 22 elements from 192.168.29.48:34011
+[mem] stored com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity hash=634ac82d93c5 elements=22
+[step] UI: ['Search', 'Search', 'Cancel', 'element_4', 'Clear', 'WiFi', 'Display', 'time']
+[map] screen: settings_oplussettingshomepageactivity (8c512c8b)
+[skill] matched: 'open settings and go'  score=1.00  act_match=False
+[skill] cannot resolve tap target: 'element_5'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 7'
+[step] LLM: 'tap 7'
+[step] action: {'action': 'tap', 'target': 7}
+[input] dispatching: TouchEvent(x=376, y=559)
+[input] adb -s 192.168.29.48:34011 shell input tap 376 559
+[mem] invalidated com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity
+[step] step=3/8 done=False history=['home', 'opt4_launch:settings', 'tap [7] Display']
+
+========================================================
+  STEP 4  |  Open Settings and go to Display
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (263079 bytes)
+[ui_parser] activity=com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity
+[ui_parser] signal='com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity'
+[mem] miss (unknown): com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 15 elements from 192.168.29.48:34011
+[mem] stored com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity hash=ba8a826b14be elements=15
+[step] UI: ['Search', 'Display', 'Clear text', 'Cancel', 'element_5', 'element_6', 'element_7', 'element_8']
+[map] new screen: settings_oplussettingshomepageactivity (60cc3c33942e)
+[map] transition: settings_oplussettingshomepageactivity --[tap:time]--> settings_oplussettingshomepageactivity
+[map] screen: settings_oplussettingshomepageactivity (60cc3c33)
+[skill] matched: 'open settings and go'  score=1.00  act_match=False
+[skill] executing 4 steps from memory
+[skill] action: {'action': 'tap', 'target': 1}
+[input] dispatching: TouchEvent(x=620, y=230)
+[input] adb -s 192.168.29.48:34011 shell input tap 620 230
+[mem] invalidated com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity
+[skill] action: {'action': 'type', 'text': '$QUERY'}
+[input] dispatching: SetTextEvent('$QUERY')
+[input] adb -s 192.168.29.48:34011 shell input text $QUERY
+[input] stderr: Exception occurred while executing 'text':
+java.lang.IllegalArgumentException: Argument expected after "text"
+	at com.android.modules.utils.BasicShellCommandHandler.getNextArgRequired(BasicShellCommandHandler.java:295)
+	at com.android.server.input.InputShellCommand.runText(InputShellCommand.java:382)
+	at com.android.server.input.InputShellCommand.onCommand(InputShellCommand.java:307)
+	at com.android.modules.utils.BasicShellCommandHandler.exec(BasicShellCommandHandler.java:97)
+	at android.os.ShellCommand.exec(ShellCommand.java:38)
+	at com.android.server.input.InputManagerService.onShellCommand(InputManagerService.java:4107)
+	at android.os.Binder.shellCommand(Binder.java:1164)
+	at android.os.Binder.onTransact(Binder.java:966)
+	at android.hardware.input.IInputManager$Stub.onTransact(IInputManager.java:1576)
+	at android.os.Binder.execTransactInternal(Binder.java:1444)
+	at android.os.Binder.execTransact(Binder.java:1378)
+[skill] action: {'action': 'tap', 'target': 5}
+[input] dispatching: TouchEvent(x=620, y=536)
+[input] adb -s 192.168.29.48:34011 shell input tap 620 536
+[skill] action: {'action': 'done'}
+[input] DONE — no dispatch
+[skill] done — skipped Claude
+[step] step=7/8 done=True history=['home', 'opt4_launch:settings', 'tap [7] Display', 'tap [1] Search', "type '$QUERY'", 'tap [5] element_5', 'done']
+
+[controller] done in 7 steps
+
+[controller] history:
+  1. home
+  2. opt4_launch:settings
+  3. tap [7] Display
+  4. tap [1] Search
+  5. type '$QUERY'
+  6. tap [5] element_5
+  7. done
+
+  Screen Map: 271 screens (0 tainted), 328 transitions
+    whatsapp             142 screens
+    youtube              54 screens
+    chrome               22 screens
+    vending              21 screens
+    settings             14 screens
+    launcher             8 screens
+    termux               7 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+    dialer               1 screens
+  TransitionMemory: 328 transitions (253 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

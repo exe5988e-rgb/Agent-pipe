@@ -3320,6 +3320,11 @@ if __name__ == "__main__":
     "to": "a2d4963e4b8c",
     "count": 1,
     "last_seen": 1773754145.6663425
+  },
+  "a2d4963e4b8c|tap:WhatsApp": {
+    "to": "3012bc5865d3",
+    "count": 1,
+    "last_seen": 1773754181.6094844
   }
 }
 

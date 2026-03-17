@@ -2807,6 +2807,7 @@ if __name__ == "__main__":
 [10:49:00]   Recovering device...
 [10:49:15]   Retry: ✗ FAIL  |  0.2s
 [10:49:15]   Recovering device...
+[10:49:21]   Pausing 5s...
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4146,10 +4147,10 @@ if __name__ == "__main__":
 
 //===== TERMUXFILE: gauntlet_report.json =====
 {
-  "run_at": "2026-03-17T10:46:47.202785",
+  "run_at": "2026-03-17T10:49:21.815987",
+  "in_progress": true,
   "skills_before": 0,
-  "skills_after": 0,
-  "total_elapsed": 18.8,
+  "skills_current": 0,
   "results": [
     {
       "task": "Open WhatsApp",
@@ -4157,7 +4158,7 @@ if __name__ == "__main__":
       "difficulty": 1,
       "success": false,
       "elapsed_s": 0.2,
-      "error": "returncode=1",
+      "error": "orig=returncode=1 retry=returncode=1",
       "retried": false
     }
   ]

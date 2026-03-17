@@ -5712,6 +5712,8 @@ RuntimeError: No LLM backend available.
   TransitionMemory: 259 transitions (244 confirmed, threshold=2)
 [parser] DEBUG normalized: 'tap 2'
 [parser] INFO parsed 'tap 2' -> {'action': 'tap', 'target': 2}
+[parser] DEBUG normalized: 'type WiFi'
+[parser] INFO parsed 'type WiFi' -> {'action': 'type', 'text': 'WiFi'}
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

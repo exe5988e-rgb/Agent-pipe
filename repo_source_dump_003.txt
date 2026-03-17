@@ -2817,9 +2817,9 @@ if __name__ == "__main__":
     "last_seen": 1773729711.397392
   },
   "4203f6dd32c9|opt4_launch:settings": {
-    "to": "ff3d5d3179d0",
-    "count": 2,
-    "last_seen": 1773727347.5157845
+    "to": "f3100103b174",
+    "count": 1,
+    "last_seen": 1773729822.188411
   },
   "4203f6dd32c9|opt4_launch:chrome": {
     "to": "00f1f507607b",
@@ -4649,7 +4649,7 @@ if __name__ == "__main__":
         "action": "done"
       }
     ],
-    "uses": 3,
+    "uses": 4,
     "version": 2
   },
   {

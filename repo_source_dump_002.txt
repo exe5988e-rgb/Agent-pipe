@@ -15804,6 +15804,256 @@
           "y": 2632
         }
       ]
+    },
+    "adb3d9cc5ed2": {
+      "screen_id": "adb3d9cc5ed2",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/com.google.android.apps.youtube.app.watchwhile.InternalMainActivity",
+      "name": "youtube_internalmainactivity",
+      "labels": [
+        "0 minutes 2 seconds of 0 minutes 20 seconds",
+        "Minimised player",
+        "Expand Mini Player",
+        "Pause video",
+        "Close minimised player",
+        "Description. Gaming\u2026tap for more.",
+        "Analytics",
+        "Edit channel",
+        "Cast",
+        "Search",
+        "Show more",
+        "Videos",
+        "Shorts",
+        "Playlists",
+        "Posts",
+        "Xtencion changes \ud83d\udc7d\ud83d\udc7d \u2013 9 minutes, 26 seconds \u2013 Go to channel \u2013 Amir Shams - 62 views - 4 years ago - Copyright - Public - 4 likes - No comments \u2013 play video",
+        "Action menu",
+        "Free fire|2v2 custom match(Reworked) \u2013 1 minute, 58 seconds \u2013 Go to channel \u2013 Amir Shams - 67 views - 5 years ago - Public - 3 likes - No comments \u2013 play video",
+        "Action menu",
+        "Configuracion perfecta para samsung a3 a5 a6 a7 j2 j5 j7 \u2013 1 minute, 16 seconds \u2013 Go to channel \u2013 Amir Shams - 108 views - 5 years ago - Copyright - Public - 16 likes - 4 comments \u2013 play video",
+        "Action menu",
+        "Oneshot \u2013 22 seconds \u2013 Go to channel \u2013 Amir Shams - 35 views - 5 years ago - Made for Kids - Public - 4 likes - No comments \u2013 play video",
+        "Action menu",
+        "One tap \u2013 23 seconds \u2013 Go to channel \u2013 Amir Shams - 49 views - 5 years ago - Public - 3 likes - No comments \u2013 play video",
+        "Shorts",
+        "Create",
+        "Subscriptions",
+        "You"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "0 minutes 2 seconds of 0 minutes 20 seconds",
+          "resource_id": "com.google.android.youtube:id/floaty_bar_time_bar_view",
+          "cls": "android.widget.SeekBar",
+          "x": 876,
+          "y": 2517
+        },
+        {
+          "text": "Minimised player",
+          "resource_id": "com.google.android.youtube:id/floaty_bar_controls_view",
+          "cls": "android.widget.FrameLayout",
+          "x": 876,
+          "y": 2331
+        },
+        {
+          "text": "Expand Mini Player",
+          "resource_id": "com.google.android.youtube:id/player_overlays",
+          "cls": "android.view.ViewGroup",
+          "x": 876,
+          "y": 2331
+        },
+        {
+          "text": "Pause video",
+          "resource_id": "com.google.android.youtube:id/modern_miniplayer_overlay_action_button",
+          "cls": "android.widget.ImageView",
+          "x": 624,
+          "y": 2226
+        },
+        {
+          "text": "Close minimised player",
+          "resource_id": "com.google.android.youtube:id/modern_miniplayer_close",
+          "cls": "android.widget.ImageView",
+          "x": 1128,
+          "y": 2226
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 182,
+          "y": 489
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 760,
+          "y": 514
+        },
+        {
+          "text": "Description. Gaming\u2026tap for more.",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 685
+        },
+        {
+          "text": "Analytics",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 331,
+          "y": 818
+        },
+        {
+          "text": "Edit channel",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 909,
+          "y": 818
+        },
+        {
+          "text": "Cast",
+          "resource_id": "com.google.android.youtube:id/mdx_entry_point_button",
+          "cls": "android.widget.Button",
+          "x": 820,
+          "y": 223
+        },
+        {
+          "text": "Search",
+          "resource_id": "com.google.android.youtube:id/menu_item_view",
+          "cls": "android.widget.ImageView",
+          "x": 988,
+          "y": 223
+        },
+        {
+          "text": "Show more",
+          "resource_id": "com.google.android.youtube:id/menu_item_view",
+          "cls": "android.widget.ImageView",
+          "x": 1156,
+          "y": 223
+        },
+        {
+          "text": "Videos",
+          "resource_id": "com.google.android.youtube:id/tabs_bar_text_tab_view",
+          "cls": "android.widget.Button",
+          "x": 142,
+          "y": 1020
+        },
+        {
+          "text": "Shorts",
+          "resource_id": "com.google.android.youtube:id/tabs_bar_text_tab_view",
+          "cls": "android.widget.Button",
+          "x": 355,
+          "y": 1020
+        },
+        {
+          "text": "Playlists",
+          "resource_id": "com.google.android.youtube:id/tabs_bar_text_tab_view",
+          "cls": "android.widget.Button",
+          "x": 629,
+          "y": 1020
+        },
+        {
+          "text": "Posts",
+          "resource_id": "com.google.android.youtube:id/tabs_bar_text_tab_view",
+          "cls": "android.widget.Button",
+          "x": 903,
+          "y": 1020
+        },
+        {
+          "text": "Xtencion changes \ud83d\udc7d\ud83d\udc7d \u2013 9 minutes, 26 seconds \u2013 Go to channel \u2013 Amir Shams - 62 views - 4 years ago - Copyright - Public - 4 likes - No comments \u2013 play video",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 1483
+        },
+        {
+          "text": "Action menu",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1184,
+          "y": 1360
+        },
+        {
+          "text": "Free fire|2v2 custom match(Reworked) \u2013 1 minute, 58 seconds \u2013 Go to channel \u2013 Amir Shams - 67 views - 5 years ago - Public - 3 likes - No comments \u2013 play video",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 1848
+        },
+        {
+          "text": "Action menu",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1184,
+          "y": 1725
+        },
+        {
+          "text": "Configuracion perfecta para samsung a3 a5 a6 a7 j2 j5 j7 \u2013 1 minute, 16 seconds \u2013 Go to channel \u2013 Amir Shams - 108 views - 5 years ago - Copyright - Public - 16 likes - 4 comments \u2013 play video",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 2213
+        },
+        {
+          "text": "Action menu",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1184,
+          "y": 2090
+        },
+        {
+          "text": "Oneshot \u2013 22 seconds \u2013 Go to channel \u2013 Amir Shams - 35 views - 5 years ago - Made for Kids - Public - 4 likes - No comments \u2013 play video",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 2578
+        },
+        {
+          "text": "Action menu",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1184,
+          "y": 2455
+        },
+        {
+          "text": "One tap \u2013 23 seconds \u2013 Go to channel \u2013 Amir Shams - 49 views - 5 years ago - Public - 3 likes - No comments \u2013 play video",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 2766
+        },
+        {
+          "text": "Shorts",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 372,
+          "y": 2632
+        },
+        {
+          "text": "Create",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 2632
+        },
+        {
+          "text": "Subscriptions",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 868,
+          "y": 2632
+        },
+        {
+          "text": "You",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1116,
+          "y": 2632
+        }
+      ]
     }
   },
   "transitions": {
@@ -16001,7 +16251,7 @@
     "74d6715f5e29|You": "0a5db92131e4",
     "e1c8fa5142a3|Search": "b57a107c23b7",
     "e1c8fa5142a3|New notification MR. INDIAN HACKER Uploaded: Mr. indian Hacker Ki Mustang Destroyed...\ud83d\ude2d - \u0905\u092c \u0906\u090f\u0917\u093e \u0924\u0942\u092b\u093c\u093e\u0928\u26a1 | Bhasad Part-3 2 hours ago": "5ca448df8e66",
-    "e1c8fa5142a3|Action menu": "b9b2caf51826",
+    "e1c8fa5142a3|Action menu": "adb3d9cc5ed2",
     "e1c8fa5142a3|New notification JensJulius Tejlgaard Uploaded: If \u2018David Guetta\u2019 had Electric Guitar 14 hours ago": "d04ca4685506",
     "e1c8fa5142a3|New notification The Infographics Show Uploaded 2 videos 2 hours ago": "d04ca4685506",
     "e1c8fa5142a3|New notification BRIGHT SIDE Uploaded 3 videos 3 hours ago": "d04ca4685506",

@@ -3009,6 +3009,7 @@ if __name__ == "__main__":
 [11:37:16]   PASS  101.6s  skills=4
 [11:37:21] 
 [19/33] [2★] [chrome] Search for weather today in Chrome
+[11:41:49]   PASS  264.6s  skills=5
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4176,9 +4177,9 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-17T11:37:16.390059",
+  "run_at": "2026-03-17T11:41:49.285467",
   "skills_before": 0,
-  "skills_current": 4,
+  "skills_current": 5,
   "results": [
     {
       "task": "Open WhatsApp",
@@ -4341,6 +4342,15 @@ if __name__ == "__main__":
       "elapsed_s": 101.6,
       "error": null,
       "retried": false
+    },
+    {
+      "task": "Search for weather today in Chrome",
+      "category": "chrome",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 264.6,
+      "error": null,
+      "retried": false
     }
   ]
 }
@@ -4419,6 +4429,46 @@ if __name__ == "__main__":
       {
         "action": "tap",
         "target": "element_6"
+      },
+      {
+        "action": "done"
+      }
+    ],
+    "uses": 0,
+    "version": 2
+  },
+  {
+    "pattern": "search for in chrome",
+    "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+    "task_example": "Search for weather today in Chrome",
+    "steps": [
+      {
+        "action": "tap",
+        "target": "Search Google or type URL"
+      },
+      {
+        "action": "type",
+        "text": "$QUERY"
+      },
+      {
+        "action": "tap",
+        "target": "element_6"
+      },
+      {
+        "action": "tap",
+        "target": "Search Google or type URL"
+      },
+      {
+        "action": "tap",
+        "target": "Refine: weather today"
+      },
+      {
+        "action": "tap",
+        "target": "weather today"
+      },
+      {
+        "action": "tap",
+        "target": "element_7"
       },
       {
         "action": "done"
@@ -6911,6 +6961,124 @@ java.lang.IllegalArgumentException: Argument expected after "text"
 [parser] INFO parsed 'tap 3' -> {'action': 'tap', 'target': 3}
 [parser] DEBUG normalized: 'tap 7'
 [parser] INFO parsed 'tap 7' -> {'action': 'tap', 'target': 7}
+[parser] DEBUG normalized: 'done'
+[parser] INFO parsed 'done' -> {'action': 'done'}
+
+========================================================
+  STEP 6  |  Search for weather today in Chrome
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1141364 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 34 elements from 192.168.29.48:34011
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=0aa080619ec6 elements=34
+[step] UI: ['element_1', 'element_2', 'Search Google or type URL', 'Start voice search', 'Search with your camera using Google Lens', '21 suggested items in list below.', 'element_7', 'Refine: yandex']
+[map] new screen: chrome_main (62ac838bcb42)
+[tm] transition changed: 00f1f507607b|tap:Start voice search ac5e0b57 -> 62ac838b
+[map] transition: chrome_main --[tap:Start voice search]--> chrome_main
+[map] screen: chrome_main (62ac838b)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 10'
+[step] LLM: 'tap 10'
+[step] action: {'action': 'tap', 'target': 10}
+[input] dispatching: TouchEvent(x=1128, y=629)
+[input] adb -s 192.168.29.48:34011 shell input tap 1128 629
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[step] step=6/10 done=False history=['opt4_launch:chrome', 'tap [6] Search Google or type URL', "type 'weather today'", 'tap [6] element_6', 'tap [6] Search Google or type URL', 'tap [10] Refine: weather today']
+
+========================================================
+  STEP 7  |  Search for weather today in Chrome
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1177613 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 32 elements from 192.168.29.48:34011
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=c1d88f27f82c elements=32
+[step] UI: ['element_1', 'element_2', 'weather today', 'Clear input', '15 suggested items in list below.', 'element_6', 'element_7', 'Refine: weather today ranchi']
+[map] new screen: chrome_main (aa2019548b51)
+[map] transition: chrome_main --[tap:element_11]--> chrome_main
+[map] screen: chrome_main (aa201954)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 3'
+[step] LLM: 'tap 3'
+[step] action: {'action': 'tap', 'target': 3}
+[input] dispatching: TouchEvent(x=634, y=237)
+[input] adb -s 192.168.29.48:34011 shell input tap 634 237
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[step] step=7/10 done=False history=['opt4_launch:chrome', 'tap [6] Search Google or type URL', "type 'weather today'", 'tap [6] element_6', 'tap [6] Search Google or type URL', 'tap [10] Refine: weather today', 'tap [3] weather today']
+
+========================================================
+  STEP 8  |  Search for weather today in Chrome
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1196114 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 32 elements from 192.168.29.48:34011
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=c1d88f27f82c elements=32
+[step] UI: ['element_1', 'element_2', 'weather today', 'Clear input', '15 suggested items in list below.', 'element_6', 'element_7', 'Refine: weather today ranchi']
+[map] screen: chrome_main (aa201954)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 7'
+[step] LLM: 'tap 7'
+[step] action: {'action': 'tap', 'target': 7}
+[input] dispatching: TouchEvent(x=620, y=629)
+[input] adb -s 192.168.29.48:34011 shell input tap 620 629
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[step] step=8/10 done=False history=['opt4_launch:chrome', 'tap [6] Search Google or type URL', "type 'weather today'", 'tap [6] element_6', 'tap [6] Search Google or type URL', 'tap [10] Refine: weather today', 'tap [3] weather today', 'tap [7] element_7']
+
+========================================================
+  STEP 9  |  Search for weather today in Chrome
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (511852 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 45 elements from 192.168.29.48:34011
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=a0f21c2115d6 elements=45
+[step] UI: ['Open the homepage', 'element_2', 'google.com/search?q=weather+today+ranchi&oq=weather+today+&gs_lcrp=EgZjaHJvbWUqDQgBEAAYgwEYsQMYgAQyBggAEEUYOTINCAEQABiDARixAxiABDIHCAIQABiABDIKCAMQABixAxiABDI', 'See 20 tabs', 'Customise and control Google Chrome', 'element_6', 'Google', 'Google Account: Amir Shams (amirshamse8@gmail.com)']
+[map] new screen: chrome_main (ec2d5cc0aa50)
+[map] transition: chrome_main --[tap:Refine: weather today ranchi]--> chrome_main
+[map] screen: chrome_main (ec2d5cc0)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'done'
+[step] LLM: 'done'
+[step] action: {'action': 'done'}
+[input] DONE — no dispatch
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[skill] learned: 'search for in chrome'  (8 steps)  activity=Main
+[step] step=9/10 done=True history=['opt4_launch:chrome', 'tap [6] Search Google or type URL', "type 'weather today'", 'tap [6] element_6', 'tap [6] Search Google or type URL', 'tap [10] Refine: weather today', 'tap [3] weather today', 'tap [7] element_7', 'done']
+
+[controller] done in 9 steps
+
+[controller] history:
+  1. opt4_launch:chrome
+  2. tap [6] Search Google or type URL
+  3. type 'weather today'
+  4. tap [6] element_6
+  5. tap [6] Search Google or type URL
+  6. tap [10] Refine: weather today
+  7. tap [3] weather today
+  8. tap [7] element_7
+  9. done
+
+  Screen Map: 210 screens (0 tainted), 275 transitions
+    whatsapp             132 screens
+    youtube              35 screens
+    vending              16 screens
+    chrome               12 screens
+    settings             6 screens
+    launcher             4 screens
+    termux               3 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+  TransitionMemory: 275 transitions (246 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

@@ -8659,7 +8659,9 @@ RuntimeError: No LLM backend available.
   STEP 5  |  Search for lofi hip hop on YouTube and play the first video
 ========================================================
 [device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1314339 bytes)
-[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity[parser] DEBUG normalized: 'tap 3'
+[parser] INFO parsed 'tap 3' -> {'action': 'tap', 'target': 3}
+
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash

@@ -455,36 +455,12 @@ def parse_ui(image_path: str) -> list:
 
 
 //===== TERMUXFILE: jarvis-agent/perception/ui_parser.py =====
-"""
-perception/ui_parser.py
-
-Real UI parser — replaces ui_mock_parser.py.
-Uses ADB uiautomator dump to get actual screen elements.
-
-Interface unchanged: parse_ui(image_path, adb_device) -> list[{id,text,x,y}]
-
-What we extract per element:
-  id    : sequential int starting at 1
-  text  : content-desc or text attribute (whichever is non-empty)
-  x, y  : center of bounds
-  bounds: raw string e.g. "[0,0][100,50]"
-  cls   : short class name e.g. "Button", "TextView"
-  clickable: bool
-
-Filtering:
-  - Skip nodes with no text and no content-desc
-  - Skip zero-size bounds [x,y][x,y]
-  - Skip pure containers (FrameLayout, LinearLayout etc) unless clickable
-  - Cap at MAX_ELEMENTS to keep prompt token budget sane
-"""
-
 import re
 import subprocess
 import os
 
-MAX_ELEMENTS = 20
+MAX_ELEMENTS = 20  # unchanged as you requested
 
-# Short class name map
 _CLS_SHORT = {
     "android.widget.TextView":       "Text",
     "android.widget.EditText":       "Input",
@@ -512,11 +488,17 @@ _CONTAINER_CLS = {
     "androidx.recyclerview.widget.RecyclerView",
 }
 
+# 🔥 NEW: label cleaner
+def _clean_label(label: str) -> str:
+    label = label.replace("_", " ")
+    label = re.sub(r"\s+", " ", label)
+    return label.strip()
+
 def _adb_dump(adb_device: str) -> str:
-    """Run uiautomator dump and return XML string."""
-    dump_cmd = ["adb", "-s", adb_device, "shell",
-                "uiautomator", "dump", "/sdcard/uidump.xml"]
-    subprocess.run(dump_cmd, capture_output=True, timeout=15)
+    subprocess.run(
+        ["adb", "-s", adb_device, "shell", "uiautomator", "dump", "/sdcard/uidump.xml"],
+        capture_output=True, timeout=15
+    )
     r = subprocess.run(
         ["adb", "-s", adb_device, "shell", "cat", "/sdcard/uidump.xml"],
         capture_output=True, timeout=10
@@ -524,20 +506,19 @@ def _adb_dump(adb_device: str) -> str:
     return r.stdout.decode(errors="replace")
 
 def _parse_bounds(bounds_str: str):
-    """'[x1,y1][x2,y2]' → (cx, cy, w, h)"""
     m = re.match(r"\[(\d+),(\d+)\]\[(\d+),(\d+)\]", bounds_str)
     if not m:
         return None
-    x1, y1, x2, y2 = int(m.group(1)), int(m.group(2)), int(m.group(3)), int(m.group(4))
+    x1, y1, x2, y2 = map(int, m.groups())
     if x1 == x2 or y1 == y2:
-        return None   # zero-size
+        return None
     cx = (x1 + x2) // 2
     cy = (y1 + y2) // 2
     return cx, cy, x2 - x1, y2 - y1
 
 def _extract_nodes(xml: str) -> list:
-    """Parse all <node> attributes from flat XML."""
     nodes = []
+
     for attrs in re.findall(r"<node([^>]+)>?", xml):
         def get(attr):
             m = re.search(rf'{attr}="([^"]*)"', attrs)
@@ -545,26 +526,33 @@ def _extract_nodes(xml: str) -> list:
 
         text      = get("text").strip()
         desc      = get("content-desc").strip()
+        rid_raw   = get("resource-id")
+        rid       = rid_raw.split("/")[-1] if rid_raw else ""
         bounds    = get("bounds")
         cls       = get("class")
         clickable = get("clickable") == "true"
         enabled   = get("enabled") != "false"
 
-        label = desc or text
+        # 🔥 FIX: better label priority
+        label = desc or text or rid
         if not label:
             continue
+
+        label = _clean_label(label)
+
         if not bounds:
             continue
+
         coords = _parse_bounds(bounds)
         if coords is None:
             continue
+
         cx, cy, w, h = coords
 
-        # Skip pure containers unless they are clickable and have a label
-        if cls in _CONTAINER_CLS and not clickable:
+        # improved container filtering
+        if cls in _CONTAINER_CLS and not clickable and not label:
             continue
 
-        # Skip disabled
         if not enabled:
             continue
 
@@ -584,9 +572,8 @@ def _extract_nodes(xml: str) -> list:
     return nodes
 
 def _deduplicate(nodes: list) -> list:
-    """Remove nodes with identical text+coords."""
     seen = set()
-    out  = []
+    out = []
     for n in nodes:
         key = (n["text"], n["x"], n["y"])
         if key not in seen:
@@ -594,62 +581,68 @@ def _deduplicate(nodes: list) -> list:
             out.append(n)
     return out
 
+# 🔥 NEW: smarter scoring
+def _score(n):
+    score = 0
+
+    if n["clickable"]:
+        score += 3
+
+    txt = n["text"].lower()
+
+    if any(k in txt for k in [
+        "search", "tab", "new", "send", "install",
+        "open", "next", "ok", "done", "go"
+    ]):
+        score += 5
+
+    if n["cls"] in ["Button", "ImgBtn", "Input"]:
+        score += 2
+
+    # penalize junk
+    if any(k in txt for k in ["help", "feedback", "terms"]):
+        score -= 2
+
+    return score
+
 def _prioritise(nodes: list) -> list:
-    """
-    Sort: clickable first, then by vertical position.
-    Helps Claude see interactive elements at the top of the list.
-    """
-    return sorted(nodes, key=lambda n: (not n["clickable"], n["y"]))
+    return sorted(nodes, key=_score, reverse=True)
 
 def parse_ui(image_path: str, adb_device: str = None) -> list:
-    """
-    Parse real UI from device via uiautomator dump.
-
-    Args:
-        image_path : path to screenshot (kept for interface compat — not used here)
-        adb_device : ADB serial e.g. '192.168.29.48:39601'
-                     Falls back to ADB_DEVICE env var or default.
-
-    Returns:
-        list of dicts: [{id, text, x, y, cls, clickable}, ...]
-    """
     if adb_device is None:
         adb_device = os.environ.get("ADB_DEVICE", "192.168.29.48:39601")
 
     try:
         xml = _adb_dump(adb_device)
     except Exception as e:
-        print(f"[parser] uiautomator dump failed: {e} — returning empty")
+        print(f"[parser] dump failed: {e}")
         return []
 
     if not xml or "<hierarchy" not in xml:
-        print(f"[parser] bad XML dump — returning empty")
+        print("[parser] bad XML")
         return []
 
     nodes = _extract_nodes(xml)
     nodes = _deduplicate(nodes)
     nodes = _prioritise(nodes)
-    nodes = nodes[:MAX_ELEMENTS]
+    nodes = nodes[:MAX_ELEMENTS]  # unchanged
 
-    # Assign sequential IDs
     elements = []
     for i, n in enumerate(nodes, 1):
         elements.append({
-            "id":        i,
-            "text":      n["text"],
-            "x":         n["x"],
-            "y":         n["y"],
-            "cls":       n["cls"],
+            "id": i,
+            "text": n["text"],
+            "x": n["x"],
+            "y": n["y"],
+            "cls": n["cls"],
             "clickable": n["clickable"],
         })
 
-    print(f"[parser] {len(elements)} elements from uiautomator dump")
+    print(f"[parser] {len(elements)} elements")
     for e in elements:
-        flag = "✓" if e["clickable"] else " "
-        print(f"  [{e['id']}]{flag} {e['cls']:8} ({e['x']:4},{e['y']:4}) {e['text'][:40]}")
+        print(f"  [{e['id']}] {e['text'][:50]} ({e['cls']})")
 
     return elements
-
 
 //===== TERMUXFILE: jarvis-agent/executor/input_event.py =====
 """

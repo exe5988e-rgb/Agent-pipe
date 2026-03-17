@@ -2826,6 +2826,11 @@ if __name__ == "__main__":
 [10:50:01]   TASK 3/33  [1★]  [settings]  timeout=255s
 [10:50:01]   Open Settings
 [10:50:01] ════════════════════════════════════════════════════════════════
+[10:50:06] 
+  ✗ FAIL  |  0.2s  |  skills: 0
+[10:50:06]   Error: returncode=1
+[10:50:06]   Retrying once...
+[10:50:06]   Recovering device...
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4226,6 +4231,10 @@ done
 
 //===== TERMUXFILE: gauntlet_nohup.log =====
 nohup: ignoring input
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 31, in <module>
+    from perception.screen_map         import ScreenMap
+ModuleNotFoundError: No module named 'perception.screen_map'
 Traceback (most recent call last):
   File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 31, in <module>
     from perception.screen_map         import ScreenMap

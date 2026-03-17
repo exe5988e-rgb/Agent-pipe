@@ -17719,7 +17719,7 @@
       "activity": "com.android.vending/.AssetBrowserActivity",
       "name": "vending_assetbrowseractivity",
       "labels": [],
-      "visits": 7,
+      "visits": 8,
       "tainted": false,
       "elements": [
         {

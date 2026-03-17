@@ -2818,8 +2818,8 @@ if __name__ == "__main__":
   },
   "4203f6dd32c9|opt4_launch:settings": {
     "to": "8c512c8be2eb",
-    "count": 4,
-    "last_seen": 1773736283.7602074
+    "count": 5,
+    "last_seen": 1773736379.756887
   },
   "4203f6dd32c9|opt4_launch:chrome": {
     "to": "ec2d5cc0aa50",
@@ -6245,6 +6245,134 @@ RuntimeError: No LLM backend available.
   Phone B offline? Check: curl http://192.168.29.110:8890/health
   Local LLM down? Run:    bash ~/jarvis_server_init.sh
 
+########################################################
+  JARVIS  |  Open Settings and go to WiFi
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': False, 'proxy': False, 'llamafile': False, 'binary': None}
+[init] WARNING: no LLM backend reachable!
+
+  Screen Map: 268 screens (0 tainted), 326 transitions
+    whatsapp             142 screens
+    youtube              54 screens
+    chrome               22 screens
+    vending              21 screens
+    settings             12 screens
+    launcher             8 screens
+    termux               6 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+    dialer               1 screens
+  TransitionMemory: 326 transitions (252 confirmed, threshold=2)
+[init] task_apps (ordered): ['settings']
+
+========================================================
+  STEP 1  |  Open Settings and go to WiFi
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3598491 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=eceb525a4cfe elements=26
+[step] UI: ['Clock', '14', ':', '00', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[OPT4v2] launcher -> launching settings (com.android.settings)
+[llm] OPT4v2 am start: com.android.settings
+[OPT4v2] app_index -> 1/1
+
+========================================================
+  STEP 2  |  Open Settings and go to WiFi
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (268310 bytes)
+[ui_parser] activity=com.android.settings/.Settings$ManageExternalStorageActivity
+[ui_parser] signal='com.android.settings/.Settings$ManageExternalStorageActivity'
+[mem] miss (unknown): com.android.settings/.Settings$ManageExternalStorageActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 22 elements from 192.168.29.48:34011
+[mem] stored com.android.settings/.Settings$ManageExternalStorageActivity hash=634ac82d93c5 elements=22
+[step] UI: ['Search', 'Search', 'Cancel', 'element_4', 'Clear', 'WiFi', 'Display', 'time']
+[map] new screen: settings_oplussettingshomepageactivity (8c512c8be2eb)
+[tm] transition changed: 4203f6dd32c9|opt4_launch:settings 468f775e -> 8c512c8b
+[map] transition: launcher_launcher --[opt4_launch:settings]--> settings_oplussettingshomepageactivity
+[map] screen: settings_oplussettingshomepageactivity (8c512c8b)
+[skill] matched: 'open settings and go'  score=1.00  act_match=False
+[skill] cannot resolve tap target: 'element_5'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 3  |  Open Settings and go to WiFi
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (161203 bytes)
+[ui_parser] activity=com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity
+[ui_parser] signal='com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity'
+[mem] miss (unknown): com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 22 elements from 192.168.29.48:34011
+[mem] stored com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity hash=634ac82d93c5 elements=22
+[step] UI: ['Search', 'Search', 'Cancel', 'element_4', 'Clear', 'WiFi', 'Display', 'time']
+[map] screen: settings_oplussettingshomepageactivity (8c512c8b)
+[skill] matched: 'open settings and go'  score=1.00  act_match=False
+[skill] cannot resolve tap target: 'element_5'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 4  |  Open Settings and go to WiFi
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (162475 bytes)
+[ui_parser] activity=com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity
+[ui_parser] signal='com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity'
+[mem] HIT com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity hash=634ac82d93c5 hits=1 elements=22
+[step] UI: ['Search', 'Search', 'Cancel', 'element_4', 'Clear', 'WiFi', 'Display', 'time']
+[map] screen: settings_oplussettingshomepageactivity (8c512c8b)
+[skill] matched: 'open settings and go'  score=1.00  act_match=False
+[skill] cannot resolve tap target: 'element_5'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 5  |  Open Settings and go to WiFi
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (161878 bytes)
+[ui_parser] activity=com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity
+[ui_parser] signal='com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity'
+[mem] HIT com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity hash=634ac82d93c5 hits=2 elements=22
+[step] UI: ['Search', 'Search', 'Cancel', 'element_4', 'Clear', 'WiFi', 'Display', 'time']
+[map] screen: settings_oplussettingshomepageactivity (8c512c8b)
+[skill] matched: 'open settings and go'  score=1.00  act_match=False
+[skill] cannot resolve tap target: 'element_5'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B unreachable: timed out
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 6  |  Open Settings and go to WiFi
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1160097 bytes)
+[ui_parser] activity=com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity
+[ui_parser] signal='com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity'
+[mem] HIT com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity hash=634ac82d93c5 hits=3 elements=22
+[step] UI: ['Search', 'Search', 'Cancel', 'element_4', 'Clear', 'WiFi', 'Display', 'time']
+[map] screen: settings_oplussettingshomepageactivity (8c512c8b)
+[skill] matched: 'open settings and go'  score=1.00  act_match=False
+[skill] cannot resolve tap target: 'element_5'
+[skill] resolution failed — falling through to LLM
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash

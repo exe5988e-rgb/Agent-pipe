@@ -2853,6 +2853,8 @@ if __name__ == "__main__":
 [11:15:16] 
 [5/33] [1★] [playstore] Open Play Store
 [11:15:56]   PASS  37.1s  skills=0
+[11:16:01] 
+[6/33] [1★] [phone] Open Phone app
 
 
 //===== TERMUXFILE: tap_logger.py =====

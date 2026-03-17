@@ -31898,6 +31898,162 @@
           "resource_id": "com.android.chrome:id/menu_button"
         }
       ]
+    },
+    "5086bd87137e": {
+      "screen_id": "5086bd87137e",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "element_1",
+        "Forward",
+        "Bookmark",
+        "Download",
+        "Page info",
+        "Refresh",
+        "element_7",
+        "element_8",
+        "element_9",
+        "element_10",
+        "element_11",
+        "element_12",
+        "element_13",
+        "element_14",
+        "element_15",
+        "element_16",
+        "element_17",
+        "element_18"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 767,
+          "y": 1543,
+          "cls": "android.widget.ListView",
+          "resource_id": "com.android.chrome:id/app_menu_list"
+        },
+        {
+          "text": "Forward",
+          "x": 428,
+          "y": 517,
+          "cls": "android.widget.CompoundButton",
+          "resource_id": "com.android.chrome:id/button_one"
+        },
+        {
+          "text": "Bookmark",
+          "x": 597,
+          "y": 517,
+          "cls": "android.widget.CompoundButton",
+          "resource_id": "com.android.chrome:id/button_two"
+        },
+        {
+          "text": "Download",
+          "x": 766,
+          "y": 517,
+          "cls": "android.widget.CompoundButton",
+          "resource_id": "com.android.chrome:id/button_three"
+        },
+        {
+          "text": "Page info",
+          "x": 936,
+          "y": 517,
+          "cls": "android.widget.CompoundButton",
+          "resource_id": "com.android.chrome:id/button_four"
+        },
+        {
+          "text": "Refresh",
+          "x": 1106,
+          "y": 517,
+          "cls": "android.widget.CompoundButton",
+          "resource_id": "com.android.chrome:id/button_five"
+        },
+        {
+          "text": "element_7",
+          "x": 767,
+          "y": 713,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/new_tab_menu_id"
+        },
+        {
+          "text": "element_8",
+          "x": 767,
+          "y": 881,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/new_incognito_tab_menu_id"
+        },
+        {
+          "text": "element_9",
+          "x": 767,
+          "y": 1049,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/add_to_group_menu_id"
+        },
+        {
+          "text": "element_10",
+          "x": 767,
+          "y": 1257,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/open_history_menu_id"
+        },
+        {
+          "text": "element_11",
+          "x": 767,
+          "y": 1425,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/quick_delete_menu_id"
+        },
+        {
+          "text": "element_12",
+          "x": 767,
+          "y": 1633,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/downloads_menu_id"
+        },
+        {
+          "text": "element_13",
+          "x": 767,
+          "y": 1801,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/all_bookmarks_menu_id"
+        },
+        {
+          "text": "element_14",
+          "x": 767,
+          "y": 1969,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/recent_tabs_menu_id"
+        },
+        {
+          "text": "element_15",
+          "x": 767,
+          "y": 2177,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/share_menu_id"
+        },
+        {
+          "text": "element_16",
+          "x": 767,
+          "y": 2345,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/find_in_page_id"
+        },
+        {
+          "text": "element_17",
+          "x": 767,
+          "y": 2513,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/translate_id"
+        },
+        {
+          "text": "element_18",
+          "x": 767,
+          "y": 2639,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/reader_mode_menu_id"
+        }
+      ]
     }
   },
   "transitions": {
@@ -32203,7 +32359,8 @@
     "a3d74657825d|long press": "eb691f0a02c2",
     "eb691f0a02c2|tap:element_3": "0ffd7f03efc6",
     "0ffd7f03efc6|long press": "eb691f0a02c2",
-    "eb691f0a02c2|tap:3": "0ffd7f03efc6"
+    "eb691f0a02c2|tap:3": "0ffd7f03efc6",
+    "0ffd7f03efc6|tap:23": "5086bd87137e"
   }
 }
 

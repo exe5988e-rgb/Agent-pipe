@@ -2814,59 +2814,12 @@ if __name__ == "__main__":
 }
 
 //===== TERMUXFILE: gauntlet_log.txt =====
-[11:01:06] GAUNTLET START  2026-03-17 11:01
-[11:01:06] Tasks=33  Skills=0
-[11:01:06] NOTE: keep_awake.sh must be running separately
-[11:01:06] Bridge: OK
-[11:01:06] 
+[11:10:33] GAUNTLET START  2026-03-17 11:10
+[11:10:33] Tasks=33  Skills=0
+[11:10:33] NOTE: keep_awake.sh must be running separately
+[11:10:33] Bridge: OK
+[11:10:33] 
 [1/33] [1★] [whatsapp] Open WhatsApp
-[11:01:09]   FAIL  0.2s  rc=1  skills=0
-[11:01:09]   Retrying...
-[11:01:09]   Recovering...
-[11:01:21]   Retry: FAIL  0.2s
-[11:01:21]   Recovering...
-[11:01:31] 
-[2/33] [1★] [youtube] Open YouTube
-[11:01:35]   FAIL  0.1s  rc=1  skills=0
-[11:01:35]   Retrying...
-[11:01:35]   Recovering...
-[11:01:46]   Retry: FAIL  0.2s
-[11:01:46]   Recovering...
-[11:01:57] 
-[3/33] [1★] [settings] Open Settings
-[11:02:00]   FAIL  0.2s  rc=1  skills=0
-[11:02:00]   Retrying...
-[11:02:00]   Recovering...
-[11:02:12]   Retry: FAIL  0.1s
-[11:02:12]   Recovering...
-[11:02:22] 
-[4/33] [1★] [chrome] Open Chrome
-[11:02:25]   FAIL  0.2s  rc=1  skills=0
-[11:02:25]   Retrying...
-[11:02:25]   Recovering...
-[11:02:37]   Retry: FAIL  0.3s
-[11:02:37]   Recovering...
-[11:02:47] 
-[5/33] [1★] [playstore] Open Play Store
-[11:02:51]   FAIL  0.3s  rc=1  skills=0
-[11:02:51]   Retrying...
-[11:02:51]   Recovering...
-[11:03:02]   Retry: FAIL  0.1s
-[11:03:02]   Recovering...
-[11:03:12] 
-[6/33] [1★] [phone] Open Phone app
-[11:03:16]   FAIL  0.1s  rc=1  skills=0
-[11:03:16]   Retrying...
-[11:03:16]   Recovering...
-[11:03:28]   Retry: FAIL  0.3s
-[11:03:28]   Recovering...
-[11:03:39] 
-[7/33] [1★] [phone] Open Contacts
-[11:03:42]   FAIL  0.2s  rc=1  skills=0
-[11:03:42]   Retrying...
-[11:03:42]   Recovering...
-[11:03:54]   Retry: FAIL  0.1s
-[11:03:54]   Recovering...
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4134,62 +4087,6 @@ done
 
 //===== TERMUXFILE: gauntlet_nohup.log =====
 nohup: ignoring input
-Traceback (most recent call last):
-  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 31, in <module>
-    from perception.screen_map         import ScreenMap
-ModuleNotFoundError: No module named 'perception.screen_map'
-Traceback (most recent call last):
-  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 31, in <module>
-    from perception.screen_map         import ScreenMap
-ModuleNotFoundError: No module named 'perception.screen_map'
-Traceback (most recent call last):
-  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 31, in <module>
-    from perception.screen_map         import ScreenMap
-ModuleNotFoundError: No module named 'perception.screen_map'
-Traceback (most recent call last):
-  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 31, in <module>
-    from perception.screen_map         import ScreenMap
-ModuleNotFoundError: No module named 'perception.screen_map'
-Traceback (most recent call last):
-  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 31, in <module>
-    from perception.screen_map         import ScreenMap
-ModuleNotFoundError: No module named 'perception.screen_map'
-Traceback (most recent call last):
-  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 31, in <module>
-    from perception.screen_map         import ScreenMap
-ModuleNotFoundError: No module named 'perception.screen_map'
-Traceback (most recent call last):
-  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 31, in <module>
-    from perception.screen_map         import ScreenMap
-ModuleNotFoundError: No module named 'perception.screen_map'
-Traceback (most recent call last):
-  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 31, in <module>
-    from perception.screen_map         import ScreenMap
-ModuleNotFoundError: No module named 'perception.screen_map'
-Traceback (most recent call last):
-  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 31, in <module>
-    from perception.screen_map         import ScreenMap
-ModuleNotFoundError: No module named 'perception.screen_map'
-Traceback (most recent call last):
-  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 31, in <module>
-    from perception.screen_map         import ScreenMap
-ModuleNotFoundError: No module named 'perception.screen_map'
-Traceback (most recent call last):
-  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 31, in <module>
-    from perception.screen_map         import ScreenMap
-ModuleNotFoundError: No module named 'perception.screen_map'
-Traceback (most recent call last):
-  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 31, in <module>
-    from perception.screen_map         import ScreenMap
-ModuleNotFoundError: No module named 'perception.screen_map'
-Traceback (most recent call last):
-  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 31, in <module>
-    from perception.screen_map         import ScreenMap
-ModuleNotFoundError: No module named 'perception.screen_map'
-Traceback (most recent call last):
-  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 31, in <module>
-    from perception.screen_map         import ScreenMap
-ModuleNotFoundError: No module named 'perception.screen_map'
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

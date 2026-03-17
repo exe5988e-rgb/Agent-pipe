@@ -19097,6 +19097,174 @@
           "y": 2675
         }
       ]
+    },
+    "8a466f35ef41": {
+      "screen_id": "8a466f35ef41",
+      "package": "com.android.vending",
+      "activity": "com.android.vending/.AssetBrowserActivity",
+      "name": "vending_assetbrowseractivity",
+      "labels": [
+        "More results for Top sellers",
+        "More results for Recently reduced ebooks"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 620,
+          "y": 629
+        },
+        {
+          "text": "More results for Top sellers",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1135,
+          "y": 629
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 213,
+          "y": 1121
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 598,
+          "y": 1121
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 983,
+          "y": 1121
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1208,
+          "y": 1121
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 620,
+          "y": 1655
+        },
+        {
+          "text": "More results for Recently reduced ebooks",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1135,
+          "y": 1655
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 213,
+          "y": 2136
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 598,
+          "y": 2136
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 983,
+          "y": 2136
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1208,
+          "y": 2136
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 515,
+          "y": 237
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 154,
+          "y": 237
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 890,
+          "y": 237
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1114,
+          "y": 237
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 478,
+          "y": 419
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 852,
+          "y": 419
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1127,
+          "y": 419
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 155,
+          "y": 2604
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 465,
+          "y": 2604
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 775,
+          "y": 2604
+        }
+      ]
     }
   },
   "transitions": {
@@ -19321,7 +19489,8 @@
     "7571051ef9ea|element_1208_2120": "68dbc2f46e71",
     "7571051ef9ea|element_1208_2385": "04321b652bb5",
     "7571051ef9ea|element_946_237": "e45a3fbcbc8c",
-    "7571051ef9ea|element_1114_237": "583c296ce79a"
+    "7571051ef9ea|element_1114_237": "583c296ce79a",
+    "7571051ef9ea|element_1085_2604": "8a466f35ef41"
   }
 }
 

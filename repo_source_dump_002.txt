@@ -40533,6 +40533,177 @@
           "resource_id": ""
         }
       ]
+    },
+    "908354aaf9ec": {
+      "screen_id": "908354aaf9ec",
+      "package": "com.google.android.googlequicksearchbox",
+      "activity": "com.google.android.googlequicksearchbox/.InternalGoogleAppActivityEntrypoint",
+      "name": "googlequicksearchbox_internalgoogleappactivityentrypoint",
+      "labels": [
+        "element_1",
+        "element_2",
+        "element_3",
+        "element_4",
+        "element_5",
+        "element_6",
+        "element_7",
+        "element_8",
+        "element_9",
+        "element_10",
+        "element_11",
+        "element_12",
+        "View 12 stories",
+        "More options",
+        "element_15",
+        "element_16",
+        "Search",
+        "Notifications, 4 new notifications",
+        "Activity"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 620,
+          "y": 1260,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_discover_recycler_view"
+        },
+        {
+          "text": "element_2",
+          "x": 112,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_3",
+          "x": 620,
+          "y": 727,
+          "cls": "android.view.View",
+          "resource_id": "googleapp_facade_search_box"
+        },
+        {
+          "text": "element_4",
+          "x": 876,
+          "y": 727,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_5",
+          "x": 1044,
+          "y": 727,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_6",
+          "x": 327,
+          "y": 1018,
+          "cls": "android.view.View",
+          "resource_id": "googleapp_sbn_aim_chip"
+        },
+        {
+          "text": "element_7",
+          "x": 755,
+          "y": 1018,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_8",
+          "x": 1048,
+          "y": 1018,
+          "cls": "android.view.View",
+          "resource_id": "googleapp_sbn_lens_image_generation_chip"
+        },
+        {
+          "text": "element_9",
+          "x": 620,
+          "y": 1389,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_10",
+          "x": 322,
+          "y": 1389,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_11",
+          "x": 882,
+          "y": 1389,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_12",
+          "x": 1208,
+          "y": 1389,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "View 12 stories",
+          "x": 243,
+          "y": 1662,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More options",
+          "x": 1142,
+          "y": 1662,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_15",
+          "x": 620,
+          "y": 2133,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_16",
+          "x": 620,
+          "y": 2481,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Home",
+          "x": 155,
+          "y": 2618,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_navigation_bar_discover"
+        },
+        {
+          "text": "Search",
+          "x": 465,
+          "y": 2618,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_navigation_bar_search"
+        },
+        {
+          "text": "Notifications, 4 new notifications",
+          "x": 775,
+          "y": 2618,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_navigation_bar_inbox"
+        },
+        {
+          "text": "Activity",
+          "x": 1085,
+          "y": 2618,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_navigation_bar_collections"
+        }
+      ]
     }
   },
   "transitions": {
@@ -40882,7 +41053,8 @@
     "5d3e492581c0|tap:element_10": "e3dda089efe1",
     "e3dda089efe1|tap:element_16": "05b096cda1cf",
     "05b096cda1cf|tap:element_32": "11d2472beb7c",
-    "11d2472beb7c|swipe": "cb2905736296"
+    "11d2472beb7c|swipe": "cb2905736296",
+    "a2d4963e4b8c|tap:YouTube": "908354aaf9ec"
   }
 }
 

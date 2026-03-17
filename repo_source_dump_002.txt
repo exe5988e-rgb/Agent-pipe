@@ -29194,6 +29194,42 @@
           "resource_id": ""
         }
       ]
+    },
+    "0cb2cd865c6f": {
+      "screen_id": "0cb2cd865c6f",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/com.google.android.apps.youtube.app.search.voice.VoiceSearchActivity",
+      "name": "youtube_voicesearchactivity",
+      "labels": [
+        "element_1",
+        "Only this time",
+        "Don't allow"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 619,
+          "y": 2212,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.permissioncontroller:id/grant_singleton"
+        },
+        {
+          "text": "Only this time",
+          "x": 620,
+          "y": 2366,
+          "cls": "android.widget.Button",
+          "resource_id": "com.android.permissioncontroller:id/permission_allow_one_time_button"
+        },
+        {
+          "text": "Don't allow",
+          "x": 620,
+          "y": 2548,
+          "cls": "android.widget.Button",
+          "resource_id": "com.android.permissioncontroller:id/permission_deny_button"
+        }
+      ]
     }
   },
   "transitions": {
@@ -29482,7 +29518,8 @@
     "344055367907|tap:Expand Mini Player": "e9824755943d",
     "e9824755943d|type": "0973acd9a8c9",
     "0973acd9a8c9|tap:element_7": "36640a54fb64",
-    "36640a54fb64|tap:element_5": "2edf7427cb6b"
+    "36640a54fb64|tap:element_5": "2edf7427cb6b",
+    "6bfcff6c9ae0|tap:filters": "0cb2cd865c6f"
   }
 }
 

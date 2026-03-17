@@ -42451,6 +42451,90 @@
           "resource_id": ""
         }
       ]
+    },
+    "8449c41b7ba1": {
+      "screen_id": "8449c41b7ba1",
+      "package": "com.termux",
+      "activity": "com.termux/.app.TermuxActivity",
+      "name": "termux_termuxactivity",
+      "labels": [
+        "ADB",
+        "Bugjaeger",
+        "ExamGOAL",
+        "ChatGPT",
+        "Mind Space",
+        "Phone",
+        "Messages",
+        "Photos",
+        "Camera"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "ADB",
+          "x": 386,
+          "y": 418,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Bugjaeger",
+          "x": 620,
+          "y": 418,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "ExamGOAL",
+          "x": 854,
+          "y": 418,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "ChatGPT",
+          "x": 1088,
+          "y": 418,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Mind Space",
+          "x": 152,
+          "y": 803,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Phone",
+          "x": 269,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Messages",
+          "x": 503,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Photos",
+          "x": 737,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Camera",
+          "x": 971,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -42788,7 +42872,7 @@
     "572db9f8d8bd|retry": "35187eb4193b",
     "4203f6dd32c9|tap:14": "79a4aaec41ce",
     "79a4aaec41ce|tap:14": "81c01cba1bf1",
-    "f6971c299e21|swipe": "a2d4963e4b8c",
+    "f6971c299e21|swipe": "8449c41b7ba1",
     "a2d4963e4b8c|tap:A": "abe260fd616f",
     "abe260fd616f|tap:Start voice search": "5029805e79b5",
     "5029805e79b5|type": "95d66370b486",

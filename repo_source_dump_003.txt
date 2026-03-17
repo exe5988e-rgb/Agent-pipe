@@ -3242,9 +3242,9 @@ if __name__ == "__main__":
     "last_seen": 1773737797.376992
   },
   "f6971c299e21|swipe": {
-    "to": "a2d4963e4b8c",
-    "count": 2,
-    "last_seen": 1773754044.0854344
+    "to": "8449c41b7ba1",
+    "count": 1,
+    "last_seen": 1773755939.9395466
   },
   "a2d4963e4b8c|tap:A": {
     "to": "abe260fd616f",

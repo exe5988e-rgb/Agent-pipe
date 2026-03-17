@@ -27448,6 +27448,145 @@
           "resource_id": "com.whatsapp:id/entry"
         }
       ]
+    },
+    "082a9e286aa7": {
+      "screen_id": "082a9e286aa7",
+      "package": "com.whatsapp",
+      "activity": "com.whatsapp/.Conversation",
+      "name": "whatsapp_conversation",
+      "labels": [
+        "element_1",
+        "element_3",
+        "Video call",
+        "Voice call",
+        "More options",
+        "element_7",
+        "element_8",
+        "element_9",
+        "element_10",
+        "Emoji, GIFs and stickers",
+        "Attach",
+        "Payment",
+        "Camera",
+        "Voice message, Button. Double tap and hold to record, slide left to cancel recording, slide up to lock recording on. Release to send.",
+        "Message"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 550,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/conversation_contact"
+        },
+        {
+          "text": "Back",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/whatsapp_toolbar_home"
+        },
+        {
+          "text": "element_3",
+          "x": 252,
+          "y": 237,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_photo_view"
+        },
+        {
+          "text": "Video call",
+          "x": 848,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Voice call",
+          "x": 1016,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "More options",
+          "x": 1170,
+          "y": 237,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/menuitem_overflow"
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 933,
+          "cls": "android.widget.ListView",
+          "resource_id": "android:id/list"
+        },
+        {
+          "text": "element_8",
+          "x": 881,
+          "y": 452,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/main_layout"
+        },
+        {
+          "text": "element_9",
+          "x": 881,
+          "y": 724,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/main_layout"
+        },
+        {
+          "text": "element_10",
+          "x": 881,
+          "y": 997,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/main_layout"
+        },
+        {
+          "text": "Emoji, GIFs and stickers",
+          "x": 98,
+          "y": 1626,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/emoji_picker_btn"
+        },
+        {
+          "text": "Attach",
+          "x": 627,
+          "y": 1626,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/input_attach_button"
+        },
+        {
+          "text": "Payment",
+          "x": 795,
+          "y": 1626,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/payment_button"
+        },
+        {
+          "text": "Camera",
+          "x": 956,
+          "y": 1626,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/camera_btn"
+        },
+        {
+          "text": "Voice message, Button. Double tap and hold to record, slide left to cancel recording, slide up to lock recording on. Release to send.",
+          "x": 1141,
+          "y": 1626,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/voice_note_btn"
+        },
+        {
+          "text": "Message",
+          "x": 362,
+          "y": 1625,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.whatsapp:id/entry"
+        }
+      ]
     }
   },
   "transitions": {
@@ -27693,7 +27832,7 @@
     "866f5ed64950|element_1114_237": "583c296ce79a",
     "866f5ed64950|element_17_419": "583c296ce79a",
     "866f5ed64950|element_246_419": "583c296ce79a",
-    "4203f6dd32c9|opt4_launch:whatsapp": "366c9a634a55",
+    "4203f6dd32c9|opt4_launch:whatsapp": "082a9e286aa7",
     "7c51d7e864c3|tap:element_25": "7770f0561545",
     "7770f0561545|tap:More options": "307d903852e1",
     "307d903852e1|type": "b128d851f827",

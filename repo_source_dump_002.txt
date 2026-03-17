@@ -39698,6 +39698,328 @@
           "resource_id": ""
         }
       ]
+    },
+    "05b096cda1cf": {
+      "screen_id": "05b096cda1cf",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Open the homepage",
+        "element_2",
+        "element_3",
+        "google.com/search?client=ms-android-oneplus-terr1-rso3&hs=W4rU&sca_esv=4ae20d8bd47daad1&sxsrf=ANbL-n4CA_BJUBV-zYlN37_XuUlY2eCumg:1773753574716&q=Restaurants+n",
+        "See 21 tabs",
+        "Customise and control Google Chrome",
+        "element_7",
+        "Google",
+        "Clear Search",
+        "Restaurants near me open now",
+        "Search Labs",
+        "element_12",
+        "top 10 restaurants in dhanbad",
+        "element_14",
+        "private cabin restaurant in dhanbad",
+        "element_16",
+        "element_17",
+        "element_18",
+        "element_19",
+        "element_20",
+        "element_21",
+        "element_22",
+        "element_23",
+        "element_24",
+        "element_25",
+        "family restaurant dhanbad",
+        "element_27",
+        "\u0930\u0947\u0938\u094d\u0924\u0930\u093e\u0902 \u092e\u0947\u0930\u0947 \u092a\u093e\u0938 \u0916\u0941\u0932\u093e",
+        "restaurants dhanbad near me",
+        "element_30"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "element_2",
+          "x": 620,
+          "y": 932,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.android.chrome:id/compositor_view_holder"
+        },
+        {
+          "text": "element_3",
+          "x": 224,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "google.com/search?client=ms-android-oneplus-terr1-rso3&hs=W4rU&sca_esv=4ae20d8bd47daad1&sxsrf=ANbL-n4CA_BJUBV-zYlN37_XuUlY2eCumg:1773753574716&q=Restaurants+n",
+          "x": 592,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "See 21 tabs",
+          "x": 988,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 1030,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Google",
+          "x": 882,
+          "y": 457,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Clear Search",
+          "x": 1135,
+          "y": 420,
+          "cls": "android.widget.Button",
+          "resource_id": "tsuid_61O5aemTG6e6seMPl6XK0QY_3"
+        },
+        {
+          "text": "Restaurants near me open now",
+          "x": 621,
+          "y": 419,
+          "cls": "android.widget.EditText",
+          "resource_id": ""
+        },
+        {
+          "text": "Search Labs",
+          "x": 99,
+          "y": 447,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_12",
+          "x": 628,
+          "y": 1114,
+          "cls": "android.widget.ListView",
+          "resource_id": ""
+        },
+        {
+          "text": "top 10 restaurants in dhanbad",
+          "x": 544,
+          "y": 588,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_14",
+          "x": 1135,
+          "y": 588,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "private cabin restaurant in dhanbad",
+          "x": 544,
+          "y": 767,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_16",
+          "x": 1135,
+          "y": 767,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_17",
+          "x": 620,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_18",
+          "x": 152,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_19",
+          "x": 358,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_20",
+          "x": 761,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_21",
+          "x": 1011,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_22",
+          "x": 1188,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_23",
+          "x": 648,
+          "y": 811,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_24",
+          "x": 262,
+          "y": 811,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_25",
+          "x": 957,
+          "y": 811,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "family restaurant dhanbad",
+          "x": 544,
+          "y": 945,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_27",
+          "x": 1135,
+          "y": 945,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u0930\u0947\u0938\u094d\u0924\u0930\u093e\u0902 \u092e\u0947\u0930\u0947 \u092a\u093e\u0938 \u0916\u0941\u0932\u093e",
+          "x": 556,
+          "y": 1054,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "restaurants dhanbad near me",
+          "x": 544,
+          "y": 1113,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_30",
+          "x": 1135,
+          "y": 1113,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "best restaurants in dhanbad",
+          "x": 544,
+          "y": 1281,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_32",
+          "x": 1135,
+          "y": 1281,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_33",
+          "x": 620,
+          "y": 1316,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Use precise location",
+          "x": 973,
+          "y": 1295,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "restaurants in dhanbad bank more",
+          "x": 544,
+          "y": 1460,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_36",
+          "x": 1135,
+          "y": 1460,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_37",
+          "x": 620,
+          "y": 1580,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "kaveri restaurant dhanbad",
+          "x": 544,
+          "y": 1638,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_39",
+          "x": 1135,
+          "y": 1638,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_40",
+          "x": 620,
+          "y": 1703,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -40044,7 +40366,8 @@
     "af94bed40cff|tap:element_11": "523b15b7d0c6",
     "523b15b7d0c6|swipe": "8cd8d5199600",
     "8cd8d5199600|swipe": "5d3e492581c0",
-    "5d3e492581c0|tap:element_10": "e3dda089efe1"
+    "5d3e492581c0|tap:element_10": "e3dda089efe1",
+    "e3dda089efe1|tap:element_16": "05b096cda1cf"
   }
 }
 

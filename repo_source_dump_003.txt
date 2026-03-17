@@ -2800,6 +2800,11 @@ if __name__ == "__main__":
 [10:09:53]   TASK 1/33  [1★]  [whatsapp]  timeout=255s
 [10:09:53]   Open WhatsApp
 [10:09:53] ════════════════════════════════════════════════════════════════
+[10:09:59] 
+  ✗ FAIL  |  1.3s  |  skills: 0
+[10:09:59]   Error: returncode=1
+[10:09:59]   Retrying once...
+[10:09:59]   Recovering device...
 
 
 //===== TERMUXFILE: tap_logger.py =====

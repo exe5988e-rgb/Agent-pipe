@@ -40704,6 +40704,66 @@
           "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_navigation_bar_collections"
         }
       ]
+    },
+    "94aa49d6775d": {
+      "screen_id": "94aa49d6775d",
+      "package": "com.google.android.googlequicksearchbox",
+      "activity": "com.google.android.googlequicksearchbox/.InternalGoogleAppActivityEntrypoint",
+      "name": "googlequicksearchbox_internalgoogleappactivityentrypoint",
+      "labels": [
+        "Axelera AI Community | Community",
+        "LOGIN",
+        "Forum|go.to.homepage",
+        "element_4",
+        "Demo Jam",
+        "New Post"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Axelera AI Community | Community",
+          "x": 620,
+          "y": 1526,
+          "cls": "android.webkit.WebView",
+          "resource_id": ""
+        },
+        {
+          "text": "LOGIN",
+          "x": 1042,
+          "y": 466,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Forum|go.to.homepage",
+          "x": 470,
+          "y": 466,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_4",
+          "x": 77,
+          "y": 462,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Demo Jam",
+          "x": 620,
+          "y": 1829,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "New Post",
+          "x": 1086,
+          "y": 2562,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -41054,7 +41114,8 @@
     "e3dda089efe1|tap:element_16": "05b096cda1cf",
     "05b096cda1cf|tap:element_32": "11d2472beb7c",
     "11d2472beb7c|swipe": "cb2905736296",
-    "a2d4963e4b8c|tap:YouTube": "908354aaf9ec"
+    "a2d4963e4b8c|tap:YouTube": "908354aaf9ec",
+    "908354aaf9ec|tap:Notifications, 4 new notifications": "94aa49d6775d"
   }
 }
 

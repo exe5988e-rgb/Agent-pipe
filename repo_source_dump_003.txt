@@ -3310,6 +3310,11 @@ if __name__ == "__main__":
     "to": "908354aaf9ec",
     "count": 1,
     "last_seen": 1773754076.011597
+  },
+  "908354aaf9ec|tap:Notifications, 4 new notifications": {
+    "to": "94aa49d6775d",
+    "count": 1,
+    "last_seen": 1773754109.24205
   }
 }
 

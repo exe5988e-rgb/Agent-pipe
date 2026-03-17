@@ -17719,7 +17719,7 @@
       "activity": "com.android.vending/.AssetBrowserActivity",
       "name": "vending_assetbrowseractivity",
       "labels": [],
-      "visits": 15,
+      "visits": 16,
       "tainted": false,
       "elements": [
         {
@@ -19765,7 +19765,8 @@
     "866f5ed64950|element_924_1062": "66891f978e09",
     "866f5ed64950|element_1172_1062": "66891f978e09",
     "866f5ed64950|element_620_1566": "7571051ef9ea",
-    "866f5ed64950|More results for New and notable comics": "68dbc2f46e71"
+    "866f5ed64950|More results for New and notable comics": "68dbc2f46e71",
+    "866f5ed64950|element_213_2030": "7571051ef9ea"
   }
 }
 

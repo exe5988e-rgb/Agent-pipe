@@ -8680,6 +8680,8 @@ RuntimeError: No LLM backend available.
 [parser] INFO parsed 'tap 3' -> {'action': 'tap', 'target': 3}
 [parser] DEBUG normalized: 'type lofi hip hop'
 [parser] INFO parsed 'type lofi hip hop' -> {'action': 'type', 'text': 'lofi hip hop'}
+[parser] DEBUG normalized: 'tap 6'
+[parser] INFO parsed 'tap 6' -> {'action': 'tap', 'target': 6}
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

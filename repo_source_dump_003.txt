@@ -2997,9 +2997,9 @@ if __name__ == "__main__":
     "last_seen": 1773728557.1013627
   },
   "36640a54fb64|tap:element_5": {
-    "to": "4203f6dd32c9",
+    "to": "2edf7427cb6b",
     "count": 1,
-    "last_seen": 1773728733.3137913
+    "last_seen": 1773728750.2164106
   }
 }
 
@@ -8380,6 +8380,120 @@ RuntimeError: No LLM backend available.
   Phone B offline? Check: curl http://192.168.29.110:8890/health
   Local LLM down? Run:    bash ~/jarvis_server_init.sh
 
+[input] adb -s 192.168.29.48:34011 shell input tap 634 223
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[step] step=5/12 done=False history=['opt4_launch:youtube', 'tap [3] Search', "type 'Warriyo Mortals'", 'tap [6] Edit suggestion warriyo mortals', 'tap [3] warriyo mortals']
+
+========================================================
+  STEP 6  |  Play Warriyo Mortals on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1212567 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 23 elements from 192.168.29.48:34011
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=0db6e4ba6315 elements=23
+[step] UI: ['Navigate up', 'Clear', 'warriyo mortals', 'element_4', 'element_5', 'Edit suggestion warriyo mortals slowed', 'element_7', 'Edit suggestion warriyo mortals funk']
+[map] screen: youtube_shell$homeactivity (36640a54)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 4'
+[step] LLM: 'tap 4'
+[step] action: {'action': 'tap', 'target': 4}
+[input] dispatching: TouchEvent(x=620, y=391)
+[input] adb -s 192.168.29.48:34011 shell input tap 620 391
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[step] step=6/12 done=False history=['opt4_launch:youtube', 'tap [3] Search', "type 'Warriyo Mortals'", 'tap [6] Edit suggestion warriyo mortals', 'tap [3] warriyo mortals', 'tap [4] element_4']
+
+========================================================
+  STEP 7  |  Play Warriyo Mortals on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1221633 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 23 elements from 192.168.29.48:34011
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=0db6e4ba6315 elements=23
+[step] UI: ['Navigate up', 'Clear', 'warriyo mortals', 'element_4', 'element_5', 'Edit suggestion warriyo mortals slowed', 'element_7', 'Edit suggestion warriyo mortals funk']
+[map] screen: youtube_shell$homeactivity (36640a54)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B unreachable: timed out
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 8  |  Play Warriyo Mortals on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1951949 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] HIT com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=0db6e4ba6315 hits=1 elements=23
+[step] UI: ['Navigate up', 'Clear', 'warriyo mortals', 'element_4', 'element_5', 'Edit suggestion warriyo mortals slowed', 'element_7', 'Edit suggestion warriyo mortals funk']
+[map] screen: youtube_shell$homeactivity (36640a54)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 9  |  Play Warriyo Mortals on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1742249 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] HIT com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=0db6e4ba6315 hits=2 elements=23
+[step] UI: ['Navigate up', 'Clear', 'warriyo mortals', 'element_4', 'element_5', 'Edit suggestion warriyo mortals slowed', 'element_7', 'Edit suggestion warriyo mortals funk']
+[map] screen: youtube_shell$homeactivity (36640a54)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 10  |  Play Warriyo Mortals on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (2476613 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] HIT com.android.launcher/.Launcher hash=416e66c63547 hits=1 elements=26
+[step] UI: ['Clock', '11', ':', '50', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] transition: youtube_shell$homeactivity --[tap:element_5]--> launcher_launcher
+[map] screen: launcher_launcher (4203f6dd)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 11  |  Play Warriyo Mortals on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (569679 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] HIT com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=0db6e4ba6315 hits=3 elements=23
+[step] UI: ['Navigate up', 'Clear', 'warriyo mortals', 'element_4', 'element_5', 'Edit suggestion warriyo mortals slowed', 'element_7', 'Edit suggestion warriyo mortals funk']
+[map] screen: youtube_shell$homeactivity (36640a54)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 12  |  Play Warriyo Mortals on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1306218 bytes)
+[ui_parser] activity=com.termux/.app.TermuxActivity
+[ui_parser] signal='com.termux/.app.TermuxActivity'
+[mem] miss (unknown): com.termux/.app.TermuxActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 16 elements from 192.168.29.48:34011
+[mem] stored com.termux/.app.TermuxActivity hash=966698ed94a5 elements=16
+[step] UI: ['element_1', 'ESC', 'element_3', '☰', '⇳', 'HOME', '↑', 'END']
+[map] new screen: termux_termuxactivity (2edf7427cb6b)
+[tm] transition changed: 36640a54fb64|tap:element_5 4203f6dd -> 2edf7427
+[map] transition: youtube_shell$homeactivity --[tap:element_5]--> termux_termuxactivity
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash
@@ -12072,142 +12186,5 @@ def build_prompt(
     lines.append("Action:")
 
     return "\n".join(lines)
-
-
-//===== TERMUXFILE: jarvis-agent/reasoning/llm_client.py =====
-"""
-reasoning/llm_client.py
-
-LLM backend priority chain (two-device setup):
-  1. Phone B Claude bridge  http://192.168.29.110:8890
-  2. Local proxy            http://127.0.0.1:8888
-  3. Llamafile direct       http://127.0.0.1:8080
-  4. subprocess llama-cli
-
-OPT-4 v2 (Session 6):
-  generate() accepts bypass_pkg=<package>.
-  When set, fires am start on Phone A directly — no network call at all.
-  Returns the special token 'opt4_bypass' so controller can handle it.
-"""
-
-import json
-import os
-import subprocess
-import shutil
-import urllib.request
-
-PHONE_B_URL   = "http://192.168.29.110:8890"
-PROXY_URL     = "http://127.0.0.1:8888"
-LLAMAFILE_URL = "http://127.0.0.1:8080"
-DEFAULT_MODEL = os.path.expanduser(
-    "~/ai-workspace/llama.cpp/models/Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf"
-)
-LLAMA_BINS    = ["llama-cli", "llama-simple-chat", "llamafile", "main"]
-PHONE_A_SERIAL = "192.168.29.48:38577"
-ADB            = "/data/data/com.termux/files/usr/bin/adb"
-
-def _post(url, payload, timeout=90):
-    body = json.dumps(payload).encode()
-    req  = urllib.request.Request(
-        url, data=body,
-        headers={"Content-Type": "application/json"},
-        method="POST"
-    )
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return json.loads(r.read().decode())
-
-def _ok(url, t=3):
-    try:
-        with urllib.request.urlopen(url, timeout=t) as r:
-            return r.status == 200
-    except:
-        return False
-
-def _am_start(package: str):
-    """Fire monkey launcher intent on Phone A for package."""
-    print(f"[llm] OPT4v2 am start: {package}")
-    subprocess.run(
-        [ADB, "-s", PHONE_A_SERIAL,
-         "shell", "monkey", "-p", package,
-         "-c", "android.intent.category.LAUNCHER", "1"],
-        capture_output=True, timeout=10
-    )
-
-def generate(prompt, model_path=DEFAULT_MODEL, max_tokens=256,
-             temperature=0.1, timeout=90, bypass_pkg=None):
-    """
-    bypass_pkg: package to launch via am start on Phone A.
-                When set, skips all backends and returns 'opt4_bypass'.
-    """
-    if bypass_pkg:
-        _am_start(bypass_pkg)
-        return "opt4_bypass"
-
-    print(f"[llm] prompt tail: ...{prompt[-80:].strip()!r}")
-
-    if _ok(f"{PHONE_B_URL}/health"):
-        try:
-            d = _post(f"{PHONE_B_URL}/chat", {"prompt": prompt}, timeout=timeout)
-            if d.get("success"):
-                out = (d.get("response") or "").strip()
-                print(f"[llm] Phone B (Claude): {out[:80]!r}")
-                return out
-            else:
-                print(f"[llm] Phone B error: {d.get('error')}")
-        except Exception as e:
-            print(f"[llm] Phone B unreachable: {e}")
-
-    if _ok(f"{PROXY_URL}/health"):
-        try:
-            d = _post(f"{PROXY_URL}/chat_sync", {"query": prompt}, timeout=timeout)
-            if d.get("success"):
-                out = (d.get("response") or "").strip()
-                print(f"[llm] proxy (local): {out[:80]!r}")
-                return out
-        except Exception as e:
-            print(f"[llm] proxy err: {e}")
-
-    if _ok(f"{LLAMAFILE_URL}/health"):
-        try:
-            d = _post(f"{LLAMAFILE_URL}/v1/chat/completions",
-                      {"messages":    [{"role": "user", "content": prompt}],
-                       "max_tokens":  max_tokens,
-                       "temperature": temperature},
-                      timeout=timeout)
-            out = d["choices"][0]["message"]["content"].strip()
-            print(f"[llm] llamafile: {out[:80]!r}")
-            return out
-        except Exception as e:
-            print(f"[llm] llamafile err: {e}")
-
-    mp     = os.path.expanduser(model_path)
-    binary = next((shutil.which(b) for b in LLAMA_BINS if shutil.which(b)), None)
-    if not binary or not os.path.isfile(mp):
-        raise RuntimeError(
-            "No LLM backend available.\n"
-            "  Phone B offline? Check: curl http://192.168.29.110:8890/health\n"
-            "  Local LLM down? Run:    bash ~/jarvis_server_init.sh"
-        )
-    r = subprocess.run(
-        [binary, "-m", mp, "-p", prompt,
-         "-n", str(max_tokens), "--temp", str(temperature),
-         "--no-display-prompt", "-e", "--log-disable"],
-        capture_output=True, text=True, timeout=timeout
-    )
-    out = "\n".join(
-        l for l in r.stdout.strip().splitlines()
-        if not l.startswith("llama") and not l.startswith("[")
-    ).strip()
-    print(f"[llm] subprocess: {out[:80]!r}")
-    return out
-
-def health_check():
-    return {
-        "phone_b":   _ok(f"{PHONE_B_URL}/health"),
-        "proxy":     _ok(f"{PROXY_URL}/health"),
-        "llamafile": _ok(f"{LLAMAFILE_URL}/health"),
-        "binary":    next((shutil.which(b) for b in LLAMA_BINS
-                           if shutil.which(b)), None),
-    }
 
 

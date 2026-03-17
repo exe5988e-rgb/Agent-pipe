@@ -1,3 +1,475 @@
+//===== TERMUXFILE: jarvis_crawler.py =====
+#!/usr/bin/env python3
+"""
+jarvis_crawler.py  —  Autonomous UI Crawler  (Session 8 v3)
+
+Fixes vs v2:
+  - Force root to WhatsApp Chats tab via explicit activity intent, not monkey.
+    Monkey leaves WhatsApp on whatever tab was last open (often Calls).
+  - Skip call-initiation elements and GroupCallParticipantPicker entirely —
+    these are not useful navigation targets and their fingerprints are unstable
+    (dynamic contact lists change the hash every launch).
+  - Activity-only fingerprint mode: screens on the skip-activity list are
+    fingerprinted by activity string alone so the hash is stable regardless
+    of dynamic content (contact rows, timestamps etc.).
+  - Dedup transitions: if a tap leads to a screen we've already seen via a
+    different element on the same screen, still record the transition but
+    don't re-explore the destination.
+
+Usage:
+  python3 jarvis_crawler.py --app com.whatsapp --device "192.168.29.48:34011" --depth 3
+"""
+
+import argparse
+import os
+import re
+import subprocess
+import sys
+import tempfile
+import time
+import xml.etree.ElementTree as ET
+from collections import deque
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent / "test" / "jarvis-agent"))
+
+from perception.screen_map import ScreenMap, _is_dangerous, _is_dynamic, _has_call_overlay
+
+ADB       = "adb"
+DUMP_PATH = "/sdcard/jarvis_crawl_dump.xml"
+
+# ── Skip lists ────────────────────────────────────────────────────────────────
+
+_SKIP_CLASSES = {
+    "android.widget.EditText",
+    "com.facebook.react.views.textinput.ReactEditText",
+    "android.widget.RadioButton",          # filter tabs — don't navigate
+}
+_SKIP_RESOURCE_PREFIXES = (
+    "com.termux",
+    "com.android.systemui",
+    "android:id/home",
+)
+_SKIP_RESOURCE_SUFFIXES = (
+    "conversations_filter_debug_view_id_unread",
+    "conversations_filter_debug_view_id_favorite",
+    "conversations_filter_debug_view_id_groups",
+    "conversations_filter_debug_view_id_channels",
+    "search_unread_filter",
+    "search_media_filter_image",
+    "search_media_filter_video",
+    "search_media_filter_link",
+    "search_media_filter_gif",
+    "search_media_filter_audio",
+    "search_media_filter_doc",
+    "search_media_filter_sticker",
+    "search_poll_filter",
+)
+_SKIP_TEXTS = {
+    "back", "home", "more options", "menu", "close", "cancel",
+    "skip", "later", "not now", "remind me later",
+    "ask meta ai or search",
+    "message your assistant",
+    "swipe down to reveal additional actions",
+    "navigate up",
+}
+# Text prefixes/substrings that indicate call-initiation — skip entirely
+_SKIP_TEXT_CONTAINS = (
+    "start audio call",
+    "start video call",
+    "voice call",
+    "video call",
+    "call with",
+)
+
+# Activities whose fingerprint should use activity string only (dynamic content)
+# These screens show different contacts/rows each time — label-based hash is
+# unstable. We fingerprint by activity alone so path-replay works reliably.
+_ACTIVITY_ONLY_FINGERPRINT = {
+    "com.whatsapp/.calling.ui.callhistory.group.GroupCallParticipantPicker",
+    "com.whatsapp/.contactpicker.ContactPickerActivity",
+    "com.whatsapp/.contactpicker.ForwardContactPickerActivity",
+}
+
+# Activities to never enqueue for further exploration
+_SKIP_ACTIVITIES = {
+    "com.whatsapp/.calling.ui.callhistory.group.GroupCallParticipantPicker",
+    "com.whatsapp/.voip.VoipActivityV2",
+    "com.whatsapp/.voip.calling.ui.VoipActivity",
+}
+
+# Per-app forced launch intents (avoids landing on wrong tab via monkey)
+_APP_LAUNCH_INTENTS = {
+    "com.whatsapp": (
+        "am start -n com.whatsapp/.home.ui.HomeActivity "
+        "-a android.intent.action.MAIN "
+        "-c android.intent.category.LAUNCHER"
+    ),
+}
+
+# ── ADB helpers ───────────────────────────────────────────────────────────────
+
+def _shell(device, *args, timeout=20):
+    r = subprocess.run(
+        [ADB, "-s", device, "shell"] + list(str(a) for a in args),
+        capture_output=True, timeout=timeout
+    )
+    return r.stdout.decode(errors="replace").strip()
+
+def _adb_pull(device, src, dst, timeout=10):
+    return subprocess.run(
+        [ADB, "-s", device, "pull", src, dst],
+        capture_output=True, timeout=timeout
+    )
+
+def launch_app(device, package):
+    """Launch app via explicit intent if known, otherwise monkey."""
+    intent = _APP_LAUNCH_INTENTS.get(package)
+    if intent:
+        _shell(device, intent)
+    else:
+        _shell(device, "monkey", "-p", package,
+               "-c", "android.intent.category.LAUNCHER", "1")
+    time.sleep(2.5)
+
+def tap_xy(device, x, y):
+    _shell(device, "input", "tap", str(x), str(y))
+    time.sleep(1.5)
+
+def get_activity(device):
+    out = _shell(device, "dumpsys", "activity", "activities", timeout=10)
+    m = re.search(r"topResumedActivity[=:\s]+ActivityRecord\{[^ ]+\s+[^ ]+\s+([^ ]+)", out)
+    if m: return m.group(1)
+    m = re.search(r"mResumedActivity[:\s]+ActivityRecord\{[^ ]+\s+[^ ]+\s+([^ ]+)", out)
+    if m: return m.group(1)
+    return "unknown"
+
+# ── UI parsing ────────────────────────────────────────────────────────────────
+
+def get_elements(device):
+    _shell(device, "rm", "-f", DUMP_PATH)
+    result = _shell(device, "uiautomator", "dump", DUMP_PATH, timeout=20)
+    if "ERROR" in result.upper():
+        return []
+
+    tmp = tempfile.NamedTemporaryFile(suffix=".xml", delete=False)
+    tmp.close()
+    r = _adb_pull(device, DUMP_PATH, tmp.name)
+    if r.returncode != 0:
+        os.unlink(tmp.name)
+        return []
+
+    elements = []
+    try:
+        for _, elem in ET.iterparse(tmp.name, ["start"]):
+            if elem.attrib.get("clickable") != "true":
+                continue
+            cls = elem.attrib.get("class", "")
+            if cls in _SKIP_CLASSES:
+                continue
+            rid = elem.attrib.get("resource-id", "")
+            if any(rid.startswith(p) for p in _SKIP_RESOURCE_PREFIXES):
+                continue
+            if any(rid.endswith(s) for s in _SKIP_RESOURCE_SUFFIXES):
+                continue
+            bounds_str = elem.attrib.get("bounds", "")
+            try:
+                parts = bounds_str[1:-1].split("][")
+                x1, y1 = map(int, parts[0].split(","))
+                x2, y2 = map(int, parts[1].split(","))
+            except Exception:
+                continue
+            if (x2 - x1) * (y2 - y1) < 200:
+                continue
+            text = (elem.attrib.get("text", "") or
+                    elem.attrib.get("content-desc", "")).strip()
+            if _is_dangerous(text):
+                continue
+            if text.lower() in _SKIP_TEXTS:
+                continue
+            tl = text.lower()
+            if any(s in tl for s in _SKIP_TEXT_CONTAINS):
+                continue
+            elements.append({
+                "text":        text,
+                "resource_id": rid,
+                "cls":         cls,
+                "x":           (x1 + x2) // 2,
+                "y":           (y1 + y2) // 2,
+                "package":     elem.attrib.get("package", ""),
+            })
+    except Exception as e:
+        print(f"  [crawl] parse error: {e}")
+    finally:
+        try: os.unlink(tmp.name)
+        except: pass
+    return elements
+
+
+def _dedup(elements):
+    seen_rids = set()
+    out = []
+    for el in elements:
+        rid  = el.get("resource_id", "")
+        text = el.get("text", "").strip()
+        if not text and rid and rid in seen_rids:
+            continue
+        if rid:
+            seen_rids.add(rid)
+        out.append(el)
+    return out
+
+
+def _stable_fingerprint(sm: ScreenMap, activity: str, elements: list) -> str:
+    """
+    For activities in _ACTIVITY_ONLY_FINGERPRINT, return a hash based only
+    on the activity string. This gives a stable ID even when element content
+    changes between launches (contact rows, timestamps etc.).
+    For all other activities, use the normal label-based fingerprint.
+    """
+    import hashlib
+    act_clean = activity.split(" ")[0]  # strip trailing flags if any
+    if act_clean in _ACTIVITY_ONLY_FINGERPRINT:
+        blob = f"activity_only:{act_clean}"
+        return hashlib.md5(blob.encode()).hexdigest()[:12]
+    return sm.fingerprint(activity, elements)
+
+
+# ── Path replay ───────────────────────────────────────────────────────────────
+
+def navigate_to(device, package, action_path):
+    """
+    Launch app then replay action_path = [(x,y), ...] to reach a deep screen.
+    Returns (activity, elements) or (None, None) on failure.
+    """
+    launch_app(device, package)
+    for (x, y) in action_path:
+        tap_xy(device, x, y)
+        act = get_activity(device)
+        if package not in act:
+            return None, None
+    activity = get_activity(device)
+    elements = get_elements(device)
+    if package not in activity:
+        return None, None
+    return activity, elements
+
+
+# ── Crawler ───────────────────────────────────────────────────────────────────
+
+def crawl(device, package, max_depth=3, max_screens=80):
+    sm = ScreenMap()
+
+    print(f"""
+╔══════════════════════════════════════════════════════╗
+║   JARVIS CRAWLER  (Session 8 v3)                    ║
+║   App   : {package:<42}║
+║   Device: {device:<42}║
+║   Depth : {max_depth:<42}║
+╚══════════════════════════════════════════════════════╝
+""")
+
+    # Launch to correct starting screen
+    print(f"  Launching {package}...")
+    launch_app(device, package)
+    time.sleep(0.5)
+
+    activity = get_activity(device)
+    print(f"  Activity: {activity}")
+    if package not in activity:
+        print("  ERROR: could not launch app — aborting")
+        return
+
+    elements = get_elements(device)
+    print(f"  Elements found: {len(elements)}")
+
+    root_labels = [e.get("text", "") for e in elements]
+    if _has_call_overlay(root_labels):
+        print("\n  ⚠  Active call detected — end call then re-run. Aborting.\n")
+        return
+
+    # Use stable fingerprint for root
+    root_fp = _stable_fingerprint(sm, activity, elements)
+
+    # Register root in screen map if not already there
+    screens = sm._data["screens"]
+    if root_fp not in screens:
+        pkg      = activity.split("/")[0]
+        act_tail = activity.split("/")[-1].split(".")[-1]
+        labels   = [e.get("text","") for e in elements
+                    if e.get("text","") and not _is_dynamic(e.get("text",""))]
+        screens[root_fp] = {
+            "screen_id": root_fp,
+            "package":   pkg,
+            "activity":  activity,
+            "name":      f"{pkg.split('.')[-1]}_{act_tail}".lower(),
+            "labels":    labels[:30],
+            "visits":    1,
+            "tainted":   False,
+            "elements":  [{k:v for k,v in e.items()
+                           if k in ("text","resource_id","cls","x","y")}
+                          for e in elements[:40]],
+        }
+        sm._save()
+        print(f"[map] root screen registered: {screens[root_fp]['name']} ({root_fp})")
+    else:
+        screens[root_fp]["visits"] = screens[root_fp].get("visits",0) + 1
+        sm._save()
+
+    root_id     = root_fp
+    root_screen = sm.get_screen(root_id)
+    print(f"  Root screen: {root_screen['name'] if root_screen else root_id}\n")
+
+    # BFS: (screen_id, action_path_to_reach_it)
+    queue        = deque([(root_id, [])])
+    visited_tap  = set()    # (screen_id, x, y)
+    seen_screens = {root_id}
+    screens_found     = 1
+    transitions_found = 0
+
+    while queue and screens_found < max_screens:
+        screen_id, path_to_here = queue.popleft()
+
+        if len(path_to_here) >= max_depth:
+            continue
+
+        # Navigate to this screen
+        if path_to_here:
+            print(f"\n  Navigating to {screen_id[:8]} (depth {len(path_to_here)})...")
+            activity, elements = navigate_to(device, package, path_to_here)
+            if activity is None:
+                print(f"  [crawl] navigation failed — skipping")
+                continue
+
+            # Verify we landed on the right screen
+            curr_fp = _stable_fingerprint(sm, activity, elements)
+            if curr_fp != screen_id:
+                # Activity-only screens: accept if activity matches
+                act_clean = activity.split(" ")[0]
+                expected_screen = sm.get_screen(screen_id)
+                expected_act = (expected_screen or {}).get("activity","").split(" ")[0]
+                if act_clean == expected_act:
+                    # Close enough — update the stored screen_id mapping
+                    print(f"  [crawl] activity match (dynamic content) — proceeding")
+                else:
+                    print(f"  [crawl] wrong screen ({curr_fp[:8]} != {screen_id[:8]}) — skipping")
+                    continue
+        else:
+            activity = get_activity(device)
+            elements = get_elements(device)
+
+        # Skip activities we don't want to explore
+        act_clean = activity.split(" ")[0]
+        if act_clean in _SKIP_ACTIVITIES:
+            print(f"  [crawl] skipping activity: {act_clean.split('.')[-1]}")
+            continue
+
+        elements = _dedup(elements)
+        screen_info = sm.get_screen(screen_id)
+        name = screen_info["name"] if screen_info else screen_id[:8]
+        print(f"\n  [depth {len(path_to_here)}] Exploring: {name}  ({len(elements)} elements)")
+
+        if not elements:
+            print("    [warn] no clickable elements — skipping")
+            continue
+
+        for el in elements:
+            x    = el["x"]
+            y    = el["y"]
+            text = el.get("text","") or f"element_{x}_{y}"
+            tap_key = (screen_id, x, y)
+
+            if tap_key in visited_tap:
+                continue
+            if _is_dangerous(text):
+                continue
+
+            visited_tap.add(tap_key)
+            print(f"    → tap {text!r:40}", end="", flush=True)
+
+            # Navigate cleanly to this screen then tap
+            if path_to_here:
+                r_act, r_els = navigate_to(device, package, path_to_here)
+                if r_act is None:
+                    print(f" ✗ navigation failed")
+                    continue
+            else:
+                launch_app(device, package)
+
+            tap_xy(device, x, y)
+
+            new_activity = get_activity(device)
+            new_elements = get_elements(device)
+
+            if package not in new_activity:
+                print(f" ✗ left app")
+                continue
+
+            # Skip unwanted activities
+            new_act_clean = new_activity.split(" ")[0]
+            if new_act_clean in _SKIP_ACTIVITIES:
+                print(f" ✗ skip ({new_act_clean.split('.')[-1]})")
+                continue
+
+            new_fp = _stable_fingerprint(sm, new_activity, new_elements)
+
+            # Register new screen if needed
+            if new_fp not in sm._data["screens"]:
+                new_id = sm.identify(new_activity, new_elements)
+                if new_id is None:
+                    print(f" ✗ unknown package")
+                    continue
+            else:
+                new_id = new_fp
+                sm._data["screens"][new_fp]["visits"] = \
+                    sm._data["screens"][new_fp].get("visits",0) + 1
+                sm._save()
+
+            new_screen = sm.get_screen(new_id)
+            if new_screen and new_screen.get("tainted"):
+                print(f" ✗ call overlay")
+                continue
+
+            if new_id == screen_id:
+                print(f" · same screen")
+                continue
+
+            sm.record_transition(screen_id, text, new_id)
+            transitions_found += 1
+
+            new_name = new_screen["name"] if new_screen else new_id[:8]
+
+            if new_id not in seen_screens:
+                print(f" ✓ new: {new_name}")
+                seen_screens.add(new_id)
+                screens_found += 1
+                new_path = path_to_here + [(x, y)]
+                queue.append((new_id, new_path))
+            else:
+                print(f" → {new_name}")
+
+    print(f"""
+╔══════════════════════════════════════════════════════╗
+║   CRAWL COMPLETE                                    ║
+╚══════════════════════════════════════════════════════╝""")
+    sm.print_stats()
+    print(f"\n  {screens_found} screens, {transitions_found} new transitions")
+    print(f"  Data: ~/workflows/screen_map.json")
+
+
+def main():
+    p = argparse.ArgumentParser()
+    p.add_argument("--app",         required=True)
+    p.add_argument("--device",      required=True)
+    p.add_argument("--depth",       type=int, default=3)
+    p.add_argument("--max-screens", type=int, default=80)
+    args = p.parse_args()
+    crawl(args.device, args.app, args.depth, args.max_screens)
+
+if __name__ == "__main__":
+    main()
+
+
 //===== TERMUXFILE: transition_memory.json =====
 {
   "e08bf4d7e306|Ask Meta AI or Search": {

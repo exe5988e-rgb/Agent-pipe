@@ -16732,6 +16732,161 @@
           "y": 2632
         }
       ]
+    },
+    "c3507cfcd293": {
+      "screen_id": "c3507cfcd293",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/com.google.android.apps.youtube.app.watchwhile.InternalMainActivity",
+      "name": "youtube_internalmainactivity",
+      "labels": [
+        "Voice search",
+        "Edit suggestion taki taki slowed reverb",
+        "Edit suggestion tiki tiki slowed edit",
+        "Edit suggestion tiki tiki slowed ringtone",
+        "Edit suggestion tiki tiki slowed ultra",
+        "Edit suggestion tiki tiki slowed edit audio",
+        "Edit suggestion tiki tiki slowed 1 hour",
+        "Edit suggestion tiki tiki slowed edit tutorial",
+        "Edit suggestion tiki tiki slowed sadie sink",
+        "Edit suggestion tiki tiki slowed anime edit"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Voice search",
+          "resource_id": "com.google.android.youtube:id/fab",
+          "cls": "android.widget.ImageView",
+          "x": 1114,
+          "y": 1655
+        },
+        {
+          "text": "",
+          "resource_id": "com.google.android.youtube:id/linearLayout",
+          "cls": "android.view.ViewGroup",
+          "x": 620,
+          "y": 391
+        },
+        {
+          "text": "Edit suggestion taki taki slowed reverb",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion",
+          "cls": "android.widget.ImageView",
+          "x": 1156,
+          "y": 391
+        },
+        {
+          "text": "",
+          "resource_id": "com.google.android.youtube:id/linearLayout",
+          "cls": "android.view.ViewGroup",
+          "x": 620,
+          "y": 559
+        },
+        {
+          "text": "Edit suggestion tiki tiki slowed edit",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion",
+          "cls": "android.widget.ImageView",
+          "x": 1156,
+          "y": 559
+        },
+        {
+          "text": "",
+          "resource_id": "com.google.android.youtube:id/linearLayout",
+          "cls": "android.view.ViewGroup",
+          "x": 620,
+          "y": 727
+        },
+        {
+          "text": "Edit suggestion tiki tiki slowed ringtone",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion",
+          "cls": "android.widget.ImageView",
+          "x": 1156,
+          "y": 727
+        },
+        {
+          "text": "",
+          "resource_id": "com.google.android.youtube:id/linearLayout",
+          "cls": "android.view.ViewGroup",
+          "x": 620,
+          "y": 895
+        },
+        {
+          "text": "Edit suggestion tiki tiki slowed ultra",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion",
+          "cls": "android.widget.ImageView",
+          "x": 1156,
+          "y": 895
+        },
+        {
+          "text": "",
+          "resource_id": "com.google.android.youtube:id/linearLayout",
+          "cls": "android.view.ViewGroup",
+          "x": 620,
+          "y": 1063
+        },
+        {
+          "text": "Edit suggestion tiki tiki slowed edit audio",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion",
+          "cls": "android.widget.ImageView",
+          "x": 1156,
+          "y": 1063
+        },
+        {
+          "text": "",
+          "resource_id": "com.google.android.youtube:id/linearLayout",
+          "cls": "android.view.ViewGroup",
+          "x": 620,
+          "y": 1231
+        },
+        {
+          "text": "Edit suggestion tiki tiki slowed 1 hour",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion",
+          "cls": "android.widget.ImageView",
+          "x": 1156,
+          "y": 1231
+        },
+        {
+          "text": "",
+          "resource_id": "com.google.android.youtube:id/linearLayout",
+          "cls": "android.view.ViewGroup",
+          "x": 620,
+          "y": 1399
+        },
+        {
+          "text": "Edit suggestion tiki tiki slowed edit tutorial",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion",
+          "cls": "android.widget.ImageView",
+          "x": 1156,
+          "y": 1399
+        },
+        {
+          "text": "",
+          "resource_id": "com.google.android.youtube:id/linearLayout",
+          "cls": "android.view.ViewGroup",
+          "x": 620,
+          "y": 1567
+        },
+        {
+          "text": "Edit suggestion tiki tiki slowed sadie sink",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion",
+          "cls": "android.widget.ImageView",
+          "x": 1156,
+          "y": 1567
+        },
+        {
+          "text": "",
+          "resource_id": "com.google.android.youtube:id/linearLayout",
+          "cls": "android.view.ViewGroup",
+          "x": 620,
+          "y": 1688
+        },
+        {
+          "text": "Edit suggestion tiki tiki slowed anime edit",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion",
+          "cls": "android.widget.ImageView",
+          "x": 1156,
+          "y": 1688
+        }
+      ]
     }
   },
   "transitions": {
@@ -16938,7 +17093,8 @@
     "e1c8fa5142a3|Subscriptions": "da00409df024",
     "e1c8fa5142a3|You": "f911caa9edca",
     "bf229eb46cda|Voice search": "ab612c16894d",
-    "bf229eb46cda|element_620_559": "5ca448df8e66"
+    "bf229eb46cda|element_620_559": "5ca448df8e66",
+    "bf229eb46cda|Edit suggestion tiki tiki slowed": "c3507cfcd293"
   }
 }
 

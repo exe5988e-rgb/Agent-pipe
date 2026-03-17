@@ -39279,6 +39279,138 @@
           "resource_id": ""
         }
       ]
+    },
+    "5d3e492581c0": {
+      "screen_id": "5d3e492581c0",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Open the homepage",
+        "element_2",
+        "element_3",
+        "google.com/search?client=ms-android-oneplus-terr1-rso3&hs=ojC&sca_esv=4ae20d8bd47daad1&sxsrf=ANbL-n5yVUuhq_Uh0a5RVsnZC3YLNp-EHA:1773753323451&q=Restaurants+ne",
+        "See 21 tabs",
+        "Customise and control Google Chrome",
+        "element_7",
+        "element_8",
+        "element_9",
+        "element_10",
+        "element_11",
+        "element_12",
+        "Expand map",
+        "element_14",
+        "element_15"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "element_2",
+          "x": 620,
+          "y": 1455,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.android.chrome:id/compositor_view_holder"
+        },
+        {
+          "text": "element_3",
+          "x": 224,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "google.com/search?client=ms-android-oneplus-terr1-rso3&hs=ojC&sca_esv=4ae20d8bd47daad1&sxsrf=ANbL-n5yVUuhq_Uh0a5RVsnZC3YLNp-EHA:1773753323451&q=Restaurants+ne",
+          "x": 592,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "See 21 tabs",
+          "x": 988,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 1526,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_8",
+          "x": 620,
+          "y": 427,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_9",
+          "x": 227,
+          "y": 427,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_10",
+          "x": 558,
+          "y": 427,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_11",
+          "x": 887,
+          "y": 427,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_12",
+          "x": 1146,
+          "y": 427,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Expand map",
+          "x": 1100,
+          "y": 417,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_14",
+          "x": 620,
+          "y": 1292,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_15",
+          "x": 620,
+          "y": 2275,
+          "cls": "android.view.View",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -39623,7 +39755,8 @@
     "95d66370b486|tap:Clear input": "93e7bdafeb42",
     "93e7bdafeb42|swipe": "af94bed40cff",
     "af94bed40cff|tap:element_11": "523b15b7d0c6",
-    "523b15b7d0c6|swipe": "8cd8d5199600"
+    "523b15b7d0c6|swipe": "8cd8d5199600",
+    "8cd8d5199600|swipe": "5d3e492581c0"
   }
 }
 

@@ -31182,6 +31182,194 @@
           "resource_id": ""
         }
       ]
+    },
+    "557559bbb916": {
+      "screen_id": "557559bbb916",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "element_1",
+        "element_2",
+        "Search Google or type URL",
+        "Start voice search",
+        "Search with your camera using Google Lens",
+        "16 suggested items in list below.",
+        "element_7",
+        "Share link to search results page for: weather today ranchi. Source: google.com",
+        "Copy link to search results page for: weather today ranchi. Source: google.com",
+        "Edit search query: weather today ranchi",
+        "element_11",
+        "Refine: weather ranchi",
+        "element_13",
+        "Refine: weather today jamshedpur",
+        "element_15",
+        "Refine: weather today dhanbad",
+        "element_17",
+        "Refine: weather in ranchi today",
+        "element_19",
+        "Refine: weather tomorrow ranchi",
+        "element_21",
+        "Refine: weather today ramgarh"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 620,
+          "y": 1455,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_2",
+          "x": 126,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "Search Google or type URL",
+          "x": 550,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "Start voice search",
+          "x": 960,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/mic_button"
+        },
+        {
+          "text": "Search with your camera using Google Lens",
+          "x": 1128,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/lens_camera_button"
+        },
+        {
+          "text": "16 suggested items in list below.",
+          "x": 620,
+          "y": 1058,
+          "cls": "androidx.recyclerview.widget.RecyclerView",
+          "resource_id": "com.android.chrome:id/omnibox_suggestions_dropdown"
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 433,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Share link to search results page for: weather today ranchi. Source: google.com",
+          "x": 792,
+          "y": 433,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Copy link to search results page for: weather today ranchi. Source: google.com",
+          "x": 960,
+          "y": 433,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Edit search query: weather today ranchi",
+          "x": 1128,
+          "y": 433,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_11",
+          "x": 620,
+          "y": 769,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: weather ranchi",
+          "x": 1128,
+          "y": 769,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_13",
+          "x": 620,
+          "y": 965,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: weather today jamshedpur",
+          "x": 1128,
+          "y": 965,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_15",
+          "x": 620,
+          "y": 1161,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: weather today dhanbad",
+          "x": 1128,
+          "y": 1161,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_17",
+          "x": 620,
+          "y": 1357,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: weather in ranchi today",
+          "x": 1128,
+          "y": 1357,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_19",
+          "x": 620,
+          "y": 1553,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: weather tomorrow ranchi",
+          "x": 1128,
+          "y": 1553,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_21",
+          "x": 620,
+          "y": 1716,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: weather today ramgarh",
+          "x": 1128,
+          "y": 1716,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -31480,7 +31668,8 @@
     "73e58d141483|tap:element_15": "963eb2fb8785",
     "963eb2fb8785|tap:element_5": "8bd4aa0f7819",
     "fc36bc1fb8c7|tap:element_3": "e78c6d4ab5c3",
-    "e78c6d4ab5c3|tap:Minimised player": "d8b0a05d806b"
+    "e78c6d4ab5c3|tap:Minimised player": "d8b0a05d806b",
+    "ec2d5cc0aa50|tap:See 20 tabs": "557559bbb916"
   }
 }
 

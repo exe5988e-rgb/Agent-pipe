@@ -10825,6 +10825,8 @@ RuntimeError: No LLM backend available.
 [mem] invalidated com.android.settings/.SubSettings
 [step] step=5/30 done=False history=['opt4_launch:settings', 'tap [2] Back', 'tap [7] WiFi', 'tap [5] element_5', 'tap [2] element_2'][parser] DEBUG normalized: 'tap 3'
 [parser] INFO parsed 'tap 3' -> {'action': 'tap', 'target': 3}
+[parser] DEBUG normalized: 'tap 4'
+[parser] INFO parsed 'tap 4' -> {'action': 'tap', 'target': 4}
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

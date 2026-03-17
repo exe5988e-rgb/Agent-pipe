@@ -33647,7 +33647,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 2,
+      "visits": 3,
       "tainted": false,
       "elements": [
         {
@@ -34250,6 +34250,122 @@
           "resource_id": ""
         }
       ]
+    },
+    "225fda90f5ad": {
+      "screen_id": "225fda90f5ad",
+      "package": "com.android.settings",
+      "activity": "com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity",
+      "name": "settings_oplussettingshomepageactivity",
+      "labels": [
+        "Search box",
+        "Search",
+        "element_3",
+        "element_4",
+        "element_5",
+        "element_6",
+        "element_7",
+        "element_8",
+        "element_9",
+        "element_10",
+        "element_11",
+        "element_12",
+        "element_13"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Search box",
+          "x": 620,
+          "y": 603,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.android.settings:id/searchView"
+        },
+        {
+          "text": "Search",
+          "x": 683,
+          "y": 603,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.settings:id/search_src_text"
+        },
+        {
+          "text": "element_3",
+          "x": 620,
+          "y": 1733,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "android:id/list_container"
+        },
+        {
+          "text": "element_4",
+          "x": 620,
+          "y": 864,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_5",
+          "x": 620,
+          "y": 1143,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_6",
+          "x": 620,
+          "y": 1329,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 1511,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_8",
+          "x": 620,
+          "y": 1693,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_9",
+          "x": 620,
+          "y": 1878,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_10",
+          "x": 620,
+          "y": 2144,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_11",
+          "x": 620,
+          "y": 2354,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_12",
+          "x": 620,
+          "y": 2599,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_13",
+          "x": 620,
+          "y": 2733,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -34571,7 +34687,8 @@
     "1b272452b866|tap:More options": "307d903852e1",
     "955fca488005|type": "a0a54922f458",
     "efa43c0a8f87|opt4_launch:whatsapp": "b37f4f8d4aed",
-    "efa43c0a8f87|opt4_launch:youtube": "1dbfe781af53"
+    "efa43c0a8f87|opt4_launch:youtube": "1dbfe781af53",
+    "efa43c0a8f87|opt4_launch:settings": "225fda90f5ad"
   }
 }
 

@@ -3165,6 +3165,11 @@ if __name__ == "__main__":
     "to": "1dbfe781af53",
     "count": 1,
     "last_seen": 1773735507.4786468
+  },
+  "efa43c0a8f87|opt4_launch:settings": {
+    "to": "225fda90f5ad",
+    "count": 1,
+    "last_seen": 1773735528.2036657
   }
 }
 
@@ -3181,6 +3186,7 @@ if __name__ == "__main__":
 [13:48:28]   PASS  13.2s  skills=6
 [13:48:33] 
 [3/33] [1★] [settings] Open Settings
+[13:48:50]   PASS  13.8s  skills=6
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4348,7 +4354,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-17T13:48:28.712363",
+  "run_at": "2026-03-17T13:48:50.715704",
   "skills_before": 6,
   "skills_current": 6,
   "results": [
@@ -4367,6 +4373,15 @@ if __name__ == "__main__":
       "difficulty": 1,
       "success": true,
       "elapsed_s": 13.2,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Open Settings",
+      "category": "settings",
+      "difficulty": 1,
+      "success": true,
+      "elapsed_s": 13.8,
       "error": null,
       "retried": false
     }
@@ -4428,7 +4443,7 @@ if __name__ == "__main__":
         "action": "done"
       }
     ],
-    "uses": 4,
+    "uses": 5,
     "version": 2
   },
   {
@@ -4707,6 +4722,109 @@ nohup: ignoring input
     wirelesssettings     1 screens
     dialer               1 screens
   TransitionMemory: 319 transitions (251 confirmed, threshold=2)
+
+########################################################
+  JARVIS  |  Open Settings
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 261 screens (0 tainted), 319 transitions
+    whatsapp             141 screens
+    youtube              52 screens
+    vending              21 screens
+    chrome               21 screens
+    settings             11 screens
+    launcher             7 screens
+    termux               5 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+    dialer               1 screens
+  TransitionMemory: 319 transitions (251 confirmed, threshold=2)
+[init] task_apps (ordered): ['settings']
+
+========================================================
+  STEP 1  |  Open Settings
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3880690 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 15 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=33ba42b30171 elements=15
+[step] UI: ['Folder: Tools', 'Instagram', 'Tools', 'Grok', 'Roblox', 'Hollow Knight', 'Discord', 'OC Auto Clicker']
+[map] screen: launcher_launcher (efa43c0a)
+[OPT4v2] launcher -> launching settings (com.android.settings)
+[llm] OPT4v2 am start: com.android.settings
+[OPT4v2] app_index -> 1/1
+
+========================================================
+  STEP 2  |  Open Settings
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (212597 bytes)
+[ui_parser] activity=com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity
+[ui_parser] signal='com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity'
+[mem] miss (unknown): com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 13 elements from 192.168.29.48:34011
+[mem] stored com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity hash=a5e8e83d4ae9 elements=13
+[step] UI: ['Search box', 'Search', 'element_3', 'element_4', 'element_5', 'element_6', 'element_7', 'element_8']
+[map] new screen: settings_oplussettingshomepageactivity (225fda90f5ad)
+[map] transition: launcher_launcher --[opt4_launch:settings]--> settings_oplussettingshomepageactivity
+[map] screen: settings_oplussettingshomepageactivity (225fda90)
+[skill] matched: 'open settings and go'  score=1.00  act_match=False
+[skill] executing 4 steps from memory
+[skill] action: {'action': 'tap', 'target': 2}
+[input] dispatching: TouchEvent(x=683, y=603)
+[input] adb -s 192.168.29.48:34011 shell input tap 683 603
+[mem] invalidated com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity
+[skill] action: {'action': 'type', 'text': '$QUERY'}
+[input] dispatching: SetTextEvent('$QUERY')
+[input] adb -s 192.168.29.48:34011 shell input text $QUERY
+[input] stderr: Exception occurred while executing 'text':
+java.lang.IllegalArgumentException: Argument expected after "text"
+	at com.android.modules.utils.BasicShellCommandHandler.getNextArgRequired(BasicShellCommandHandler.java:295)
+	at com.android.server.input.InputShellCommand.runText(InputShellCommand.java:382)
+	at com.android.server.input.InputShellCommand.onCommand(InputShellCommand.java:307)
+	at com.android.modules.utils.BasicShellCommandHandler.exec(BasicShellCommandHandler.java:97)
+	at android.os.ShellCommand.exec(ShellCommand.java:38)
+	at com.android.server.input.InputManagerService.onShellCommand(InputManagerService.java:4107)
+	at android.os.Binder.shellCommand(Binder.java:1164)
+	at android.os.Binder.onTransact(Binder.java:966)
+	at android.hardware.input.IInputManager$Stub.onTransact(IInputManager.java:1576)
+	at android.os.Binder.execTransactInternal(Binder.java:1444)
+	at android.os.Binder.execTransact(Binder.java:1378)
+[skill] action: {'action': 'tap', 'target': 5}
+[input] dispatching: TouchEvent(x=620, y=1143)
+[input] adb -s 192.168.29.48:34011 shell input tap 620 1143
+[skill] action: {'action': 'done'}
+[input] DONE — no dispatch
+[skill] done — skipped Claude
+[step] step=5/5 done=True history=['opt4_launch:settings', 'tap [2] Search', "type '$QUERY'", 'tap [5] element_5', 'done']
+
+[controller] done in 5 steps
+
+[controller] history:
+  1. opt4_launch:settings
+  2. tap [2] Search
+  3. type '$QUERY'
+  4. tap [5] element_5
+  5. done
+
+  Screen Map: 262 screens (0 tainted), 320 transitions
+    whatsapp             141 screens
+    youtube              52 screens
+    vending              21 screens
+    chrome               21 screens
+    settings             12 screens
+    launcher             7 screens
+    termux               5 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+    dialer               1 screens
+  TransitionMemory: 320 transitions (251 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

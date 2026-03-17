@@ -19960,7 +19960,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 72,
+      "visits": 73,
       "tainted": false,
       "elements": [
         {
@@ -34271,7 +34271,7 @@
         "element_12",
         "element_13"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {
@@ -36166,7 +36166,7 @@
     "b128d851f827|tap:None": "955fca488005",
     "366c9a634a55|type": "3770450be101",
     "4203f6dd32c9|opt4_launch:youtube": "6d33d4320f5d",
-    "4203f6dd32c9|opt4_launch:settings": "2b412b36d6a6",
+    "4203f6dd32c9|opt4_launch:settings": "225fda90f5ad",
     "4203f6dd32c9|opt4_launch:chrome": "ec2d5cc0aa50",
     "4203f6dd32c9|opt4_launch:play store": "06c59ed8f4e7",
     "7c51d7e864c3|tap:You": "47d448eaba6d",

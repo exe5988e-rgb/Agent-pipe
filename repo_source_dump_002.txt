@@ -31666,6 +31666,42 @@
           "resource_id": "wikipedia25-cta-button"
         }
       ]
+    },
+    "eb691f0a02c2": {
+      "screen_id": "eb691f0a02c2",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "element_1",
+        "element_2",
+        "element_3"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 687,
+          "y": 496,
+          "cls": "android.widget.ListView",
+          "resource_id": "com.android.chrome:id/menu_list"
+        },
+        {
+          "text": "element_2",
+          "x": 687,
+          "y": 412,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_3",
+          "x": 687,
+          "y": 580,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -31967,7 +32003,8 @@
     "e78c6d4ab5c3|tap:Minimised player": "d8b0a05d806b",
     "ec2d5cc0aa50|tap:See 20 tabs": "557559bbb916",
     "557559bbb916|type": "8f57bf05dc92",
-    "8f57bf05dc92|tap:element_7": "a3d74657825d"
+    "8f57bf05dc92|tap:element_7": "a3d74657825d",
+    "a3d74657825d|long press": "eb691f0a02c2"
   }
 }
 

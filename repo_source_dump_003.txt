@@ -3395,6 +3395,11 @@ if __name__ == "__main__":
     "to": "7fe6474ada84",
     "count": 14,
     "last_seen": 1773757018.9024284
+  },
+  "7fe6474ada84|opt4_launch:whatsapp": {
+    "to": "47282d432293",
+    "count": 1,
+    "last_seen": 1773757030.7782464
   }
 }
 
@@ -4834,7 +4839,7 @@ if __name__ == "__main__":
         "action": "done"
       }
     ],
-    "uses": 7,
+    "uses": 8,
     "version": 2
   },
   {

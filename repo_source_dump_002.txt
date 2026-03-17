@@ -43889,6 +43889,170 @@
           "resource_id": ""
         }
       ]
+    },
+    "47282d432293": {
+      "screen_id": "47282d432293",
+      "package": "com.whatsapp",
+      "activity": "com.whatsapp/.home.ui.HomeActivity",
+      "name": "whatsapp_homeactivity",
+      "labels": [
+        "element_1",
+        "Scan to Pay",
+        "More options",
+        "Ask Meta AI or Search",
+        "Message your assistant",
+        "Swipe down to reveal additional actions",
+        "All filter, , selected",
+        "Unread filter, 2, unselected",
+        "Favourites filter, , unselected",
+        "Groups filter, , unselected",
+        "Family filter, , unselected",
+        "Add new list",
+        "New chat",
+        "element_14",
+        "Chats, 2 new notifications",
+        "Updates",
+        "Communities",
+        "Calls",
+        "You"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 1386,
+          "y": 520,
+          "cls": "androidx.viewpager.widget.ViewPager",
+          "resource_id": "com.whatsapp:id/pager"
+        },
+        {
+          "text": "Scan to Pay",
+          "x": 2409,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/menuitem_payment_qr"
+        },
+        {
+          "text": "More options",
+          "x": 2563,
+          "y": 237,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/menuitem_overflow"
+        },
+        {
+          "text": "Ask Meta AI or Search",
+          "x": 1386,
+          "y": 433,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/my_search_bar"
+        },
+        {
+          "text": "Message your assistant",
+          "x": 2475,
+          "y": 510,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/extended_mini_fab"
+        },
+        {
+          "text": "Swipe down to reveal additional actions",
+          "x": 1386,
+          "y": 723,
+          "cls": "androidx.recyclerview.widget.RecyclerView",
+          "resource_id": "android:id/list"
+        },
+        {
+          "text": "All filter, , selected",
+          "x": 265,
+          "y": 657,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Unread filter, 2, unselected",
+          "x": 495,
+          "y": 657,
+          "cls": "android.widget.RadioButton",
+          "resource_id": "com.whatsapp:id/conversations_filter_debug_view_id_unread"
+        },
+        {
+          "text": "Favourites filter, , unselected",
+          "x": 810,
+          "y": 657,
+          "cls": "android.widget.RadioButton",
+          "resource_id": "com.whatsapp:id/conversations_filter_debug_view_id_favorite"
+        },
+        {
+          "text": "Groups filter, , unselected",
+          "x": 1108,
+          "y": 657,
+          "cls": "android.widget.RadioButton",
+          "resource_id": "com.whatsapp:id/conversations_filter_debug_view_id_groups"
+        },
+        {
+          "text": "Family filter, , unselected",
+          "x": 1364,
+          "y": 657,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Add new list",
+          "x": 1562,
+          "y": 657,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "New chat",
+          "x": 2479,
+          "y": 748,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/fab"
+        },
+        {
+          "text": "element_14",
+          "x": 1386,
+          "y": 835,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/conversations_archive_header"
+        },
+        {
+          "text": "Chats, 2 new notifications",
+          "x": 388,
+          "y": 1044,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Updates",
+          "x": 887,
+          "y": 1044,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Communities",
+          "x": 1386,
+          "y": 1044,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Calls",
+          "x": 1885,
+          "y": 1044,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "You",
+          "x": 2384,
+          "y": 1044,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -44256,7 +44420,8 @@
     "f6971c299e21|tap:Bugjaeger": "5efa4e5116e0",
     "5efa4e5116e0|home": "a745c54d7a35",
     "a745c54d7a35|opt4_launch:chrome": "271588e841c7",
-    "271588e841c7|type": "7fe6474ada84"
+    "271588e841c7|type": "7fe6474ada84",
+    "7fe6474ada84|opt4_launch:whatsapp": "47282d432293"
   }
 }
 

@@ -2908,6 +2908,7 @@ if __name__ == "__main__":
 [11:23:00]   PASS  70.8s  skills=2
 [11:23:05] 
 [12/33] [2★] [youtube] Search for MrBeast on YouTube
+[11:27:19]   PASS  251.1s  skills=2
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4075,7 +4076,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-17T11:23:00.334201",
+  "run_at": "2026-03-17T11:27:19.607209",
   "skills_before": 0,
   "skills_current": 2,
   "results": [
@@ -4175,6 +4176,15 @@ if __name__ == "__main__":
       "difficulty": 2,
       "success": true,
       "elapsed_s": 70.8,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Search for MrBeast on YouTube",
+      "category": "youtube",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 251.1,
       "error": null,
       "retried": false
     }
@@ -5593,6 +5603,106 @@ RuntimeError: No LLM backend available.
 [parser] INFO parsed 'tap 4' -> {'action': 'tap', 'target': 4}
 [parser] DEBUG normalized: 'tap 5'
 [parser] INFO parsed 'tap 5' -> {'action': 'tap', 'target': 5}
+
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1186617 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 23 elements from 192.168.29.48:34011
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=a8e506adbb39 elements=23
+[step] UI: ['Navigate up', 'Clear', 'mrbeast', 'element_4', 'element_5', 'Edit suggestion mrbeast gaming', 'element_7', 'Edit suggestion mrbeast 5 ex girlfriend']
+[map] screen: youtube_shell$homeactivity (501f2109)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 4'
+[step] LLM: 'tap 4'
+[step] action: {'action': 'tap', 'target': 4}
+[input] dispatching: TouchEvent(x=620, y=391)
+[input] adb -s 192.168.29.48:34011 shell input tap 620 391
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[step] step=6/10 done=False history=['opt4_launch:youtube', 'tap [3] Search', "type 'MrBeast'", 'tap [6] Edit suggestion mrbeast', 'tap [3] mrbeast', 'tap [4] element_4']
+
+========================================================
+  STEP 7  |  Search for MrBeast on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1176730 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 23 elements from 192.168.29.48:34011
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=a8e506adbb39 elements=23
+[step] UI: ['Navigate up', 'Clear', 'mrbeast', 'element_4', 'element_5', 'Edit suggestion mrbeast gaming', 'element_7', 'Edit suggestion mrbeast 5 ex girlfriend']
+[map] screen: youtube_shell$homeactivity (501f2109)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 5'
+[step] LLM: 'tap 5'
+[step] action: {'action': 'tap', 'target': 5}
+[input] dispatching: TouchEvent(x=620, y=1016)
+[input] adb -s 192.168.29.48:34011 shell input tap 620 1016
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[step] step=7/10 done=False history=['opt4_launch:youtube', 'tap [3] Search', "type 'MrBeast'", 'tap [6] Edit suggestion mrbeast', 'tap [3] mrbeast', 'tap [4] element_4', 'tap [5] element_5']
+
+========================================================
+  STEP 8  |  Search for MrBeast on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (2334387 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] dump failed: ''
+[step] UI: []
+[map] new screen: youtube_shell$homeactivity (8bd4aa0f7819)
+[map] transition: youtube_shell$homeactivity --[tap:Edit suggestion mrbeast gaming]--> youtube_shell$homeactivity
+[map] screen: youtube_shell$homeactivity (8bd4aa0f)
+[step] empty UI (1/8)
+
+========================================================
+  STEP 9  |  Search for MrBeast on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (2303742 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] dump failed: ''
+[step] UI: []
+[map] screen: youtube_shell$homeactivity (8bd4aa0f)
+[step] empty UI (2/8)
+
+========================================================
+  STEP 10  |  Search for MrBeast on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (2133089 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] dump failed: ''
+[step] UI: []
+[map] screen: youtube_shell$homeactivity (8bd4aa0f)
+[step] empty UI (3/8)
+
+[controller] history:
+  1. opt4_launch:youtube
+  2. tap [3] Search
+  3. type 'MrBeast'
+  4. tap [6] Edit suggestion mrbeast
+  5. tap [3] mrbeast
+  6. tap [4] element_4
+  7. tap [5] element_5
+
+  Screen Map: 193 screens (0 tainted), 259 transitions
+    whatsapp             132 screens
+    youtube              35 screens
+    vending              16 screens
+    launcher             4 screens
+    termux               3 screens
+    unknown              1 screens
+    settings             1 screens
+    chrome               1 screens
+  TransitionMemory: 259 transitions (244 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

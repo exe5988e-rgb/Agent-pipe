@@ -2951,6 +2951,8 @@ if __name__ == "__main__":
 [11:32:12] 
 [16/33] [2★] [settings] Open Settings and check battery percentage
 [11:33:00]   PASS  44.6s  skills=3
+[11:33:05] 
+[17/33] [2★] [chrome] Open Chrome and go to google.com
 
 
 //===== TERMUXFILE: tap_logger.py =====

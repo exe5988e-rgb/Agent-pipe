@@ -3010,6 +3010,8 @@ if __name__ == "__main__":
 [11:37:21] 
 [19/33] [2★] [chrome] Search for weather today in Chrome
 [11:41:49]   PASS  264.6s  skills=5
+[11:41:54] 
+[20/33] [2★] [playstore] Search for Spotify on Play Store
 
 
 //===== TERMUXFILE: tap_logger.py =====

@@ -23569,6 +23569,193 @@
       "visits": 3,
       "tainted": false,
       "elements": []
+    },
+    "5d79fdb685d6": {
+      "screen_id": "5d79fdb685d6",
+      "package": "com.android.settings",
+      "activity": "com.android.settings/.Settings",
+      "name": "settings_settings",
+      "labels": [
+        "Search",
+        "Search",
+        "element_4",
+        "Clear",
+        "time",
+        "displa",
+        "double tap",
+        "wireless",
+        "wire",
+        "lock",
+        "battery oer",
+        "stor",
+        "element_14",
+        "OTG connection",
+        "Hide Apps",
+        "Apps",
+        "Wireless debugging",
+        "All files access",
+        "Accessibility",
+        "Default apps",
+        "Device & app notifications"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Search",
+          "x": 620,
+          "y": 230,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.android.settings:id/searchView"
+        },
+        {
+          "text": "Search",
+          "x": 573,
+          "y": 230,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.settings:id/search_src_text"
+        },
+        {
+          "text": "Cancel",
+          "x": 1109,
+          "y": 230,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_4",
+          "x": 620,
+          "y": 960,
+          "cls": "android.widget.ScrollView",
+          "resource_id": "com.android.settings:id/search_history_scroll_View"
+        },
+        {
+          "text": "Clear",
+          "x": 1138,
+          "y": 411,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.android.settings:id/search_delete_img"
+        },
+        {
+          "text": "time",
+          "x": 147,
+          "y": 559,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "displa",
+          "x": 364,
+          "y": 559,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "double tap",
+          "x": 632,
+          "y": 559,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "wireless",
+          "x": 920,
+          "y": 559,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "wire",
+          "x": 147,
+          "y": 692,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "lock",
+          "x": 357,
+          "y": 692,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "battery oer",
+          "x": 619,
+          "y": 692,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "stor",
+          "x": 881,
+          "y": 692,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_14",
+          "x": 1049,
+          "y": 692,
+          "cls": "android.widget.Button",
+          "resource_id": "com.android.settings:id/coui_chip_group_expand_button"
+        },
+        {
+          "text": "OTG connection",
+          "x": 279,
+          "y": 1035,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Hide Apps",
+          "x": 700,
+          "y": 1035,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Apps",
+          "x": 1020,
+          "y": 1035,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Wireless debugging",
+          "x": 313,
+          "y": 1169,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "All files access",
+          "x": 810,
+          "y": 1169,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Accessibility",
+          "x": 247,
+          "y": 1303,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Default apps",
+          "x": 658,
+          "y": 1303,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Device & app notifications",
+          "x": 332,
+          "y": 1437,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -23830,7 +24017,8 @@
     "8e74d0f0627a|tap:element_4": "f33f9e08caa5",
     "f33f9e08caa5|type": "6d8964ace959",
     "6d8964ace959|tap:element_7": "501f21096105",
-    "501f21096105|tap:Edit suggestion mrbeast gaming": "8bd4aa0f7819"
+    "501f21096105|tap:Edit suggestion mrbeast gaming": "8bd4aa0f7819",
+    "f3100103b174|tap:element_3": "5d79fdb685d6"
   }
 }
 

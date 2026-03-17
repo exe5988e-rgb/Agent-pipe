@@ -40321,6 +40321,218 @@
           "resource_id": ""
         }
       ]
+    },
+    "cb2905736296": {
+      "screen_id": "cb2905736296",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Open the homepage",
+        "element_2",
+        "google.com/search?q=restaurants+near+me+open+now+within+0.2+mi&client=ms-android-oneplus-terr1-rso3&hs=ojC&sca_esv=4ae20d8bd47daad1&sxsrf=ANbL-n5yVUuhq_Uh0a5R",
+        "See 21 tabs",
+        "Customise and control Google Chrome",
+        "element_6",
+        "element_7",
+        "\u092e\u0947\u0930\u0947 \u0928\u093f\u0915\u091f \u0915\u0947 \u0930\u0947\u0938\u094d\u0924\u0930\u093e\u0902 \u0905\u092c 0.2 \u092e\u0940\u0932 \u0915\u0947 \u092d\u0940\u0924\u0930 \u0916\u0941\u0932\u0924\u0947 \u0939\u0948\u0902",
+        "element_9",
+        "element_10",
+        "element_11",
+        "element_12",
+        "element_13",
+        "How location is used",
+        "Use precise location",
+        "element_16",
+        "About this result",
+        "Change language to Hindi",
+        "Listen",
+        "element_20",
+        "element_21",
+        "Show more AI Overview",
+        "element_23",
+        "element_24",
+        "Expand map"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "element_2",
+          "x": 224,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "google.com/search?q=restaurants+near+me+open+now+within+0.2+mi&client=ms-android-oneplus-terr1-rso3&hs=ojC&sca_esv=4ae20d8bd47daad1&sxsrf=ANbL-n5yVUuhq_Uh0a5R",
+          "x": 592,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "See 21 tabs",
+          "x": 988,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        },
+        {
+          "text": "element_6",
+          "x": 620,
+          "y": 1526,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 427,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "\u092e\u0947\u0930\u0947 \u0928\u093f\u0915\u091f \u0915\u0947 \u0930\u0947\u0938\u094d\u0924\u0930\u093e\u0902 \u0905\u092c 0.2 \u092e\u0940\u0932 \u0915\u0947 \u092d\u0940\u0924\u0930 \u0916\u0941\u0932\u0924\u0947 \u0939\u0948\u0902",
+          "x": 691,
+          "y": 441,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_9",
+          "x": 556,
+          "y": 427,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_10",
+          "x": 227,
+          "y": 427,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_11",
+          "x": 887,
+          "y": 427,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_12",
+          "x": 1156,
+          "y": 424,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_13",
+          "x": 620,
+          "y": 741,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "How location is used",
+          "x": 1155,
+          "y": 686,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Use precise location",
+          "x": 365,
+          "y": 791,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_16",
+          "x": 620,
+          "y": 1811,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "About this result",
+          "x": 1153,
+          "y": 1001,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Change language to Hindi",
+          "x": 559,
+          "y": 1001,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Listen",
+          "x": 719,
+          "y": 1001,
+          "cls": "android.widget.ToggleButton",
+          "resource_id": ""
+        },
+        {
+          "text": "element_20",
+          "x": 621,
+          "y": 1905,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_21",
+          "x": 621,
+          "y": 1432,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Show more AI Overview",
+          "x": 620,
+          "y": 1972,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_23",
+          "x": 620,
+          "y": 2437,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_24",
+          "x": 620,
+          "y": 2165,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Expand map",
+          "x": 1100,
+          "y": 2454,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -40669,7 +40881,8 @@
     "8cd8d5199600|swipe": "5d3e492581c0",
     "5d3e492581c0|tap:element_10": "e3dda089efe1",
     "e3dda089efe1|tap:element_16": "05b096cda1cf",
-    "05b096cda1cf|tap:element_32": "11d2472beb7c"
+    "05b096cda1cf|tap:element_32": "11d2472beb7c",
+    "11d2472beb7c|swipe": "cb2905736296"
   }
 }
 

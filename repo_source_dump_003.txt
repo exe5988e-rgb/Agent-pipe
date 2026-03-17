@@ -1,3 +1,48 @@
+//===== TERMUXFILE: workflows/Ai-codegen.yml =====
+name: AI Code Generator
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ai-output.txt
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python (GitHub runner only)
+        if: ${{ !env.ACT }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Use system Python (Termux / act)
+        if: ${{ env.ACT }}
+        run: |
+          echo "Using Termux Python"
+          python --version
+
+      - name: Run AI Code Generator
+        run: |
+          python ai-code.py ~/storage/shared/Download/ai-output.txt
+
+      - name: Clean act cache (local only)
+        if: ${{ env.ACT }}
+        run: |
+          echo "Cleaning act cache..."
+          rm -rf ~/.cache/act || true
+
+
 //===== TERMUXFILE: workflows/jarvis_start.sh =====
 #!/data/data/com.termux/files/usr/bin/bash
 # ================================================================

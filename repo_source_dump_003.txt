@@ -8202,6 +8202,8 @@ RuntimeError: No LLM backend available.
     dialer               1 screens
     android              1 screens
   TransitionMemory: 332 transitions (255 confirmed, threshold=2)
+[parser] DEBUG normalized: 'tap 1'
+[parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

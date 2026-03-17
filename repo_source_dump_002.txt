@@ -44297,6 +44297,26 @@
           "resource_id": ""
         }
       ]
+    },
+    "be9769a7d6b5": {
+      "screen_id": "be9769a7d6b5",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "element_1"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 620,
+          "y": 1455,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.android.chrome:id/compositor_view_holder"
+        }
+      ]
     }
   },
   "transitions": {
@@ -44654,7 +44674,7 @@
     "3012bc5865d3|tap:Start voice search": "21323d874bfd",
     "21323d874bfd|type": "9331db4b6d02",
     "9331db4b6d02|tap:element_6": "a6c245bb7216",
-    "a6c245bb7216|swipe": "4e3d027411e1",
+    "a6c245bb7216|swipe": "be9769a7d6b5",
     "4e3d027411e1|swipe": "7be8acd10806",
     "7be8acd10806|tap:element_10": "f68c7157ae35",
     "f68c7157ae35|tap:Rooftop restaurants in Dhanbad": "ad89b0c3b391",

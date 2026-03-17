@@ -7314,6 +7314,130 @@ RuntimeError: No LLM backend available.
 [parser] DEBUG normalized: 'tap 3'
 [parser] INFO parsed 'tap 3' -> {'action': 'tap', 'target': 3}
 
+########################################################
+  JARVIS  |  Open Chrome and open a new tab
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': False, 'proxy': False, 'llamafile': False, 'binary': None}
+[init] WARNING: no LLM backend reachable!
+
+  Screen Map: 273 screens (0 tainted), 328 transitions
+    whatsapp             142 screens
+    youtube              54 screens
+    chrome               23 screens
+    vending              21 screens
+    settings             15 screens
+    launcher             8 screens
+    termux               7 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+    dialer               1 screens
+  TransitionMemory: 328 transitions (253 confirmed, threshold=2)
+[init] task_apps (ordered): ['chrome']
+
+========================================================
+  STEP 1  |  Open Chrome and open a new tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3599037 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=9f4af987726c elements=26
+[step] UI: ['Clock', '14', ':', '13', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[OPT4v2] launcher -> launching chrome (com.android.chrome)
+[llm] OPT4v2 am start: com.android.chrome
+[OPT4v2] app_index -> 1/1
+
+========================================================
+  STEP 2  |  Open Chrome and open a new tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (487038 bytes)
+[OPT7] predicted next screen: chrome_main (f6603009)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 20 elements from 192.168.29.48:34011
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=83f44e29823d elements=20
+[step] UI: ['Open the homepage', 'element_2', 'Signed in as Amir Shams. amirshamse8@gmail.com. Opens settings.', 'See 21 tabs', 'Customise and control Google Chrome', 'Search Google or type URL', 'Start voice search', 'Search with your camera using Google Lens']
+[map] new screen: chrome_main (d8e39632474f)
+[tm] transition changed: 4203f6dd32c9|opt4_launch:chrome f6603009 -> d8e39632
+[map] transition: launcher_launcher --[opt4_launch:chrome]--> chrome_main
+[map] screen: chrome_main (d8e39632)
+[skill] matched: 'open chrome and go to'  score=1.00  act_match=True
+[skill] cannot resolve tap target: 'support.google.com/youtube/answer/7640706?hl=%@'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 3  |  Open Chrome and open a new tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (487502 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] HIT com.android.chrome/com.google.android.apps.chrome.Main hash=83f44e29823d hits=1 elements=20
+[step] UI: ['Open the homepage', 'element_2', 'Signed in as Amir Shams. amirshamse8@gmail.com. Opens settings.', 'See 21 tabs', 'Customise and control Google Chrome', 'Search Google or type URL', 'Start voice search', 'Search with your camera using Google Lens']
+[map] screen: chrome_main (d8e39632)
+[skill] matched: 'open chrome and go to'  score=1.00  act_match=True
+[skill] cannot resolve tap target: 'support.google.com/youtube/answer/7640706?hl=%@'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 4  |  Open Chrome and open a new tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (486969 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] HIT com.android.chrome/com.google.android.apps.chrome.Main hash=83f44e29823d hits=2 elements=20
+[step] UI: ['Open the homepage', 'element_2', 'Signed in as Amir Shams. amirshamse8@gmail.com. Opens settings.', 'See 21 tabs', 'Customise and control Google Chrome', 'Search Google or type URL', 'Start voice search', 'Search with your camera using Google Lens']
+[map] screen: chrome_main (d8e39632)
+[skill] matched: 'open chrome and go to'  score=1.00  act_match=True
+[skill] cannot resolve tap target: 'support.google.com/youtube/answer/7640706?hl=%@'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 5  |  Open Chrome and open a new tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (485860 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] HIT com.android.chrome/com.google.android.apps.chrome.Main hash=83f44e29823d hits=3 elements=20
+[step] UI: ['Open the homepage', 'element_2', 'Signed in as Amir Shams. amirshamse8@gmail.com. Opens settings.', 'See 21 tabs', 'Customise and control Google Chrome', 'Search Google or type URL', 'Start voice search', 'Search with your camera using Google Lens']
+[map] screen: chrome_main (d8e39632)
+[skill] matched: 'open chrome and go to'  score=1.00  act_match=True
+[skill] cannot resolve tap target: 'support.google.com/youtube/answer/7640706?hl=%@'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 3'
+[step] LLM: 'tap 3'
+[step] action: {'action': 'tap', 'target': 3}
+[input] dispatching: TouchEvent(x=813, y=237)
+[input] adb -s 192.168.29.48:34011 shell input tap 813 237
+[step] step=5/8 done=False history=['opt4_launch:chrome', 'tap [3] Signed in as Amir Shams. amirshamse8@gmail.com. Opens settings.']
+
+========================================================
+  STEP 6  |  Open Chrome and open a new tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (203310 bytes)
+[ui_parser] activity=com.android.chrome/org.chromium.chrome.browser.settings.SettingsActivity
+[ui_parser] signal='com.android.chrome/org.chromium.chrome.browser.settings.SettingsActivity'
+[mem] miss (unknown): com.android.chrome/org.chromium.chrome.browser.settings.SettingsActivity
+[ui_parser] cache miss -- full uiautomator dump
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash

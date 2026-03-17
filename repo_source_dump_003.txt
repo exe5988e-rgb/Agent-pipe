@@ -3069,22 +3069,16 @@ if __name__ == "__main__":
 
 //===== TERMUXFILE: diagnose_touch.sh =====
 #!/data/data/com.termux/files/usr/bin/bash
-# Run this to find the correct touch event device
-# Usage: bash diagnose_touch.sh
-
+# Phase 2 diagnosis — test event5 specifically
 DEVICE="192.168.29.48:34011"
 ADB="/data/data/com.termux/files/usr/bin/adb"
 
-echo "=== All input devices ==="
-$ADB -s $DEVICE shell getevent -S 2>/dev/null | head -60
+echo "=== event5 raw (tap phone NOW for 5 seconds) ==="
+timeout 5 $ADB -s $DEVICE shell getevent /dev/input/event5
 
 echo ""
-echo "=== Testing event devices (tap phone NOW, watching for 3s each) ==="
-for dev in /dev/input/event0 /dev/input/event1 /dev/input/event2 /dev/input/event3 /dev/input/event4; do
-  echo ""
-  echo "--- $dev ---"
-  timeout 3 $ADB -s $DEVICE shell getevent -l $dev 2>/dev/null | head -20
-done
+echo "=== event5 labelled ==="
+timeout 5 $ADB -s $DEVICE shell getevent -l /dev/input/event5
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

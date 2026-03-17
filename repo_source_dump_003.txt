@@ -8805,7 +8805,9 @@ RuntimeError: No LLM backend available.
 [ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
 [ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
 [mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
-[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] cache miss -- full uiautomator dump[parser] DEBUG normalized: 'tap 4'
+[parser] INFO parsed 'tap 4' -> {'action': 'tap', 'target': 4}
+
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash

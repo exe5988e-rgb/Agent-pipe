@@ -26150,6 +26150,272 @@
           "resource_id": ""
         }
       ]
+    },
+    "aa2019548b51": {
+      "screen_id": "aa2019548b51",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "element_1",
+        "element_2",
+        "weather today",
+        "Clear input",
+        "15 suggested items in list below.",
+        "element_6",
+        "element_7",
+        "Refine: weather today ranchi",
+        "element_9",
+        "Refine: weather today jamshedpur",
+        "Ask AI Mode",
+        "New Incognito tab",
+        "element_13",
+        "Refine: weather today at my location",
+        "element_15",
+        "Refine: weather today bokaro",
+        "element_17",
+        "Directory listing for /: [::]",
+        "Build APK \u00b7 exe5988e-rgb/JarvisMerged@d5529f8: github.com",
+        "Google: google.com",
+        ": 192.168.29.110",
+        "Sedo.com: finet.org",
+        "element_23",
+        "Refine: weather today hazaribagh",
+        "element_25",
+        "Refine: weather today dhanbad",
+        "element_27",
+        "element_28",
+        "Refine: weather today ramgarh",
+        "Share Ashish Chanchlani admits Ekaki led to \u2018huge loss\u2019, reveals writing Stranger Things-like scene 3 years ago | Interview"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 620,
+          "y": 1455,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_2",
+          "x": 126,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "weather today",
+          "x": 634,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "Clear input",
+          "x": 1128,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/delete_button"
+        },
+        {
+          "text": "15 suggested items in list below.",
+          "x": 620,
+          "y": 1058,
+          "cls": "androidx.recyclerview.widget.RecyclerView",
+          "resource_id": "com.android.chrome:id/omnibox_suggestions_dropdown"
+        },
+        {
+          "text": "element_6",
+          "x": 620,
+          "y": 433,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 629,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: weather today ranchi",
+          "x": 1128,
+          "y": 629,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_9",
+          "x": 620,
+          "y": 825,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: weather today jamshedpur",
+          "x": 1128,
+          "y": 825,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Ask AI Mode",
+          "x": 331,
+          "y": 990,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/composeplate_button"
+        },
+        {
+          "text": "New Incognito tab",
+          "x": 909,
+          "y": 990,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/incognito_button"
+        },
+        {
+          "text": "element_13",
+          "x": 620,
+          "y": 1021,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: weather today at my location",
+          "x": 1128,
+          "y": 1021,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_15",
+          "x": 620,
+          "y": 1217,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: weather today bokaro",
+          "x": 1128,
+          "y": 1217,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_17",
+          "x": 620,
+          "y": 1366,
+          "cls": "android.widget.HorizontalScrollView",
+          "resource_id": "com.android.chrome:id/mv_tiles_container"
+        },
+        {
+          "text": "Directory listing for /: [::]",
+          "x": 238,
+          "y": 1357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Build APK \u00b7 exe5988e-rgb/JarvisMerged@d5529f8: github.com",
+          "x": 504,
+          "y": 1357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Google: google.com",
+          "x": 770,
+          "y": 1357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": ": 192.168.29.110",
+          "x": 1036,
+          "y": 1357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Sedo.com: finet.org",
+          "x": 1173,
+          "y": 1357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_23",
+          "x": 620,
+          "y": 1413,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: weather today hazaribagh",
+          "x": 1128,
+          "y": 1413,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_25",
+          "x": 620,
+          "y": 1609,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: weather today dhanbad",
+          "x": 1128,
+          "y": 1609,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_27",
+          "x": 620,
+          "y": 1955,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_28",
+          "x": 620,
+          "y": 1744,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: weather today ramgarh",
+          "x": 1128,
+          "y": 1744,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Share Ashish Chanchlani admits Ekaki led to \u2018huge loss\u2019, reveals writing Stranger Things-like scene 3 years ago | Interview",
+          "x": 929,
+          "y": 2193,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Card menu Ashish Chanchlani admits Ekaki led to \u2018huge loss\u2019, reveals writing Stranger Things-like scene 3 years ago | Interview",
+          "x": 1097,
+          "y": 2193,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_32",
+          "x": 620,
+          "y": 2526,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -26425,7 +26691,8 @@
     "5d7a9179dd74|tap:element_7": "17687597cdcc",
     "00f1f507607b|tap:Start voice search": "62ac838bcb42",
     "ac5e0b570c7c|type": "7e24cdda1771",
-    "7e24cdda1771|tap:element_7": "00f1f507607b"
+    "7e24cdda1771|tap:element_7": "00f1f507607b",
+    "62ac838bcb42|tap:element_11": "aa2019548b51"
   }
 }
 

@@ -27929,6 +27929,186 @@
           "resource_id": ""
         }
       ]
+    },
+    "e9824755943d": {
+      "screen_id": "e9824755943d",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Navigate up",
+        "Voice search",
+        "Search YouTube",
+        "element_4",
+        "element_5",
+        "Edit suggestion dream",
+        "element_7",
+        "Edit suggestion t series",
+        "element_9",
+        "Edit suggestion coldified",
+        "element_11",
+        "Edit suggestion beast philanthropy",
+        "element_13",
+        "Edit suggestion beast games",
+        "element_15",
+        "Edit suggestion ksi",
+        "element_17",
+        "Edit suggestion fortnite",
+        "Voice search",
+        "element_20",
+        "Edit suggestion mack"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Voice search",
+          "x": 1156,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/voice_search"
+        },
+        {
+          "text": "Search YouTube",
+          "x": 634,
+          "y": 223,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.google.android.youtube:id/search_edit_text"
+        },
+        {
+          "text": "element_4",
+          "x": 620,
+          "y": 1016,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results_recycler_view"
+        },
+        {
+          "text": "element_5",
+          "x": 620,
+          "y": 559,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion dream",
+          "x": 1156,
+          "y": 559,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 727,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion t series",
+          "x": 1156,
+          "y": 727,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "element_9",
+          "x": 620,
+          "y": 895,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion coldified",
+          "x": 1156,
+          "y": 895,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "element_11",
+          "x": 620,
+          "y": 1063,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion beast philanthropy",
+          "x": 1156,
+          "y": 1063,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "element_13",
+          "x": 620,
+          "y": 1231,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion beast games",
+          "x": 1156,
+          "y": 1231,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "element_15",
+          "x": 620,
+          "y": 1399,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion ksi",
+          "x": 1156,
+          "y": 1399,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "element_17",
+          "x": 620,
+          "y": 1567,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion fortnite",
+          "x": 1156,
+          "y": 1567,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Voice search",
+          "x": 1114,
+          "y": 1655,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/fab"
+        },
+        {
+          "text": "element_20",
+          "x": 620,
+          "y": 1688,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion mack",
+          "x": 1156,
+          "y": 1688,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        }
+      ]
     }
   },
   "transitions": {
@@ -28213,7 +28393,8 @@
     "46ae78626a87|back": "06c59ed8f4e7",
     "06c59ed8f4e7|tap:element_13": "24a29986eb8c",
     "24f4242fbb4f|tap:Updates": "7c51d7e864c3",
-    "082a9e286aa7|type": "678cb33200f5"
+    "082a9e286aa7|type": "678cb33200f5",
+    "344055367907|tap:Expand Mini Player": "e9824755943d"
   }
 }
 

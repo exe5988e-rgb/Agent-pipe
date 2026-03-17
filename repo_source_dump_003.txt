@@ -2833,6 +2833,7 @@ if __name__ == "__main__":
 [10:11:11]   Recovering device...
 [10:11:26]   Retry: ✗ FAIL  |  0.4s
 [10:11:26]   Recovering device...
+[10:11:33]   Pausing 5s...
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4172,7 +4173,7 @@ if __name__ == "__main__":
 
 //===== TERMUXFILE: gauntlet_report.json =====
 {
-  "run_at": "2026-03-17T10:10:59.884335",
+  "run_at": "2026-03-17T10:11:33.400672",
   "in_progress": true,
   "skills_before": 0,
   "skills_current": 0,
@@ -4192,6 +4193,15 @@ if __name__ == "__main__":
       "difficulty": 1,
       "success": false,
       "elapsed_s": 0.3,
+      "error": "orig=returncode=1 retry=returncode=1",
+      "retried": false
+    },
+    {
+      "task": "Open Settings",
+      "category": "settings",
+      "difficulty": 1,
+      "success": false,
+      "elapsed_s": 0.2,
       "error": "orig=returncode=1 retry=returncode=1",
       "retried": false
     }

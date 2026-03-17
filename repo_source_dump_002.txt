@@ -28640,6 +28640,145 @@
           "resource_id": ""
         }
       ]
+    },
+    "5a35adb71b8f": {
+      "screen_id": "5a35adb71b8f",
+      "package": "com.android.launcher",
+      "activity": "com.android.launcher/.Launcher",
+      "name": "launcher_launcher",
+      "labels": [
+        "[7/33] [1\u2605] [phone] Open Contacts\n[11:17:32]   PASS  39.7s  skills=0\n[11:17:37]\n[8/33] [2\u2605] [whatsapp] Open WhatsApp and go to Calls tab\n[11:19:59]   PASS  139.2s  skills=0\n[11:20:04]\n[9/33] [2\u2605] [whatsapp] Open WhatsApp and go to Updates tab\n[11:21:20]   PASS  72.1s  skills=1\n[11:21:25]\n[10/33] [2\u2605] [whatsapp] Open WhatsApp and search for Mummy in chats\n[11:21:41]   PASS  12.9s  skills=1\n[11:21:46]\n[11/33] [2\u2605] [youtube] Open YouTube and go to Subscriptions\n[11:23:00]   PASS  70.8s  skills=2\n[11:23:05]\n[12/33] [2\u2605] [youtube] Search for MrBeast on YouTube\n[11:27:19]   PASS  251.1s  skills=2\n[11:27:24]\n[13/33] [2\u2605] [settings] Open Settings and go to WiFi\n[11:29:46]   PASS  138.9s  skills=3\n[11:29:51]\n[14/33] [2\u2605] [settings] Open Settings and go to Display\n[11:31:14]   PASS  79.1s  skills=3\n[11:31:19]\n[15/33] [2\u2605] [settings] Open Settings and go to Notifications\n[11:32:07]   PASS  45.1s  skills=3\n[11:32:12]\n[16/33] [2\u2605] [settings] Open Settings and check battery percentage\n[11:33:00]   PASS  44.6s  skills=3\n[11:33:05]\n[17/33] [2\u2605] [chrome] Open Chrome and go to google.com\n[11:35:26]   PASS  137.8s  skills=4\n[11:35:31]\n[18/33] [2\u2605] [chrome] Open Chrome and open a new tab\n[11:37:16]   PASS  101.6s  skills=4\n[11:37:21]\n[19/33] [2\u2605] [chrome] Search for weather today in Chrome\n[11:41:49]   PASS  264.6s  skills=5\n[11:41:54]\n[20/33] [2\u2605] [playstore] Search for Spotify on Play Store\n[11:46:32]   PASS  274.6s  skills=5\n[11:46:37]\n[21/33] [2\u2605] [phone] Open Contacts and search for Mummy\n[11:47:59]   PASS  79.4s  skills=5\n[11:48:04]\n[22/33] [3\u2605] [whatsapp] Send a WhatsApp message to Mummy saying Good morning\n[11:49:33]   PASS  85.8s  skills=5\n[11:49:39]\n[23/33] [3\u2605] [whatsapp] Send a WhatsApp message to Ayush Kumar saying Hey what's up\n[11:50:05]   PASS  23.0s  skills=5\n[11:50:10]\n[24/33] [3\u2605] [whatsapp] Send a WhatsApp message to Sadique faridi saying Hello brother\n[11:50:35]   PASS  22.3s  skills=5\n[11:50:40]\n[25/33] [3\u2605] [youtube] Play Warriyo Mortals on YouTube\n[11:55:56]   PASS  312.1s  skills=5\n[11:56:01]\n[26/33] [3\u2605] [youtube] Search for lofi hip hop on YouTube and play the first video",
+        "ESC",
+        "element_3",
+        "\u2630",
+        "\u21f3",
+        "\u2191",
+        "END",
+        "PGUP",
+        "\u21b9",
+        "CTRL",
+        "ALT",
+        "\u2190",
+        "\u2193",
+        "\u2192",
+        "PGDN"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "[7/33] [1\u2605] [phone] Open Contacts\n[11:17:32]   PASS  39.7s  skills=0\n[11:17:37]\n[8/33] [2\u2605] [whatsapp] Open WhatsApp and go to Calls tab\n[11:19:59]   PASS  139.2s  skills=0\n[11:20:04]\n[9/33] [2\u2605] [whatsapp] Open WhatsApp and go to Updates tab\n[11:21:20]   PASS  72.1s  skills=1\n[11:21:25]\n[10/33] [2\u2605] [whatsapp] Open WhatsApp and search for Mummy in chats\n[11:21:41]   PASS  12.9s  skills=1\n[11:21:46]\n[11/33] [2\u2605] [youtube] Open YouTube and go to Subscriptions\n[11:23:00]   PASS  70.8s  skills=2\n[11:23:05]\n[12/33] [2\u2605] [youtube] Search for MrBeast on YouTube\n[11:27:19]   PASS  251.1s  skills=2\n[11:27:24]\n[13/33] [2\u2605] [settings] Open Settings and go to WiFi\n[11:29:46]   PASS  138.9s  skills=3\n[11:29:51]\n[14/33] [2\u2605] [settings] Open Settings and go to Display\n[11:31:14]   PASS  79.1s  skills=3\n[11:31:19]\n[15/33] [2\u2605] [settings] Open Settings and go to Notifications\n[11:32:07]   PASS  45.1s  skills=3\n[11:32:12]\n[16/33] [2\u2605] [settings] Open Settings and check battery percentage\n[11:33:00]   PASS  44.6s  skills=3\n[11:33:05]\n[17/33] [2\u2605] [chrome] Open Chrome and go to google.com\n[11:35:26]   PASS  137.8s  skills=4\n[11:35:31]\n[18/33] [2\u2605] [chrome] Open Chrome and open a new tab\n[11:37:16]   PASS  101.6s  skills=4\n[11:37:21]\n[19/33] [2\u2605] [chrome] Search for weather today in Chrome\n[11:41:49]   PASS  264.6s  skills=5\n[11:41:54]\n[20/33] [2\u2605] [playstore] Search for Spotify on Play Store\n[11:46:32]   PASS  274.6s  skills=5\n[11:46:37]\n[21/33] [2\u2605] [phone] Open Contacts and search for Mummy\n[11:47:59]   PASS  79.4s  skills=5\n[11:48:04]\n[22/33] [3\u2605] [whatsapp] Send a WhatsApp message to Mummy saying Good morning\n[11:49:33]   PASS  85.8s  skills=5\n[11:49:39]\n[23/33] [3\u2605] [whatsapp] Send a WhatsApp message to Ayush Kumar saying Hey what's up\n[11:50:05]   PASS  23.0s  skills=5\n[11:50:10]\n[24/33] [3\u2605] [whatsapp] Send a WhatsApp message to Sadique faridi saying Hello brother\n[11:50:35]   PASS  22.3s  skills=5\n[11:50:40]\n[25/33] [3\u2605] [youtube] Play Warriyo Mortals on YouTube\n[11:55:56]   PASS  312.1s  skills=5\n[11:56:01]\n[26/33] [3\u2605] [youtube] Search for lofi hip hop on YouTube and play the first video",
+          "x": 620,
+          "y": 727,
+          "cls": "android.view.View",
+          "resource_id": "com.termux:id/terminal_view"
+        },
+        {
+          "text": "ESC",
+          "x": 97,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_3",
+          "x": 620,
+          "y": 1447,
+          "cls": "androidx.viewpager.widget.ViewPager",
+          "resource_id": "com.termux:id/terminal_toolbar_view_pager"
+        },
+        {
+          "text": "\u2630",
+          "x": 271,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u21f3",
+          "x": 445,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "HOME",
+          "x": 619,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u2191",
+          "x": 794,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "END",
+          "x": 968,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "PGUP",
+          "x": 1143,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u21b9",
+          "x": 97,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "CTRL",
+          "x": 271,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "ALT",
+          "x": 445,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u2190",
+          "x": 619,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u2193",
+          "x": 794,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u2192",
+          "x": 968,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "PGDN",
+          "x": 1143,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {

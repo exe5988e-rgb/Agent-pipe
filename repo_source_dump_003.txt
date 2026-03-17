@@ -3119,6 +3119,8 @@ if __name__ == "__main__":
 [12:03:07] 
 [27/33] [3★] [playstore] Search for VLC on Play Store and open its page
 [12:07:18]   PASS  247.3s  skills=5
+[12:07:23] 
+[28/33] [4★] [whatsapp] Send a WhatsApp message to Mummy saying Good night
 
 
 //===== TERMUXFILE: tap_logger.py =====

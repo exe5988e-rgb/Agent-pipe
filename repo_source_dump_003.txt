@@ -2818,8 +2818,8 @@ if __name__ == "__main__":
   },
   "4203f6dd32c9|opt4_launch:settings": {
     "to": "8c512c8be2eb",
-    "count": 3,
-    "last_seen": 1773736277.0851982
+    "count": 4,
+    "last_seen": 1773736283.7602074
   },
   "4203f6dd32c9|opt4_launch:chrome": {
     "to": "ec2d5cc0aa50",
@@ -6192,6 +6192,19 @@ RuntimeError: No LLM backend available.
     wirelesssettings     1 screens
     dialer               1 screens
   TransitionMemory: 326 transitions (252 confirmed, threshold=2)
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 311, in run
+    run_step(state, device=device, model_path=model_path)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 267, in run_step
+    llm_out = generate(prompt, model_path=model_path)
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/reasoning/llm_client.py", line 109, in generate
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
 Traceback (most recent call last):
   File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 311, in run
     run_step(state, device=device, model_path=model_path)

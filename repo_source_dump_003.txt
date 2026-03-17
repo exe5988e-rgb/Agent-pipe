@@ -2866,6 +2866,7 @@ if __name__ == "__main__":
 [11:17:32]   PASS  39.7s  skills=0
 [11:17:37] 
 [8/33] [2★] [whatsapp] Open WhatsApp and go to Calls tab
+[11:19:59]   PASS  139.2s  skills=0
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4033,7 +4034,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-17T11:17:32.254225",
+  "run_at": "2026-03-17T11:19:59.618011",
   "skills_before": 0,
   "skills_current": 0,
   "results": [
@@ -4097,6 +4098,15 @@ if __name__ == "__main__":
       "difficulty": 1,
       "success": true,
       "elapsed_s": 39.7,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Open WhatsApp and go to Calls tab",
+      "category": "whatsapp",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 139.2,
       "error": null,
       "retried": false
     }
@@ -4900,6 +4910,156 @@ RuntimeError: No LLM backend available.
   TransitionMemory: 252 transitions (242 confirmed, threshold=2)
 [parser] DEBUG normalized: 'tap 30'
 [parser] INFO parsed 'tap 30' -> {'action': 'tap', 'target': 30}
+
+########################################################
+  JARVIS  |  Open WhatsApp and go to Calls tab
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 185 screens (0 tainted), 252 transitions
+    whatsapp             130 screens
+    youtube              29 screens
+    vending              16 screens
+    launcher             4 screens
+    termux               3 screens
+    unknown              1 screens
+    settings             1 screens
+    chrome               1 screens
+  TransitionMemory: 252 transitions (242 confirmed, threshold=2)
+[init] task_apps (ordered): ['whatsapp']
+
+========================================================
+  STEP 1  |  Open WhatsApp and go to Calls tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3593919 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=39d7ad3a2a19 elements=26
+[step] UI: ['Clock', '11', ':', '17', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[OPT4v2] launcher -> launching whatsapp (com.whatsapp)
+[llm] OPT4v2 am start: com.whatsapp
+[OPT4v2] app_index -> 1/1
+
+========================================================
+  STEP 2  |  Open WhatsApp and go to Calls tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (393325 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 31 elements from 192.168.29.48:34011
+[mem] stored com.whatsapp/.home.ui.HomeActivity hash=69e2eaa66370 elements=31
+[step] UI: ['element_1', 'Scan to Pay', 'More options', 'Ask Meta AI or Search', 'Swipe down to reveal additional actions', 'Inbox filters, Radio Group', 'All filter, , selected', 'Unread filter, 2, unselected']
+[map] screen: whatsapp_homeactivity (7c51d7e8)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 30'
+[step] LLM: 'tap 30'
+[step] action: {'action': 'tap', 'target': 30}
+[input] dispatching: TouchEvent(x=868, y=2576)
+[input] adb -s 192.168.29.48:34011 shell input tap 868 2576
+[mem] invalidated com.whatsapp/.home.ui.HomeActivity
+[step] step=2/8 done=False history=['opt4_launch:whatsapp', 'tap [30] Calls']
+
+========================================================
+  STEP 3  |  Open WhatsApp and go to Calls tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (423579 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] dump failed: ''
+[step] UI: []
+[map] transition: whatsapp_homeactivity --[tap:You]--> whatsapp_homeactivity
+[map] screen: whatsapp_homeactivity (47d448ea)
+[step] empty UI (1/8)
+
+========================================================
+  STEP 4  |  Open WhatsApp and go to Calls tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (423862 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] dump failed: ''
+[step] UI: []
+[map] screen: whatsapp_homeactivity (47d448ea)
+[step] empty UI (2/8)
+
+========================================================
+  STEP 5  |  Open WhatsApp and go to Calls tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (423862 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] dump failed: ''
+[step] UI: []
+[map] screen: whatsapp_homeactivity (47d448ea)
+[step] empty UI (3/8)
+
+========================================================
+  STEP 6  |  Open WhatsApp and go to Calls tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (423766 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] dump failed: ''
+[step] UI: []
+[map] screen: whatsapp_homeactivity (47d448ea)
+[step] empty UI (4/8)
+
+========================================================
+  STEP 7  |  Open WhatsApp and go to Calls tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (423859 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] dump failed: ''
+[step] UI: []
+[map] screen: whatsapp_homeactivity (47d448ea)
+[step] empty UI (5/8)
+
+========================================================
+  STEP 8  |  Open WhatsApp and go to Calls tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (423817 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] dump failed: ''
+[step] UI: []
+[map] screen: whatsapp_homeactivity (47d448ea)
+[step] empty UI (6/8)
+
+[controller] history:
+  1. opt4_launch:whatsapp
+  2. tap [30] Calls
+
+  Screen Map: 185 screens (0 tainted), 253 transitions
+    whatsapp             130 screens
+    youtube              29 screens
+    vending              16 screens
+    launcher             4 screens
+    termux               3 screens
+    unknown              1 screens
+    settings             1 screens
+    chrome               1 screens
+  TransitionMemory: 253 transitions (244 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

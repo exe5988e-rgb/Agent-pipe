@@ -27074,6 +27074,82 @@
           "resource_id": ""
         }
       ]
+    },
+    "970ae2d3563b": {
+      "screen_id": "970ae2d3563b",
+      "package": "com.android.vending",
+      "activity": "com.android.vending/.AssetBrowserActivity",
+      "name": "vending_assetbrowseractivity",
+      "labels": [
+        "element_1",
+        "element_2",
+        "Screenshot 1 of 8",
+        "element_4",
+        "element_5",
+        "element_6",
+        "element_7",
+        "element_8"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 98,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_2",
+          "x": 1142,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Screenshot 1 of 8",
+          "x": 1184,
+          "y": 2170,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_4",
+          "x": 620,
+          "y": 2480,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_5",
+          "x": 155,
+          "y": 2604,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_6",
+          "x": 465,
+          "y": 2604,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_7",
+          "x": 775,
+          "y": 2604,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_8",
+          "x": 1085,
+          "y": 2604,
+          "cls": "android.view.View",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -27352,7 +27428,8 @@
     "7e24cdda1771|tap:element_7": "00f1f507607b",
     "62ac838bcb42|tap:element_11": "aa2019548b51",
     "aa2019548b51|tap:Refine: weather today ranchi": "ec2d5cc0aa50",
-    "5d1a1d70d4c0|tap:element_2": "46ae78626a87"
+    "5d1a1d70d4c0|tap:element_2": "46ae78626a87",
+    "46ae78626a87|tap:Options": "970ae2d3563b"
   }
 }
 

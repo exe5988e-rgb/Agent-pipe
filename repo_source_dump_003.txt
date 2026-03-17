@@ -3148,6 +3148,8 @@ if __name__ == "__main__":
 [12:11:35] 
 [30/33] [4★] [youtube] Search for lofi hip hop on YouTube and play the first video
 [12:13:21]   PASS  102.6s  skills=6
+[12:13:26] 
+[31/33] [4★] [settings] Open Settings and go to WiFi
 
 
 //===== TERMUXFILE: tap_logger.py =====

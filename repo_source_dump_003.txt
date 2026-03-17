@@ -3130,6 +3130,11 @@ if __name__ == "__main__":
     "to": "752389f3a0d3",
     "count": 1,
     "last_seen": 1773730547.5208948
+  },
+  "752389f3a0d3|swipe": {
+    "to": "0718819ac4b4",
+    "count": 1,
+    "last_seen": 1773730730.974743
   }
 }
 
@@ -10835,246 +10840,128 @@ RuntimeError: No LLM backend available.
 [parser] INFO parsed 'swipe up' -> {'action': 'swipe', 'x1': 540, 'y1': 900, 'x2': 540, 'y2': 500, 'duration_ms': 150}
 
 
-//===== TERMUXFILE: scripts/build_runner.sh =====
-#!/data/data/com.termux/files/usr/bin/bash
-#
-# build_runner.sh — Autonomous-safe version
-#
-# Build status contract:
-#   /sdcard/ai-automation/build_status.txt    → "SUCCESS" or "FAILURE"
-#   /sdcard/ai-automation/build_complete.flag → touched last, always
-#
-# Android reads build_status.txt for result. Folder existence never used.
+========================================================
+  STEP 6  |  Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (198343 bytes)
+[ui_parser] activity=com.android.settings/.SubSettings
+[ui_parser] signal='com.android.settings/.SubSettings'
+[mem] miss (unknown): com.android.settings/.SubSettings
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 14 elements from 192.168.29.48:34011
+[mem] stored com.android.settings/.SubSettings hash=03324feeb064 elements=14
+[step] UI: ['Back', 'element_2', 'element_3', 'element_4', 'element_5', 'element_6', 'element_7', 'element_8']
+[map] screen: settings_subsettings (752389f3)
+[skill] matched: 'open whatsapp and go'  score=1.00  act_match=False
+[skill] cannot resolve tap target: 'Updates'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 3'
+[step] LLM: 'tap 3'
+[step] action: {'action': 'tap', 'target': 3}
+[input] dispatching: TouchEvent(x=620, y=1546)
+[input] adb -s 192.168.29.48:34011 shell input tap 620 1546
+[mem] invalidated com.android.settings/.SubSettings
+[step] step=6/30 done=False history=['opt4_launch:settings', 'tap [2] Back', 'tap [7] WiFi', 'tap [5] element_5', 'tap [2] element_2', 'tap [3] element_3']
 
-set -euo pipefail
+========================================================
+  STEP 7  |  Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (197197 bytes)
+[ui_parser] activity=com.android.settings/.SubSettings
+[ui_parser] signal='com.android.settings/.SubSettings'
+[mem] miss (unknown): com.android.settings/.SubSettings
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 14 elements from 192.168.29.48:34011
+[mem] stored com.android.settings/.SubSettings hash=03324feeb064 elements=14
+[step] UI: ['Back', 'element_2', 'element_3', 'element_4', 'element_5', 'element_6', 'element_7', 'element_8']
+[map] screen: settings_subsettings (752389f3)
+[skill] matched: 'open whatsapp and go'  score=1.00  act_match=False
+[skill] cannot resolve tap target: 'Updates'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 4'
+[step] LLM: 'tap 4'
+[step] action: {'action': 'tap', 'target': 4}
+[input] dispatching: TouchEvent(x=620, y=461)
+[input] adb -s 192.168.29.48:34011 shell input tap 620 461
+[mem] invalidated com.android.settings/.SubSettings
+[step] step=7/30 done=False history=['opt4_launch:settings', 'tap [2] Back', 'tap [7] WiFi', 'tap [5] element_5', 'tap [2] element_2', 'tap [3] element_3', 'tap [4] element_4']
 
-REPO_DIR="/data/data/com.termux/files/home/jarvis"
-BASE_DIR="/sdcard/ai-automation"
-AI_OUTPUT="$BASE_DIR/ai-output.txt"
-DOWNLOAD_DIR="/sdcard/Download"
-COMPLETE_FLAG="$BASE_DIR/build_complete.flag"
-ASSEMBLED_FLAG="$BASE_DIR/downloads_assembled.flag"
-SNAPSHOT_FILE="$BASE_DIR/download_snapshot.txt"
-STATUS_FILE="$BASE_DIR/build_status.txt"
-LOG_DIR="$BASE_DIR/logs"
-ERROR_LOG_DIR="$BASE_DIR/build_error_logs"
+========================================================
+  STEP 8  |  Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (195919 bytes)
+[ui_parser] activity=com.android.settings/.SubSettings
+[ui_parser] signal='com.android.settings/.SubSettings'
+[mem] miss (unknown): com.android.settings/.SubSettings
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 14 elements from 192.168.29.48:34011
+[mem] stored com.android.settings/.SubSettings hash=03324feeb064 elements=14
+[step] UI: ['Back', 'element_2', 'element_3', 'element_4', 'element_5', 'element_6', 'element_7', 'element_8']
+[map] screen: settings_subsettings (752389f3)
+[skill] matched: 'open whatsapp and go'  score=1.00  act_match=False
+[skill] cannot resolve tap target: 'Updates'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 5'
+[step] LLM: 'tap 5'
+[step] action: {'action': 'tap', 'target': 5}
+[input] dispatching: TouchEvent(x=620, y=671)
+[input] adb -s 192.168.29.48:34011 shell input tap 620 671
+[mem] invalidated com.android.settings/.SubSettings
+[step] step=8/30 done=False history=['opt4_launch:settings', 'tap [2] Back', 'tap [7] WiFi', 'tap [5] element_5', 'tap [2] element_2', 'tap [3] element_3', 'tap [4] element_4', 'tap [5] element_5']
 
-mkdir -p "$LOG_DIR"
-exec >> "$LOG_DIR/build_runner.log" 2>&1
+========================================================
+  STEP 9  |  Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (194650 bytes)
+[ui_parser] activity=com.android.settings/.SubSettings
+[ui_parser] signal='com.android.settings/.SubSettings'
+[mem] miss (unknown): com.android.settings/.SubSettings
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 14 elements from 192.168.29.48:34011
+[mem] stored com.android.settings/.SubSettings hash=03324feeb064 elements=14
+[step] UI: ['Back', 'element_2', 'element_3', 'element_4', 'element_5', 'element_6', 'element_7', 'element_8']
+[map] screen: settings_subsettings (752389f3)
+[skill] matched: 'open whatsapp and go'  score=1.00  act_match=False
+[skill] cannot resolve tap target: 'Updates'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 6'
+[step] LLM: 'tap 6'
+[step] action: {'action': 'tap', 'target': 6}
+[input] dispatching: TouchEvent(x=620, y=881)
+[input] adb -s 192.168.29.48:34011 shell input tap 620 881
+[mem] invalidated com.android.settings/.SubSettings
+[step] step=9/30 done=False history=['opt4_launch:settings', 'tap [2] Back', 'tap [7] WiFi', 'tap [5] element_5', 'tap [2] element_2', 'tap [3] element_3', 'tap [4] element_4', 'tap [5] element_5', 'tap [6] element_6']
 
-echo ""
-echo "=== build_runner.sh START $(date) args=${*:-none} ==="
+========================================================
+  STEP 10  |  Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (192894 bytes)
+[ui_parser] activity=com.android.settings/.SubSettings
+[ui_parser] signal='com.android.settings/.SubSettings'
+[mem] miss (unknown): com.android.settings/.SubSettings
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 14 elements from 192.168.29.48:34011
+[mem] stored com.android.settings/.SubSettings hash=03324feeb064 elements=14
+[step] UI: ['Back', 'element_2', 'element_3', 'element_4', 'element_5', 'element_6', 'element_7', 'element_8']
+[map] screen: settings_subsettings (752389f3)
+[skill] matched: 'open whatsapp and go'  score=1.00  act_match=False
+[skill] cannot resolve tap target: 'Updates'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'swipe up'
+[step] LLM: 'swipe up'
+[step] action: {'action': 'swipe', 'x1': 540, 'y1': 900, 'x2': 540, 'y2': 500, 'duration_ms': 150}
+[input] dispatching: SwipeEvent((540,900)→(540,500), 150ms)
+[input] adb -s 192.168.29.48:34011 shell input swipe 540 900 540 500 150
+[mem] invalidated com.android.settings/.SubSettings
+[step] step=10/30 done=False history=['opt4_launch:settings', 'tap [2] Back', 'tap [7] WiFi', 'tap [5] element_5', 'tap [2] element_2', 'tap [3] element_3', 'tap [4] element_4', 'tap [5] element_5', 'tap [6] element_6', 'swipe (540,900)→(540,500)']
 
-# ─────────────────────────────────────────────────────────────
-# MODE: snapshot
-# ─────────────────────────────────────────────────────────────
-if [[ "${1:-}" == "--snapshot" ]]; then
-    echo "[snapshot] Recording existing files"
-    rm -f "$SNAPSHOT_FILE"
-    find "$DOWNLOAD_DIR" -maxdepth 1 -type f -exec basename {} \; \
-        > "$SNAPSHOT_FILE" 2>/dev/null || true
-    echo "[snapshot] Done"
-    exit 0
-fi
-
-# ─────────────────────────────────────────────────────────────
-# MODE: assemble downloaded files
-# ─────────────────────────────────────────────────────────────
-if [[ "${1:-}" == "--assemble-downloads" ]]; then
-    echo "[assemble] Starting"
-
-    declare -A BEFORE
-    if [[ -f "$SNAPSHOT_FILE" ]]; then
-        while IFS= read -r name; do
-            BEFORE["$name"]=1
-        done < "$SNAPSHOT_FILE"
-    fi
-
-    CODE_EXTS="kt java py txt xml json gradle kts sh cpp c h ts js md"
-    NEW_FILES=()
-    DEADLINE=$(( $(date +%s) + 30 ))
-
-    while (( $(date +%s) < DEADLINE )); do
-        while IFS= read -r -d '' f; do
-            NAME=$(basename "$f")
-            EXT="${NAME##*.}"
-            if [[ -z "${BEFORE[$NAME]+_}" ]] && \
-               [[ -s "$f" ]] && \
-               echo "$CODE_EXTS" | grep -qw "$EXT"; then
-                NEW_FILES+=("$f")
-            fi
-        done < <(find "$DOWNLOAD_DIR" -maxdepth 1 -type f -print0 2>/dev/null)
-        [[ ${#NEW_FILES[@]} -gt 0 ]] && break
-        sleep 1
-    done
-
-    if [[ ${#NEW_FILES[@]} -eq 0 ]]; then
-        echo "[assemble] ERROR: No new files"
-        exit 1
-    fi
-
-    > "$AI_OUTPUT"
-    for f in "${NEW_FILES[@]}"; do
-        NAME=$(basename "$f")
-        printf '//===== FILE: %s =====\n' "$NAME" >> "$AI_OUTPUT"
-        cat "$f" >> "$AI_OUTPUT"
-        printf '\n\n' >> "$AI_OUTPUT"
-    done
-
-    touch "$ASSEMBLED_FLAG"
-    rm -f "$SNAPSHOT_FILE"
-    echo "[assemble] DONE"
-    exit 0
-fi
-
-# ─────────────────────────────────────────────────────────────
-# MODE: normal build
-# ─────────────────────────────────────────────────────────────
-
-# Stale state cleanup — always before a new build
-echo "[cleanup] Removing stale flags and error logs"
-rm -f "$COMPLETE_FLAG"
-rm -f "$STATUS_FILE"
-rm -rf "$ERROR_LOG_DIR"
-mkdir -p "$ERROR_LOG_DIR"
-
-echo "[normal] Starting build mode"
-cd "$REPO_DIR"
-
-# Clean old error logs from repo before reset to prevent re-detection
-echo "[cleanup] Removing old build_error_logs from repo"
-rm -rf "$REPO_DIR/build_error_logs"
-
-echo "[sync] Force syncing with origin/main"
-git fetch origin main
-git reset --hard origin/main
-echo "[sync] Repo synced"
-
-echo "[copy] Updating ai-output.txt"
-cp "$AI_OUTPUT" "$REPO_DIR/ai-output.txt"
-
-git config user.name  "AutoBuild Bot"
-git config user.email "bot@autobuild.local"
-
-git add ai-output.txt
-git commit -m "AutoBuild: update ai-output.txt" || echo "[skip] Nothing to commit"
-git push origin main || echo "[warn] git push failed"
-
-echo "[wait] Waiting 20s for workflows to queue..."
-sleep 20
-
-# ─────────────────────────────────────────────────────────────
-# Watch APK workflow
-# ─────────────────────────────────────────────────────────────
-APK_WORKFLOW_NAME="Build APK"
-CONCLUSION=""
-
-echo "[watch] Looking for APK workflow run..."
-APK_RUN_ID=$(gh run list \
-    --workflow="$APK_WORKFLOW_NAME" \
-    --limit=1 \
-    --json databaseId \
-    -q '.[0].databaseId' 2>/dev/null || true)
-
-if [[ -z "${APK_RUN_ID:-}" ]]; then
-    echo "[warn] No APK workflow run found — writing FAILURE"
-    echo "FAILURE" > "$STATUS_FILE"
-    touch "$COMPLETE_FLAG"
-    echo "=== build_runner.sh DONE (no run found) $(date) ==="
-    exit 0
-fi
-
-echo "[watch] Watching run $APK_RUN_ID..."
-gh run watch "$APK_RUN_ID" --exit-status || true
-
-# Deterministic result via gh run view
-echo "[status] Querying conclusion for run $APK_RUN_ID..."
-CONCLUSION=$(gh run view "$APK_RUN_ID" \
-    --json conclusion \
-    -q '.conclusion' 2>/dev/null || echo "unknown")
-echo "[status] Conclusion = $CONCLUSION"
-
-# Final sync to fetch any committed error logs
-echo "[sync] Final git pull"
-git fetch origin main
-git reset --hard origin/main
-
-# Write build_status.txt and handle logs
-if [[ "$CONCLUSION" == "success" ]]; then
-    echo "[result] BUILD SUCCESS"
-    echo "SUCCESS" > "$STATUS_FILE"
-    rm -rf "$ERROR_LOG_DIR"
-    mkdir -p "$ERROR_LOG_DIR"
-    echo "[result] Cleared error logs from shared storage"
-else
-    echo "[result] BUILD FAILURE (conclusion=$CONCLUSION)"
-    echo "FAILURE" > "$STATUS_FILE"
-
-    if [[ -d "$REPO_DIR/build_error_logs" ]] && \
-       [[ -f "$REPO_DIR/build_error_logs/error_summary.txt" ]]; then
-        rm -rf "$ERROR_LOG_DIR"
-        mkdir -p "$ERROR_LOG_DIR"
-        cp -f "$REPO_DIR/build_error_logs/"* "$ERROR_LOG_DIR/" 2>/dev/null || true
-        echo "[result] Error logs copied to $ERROR_LOG_DIR"
-    else
-        echo "[warn] FAILURE but no error_summary.txt found in repo"
-        mkdir -p "$ERROR_LOG_DIR"
-        echo "Build failed but no error_summary.txt was committed." \
-            > "$ERROR_LOG_DIR/error_summary.txt"
-        echo "(gh conclusion=$CONCLUSION, no log files found)" \
-            >> "$ERROR_LOG_DIR/error_summary.txt"
-    fi
-fi
-
-# Always touch build_complete.flag last
-echo "[final] Touching build_complete.flag"
-touch "$COMPLETE_FLAG" || true
-
-echo "=== build_runner.sh DONE (conclusion=$CONCLUSION) $(date) ==="
-
-
-//===== TERMUXFILE: workflows/Ai-codegen.yml =====
-name: AI Code Generator
-
-on:
-  workflow_dispatch:
-  push:
-    paths:
-      - ai-output.txt
-
-permissions:
-  contents: write
-
-jobs:
-  generate:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Set up Python (GitHub runner only)
-        if: ${{ !env.ACT }}
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Use system Python (Termux / act)
-        if: ${{ env.ACT }}
-        run: |
-          echo "Using Termux Python"
-          python --version
-
-      - name: Run AI Code Generator
-        run: |
-          python ai-code.py ~/storage/shared/Download/ai-output.txt
-
-      - name: Clean act cache (local only)
-        if: ${{ env.ACT }}
-        run: |
-          echo "Cleaning act cache..."
-          rm -rf ~/.cache/act || true
-
+========================================================
+  STEP 11  |  Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (193016 bytes)
 

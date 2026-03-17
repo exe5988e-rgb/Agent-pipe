@@ -3260,6 +3260,11 @@ if __name__ == "__main__":
     "to": "95d66370b486",
     "count": 1,
     "last_seen": 1773753323.4042895
+  },
+  "95d66370b486|tap:Clear input": {
+    "to": "93e7bdafeb42",
+    "count": 1,
+    "last_seen": 1773753355.8060327
   }
 }
 

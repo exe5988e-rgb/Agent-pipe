@@ -5584,7 +5584,9 @@ RuntimeError: No LLM backend available.
 
 ========================================================
   STEP 6  |  Search for MrBeast on YouTube
-========================================================
+========================================================[parser] DEBUG normalized: 'tap 4'
+[parser] INFO parsed 'tap 4' -> {'action': 'tap', 'target': 4}
+
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash

@@ -3078,6 +3078,539 @@ echo "=== event5 labelled ==="
 timeout 5 $ADB -s $DEVICE shell getevent -l /dev/input/event5
 
 
+//===== TERMUXFILE: skill_gauntlet.py =====
+#!/usr/bin/env python3
+"""
+skill_gauntlet.py  —  JarvisMinI Self-Improving Benchmark Runner
+
+Runs a curated gauntlet of tasks end-to-end on the real device.
+Each successful run auto-saves a skill via learn_skill().
+By the end of one session the agent has a skill library covering
+the entire device — no manual recording needed.
+
+Usage:
+  python3 skill_gauntlet.py --device "192.168.29.48:34011"
+  python3 skill_gauntlet.py --device "192.168.29.48:34011" --category whatsapp
+  python3 skill_gauntlet.py --device "192.168.29.48:34011" --retry-failed
+  python3 skill_gauntlet.py --device "192.168.29.48:34011" --dry-run
+
+Categories:
+  whatsapp, youtube, settings, chrome, playstore, phone, cross_app
+
+Output:
+  ~/workflows/gauntlet_report.json  — full results
+  ~/workflows/skills.json           — auto-populated by learn_skill()
+"""
+
+import argparse
+import json
+import os
+import sys
+import time
+import subprocess
+import re
+from pathlib import Path
+from datetime import datetime
+
+ROOT = Path(__file__).parent
+sys.path.insert(0, str(ROOT / "test" / "jarvis-agent"))
+
+REPORT_FILE  = Path.home() / "workflows" / "gauntlet_report.json"
+SKILLS_FILE  = Path.home() / "workflows" / "skills.json"
+DEFAULT_DEV  = "192.168.29.48:34011"
+
+# ── Task registry ─────────────────────────────────────────────────────────────
+# Each task:
+#   task        : string passed to the agent
+#   category    : grouping
+#   difficulty  : 1=trivial, 2=simple, 3=moderate, 4=hard, 5=cross-app
+#   max_steps   : abort if agent exceeds this
+#   success_hint: substring expected in final activity/UI on success (optional)
+#   depends_on  : list of task names that should run first (optional)
+#   notes       : why this task is in the gauntlet
+
+TASKS = [
+
+    # ── WHATSAPP ──────────────────────────────────────────────────────────────
+    {
+        "task":       "Open WhatsApp",
+        "category":   "whatsapp",
+        "difficulty": 1,
+        "max_steps":  5,
+        "notes":      "OPT4 bypass — should complete in <100ms",
+    },
+    {
+        "task":       "Send a WhatsApp message to Mummy saying Good morning",
+        "category":   "whatsapp",
+        "difficulty": 3,
+        "max_steps":  15,
+        "notes":      "Core send flow — policy engine should handle",
+    },
+    {
+        "task":       "Send a WhatsApp message to Ayush Kumar saying Hey what's up",
+        "category":   "whatsapp",
+        "difficulty": 3,
+        "max_steps":  15,
+        "notes":      "Different contact — tests contact search generalization",
+    },
+    {
+        "task":       "Open WhatsApp and go to Calls tab",
+        "category":   "whatsapp",
+        "difficulty": 2,
+        "max_steps":  8,
+        "notes":      "Tab navigation",
+    },
+    {
+        "task":       "Open WhatsApp and go to Updates tab",
+        "category":   "whatsapp",
+        "difficulty": 2,
+        "max_steps":  8,
+        "notes":      "Status/updates navigation",
+    },
+    {
+        "task":       "Open WhatsApp and search for Mummy in chats",
+        "category":   "whatsapp",
+        "difficulty": 2,
+        "max_steps":  10,
+        "notes":      "Search flow without sending",
+    },
+    {
+        "task":       "Send a WhatsApp message to Sadique faridi saying Hello brother",
+        "category":   "whatsapp",
+        "difficulty": 3,
+        "max_steps":  15,
+        "notes":      "Third contact — builds contact search robustness",
+    },
+
+    # ── YOUTUBE ───────────────────────────────────────────────────────────────
+    {
+        "task":       "Open YouTube",
+        "category":   "youtube",
+        "difficulty": 1,
+        "max_steps":  5,
+        "notes":      "OPT4 bypass",
+    },
+    {
+        "task":       "Play Warriyo Mortals on YouTube",
+        "category":   "youtube",
+        "difficulty": 3,
+        "max_steps":  12,
+        "notes":      "Session 5 confirmed — search + tap first result",
+    },
+    {
+        "task":       "Search for lofi hip hop on YouTube and play the first video",
+        "category":   "youtube",
+        "difficulty": 3,
+        "max_steps":  12,
+        "notes":      "Generic search query — tests $QUERY generalization",
+    },
+    {
+        "task":       "Open YouTube and go to Subscriptions",
+        "category":   "youtube",
+        "difficulty": 2,
+        "max_steps":  8,
+        "notes":      "Bottom nav tab",
+    },
+    {
+        "task":       "Search for MrBeast on YouTube",
+        "category":   "youtube",
+        "difficulty": 2,
+        "max_steps":  10,
+        "notes":      "Channel search",
+    },
+
+    # ── SETTINGS ──────────────────────────────────────────────────────────────
+    {
+        "task":       "Open Settings",
+        "category":   "settings",
+        "difficulty": 1,
+        "max_steps":  5,
+        "notes":      "OPT4 bypass",
+    },
+    {
+        "task":       "Open Settings and go to WiFi",
+        "category":   "settings",
+        "difficulty": 2,
+        "max_steps":  8,
+        "notes":      "Settings navigation",
+    },
+    {
+        "task":       "Open Settings and check battery percentage",
+        "category":   "settings",
+        "difficulty": 2,
+        "max_steps":  8,
+        "notes":      "Battery settings",
+    },
+    {
+        "task":       "Open Settings and go to Display",
+        "category":   "settings",
+        "difficulty": 2,
+        "max_steps":  8,
+        "notes":      "Display settings",
+    },
+    {
+        "task":       "Open Settings and go to Notifications",
+        "category":   "settings",
+        "difficulty": 2,
+        "max_steps":  8,
+        "notes":      "Notifications settings",
+    },
+
+    # ── CHROME ────────────────────────────────────────────────────────────────
+    {
+        "task":       "Open Chrome",
+        "category":   "chrome",
+        "difficulty": 1,
+        "max_steps":  5,
+        "notes":      "OPT4 bypass",
+    },
+    {
+        "task":       "Open Chrome and go to google.com",
+        "category":   "chrome",
+        "difficulty": 2,
+        "max_steps":  10,
+        "notes":      "URL navigation",
+    },
+    {
+        "task":       "Search for weather today in Chrome",
+        "category":   "chrome",
+        "difficulty": 2,
+        "max_steps":  10,
+        "notes":      "Chrome search",
+    },
+    {
+        "task":       "Open Chrome and open a new tab",
+        "category":   "chrome",
+        "difficulty": 2,
+        "max_steps":  8,
+        "notes":      "Tab management",
+    },
+
+    # ── PLAY STORE ────────────────────────────────────────────────────────────
+    {
+        "task":       "Open Play Store",
+        "category":   "playstore",
+        "difficulty": 1,
+        "max_steps":  5,
+        "notes":      "OPT4 bypass",
+    },
+    {
+        "task":       "Search for Spotify on Play Store",
+        "category":   "playstore",
+        "difficulty": 2,
+        "max_steps":  10,
+        "notes":      "Play Store search",
+    },
+    {
+        "task":       "Search for VLC on Play Store and open its page",
+        "category":   "playstore",
+        "difficulty": 3,
+        "max_steps":  12,
+        "notes":      "Search + tap result",
+    },
+
+    # ── PHONE / CONTACTS ──────────────────────────────────────────────────────
+    {
+        "task":       "Open Phone app",
+        "category":   "phone",
+        "difficulty": 1,
+        "max_steps":  5,
+        "notes":      "OPT4 bypass",
+    },
+    {
+        "task":       "Open Contacts",
+        "category":   "phone",
+        "difficulty": 1,
+        "max_steps":  5,
+        "notes":      "OPT4 bypass",
+    },
+    {
+        "task":       "Open Contacts and search for Mummy",
+        "category":   "phone",
+        "difficulty": 2,
+        "max_steps":  10,
+        "notes":      "Contact search",
+    },
+
+    # ── CROSS-APP (run last — depend on single-app skills) ────────────────────
+    {
+        "task":       "Open Chrome, search for wikipedia.org, then share the link via WhatsApp to Mummy",
+        "category":   "cross_app",
+        "difficulty": 5,
+        "max_steps":  25,
+        "depends_on": ["Open Chrome and go to google.com",
+                       "Send a WhatsApp message to Mummy saying Good morning"],
+        "notes":      "Chrome→WhatsApp share — tests cross-app state",
+    },
+    {
+        "task":       "Search for lofi hip hop on YouTube, copy the video title, then send it via WhatsApp to Mummy",
+        "category":   "cross_app",
+        "difficulty": 5,
+        "max_steps":  30,
+        "depends_on": ["Play Warriyo Mortals on YouTube",
+                       "Send a WhatsApp message to Mummy saying Good morning"],
+        "notes":      "YouTube→WhatsApp — tests copy/paste cross-app",
+    },
+    {
+        "task":       "Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy",
+        "category":   "cross_app",
+        "difficulty": 5,
+        "max_steps":  25,
+        "depends_on": ["Open Settings and go to WiFi",
+                       "Send a WhatsApp message to Mummy saying Good morning"],
+        "notes":      "Settings→WhatsApp — real utility task",
+    },
+]
+
+# ── ADB helpers ───────────────────────────────────────────────────────────────
+
+def _shell(device, *args, timeout=15):
+    r = subprocess.run(
+        ["adb", "-s", device, "shell"] + list(str(a) for a in args),
+        capture_output=True, timeout=timeout
+    )
+    return r.stdout.decode(errors="replace").strip()
+
+def go_home(device):
+    _shell(device, "input", "keyevent", "3")
+    time.sleep(1.5)
+
+def get_activity(device):
+    out = _shell(device, "dumpsys", "activity", "activities", timeout=8)
+    m = re.search(r"topResumedActivity[=:\s]+ActivityRecord\{[^ ]+\s+[^ ]+\s+([^ ]+)", out)
+    if m: return m.group(1)
+    return "unknown"
+
+# ── Agent runner ──────────────────────────────────────────────────────────────
+
+def run_task(task_str, device, max_steps, dry_run=False):
+    """
+    Run the agent on a single task. Returns dict with:
+      success, steps, elapsed_s, error, final_activity
+    """
+    if dry_run:
+        print(f"  [dry-run] would run: {task_str!r}")
+        return {"success": True, "steps": 0, "elapsed_s": 0.0,
+                "error": None, "final_activity": "dry_run", "dry_run": True}
+
+    controller = str(ROOT / "test" / "jarvis-agent" / "agent" / "controller.py")
+    if not os.path.exists(controller):
+        return {"success": False, "steps": 0, "elapsed_s": 0.0,
+                "error": f"controller.py not found at {controller}",
+                "final_activity": "unknown"}
+
+    cmd = [
+        sys.executable, controller,
+        "--task",      task_str,
+        "--device",    device,
+        "--max-steps", str(max_steps),
+    ]
+
+    t0 = time.time()
+    try:
+        result = subprocess.run(
+            cmd,
+            capture_output=False,   # let output flow to terminal
+            timeout=max_steps * 30  # generous: 30s per step max
+        )
+        elapsed = time.time() - t0
+        success = result.returncode == 0
+
+        # Even if returncode != 0 controller may have succeeded —
+        # check final activity as a proxy
+        final_act = get_activity(device)
+
+        return {
+            "success":        success,
+            "steps":          max_steps,   # actual steps logged by controller
+            "elapsed_s":      round(elapsed, 1),
+            "error":          None if success else f"returncode={result.returncode}",
+            "final_activity": final_act,
+        }
+    except subprocess.TimeoutExpired:
+        elapsed = time.time() - t0
+        return {"success": False, "steps": max_steps, "elapsed_s": round(elapsed,1),
+                "error": "timeout", "final_activity": get_activity(device)}
+    except Exception as e:
+        elapsed = time.time() - t0
+        return {"success": False, "steps": 0, "elapsed_s": round(elapsed,1),
+                "error": str(e), "final_activity": "unknown"}
+
+# ── Report ────────────────────────────────────────────────────────────────────
+
+def skills_count():
+    if SKILLS_FILE.exists():
+        try:
+            return len(json.loads(SKILLS_FILE.read_text()))
+        except:
+            pass
+    return 0
+
+def print_report(results):
+    total    = len(results)
+    passed   = sum(1 for r in results if r["result"]["success"])
+    failed   = total - passed
+    avg_time = sum(r["result"]["elapsed_s"] for r in results) / max(total, 1)
+
+    print(f"""
+╔══════════════════════════════════════════════════════════════╗
+║   GAUNTLET REPORT                                           ║
+╠══════════════════════════════════════════════════════════════╣
+║  Tasks run : {total:<48}║
+║  Passed    : {passed:<48}║
+║  Failed    : {failed:<48}║
+║  Avg time  : {avg_time:.1f}s{'':<44}║
+║  Skills    : {skills_count():<48}║
+╠══════════════════════════════════════════════════════════════╣""")
+
+    for r in results:
+        status = "✓" if r["result"]["success"] else "✗"
+        t      = r["result"]["elapsed_s"]
+        err    = r["result"].get("error") or ""
+        task   = r["task"][:52]
+        print(f"║  {status} {task:<52} {t:5.1f}s  ║")
+        if err:
+            print(f"║    ERROR: {err:<54}║")
+
+    print("╚══════════════════════════════════════════════════════════════╝")
+
+    if failed > 0:
+        print(f"\n  Re-run failed tasks:")
+        print(f"    python3 skill_gauntlet.py --device <device> --retry-failed\n")
+
+def save_report(results, device):
+    report = {
+        "run_at":     datetime.now().isoformat(),
+        "device":     device,
+        "skills_end": skills_count(),
+        "results":    results,
+    }
+    REPORT_FILE.write_text(json.dumps(report, indent=2))
+    print(f"\n  Report saved: {REPORT_FILE}")
+
+# ── Main ──────────────────────────────────────────────────────────────────────
+
+def main():
+    p = argparse.ArgumentParser(
+        description="JarvisMinI Self-Improving Benchmark Runner"
+    )
+    p.add_argument("--device",       default=DEFAULT_DEV)
+    p.add_argument("--category",     default=None,
+                   help="Run only this category: whatsapp/youtube/settings/chrome/playstore/phone/cross_app")
+    p.add_argument("--difficulty",   type=int, default=None,
+                   help="Run only tasks with difficulty <= N (1-5)")
+    p.add_argument("--retry-failed", action="store_true",
+                   help="Re-run tasks that failed in last gauntlet_report.json")
+    p.add_argument("--dry-run",      action="store_true",
+                   help="Print tasks without running them")
+    p.add_argument("--pause",        type=float, default=3.0,
+                   help="Seconds to pause between tasks (default 3)")
+    p.add_argument("--task",         default=None,
+                   help="Run a single specific task by exact name")
+    args = p.parse_args()
+
+    # Select tasks
+    tasks = list(TASKS)
+
+    if args.retry_failed:
+        if not REPORT_FILE.exists():
+            print("No previous report found. Run gauntlet first.")
+            sys.exit(1)
+        prev = json.loads(REPORT_FILE.read_text())
+        failed_names = {r["task"] for r in prev["results"]
+                        if not r["result"]["success"]}
+        tasks = [t for t in tasks if t["task"] in failed_names]
+        print(f"  Retrying {len(tasks)} failed tasks from last run")
+
+    elif args.task:
+        tasks = [t for t in tasks if t["task"] == args.task]
+        if not tasks:
+            print(f"  Task not found: {args.task!r}")
+            print("  Available tasks:")
+            for t in TASKS:
+                print(f"    {t['task']!r}")
+            sys.exit(1)
+
+    else:
+        if args.category:
+            tasks = [t for t in tasks if t["category"] == args.category]
+        if args.difficulty:
+            tasks = [t for t in tasks if t["difficulty"] <= args.difficulty]
+
+    if not tasks:
+        print("  No tasks match the given filters.")
+        sys.exit(0)
+
+    # Sort: easy first, cross-app last
+    tasks.sort(key=lambda t: (t["difficulty"], t["category"] == "cross_app"))
+
+    print(f"""
+╔══════════════════════════════════════════════════════════════╗
+║   JARVIS SKILL GAUNTLET                                     ║
+║   Device    : {args.device:<47}║
+║   Tasks     : {len(tasks):<47}║
+║   Skills now: {skills_count():<47}║
+╚══════════════════════════════════════════════════════════════╝
+""")
+
+    if args.dry_run:
+        print("  DRY RUN — tasks that would execute:\n")
+        for i, t in enumerate(tasks, 1):
+            print(f"  [{i:2d}] [{t['difficulty']}★] [{t['category']:<10}] {t['task']}")
+        print(f"\n  Total: {len(tasks)} tasks")
+        return
+
+    results = []
+    skills_before = skills_count()
+
+    for i, task_def in enumerate(tasks, 1):
+        task_str    = task_def["task"]
+        max_steps   = task_def.get("max_steps", 20)
+        difficulty  = task_def["difficulty"]
+        category    = task_def["category"]
+        notes       = task_def.get("notes", "")
+
+        print(f"\n{'═'*64}")
+        print(f"  TASK {i}/{len(tasks)}  [{difficulty}★]  [{category}]")
+        print(f"  {task_str}")
+        if notes:
+            print(f"  ({notes})")
+        print(f"{'═'*64}")
+
+        # Return to home screen before each task
+        go_home(args.device)
+        time.sleep(1)
+
+        result = run_task(task_str, args.device, max_steps, dry_run=args.dry_run)
+
+        status = "✓ PASS" if result["success"] else "✗ FAIL"
+        print(f"\n  {status}  |  {result['elapsed_s']:.1f}s  |  skills: {skills_count()}")
+        if result.get("error"):
+            print(f"  Error: {result['error']}")
+
+        results.append({
+            "task":       task_str,
+            "category":   category,
+            "difficulty": difficulty,
+            "result":     result,
+        })
+
+        # Pause between tasks
+        if i < len(tasks):
+            print(f"\n  Pausing {args.pause}s before next task...")
+            time.sleep(args.pause)
+
+    # Final report
+    skills_after = skills_count()
+    print(f"\n  Skills learned this session: {skills_after - skills_before}")
+    print_report(results)
+    save_report(results, args.device)
+
+
+if __name__ == "__main__":
+    main()
+
+
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash
 #

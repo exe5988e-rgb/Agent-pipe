@@ -7900,7 +7900,145 @@ RuntimeError: No LLM backend available.
 [parser] DEBUG normalized: 'You'
 [parser] DEBUG normalized: 'You'
 [parser] DEBUG normalized: 'You'
+[parser] DEBUG normalized: 'Tue, 17 March'
 
+########################################################
+  JARVIS  |  Search for Spotify on Play Store
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 275 screens (0 tainted), 329 transitions
+    whatsapp             142 screens
+    youtube              54 screens
+    chrome               25 screens
+    vending              21 screens
+    settings             15 screens
+    launcher             8 screens
+    termux               7 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+    dialer               1 screens
+  TransitionMemory: 329 transitions (254 confirmed, threshold=2)
+[init] task_apps (ordered): ['spotify', 'play store']
+
+========================================================
+  STEP 1  |  Search for Spotify on Play Store
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3600152 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=af4026851307 elements=26
+[step] UI: ['Clock', '14', ':', '20', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[OPT4v2] launcher -> launching spotify (com.spotify.music)
+[llm] OPT4v2 am start: com.spotify.music
+[OPT4v2] app_index -> 1/2
+[mem] invalidated com.android.launcher/.Launcher
+
+========================================================
+  STEP 2  |  Search for Spotify on Play Store
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3599975 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=af4026851307 elements=26
+[step] UI: ['Clock', '14', ':', '20', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[OPT4v2] launcher -> launching play store (com.android.vending)
+[llm] OPT4v2 am start: com.android.vending
+[OPT4v2] app_index -> 2/2
+
+========================================================
+  STEP 3  |  Search for Spotify on Play Store
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1159712 bytes)
+[OPT7] predicted next screen: vending_assetbrowseractivity (06c59ed8)
+[ui_parser] activity=com.android.vending/.AssetBrowserActivity
+[ui_parser] signal='com.android.vending/.AssetBrowserActivity'
+[mem] miss (unknown): com.android.vending/.AssetBrowserActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 22 elements from 192.168.29.48:34011
+[mem] stored com.android.vending/.AssetBrowserActivity hash=0707fd40e304 elements=22
+[step] UI: ['element_1', 'element_2', 'element_3', 'element_4', 'element_5', 'element_6', 'element_7', 'element_8']
+[map] screen: vending_assetbrowseractivity (06c59ed8)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'You'
+[step] LLM: 'You'
+[step] action: {'action': 'retry', '_warn': "unrecognised: 'You'"}
+[input] cannot build event from: {'action': 'retry', '_warn': "unrecognised: 'You'"}
+[mem] invalidated com.android.vending/.AssetBrowserActivity
+[step] step=3/10 done=False history=['opt4_launch:spotify', 'opt4_launch:play store', 'retry']
+
+========================================================
+  STEP 4  |  Search for Spotify on Play Store
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (891895 bytes)
+[ui_parser] activity=com.android.vending/.AssetBrowserActivity
+[ui_parser] signal='com.android.vending/.AssetBrowserActivity'
+[mem] miss (unknown): com.android.vending/.AssetBrowserActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 22 elements from 192.168.29.48:34011
+[mem] stored com.android.vending/.AssetBrowserActivity hash=0707fd40e304 elements=22
+[step] UI: ['element_1', 'element_2', 'element_3', 'element_4', 'element_5', 'element_6', 'element_7', 'element_8']
+[map] screen: vending_assetbrowseractivity (06c59ed8)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'You'
+[step] LLM: 'You'
+[step] action: {'action': 'retry', '_warn': "unrecognised: 'You'"}
+[input] cannot build event from: {'action': 'retry', '_warn': "unrecognised: 'You'"}
+[mem] invalidated com.android.vending/.AssetBrowserActivity
+[step] step=4/10 done=False history=['opt4_launch:spotify', 'opt4_launch:play store', 'retry', 'retry']
+
+========================================================
+  STEP 5  |  Search for Spotify on Play Store
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (895895 bytes)
+[ui_parser] activity=com.android.vending/.AssetBrowserActivity
+[ui_parser] signal='com.android.vending/.AssetBrowserActivity'
+[mem] miss (unknown): com.android.vending/.AssetBrowserActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 19 elements from 192.168.29.48:34011
+[mem] stored com.android.vending/.AssetBrowserActivity hash=a74a03e73c76 elements=19
+[step] UI: ['element_1', 'element_2', 'element_3', 'element_4', 'element_5', 'element_6', 'element_7', 'element_8']
+[map] transition: vending_assetbrowseractivity --[retry]--> vending_assetbrowseractivity
+[map] screen: vending_assetbrowseractivity (f024dd6a)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'You'
+[step] LLM: 'You'
+[step] action: {'action': 'retry', '_warn': "unrecognised: 'You'"}
+[input] cannot build event from: {'action': 'retry', '_warn': "unrecognised: 'You'"}
+[mem] invalidated com.android.vending/.AssetBrowserActivity
+[step] step=5/10 done=False history=['opt4_launch:spotify', 'opt4_launch:play store', 'retry', 'retry', 'retry']
+
+========================================================
+  STEP 6  |  Search for Spotify on Play Store
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (666751 bytes)
+[ui_parser] activity=com.android.vending/.AssetBrowserActivity
+[ui_parser] signal='com.android.vending/.AssetBrowserActivity'
+[mem] miss (unknown): com.android.vending/.AssetBrowserActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 20 elements from 192.168.29.48:34011
+[mem] stored com.android.vending/.AssetBrowserActivity hash=5d9291c1613b elements=20
+[step] UI: ['element_1', 'element_2', 'element_3', 'element_4', 'element_5', 'element_6', 'element_7', 'element_8']
+[map] new screen: vending_assetbrowseractivity (572db9f8d8bd)
+[map] transition: vending_assetbrowseractivity --[retry]--> vending_assetbrowseractivity
+[map] screen: vending_assetbrowseractivity (572db9f8)
+[step] repeat warning: 'retry'
+[llm] prompt tail: ..."ion:\nWARNING: 'retry' repeated 3+ times with no change — try a different action."
+[llm] Phone B (Claude): 'Tue, 17 March'
+[step] LLM: 'Tue, 17 March'
+[step] action: {'action': 'retry', '_warn': "unrecognised: 'Tue, 17 March'"}
+[input] cannot build event from: {'action': 'retry', '_warn': "unrecognised: 'Tue, 17 March'"}
+[step] step=6/10 done=False history=['opt4_launch:spotify', 'opt4_launch:play store', 'retry', 'retry', 'retry', 'retry']
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash
@@ -12246,266 +12384,5 @@ def parse_ui(image_path: str, adb_device: str = None) -> list:
         print(f"  [{e['id']}]{flag} {e['cls']:8} ({e['x']:4},{e['y']:4}) {e['text'][:40]}")
 
     return elements
-
-
-//===== TERMUXFILE: jarvis-agent/executor/input_event.py =====
-"""
-executor/input_event.py
-
-Extracted from DroidBot/droidbot/input_event.py
-Source: https://github.com/honeynet/droidbot
-
-What we keep (prototype needs only):
-  KeyEvent     — key_press via adb (BACK, HOME, ENTER...)
-  TouchEvent   — tap a coordinate
-  SwipeEvent   — drag from→to
-  SetTextEvent — type text into focused field
-
-What we drop (exploration/testing only):
-  IntentEvent, SpawnEvent, KillAppEvent, ManualEvent, ExitEvent,
-  SelectEvent, LongTouchEvent, ScrollEvent, EventLog, UIEvent helpers
-
-Interface change: added to_adb_cmd() to each event so InputManager
-can dispatch without depending on DroidBot's internal ADB adapter.
-"""
-
-import re
-import subprocess
-import time
-
-# ── Key names (from DroidBot POSSIBLE_KEYS + Android keycodes) ───────────────
-POSSIBLE_KEYS = ["BACK", "MENU", "HOME"]
-
-KEY_CODES = {
-    "HOME":         3,
-    "BACK":         4,
-    "MENU":        82,
-    "ENTER":       66,
-    "POWER":       26,
-    "VOLUME_UP":   24,
-    "VOLUME_DOWN": 25,
-    "DELETE":      67,
-    "SPACE":       62,
-}
-
-# Event type strings (kept from DroidBot for future serialisation compat)
-KEY_KeyEvent    = "key"
-KEY_TouchEvent  = "touch"
-KEY_SwipeEvent  = "swipe"
-KEY_SetTextEvent = "set_text"
-
-
-class InvalidEventException(Exception):
-    pass
-
-
-# ── Base ─────────────────────────────────────────────────────────────────────
-
-class InputEvent:
-    """Base class. Mirrors DroidBot InputEvent interface."""
-
-    def __init__(self):
-        self.event_type = None
-
-    def to_adb_cmd(self) -> list:
-        """Return args for: adb shell <args>"""
-        raise NotImplementedError
-
-    def send(self, device):
-        """DroidBot-compatible send interface."""
-        cmd = ["adb", "-s", device.serial, "shell"] + self.to_adb_cmd()
-        subprocess.run(cmd, capture_output=True, timeout=10)
-        return True
-
-    def __str__(self):
-        return self.__class__.__name__
-
-
-# ── KeyEvent (from DroidBot KeyEvent) ────────────────────────────────────────
-
-class KeyEvent(InputEvent):
-    """
-    Press a hardware/virtual key.
-    DroidBot source: KeyEvent.send() → device.key_press(self.name)
-                     device.key_press() → self.adb.press(key_code)
-    We flatten that chain: directly emit 'input keyevent <code>'.
-    """
-
-    def __init__(self, name=None, event_dict=None):
-        super().__init__()
-        self.event_type = KEY_KeyEvent
-        self.name = name
-        if event_dict is not None:
-            self.__dict__.update(event_dict)
-
-    def to_adb_cmd(self) -> list:
-        # Look up integer code; fall through to raw int string if not in table
-        code = KEY_CODES.get(str(self.name).upper())
-        if code is None:
-            try:
-                code = int(self.name)
-            except (ValueError, TypeError):
-                code = 0
-        return ["input", "keyevent", str(code)]
-
-    def __str__(self):
-        return f"KeyEvent({self.name})"
-
-
-# ── TouchEvent (from DroidBot TouchEvent) ────────────────────────────────────
-
-class TouchEvent(InputEvent):
-    """
-    Tap a screen coordinate.
-    DroidBot source: TouchEvent.send() → device.view_long_touch(x, y, duration=200)
-                     view_long_touch() → self.adb.long_touch(x, y, duration)
-    We use 'input tap' which is simpler and sufficient for agent taps.
-    """
-
-    def __init__(self, x=None, y=None, event_dict=None):
-        super().__init__()
-        self.event_type = KEY_TouchEvent
-        self.x = x
-        self.y = y
-        if event_dict is not None:
-            self.__dict__.update(event_dict)
-
-    def to_adb_cmd(self) -> list:
-        if self.x is None or self.y is None:
-            raise InvalidEventException("TouchEvent missing x or y")
-        return ["input", "tap", str(int(self.x)), str(int(self.y))]
-
-    def __str__(self):
-        return f"TouchEvent(x={self.x}, y={self.y})"
-
-
-# ── SwipeEvent (from DroidBot SwipeEvent) ────────────────────────────────────
-
-class SwipeEvent(InputEvent):
-    """
-    Drag from (start_x, start_y) → (end_x, end_y) over duration ms.
-    DroidBot source: SwipeEvent.send() → device.view_drag((sx,sy),(ex,ey), duration)
-                     view_drag() → self.adb.drag(start_xy, end_xy, duration)
-    """
-
-    def __init__(self, start_x=None, start_y=None,
-                 end_x=None, end_y=None,
-                 duration=400, event_dict=None):
-        super().__init__()
-        self.event_type = KEY_SwipeEvent
-        self.start_x = start_x
-        self.start_y = start_y
-        self.end_x   = end_x
-        self.end_y   = end_y
-        self.duration = duration
-        if event_dict is not None:
-            self.__dict__.update(event_dict)
-
-    def to_adb_cmd(self) -> list:
-        return ["input", "swipe",
-                str(int(self.start_x)), str(int(self.start_y)),
-                str(int(self.end_x)),   str(int(self.end_y)),
-                str(int(self.duration))]
-
-    def __str__(self):
-        return (f"SwipeEvent(({self.start_x},{self.start_y})"
-                f"→({self.end_x},{self.end_y}), {self.duration}ms)")
-
-
-# ── SetTextEvent (from DroidBot SetTextEvent) ─────────────────────────────────
-
-class SetTextEvent(InputEvent):
-    """
-    Type text into currently focused field.
-    DroidBot source: SetTextEvent.send() →
-        1. TouchEvent(x,y).send(device)   — tap to focus
-        2. device.view_set_text(self.text) → adb.type(text)
-
-    For the agent we only need (2) — the field is already focused
-    by the preceding TapEvent. Spaces encoded as %s for adb shell.
-    """
-
-    def __init__(self, x=None, y=None, text=None, event_dict=None):
-        super().__init__()
-        self.event_type = KEY_SetTextEvent
-        self.x    = x
-        self.y    = y
-        self.text = text or ""
-        if event_dict is not None:
-            self.__dict__.update(event_dict)
-
-    def to_adb_cmd(self) -> list:
-        # adb shell input text: spaces must be %s, quotes escaped
-        safe = (self.text
-                .replace(" ", "%s")
-                .replace("'", "\\'")
-                .replace('"', '\\"'))
-        return ["input", "text", safe]
-
-    def __str__(self):
-        return f"SetTextEvent({self.text!r})"
-
-
-# ── Factory: action dict → InputEvent ─────────────────────────────────────────
-
-_SWIPE_DELTAS = {
-    "up":    (0, -600),
-    "down":  (0,  600),
-    "left":  (-400, 0),
-    "right": ( 400, 0),
-}
-
-def from_action(action: dict, ui_elements: list):
-    """
-    Build an InputEvent from a parsed action dict.
-
-    Args:
-        action      : dict from action_parser.parse_action()
-        ui_elements : list of dicts {id, text, x, y}
-
-    Returns:
-        InputEvent subclass, or None for 'done'
-    """
-    act = action.get("action", "").lower()
-
-    if act == "tap":
-        # Prefer element lookup by id; fall back to raw x,y
-        tid = action.get("target")
-        if tid is not None:
-            el = next((e for e in ui_elements if e["id"] == tid), None)
-            if el is None:
-                return None
-            return TouchEvent(x=el["x"], y=el["y"])
-        elif "x" in action and "y" in action:
-            return TouchEvent(x=action["x"], y=action["y"])
-        return None
-
-    elif act == "swipe":
-        if "x1" in action:
-            return SwipeEvent(start_x=action["x1"], start_y=action["y1"],
-                              end_x=action["x2"],   end_y=action["y2"],
-                              duration=action.get("duration_ms", 400))
-        direction = action.get("direction", "up").lower()
-        dx, dy = _SWIPE_DELTAS.get(direction, (0, -600))
-        cx, cy = 540, 1200
-        return SwipeEvent(start_x=cx, start_y=cy,
-                          end_x=cx+dx, end_y=cy+dy, duration=400)
-
-    elif act == "back":
-        return KeyEvent("BACK")
-
-    elif act == "home":
-        return KeyEvent("HOME")
-
-    elif act == "enter":
-        return KeyEvent("ENTER")
-
-    elif act == "type":
-        return SetTextEvent(text=action.get("text", ""))
-
-    elif act == "done":
-        return None
-
-    return None
 
 

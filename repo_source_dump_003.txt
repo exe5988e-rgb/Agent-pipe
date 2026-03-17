@@ -2874,6 +2874,7 @@ if __name__ == "__main__":
 [11:19:59]   PASS  139.2s  skills=0
 [11:20:04] 
 [9/33] [2★] [whatsapp] Open WhatsApp and go to Updates tab
+[11:21:20]   PASS  72.1s  skills=1
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4041,9 +4042,9 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-17T11:19:59.618011",
+  "run_at": "2026-03-17T11:21:20.240404",
   "skills_before": 0,
-  "skills_current": 0,
+  "skills_current": 1,
   "results": [
     {
       "task": "Open WhatsApp",
@@ -4116,9 +4117,38 @@ if __name__ == "__main__":
       "elapsed_s": 139.2,
       "error": null,
       "retried": false
+    },
+    {
+      "task": "Open WhatsApp and go to Updates tab",
+      "category": "whatsapp",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 72.1,
+      "error": null,
+      "retried": false
     }
   ]
 }
+
+//===== TERMUXFILE: skills.json =====
+[
+  {
+    "pattern": "open whatsapp and go",
+    "activity": "com.whatsapp/.home.ui.HomeActivity",
+    "task_example": "Open WhatsApp and go to Updates tab",
+    "steps": [
+      {
+        "action": "tap",
+        "target": "Updates"
+      },
+      {
+        "action": "done"
+      }
+    ],
+    "uses": 0,
+    "version": 2
+  }
+]
 
 //===== TERMUXFILE: keep_awake.sh =====
 #!/data/data/com.termux/files/usr/bin/bash

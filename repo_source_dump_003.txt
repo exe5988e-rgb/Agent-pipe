@@ -10517,7 +10517,9 @@ RuntimeError: No LLM backend available.
 ========================================================
   STEP 20  |  Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
 ========================================================
-[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (297553 bytes)
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (297553 bytes)[parser] DEBUG normalized: 'tap 8'
+[parser] INFO parsed 'tap 8' -> {'action': 'tap', 'target': 8}
+
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash

@@ -3180,6 +3180,11 @@ if __name__ == "__main__":
     "to": "06c59ed8f4e7",
     "count": 1,
     "last_seen": 1773735607.1454022
+  },
+  "06c59ed8f4e7|back": {
+    "to": "efa43c0a8f87",
+    "count": 1,
+    "last_seen": 1773735643.292532
   }
 }
 
@@ -4935,6 +4940,10 @@ java.lang.IllegalArgumentException: Argument expected after "text"
   TransitionMemory: 321 transitions (251 confirmed, threshold=2)
 [parser] DEBUG normalized: 'We’re performing maintenance to keep things running smoothly — Claude will be back in a bit.'
 [parser] INFO parsed 'We’re performing maintenance to keep things running smoothly' -> {'action': 'back'}
+[parser] DEBUG normalized: 'tap 1'
+[parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
+[parser] DEBUG normalized: 'tap 1'
+[parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

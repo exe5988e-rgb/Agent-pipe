@@ -26934,6 +26934,146 @@
           "resource_id": ""
         }
       ]
+    },
+    "46ae78626a87": {
+      "screen_id": "46ae78626a87",
+      "package": "com.android.vending",
+      "activity": "com.android.vending/.AssetBrowserActivity",
+      "name": "vending_assetbrowseractivity",
+      "labels": [
+        "element_1",
+        "element_2",
+        "Options",
+        "element_4",
+        "Options",
+        "element_6",
+        "Options",
+        "element_8",
+        "Options",
+        "element_10",
+        "Options",
+        "element_12",
+        "Options",
+        "element_14",
+        "element_15",
+        "element_16"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 98,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_2",
+          "x": 620,
+          "y": 549,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Options",
+          "x": 1096,
+          "y": 465,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_4",
+          "x": 620,
+          "y": 969,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Options",
+          "x": 1096,
+          "y": 885,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_6",
+          "x": 620,
+          "y": 1389,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Options",
+          "x": 1096,
+          "y": 1305,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_8",
+          "x": 620,
+          "y": 1774,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Options",
+          "x": 1096,
+          "y": 1725,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_10",
+          "x": 620,
+          "y": 2124,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Options",
+          "x": 1096,
+          "y": 2075,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_12",
+          "x": 620,
+          "y": 2507,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Options",
+          "x": 1096,
+          "y": 2425,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_14",
+          "x": 465,
+          "y": 2744,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_15",
+          "x": 775,
+          "y": 2744,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_16",
+          "x": 1085,
+          "y": 2744,
+          "cls": "android.view.View",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -27211,7 +27351,8 @@
     "ac5e0b570c7c|type": "7e24cdda1771",
     "7e24cdda1771|tap:element_7": "00f1f507607b",
     "62ac838bcb42|tap:element_11": "aa2019548b51",
-    "aa2019548b51|tap:Refine: weather today ranchi": "ec2d5cc0aa50"
+    "aa2019548b51|tap:Refine: weather today ranchi": "ec2d5cc0aa50",
+    "5d1a1d70d4c0|tap:element_2": "46ae78626a87"
   }
 }
 

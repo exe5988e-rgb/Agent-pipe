@@ -28336,7 +28336,7 @@
         "element_22",
         "Edit suggestion warriyo mortals edit"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {

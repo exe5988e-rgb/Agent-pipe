@@ -3343,8 +3343,8 @@ if __name__ == "__main__":
   },
   "a6c245bb7216|swipe": {
     "to": "be9769a7d6b5",
-    "count": 1,
-    "last_seen": 1773757882.245995
+    "count": 2,
+    "last_seen": 1773757976.9259708
   },
   "4e3d027411e1|swipe": {
     "to": "7be8acd10806",

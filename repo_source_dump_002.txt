@@ -14762,6 +14762,159 @@
           "y": 2632
         }
       ]
+    },
+    "58fbda4556ef": {
+      "screen_id": "58fbda4556ef",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/com.google.android.apps.youtube.app.watchwhile.InternalMainActivity",
+      "name": "youtube_internalmainactivity",
+      "labels": [
+        "@Saiyan_Doctrine",
+        "Subscribe to @Saiyan_Doctrine.",
+        "The ONLY Being Zeno Won\u2019t Fight#animeshort\u200b#viral\u200b#zeno\u200b#dragonball\u200b#goku\u200b#shortfeed\u200b",
+        "#anime",
+        "View 1,330 comments",
+        "Share this video",
+        "Remix this Short along with 2 other remixes",
+        "See more videos using this sound",
+        "Search",
+        "More",
+        "Shorts",
+        "Create",
+        "Subscriptions: New content is available",
+        "You",
+        "0 minutes 1 second of 1 minute 25 seconds"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.ViewGroup",
+          "x": 337,
+          "y": 2345
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 112,
+          "y": 2345
+        },
+        {
+          "text": "@Saiyan_Doctrine",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 393,
+          "y": 2345
+        },
+        {
+          "text": "Subscribe to @Saiyan_Doctrine.",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 755,
+          "y": 2345
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.ViewGroup",
+          "x": 508,
+          "y": 2460
+        },
+        {
+          "text": "The ONLY Being Zeno Won\u2019t Fight#animeshort\u200b#viral\u200b#zeno\u200b#dragonball\u200b#goku\u200b#shortfeed\u200b",
+          "resource_id": "",
+          "cls": "android.view.ViewGroup",
+          "x": 536,
+          "y": 2460
+        },
+        {
+          "text": "#anime",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 862,
+          "y": 2460
+        },
+        {
+          "text": "View 1,330 comments",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1128,
+          "y": 1799
+        },
+        {
+          "text": "Share this video",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1128,
+          "y": 2009
+        },
+        {
+          "text": "Remix this Short along with 2 other remixes",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1128,
+          "y": 2219
+        },
+        {
+          "text": "See more videos using this sound",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1128,
+          "y": 2436
+        },
+        {
+          "text": "Search",
+          "resource_id": "com.google.android.youtube:id/menu_item_view",
+          "cls": "android.widget.ImageView",
+          "x": 988,
+          "y": 223
+        },
+        {
+          "text": "More",
+          "resource_id": "com.google.android.youtube:id/menu_item_view",
+          "cls": "android.widget.ImageView",
+          "x": 1156,
+          "y": 223
+        },
+        {
+          "text": "Shorts",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 372,
+          "y": 2632
+        },
+        {
+          "text": "Create",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 2632
+        },
+        {
+          "text": "Subscriptions: New content is available",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 868,
+          "y": 2632
+        },
+        {
+          "text": "You",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1116,
+          "y": 2632
+        },
+        {
+          "text": "0 minutes 1 second of 1 minute 25 seconds",
+          "resource_id": "",
+          "cls": "android.widget.SeekBar",
+          "x": 620,
+          "y": 2546
+        }
+      ]
     }
   },
   "transitions": {
@@ -14953,7 +15106,8 @@
     "74d6715f5e29|The NEW 400HP TOYOTA CELICA \u2013 play Short": "c5f0cdab43d9",
     "74d6715f5e29|More actions": "03404722b81a",
     "74d6715f5e29|Is one of Yuji's fingers stronger than all 20 Sukuna's #anime #edit #viral #jjk \u2013 play Short": "03404722b81a",
-    "74d6715f5e29|She Lost Everything in 24 Hours \u2013 play Short": "03404722b81a"
+    "74d6715f5e29|She Lost Everything in 24 Hours \u2013 play Short": "03404722b81a",
+    "74d6715f5e29|Shorts": "58fbda4556ef"
   }
 }
 

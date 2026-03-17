@@ -3983,7 +3983,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-17T11:02:17.500428",
+  "run_at": "2026-03-17T11:02:42.678133",
   "skills_before": 0,
   "skills_current": 0,
   "results": [
@@ -4008,6 +4008,15 @@ if __name__ == "__main__":
     {
       "task": "Open Settings",
       "category": "settings",
+      "difficulty": 1,
+      "success": false,
+      "elapsed_s": 0.2,
+      "error": "orig=rc=1 retry=rc=1",
+      "retried": false
+    },
+    {
+      "task": "Open Chrome",
+      "category": "chrome",
       "difficulty": 1,
       "success": false,
       "elapsed_s": 0.2,

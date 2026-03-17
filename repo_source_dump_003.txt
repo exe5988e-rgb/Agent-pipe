@@ -3194,6 +3194,7 @@ if __name__ == "__main__":
 [13:48:50]   PASS  13.8s  skills=6
 [13:48:55] 
 [4/33] [1★] [chrome] Open Chrome
+[13:49:45]   PASS  46.4s  skills=6
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4361,7 +4362,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-17T13:48:50.715704",
+  "run_at": "2026-03-17T13:49:45.482396",
   "skills_before": 6,
   "skills_current": 6,
   "results": [
@@ -4389,6 +4390,15 @@ if __name__ == "__main__":
       "difficulty": 1,
       "success": true,
       "elapsed_s": 13.8,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Open Chrome",
+      "category": "chrome",
+      "difficulty": 1,
+      "success": true,
+      "elapsed_s": 46.4,
       "error": null,
       "retried": false
     }
@@ -4832,6 +4842,90 @@ java.lang.IllegalArgumentException: Argument expected after "text"
     wirelesssettings     1 screens
     dialer               1 screens
   TransitionMemory: 320 transitions (251 confirmed, threshold=2)
+[parser] DEBUG normalized: 'done'
+[parser] INFO parsed 'done' -> {'action': 'done'}
+
+########################################################
+  JARVIS  |  Open Chrome
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 262 screens (0 tainted), 320 transitions
+    whatsapp             141 screens
+    youtube              52 screens
+    vending              21 screens
+    chrome               21 screens
+    settings             12 screens
+    launcher             7 screens
+    termux               5 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+    dialer               1 screens
+  TransitionMemory: 320 transitions (251 confirmed, threshold=2)
+[init] task_apps (ordered): ['chrome']
+
+========================================================
+  STEP 1  |  Open Chrome
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3880186 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 15 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=33ba42b30171 elements=15
+[step] UI: ['Folder: Tools', 'Instagram', 'Tools', 'Grok', 'Roblox', 'Hollow Knight', 'Discord', 'OC Auto Clicker']
+[map] screen: launcher_launcher (efa43c0a)
+[OPT4v2] launcher -> launching chrome (com.android.chrome)
+[llm] OPT4v2 am start: com.android.chrome
+[OPT4v2] app_index -> 1/1
+
+========================================================
+  STEP 2  |  Open Chrome
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (301361 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 7 elements from 192.168.29.48:34011
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=b3a354a67ce4 elements=7
+[step] UI: ['Wikipedia', 'element_2', 'Play', 'English 7,141,000+ articles', '日本語 1,491,000+ 記事', 'Deutsch 3.099.000+ Artikel', 'Русский 2\xa0087\xa0000+ статей']
+[map] new screen: chrome_main (58c13236645d)
+[map] transition: launcher_launcher --[opt4_launch:chrome]--> chrome_main
+[map] screen: chrome_main (58c13236)
+[skill] matched: 'open chrome and go to'  score=1.00  act_match=True
+[skill] cannot resolve tap target: 'support.google.com/youtube/answer/7640706?hl=%@'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'done'
+[step] LLM: 'done'
+[step] action: {'action': 'done'}
+[input] DONE — no dispatch
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[skill] too few steps to save
+[step] step=2/5 done=True history=['opt4_launch:chrome', 'done']
+
+[controller] done in 2 steps
+
+[controller] history:
+  1. opt4_launch:chrome
+  2. done
+
+  Screen Map: 263 screens (0 tainted), 321 transitions
+    whatsapp             141 screens
+    youtube              52 screens
+    chrome               22 screens
+    vending              21 screens
+    settings             12 screens
+    launcher             7 screens
+    termux               5 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+    dialer               1 screens
+  TransitionMemory: 321 transitions (251 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

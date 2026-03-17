@@ -3243,6 +3243,7 @@ if __name__ == "__main__":
 [13:55:48]   PASS  79.2s  skills=6
 [13:55:53] 
 [12/33] [2★] [youtube] Search for MrBeast on YouTube
+[14:00:36]   PASS  279.6s  skills=6
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4410,7 +4411,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-17T13:55:48.231416",
+  "run_at": "2026-03-17T14:00:36.114228",
   "skills_before": 6,
   "skills_current": 6,
   "results": [
@@ -4510,6 +4511,15 @@ if __name__ == "__main__":
       "difficulty": 2,
       "success": true,
       "elapsed_s": 79.2,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Search for MrBeast on YouTube",
+      "category": "youtube",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 279.6,
       "error": null,
       "retried": false
     }
@@ -6087,6 +6097,99 @@ Traceback (most recent call last):
 RuntimeError: No LLM backend available.
   Phone B offline? Check: curl http://192.168.29.110:8890/health
   Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+[skill] cannot resolve tap target: 'Minimise'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 7  |  Search for MrBeast on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1559081 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] HIT com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=1071e5fda09a hits=4 elements=21
+[step] UI: ['Navigate up', 'Voice search', 'Search YouTube', 'element_4', 'element_5', 'Edit suggestion dream', 'element_7', 'Edit suggestion trading']
+[map] screen: youtube_shell$homeactivity (a080221d)
+[skill] matched: 'search for on youtube and play'  score=0.67  act_match=True
+[skill] cannot resolve tap target: 'Minimise'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 8  |  Search for MrBeast on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1558936 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] HIT com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=1071e5fda09a hits=5 elements=21
+[step] UI: ['Navigate up', 'Voice search', 'Search YouTube', 'element_4', 'element_5', 'Edit suggestion dream', 'element_7', 'Edit suggestion trading']
+[map] screen: youtube_shell$homeactivity (a080221d)
+[skill] matched: 'search for on youtube and play'  score=0.67  act_match=True
+[skill] cannot resolve tap target: 'Minimise'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 9  |  Search for MrBeast on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1559322 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] HIT com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=1071e5fda09a hits=6 elements=21
+[step] UI: ['Navigate up', 'Voice search', 'Search YouTube', 'element_4', 'element_5', 'Edit suggestion dream', 'element_7', 'Edit suggestion trading']
+[map] screen: youtube_shell$homeactivity (a080221d)
+[skill] matched: 'search for on youtube and play'  score=0.67  act_match=True
+[skill] cannot resolve tap target: 'Minimise'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 10  |  Search for MrBeast on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1559044 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] HIT com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=1071e5fda09a hits=7 elements=21
+[step] UI: ['Navigate up', 'Voice search', 'Search YouTube', 'element_4', 'element_5', 'Edit suggestion dream', 'element_7', 'Edit suggestion trading']
+[map] screen: youtube_shell$homeactivity (a080221d)
+[skill] matched: 'search for on youtube and play'  score=0.67  act_match=True
+[skill] cannot resolve tap target: 'Minimise'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B unreachable: timed out
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+[controller] history:
+  1. opt4_launch:youtube
+  2. tap [3] Search
+
+  Screen Map: 268 screens (0 tainted), 326 transitions
+    whatsapp             142 screens
+    youtube              54 screens
+    chrome               22 screens
+    vending              21 screens
+    settings             12 screens
+    launcher             8 screens
+    termux               6 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+    dialer               1 screens
+  TransitionMemory: 326 transitions (252 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

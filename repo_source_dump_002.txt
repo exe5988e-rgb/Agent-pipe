@@ -19265,6 +19265,120 @@
           "y": 2604
         }
       ]
+    },
+    "7970ab5363e1": {
+      "screen_id": "7970ab5363e1",
+      "package": "com.android.vending",
+      "activity": "com.android.vending/.AssetBrowserActivity",
+      "name": "vending_assetbrowseractivity",
+      "labels": [
+        "Average rating 4.5 stars in 36 million reviews",
+        "Content rating Rated for 3+",
+        "81 MB",
+        "More results for Match 3 games"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 641,
+          "y": 1057
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1030,
+          "y": 871
+        },
+        {
+          "text": "Average rating 4.5 stars in 36 million reviews",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 191,
+          "y": 1159
+        },
+        {
+          "text": "Content rating Rated for 3+",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 606,
+          "y": 1159
+        },
+        {
+          "text": "81 MB",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1011,
+          "y": 1159
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 620,
+          "y": 1709
+        },
+        {
+          "text": "More results for Match 3 games",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1135,
+          "y": 1709
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 620,
+          "y": 2129
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 637,
+          "y": 2129
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 987,
+          "y": 1933
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1106,
+          "y": 1933
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 155,
+          "y": 2604
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 465,
+          "y": 2604
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1085,
+          "y": 2604
+        }
+      ]
     }
   },
   "transitions": {
@@ -19493,7 +19607,8 @@
     "7571051ef9ea|element_1085_2604": "8a466f35ef41",
     "866f5ed64950|element_620_601": "7571051ef9ea",
     "866f5ed64950|More results for Top comics": "7571051ef9ea",
-    "866f5ed64950|element_200_1062": "7571051ef9ea"
+    "866f5ed64950|element_200_1062": "7571051ef9ea",
+    "866f5ed64950|element_562_1062": "7970ab5363e1"
   }
 }
 

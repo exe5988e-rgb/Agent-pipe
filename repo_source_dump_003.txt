@@ -9144,6 +9144,8 @@ RuntimeError: No LLM backend available.
   Local LLM down? Run:    bash ~/jarvis_server_init.sh
 [parser] DEBUG normalized: 'tap 2'
 [parser] INFO parsed 'tap 2' -> {'action': 'tap', 'target': 2}
+[parser] DEBUG normalized: 'tap 3'
+[parser] INFO parsed 'tap 3' -> {'action': 'tap', 'target': 3}
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

@@ -41860,6 +41860,114 @@
           "resource_id": ""
         }
       ]
+    },
+    "7be8acd10806": {
+      "screen_id": "7be8acd10806",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Open the homepage",
+        "element_2",
+        "google.com/search?q=best+restaurants+in+dhanbad&oq=best+restaurants+in+dhanbad&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDINCAQQABi",
+        "See 22 tabs",
+        "Customise and control Google Chrome",
+        "element_6",
+        "element_7",
+        "Expand map",
+        "element_9",
+        "element_10",
+        "element_11",
+        "element_12"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "element_2",
+          "x": 224,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "google.com/search?q=best+restaurants+in+dhanbad&oq=best+restaurants+in+dhanbad&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDINCAQQABi",
+          "x": 592,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "See 22 tabs",
+          "x": 988,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        },
+        {
+          "text": "element_6",
+          "x": 620,
+          "y": 1526,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 427,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Expand map",
+          "x": 1100,
+          "y": 340,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_9",
+          "x": 252,
+          "y": 425,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_10",
+          "x": 957,
+          "y": 425,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_11",
+          "x": 620,
+          "y": 1162,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_12",
+          "x": 620,
+          "y": 2210,
+          "cls": "android.view.View",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -42217,7 +42325,8 @@
     "3012bc5865d3|tap:Start voice search": "21323d874bfd",
     "21323d874bfd|type": "9331db4b6d02",
     "9331db4b6d02|tap:element_6": "a6c245bb7216",
-    "a6c245bb7216|swipe": "4e3d027411e1"
+    "a6c245bb7216|swipe": "4e3d027411e1",
+    "4e3d027411e1|swipe": "7be8acd10806"
   }
 }
 

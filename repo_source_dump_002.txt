@@ -14915,6 +14915,146 @@
           "y": 2546
         }
       ]
+    },
+    "ce95ce71af4a": {
+      "screen_id": "ce95ce71af4a",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/com.google.android.apps.youtube.app.watchwhile.InternalMainActivity",
+      "name": "youtube_internalmainactivity",
+      "labels": [
+        "Cast",
+        "Notifications, 9+",
+        "Search",
+        "All",
+        "100-200 in 7.7 // BMW M340i Stage 2, 56 thousand views \u2013 play Short",
+        "More actions",
+        "FIRST 1/4 Mile Lamborghini Temerario 1/4 Mile Dragy Test, 21 thousand views \u2013 play Short",
+        "More actions",
+        "My life in Ramadan | Dr Amir AIIMS #shorts #minivlog #shorts, 330 thousand views \u2013 play Short",
+        "John Carpenter's Toxic Commando  | FIX: Gamepad Not Working / No Controller Detected on Steam PC \ud83c\udfae \u2013 2 minutes, 41 seconds \u2013 Go to channel TechFixIT \u2013 TechFixIT - No views - 20 minutes ago \u2013 play video",
+        "Go to channel TechFixIT",
+        "Action menu",
+        "Shorts",
+        "Create",
+        "Subscriptions",
+        "You"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Cast",
+          "resource_id": "com.google.android.youtube:id/mdx_entry_point_button",
+          "cls": "android.widget.Button",
+          "x": 820,
+          "y": 223
+        },
+        {
+          "text": "Notifications, 9+",
+          "resource_id": "com.google.android.youtube:id/menu_item_view",
+          "cls": "android.widget.ImageView",
+          "x": 988,
+          "y": 223
+        },
+        {
+          "text": "Search",
+          "resource_id": "com.google.android.youtube:id/menu_item_view",
+          "cls": "android.widget.ImageView",
+          "x": 1156,
+          "y": 223
+        },
+        {
+          "text": "All",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1156,
+          "y": 440
+        },
+        {
+          "text": "100-200 in 7.7 // BMW M340i Stage 2, 56 thousand views \u2013 play Short",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 313,
+          "y": 1463
+        },
+        {
+          "text": "More actions",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 525,
+          "y": 1094
+        },
+        {
+          "text": "FIRST 1/4 Mile Lamborghini Temerario 1/4 Mile Dragy Test, 21 thousand views \u2013 play Short",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 870,
+          "y": 1463
+        },
+        {
+          "text": "More actions",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1082,
+          "y": 1094
+        },
+        {
+          "text": "My life in Ramadan | Dr Amir AIIMS #shorts #minivlog #shorts, 330 thousand views \u2013 play Short",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1205,
+          "y": 1463
+        },
+        {
+          "text": "John Carpenter's Toxic Commando  | FIX: Gamepad Not Working / No Controller Detected on Steam PC \ud83c\udfae \u2013 2 minutes, 41 seconds \u2013 Go to channel TechFixIT \u2013 TechFixIT - No views - 20 minutes ago \u2013 play video",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 2367
+        },
+        {
+          "text": "Go to channel TechFixIT",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 105,
+          "y": 2736
+        },
+        {
+          "text": "Action menu",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1142,
+          "y": 2736
+        },
+        {
+          "text": "Shorts",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 372,
+          "y": 2632
+        },
+        {
+          "text": "Create",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 2632
+        },
+        {
+          "text": "Subscriptions",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 868,
+          "y": 2632
+        },
+        {
+          "text": "You",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1116,
+          "y": 2632
+        }
+      ]
     }
   },
   "transitions": {
@@ -15107,7 +15247,8 @@
     "74d6715f5e29|More actions": "03404722b81a",
     "74d6715f5e29|Is one of Yuji's fingers stronger than all 20 Sukuna's #anime #edit #viral #jjk \u2013 play Short": "03404722b81a",
     "74d6715f5e29|She Lost Everything in 24 Hours \u2013 play Short": "03404722b81a",
-    "74d6715f5e29|Shorts": "58fbda4556ef"
+    "74d6715f5e29|Shorts": "58fbda4556ef",
+    "74d6715f5e29|Subscriptions: New content is available": "ce95ce71af4a"
   }
 }
 

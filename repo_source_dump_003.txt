@@ -10823,7 +10823,9 @@ RuntimeError: No LLM backend available.
 [input] dispatching: TouchEvent(x=620, y=338)
 [input] adb -s 192.168.29.48:34011 shell input tap 620 338
 [mem] invalidated com.android.settings/.SubSettings
-[step] step=5/30 done=False history=['opt4_launch:settings', 'tap [2] Back', 'tap [7] WiFi', 'tap [5] element_5', 'tap [2] element_2']
+[step] step=5/30 done=False history=['opt4_launch:settings', 'tap [2] Back', 'tap [7] WiFi', 'tap [5] element_5', 'tap [2] element_2'][parser] DEBUG normalized: 'tap 3'
+[parser] INFO parsed 'tap 3' -> {'action': 'tap', 'target': 3}
+
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash

@@ -5455,6 +5455,136 @@ RuntimeError: No LLM backend available.
 [parser] DEBUG normalized: 'tap 3'
 [parser] INFO parsed 'tap 3' -> {'action': 'tap', 'target': 3}
 
+########################################################
+  JARVIS  |  Search for MrBeast on YouTube
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 189 screens (0 tainted), 255 transitions
+    whatsapp             132 screens
+    youtube              31 screens
+    vending              16 screens
+    launcher             4 screens
+    termux               3 screens
+    unknown              1 screens
+    settings             1 screens
+    chrome               1 screens
+  TransitionMemory: 255 transitions (243 confirmed, threshold=2)
+[init] task_apps (ordered): ['youtube']
+
+========================================================
+  STEP 1  |  Search for MrBeast on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3599116 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=0a2c8f157003 elements=26
+[step] UI: ['Clock', '11', ':', '23', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[OPT4v2] launcher -> launching youtube (com.google.android.youtube)
+[llm] OPT4v2 am start: com.google.android.youtube
+[OPT4v2] app_index -> 1/1
+
+========================================================
+  STEP 2  |  Search for MrBeast on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (2389598 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 34 elements from 192.168.29.48:34011
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=2676e6eef146 elements=34
+[step] UI: ['Cast', 'Notifications, 2', 'Search', 'element_4', 'JensJulius Tejlgaard has new content', 'Competition Wallah has new content', 'TechFixIT has new content', 'NEFFEX has new content']
+[tm] transition changed: 4203f6dd32c9|opt4_launch:youtube f65869ba -> 8e74d0f0
+[map] transition: launcher_launcher --[opt4_launch:youtube]--> youtube_shell$homeactivity
+[map] screen: youtube_shell$homeactivity (8e74d0f0)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 3'
+[step] LLM: 'tap 3'
+[step] action: {'action': 'tap', 'target': 3}
+[input] dispatching: TouchEvent(x=1156, y=223)
+[input] adb -s 192.168.29.48:34011 shell input tap 1156 223
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[step] step=2/10 done=False history=['opt4_launch:youtube', 'tap [3] Search']
+
+========================================================
+  STEP 3  |  Search for MrBeast on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1494105 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 21 elements from 192.168.29.48:34011
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=d6a44a70f89b elements=21
+[step] UI: ['Navigate up', 'Voice search', 'Search YouTube', 'element_4', 'element_5', 'Edit suggestion tiki tiki slowed', 'element_7', 'Edit suggestion luz roja']
+[map] new screen: youtube_shell$homeactivity (f33f9e08caa5)
+[map] transition: youtube_shell$homeactivity --[tap:element_4]--> youtube_shell$homeactivity
+[map] screen: youtube_shell$homeactivity (f33f9e08)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'type MrBeast'
+[step] LLM: 'type MrBeast'
+[step] action: {'action': 'type', 'text': 'MrBeast'}
+[input] dispatching: SetTextEvent('MrBeast')
+[input] adb -s 192.168.29.48:34011 shell input text MrBeast
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[step] step=3/10 done=False history=['opt4_launch:youtube', 'tap [3] Search', "type 'MrBeast'"]
+
+========================================================
+  STEP 4  |  Search for MrBeast on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1213741 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 23 elements from 192.168.29.48:34011
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=8fd069723991 elements=23
+[step] UI: ['Navigate up', 'Clear', 'MrBeast', 'element_4', 'element_5', 'Edit suggestion mrbeast', 'element_7', 'Edit suggestion mr beast hindi']
+[map] new screen: youtube_shell$homeactivity (6d8964ace959)
+[map] transition: youtube_shell$homeactivity --[type]--> youtube_shell$homeactivity
+[map] screen: youtube_shell$homeactivity (6d8964ac)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 6'
+[step] LLM: 'tap 6'
+[step] action: {'action': 'tap', 'target': 6}
+[input] dispatching: TouchEvent(x=1156, y=391)
+[input] adb -s 192.168.29.48:34011 shell input tap 1156 391
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[step] step=4/10 done=False history=['opt4_launch:youtube', 'tap [3] Search', "type 'MrBeast'", 'tap [6] Edit suggestion mrbeast']
+
+========================================================
+  STEP 5  |  Search for MrBeast on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1175734 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 23 elements from 192.168.29.48:34011
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=a8e506adbb39 elements=23
+[step] UI: ['Navigate up', 'Clear', 'mrbeast', 'element_4', 'element_5', 'Edit suggestion mrbeast gaming', 'element_7', 'Edit suggestion mrbeast 5 ex girlfriend']
+[map] new screen: youtube_shell$homeactivity (501f21096105)
+[map] transition: youtube_shell$homeactivity --[tap:element_7]--> youtube_shell$homeactivity
+[map] screen: youtube_shell$homeactivity (501f2109)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 3'
+[step] LLM: 'tap 3'
+[step] action: {'action': 'tap', 'target': 3}
+[input] dispatching: TouchEvent(x=634, y=223)
+[input] adb -s 192.168.29.48:34011 shell input tap 634 223
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[step] step=5/10 done=False history=['opt4_launch:youtube', 'tap [3] Search', "type 'MrBeast'", 'tap [6] Edit suggestion mrbeast', 'tap [3] mrbeast']
+
+========================================================
+  STEP 6  |  Search for MrBeast on YouTube
+========================================================
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash

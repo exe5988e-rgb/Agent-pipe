@@ -3160,6 +3160,11 @@ if __name__ == "__main__":
     "to": "b37f4f8d4aed",
     "count": 1,
     "last_seen": 1773735486.30663
+  },
+  "efa43c0a8f87|opt4_launch:youtube": {
+    "to": "1dbfe781af53",
+    "count": 1,
+    "last_seen": 1773735507.4786468
   }
 }
 
@@ -3173,6 +3178,9 @@ if __name__ == "__main__":
 [13:48:07]   PASS  16.4s  skills=6
 [13:48:12] 
 [2/33] [1★] [youtube] Open YouTube
+[13:48:28]   PASS  13.2s  skills=6
+[13:48:33] 
+[3/33] [1★] [settings] Open Settings
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4340,7 +4348,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-17T13:48:07.218671",
+  "run_at": "2026-03-17T13:48:28.712363",
   "skills_before": 6,
   "skills_current": 6,
   "results": [
@@ -4350,6 +4358,15 @@ if __name__ == "__main__":
       "difficulty": 1,
       "success": true,
       "elapsed_s": 16.4,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Open YouTube",
+      "category": "youtube",
+      "difficulty": 1,
+      "success": true,
+      "elapsed_s": 13.2,
       "error": null,
       "retried": false
     }
@@ -4387,7 +4404,7 @@ if __name__ == "__main__":
         "action": "done"
       }
     ],
-    "uses": 0,
+    "uses": 1,
     "version": 2
   },
   {
@@ -4608,6 +4625,88 @@ nohup: ignoring input
     wirelesssettings     1 screens
     dialer               1 screens
   TransitionMemory: 318 transitions (251 confirmed, threshold=2)
+
+########################################################
+  JARVIS  |  Open YouTube
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 260 screens (0 tainted), 318 transitions
+    whatsapp             141 screens
+    youtube              51 screens
+    vending              21 screens
+    chrome               21 screens
+    settings             11 screens
+    launcher             7 screens
+    termux               5 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+    dialer               1 screens
+  TransitionMemory: 318 transitions (251 confirmed, threshold=2)
+[init] task_apps (ordered): ['youtube']
+
+========================================================
+  STEP 1  |  Open YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3879999 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 15 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=33ba42b30171 elements=15
+[step] UI: ['Folder: Tools', 'Instagram', 'Tools', 'Grok', 'Roblox', 'Hollow Knight', 'Discord', 'OC Auto Clicker']
+[map] screen: launcher_launcher (efa43c0a)
+[OPT4v2] launcher -> launching youtube (com.google.android.youtube)
+[llm] OPT4v2 am start: com.google.android.youtube
+[OPT4v2] app_index -> 1/1
+
+========================================================
+  STEP 2  |  Open YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (41323 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 28 elements from 192.168.29.48:34011
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=1f48a54a267c elements=28
+[step] UI: ['Cast', 'Notifications, 5', 'Search', 'element_4', 'element_5', 'Shop this product', 'element_7', 'Product 1']
+[map] new screen: youtube_shell$homeactivity (1dbfe781af53)
+[map] transition: launcher_launcher --[opt4_launch:youtube]--> youtube_shell$homeactivity
+[map] screen: youtube_shell$homeactivity (1dbfe781)
+[skill] matched: 'open youtube and go'  score=1.00  act_match=True
+[skill] executing 2 steps from memory
+[skill] action: {'action': 'tap', 'target': 27}
+[input] dispatching: TouchEvent(x=868, y=2632)
+[input] adb -s 192.168.29.48:34011 shell input tap 868 2632
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[skill] action: {'action': 'done'}
+[input] DONE — no dispatch
+[skill] done — skipped Claude
+[step] step=3/5 done=True history=['opt4_launch:youtube', 'tap [27] Subscriptions: New content is available', 'done']
+
+[controller] done in 3 steps
+
+[controller] history:
+  1. opt4_launch:youtube
+  2. tap [27] Subscriptions: New content is available
+  3. done
+
+  Screen Map: 261 screens (0 tainted), 319 transitions
+    whatsapp             141 screens
+    youtube              52 screens
+    vending              21 screens
+    chrome               21 screens
+    settings             11 screens
+    launcher             7 screens
+    termux               5 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+    dialer               1 screens
+  TransitionMemory: 319 transitions (251 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

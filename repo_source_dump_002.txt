@@ -33647,7 +33647,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {
@@ -34015,6 +34015,241 @@
           "resource_id": ""
         }
       ]
+    },
+    "1dbfe781af53": {
+      "screen_id": "1dbfe781af53",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Cast",
+        "Notifications, 5",
+        "Search",
+        "element_4",
+        "element_5",
+        "Shop this product",
+        "element_7",
+        "Product 1",
+        "Product 2",
+        "Product 3",
+        "Product 4",
+        "element_12",
+        "element_13",
+        "element_14",
+        "More options",
+        "element_16",
+        "element_17",
+        "Action menu",
+        "Shorts",
+        "Tournament Of Power 2 Would Be A One Sided Massacre In Dragon Ball \u2013 play Short",
+        "This is how OPM will End!! #opm #anime #onepunchman \u2013 play Short",
+        "More actions",
+        "More actions",
+        "Shorts",
+        "Create",
+        "Subscriptions: New content is available",
+        "You"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Cast",
+          "x": 820,
+          "y": 223,
+          "cls": "android.widget.Button",
+          "resource_id": "com.google.android.youtube:id/mdx_entry_point_button"
+        },
+        {
+          "text": "Notifications, 5",
+          "x": 988,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/menu_item_view"
+        },
+        {
+          "text": "Search",
+          "x": 1156,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/menu_item_view"
+        },
+        {
+          "text": "element_4",
+          "x": 620,
+          "y": 1539,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results"
+        },
+        {
+          "text": "element_5",
+          "x": 620,
+          "y": 1268,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Shop this product",
+          "x": 620,
+          "y": 955,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 1790,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": ""
+        },
+        {
+          "text": "Product 1",
+          "x": 215,
+          "y": 1790,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Product 2",
+          "x": 589,
+          "y": 1790,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Product 3",
+          "x": 963,
+          "y": 1790,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Product 4",
+          "x": 1202,
+          "y": 1790,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_12",
+          "x": 620,
+          "y": 2054,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "element_13",
+          "x": 105,
+          "y": 2068,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_14",
+          "x": 655,
+          "y": 2040,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "More options",
+          "x": 1142,
+          "y": 2047,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_16",
+          "x": 326,
+          "y": 2117,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "element_17",
+          "x": 522,
+          "y": 2117,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Action menu",
+          "x": 1142,
+          "y": 2349,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 318,
+          "y": 2349,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Tournament Of Power 2 Would Be A One Sided Massacre In Dragon Ball \u2013 play Short",
+          "x": 324,
+          "y": 2607,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "This is how OPM will End!! #opm #anime #onepunchman \u2013 play Short",
+          "x": 916,
+          "y": 2607,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 560,
+          "y": 2501,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 1152,
+          "y": 2501,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Home",
+          "x": 124,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 372,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Create",
+          "x": 620,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscriptions: New content is available",
+          "x": 868,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "You",
+          "x": 1116,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -34335,7 +34570,8 @@
     "e3ddf99df86f|opt4_launch:whatsapp": "24f4242fbb4f",
     "1b272452b866|tap:More options": "307d903852e1",
     "955fca488005|type": "a0a54922f458",
-    "efa43c0a8f87|opt4_launch:whatsapp": "b37f4f8d4aed"
+    "efa43c0a8f87|opt4_launch:whatsapp": "b37f4f8d4aed",
+    "efa43c0a8f87|opt4_launch:youtube": "1dbfe781af53"
   }
 }
 

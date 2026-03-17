@@ -9387,6 +9387,8 @@ RuntimeError: No LLM backend available.
     unknown              1 screens
     wirelesssettings     1 screens
   TransitionMemory: 292 transitions (252 confirmed, threshold=2)
+[parser] DEBUG normalized: 'tap 14'
+[parser] INFO parsed 'tap 14' -> {'action': 'tap', 'target': 14}
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

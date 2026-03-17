@@ -10058,6 +10058,8 @@ java.lang.IllegalArgumentException: Argument expected after "text"
 [parser] INFO parsed 'long press 4' -> {'action': 'long press', 'target': 4}
 [parser] DEBUG normalized: 'tap 2'
 [parser] INFO parsed 'tap 2' -> {'action': 'tap', 'target': 2}
+[parser] DEBUG normalized: 'long press 21'
+[parser] INFO parsed 'long press 21' -> {'action': 'long press', 'target': 21}
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

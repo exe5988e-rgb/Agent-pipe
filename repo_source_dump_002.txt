@@ -18592,6 +18592,158 @@
           "y": 2604
         }
       ]
+    },
+    "68dbc2f46e71": {
+      "screen_id": "68dbc2f46e71",
+      "package": "com.android.vending",
+      "activity": "com.android.vending/.AssetBrowserActivity",
+      "name": "vending_assetbrowseractivity",
+      "labels": [
+        "Groww: Demat, Invest & Trade, Gold, Silver, Loans",
+        "Average rating 4.8 stars in 2 million reviews",
+        "Content rating Rated for 3+",
+        "'Verified' badge",
+        "Play trailer for 'Groww Stock, Mutual Fund, Gold'",
+        "Screenshot 1 of 8",
+        "Learn more About this app"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Groww: Demat, Invest & Trade, Gold, Silver, Loans",
+          "resource_id": "",
+          "cls": "android.widget.TextView",
+          "x": 788,
+          "y": 682
+        },
+        {
+          "text": "Average rating 4.8 stars in 2 million reviews",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 182,
+          "y": 906
+        },
+        {
+          "text": "Content rating Rated for 3+",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 677,
+          "y": 906
+        },
+        {
+          "text": "'Verified' badge",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1136,
+          "y": 906
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 620,
+          "y": 1144
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1114,
+          "y": 1144
+        },
+        {
+          "text": "Play trailer for 'Groww Stock, Mutual Fund, Gold'",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 565,
+          "y": 1623
+        },
+        {
+          "text": "Screenshot 1 of 8",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1184,
+          "y": 1623
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 620,
+          "y": 2061
+        },
+        {
+          "text": "Learn more About this app",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1135,
+          "y": 2061
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 189,
+          "y": 2444
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 492,
+          "y": 2444
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 769,
+          "y": 2444
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 98,
+          "y": 237
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 974,
+          "y": 237
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1142,
+          "y": 237
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 155,
+          "y": 2604
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 775,
+          "y": 2604
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1085,
+          "y": 2604
+        }
+      ]
     }
   },
   "transitions": {
@@ -18812,7 +18964,8 @@
     "7571051ef9ea|element_598_1232": "5ebd141c4c82",
     "7571051ef9ea|element_598_1804": "e85d868a15f2",
     "7571051ef9ea|element_598_2120": "2021bab01443",
-    "7571051ef9ea|element_598_2385": "8853acfb0c72"
+    "7571051ef9ea|element_598_2385": "8853acfb0c72",
+    "7571051ef9ea|element_1208_2120": "68dbc2f46e71"
   }
 }
 

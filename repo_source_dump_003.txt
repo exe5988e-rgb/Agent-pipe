@@ -2968,6 +2968,7 @@ if __name__ == "__main__":
 [11:33:00]   PASS  44.6s  skills=3
 [11:33:05] 
 [17/33] [2★] [chrome] Open Chrome and go to google.com
+[11:35:26]   PASS  137.8s  skills=4
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4135,9 +4136,9 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-17T11:33:00.417633",
+  "run_at": "2026-03-17T11:35:26.485646",
   "skills_before": 0,
-  "skills_current": 3,
+  "skills_current": 4,
   "results": [
     {
       "task": "Open WhatsApp",
@@ -4282,6 +4283,15 @@ if __name__ == "__main__":
       "elapsed_s": 44.6,
       "error": null,
       "retried": false
+    },
+    {
+      "task": "Open Chrome and go to google.com",
+      "category": "chrome",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 137.8,
+      "error": null,
+      "retried": false
     }
   ]
 }
@@ -4342,6 +4352,30 @@ if __name__ == "__main__":
       }
     ],
     "uses": 3,
+    "version": 2
+  },
+  {
+    "pattern": "open chrome and go to",
+    "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+    "task_example": "Open Chrome and go to google.com",
+    "steps": [
+      {
+        "action": "tap",
+        "target": "support.google.com/youtube/answer/7640706?hl=%@"
+      },
+      {
+        "action": "type",
+        "text": "$URL"
+      },
+      {
+        "action": "tap",
+        "target": "element_6"
+      },
+      {
+        "action": "done"
+      }
+    ],
+    "uses": 0,
     "version": 2
   }
 ]
@@ -6396,6 +6430,155 @@ java.lang.IllegalArgumentException: Argument expected after "text"
 [parser] INFO parsed 'type google.com' -> {'action': 'type', 'text': 'google.com'}
 [parser] DEBUG normalized: 'tap 6'
 [parser] INFO parsed 'tap 6' -> {'action': 'tap', 'target': 6}
+[parser] DEBUG normalized: 'done'
+[parser] INFO parsed 'done' -> {'action': 'done'}
+
+########################################################
+  JARVIS  |  Open Chrome and go to google.com
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 199 screens (0 tainted), 265 transitions
+    whatsapp             132 screens
+    youtube              35 screens
+    vending              16 screens
+    settings             6 screens
+    launcher             4 screens
+    termux               3 screens
+    unknown              1 screens
+    chrome               1 screens
+    wirelesssettings     1 screens
+  TransitionMemory: 265 transitions (246 confirmed, threshold=2)
+[init] task_apps (ordered): ['chrome']
+
+========================================================
+  STEP 1  |  Open Chrome and go to google.com
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3601402 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=3c9c69373751 elements=26
+[step] UI: ['Clock', '11', ':', '33', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[OPT4v2] launcher -> launching chrome (com.android.chrome)
+[llm] OPT4v2 am start: com.android.chrome
+[OPT4v2] app_index -> 1/1
+
+========================================================
+  STEP 2  |  Open Chrome and go to google.com
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (463474 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 17 elements from 192.168.29.48:34011
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=ade2af9ed94a elements=17
+[step] UI: ['Open the homepage', 'element_2', 'support.google.com/youtube/answer/7640706?hl=%@', 'See 19 tabs', 'Customise and control Google Chrome', 'element_6', 'Main menu', 'YouTube Help']
+[map] screen: chrome_main (aa1600c6)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 3'
+[step] LLM: 'tap 3'
+[step] action: {'action': 'tap', 'target': 3}
+[input] dispatching: TouchEvent(x=592, y=237)
+[input] adb -s 192.168.29.48:34011 shell input tap 592 237
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[step] step=2/10 done=False history=['opt4_launch:chrome', 'tap [3] support.google.com/youtube/answer/7640706?hl=%@']
+
+========================================================
+  STEP 3  |  Open Chrome and go to google.com
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1119262 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 15 elements from 192.168.29.48:34011
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=bca2e67994b3 elements=15
+[step] UI: ['element_1', 'element_2', 'Search Google or type URL', 'Start voice search', 'Search with your camera using Google Lens', '2 suggested items in list below.', 'element_7', 'Share link to web page Watch YouTube on your smart TV by linking to your devices - Android - YouTube Help. Source: support.google.com']
+[map] new screen: chrome_main (c120d24cf7c6)
+[map] transition: chrome_main --[tap:See 19 tabs]--> chrome_main
+[map] screen: chrome_main (c120d24c)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'type google.com'
+[step] LLM: 'type google.com'
+[step] action: {'action': 'type', 'text': 'google.com'}
+[input] dispatching: SetTextEvent('google.com')
+[input] adb -s 192.168.29.48:34011 shell input text google.com
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[step] step=3/10 done=False history=['opt4_launch:chrome', 'tap [3] support.google.com/youtube/answer/7640706?hl=%@', "type 'google.com'"]
+
+========================================================
+  STEP 4  |  Open Chrome and go to google.com
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1241282 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 18 elements from 192.168.29.48:34011
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=b8f68966824d elements=18
+[step] UI: ['element_1', 'element_2', 'google.com', 'Clear input', '10 suggested items in list below.', 'element_6', 'element_7', 'Refine: https://accounts.google.com/ServiceLogin?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1']
+[map] new screen: chrome_main (bc25f94b5cfd)
+[map] transition: chrome_main --[type]--> chrome_main
+[map] screen: chrome_main (bc25f94b)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 6'
+[step] LLM: 'tap 6'
+[step] action: {'action': 'tap', 'target': 6}
+[input] dispatching: TouchEvent(x=620, y=433)
+[input] adb -s 192.168.29.48:34011 shell input tap 620 433
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[step] step=4/10 done=False history=['opt4_launch:chrome', 'tap [3] support.google.com/youtube/answer/7640706?hl=%@', "type 'google.com'", 'tap [6] element_6']
+
+========================================================
+  STEP 5  |  Open Chrome and go to google.com
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (178118 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 28 elements from 192.168.29.48:34011
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=152162a5ff3c elements=28
+[step] UI: ['Open the homepage', 'element_2', 'google.com/?zx=1773727493721&no_sw_cr=1', 'See 19 tabs', 'Customise and control Google Chrome', 'element_6', 'IMAGES', 'element_8']
+[map] new screen: chrome_main (d4c06a03f487)
+[map] transition: chrome_main --[tap:element_7]--> chrome_main
+[map] screen: chrome_main (d4c06a03)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'done'
+[step] LLM: 'done'
+[step] action: {'action': 'done'}
+[input] DONE — no dispatch
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[skill] learned: 'open chrome and go to'  (4 steps)  activity=Main
+[step] step=5/10 done=True history=['opt4_launch:chrome', 'tap [3] support.google.com/youtube/answer/7640706?hl=%@', "type 'google.com'", 'tap [6] element_6', 'done']
+
+[controller] done in 5 steps
+
+[controller] history:
+  1. opt4_launch:chrome
+  2. tap [3] support.google.com/youtube/answer/7640706?hl=%@
+  3. type 'google.com'
+  4. tap [6] element_6
+  5. done
+
+  Screen Map: 202 screens (0 tainted), 268 transitions
+    whatsapp             132 screens
+    youtube              35 screens
+    vending              16 screens
+    settings             6 screens
+    launcher             4 screens
+    chrome               4 screens
+    termux               3 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+  TransitionMemory: 268 transitions (247 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

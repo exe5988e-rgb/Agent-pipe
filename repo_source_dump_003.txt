@@ -2782,9 +2782,9 @@ if __name__ == "__main__":
     "seeded": true
   },
   "4203f6dd32c9|opt4_launch:whatsapp": {
-    "to": "366c9a634a55",
+    "to": "9175dd22bb23",
     "count": 1,
-    "last_seen": 1773726049.9742787
+    "last_seen": 1773726147.4224422
   },
   "7c51d7e864c3|tap:element_25": {
     "to": "7770f0561545",
@@ -4087,6 +4087,19 @@ done
 
 //===== TERMUXFILE: gauntlet_nohup.log =====
 nohup: ignoring input
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 311, in run
+    run_step(state, device=device, model_path=model_path)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 267, in run_step
+    llm_out = generate(prompt, model_path=model_path)
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/reasoning/llm_client.py", line 109, in generate
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
 Traceback (most recent call last):
   File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 311, in run
     run_step(state, device=device, model_path=model_path)

@@ -7774,6 +7774,7 @@ Traceback (most recent call last):
 RuntimeError: No LLM backend available.
   Phone B offline? Check: curl http://192.168.29.110:8890/health
   Local LLM down? Run:    bash ~/jarvis_server_init.sh
+[parser] DEBUG normalized: 'You'
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

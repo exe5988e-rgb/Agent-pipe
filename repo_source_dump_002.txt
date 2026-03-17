@@ -39411,6 +39411,293 @@
           "resource_id": ""
         }
       ]
+    },
+    "e3dda089efe1": {
+      "screen_id": "e3dda089efe1",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Open the homepage",
+        "element_2",
+        "element_3",
+        "google.com/search?client=ms-android-oneplus-terr1-rso3&hs=W4rU&sca_esv=4ae20d8bd47daad1&sxsrf=ANbL-n4CA_BJUBV-zYlN37_XuUlY2eCumg:1773753574716&q=Restaurants+n",
+        "See 21 tabs",
+        "Customise and control Google Chrome",
+        "element_7",
+        "Google",
+        "Google Account: Amir Shams (amirshamse8@gmail.com)",
+        "Search Labs",
+        "Google Search",
+        "element_12",
+        "Clear Search",
+        "Search by voice",
+        "Restaurants near me open now",
+        "element_16",
+        "element_17",
+        "element_18",
+        "element_19",
+        "element_20",
+        "element_21",
+        "element_22",
+        "element_23",
+        "element_24",
+        "element_25",
+        "element_26",
+        "element_27",
+        "\u0930\u0947\u0938\u094d\u0924\u0930\u093e\u0902 \u092e\u0947\u0930\u0947 \u092a\u093e\u0938 \u0916\u0941\u0932\u093e",
+        "element_29",
+        "How location is used"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "element_2",
+          "x": 620,
+          "y": 1455,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.android.chrome:id/compositor_view_holder"
+        },
+        {
+          "text": "element_3",
+          "x": 224,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "google.com/search?client=ms-android-oneplus-terr1-rso3&hs=W4rU&sca_esv=4ae20d8bd47daad1&sxsrf=ANbL-n4CA_BJUBV-zYlN37_XuUlY2eCumg:1773753574716&q=Restaurants+n",
+          "x": 592,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "See 21 tabs",
+          "x": 988,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 1526,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Google",
+          "x": 621,
+          "y": 457,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Google Account: Amir Shams (amirshamse8@gmail.com)",
+          "x": 1128,
+          "y": 448,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Search Labs",
+          "x": 99,
+          "y": 447,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Google Search",
+          "x": 140,
+          "y": 632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_12",
+          "x": 621,
+          "y": 639,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Clear Search",
+          "x": 929,
+          "y": 632,
+          "cls": "android.widget.Button",
+          "resource_id": "tsuid_61O5aemTG6e6seMPl6XK0QY_3"
+        },
+        {
+          "text": "Search by voice",
+          "x": 1100,
+          "y": 632,
+          "cls": "android.widget.Button",
+          "resource_id": "Q7Ulpb"
+        },
+        {
+          "text": "Restaurants near me open now",
+          "x": 535,
+          "y": 632,
+          "cls": "android.widget.EditText",
+          "resource_id": ""
+        },
+        {
+          "text": "element_16",
+          "x": 620,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_17",
+          "x": 152,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_18",
+          "x": 621,
+          "y": 716,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_19",
+          "x": 358,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_20",
+          "x": 532,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_21",
+          "x": 761,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_22",
+          "x": 1011,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_23",
+          "x": 1188,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_24",
+          "x": 620,
+          "y": 975,
+          "cls": "android.view.View",
+          "resource_id": "hdtb-sc"
+        },
+        {
+          "text": "element_25",
+          "x": 262,
+          "y": 980,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_26",
+          "x": 957,
+          "y": 980,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_27",
+          "x": 1181,
+          "y": 980,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "\u0930\u0947\u0938\u094d\u0924\u0930\u093e\u0902 \u092e\u0947\u0930\u0947 \u092a\u093e\u0938 \u0916\u0941\u0932\u093e",
+          "x": 556,
+          "y": 1222,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_29",
+          "x": 1156,
+          "y": 1215,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "How location is used",
+          "x": 1155,
+          "y": 1477,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Use precise location",
+          "x": 365,
+          "y": 1582,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_32",
+          "x": 620,
+          "y": 2206,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_33",
+          "x": 620,
+          "y": 1703,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Expand map",
+          "x": 1100,
+          "y": 1992,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_35",
+          "x": 620,
+          "y": 2521,
+          "cls": "android.view.View",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -39756,7 +40043,8 @@
     "93e7bdafeb42|swipe": "af94bed40cff",
     "af94bed40cff|tap:element_11": "523b15b7d0c6",
     "523b15b7d0c6|swipe": "8cd8d5199600",
-    "8cd8d5199600|swipe": "5d3e492581c0"
+    "8cd8d5199600|swipe": "5d3e492581c0",
+    "5d3e492581c0|tap:element_10": "e3dda089efe1"
   }
 }
 

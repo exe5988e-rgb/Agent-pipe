@@ -32854,7 +32854,7 @@
         "element_14",
         "element_15"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {
@@ -33516,7 +33516,8 @@
     "468f775ed5c9|tap:Search": "30d320eab354",
     "30d320eab354|tap:time": "aa4068217749",
     "aa4068217749|tap:element_6": "752389f3a0d3",
-    "752389f3a0d3|swipe": "0718819ac4b4"
+    "752389f3a0d3|swipe": "0718819ac4b4",
+    "0718819ac4b4|back": "aa4068217749"
   }
 }
 

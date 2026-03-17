@@ -2820,6 +2820,7 @@ if __name__ == "__main__":
 [11:10:33] Bridge: OK
 [11:10:33] 
 [1/33] [1★] [whatsapp] Open WhatsApp
+[11:12:50]   PASS  133.5s  skills=0
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -3987,7 +3988,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-17T11:03:59.120039",
+  "run_at": "2026-03-17T11:12:50.445837",
   "skills_before": 0,
   "skills_current": 0,
   "results": [
@@ -3995,63 +3996,9 @@ if __name__ == "__main__":
       "task": "Open WhatsApp",
       "category": "whatsapp",
       "difficulty": 1,
-      "success": false,
-      "elapsed_s": 0.2,
-      "error": "orig=rc=1 retry=rc=1",
-      "retried": false
-    },
-    {
-      "task": "Open YouTube",
-      "category": "youtube",
-      "difficulty": 1,
-      "success": false,
-      "elapsed_s": 0.1,
-      "error": "orig=rc=1 retry=rc=1",
-      "retried": false
-    },
-    {
-      "task": "Open Settings",
-      "category": "settings",
-      "difficulty": 1,
-      "success": false,
-      "elapsed_s": 0.2,
-      "error": "orig=rc=1 retry=rc=1",
-      "retried": false
-    },
-    {
-      "task": "Open Chrome",
-      "category": "chrome",
-      "difficulty": 1,
-      "success": false,
-      "elapsed_s": 0.2,
-      "error": "orig=rc=1 retry=rc=1",
-      "retried": false
-    },
-    {
-      "task": "Open Play Store",
-      "category": "playstore",
-      "difficulty": 1,
-      "success": false,
-      "elapsed_s": 0.3,
-      "error": "orig=rc=1 retry=rc=1",
-      "retried": false
-    },
-    {
-      "task": "Open Phone app",
-      "category": "phone",
-      "difficulty": 1,
-      "success": false,
-      "elapsed_s": 0.1,
-      "error": "orig=rc=1 retry=rc=1",
-      "retried": false
-    },
-    {
-      "task": "Open Contacts",
-      "category": "phone",
-      "difficulty": 1,
-      "success": false,
-      "elapsed_s": 0.2,
-      "error": "orig=rc=1 retry=rc=1",
+      "success": true,
+      "elapsed_s": 133.5,
+      "error": null,
       "retried": false
     }
   ]
@@ -4139,6 +4086,124 @@ Traceback (most recent call last):
 RuntimeError: No LLM backend available.
   Phone B offline? Check: curl http://192.168.29.110:8890/health
   Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+########################################################
+  JARVIS  |  Open WhatsApp
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 180 screens (0 tainted), 248 transitions
+    whatsapp             130 screens
+    youtube              28 screens
+    vending              15 screens
+    launcher             4 screens
+    termux               2 screens
+    unknown              1 screens
+  TransitionMemory: 248 transitions (242 confirmed, threshold=2)
+[init] task_apps (ordered): ['whatsapp']
+
+========================================================
+  STEP 1  |  Open WhatsApp
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3595616 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=1a0a72fe766d elements=26
+[step] UI: ['Clock', '11', ':', '10', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[OPT4v2] launcher -> launching whatsapp (com.whatsapp)
+[llm] OPT4v2 am start: com.whatsapp
+[OPT4v2] app_index -> 1/1
+
+========================================================
+  STEP 2  |  Open WhatsApp
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1618668 bytes)
+[ui_parser] activity=com.whatsapp/.Conversation
+[ui_parser] signal='com.whatsapp/.Conversation'
+[mem] miss (unknown): com.whatsapp/.Conversation
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 17 elements from 192.168.29.48:34011
+[mem] stored com.whatsapp/.Conversation hash=5e05155f1ccb elements=17
+[step] UI: ['element_1', 'Back', 'element_3', 'Video call', 'Voice call', 'More options', 'element_7', 'element_8']
+[tm] transition changed: 4203f6dd32c9|opt4_launch:whatsapp 7c51d7e8 -> 366c9a63
+[map] transition: launcher_launcher --[opt4_launch:whatsapp]--> whatsapp_conversation
+[map] screen: whatsapp_conversation (366c9a63)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B unreachable: timed out
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 3  |  Open WhatsApp
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1267460 bytes)
+[ui_parser] activity=com.termux/.app.TermuxActivity
+[ui_parser] signal='com.termux/.app.TermuxActivity'
+[mem] miss (unknown): com.termux/.app.TermuxActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 16 elements from 192.168.29.48:34011
+[mem] stored com.termux/.app.TermuxActivity hash=490e867ce5e0 elements=16
+[step] UI: ['[controller] done in 9 steps\n\n[controller] history:\n  1. opt4_launch:whatsapp\n  2. tap [24] New chat\n  3. tap [2] Search\n  4. type \'Mummy\'\n  5. tap (620,602)\n  6. tap [17] Message\n  7. type \'Hello\'\n  8. tap [14] Send\n  9. done\n\n  Screen Map: 180 screens (0 tainted), 248 transitions\n    whatsapp             130 screens\n    youtube              28 screens\n    vending              15 screens\n    launcher             4 screens\n    termux               2 screens\n    unknown              1 screens\n  TransitionMemory: 248 transitions (242 confirmed, threshold=2)\n~/workflows $ nohup python3 ~/workflows/gauntlet_runner.py \\\n  --device "192.168.29.48:34011" \\\n  --notify "Mummy" \\\n  > ~/workflows/gauntlet_nohup.log 2>&1 &\n\necho "Running. Check progress:"\necho "tail -f ~/workflows/gauntlet_log.txt"\n[4] 30794\nRunning. Check progress:\ntail -f ~/workflows/gauntlet_log.txt\n~/workflows $', 'ESC', 'element_3', '☰', '⇳', 'HOME', '↑', 'END']
+[map] new screen: termux_termuxactivity (9175dd22bb23)
+[tm] transition changed: 4203f6dd32c9|opt4_launch:whatsapp 366c9a63 -> 9175dd22
+[map] transition: launcher_launcher --[opt4_launch:whatsapp]--> termux_termuxactivity
+[map] screen: termux_termuxactivity (9175dd22)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 4  |  Open WhatsApp
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1245115 bytes)
+[ui_parser] activity=com.termux/.app.TermuxActivity
+[ui_parser] signal='com.termux/.app.TermuxActivity'
+[mem] HIT com.termux/.app.TermuxActivity hash=490e867ce5e0 hits=1 elements=16
+[step] UI: ['[controller] done in 9 steps\n\n[controller] history:\n  1. opt4_launch:whatsapp\n  2. tap [24] New chat\n  3. tap [2] Search\n  4. type \'Mummy\'\n  5. tap (620,602)\n  6. tap [17] Message\n  7. type \'Hello\'\n  8. tap [14] Send\n  9. done\n\n  Screen Map: 180 screens (0 tainted), 248 transitions\n    whatsapp             130 screens\n    youtube              28 screens\n    vending              15 screens\n    launcher             4 screens\n    termux               2 screens\n    unknown              1 screens\n  TransitionMemory: 248 transitions (242 confirmed, threshold=2)\n~/workflows $ nohup python3 ~/workflows/gauntlet_runner.py \\\n  --device "192.168.29.48:34011" \\\n  --notify "Mummy" \\\n  > ~/workflows/gauntlet_nohup.log 2>&1 &\n\necho "Running. Check progress:"\necho "tail -f ~/workflows/gauntlet_log.txt"\n[4] 30794\nRunning. Check progress:\ntail -f ~/workflows/gauntlet_log.txt\n~/workflows $', 'ESC', 'element_3', '☰', '⇳', 'HOME', '↑', 'END']
+[map] screen: termux_termuxactivity (9175dd22)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 5  |  Open WhatsApp
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (392565 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 31 elements from 192.168.29.48:34011
+[mem] stored com.whatsapp/.home.ui.HomeActivity hash=69e2eaa66370 elements=31
+[step] UI: ['element_1', 'Scan to Pay', 'More options', 'Ask Meta AI or Search', 'Swipe down to reveal additional actions', 'Inbox filters, Radio Group', 'All filter, , selected', 'Unread filter, 2, unselected']
+[tm] transition changed: 4203f6dd32c9|opt4_launch:whatsapp 9175dd22 -> 7c51d7e8
+[map] transition: launcher_launcher --[opt4_launch:whatsapp]--> whatsapp_homeactivity
+[map] screen: whatsapp_homeactivity (7c51d7e8)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+[controller] history:
+  1. opt4_launch:whatsapp
+
+  Screen Map: 181 screens (0 tainted), 248 transitions
+    whatsapp             130 screens
+    youtube              28 screens
+    vending              15 screens
+    launcher             4 screens
+    termux               3 screens
+    unknown              1 screens
+  TransitionMemory: 248 transitions (242 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

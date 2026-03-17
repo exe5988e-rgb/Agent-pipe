@@ -33201,6 +33201,16 @@
           "resource_id": ""
         }
       ]
+    },
+    "a878aeaaaae9": {
+      "screen_id": "a878aeaaaae9",
+      "package": "com.google.android.dialer",
+      "activity": "com.google.android.dialer/com.android.dialer.incall.activity.ui.InCallActivity",
+      "name": "dialer_incallactivity",
+      "labels": [],
+      "visits": 1,
+      "tainted": false,
+      "elements": []
     }
   },
   "transitions": {
@@ -33515,7 +33525,7 @@
     "de32cdc23c0d|back": "4203f6dd32c9",
     "468f775ed5c9|tap:Search": "30d320eab354",
     "30d320eab354|tap:time": "aa4068217749",
-    "aa4068217749|tap:element_6": "752389f3a0d3",
+    "aa4068217749|tap:element_6": "a878aeaaaae9",
     "752389f3a0d3|swipe": "0718819ac4b4",
     "0718819ac4b4|back": "aa4068217749"
   }

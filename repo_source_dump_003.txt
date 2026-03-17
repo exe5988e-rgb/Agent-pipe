@@ -2786,22 +2786,23 @@ if __name__ == "__main__":
 //===== TERMUXFILE: tap_logger.py =====
 #!/usr/bin/env python3
 """
-tap_logger.py  —  JarvisMinI Background Tap Logger  v2
+tap_logger.py  —  JarvisMinI Background Tap Logger  v3
 
-Session 8 fix: getevent device detection was broken on OPPO/ColorOS.
-This version:
-  1. Scans ALL /dev/input/event* devices in parallel
-  2. Uses getevent -t (with timestamps) for more reliable parsing
-  3. Falls back to sendevent-style parsing if needed
-  4. Prints raw event lines for the first 5 seconds so you can see
-     what's coming in (run with --debug to keep raw output on)
+OPPO/ColorOS specific fixes:
+  - Hardcoded touch device: /dev/input/event5  (name: touchpanel)
+  - Coordinate transform: raw digitiser -> screen pixels
+      screen_x = (raw_x - X_OFFSET) * X_SCALE
+      screen_y = (raw_y - Y_OFFSET) * Y_SCALE
+    Constants calibrated from observed raw data on 1240x2772 screen
+  - Tap end detection: ABS_MT_TRACKING_ID ffffffff (not BTN_TOUCH UP)
+  - Uses getevent -l (labelled) which works on this device
+  - Single device only (not multi-device list which caused silent exit)
 
 Usage:
-  Terminal 1:  python3 tap_logger.py --device "192.168.29.48:34011" --clear
-  (tap the phone screen a few times to verify taps are logged)
-  Terminal 1:  Ctrl+C when done
-
-  Then:  python3 skill_recorder.py --device "..." --from-log
+  python3 tap_logger.py --device "192.168.29.48:34011" --clear
+  (use phone, tap everything in your flow)
+  Ctrl+C
+  python3 skill_recorder.py --device "192.168.29.48:34011" --from-log
 """
 
 import argparse
@@ -2817,10 +2818,28 @@ import xml.etree.ElementTree as ET
 from datetime import datetime
 from pathlib import Path
 
-LOG_FILE  = Path.home() / "workflows" / "tap_log.json"
-DUMP_PATH = "/sdcard/jarvis_tap_dump.xml"
-ADB       = "adb"
-DEBOUNCE_MS = 500
+LOG_FILE    = Path.home() / "workflows" / "tap_log.json"
+DUMP_PATH   = "/sdcard/jarvis_tap_dump.xml"
+TOUCH_DEV   = "/dev/input/event5"
+ADB         = "adb"
+DEBOUNCE_MS = 400
+
+# Coordinate transform constants (calibrated for OPPO 1240x2772)
+# If screen resolution changes, re-run diagnose_touch.sh and recalibrate.
+SCREEN_W = 1240
+SCREEN_H = 2772
+X_OFFSET = 3370
+Y_OFFSET = 2193
+X_RANGE  = 5838   # observed raw X range
+Y_RANGE  = 6112   # observed raw Y range
+
+def raw_to_screen(raw_x, raw_y):
+    sx = int((raw_x - X_OFFSET) * SCREEN_W / X_RANGE)
+    sy = int((raw_y - Y_OFFSET) * SCREEN_H / Y_RANGE)
+    # Clamp to screen bounds
+    sx = max(0, min(SCREEN_W - 1, sx))
+    sy = max(0, min(SCREEN_H - 1, sy))
+    return sx, sy
 
 # ── ADB helpers ───────────────────────────────────────────────────────────────
 
@@ -2845,32 +2864,10 @@ def get_activity(device):
     if m: return m.group(1)
     return "unknown"
 
-# ── Find correct touch input device ──────────────────────────────────────────
-
-def find_touch_devices(device):
-    """
-    Return list of /dev/input/eventN that report ABS_MT_POSITION_X (touchscreen).
-    Tries getevent -S first, falls back to probing each event device.
-    """
-    out = _shell(device, "getevent", "-S", timeout=15)
-    devices = []
-    current = None
-    for line in out.splitlines():
-        m = re.match(r"\s*add device \d+: (/dev/input/event\d+)", line)
-        if m:
-            current = m.group(1)
-        if current and "ABS_MT_POSITION_X" in line:
-            if current not in devices:
-                devices.append(current)
-    if devices:
-        return devices
-    # Fallback: list all event devices
-    ls = _shell(device, "ls", "/dev/input/", timeout=10)
-    return [f"/dev/input/{f}" for f in ls.split() if f.startswith("event")]
-
 # ── UI resolver ───────────────────────────────────────────────────────────────
 
-def get_element_at(device, tap_x, tap_y):
+def get_element_at(device, sx, sy):
+    """Find the most specific element at screen coordinates (sx, sy)."""
     _shell(device, "rm", "-f", DUMP_PATH)
     result = _shell(device, "uiautomator", "dump", DUMP_PATH, timeout=15)
     if "ERROR" in result.upper():
@@ -2893,23 +2890,22 @@ def get_element_at(device, tap_x, tap_y):
                 x2, y2 = map(int, parts[1].split(","))
             except:
                 continue
-            if not (x1 <= tap_x <= x2 and y1 <= tap_y <= y2):
+            if not (x1 <= sx <= x2 and y1 <= sy <= y2):
                 continue
             area = (x2 - x1) * (y2 - y1)
             if area < 200:
                 continue
             text = (elem.attrib.get("text", "") or
                     elem.attrib.get("content-desc", "")).strip()
-            rid  = elem.attrib.get("resource-id", "")
-            cls  = elem.attrib.get("class", "")
+            rid       = elem.attrib.get("resource-id", "")
+            cls       = elem.attrib.get("class", "")
             clickable = elem.attrib.get("clickable") == "true"
             score = area
             if text:      score //= 2
             if clickable: score //= 2
             if score < best_score:
                 best_score = score
-                best = {"text": text, "resource_id": rid,
-                        "cls": cls,
+                best = {"text": text, "resource_id": rid, "cls": cls,
                         "x": (x1+x2)//2, "y": (y1+y2)//2,
                         "clickable": clickable}
     except:
@@ -2919,21 +2915,22 @@ def get_element_at(device, tap_x, tap_y):
         except: pass
     return best
 
-# ── getevent stream parser ────────────────────────────────────────────────────
+# ── getevent parser ───────────────────────────────────────────────────────────
 
-def stream_events(device, event_devs, on_tap, debug=False):
+def stream_taps(device, on_tap, debug=False):
     """
-    Stream getevent from all touch devices simultaneously.
-    Parses ABS_MT_POSITION_X/Y + BTN_TOUCH UP  OR  ABS_MT_TRACKING_ID -1
-    to detect completed taps.
+    Stream getevent -l from /dev/input/event5 (touchpanel).
+    Fires on_tap(screen_x, screen_y) for each completed tap.
+    
+    OPPO event sequence per tap:
+      ABS_MT_TRACKING_ID  <non-ffffffff>   ← touch down
+      ABS_MT_POSITION_X   <raw_x>
+      ABS_MT_POSITION_Y   <raw_y>
+      ... (motion events with updated X/Y)
+      ABS_MT_TRACKING_ID  ffffffff         ← touch up = fire tap
     """
-    # Build getevent command that covers all devices
-    # Use getevent -l for labelled output
-    cmd = [ADB, "-s", device, "shell",
-           "getevent", "-l"] + event_devs
-
     proc = subprocess.Popen(
-        cmd,
+        [ADB, "-s", device, "shell", "getevent", "-l", TOUCH_DEV],
         stdout=subprocess.PIPE,
         stderr=subprocess.DEVNULL,
         text=True, bufsize=1,
@@ -2942,41 +2939,56 @@ def stream_events(device, event_devs, on_tap, debug=False):
     cur_x      = None
     cur_y      = None
     last_tap_t = 0.0
+    # Track first X/Y after touch-down (ignore motion drag updates)
+    got_first_pos = False
 
     try:
         for line in proc.stdout:
             line = line.strip()
+            if not line:
+                continue
 
             if debug:
                 print(f"  [raw] {line}")
 
-            # ABS_MT_POSITION_X  00000123
-            if "ABS_MT_POSITION_X" in line:
+            if "ABS_MT_TRACKING_ID" in line:
+                if "ffffffff" in line:
+                    # Touch UP — fire tap using last known position
+                    now = time.time() * 1000
+                    if cur_x is not None and cur_y is not None:
+                        if now - last_tap_t > DEBOUNCE_MS:
+                            last_tap_t = now
+                            sx, sy = raw_to_screen(cur_x, cur_y)
+                            on_tap(sx, sy)
+                    cur_x = None
+                    cur_y = None
+                    got_first_pos = False
+                else:
+                    # Touch DOWN — reset position tracking
+                    got_first_pos = False
+
+            elif "ABS_MT_POSITION_X" in line:
                 m = re.search(r"([0-9a-fA-F]{4,})\s*$", line)
                 if m:
-                    cur_x = int(m.group(1), 16)
+                    val = int(m.group(1), 16)
+                    if not got_first_pos:
+                        cur_x = val  # only use first position (tap, not drag)
 
             elif "ABS_MT_POSITION_Y" in line:
                 m = re.search(r"([0-9a-fA-F]{4,})\s*$", line)
                 if m:
-                    cur_y = int(m.group(1), 16)
-
-            # Tap ended: BTN_TOUCH UP  or  ABS_MT_TRACKING_ID ffffffff
-            elif ("BTN_TOUCH" in line and "UP" in line) or \
-                 ("ABS_MT_TRACKING_ID" in line and "ffffffff" in line.lower()):
-                now = time.time() * 1000
-                if cur_x is not None and cur_y is not None:
-                    if now - last_tap_t > DEBOUNCE_MS:
-                        last_tap_t = now
-                        on_tap(cur_x, cur_y)
-                cur_x = None
-                cur_y = None
+                    val = int(m.group(1), 16)
+                    if not got_first_pos:
+                        cur_y = val
+                        if cur_x is not None:
+                            got_first_pos = True  # have both X and Y now
 
     except Exception as e:
         if debug:
             print(f"  [stream] error: {e}")
     finally:
-        proc.terminate()
+        try: proc.terminate()
+        except: pass
 
 # ── Logger ────────────────────────────────────────────────────────────────────
 
@@ -2987,14 +2999,14 @@ class TapLogger:
         self._lock  = threading.Lock()
         LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
 
-    def on_tap(self, raw_x, raw_y):
+    def on_tap(self, sx, sy):
         activity = get_activity(self.device)
-        element  = get_element_at(self.device, raw_x, raw_y)
+        element  = get_element_at(self.device, sx, sy)
         entry = {
             "time":        datetime.now().isoformat(),
             "activity":    activity,
-            "x":           raw_x,
-            "y":           raw_y,
+            "x":           sx,
+            "y":           sy,
             "text":        element["text"]        if element else "",
             "resource_id": element["resource_id"] if element else "",
             "cls":         element["cls"]         if element else "",
@@ -3004,17 +3016,16 @@ class TapLogger:
         with self._lock:
             self.log.append(entry)
             LOG_FILE.write_text(json.dumps(self.log, indent=2))
-        label     = entry["text"] or f"({raw_x},{raw_y})"
+        label     = entry["text"] or f"({sx},{sy})"
         act_short = activity.split("/")[-1].split(".")[-1][:20]
         print(f"  [tap] {label:<48} [{act_short}]")
 
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--device", required=True)
-    p.add_argument("--clear",  action="store_true",
-                   help="Clear existing tap log before starting")
+    p.add_argument("--clear",  action="store_true")
     p.add_argument("--debug",  action="store_true",
-                   help="Print raw getevent lines (for diagnosing missed taps)")
+                   help="Print raw getevent lines")
     args = p.parse_args()
     device = args.device
 
@@ -3024,44 +3035,30 @@ def main():
 
     print(f"""
 ╔══════════════════════════════════════════════════════╗
-║   JARVIS TAP LOGGER  v2                             ║
+║   JARVIS TAP LOGGER  v3  (OPPO/MTK)                 ║
 ║   Device : {device:<42}║
 ║   Log    : ~/workflows/tap_log.json                 ║
 ╚══════════════════════════════════════════════════════╝
 
-  Use your phone normally.
-  Every tap will be logged with element text + activity.
-  Press Ctrl+C when done.
-
-  TIP: if taps aren't being detected, run with --debug
-       to see raw events and diagnose.
+  Use your phone normally. Every tap will be logged.
+  Press Ctrl+C when done, then run:
+    python3 skill_recorder.py --device {device} --from-log
 """)
-
-    touch_devs = find_touch_devices(device)
-    if not touch_devs:
-        print("  ERROR: no touch input devices found.")
-        print("  Try:  adb -s", device, "shell getevent -S")
-        sys.exit(1)
-
-    print(f"  Touch devices: {touch_devs}")
+    print(f"  Touch device : {TOUCH_DEV}")
+    print(f"  Screen       : {SCREEN_W}x{SCREEN_H}")
     print(f"  Listening...\n")
 
     logger = TapLogger(device)
-
     try:
-        stream_events(device, touch_devs, logger.on_tap, debug=args.debug)
+        stream_taps(device, logger.on_tap, debug=args.debug)
     except KeyboardInterrupt:
         pass
 
     print(f"\n\n  Stopped. {len(logger.log)} taps logged.")
-    print(f"  Log: {LOG_FILE}")
     if logger.log:
-        print(f"\n  Now run:")
-        print(f"    python3 skill_recorder.py --device {device} --from-log\n")
+        print(f"  Run: python3 skill_recorder.py --device {device} --from-log\n")
     else:
-        print(f"\n  No taps detected. Try:")
-        print(f"    python3 tap_logger.py --device {device} --debug --clear")
-        print(f"  Then tap the phone and look for ABS_MT_POSITION lines.\n")
+        print(f"  No taps — try: python3 tap_logger.py --device {device} --debug\n")
 
 if __name__ == "__main__":
     main()

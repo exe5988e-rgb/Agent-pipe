@@ -18883,6 +18883,136 @@
           "y": 2604
         }
       ]
+    },
+    "e45a3fbcbc8c": {
+      "screen_id": "e45a3fbcbc8c",
+      "package": "com.android.vending",
+      "activity": "com.android.vending/.AssetBrowserActivity",
+      "name": "vending_assetbrowseractivity",
+      "labels": [
+        "Options",
+        "Options",
+        "Options",
+        "Options",
+        "Options",
+        "Options"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 620,
+          "y": 549
+        },
+        {
+          "text": "Options",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1096,
+          "y": 465
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 620,
+          "y": 969
+        },
+        {
+          "text": "Options",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1096,
+          "y": 885
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 620,
+          "y": 1389
+        },
+        {
+          "text": "Options",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1096,
+          "y": 1305
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 620,
+          "y": 1774
+        },
+        {
+          "text": "Options",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1096,
+          "y": 1725
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 620,
+          "y": 2124
+        },
+        {
+          "text": "Options",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1096,
+          "y": 2075
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 620,
+          "y": 2507
+        },
+        {
+          "text": "Options",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1096,
+          "y": 2425
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 98,
+          "y": 237
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 155,
+          "y": 2744
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 775,
+          "y": 2744
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1085,
+          "y": 2744
+        }
+      ]
     }
   },
   "transitions": {
@@ -19105,7 +19235,8 @@
     "7571051ef9ea|element_598_2120": "2021bab01443",
     "7571051ef9ea|element_598_2385": "8853acfb0c72",
     "7571051ef9ea|element_1208_2120": "68dbc2f46e71",
-    "7571051ef9ea|element_1208_2385": "04321b652bb5"
+    "7571051ef9ea|element_1208_2385": "04321b652bb5",
+    "7571051ef9ea|element_946_237": "e45a3fbcbc8c"
   }
 }
 

@@ -2823,6 +2823,8 @@ if __name__ == "__main__":
 [11:02:51]   Recovering...
 [11:03:02]   Retry: FAIL  0.1s
 [11:03:02]   Recovering...
+[11:03:12] 
+[6/33] [1★] [phone] Open Phone app
 
 
 //===== TERMUXFILE: tap_logger.py =====

@@ -1,3 +1,298 @@
+//===== TERMUXFILE: jarvis-agent/agent/controller.py =====
+"""
+agent/controller.py  —  Main Jarvis agent loop
+
+OPT-4 v2 (Session 6): step-aware app launch bypass.
+
+At task start, controller extracts the ordered app list from the task string.
+It maintains app_index pointing to the next app that needs to be launched.
+
+On each step, before building a prompt:
+  1. Call get_top_activity() to check if launcher is foreground.
+  2. If yes AND app_index < len(task_apps): fire am start via bypass_pkg,
+     advance app_index, skip LLM call for this step.
+
+This means every app-open in a multi-step task is handled by OPT-4.
+Claude only handles navigation within each app.
+
+Example for "Open Chrome, find headline, then open WhatsApp and send to Mummy":
+  task_apps = ['chrome', 'whatsapp']
+  Step 1: launcher -> OPT4 launches Chrome (app_index -> 1)
+  Steps 2-N: Claude navigates Chrome, finds headline
+  Step N+1: Claude presses home -> launcher
+  Step N+2: launcher -> OPT4 launches WhatsApp (app_index -> 2)
+  Steps N+3...: Claude navigates WhatsApp, sends message, returns done
+"""
+
+import sys, os, time, argparse
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, ROOT)
+
+from perception.screen_capture  import capture_screen
+from perception.ui_parser       import parse_ui, get_top_activity
+from reasoning.prompt_builder   import build_prompt
+from reasoning.llm_client       import generate, health_check
+from reasoning.action_parser    import parse_action
+from executor.adb_executor      import execute
+from agent.state                import AgentState
+
+DEFAULT_DEVICE  = "192.168.29.48:38577"
+DEFAULT_TASK    = "Open WhatsApp"
+DEFAULT_MODEL   = os.path.expanduser(
+    "~/ai-workspace/llama.cpp/models/Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf")
+LOOP_SLEEP      = 1.5
+MAX_REPEAT      = 3
+MAX_EMPTY_WAITS = 8
+
+_LAUNCHER_PKGS = (
+    "com.sec.android.app.launcher",
+    "com.android.launcher",
+    "com.google.android.apps.nexuslauncher",
+    "com.miui.home",
+    "com.oppo.launcher",
+    "com.bbk.launcher2",
+    "com.huawei.android.launcher",
+    "com.asus.launcher",
+)
+
+APP_PACKAGES = {
+    "whatsapp"   : "com.whatsapp",
+    "chrome"     : "com.android.chrome",
+    "youtube"    : "com.google.android.youtube",
+    "settings"   : "com.android.settings",
+    "camera"     : "com.android.camera2",
+    "gallery"    : "com.sec.android.gallery3d",
+    "contacts"   : "com.android.contacts",
+    "phone"      : "com.samsung.android.dialer",
+    "messages"   : "com.samsung.android.messaging",
+    "gmail"      : "com.google.android.gm",
+    "maps"       : "com.google.android.apps.maps",
+    "instagram"  : "com.instagram.android",
+    "facebook"   : "com.facebook.katana",
+    "twitter"    : "com.twitter.android",
+    "x"          : "com.twitter.android",
+    "spotify"    : "com.spotify.music",
+    "telegram"   : "org.telegram.messenger",
+    "snapchat"   : "com.snapchat.android",
+    "netflix"    : "com.netflix.mediaclient",
+    "calculator" : "com.samsung.android.calculator",
+    "clock"      : "com.samsung.android.app.clockpackage",
+    "files"      : "com.sec.android.app.myfiles",
+    "play store" : "com.android.vending",
+    "playstore"  : "com.android.vending",
+}
+
+def extract_apps_in_order(task: str) -> list:
+    """
+    Scan task left-to-right and return app keywords in the order they appear.
+    Longest key wins to handle multi-word keys like 'play store'.
+
+      "Open Chrome then open WhatsApp"  ->  ['chrome', 'whatsapp']
+      "Play Warriyo Mortals on YouTube" ->  ['youtube']
+    """
+    tl   = task.lower()
+    seen = set()
+    out  = []
+    i    = 0
+    while i < len(tl):
+        matched = False
+        for key in sorted(APP_PACKAGES.keys(), key=len, reverse=True):
+            if tl[i:i + len(key)] == key:
+                if key not in seen:
+                    seen.add(key)
+                    out.append(key)
+                i += len(key)
+                matched = True
+                break
+        if not matched:
+            i += 1
+    return out
+
+def _is_on_launcher(device: str) -> bool:
+    """
+    Authoritative launcher check via dumpsys — works regardless of prompt content.
+    get_top_activity() already exists in ui_parser.py.
+    """
+    activity = get_top_activity(device)
+    if not activity:
+        return False
+    pkg = activity.split("/")[0]
+    return any(pkg.startswith(lp) for lp in _LAUNCHER_PKGS)
+
+def _repeat_count(history: list) -> int:
+    """Count consecutive identical trailing history entries."""
+    if not history:
+        return 0
+    last  = history[-1]
+    count = 0
+    for entry in reversed(history):
+        if entry == last:
+            count += 1
+        else:
+            break
+    return count
+
+def run_step(state, device, model_path):
+    print(f"\n{'='*56}\n  STEP {state.step+1}  |  {state.task}\n{'='*56}")
+
+    img = capture_screen(adb_device=device)
+    state.last_screen = img
+    ui  = parse_ui(img, adb_device=device)
+    state.last_ui = ui
+    print(f"[step] UI: {[e['text'] for e in ui]}")
+
+    # -- OPT-4 v2: launcher + app_index bypass --------------------------------
+    if state.app_index < len(state.task_apps):
+        if _is_on_launcher(device):
+            next_app = state.task_apps[state.app_index]
+            pkg      = APP_PACKAGES[next_app]
+            print(f"[OPT4v2] launcher -> launching {next_app} ({pkg})")
+            generate("", model_path=model_path, bypass_pkg=pkg)
+            state.history.append(f"opt4_launch:{next_app}")
+            state.step += 1
+            state.app_index += 1
+            print(f"[OPT4v2] app_index -> {state.app_index}/{len(state.task_apps)}")
+            return
+
+    # -- Empty UI handling ----------------------------------------------------
+    if not ui:
+        state.empty_ui_count += 1
+        print(f"[step] empty UI ({state.empty_ui_count}/{MAX_EMPTY_WAITS})")
+        if state.empty_ui_count >= MAX_EMPTY_WAITS:
+            print("[step] empty UI budget exhausted")
+            state.done = True
+            return
+        time.sleep(2)
+        state.step += 1
+        return
+    state.empty_ui_count = 0
+
+    # -- Repeat action warning ------------------------------------------------
+    extra = ""
+    if _repeat_count(state.history) >= MAX_REPEAT:
+        last  = state.history[-1]
+        extra = f"\nWARNING: {last!r} repeated {MAX_REPEAT}+ times with no change — try a different action."
+        print(f"[step] repeat warning: {last!r}")
+
+    # -- Normal LLM step ------------------------------------------------------
+    prompt  = build_prompt(state.task, ui, history=state.history) + extra
+    llm_out = generate(prompt, model_path=model_path)
+    print(f"[step] LLM: {llm_out!r}")
+
+    action = parse_action(llm_out)
+    print(f"[step] action: {action}")
+
+    execute(action, ui, adb_device=device)
+    state.record(action, ui)
+
+    if action.get("action") == "done":
+        state.done = True
+
+    print(f"[step] {state.summary()}")
+
+def run(task, device, model_path, max_steps=20):
+    print(f"\n{'#'*56}\n  JARVIS  |  {task}\n  Device : {device}\n{'#'*56}\n")
+
+    hc = health_check()
+    print(f"[init] backends: {hc}")
+    if not any([hc["phone_b"], hc["proxy"], hc["llamafile"], hc["binary"]]):
+        print("[init] WARNING: no LLM backend reachable!")
+
+    state                = AgentState(task=task, max_steps=max_steps)
+    state.task_apps      = extract_apps_in_order(task)
+    state.app_index      = 0
+    state.empty_ui_count = 0
+    print(f"[init] task_apps (ordered): {state.task_apps}")
+
+    while not state.is_finished():
+        try:
+            run_step(state, device=device, model_path=model_path)
+        except KeyboardInterrupt:
+            print("\n[controller] interrupted")
+            break
+        except Exception as e:
+            print(f"[controller] step error: {e}")
+            import traceback; traceback.print_exc()
+            time.sleep(3)
+            state.step += 1
+            continue
+
+        if state.done:
+            print(f"\n[controller] done in {state.step} steps")
+            break
+
+        time.sleep(LOOP_SLEEP)
+
+    print(f"\n[controller] history:")
+    for i, h in enumerate(state.history, 1):
+        print(f"  {i}. {h}")
+
+if __name__ == "__main__":
+    p = argparse.ArgumentParser()
+    p.add_argument("--task",      default=DEFAULT_TASK)
+    p.add_argument("--device",    default=DEFAULT_DEVICE)
+    p.add_argument("--model",     default=DEFAULT_MODEL)
+    p.add_argument("--max-steps", default=20, type=int)
+    a = p.parse_args()
+    run(a.task, a.device, a.model, a.max_steps)
+
+
+//===== TERMUXFILE: jarvis-agent/agent/state.py =====
+from dataclasses import dataclass, field
+
+@dataclass
+class AgentState:
+    task: str
+    step: int = 0
+    history: list = field(default_factory=list)
+    last_screen: str = ""
+    last_ui: list = field(default_factory=list)
+    done: bool = False
+    max_steps: int = 20
+
+    def record(self, action: dict, ui_elements: list) -> None:
+        act = action.get("action", "?")
+        if act == "tap":
+            tid = action.get("target")
+            if tid is not None:
+                label = next((e["text"] for e in ui_elements if e["id"] == tid), f"id={tid}")
+                self.history.append(f"tap [{tid}] {label}")
+            else:
+                self.history.append(f"tap ({action.get('x')},{action.get('y')})")
+        elif act == "type":
+            self.history.append(f"type {action.get('text','')!r}")
+        elif act == "swipe":
+            self.history.append(f"swipe ({action.get('x1')},{action.get('y1')})→({action.get('x2')},{action.get('y2')})")
+        else:
+            self.history.append(act)
+        self.step += 1
+
+    def is_finished(self) -> bool:
+        return self.done or self.step >= self.max_steps
+
+    def summary(self) -> str:
+        return f"step={self.step}/{self.max_steps} done={self.done} history={self.history}"
+
+
+//===== TERMUXFILE: jarvis-agent/perception/screen_capture.py =====
+"""perception/screen_capture.py — wraps Device.take_screenshot()"""
+import os, sys
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, ROOT)
+from executor.device import Device
+
+_cache = {}
+
+def capture_screen(adb_device: str, filename="screen.png") -> str:
+    if adb_device not in _cache:
+        _cache[adb_device] = Device(
+            device_serial = adb_device,
+            output_dir    = os.path.join(ROOT, "screenshots")
+        )
+    return _cache[adb_device].take_screenshot(filename=filename)
+
+
 //===== TERMUXFILE: jarvis-agent/perception/ui_mock_parser.py =====
 """
 perception/ui_mock_parser.py

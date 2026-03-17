@@ -44862,6 +44862,105 @@
           "resource_id": ""
         }
       ]
+    },
+    "2edcf1eb90cd": {
+      "screen_id": "2edcf1eb90cd",
+      "package": "com.whatsapp",
+      "activity": "com.whatsapp/.contact.ui.picker.ContactPicker",
+      "name": "whatsapp_contactpicker",
+      "labels": [
+        "and Send msg to Mummy",
+        "Show dial pad keyboard",
+        "element_4",
+        "element_5",
+        "element_6",
+        "element_7",
+        "element_8",
+        "element_9",
+        "element_10",
+        "Contacts help"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "and Send msg to Mummy",
+          "x": 620,
+          "y": 223,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.whatsapp:id/search_src_text"
+        },
+        {
+          "text": "Show dial pad keyboard",
+          "x": 1100,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/trailing_button"
+        },
+        {
+          "text": "Back",
+          "x": 140,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/back"
+        },
+        {
+          "text": "element_4",
+          "x": 620,
+          "y": 1030,
+          "cls": "android.widget.ListView",
+          "resource_id": "android:id/list"
+        },
+        {
+          "text": "element_5",
+          "x": 620,
+          "y": 417,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_6",
+          "x": 620,
+          "y": 597,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_7",
+          "x": 126,
+          "y": 597,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "element_8",
+          "x": 620,
+          "y": 777,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_9",
+          "x": 620,
+          "y": 957,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_10",
+          "x": 620,
+          "y": 1195,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Contacts help",
+          "x": 620,
+          "y": 1433,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -45110,7 +45209,7 @@
     "4203f6dd32c9|opt4_launch:whatsapp": "e7407a97b9ce",
     "7c51d7e864c3|tap:element_25": "7770f0561545",
     "7770f0561545|tap:More options": "307d903852e1",
-    "307d903852e1|type": "b128d851f827",
+    "307d903852e1|type": "2edcf1eb90cd",
     "b128d851f827|tap:None": "955fca488005",
     "366c9a634a55|type": "3770450be101",
     "4203f6dd32c9|opt4_launch:youtube": "6d33d4320f5d",

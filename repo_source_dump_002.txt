@@ -24588,6 +24588,242 @@
           "resource_id": ""
         }
       ]
+    },
+    "d4c06a03f487": {
+      "screen_id": "d4c06a03f487",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Open the homepage",
+        "element_2",
+        "google.com/?zx=1773727493721&no_sw_cr=1",
+        "See 19 tabs",
+        "Customise and control Google Chrome",
+        "element_6",
+        "IMAGES",
+        "element_8",
+        "Google Account: Amir Shams (amirshamse8@gmail.com)",
+        "Search Labs",
+        "element_11",
+        "Google Search",
+        "element_13",
+        "element_14",
+        "Search by voice",
+        "Search using your camera or photos",
+        "element_17",
+        "\u0939\u093f\u0928\u094d\u0926\u0940",
+        "\u09ac\u09be\u0982\u09b2\u09be",
+        "\u0c24\u0c46\u0c32\u0c41\u0c17\u0c41",
+        "\u092e\u0930\u093e\u0920\u0940",
+        "\u0ba4\u0bae\u0bbf\u0bb4\u0bcd",
+        "\u0a97\u0ac1\u0a9c\u0ab0\u0abe\u0aa4\u0ac0",
+        "\u0c95\u0ca8\u0ccd\u0ca8\u0ca1",
+        "\u0d2e\u0d32\u0d2f\u0d3e\u0d33\u0d02",
+        "\u0a2a\u0a70\u0a1c\u0a3e\u0a2c\u0a40",
+        "Awesome GitHub Copilot just got a website, and a learning hub, and plugins! Microsoft Developer 12h",
+        "More options"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "element_2",
+          "x": 224,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "google.com/?zx=1773727493721&no_sw_cr=1",
+          "x": 592,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "See 19 tabs",
+          "x": 988,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        },
+        {
+          "text": "element_6",
+          "x": 620,
+          "y": 1526,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "IMAGES",
+          "x": 416,
+          "y": 424,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_8",
+          "x": 974,
+          "y": 420,
+          "cls": "android.view.View",
+          "resource_id": "gbwa"
+        },
+        {
+          "text": "Google Account: Amir Shams (amirshamse8@gmail.com)",
+          "x": 1142,
+          "y": 420,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Search Labs",
+          "x": 84,
+          "y": 426,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_11",
+          "x": 621,
+          "y": 945,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Google Search",
+          "x": 140,
+          "y": 945,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_13",
+          "x": 453,
+          "y": 945,
+          "cls": "android.widget.EditText",
+          "resource_id": ""
+        },
+        {
+          "text": "element_14",
+          "x": 764,
+          "y": 945,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Search by voice",
+          "x": 932,
+          "y": 945,
+          "cls": "android.widget.Button",
+          "resource_id": "Q7Ulpb"
+        },
+        {
+          "text": "Search using your camera or photos",
+          "x": 1100,
+          "y": 945,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_17",
+          "x": 620,
+          "y": 1157,
+          "cls": "android.view.View",
+          "resource_id": "19055111"
+        },
+        {
+          "text": "\u0939\u093f\u0928\u094d\u0926\u0940",
+          "x": 155,
+          "y": 1346,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "\u09ac\u09be\u0982\u09b2\u09be",
+          "x": 316,
+          "y": 1346,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "\u0c24\u0c46\u0c32\u0c41\u0c17\u0c41",
+          "x": 498,
+          "y": 1346,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "\u092e\u0930\u093e\u0920\u0940",
+          "x": 677,
+          "y": 1346,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "\u0ba4\u0bae\u0bbf\u0bb4\u0bcd",
+          "x": 857,
+          "y": 1346,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "\u0a97\u0ac1\u0a9c\u0ab0\u0abe\u0aa4\u0ac0",
+          "x": 1058,
+          "y": 1346,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "\u0c95\u0ca8\u0ccd\u0ca8\u0ca1",
+          "x": 402,
+          "y": 1444,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "\u0d2e\u0d32\u0d2f\u0d3e\u0d33\u0d02",
+          "x": 617,
+          "y": 1444,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "\u0a2a\u0a70\u0a1c\u0a3e\u0a2c\u0a40",
+          "x": 834,
+          "y": 1444,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Awesome GitHub Copilot just got a website, and a learning hub, and plugins! Microsoft Developer 12h",
+          "x": 620,
+          "y": 2156,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "More options",
+          "x": 1155,
+          "y": 2674,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -24857,7 +25093,8 @@
     "92250c07bf1a|type": "6aecc338ecf3",
     "ff3d5d3179d0|back": "6aecc338ecf3",
     "aa1600c67941|tap:See 19 tabs": "c120d24cf7c6",
-    "c120d24cf7c6|type": "bc25f94b5cfd"
+    "c120d24cf7c6|type": "bc25f94b5cfd",
+    "bc25f94b5cfd|tap:element_7": "d4c06a03f487"
   }
 }
 

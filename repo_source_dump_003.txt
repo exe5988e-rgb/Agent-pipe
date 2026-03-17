@@ -3362,9 +3362,14 @@ if __name__ == "__main__":
     "last_seen": 1773754590.8606257
   },
   "0bb5585ab8d0|opt4_launch:chrome": {
-    "to": "3012bc5865d3",
-    "count": 10,
-    "last_seen": 1773756315.8563359
+    "to": "245d2f71b329",
+    "count": 1,
+    "last_seen": 1773756328.618904
+  },
+  "245d2f71b329|opt4_launch:whatsapp": {
+    "to": "3949001d1ca1",
+    "count": 1,
+    "last_seen": 1773756334.9905424
   }
 }
 

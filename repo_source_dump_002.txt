@@ -42783,6 +42783,229 @@
           "resource_id": ""
         }
       ]
+    },
+    "245d2f71b329": {
+      "screen_id": "245d2f71b329",
+      "package": "com.android.launcher",
+      "activity": "com.android.launcher/.Launcher",
+      "name": "launcher_launcher",
+      "labels": [
+        "Chrome",
+        "More",
+        "Termux",
+        "More",
+        "Chrome Button",
+        "WhatsApp",
+        "ChatGPT",
+        "Termux",
+        "Close"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Chrome",
+          "x": 620,
+          "y": 1210,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "More",
+          "x": 904,
+          "y": 409,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.launcher:id/oplus_task_header_menu_button"
+        },
+        {
+          "text": "Termux",
+          "x": 98,
+          "y": 1212,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "More",
+          "x": 124,
+          "y": 433,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.launcher:id/oplus_task_header_menu_button"
+        },
+        {
+          "text": "Chrome Button",
+          "x": 620,
+          "y": 2281,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "WhatsApp",
+          "x": 95,
+          "y": 2281,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "ChatGPT",
+          "x": 270,
+          "y": 2281,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Termux",
+          "x": 445,
+          "y": 2281,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Close",
+          "x": 620,
+          "y": 2511,
+          "cls": "android.widget.Button",
+          "resource_id": "com.android.launcher:id/btn_clear"
+        }
+      ]
+    },
+    "3949001d1ca1": {
+      "screen_id": "3949001d1ca1",
+      "package": "com.termux",
+      "activity": "com.termux/.app.TermuxActivity",
+      "name": "termux_termuxactivity",
+      "labels": [
+        "STEP 15  |  open chrome  and Search for best rated restaurants in google open whatsapp  and send Mummy the names of 5 shortlisted  and a screenshot of best one                                                                   ========================================================\n[device] screenshot \u2192 /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3995033 bytes)                               [ui_parser] activity=com.android.launcher/.Launcher\n[ui_parser] signal='com.android.launcher/.Launcher'\n[mem] miss (unknown): com.android.launcher/.Launcher\n[ui_parser] cache miss -- full uiautomator dump\n[ui_parser] full parse -- 9 elements from 192.168.29.48:34011\n[mem] stored com.android.launcher/.Launcher hash=acabdd8d3fb8 elements=9\n[step] UI: ['Chrome', 'More', 'Termux', 'More', 'Chrome Button', 'WhatsApp', 'ChatGPT', 'Termux']\n[map] new screen: launcher_launcher (245d2f71b329)\n[tm] transition changed: 0bb5585ab8d0|opt4_launch:chrome 3012bc58 -> 245d2f71\n[map] transition: launcher_launcher --[opt4_launch:chrome]--> launcher_launcher                                                                         [map] screen: launcher_launcher (245d2f71)\n[OPT4v2] launcher -> launching whatsapp (com.whatsapp)\n[llm] OPT4v2 am start: com.whatsapp\n[OPT4v2] app_index -> 2/2                                                   [mem] invalidated com.termux/.app.TermuxActivity\n                                                                            ========================================================                      STEP 16  |  open chrome  and Search for best rated restaurants in google open whatsapp  and send Mummy the names of 5 shortlisted  and a screenshot of best one\n========================================================                    [device] screenshot \u2192 /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1296464 bytes)\n[ui_parser] activity=com.termux/.app.TermuxActivity\n[ui_parser] signal='com.termux/.app.TermuxActivity'\n[mem] miss (unknown): com.termux/.app.TermuxActivity\n[ui_parser] cache miss -- full uiautomator dump",
+        "ESC",
+        "element_3",
+        "\u2630",
+        "\u21f3",
+        "\u2191",
+        "END",
+        "PGUP",
+        "\u21b9",
+        "CTRL",
+        "ALT",
+        "\u2190",
+        "\u2193",
+        "\u2192",
+        "PGDN"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "STEP 15  |  open chrome  and Search for best rated restaurants in google open whatsapp  and send Mummy the names of 5 shortlisted  and a screenshot of best one                                                                   ========================================================\n[device] screenshot \u2192 /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3995033 bytes)                               [ui_parser] activity=com.android.launcher/.Launcher\n[ui_parser] signal='com.android.launcher/.Launcher'\n[mem] miss (unknown): com.android.launcher/.Launcher\n[ui_parser] cache miss -- full uiautomator dump\n[ui_parser] full parse -- 9 elements from 192.168.29.48:34011\n[mem] stored com.android.launcher/.Launcher hash=acabdd8d3fb8 elements=9\n[step] UI: ['Chrome', 'More', 'Termux', 'More', 'Chrome Button', 'WhatsApp', 'ChatGPT', 'Termux']\n[map] new screen: launcher_launcher (245d2f71b329)\n[tm] transition changed: 0bb5585ab8d0|opt4_launch:chrome 3012bc58 -> 245d2f71\n[map] transition: launcher_launcher --[opt4_launch:chrome]--> launcher_launcher                                                                         [map] screen: launcher_launcher (245d2f71)\n[OPT4v2] launcher -> launching whatsapp (com.whatsapp)\n[llm] OPT4v2 am start: com.whatsapp\n[OPT4v2] app_index -> 2/2                                                   [mem] invalidated com.termux/.app.TermuxActivity\n                                                                            ========================================================                      STEP 16  |  open chrome  and Search for best rated restaurants in google open whatsapp  and send Mummy the names of 5 shortlisted  and a screenshot of best one\n========================================================                    [device] screenshot \u2192 /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1296464 bytes)\n[ui_parser] activity=com.termux/.app.TermuxActivity\n[ui_parser] signal='com.termux/.app.TermuxActivity'\n[mem] miss (unknown): com.termux/.app.TermuxActivity\n[ui_parser] cache miss -- full uiautomator dump",
+          "x": 620,
+          "y": 727,
+          "cls": "android.view.View",
+          "resource_id": "com.termux:id/terminal_view"
+        },
+        {
+          "text": "ESC",
+          "x": 97,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_3",
+          "x": 620,
+          "y": 1447,
+          "cls": "androidx.viewpager.widget.ViewPager",
+          "resource_id": "com.termux:id/terminal_toolbar_view_pager"
+        },
+        {
+          "text": "\u2630",
+          "x": 271,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u21f3",
+          "x": 445,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "HOME",
+          "x": 619,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u2191",
+          "x": 794,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "END",
+          "x": 968,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "PGUP",
+          "x": 1143,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u21b9",
+          "x": 97,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "CTRL",
+          "x": 271,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "ALT",
+          "x": 445,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u2190",
+          "x": 619,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u2193",
+          "x": 794,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u2192",
+          "x": 968,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "PGDN",
+          "x": 1143,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -43144,7 +43367,8 @@
     "4e3d027411e1|swipe": "7be8acd10806",
     "7be8acd10806|tap:element_10": "f68c7157ae35",
     "f68c7157ae35|tap:Rooftop restaurants in Dhanbad": "ad89b0c3b391",
-    "0bb5585ab8d0|opt4_launch:chrome": "3012bc5865d3"
+    "0bb5585ab8d0|opt4_launch:chrome": "245d2f71b329",
+    "245d2f71b329|opt4_launch:whatsapp": "3949001d1ca1"
   }
 }
 

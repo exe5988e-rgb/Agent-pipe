@@ -2927,6 +2927,8 @@ if __name__ == "__main__":
 [11:27:24] 
 [13/33] [2★] [settings] Open Settings and go to WiFi
 [11:29:46]   PASS  138.9s  skills=3
+[11:29:51] 
+[14/33] [2★] [settings] Open Settings and go to Display
 
 
 //===== TERMUXFILE: tap_logger.py =====

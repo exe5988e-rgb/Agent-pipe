@@ -2825,6 +2825,9 @@ if __name__ == "__main__":
 [11:03:02]   Recovering...
 [11:03:12] 
 [6/33] [1★] [phone] Open Phone app
+[11:03:16]   FAIL  0.1s  rc=1  skills=0
+[11:03:16]   Retrying...
+[11:03:16]   Recovering...
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4074,6 +4077,10 @@ done
 
 //===== TERMUXFILE: gauntlet_nohup.log =====
 nohup: ignoring input
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 31, in <module>
+    from perception.screen_map         import ScreenMap
+ModuleNotFoundError: No module named 'perception.screen_map'
 Traceback (most recent call last):
   File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 31, in <module>
     from perception.screen_map         import ScreenMap

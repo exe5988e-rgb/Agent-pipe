@@ -17042,6 +17042,71 @@
           "y": 1688
         }
       ]
+    },
+    "7ef217436dcb": {
+      "screen_id": "7ef217436dcb",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/com.google.android.apps.youtube.app.watchwhile.InternalMainActivity",
+      "name": "youtube_internalmainactivity",
+      "labels": [
+        "Voice search",
+        "Edit suggestion tiki tiki slowed ringtone instrumental",
+        "Edit suggestion tiktok instrumental ringtone",
+        "Edit suggestion taki taki only music ringtone"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Voice search",
+          "resource_id": "com.google.android.youtube:id/fab",
+          "cls": "android.widget.ImageView",
+          "x": 1114,
+          "y": 1655
+        },
+        {
+          "text": "",
+          "resource_id": "com.google.android.youtube:id/linearLayout",
+          "cls": "android.view.ViewGroup",
+          "x": 620,
+          "y": 391
+        },
+        {
+          "text": "Edit suggestion tiki tiki slowed ringtone instrumental",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion",
+          "cls": "android.widget.ImageView",
+          "x": 1156,
+          "y": 391
+        },
+        {
+          "text": "",
+          "resource_id": "com.google.android.youtube:id/linearLayout",
+          "cls": "android.view.ViewGroup",
+          "x": 620,
+          "y": 559
+        },
+        {
+          "text": "Edit suggestion tiktok instrumental ringtone",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion",
+          "cls": "android.widget.ImageView",
+          "x": 1156,
+          "y": 559
+        },
+        {
+          "text": "",
+          "resource_id": "com.google.android.youtube:id/linearLayout",
+          "cls": "android.view.ViewGroup",
+          "x": 620,
+          "y": 727
+        },
+        {
+          "text": "Edit suggestion taki taki only music ringtone",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion",
+          "cls": "android.widget.ImageView",
+          "x": 1156,
+          "y": 727
+        }
+      ]
     }
   },
   "transitions": {
@@ -17250,7 +17315,8 @@
     "bf229eb46cda|Voice search": "ab612c16894d",
     "bf229eb46cda|element_620_559": "5ca448df8e66",
     "bf229eb46cda|Edit suggestion tiki tiki slowed": "c3507cfcd293",
-    "bf229eb46cda|Edit suggestion funk universo slowed": "ea18d524183b"
+    "bf229eb46cda|Edit suggestion funk universo slowed": "ea18d524183b",
+    "bf229eb46cda|Edit suggestion luz roja": "7ef217436dcb"
   }
 }
 

@@ -8362,7 +8362,9 @@ RuntimeError: No LLM backend available.
 
 ========================================================
   STEP 7  |  Open Contacts and search for Mummy
-========================================================
+========================================================[parser] DEBUG normalized: 'tap 1'
+[parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
+
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash

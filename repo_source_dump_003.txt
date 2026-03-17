@@ -3151,6 +3151,8 @@ if __name__ == "__main__":
 [12:13:26] 
 [31/33] [4★] [settings] Open Settings and go to WiFi
 [12:13:45]   PASS  15.7s  skills=6
+[12:13:50] 
+[32/33] [5★] [cross_app] Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
 
 
 //===== TERMUXFILE: tap_logger.py =====

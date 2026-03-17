@@ -23167,6 +23167,202 @@
           "resource_id": "com.google.android.youtube:id/edit_suggestion"
         }
       ]
+    },
+    "6d8964ace959": {
+      "screen_id": "6d8964ace959",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Navigate up",
+        "Clear",
+        "MrBeast",
+        "element_4",
+        "element_5",
+        "Edit suggestion mrbeast",
+        "element_7",
+        "Edit suggestion mr beast hindi",
+        "element_9",
+        "Edit suggestion mrbeast video",
+        "element_11",
+        "Edit suggestion mrbeast gaming",
+        "element_13",
+        "Edit suggestion mrbeast in hindi",
+        "element_15",
+        "Edit suggestion mrbeast new video",
+        "element_17",
+        "Edit suggestion mrbeast challenge",
+        "element_19",
+        "Edit suggestion mrbeast bangla",
+        "Voice search",
+        "element_22",
+        "Edit suggestion mrbeast minecraft"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Clear",
+          "x": 1156,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/search_clear"
+        },
+        {
+          "text": "MrBeast",
+          "x": 634,
+          "y": 223,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.google.android.youtube:id/search_edit_text"
+        },
+        {
+          "text": "element_4",
+          "x": 620,
+          "y": 391,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "element_5",
+          "x": 620,
+          "y": 1016,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results_recycler_view"
+        },
+        {
+          "text": "Edit suggestion mrbeast",
+          "x": 1156,
+          "y": 391,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 559,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion mr beast hindi",
+          "x": 1156,
+          "y": 559,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "element_9",
+          "x": 620,
+          "y": 727,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion mrbeast video",
+          "x": 1156,
+          "y": 727,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "element_11",
+          "x": 620,
+          "y": 895,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion mrbeast gaming",
+          "x": 1156,
+          "y": 895,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "element_13",
+          "x": 620,
+          "y": 1063,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion mrbeast in hindi",
+          "x": 1156,
+          "y": 1063,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "element_15",
+          "x": 620,
+          "y": 1231,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion mrbeast new video",
+          "x": 1156,
+          "y": 1231,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "element_17",
+          "x": 620,
+          "y": 1399,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion mrbeast challenge",
+          "x": 1156,
+          "y": 1399,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "element_19",
+          "x": 620,
+          "y": 1567,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion mrbeast bangla",
+          "x": 1156,
+          "y": 1567,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Voice search",
+          "x": 1114,
+          "y": 1655,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/fab"
+        },
+        {
+          "text": "element_22",
+          "x": 620,
+          "y": 1688,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion mrbeast minecraft",
+          "x": 1156,
+          "y": 1688,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        }
+      ]
     }
   },
   "transitions": {
@@ -23425,7 +23621,8 @@
     "7c51d7e864c3|tap:You": "47d448eaba6d",
     "d3d30bd552b1|tap:Communities": "24f4242fbb4f",
     "f65869ba650d|tap:You": "8e74d0f0627a",
-    "8e74d0f0627a|tap:element_4": "f33f9e08caa5"
+    "8e74d0f0627a|tap:element_4": "f33f9e08caa5",
+    "f33f9e08caa5|type": "6d8964ace959"
   }
 }
 

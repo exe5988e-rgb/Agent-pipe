@@ -2850,6 +2850,11 @@ if __name__ == "__main__":
     "to": "f33f9e08caa5",
     "count": 1,
     "last_seen": 1773726833.1166174
+  },
+  "f33f9e08caa5|type": {
+    "to": "6d8964ace959",
+    "count": 1,
+    "last_seen": 1773726864.8692052
   }
 }
 

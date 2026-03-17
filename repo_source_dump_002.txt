@@ -40792,7 +40792,7 @@
         "Card menu Robert Downey Jr, Chris Evans Have Avengers Reunion at Oscars",
         "element_20"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {
@@ -42535,6 +42535,130 @@
           "resource_id": ""
         }
       ]
+    },
+    "0bb5585ab8d0": {
+      "screen_id": "0bb5585ab8d0",
+      "package": "com.android.launcher",
+      "activity": "com.android.launcher/.Launcher",
+      "name": "launcher_launcher",
+      "labels": [
+        "Folder: Tools",
+        "Tools",
+        "Grok",
+        "Roblox",
+        "Hollow Knight",
+        "Discord",
+        "OC Auto Clicker",
+        "DevTools",
+        "Gemini",
+        "System boost",
+        "Phone",
+        "Messages",
+        "Photos",
+        "Camera"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Folder: Tools",
+          "x": 620,
+          "y": 803,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Tools",
+          "x": 620,
+          "y": 938,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.android.launcher:id/folder_icon_name"
+        },
+        {
+          "text": "Grok",
+          "x": 152,
+          "y": 1188,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Roblox",
+          "x": 386,
+          "y": 1188,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Hollow Knight",
+          "x": 152,
+          "y": 1573,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Discord",
+          "x": 386,
+          "y": 1573,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "OC Auto Clicker",
+          "x": 152,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "DevTools",
+          "x": 386,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Gemini",
+          "x": 620,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "System boost",
+          "x": 854,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Phone",
+          "x": 269,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Messages",
+          "x": 503,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Photos",
+          "x": 737,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Camera",
+          "x": 971,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -42895,7 +43019,8 @@
     "a6c245bb7216|swipe": "4e3d027411e1",
     "4e3d027411e1|swipe": "7be8acd10806",
     "7be8acd10806|tap:element_10": "f68c7157ae35",
-    "f68c7157ae35|tap:Rooftop restaurants in Dhanbad": "ad89b0c3b391"
+    "f68c7157ae35|tap:Rooftop restaurants in Dhanbad": "ad89b0c3b391",
+    "0bb5585ab8d0|opt4_launch:chrome": "3012bc5865d3"
   }
 }
 

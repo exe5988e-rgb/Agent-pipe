@@ -3246,6 +3246,7 @@ if __name__ == "__main__":
 [14:00:36]   PASS  279.6s  skills=6
 [14:00:41] 
 [13/33] [2★] [settings] Open Settings and go to WiFi
+[14:03:21]   PASS  157.2s  skills=6
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4413,7 +4414,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-17T14:00:36.114228",
+  "run_at": "2026-03-17T14:03:21.817636",
   "skills_before": 6,
   "skills_current": 6,
   "results": [
@@ -4522,6 +4523,15 @@ if __name__ == "__main__":
       "difficulty": 2,
       "success": true,
       "elapsed_s": 279.6,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Open Settings and go to WiFi",
+      "category": "settings",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 157.2,
       "error": null,
       "retried": false
     }
@@ -6411,6 +6421,61 @@ Traceback (most recent call last):
 RuntimeError: No LLM backend available.
   Phone B offline? Check: curl http://192.168.29.110:8890/health
   Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 7  |  Open Settings and go to WiFi
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1160446 bytes)
+[ui_parser] activity=com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity
+[ui_parser] signal='com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity'
+[mem] HIT com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity hash=634ac82d93c5 hits=4 elements=22
+[step] UI: ['Search', 'Search', 'Cancel', 'element_4', 'Clear', 'WiFi', 'Display', 'time']
+[map] screen: settings_oplussettingshomepageactivity (8c512c8b)
+[skill] matched: 'open settings and go'  score=1.00  act_match=False
+[skill] cannot resolve tap target: 'element_5'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 8  |  Open Settings and go to WiFi
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1160293 bytes)
+[ui_parser] activity=com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity
+[ui_parser] signal='com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity'
+[mem] HIT com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity hash=634ac82d93c5 hits=5 elements=22
+[step] UI: ['Search', 'Search', 'Cancel', 'element_4', 'Clear', 'WiFi', 'Display', 'time']
+[map] screen: settings_oplussettingshomepageactivity (8c512c8b)
+[skill] matched: 'open settings and go'  score=1.00  act_match=False
+[skill] cannot resolve tap target: 'element_5'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+[controller] history:
+  1. opt4_launch:settings
+
+  Screen Map: 269 screens (0 tainted), 326 transitions
+    whatsapp             142 screens
+    youtube              54 screens
+    chrome               22 screens
+    vending              21 screens
+    settings             13 screens
+    launcher             8 screens
+    termux               6 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+    dialer               1 screens
+  TransitionMemory: 326 transitions (253 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

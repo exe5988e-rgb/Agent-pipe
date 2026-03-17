@@ -19960,7 +19960,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 65,
+      "visits": 66,
       "tainted": false,
       "elements": [
         {
@@ -34662,7 +34662,7 @@
         "Calls",
         "You"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {
@@ -35114,7 +35114,7 @@
     "866f5ed64950|element_1114_237": "583c296ce79a",
     "866f5ed64950|element_17_419": "583c296ce79a",
     "866f5ed64950|element_246_419": "583c296ce79a",
-    "4203f6dd32c9|opt4_launch:whatsapp": "b37f4f8d4aed",
+    "4203f6dd32c9|opt4_launch:whatsapp": "e7407a97b9ce",
     "7c51d7e864c3|tap:element_25": "1b272452b866",
     "7770f0561545|tap:More options": "307d903852e1",
     "307d903852e1|type": "b128d851f827",

@@ -5848,6 +5848,8 @@ java.lang.IllegalArgumentException: Argument expected after "text"
     wirelesssettings     1 screens
     dialer               1 screens
   TransitionMemory: 325 transitions (250 confirmed, threshold=2)
+[parser] DEBUG normalized: 'tap 3'
+[parser] INFO parsed 'tap 3' -> {'action': 'tap', 'target': 3}
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

@@ -19960,7 +19960,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 47,
+      "visits": 48,
       "tainted": false,
       "elements": [
         {
@@ -30188,6 +30188,202 @@
           "resource_id": "com.whatsapp:id/entry"
         }
       ]
+    },
+    "73e58d141483": {
+      "screen_id": "73e58d141483",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Expand Mini Player",
+        "Minimise",
+        "Visit advertiser",
+        "Cast",
+        "Captions",
+        "More options",
+        "More options",
+        "element_8",
+        "Enter full screen",
+        "Sponsored",
+        "0 minutes 6 seconds of 0 minutes 30 seconds",
+        "element_12",
+        "More options",
+        "Close ad panel",
+        "element_15",
+        "element_16",
+        "element_17",
+        "element_18",
+        "element_19",
+        "Visit site",
+        "element_21",
+        "element_22",
+        "Sign up"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Expand Mini Player",
+          "x": 620,
+          "y": 488,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/player_overlays"
+        },
+        {
+          "text": "Minimise",
+          "x": 84,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/player_collapse_button"
+        },
+        {
+          "text": "Visit advertiser",
+          "x": 320,
+          "y": 230,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.google.android.youtube:id/player_learn_more_button"
+        },
+        {
+          "text": "Cast",
+          "x": 610,
+          "y": 230,
+          "cls": "android.widget.Button",
+          "resource_id": "com.google.android.youtube:id/player_mdx_entry_point_button"
+        },
+        {
+          "text": "Captions",
+          "x": 792,
+          "y": 230,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/player_subtitle_button"
+        },
+        {
+          "text": "More options",
+          "x": 974,
+          "y": 230,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "More options",
+          "x": 1156,
+          "y": 230,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_8",
+          "x": 1118,
+          "y": 585,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.youtube:id/skip_ad_button"
+        },
+        {
+          "text": "Enter full screen",
+          "x": 1135,
+          "y": 753,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/fullscreen_button"
+        },
+        {
+          "text": "Sponsored",
+          "x": 168,
+          "y": 753,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.google.android.youtube:id/ad_progress_text"
+        },
+        {
+          "text": "0 minutes 6 seconds of 0 minutes 30 seconds",
+          "x": 620,
+          "y": 834,
+          "cls": "android.widget.SeekBar",
+          "resource_id": ""
+        },
+        {
+          "text": "element_12",
+          "x": 620,
+          "y": 942,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.google.android.youtube:id/header_container"
+        },
+        {
+          "text": "More options",
+          "x": 974,
+          "y": 963,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Close ad panel",
+          "x": 1156,
+          "y": 963,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_15",
+          "x": 620,
+          "y": 1881,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results"
+        },
+        {
+          "text": "element_16",
+          "x": 182,
+          "y": 1229,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_17",
+          "x": 649,
+          "y": 1193,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "element_18",
+          "x": 649,
+          "y": 1229,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "element_19",
+          "x": 518,
+          "y": 1282,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Visit site",
+          "x": 620,
+          "y": 1966,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "element_21",
+          "x": 191,
+          "y": 1966,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "element_22",
+          "x": 1049,
+          "y": 1966,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Sign up",
+          "x": 620,
+          "y": 2653,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -30439,7 +30635,7 @@
     "307d903852e1|type": "b128d851f827",
     "b128d851f827|tap:None": "366c9a634a55",
     "366c9a634a55|type": "3770450be101",
-    "4203f6dd32c9|opt4_launch:youtube": "344055367907",
+    "4203f6dd32c9|opt4_launch:youtube": "73e58d141483",
     "4203f6dd32c9|opt4_launch:settings": "ff3d5d3179d0",
     "4203f6dd32c9|opt4_launch:chrome": "00f1f507607b",
     "4203f6dd32c9|opt4_launch:play store": "06c59ed8f4e7",

@@ -28779,6 +28779,16 @@
           "resource_id": ""
         }
       ]
+    },
+    "02423f98daab": {
+      "screen_id": "02423f98daab",
+      "package": "com.termux",
+      "activity": "com.termux/.app.TermuxActivity",
+      "name": "termux_termuxactivity",
+      "labels": [],
+      "visits": 1,
+      "tainted": false,
+      "elements": []
     }
   },
   "transitions": {

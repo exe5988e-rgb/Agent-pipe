@@ -19960,7 +19960,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 69,
+      "visits": 70,
       "tainted": false,
       "elements": [
         {
@@ -35379,7 +35379,7 @@
         "Default apps",
         "Device & app notifications"
       ],
-      "visits": 7,
+      "visits": 8,
       "tainted": false,
       "elements": [
         {
@@ -36004,7 +36004,8 @@
     "06c59ed8f4e7|back": "efa43c0a8f87",
     "efa43c0a8f87|tap:Instagram": "e341b6be3d43",
     "d7b9c92091c7|home": "4203f6dd32c9",
-    "6d33d4320f5d|tap:element_4": "a080221dda39"
+    "6d33d4320f5d|tap:element_4": "a080221dda39",
+    "04c05dc29d65|home": "4203f6dd32c9"
   }
 }
 

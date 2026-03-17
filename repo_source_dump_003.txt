@@ -6478,6 +6478,8 @@ RuntimeError: No LLM backend available.
     wirelesssettings     1 screens
     dialer               1 screens
   TransitionMemory: 326 transitions (253 confirmed, threshold=2)
+[parser] DEBUG normalized: 'home'
+[parser] INFO parsed 'home' -> {'action': 'home'}
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

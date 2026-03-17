@@ -2823,8 +2823,8 @@ if __name__ == "__main__":
   },
   "4203f6dd32c9|opt4_launch:chrome": {
     "to": "f6603009c0fa",
-    "count": 4,
-    "last_seen": 1773736883.5947607
+    "count": 5,
+    "last_seen": 1773736891.3340242
   },
   "4203f6dd32c9|opt4_launch:play store": {
     "to": "06c59ed8f4e7",
@@ -7104,7 +7104,20 @@ RuntimeError: No LLM backend available.
 [step] UI: ['Open the homepage', 'element_2', 'wikipedia.org', 'See 20 tabs', 'Customise and control Google Chrome', 'Wikipedia', 'element_7', 'Play']
 [map] screen: chrome_main (f6603009)
 [skill] matched: 'open chrome and go to'  score=1.00  act_match=True
-[skill] cannot resolve tap target: 'support.google.com/youtube/answer/7640706?hl=%@'
+[skill] cannot resolve tap target: 'support.google.com/youtube/answer/7640706?hl=%@'Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 311, in run
+    run_step(state, device=device, model_path=model_path)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 267, in run_step
+    llm_out = generate(prompt, model_path=model_path)
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/reasoning/llm_client.py", line 109, in generate
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash

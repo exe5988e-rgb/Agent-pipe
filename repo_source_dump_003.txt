@@ -2948,6 +2948,8 @@ if __name__ == "__main__":
 [11:31:19] 
 [15/33] [2★] [settings] Open Settings and go to Notifications
 [11:32:07]   PASS  45.1s  skills=3
+[11:32:12] 
+[16/33] [2★] [settings] Open Settings and check battery percentage
 
 
 //===== TERMUXFILE: tap_logger.py =====

@@ -18607,7 +18607,7 @@
         "Screenshot 1 of 8",
         "Learn more About this app"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {
@@ -19764,7 +19764,8 @@
     "866f5ed64950|element_562_1062": "7970ab5363e1",
     "866f5ed64950|element_924_1062": "66891f978e09",
     "866f5ed64950|element_1172_1062": "66891f978e09",
-    "866f5ed64950|element_620_1566": "7571051ef9ea"
+    "866f5ed64950|element_620_1566": "7571051ef9ea",
+    "866f5ed64950|More results for New and notable comics": "68dbc2f46e71"
   }
 }
 

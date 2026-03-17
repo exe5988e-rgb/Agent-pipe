@@ -18148,6 +18148,114 @@
           "y": 2604
         }
       ]
+    },
+    "e85d868a15f2": {
+      "screen_id": "e85d868a15f2",
+      "package": "com.android.vending",
+      "activity": "com.android.vending/.AssetBrowserActivity",
+      "name": "vending_assetbrowseractivity",
+      "labels": [
+        "Crunchyroll, LLC",
+        "Average rating 4.4 stars in 3 million reviews",
+        "Content rating Rated for 12+",
+        "Play trailer for 'Crunchyroll: Anime Streaming'",
+        "Screenshot 1 of 6"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Crunchyroll, LLC",
+          "resource_id": "",
+          "cls": "android.widget.TextView",
+          "x": 571,
+          "y": 1547
+        },
+        {
+          "text": "Average rating 4.4 stars in 3 million reviews",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 182,
+          "y": 1792
+        },
+        {
+          "text": "Content rating Rated for 12+",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 595,
+          "y": 1792
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 620,
+          "y": 2030
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1114,
+          "y": 2030
+        },
+        {
+          "text": "Play trailer for 'Crunchyroll: Anime Streaming'",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 565,
+          "y": 2355
+        },
+        {
+          "text": "Screenshot 1 of 6",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1184,
+          "y": 2355
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 98,
+          "y": 237
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 974,
+          "y": 237
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1142,
+          "y": 237
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 155,
+          "y": 2604
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 775,
+          "y": 2604
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1085,
+          "y": 2604
+        }
+      ]
     }
   },
   "transitions": {
@@ -18365,7 +18473,8 @@
     "b57a107c23b7|Notifications": "1d7bd6d3f169",
     "b57a107c23b7|Search": "d31fa54810f0",
     "7571051ef9ea|element_806_419": "866f5ed64950",
-    "7571051ef9ea|element_598_1232": "5ebd141c4c82"
+    "7571051ef9ea|element_598_1232": "5ebd141c4c82",
+    "7571051ef9ea|element_598_1804": "e85d868a15f2"
   }
 }
 

@@ -3338,8 +3338,8 @@ if __name__ == "__main__":
   },
   "9331db4b6d02|tap:element_6": {
     "to": "a6c245bb7216",
-    "count": 1,
-    "last_seen": 1773754329.5756128
+    "count": 2,
+    "last_seen": 1773757847.2240036
   },
   "a6c245bb7216|swipe": {
     "to": "4e3d027411e1",

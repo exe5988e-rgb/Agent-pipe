@@ -2784,41 +2784,16 @@ if __name__ == "__main__":
 }
 
 //===== TERMUXFILE: gauntlet_log.txt =====
-[10:46:28] 
+[10:48:50] 
 ╔══════════════════════════════════════════════════════════════╗
 ║   JARVIS GAUNTLET RUNNER  — Overnight Mode                  ║
 ║   Device  : 192.168.29.48:34011                              ║
-║   Tasks   : 1                                                ║
+║   Tasks   : 33                                               ║
 ║   Skills  : 0                                                ║
-║   Started : 2026-03-17 10:46:28                              ║
+║   Started : 2026-03-17 10:48:50                              ║
 ╚══════════════════════════════════════════════════════════════╝
 
-[10:46:28]   Preparing device...
-[10:46:34]   Phone B bridge: ✓ reachable
-[10:46:34] 
-════════════════════════════════════════════════════════════════
-[10:46:34]   TASK 1/1  [1★]  [whatsapp]  timeout=255s
-[10:46:34]   Open WhatsApp
-[10:46:34] ════════════════════════════════════════════════════════════════
-[10:46:40] 
-  ✗ FAIL  |  0.2s  |  skills: 0
-[10:46:40]   Error: returncode=1
-[10:46:40]   Recovering device...
-[10:46:47] 
-╔══════════════════════════════════════════════════════════════╗
-║   GAUNTLET COMPLETE                                         ║
-╠══════════════════════════════════════════════════════════════╣
-║  Tasks    : 1                                                ║
-║  Passed   : 0                                                ║
-║  Failed   : 1                                                ║
-║  Skills   : 0 → 0 (+0)                                       ║
-║  Duration : 0m 18s                                             ║
-╠══════════════════════════════════════════════════════════════╣
-[10:46:47] ║  ✗ Open WhatsApp                                        0.2s  ║
-[10:46:47] ╚══════════════════════════════════════════════════════════════╝
-[10:46:47] 
-  Report: /data/data/com.termux/files/home/workflows/gauntlet_report.json
-[10:46:47]   Log   : /data/data/com.termux/files/home/workflows/gauntlet_log.txt
+[10:48:50]   Preparing device...
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4206,6 +4181,10 @@ while true; do
 
     sleep $INTERVAL
 done
+
+
+//===== TERMUXFILE: gauntlet_nohup.log =====
+nohup: ignoring input
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

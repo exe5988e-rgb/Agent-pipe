@@ -3083,8 +3083,8 @@ if __name__ == "__main__":
   },
   "eb691f0a02c2|tap:3": {
     "to": "0ffd7f03efc6",
-    "count": 7,
-    "last_seen": 1773730207.8834512
+    "count": 8,
+    "last_seen": 1773730214.9411092
   }
 }
 
@@ -10260,7 +10260,136 @@ Traceback (most recent call last):
 RuntimeError: No LLM backend available.
   Phone B offline? Check: curl http://192.168.29.110:8890/health
   Local LLM down? Run:    bash ~/jarvis_server_init.sh
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 311, in run
+    run_step(state, device=device, model_path=model_path)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 267, in run_step
+    llm_out = generate(prompt, model_path=model_path)
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/reasoning/llm_client.py", line 109, in generate
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
 
+[map] transition: chrome_main --[tap:3]--> chrome_main
+[map] screen: chrome_main (0ffd7f03)
+[skill] matched: 'open chrome and go to'  score=1.00  act_match=True
+[skill] cannot resolve tap target: 'support.google.com/youtube/answer/7640706?hl=%@'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B unreachable: timed out
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 10  |  Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (308898 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] HIT com.android.chrome/com.google.android.apps.chrome.Main hash=96b4468dd461 hits=1 elements=23
+[step] UI: ['element_1', 'Wikipedia', 'element_3', 'Play', 'element_5', 'Search', 'English', 'English 7,141,000+ articles']
+[map] screen: chrome_main (0ffd7f03)
+[skill] matched: 'open chrome and go to'  score=1.00  act_match=True
+[skill] cannot resolve tap target: 'support.google.com/youtube/answer/7640706?hl=%@'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 11  |  Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (306411 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] HIT com.android.chrome/com.google.android.apps.chrome.Main hash=96b4468dd461 hits=2 elements=23
+[step] UI: ['element_1', 'Wikipedia', 'element_3', 'Play', 'element_5', 'Search', 'English', 'English 7,141,000+ articles']
+[map] screen: chrome_main (0ffd7f03)
+[skill] matched: 'open chrome and go to'  score=1.00  act_match=True
+[skill] cannot resolve tap target: 'support.google.com/youtube/answer/7640706?hl=%@'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 12  |  Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (309019 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] HIT com.android.chrome/com.google.android.apps.chrome.Main hash=96b4468dd461 hits=3 elements=23
+[step] UI: ['element_1', 'Wikipedia', 'element_3', 'Play', 'element_5', 'Search', 'English', 'English 7,141,000+ articles']
+[map] screen: chrome_main (0ffd7f03)
+[skill] matched: 'open chrome and go to'  score=1.00  act_match=True
+[skill] cannot resolve tap target: 'support.google.com/youtube/answer/7640706?hl=%@'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 13  |  Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (309288 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] HIT com.android.chrome/com.google.android.apps.chrome.Main hash=96b4468dd461 hits=4 elements=23
+[step] UI: ['element_1', 'Wikipedia', 'element_3', 'Play', 'element_5', 'Search', 'English', 'English 7,141,000+ articles']
+[map] screen: chrome_main (0ffd7f03)
+[skill] matched: 'open chrome and go to'  score=1.00  act_match=True
+[skill] cannot resolve tap target: 'support.google.com/youtube/answer/7640706?hl=%@'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 14  |  Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (309064 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] HIT com.android.chrome/com.google.android.apps.chrome.Main hash=96b4468dd461 hits=5 elements=23
+[step] UI: ['element_1', 'Wikipedia', 'element_3', 'Play', 'element_5', 'Search', 'English', 'English 7,141,000+ articles']
+[map] screen: chrome_main (0ffd7f03)
+[skill] matched: 'open chrome and go to'  score=1.00  act_match=True
+[skill] cannot resolve tap target: 'support.google.com/youtube/answer/7640706?hl=%@'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 15  |  Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (307649 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] HIT com.android.chrome/com.google.android.apps.chrome.Main hash=96b4468dd461 hits=6 elements=23
+[step] UI: ['element_1', 'Wikipedia', 'element_3', 'Play', 'element_5', 'Search', 'English', 'English 7,141,000+ articles']
+[map] screen: chrome_main (0ffd7f03)
+[skill] matched: 'open chrome and go to'  score=1.00  act_match=True
+[skill] cannot resolve tap target: 'support.google.com/youtube/answer/7640706?hl=%@'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 16  |  Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+========================================================
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash

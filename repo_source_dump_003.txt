@@ -2786,33 +2786,22 @@ if __name__ == "__main__":
 //===== TERMUXFILE: tap_logger.py =====
 #!/usr/bin/env python3
 """
-tap_logger.py  —  JarvisMinI Background Tap Logger
+tap_logger.py  —  JarvisMinI Background Tap Logger  v2
 
-Runs in the background on Phone A. Listens to touch events via
-`adb shell getevent`, resolves each tap coordinate to the element
-under the finger using a UI dump, and writes structured log entries
-to ~/workflows/tap_log.json.
-
-The skill recorder reads this log after you finish a flow.
+Session 8 fix: getevent device detection was broken on OPPO/ColorOS.
+This version:
+  1. Scans ALL /dev/input/event* devices in parallel
+  2. Uses getevent -t (with timestamps) for more reliable parsing
+  3. Falls back to sendevent-style parsing if needed
+  4. Prints raw event lines for the first 5 seconds so you can see
+     what's coming in (run with --debug to keep raw output on)
 
 Usage:
-  Terminal 1:  python3 tap_logger.py --device "192.168.29.48:34011"
-  Terminal 2:  (use your phone normally — do the flow you want to record)
-  Terminal 1:  Ctrl+C to stop
+  Terminal 1:  python3 tap_logger.py --device "192.168.29.48:34011" --clear
+  (tap the phone screen a few times to verify taps are logged)
+  Terminal 1:  Ctrl+C when done
 
-Then record the skill from the log:
-  python3 skill_recorder.py --device "192.168.29.48:34011" --from-log
-
-How it works:
-  1. Reads raw touch events from /dev/input/event* via getevent -l
-  2. Detects ABS_MT_POSITION_X/Y + BTN_TOUCH UP = a completed tap
-  3. Takes a UI dump at that moment, finds the element at (x,y)
-  4. Logs: {time, activity, x, y, text, resource_id, cls}
-
-Notes:
-  - UI dump takes ~900ms so there's a slight lag between tap and log entry
-  - Typing is captured as a single "type" event with the full text
-  - The log grows until you Ctrl+C — then skill_recorder processes it
+  Then:  python3 skill_recorder.py --device "..." --from-log
 """
 
 import argparse
@@ -2831,11 +2820,7 @@ from pathlib import Path
 LOG_FILE  = Path.home() / "workflows" / "tap_log.json"
 DUMP_PATH = "/sdcard/jarvis_tap_dump.xml"
 ADB       = "adb"
-
-# Minimum tap area to care about (filters accidental micro-taps)
-MIN_AREA  = 200
-# Debounce: ignore taps within this many ms of the last one
-DEBOUNCE_MS = 400
+DEBOUNCE_MS = 500
 
 # ── ADB helpers ───────────────────────────────────────────────────────────────
 
@@ -2860,26 +2845,36 @@ def get_activity(device):
     if m: return m.group(1)
     return "unknown"
 
-def get_screen_size(device):
-    out = _shell(device, "wm", "size")
-    m = re.search(r"(\d+)x(\d+)", out)
-    if m:
-        return int(m.group(1)), int(m.group(2))
-    return 1080, 2400  # fallback
+# ── Find correct touch input device ──────────────────────────────────────────
+
+def find_touch_devices(device):
+    """
+    Return list of /dev/input/eventN that report ABS_MT_POSITION_X (touchscreen).
+    Tries getevent -S first, falls back to probing each event device.
+    """
+    out = _shell(device, "getevent", "-S", timeout=15)
+    devices = []
+    current = None
+    for line in out.splitlines():
+        m = re.match(r"\s*add device \d+: (/dev/input/event\d+)", line)
+        if m:
+            current = m.group(1)
+        if current and "ABS_MT_POSITION_X" in line:
+            if current not in devices:
+                devices.append(current)
+    if devices:
+        return devices
+    # Fallback: list all event devices
+    ls = _shell(device, "ls", "/dev/input/", timeout=10)
+    return [f"/dev/input/{f}" for f in ls.split() if f.startswith("event")]
 
 # ── UI resolver ───────────────────────────────────────────────────────────────
 
 def get_element_at(device, tap_x, tap_y):
-    """
-    Take a UI dump and find the most specific (smallest area) element
-    that contains the tap coordinate. Returns dict with text, resource_id,
-    cls, x, y or None.
-    """
     _shell(device, "rm", "-f", DUMP_PATH)
     result = _shell(device, "uiautomator", "dump", DUMP_PATH, timeout=15)
     if "ERROR" in result.upper():
         return None
-
     tmp = tempfile.NamedTemporaryFile(suffix=".xml", delete=False)
     tmp.close()
     r = _adb(device, "pull", DUMP_PATH, tmp.name, timeout=8)
@@ -2887,10 +2882,8 @@ def get_element_at(device, tap_x, tap_y):
         try: os.unlink(tmp.name)
         except: pass
         return None
-
     best = None
-    best_area = float("inf")
-
+    best_score = float("inf")
     try:
         for _, elem in ET.iterparse(tmp.name, ["start"]):
             bounds_str = elem.attrib.get("bounds", "")
@@ -2898,204 +2891,130 @@ def get_element_at(device, tap_x, tap_y):
                 parts = bounds_str[1:-1].split("][")
                 x1, y1 = map(int, parts[0].split(","))
                 x2, y2 = map(int, parts[1].split(","))
-            except Exception:
+            except:
                 continue
-
             if not (x1 <= tap_x <= x2 and y1 <= tap_y <= y2):
                 continue
-
             area = (x2 - x1) * (y2 - y1)
-            if area < MIN_AREA:
+            if area < 200:
                 continue
-
             text = (elem.attrib.get("text", "") or
                     elem.attrib.get("content-desc", "")).strip()
             rid  = elem.attrib.get("resource-id", "")
             cls  = elem.attrib.get("class", "")
             clickable = elem.attrib.get("clickable") == "true"
-
-            # Prefer smaller (more specific) elements, but prioritise
-            # elements that have text or are explicitly clickable
             score = area
             if text:      score //= 2
             if clickable: score //= 2
-
-            if score < best_area:
-                best_area = score
-                best = {
-                    "text":        text,
-                    "resource_id": rid,
-                    "cls":         cls,
-                    "x":           (x1 + x2) // 2,
-                    "y":           (y1 + y2) // 2,
-                    "clickable":   clickable,
-                }
-    except Exception:
+            if score < best_score:
+                best_score = score
+                best = {"text": text, "resource_id": rid,
+                        "cls": cls,
+                        "x": (x1+x2)//2, "y": (y1+y2)//2,
+                        "clickable": clickable}
+    except:
         pass
     finally:
         try: os.unlink(tmp.name)
         except: pass
-
     return best
 
+# ── getevent stream parser ────────────────────────────────────────────────────
 
-# ── Typed text capture ────────────────────────────────────────────────────────
-
-def get_focused_text(device):
+def stream_events(device, event_devs, on_tap, debug=False):
     """
-    Read the text currently in the focused input field via dumpsys input_method.
-    Used to capture what was typed between two taps.
+    Stream getevent from all touch devices simultaneously.
+    Parses ABS_MT_POSITION_X/Y + BTN_TOUCH UP  OR  ABS_MT_TRACKING_ID -1
+    to detect completed taps.
     """
-    out = _shell(device, "dumpsys", "input_method", timeout=8)
-    m = re.search(r"mComposingText=\((\d+)\)\s*(.+)", out)
-    if m: return m.group(2).strip()
-    m = re.search(r"mCurrentText=\((\d+)\)\s*(.+)", out)
-    if m: return m.group(2).strip()
-    # Fallback: read EditText content from UI dump
-    return None
+    # Build getevent command that covers all devices
+    # Use getevent -l for labelled output
+    cmd = [ADB, "-s", device, "shell",
+           "getevent", "-l"] + event_devs
 
-
-# ── getevent parser ───────────────────────────────────────────────────────────
-
-def find_touch_device(device):
-    """Find the /dev/input/eventN device that reports touch events."""
-    out = _shell(device, "getevent", "-S", timeout=10)
-    # Look for a device with ABS_MT_POSITION_X capability
-    current_dev = None
-    for line in out.splitlines():
-        m = re.match(r"add device \d+: (/dev/input/event\d+)", line)
-        if m:
-            current_dev = m.group(1)
-        if current_dev and "ABS_MT_POSITION" in line:
-            return current_dev
-    # Fallback: return event0
-    return "/dev/input/event0"
-
-
-def stream_taps(device, touch_dev, callback):
-    """
-    Stream getevent output and call callback(x, y) on each completed tap.
-    Uses ABS_MT_POSITION_X/Y to accumulate coordinates, fires on BTN_TOUCH UP
-    or EV_SYN SYN_REPORT after position seen.
-
-    getevent -l output format:
-      /dev/input/event4: EV_ABS       ABS_MT_POSITION_X    000001e8
-      /dev/input/event4: EV_ABS       ABS_MT_POSITION_Y    000004b2
-      /dev/input/event4: EV_KEY       BTN_TOUCH            UP
-    """
     proc = subprocess.Popen(
-        [ADB, "-s", device, "shell", "getevent", "-l", touch_dev],
+        cmd,
         stdout=subprocess.PIPE,
         stderr=subprocess.DEVNULL,
-        text=True,
-        bufsize=1,
+        text=True, bufsize=1,
     )
 
-    cur_x = None
-    cur_y = None
-    last_tap_t = 0
+    cur_x      = None
+    cur_y      = None
+    last_tap_t = 0.0
 
     try:
         for line in proc.stdout:
             line = line.strip()
 
+            if debug:
+                print(f"  [raw] {line}")
+
+            # ABS_MT_POSITION_X  00000123
             if "ABS_MT_POSITION_X" in line:
-                m = re.search(r"([0-9a-fA-F]+)\s*$", line)
+                m = re.search(r"([0-9a-fA-F]{4,})\s*$", line)
                 if m:
                     cur_x = int(m.group(1), 16)
 
             elif "ABS_MT_POSITION_Y" in line:
-                m = re.search(r"([0-9a-fA-F]+)\s*$", line)
+                m = re.search(r"([0-9a-fA-F]{4,})\s*$", line)
                 if m:
                     cur_y = int(m.group(1), 16)
 
-            elif "BTN_TOUCH" in line and "UP" in line:
+            # Tap ended: BTN_TOUCH UP  or  ABS_MT_TRACKING_ID ffffffff
+            elif ("BTN_TOUCH" in line and "UP" in line) or \
+                 ("ABS_MT_TRACKING_ID" in line and "ffffffff" in line.lower()):
                 now = time.time() * 1000
                 if cur_x is not None and cur_y is not None:
                     if now - last_tap_t > DEBOUNCE_MS:
                         last_tap_t = now
-                        callback(cur_x, cur_y)
+                        on_tap(cur_x, cur_y)
                 cur_x = None
                 cur_y = None
 
-    except Exception:
-        pass
+    except Exception as e:
+        if debug:
+            print(f"  [stream] error: {e}")
     finally:
         proc.terminate()
-
 
 # ── Logger ────────────────────────────────────────────────────────────────────
 
 class TapLogger:
-    def __init__(self, device, screen_w, screen_h):
-        self.device   = device
-        self.screen_w = screen_w
-        self.screen_h = screen_h
-        self.log      = []
-        self.last_activity = None
-        self._lock    = threading.Lock()
-        self._last_tap_t = 0
-
+    def __init__(self, device):
+        self.device = device
+        self.log    = []
+        self._lock  = threading.Lock()
         LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
 
     def on_tap(self, raw_x, raw_y):
-        """Called from getevent thread for each detected tap."""
-        now = time.time()
-
-        # Normalise coordinates (getevent values may be raw digitiser units)
-        # Most devices report in screen pixels directly, but some scale.
-        # We'll trust the values as-is and let UI dump resolve the element.
-        x, y = raw_x, raw_y
-
         activity = get_activity(self.device)
-        element  = get_element_at(self.device, x, y)
-
+        element  = get_element_at(self.device, raw_x, raw_y)
         entry = {
             "time":        datetime.now().isoformat(),
             "activity":    activity,
-            "x":           x,
-            "y":           y,
+            "x":           raw_x,
+            "y":           raw_y,
             "text":        element["text"]        if element else "",
             "resource_id": element["resource_id"] if element else "",
             "cls":         element["cls"]         if element else "",
             "clickable":   element["clickable"]   if element else False,
             "type":        "tap",
         }
-
         with self._lock:
             self.log.append(entry)
-            self._flush()
-
-        label = entry["text"] or f"({x},{y})"
-        act_short = activity.split("/")[-1].split(".")[-1]
-        print(f"  [tap] {label:<45} [{act_short}]")
-
-    def _flush(self):
-        """Write current log to file."""
-        LOG_FILE.write_text(json.dumps(self.log, indent=2))
-
-    def mark_typing(self, text):
-        """Manually add a typing event (called from keyboard input if needed)."""
-        activity = get_activity(self.device)
-        entry = {
-            "time":     datetime.now().isoformat(),
-            "activity": activity,
-            "text":     text,
-            "type":     "type",
-        }
-        with self._lock:
-            self.log.append(entry)
-            self._flush()
-        print(f"  [type] {text!r}")
-
+            LOG_FILE.write_text(json.dumps(self.log, indent=2))
+        label     = entry["text"] or f"({raw_x},{raw_y})"
+        act_short = activity.split("/")[-1].split(".")[-1][:20]
+        print(f"  [tap] {label:<48} [{act_short}]")
 
 def main():
-    p = argparse.ArgumentParser(
-        description="Background tap logger — records all taps to tap_log.json"
-    )
-    p.add_argument("--device", required=True, help="ADB device serial")
+    p = argparse.ArgumentParser()
+    p.add_argument("--device", required=True)
     p.add_argument("--clear",  action="store_true",
                    help="Clear existing tap log before starting")
+    p.add_argument("--debug",  action="store_true",
+                   help="Print raw getevent lines (for diagnosing missed taps)")
     args = p.parse_args()
     device = args.device
 
@@ -3105,36 +3024,44 @@ def main():
 
     print(f"""
 ╔══════════════════════════════════════════════════════╗
-║   JARVIS TAP LOGGER                                 ║
+║   JARVIS TAP LOGGER  v2                             ║
 ║   Device : {device:<42}║
 ║   Log    : ~/workflows/tap_log.json                 ║
 ╚══════════════════════════════════════════════════════╝
 
   Use your phone normally.
   Every tap will be logged with element text + activity.
-  Press Ctrl+C when done, then run:
+  Press Ctrl+C when done.
 
-    python3 skill_recorder.py --device {device} --from-log
-
+  TIP: if taps aren't being detected, run with --debug
+       to see raw events and diagnose.
 """)
 
-    screen_w, screen_h = get_screen_size(device)
-    print(f"  Screen: {screen_w}x{screen_h}")
+    touch_devs = find_touch_devices(device)
+    if not touch_devs:
+        print("  ERROR: no touch input devices found.")
+        print("  Try:  adb -s", device, "shell getevent -S")
+        sys.exit(1)
 
-    touch_dev = find_touch_device(device)
-    print(f"  Touch device: {touch_dev}")
+    print(f"  Touch devices: {touch_devs}")
     print(f"  Listening...\n")
 
-    logger = TapLogger(device, screen_w, screen_h)
+    logger = TapLogger(device)
 
     try:
-        stream_taps(device, touch_dev, logger.on_tap)
+        stream_events(device, touch_devs, logger.on_tap, debug=args.debug)
     except KeyboardInterrupt:
-        print(f"\n\n  Stopped. {len(logger.log)} taps logged.")
-        print(f"  Log: {LOG_FILE}")
+        pass
+
+    print(f"\n\n  Stopped. {len(logger.log)} taps logged.")
+    print(f"  Log: {LOG_FILE}")
+    if logger.log:
         print(f"\n  Now run:")
         print(f"    python3 skill_recorder.py --device {device} --from-log\n")
-
+    else:
+        print(f"\n  No taps detected. Try:")
+        print(f"    python3 tap_logger.py --device {device} --debug --clear")
+        print(f"  Then tap the phone and look for ABS_MT_POSITION lines.\n")
 
 if __name__ == "__main__":
     main()

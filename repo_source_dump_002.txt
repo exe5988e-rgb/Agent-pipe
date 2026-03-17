@@ -16323,6 +16323,251 @@
           "y": 2632
         }
       ]
+    },
+    "f911caa9edca": {
+      "screen_id": "f911caa9edca",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/com.google.android.apps.youtube.app.watchwhile.InternalMainActivity",
+      "name": "youtube_internalmainactivity",
+      "labels": [
+        "Cast",
+        "Notifications",
+        "Search",
+        "Settings",
+        "Switch account",
+        "Google Account",
+        "Turn on Incognito",
+        "History",
+        "View all",
+        "John Carpenter's Toxic Commando  | FIX: Gamepad Not Working / No Controller Detected on Steam PC \ud83c\udfae \u2013 2 minutes, 41 seconds \u2013  \u2013 TechFixIT \u2013 play video",
+        "Action menu",
+        "Configuracion perfecta para samsung a3 a5 a6 a7 j2 j5 j7 \u2013 1 minute, 16 seconds \u2013  \u2013 Amir Shams \u2013 play video",
+        "Action menu",
+        "The ONLY Being Zeno Won\u2019t Fight#animeshort#viral#zeno#dragonball#goku#shortfeed \u2013 1 minute, 26 seconds \u2013  \u2013 Saiyan_Doctrine  \u2013 play Short",
+        "Playlists",
+        "Create a new playlist",
+        "View all",
+        "Action menu",
+        "Action menu",
+        "Shorts",
+        "Create",
+        "Subscriptions",
+        "You"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Cast",
+          "resource_id": "com.google.android.youtube:id/mdx_entry_point_button",
+          "cls": "android.widget.Button",
+          "x": 652,
+          "y": 223
+        },
+        {
+          "text": "Notifications",
+          "resource_id": "com.google.android.youtube:id/menu_item_view",
+          "cls": "android.widget.ImageView",
+          "x": 820,
+          "y": 223
+        },
+        {
+          "text": "Search",
+          "resource_id": "com.google.android.youtube:id/menu_item_view",
+          "cls": "android.widget.ImageView",
+          "x": 988,
+          "y": 223
+        },
+        {
+          "text": "Settings",
+          "resource_id": "com.google.android.youtube:id/menu_item_view",
+          "cls": "android.widget.ImageView",
+          "x": 1156,
+          "y": 223
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.ViewGroup",
+          "x": 620,
+          "y": 475
+        },
+        {
+          "text": "Switch account",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 259,
+          "y": 727
+        },
+        {
+          "text": "Google Account",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 729,
+          "y": 727
+        },
+        {
+          "text": "Turn on Incognito",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1111,
+          "y": 727
+        },
+        {
+          "text": "History",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 923
+        },
+        {
+          "text": "View all",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1040,
+          "y": 923
+        },
+        {
+          "text": "John Carpenter's Toxic Commando  | FIX: Gamepad Not Working / No Controller Detected on Steam PC \ud83c\udfae \u2013 2 minutes, 41 seconds \u2013  \u2013 TechFixIT \u2013 play video",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 308,
+          "y": 1299
+        },
+        {
+          "text": "Action menu",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 546,
+          "y": 1367
+        },
+        {
+          "text": "Configuracion perfecta para samsung a3 a5 a6 a7 j2 j5 j7 \u2013 1 minute, 16 seconds \u2013  \u2013 Amir Shams \u2013 play video",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 868,
+          "y": 1299
+        },
+        {
+          "text": "Action menu",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1106,
+          "y": 1367
+        },
+        {
+          "text": "The ONLY Being Zeno Won\u2019t Fight#animeshort#viral#zeno#dragonball#goku#shortfeed \u2013 1 minute, 26 seconds \u2013  \u2013 Saiyan_Doctrine  \u2013 play Short",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1194,
+          "y": 1299
+        },
+        {
+          "text": "Playlists",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 1676
+        },
+        {
+          "text": "Create a new playlist",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 804,
+          "y": 1676
+        },
+        {
+          "text": "View all",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1040,
+          "y": 1676
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 308,
+          "y": 2043
+        },
+        {
+          "text": "Action menu",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 546,
+          "y": 2120
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 868,
+          "y": 2043
+        },
+        {
+          "text": "Action menu",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1106,
+          "y": 2120
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1194,
+          "y": 2043
+        },
+        {
+          "text": "",
+          "resource_id": "com.google.android.youtube:id/compact_list_item",
+          "cls": "android.widget.LinearLayout",
+          "x": 620,
+          "y": 2425
+        },
+        {
+          "text": "",
+          "resource_id": "com.google.android.youtube:id/compact_list_item",
+          "cls": "android.widget.LinearLayout",
+          "x": 620,
+          "y": 2621
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.LinearLayout",
+          "x": 620,
+          "y": 2745
+        },
+        {
+          "text": "Shorts",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 372,
+          "y": 2632
+        },
+        {
+          "text": "Create",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 2632
+        },
+        {
+          "text": "Subscriptions",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 868,
+          "y": 2632
+        },
+        {
+          "text": "You",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1116,
+          "y": 2632
+        }
+      ]
     }
   },
   "transitions": {
@@ -16526,7 +16771,8 @@
     "e1c8fa5142a3|New notification BRIGHT SIDE Uploaded 3 videos 3 hours ago": "d04ca4685506",
     "e1c8fa5142a3|New notification Unexplained Mysteries Uploaded: 5 Mysteries About The Shroud Of Turin That Cannot Be Explained 4 hours ago": "5ca448df8e66",
     "e1c8fa5142a3|New notification TechFixIT Uploaded 3 videos 6 hours ago": "836a9f602633",
-    "e1c8fa5142a3|Subscriptions": "da00409df024"
+    "e1c8fa5142a3|Subscriptions": "da00409df024",
+    "e1c8fa5142a3|You": "f911caa9edca"
   }
 }
 

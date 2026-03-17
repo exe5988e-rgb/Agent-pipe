@@ -2782,9 +2782,9 @@ if __name__ == "__main__":
     "seeded": true
   },
   "4203f6dd32c9|opt4_launch:whatsapp": {
-    "to": "082a9e286aa7",
-    "count": 2,
-    "last_seen": 1773729465.2699316
+    "to": "7c51d7e864c3",
+    "count": 1,
+    "last_seen": 1773730429.056023
   },
   "7c51d7e864c3|tap:element_25": {
     "to": "7770f0561545",
@@ -3218,6 +3218,9 @@ if __name__ == "__main__":
 [12:13:45]   PASS  15.7s  skills=6
 [12:13:50] 
 [32/33] [5★] [cross_app] Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+[12:23:50]   PASS  596.1s  skills=6
+[12:23:55] 
+[33/33] [5★] [cross_app] Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4385,7 +4388,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-17T12:13:45.167578",
+  "run_at": "2026-03-17T12:23:50.010418",
   "skills_before": 0,
   "skills_current": 6,
   "results": [
@@ -4667,6 +4670,15 @@ if __name__ == "__main__":
       "elapsed_s": 15.7,
       "error": null,
       "retried": false
+    },
+    {
+      "task": "Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy",
+      "category": "cross_app",
+      "difficulty": 5,
+      "success": true,
+      "elapsed_s": 596.1,
+      "error": null,
+      "retried": false
     }
   ]
 }
@@ -4686,7 +4698,7 @@ if __name__ == "__main__":
         "action": "done"
       }
     ],
-    "uses": 1,
+    "uses": 2,
     "version": 2
   },
   {
@@ -10532,6 +10544,125 @@ RuntimeError: No LLM backend available.
 [parser] DEBUG normalized: 'back'
 [parser] INFO parsed 'back' -> {'action': 'back'}
 
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 18 elements from 192.168.29.48:34011
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=c3093cb270dd elements=18
+[step] UI: ['element_1', 'Forward', 'Bookmark', 'Download', 'Page info', 'Refresh', 'element_7', 'element_8']
+[map] transition: chrome_main --[tap:22]--> chrome_main
+[map] screen: chrome_main (5086bd87)
+[skill] matched: 'open chrome and go to'  score=1.00  act_match=True
+[skill] cannot resolve tap target: 'support.google.com/youtube/answer/7640706?hl=%@'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 8'
+[step] LLM: 'tap 8'
+[step] action: {'action': 'tap', 'target': 8}
+[input] dispatching: TouchEvent(x=767, y=881)
+[input] adb -s 192.168.29.48:34011 shell input tap 767 881
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[step] step=20/30 done=False history=['opt4_launch:chrome', 'tap [3] google.com/search?q=weather+today+ranchi&oq=weather+today+&gs_lcrp=EgZjaHJvbWUqDQgBEAAYgwEYsQMYgAQyBggAEEUYOTINCAEQABiDARixAxiABDIHCAIQABiABDIKCAMQABixAxiABDI', "type 'wikipedia.org'", 'tap [6] element_6', 'long press', 'tap [2] element_2', 'long press', 'tap [3] element_3', 'tap [23] Customise and control Google Chrome', 'tap [7] element_7', 'tap [15] Wikipedia: wikipedia.org', 'tap [22] Customise and control Google Chrome', 'tap [8] element_8']
+
+========================================================
+  STEP 21  |  Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (46828 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 8 elements from 192.168.29.48:34011
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=80094d0fb9c8 elements=8
+[step] UI: ['New Incognito tab', 'Learn more', "When you're in Incognito mode, sites can't use third-party cookies. If a site that relies on these cookies isn't working, you can try giving that site temporary access to third-party cookies.", 'Open the homepage', 'element_5', 'Search Google or type URL', 'See 1 tab', 'Customise and control Google Chrome']
+[map] new screen: chrome_main (de32cdc23c0d)
+[map] transition: chrome_main --[tap:element_9]--> chrome_main
+[map] screen: chrome_main (de32cdc2)
+[skill] matched: 'open chrome and go to'  score=1.00  act_match=True
+[skill] cannot resolve tap target: 'support.google.com/youtube/answer/7640706?hl=%@'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'back'
+[step] LLM: 'back'
+[step] action: {'action': 'back'}
+[input] dispatching: KeyEvent(BACK)
+[input] adb -s 192.168.29.48:34011 shell input keyevent 4
+[step] step=21/30 done=False history=['opt4_launch:chrome', 'tap [3] google.com/search?q=weather+today+ranchi&oq=weather+today+&gs_lcrp=EgZjaHJvbWUqDQgBEAAYgwEYsQMYgAQyBggAEEUYOTINCAEQABiDARixAxiABDIHCAIQABiABDIKCAMQABixAxiABDI', "type 'wikipedia.org'", 'tap [6] element_6', 'long press', 'tap [2] element_2', 'long press', 'tap [3] element_3', 'tap [23] Customise and control Google Chrome', 'tap [7] element_7', 'tap [15] Wikipedia: wikipedia.org', 'tap [22] Customise and control Google Chrome', 'tap [8] element_8', 'back']
+
+========================================================
+  STEP 22  |  Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3590035 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] HIT com.android.launcher/.Launcher hash=58e885a4cc16 hits=1 elements=26
+[step] UI: ['Clock', '12', ':', '13', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] transition: chrome_main --[back]--> launcher_launcher
+[map] screen: launcher_launcher (4203f6dd)
+[OPT4v2] launcher -> launching whatsapp (com.whatsapp)
+[llm] OPT4v2 am start: com.whatsapp
+[OPT4v2] app_index -> 2/2
+
+========================================================
+  STEP 23  |  Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1580165 bytes)
+[OPT7] predicted next screen: whatsapp_conversation (082a9e28)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 31 elements from 192.168.29.48:34011
+[mem] stored com.whatsapp/.home.ui.HomeActivity hash=69e2eaa66370 elements=31
+[step] UI: ['element_1', 'Scan to Pay', 'More options', 'Ask Meta AI or Search', 'Swipe down to reveal additional actions', 'Inbox filters, Radio Group', 'All filter, , selected', 'Unread filter, 2, unselected']
+[tm] transition changed: 4203f6dd32c9|opt4_launch:whatsapp 082a9e28 -> 7c51d7e8
+[map] transition: launcher_launcher --[opt4_launch:whatsapp]--> whatsapp_homeactivity
+[map] screen: whatsapp_homeactivity (7c51d7e8)
+[skill] matched: 'open whatsapp and go'  score=1.00  act_match=True
+[skill] executing 2 steps from memory
+[skill] action: {'action': 'tap', 'target': 28}
+[input] dispatching: TouchEvent(x=372, y=2576)
+[input] adb -s 192.168.29.48:34011 shell input tap 372 2576
+[mem] invalidated com.whatsapp/.home.ui.HomeActivity
+[skill] action: {'action': 'done'}
+[input] DONE — no dispatch
+[skill] done — skipped Claude
+[step] step=24/30 done=True history=['opt4_launch:chrome', 'tap [3] google.com/search?q=weather+today+ranchi&oq=weather+today+&gs_lcrp=EgZjaHJvbWUqDQgBEAAYgwEYsQMYgAQyBggAEEUYOTINCAEQABiDARixAxiABDIHCAIQABiABDIKCAMQABixAxiABDI', "type 'wikipedia.org'", 'tap [6] element_6', 'long press', 'tap [2] element_2', 'long press', 'tap [3] element_3', 'tap [23] Customise and control Google Chrome', 'tap [7] element_7', 'tap [15] Wikipedia: wikipedia.org', 'tap [22] Customise and control Google Chrome', 'tap [8] element_8', 'back', 'opt4_launch:whatsapp', 'tap [28] Updates', 'done']
+
+[controller] done in 24 steps
+
+[controller] history:
+  1. opt4_launch:chrome
+  2. tap [3] google.com/search?q=weather+today+ranchi&oq=weather+today+&gs_lcrp=EgZjaHJvbWUqDQgBEAAYgwEYsQMYgAQyBggAEEUYOTINCAEQABiDARixAxiABDIHCAIQABiABDIKCAMQABixAxiABDI
+  3. type 'wikipedia.org'
+  4. tap [6] element_6
+  5. long press
+  6. tap [2] element_2
+  7. long press
+  8. tap [3] element_3
+  9. tap [23] Customise and control Google Chrome
+  10. tap [7] element_7
+  11. tap [15] Wikipedia: wikipedia.org
+  12. tap [22] Customise and control Google Chrome
+  13. tap [8] element_8
+  14. back
+  15. opt4_launch:whatsapp
+  16. tap [28] Updates
+  17. done
+
+  Screen Map: 248 screens (0 tainted), 309 transitions
+    whatsapp             137 screens
+    youtube              51 screens
+    vending              21 screens
+    chrome               21 screens
+    settings             6 screens
+    termux               5 screens
+    launcher             5 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+  TransitionMemory: 309 transitions (252 confirmed, threshold=2)
+
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash
@@ -10865,384 +10996,5 @@ log "Run agent:"
 log "  cd ~/workflows"
 log "  python3 test/jarvis-agent/agent/controller.py --task 'Open WhatsApp' --device '$PHONE_A'"
 echo ""
-
-
-//===== TERMUXFILE: workflows/claude_bridge.py =====
-#!/usr/bin/env python3
-"""
-claude_bridge.py  —  Phone B Termux server
-Samsung Galaxy A10s  —  720x1520
-
-Session 6: OPT-4 v2 — bridge is now fully stateless.
-
-All bypass decisions are made on Phone A (controller + llm_client).
-Prompts that reach this bridge always go to Claude — no bypass logic here.
-
-All Session 2/3/4 optimizations (OPT 1/2/3) preserved.
-"""
-
-import base64
-import json
-import subprocess
-import time
-import re
-from http.server import HTTPServer, BaseHTTPRequestHandler
-from pathlib import Path
-
-PORT             = 8890
-CLAUDE_PKG       = "com.anthropic.claude"
-CLAUDE_ACTIVITY  = "com.anthropic.claude/.mainactivity.MainActivity"
-POLL_INTERVAL    = 0.7
-STABLE_COUNT     = 2
-MAX_WAIT         = 120
-SCREEN_W         = 720
-SCREEN_H         = 1520
-
-ADB    = "/data/data/com.termux/files/usr/bin/adb"
-SERIAL = "192.168.29.110:39991"   # <- Phone B confirmed port
-
-USE_CLIPBOARD = True
-PROMPT_TMP    = "/sdcard/.jv_prompt.txt"
-
-LOG_DIR = Path.home() / ".jarvis_logs"
-LOG_DIR.mkdir(exist_ok=True)
-
-# -- ADB helpers ---------------------------------------------------------------
-
-def adb(*args, timeout=20) -> subprocess.CompletedProcess:
-    cmd = [ADB, "-s", SERIAL] + list(str(a) for a in args)
-    return subprocess.run(cmd, capture_output=True, timeout=timeout)
-
-def shell(*args, timeout=20) -> str:
-    r = adb("shell", *args, timeout=timeout)
-    return r.stdout.decode(errors="ignore").strip()
-
-def ui_dump() -> str:
-    shell("uiautomator", "dump", "/sdcard/uidump.xml")
-    r = adb("shell", "cat", "/sdcard/uidump.xml", timeout=10)
-    return r.stdout.decode(errors="ignore")
-
-def tap(x, y):
-    print(f"[tap] {x},{y}")
-    shell("input", "tap", str(x), str(y))
-    time.sleep(0.5)
-
-def keyevent(code):
-    shell("input", "keyevent", str(code))
-    time.sleep(0.3)
-
-# -- Clipboard paste (OPT 1) ---------------------------------------------------
-
-def paste_via_clipper(text: str):
-    print(f"[bridge] clipboard paste ({len(text)} chars)...")
-    encoded = base64.b64encode(text.encode("utf-8")).decode("ascii")
-    write_cmd = f"echo '{encoded}' | base64 -d > {PROMPT_TMP}"
-    result = adb("shell", write_cmd)
-    if result.returncode != 0:
-        print(f"[bridge] WARNING: file write failed: {result.stderr.decode()}")
-    time.sleep(0.15)
-    clip_cmd = f"am broadcast -a clipper.set --es text \"$(cat {PROMPT_TMP})\""
-    result = adb("shell", clip_cmd)
-    out = result.stdout.decode(errors="ignore")
-    print(f"[bridge] clipper set: {out.strip()[:80]}")
-    time.sleep(0.3)
-    shell("input", "keyevent", "279")
-    time.sleep(0.2)
-    print("[bridge] paste done")
-
-# -- Word-by-word fallback -----------------------------------------------------
-
-def adb_broadcast(text: str):
-    subprocess.run([
-        ADB, "-s", SERIAL,
-        "shell", "am", "broadcast",
-        "-a", "ADB_INPUT_TEXT",
-        "--es", "msg", text
-    ], capture_output=True, timeout=15)
-
-def _sanitize_wordbyword(text: str) -> str:
-    return (text
-            .replace("'", "")
-            .replace('"', "")
-            .replace("\\", "")
-            .replace("`", "")
-            .replace("&", "and")
-            .replace("|", " ")
-            .replace(";", " ")
-            .replace("\n", " "))
-
-def type_text_wordbyword(text: str):
-    safe  = _sanitize_wordbyword(text)
-    words = safe.split(" ")
-    total = len(words)
-    print(f"[bridge] typing {total} words...")
-    for i, word in enumerate(words):
-        if word:
-            adb_broadcast(word)
-            time.sleep(0.1)
-        if i < total - 1:
-            shell("input", "keyevent", "62")
-            time.sleep(0.05)
-    print("[bridge] typing done")
-
-def type_text(text: str):
-    if USE_CLIPBOARD:
-        paste_via_clipper(text)
-    else:
-        type_text_wordbyword(text)
-
-# -- EditText detection --------------------------------------------------------
-
-def find_edittext(xml: str):
-    patterns = [
-        r'class="android\.widget\.EditText"[^>]*bounds="\[(\d+),(\d+)\]\[(\d+),(\d+)\]"',
-        r'class="android\.widget\.MultiAutoCompleteTextView"[^>]*bounds="\[(\d+),(\d+)\]\[(\d+),(\d+)\]"',
-        r'class="com\.facebook\.react\.views\.textinput\.ReactEditText"[^>]*bounds="\[(\d+),(\d+)\]\[(\d+),(\d+)\]"',
-        r'(?:hint-text="[^"]*[Mm]essage[^"]*"|content-desc="[^"]*[Mm]essage[^"]*")[^>]*bounds="\[(\d+),(\d+)\]\[(\d+),(\d+)\]"',
-    ]
-    for pat in patterns:
-        m = re.search(pat, xml)
-        if m:
-            x1, y1, x2, y2 = map(int, m.groups())
-            cx, cy = (x1 + x2) // 2, (y1 + y2) // 2
-            print(f"[bridge] EditText found via pattern: class match, center=({cx},{cy})")
-            return cx, cy
-    for m in re.finditer(
-        r'focusable="true"[^>]*bounds="\[(\d+),(\d+)\]\[(\d+),(\d+)\]"', xml
-    ):
-        x1, y1, x2, y2 = map(int, m.groups())
-        cy = (y1 + y2) // 2
-        if cy > SCREEN_H * 0.70:
-            cx = (x1 + x2) // 2
-            print(f"[bridge] EditText found via focusable fallback, center=({cx},{cy})")
-            return cx, cy
-    return None
-
-def wait_for_input(timeout=30):
-    print("[bridge] waiting for EditText...")
-    for _ in range(timeout):
-        xml = ui_dump()
-        pos = find_edittext(xml)
-        if pos:
-            print(f"[bridge] EditText at {pos}")
-            return pos
-        time.sleep(1)
-    return None
-
-def type_prompt(text: str):
-    shell("ime", "set", "com.android.adbkeyboard/.AdbIME")
-    time.sleep(0.5)
-    pos = wait_for_input()
-    if not pos:
-        print("[bridge] WARNING: no EditText found, using fallback (363,1235)")
-        pos = (363, 1235)
-    tap(*pos)
-    time.sleep(0.5)
-    keyevent("KEYCODE_CTRL_A")
-    time.sleep(0.2)
-    keyevent("KEYCODE_DEL")
-    time.sleep(0.3)
-    type_text(text)
-    time.sleep(0.5)
-
-# -- Claude app control (OPT 3) ------------------------------------------------
-
-def _claude_is_foreground() -> bool:
-    win_out = shell("dumpsys", "window", "windows")
-    for line in win_out.splitlines():
-        if ("mCurrentFocus" in line or "mFocusedApp" in line) and CLAUDE_PKG in line:
-            return True
-    act_out = shell("dumpsys", "activity", "activities")
-    for line in act_out.splitlines():
-        if "mResumedActivity" in line and CLAUDE_PKG in line:
-            return True
-    return False
-
-def ensure_claude_foreground():
-    if _claude_is_foreground():
-        print("[bridge] Claude already foreground — skipping launch")
-        return
-    print("[bridge] Launching Claude...")
-    subprocess.run([
-        ADB, "-s", SERIAL,
-        "shell", "am", "start",
-        "-n", CLAUDE_ACTIVITY
-    ], capture_output=True, timeout=10)
-    for i in range(12):
-        time.sleep(1)
-        if _claude_is_foreground():
-            print(f"[bridge] Claude foreground confirmed ({i+1}s)")
-            return
-        print(f"[bridge] waiting for Claude... ({i+1}s)")
-    print("[bridge] WARNING: Claude foreground not confirmed after 12s, continuing...")
-    time.sleep(1)
-
-def tap_send():
-    keyevent("66")
-    time.sleep(1.5)
-
-# -- Response extraction (OPT 2) -----------------------------------------------
-
-SKIP_TEXTS = {
-    "Send a message", "Message Claude", "New conversation",
-    "Chat with Claude", "Chat with Claude\u2026", "Chat with Claude...",
-    "How can I help you this morning?", "How can I help you today?",
-    "How can I help you this afternoon?", "How can I help you this evening?",
-    "Reply to Claude\u2026", "Reply to Claude...",
-    "Get more with Claude Pro", "Upgrade", "Attach", "Add to chat",
-    "Start speech input", "Voice Mode", "Toggle ghost mode",
-    "Send", "Stop", "Retry",
-    "Claude can make mistakes.", "Please double check responses.",
-    "Sonnet 4.6", "Sonnet 4.6\ufffd",
-    "Today", "New chat", "Chats", "Projects", "Artifacts",
-    "Recents", "Search Chats", "Select", "Open menu",
-    "Close all", "Search", "PGDN", "PGUP", "ESC", "HOME", "END",
-}
-
-SKIP_PREFIXES = (
-    "You are a mobile", "You are an Android", "Your job:",
-    "TASK:", "SCREEN", "HISTORY", "ACTION",
-    "Available Actions", "Navigation Strategy",
-    "Output ONLY", "Choose ONE", "RECENT ACTIONS", "WARNING:",
-    "It looks like", "Is this a test", "Parsing this",
-    "Sonnet", "Get more", "How can I help",
-)
-
-def is_still_generating(dump_xml: str) -> bool:
-    return 'content-desc="Stop"' in dump_xml or "Stop generating" in dump_xml
-
-def extract_last_response(dump_xml: str) -> str:
-    texts = re.findall(r'text="([^"]{3,})"', dump_xml)
-    candidates = [
-        t for t in texts
-        if t not in SKIP_TEXTS
-        and not any(t.startswith(p) for p in SKIP_PREFIXES)
-        and not t.startswith("  ")
-    ]
-    return candidates[-1] if candidates else ""
-
-def extract_action_from_response(full_text: str) -> str:
-    lines = full_text.strip().splitlines()
-    action_re = re.compile(
-        r"^\s*(tap\s+\d+|tap\s+\d+[,x]\d+|type\s+.+|swipe\s+(up|down|left|right)"
-        r"|back|home|enter|done)\s*$",
-        re.I
-    )
-    for line in lines:
-        if action_re.match(line.strip()):
-            return line.strip()
-    for line in reversed(lines):
-        if line.strip():
-            return line.strip()
-    return full_text.strip()
-
-def wait_for_response() -> str:
-    print("[bridge] Waiting for response...")
-    last_text = ""
-    stable    = 0
-    deadline  = time.time() + MAX_WAIT
-    while time.time() < deadline:
-        dump = ui_dump()
-        if is_still_generating(dump):
-            print("[bridge] ...generating...")
-            stable = 0
-            time.sleep(POLL_INTERVAL)
-            continue
-        current = extract_last_response(dump)
-        if len(current) > len(last_text):
-            last_text = current
-            stable    = 0
-            print(f"[bridge] Growing: {current[:60]!r}")
-        elif current and current == last_text:
-            stable += 1
-            print(f"[bridge] Stable {stable}/{STABLE_COUNT}: {current[:60]!r}")
-            if stable >= STABLE_COUNT:
-                action = extract_action_from_response(current)
-                print(f"[bridge] Done. Action: {action!r}")
-                return action
-        time.sleep(POLL_INTERVAL)
-    print("[bridge] Timeout")
-    return last_text or "home"
-
-def get_claude_response(prompt: str) -> str:
-    ensure_claude_foreground()
-    time.sleep(1)
-    type_prompt(prompt)
-    tap_send()
-    return wait_for_response()
-
-def handle_prompt(prompt: str) -> dict:
-    """All prompts that reach the bridge go straight to Claude."""
-    response = get_claude_response(prompt)
-    return {"response": response, "bypassed": False}
-
-# -- HTTP server ---------------------------------------------------------------
-
-class BridgeHandler(BaseHTTPRequestHandler):
-
-    def log_message(self, fmt, *args):
-        print(f"[bridge] {fmt % args}")
-
-    def send_json(self, code, data):
-        body = json.dumps(data).encode()
-        self.send_response(code)
-        self.send_header("Content-Type", "application/json")
-        self.send_header("Access-Control-Allow-Origin", "*")
-        self.end_headers()
-        self.wfile.write(body)
-
-    def do_GET(self):
-        if self.path == "/health":
-            self.send_json(200, {"success": True, "service": "claude_bridge",
-                                 "screen": f"{SCREEN_W}x{SCREEN_H}",
-                                 "serial": SERIAL,
-                                 "opt4": "phone_a_side"})
-        else:
-            self.send_json(404, {"error": "not found"})
-
-    def do_POST(self):
-        length = int(self.headers.get("Content-Length", 0))
-        body   = self.rfile.read(length)
-        try:
-            data = json.loads(body.decode())
-        except Exception:
-            self.send_json(400, {"success": False, "error": "invalid JSON"})
-            return
-
-        if self.path == "/chat":
-            prompt = data.get("prompt", "").strip()
-            if not prompt:
-                self.send_json(400, {"success": False, "error": "missing prompt"})
-                return
-            print(f"\n[bridge] == PROMPT ==\n{prompt[:300]}\n{'='*40}")
-            try:
-                result = handle_prompt(prompt)
-                print(f"[bridge] == ACTION ==\n{result}\n{'='*40}\n")
-                self.send_json(200, {"success": True, **result})
-            except Exception as e:
-                import traceback
-                traceback.print_exc()
-                self.send_json(500, {"success": False, "error": str(e)})
-        else:
-            self.send_json(404, {"error": "not found"})
-
-if __name__ == "__main__":
-    print("╔══════════════════════════════════════════════════════╗")
-    print("║  JARVIS CLAUDE BRIDGE  —  Phone B (Galaxy A10s)     ║")
-    print("╚══════════════════════════════════════════════════════╝")
-    print(f"  Screen  : {SCREEN_W}x{SCREEN_H}")
-    print(f"  Port    : {PORT}")
-    print(f"  Serial  : {SERIAL}")
-    print(f"  ADB     : {ADB}")
-    print(f"  Typing  : {'Clipper file-based (OPT 1)' if USE_CLIPBOARD else 'word-by-word (fallback)'}")
-    print(f"  Poll    : {POLL_INTERVAL}s (OPT 2)")
-    print(f"  OPT 4   : bypass handled by Phone A — bridge is stateless")
-    print()
-    server = HTTPServer(("0.0.0.0", PORT), BridgeHandler)
-    try:
-        server.serve_forever()
-    except KeyboardInterrupt:
-        print("\n[bridge] Stopped.")
-        server.shutdown()
 
 

@@ -2872,6 +2872,7 @@ if __name__ == "__main__":
 [10:12:54]   Recovering device...
 [10:13:09]   Retry: ✗ FAIL  |  0.1s
 [10:13:09]   Recovering device...
+[10:13:15]   Pausing 5s...
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4211,7 +4212,7 @@ if __name__ == "__main__":
 
 //===== TERMUXFILE: gauntlet_report.json =====
 {
-  "run_at": "2026-03-17T10:12:44.453582",
+  "run_at": "2026-03-17T10:13:15.883163",
   "in_progress": true,
   "skills_before": 0,
   "skills_current": 0,
@@ -4258,6 +4259,15 @@ if __name__ == "__main__":
       "difficulty": 1,
       "success": false,
       "elapsed_s": 0.2,
+      "error": "orig=returncode=1 retry=returncode=1",
+      "retried": false
+    },
+    {
+      "task": "Open Phone app",
+      "category": "phone",
+      "difficulty": 1,
+      "success": false,
+      "elapsed_s": 0.3,
       "error": "orig=returncode=1 retry=returncode=1",
       "retried": false
     }

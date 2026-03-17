@@ -334,31 +334,20 @@ if __name__ == "__main__":
 //===== TERMUXFILE: skill_recorder.py =====
 #!/usr/bin/env python3
 """
-skill_recorder.py  —  JarvisMinI Skill Recorder v3
+skill_recorder.py  —  JarvisMinI Skill Recorder v4
 
-Records manual phone usage as reusable skills with:
-  - Auto variable detection ($CONTACT, $TEXT, $QUERY etc.)
-  - Multi-selector taps (text + resource_id + class for resilience)
-  - Activity captured per step
-  - Skill preview before saving
-  - Success/fail stats tracking
-  - Immediate replay test option
+Two modes:
 
-Usage:
-  python3 skill_recorder.py --device "192.168.29.48:43073"
+  MANUAL MODE (original):
+    python3 skill_recorder.py --device "192.168.29.48:34011"
+    Do each action on phone, then describe it in Termux.
 
-Commands during recording:
-  t <label>    tap element (auto-captures resource_id + class)
-  y <text>     type text (auto-detects variable type)
-  s up|down    swipe
-  b            back
-  h            home
-  e            enter
-  l <pkg>      app launched (e.g. l com.whatsapp)
-  w <label>    wait for element to appear
-  done         finish and save
-  skip         skip this step
-  quit         discard
+  AUTO MODE (new — from tap log):
+    1. python3 tap_logger.py --device "192.168.29.48:34011" --clear
+    2. (use phone to do the flow)
+    3. Ctrl+C the logger
+    4. python3 skill_recorder.py --device "192.168.29.48:34011" --from-log
+    Shows each logged tap, lets you confirm/skip/mark-as-type, saves skill.
 """
 
 import argparse
@@ -374,41 +363,32 @@ from pathlib import Path
 from datetime import datetime
 
 SKILLS_FILE = Path.home() / "workflows" / "skills.json"
+LOG_FILE    = Path.home() / "workflows" / "tap_log.json"
 ADB         = "adb"
 _SKIP_PKG   = {"com.android.systemui"}
 
-# -- Variable detection patterns ----------------------------------------------
-# Maps typed text patterns to variable names
+# -- Variable detection -------------------------------------------------------
+
 _VAR_PATTERNS = [
     (r"^\+?\d[\d\s\-]{7,}$",          "$PHONE"),
     (r"^https?://",                    "$URL"),
     (r"^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$", "$EMAIL"),
-    (r"^\d{1,3}$",                     "$NUMBER"),
 ]
 
-_CONTACT_KEYWORDS = {"to", "contact", "name", "person", "friend", "mummy", "dad",
-                      "mama", "papa", "bhai", "didi", "sir", "mam"}
-
 def detect_variable(typed_text, context_hint=""):
-    """Infer the right variable name for typed text."""
-    t = typed_text.strip()
+    t   = typed_text.strip()
     ctx = context_hint.lower()
-
     for pattern, var in _VAR_PATTERNS:
         if re.match(pattern, t):
             return var
-
-    # Context-based detection
-    if any(k in ctx for k in ("contact", "name", "to", "search", "who")):
+    if any(k in ctx for k in ("contact","name","to","who","search name")):
         return "$CONTACT"
-    if any(k in ctx for k in ("message", "msg", "text", "say", "write", "type")):
+    if any(k in ctx for k in ("message","msg","text","say","write","type")):
         return "$TEXT"
-    if any(k in ctx for k in ("search", "query", "find", "look")):
+    if any(k in ctx for k in ("search","query","find","look","youtube","play")):
         return "$QUERY"
-    if any(k in ctx for k in ("app", "install", "package")):
+    if any(k in ctx for k in ("app","install","package")):
         return "$APP"
-
-    # Length heuristic: short = likely name/contact, longer = message
     if len(t.split()) <= 3:
         return "$CONTACT"
     return "$TEXT"
@@ -428,8 +408,6 @@ def _adb(device, *args, timeout=15):
         capture_output=True, timeout=timeout
     )
 
-# -- Activity -----------------------------------------------------------------
-
 def get_activity(device):
     out = _shell(device, "dumpsys", "activity", "activities", timeout=10)
     m = re.search(r"topResumedActivity[=:\s]+ActivityRecord\{[^ ]+\s+[^ ]+\s+([^ ]+)", out)
@@ -438,33 +416,28 @@ def get_activity(device):
     if m: return m.group(1)
     return "unknown"
 
-# -- UI snapshot with full element info ---------------------------------------
-
 def get_ui_elements(device):
-    """Return list of element dicts with text, resource_id, class, x, y."""
     _shell(device, "rm", "-f", "/sdcard/rec_dump.xml")
     result = _shell(device, "uiautomator", "dump", "/sdcard/rec_dump.xml", timeout=20)
     if "ERROR" in result.upper():
         return []
-
     tmp = tempfile.NamedTemporaryFile(suffix=".xml", delete=False)
     tmp.close()
     r = _adb(device, "pull", "/sdcard/rec_dump.xml", tmp.name, timeout=10)
     if r.returncode != 0:
         os.unlink(tmp.name)
         return []
-
     elements = []
     try:
         for _, elem in ET.iterparse(tmp.name, ["start"]):
-            pkg = elem.attrib.get("package", "")
+            pkg = elem.attrib.get("package","")
             if pkg in _SKIP_PKG:
                 continue
             clickable = elem.attrib.get("clickable") == "true"
             focusable = elem.attrib.get("focusable") == "true"
             if not (clickable or focusable):
                 continue
-            bounds_str = elem.attrib.get("bounds", "")
+            bounds_str = elem.attrib.get("bounds","")
             try:
                 parts = bounds_str[1:-1].split("][")
                 x1,y1 = map(int, parts[0].split(","))
@@ -490,17 +463,13 @@ def get_ui_elements(device):
     return elements
 
 def find_element(elements, label):
-    """Find best matching element for a label string."""
     label_l = label.lower().strip()
-    # Exact text match
     for el in elements:
         if el["text"].lower() == label_l:
             return el
-    # Partial match
     for el in elements:
         if label_l in el["text"].lower() and el["text"]:
             return el
-    # resource_id tail match
     for el in elements:
         rid = el["resource_id"].split("/")[-1].replace("_"," ")
         if label_l in rid:
@@ -509,53 +478,30 @@ def find_element(elements, label):
 
 # -- Step builders ------------------------------------------------------------
 
-def build_tap_step(label, elements, activity):
-    """Build a tap step with multi-selector for resilience."""
-    el = find_element(elements, label)
+def build_tap_step(label, resource_id, cls, x, y, activity):
     target = {"text": label}
-    if el:
-        if el["resource_id"]:
-            target["resource_id"] = el["resource_id"]
-        if el["cls"] and "Layout" not in el["cls"]:
-            target["cls"] = el["cls"]
-        # Store coordinates as fallback
-        target["x"] = el["x"]
-        target["y"] = el["y"]
-
+    if resource_id: target["resource_id"] = resource_id
+    if cls and "Layout" not in cls: target["cls"] = cls
+    target["x"] = x
+    target["y"] = y
     return {
-        "action":    "tap",
-        "target":    target,
-        "screen":    activity,
-        "_label":    f"tap {label!r}",
+        "action":  "tap",
+        "target":  target,
+        "screen":  activity,
+        "_label":  f"tap {label!r}" if label else f"tap ({x},{y})",
     }
 
 def build_type_step(typed_text, context_hint, activity):
-    """Build a type step with auto variable detection."""
     var = detect_variable(typed_text, context_hint)
     return {
-        "action":   "type",
-        "text":     var,
-        "_typed":   typed_text,
-        "screen":   activity,
-        "_label":   f"type {var} ({typed_text[:20]!r})",
-    }
-
-def build_wait_step(label, elements, activity):
-    el = find_element(elements, label)
-    target = {"text": label}
-    if el and el["resource_id"]:
-        target["resource_id"] = el["resource_id"]
-    return {
-        "action":  "wait_for",
-        "target":  target,
+        "action":  "type",
+        "text":    var,
+        "_typed":  typed_text,
         "screen":  activity,
-        "_label":  f"wait_for {label!r}",
+        "_label":  f"type {var}  (was: {typed_text[:24]!r})",
     }
-
-# -- Variable extraction from steps ------------------------------------------
 
 def extract_variables(steps):
-    """Return sorted list of unique variable names used in steps."""
     vars_ = set()
     for s in steps:
         if s.get("action") == "type":
@@ -575,7 +521,6 @@ def load_skills():
 def save_skill(skill):
     SKILLS_FILE.parent.mkdir(parents=True, exist_ok=True)
     skills = load_skills()
-    # Strip internal _ keys before saving
     clean_steps = []
     for s in skill["steps"]:
         clean = {k:v for k,v in s.items() if not k.startswith("_")}
@@ -590,140 +535,27 @@ def save_skill(skill):
 
 def preview_skill(steps, name, pattern, variables):
     print(f"""
-  ┌─ SKILL PREVIEW ────────────────────────────────────┐
-  │ Name    : {name:<42}│
-  │ Pattern : {pattern:<42}│
-  │ Variables: {', '.join('$'+v for v in variables) or 'none':<41}│
-  ├────────────────────────────────────────────────────┤""")
+  ┌─ SKILL PREVIEW ─────────────────────────────────────┐
+  │ Name     : {name:<43}│
+  │ Pattern  : {pattern:<43}│
+  │ Variables: {', '.join('$'+v for v in variables) or 'none':<43}│
+  ├─────────────────────────────────────────────────────┤""")
     for i, s in enumerate(steps, 1):
-        label = s.get("_label", s.get("action","?"))
-        screen = s.get("screen","").split("/")[-1]
-        print(f"  │ {i:2d}. {label:<35} [{screen[:12]}]│")
-    print("  └────────────────────────────────────────────────────┘")
+        label  = s.get("_label", s.get("action","?"))
+        screen = s.get("screen","").split("/")[-1].split(".")[-1][:14]
+        print(f"  │ {i:2d}. {label:<38} [{screen}]│")
+    print("  └─────────────────────────────────────────────────────┘")
 
-# -- Main ---------------------------------------------------------------------
+# -- Save dialog --------------------------------------------------------------
 
-CMD_MAP = {
-    "t": "tap", "tap": "tap",
-    "y": "type", "type": "type",
-    "s": "swipe", "swipe": "swipe",
-    "b": "back", "back": "back",
-    "h": "home", "home": "home",
-    "e": "enter", "enter": "enter",
-    "l": "launch", "launch": "launch",
-    "w": "wait_for", "wait": "wait_for",
-}
-
-def main():
-    p = argparse.ArgumentParser()
-    p.add_argument("--device", required=True)
-    args = p.parse_args()
-    device = args.device
-
-    print(f"""
-╔══════════════════════════════════════════════════════╗
-║   JARVIS SKILL RECORDER  v3                         ║
-║   Device : {device:<42}║
-╚══════════════════════════════════════════════════════╝
-
-  Do each action on your phone, then describe it here.
-
-  t <label>   tap element     (e.g.  t New chat)
-  y <text>    type text       (e.g.  y Ayush Kumar)
-  s up|down   swipe
-  b / h / e   back / home / enter
-  l <pkg>     app launched    (e.g.  l com.whatsapp)
-  w <label>   wait for screen (e.g.  w Search)
-  done        finish + save
-  skip        skip step
-  quit        discard
-
-  Press Enter alone to see current screen state.
-""")
-
-    steps    = []
-    activity = get_activity(device)
-    elements = []
-    print(f"  Screen: {activity}\n")
-
-    context_hint = ""
-    step_num = 1
-
-    while True:
-        try:
-            raw = input(f"  Step {step_num:2d} > ").strip()
-        except (KeyboardInterrupt, EOFError):
-            print("\n  Interrupted — discarding.")
-            sys.exit(0)
-
-        if not raw:
-            activity = get_activity(device)
-            elements = get_ui_elements(device)
-            labels   = [e["text"] for e in elements if e["text"]][:10]
-            print(f"  Screen : {activity.split('/')[-1]}")
-            print(f"  Labels : {labels}\n")
-            continue
-
-        parts  = raw.split(None, 1)
-        cmd    = parts[0].lower()
-        rest   = parts[1].strip() if len(parts) > 1 else ""
-
-        if cmd in ("quit","q","discard"):
-            print("  Discarded.")
-            sys.exit(0)
-
-        if cmd in ("done","d","finish"):
-            break
-
-        if cmd == "skip":
-            print(f"  Skipped.")
-            continue
-
-        action_type = CMD_MAP.get(cmd)
-        if not action_type:
-            print(f"  Unknown: {cmd!r}  — use t/y/s/b/h/e/l/w/done/skip/quit")
-            continue
-
-        # Capture current screen state
-        activity = get_activity(device)
-        elements = get_ui_elements(device)
-
-        # Build step
-        if action_type == "tap":
-            step = build_tap_step(rest, elements, activity)
-            context_hint = rest  # use tap label as context for next type
-
-        elif action_type == "type":
-            step = build_type_step(rest, context_hint, activity)
-            context_hint = ""
-
-        elif action_type == "wait_for":
-            step = build_wait_step(rest, elements, activity)
-
-        elif action_type == "launch":
-            step = {"action":"launch","package":rest,"screen":activity,
-                    "_label":f"launch {rest}"}
-
-        elif action_type == "swipe":
-            step = {"action":"swipe","direction":rest or "up","screen":activity,
-                    "_label":f"swipe {rest or 'up'}"}
-
-        else:  # back, home, enter
-            step = {"action":action_type,"screen":activity,
-                    "_label":action_type}
-
-        steps.append(step)
-        print(f"  ✓ [{step_num:2d}] {step['_label']}")
-        step_num += 1
-
-    # Save dialog
+def save_dialog(steps, device):
     if not steps:
         print("\n  No steps recorded.")
         return
 
     print(f"\n{'─'*56}")
-    name    = input("  Skill name   : ").strip()
-    pattern = input("  Match pattern (Enter = same): ").strip() or name
+    name    = input("  Skill name    : ").strip()
+    pattern = input("  Match pattern (Enter = same as name): ").strip() or name
 
     if not name:
         print("  No name — not saved.")
@@ -738,20 +570,286 @@ def main():
         return
 
     skill = save_skill({
-        "name":        name,
-        "pattern":     pattern.lower(),
-        "variables":   variables,
+        "name":         name,
+        "pattern":      pattern.lower(),
+        "variables":    variables,
         "task_example": name,
-        "steps":       steps,
-        "stats":       {"success": 0, "fail": 0},
-        "recorded_at": datetime.now().isoformat(),
-        "uses":        0,
-        "version":     1,
+        "steps":        steps,
+        "stats":        {"success": 0, "fail": 0},
+        "recorded_at":  datetime.now().isoformat(),
+        "uses":         0,
+        "version":      4,
     })
-
-    print(f"\n  ✅ Saved: {name!r} ({len(skill['steps'])} steps, "
-          f"vars: {variables or ['none']})")
+    print(f"\n  ✅ Saved: {name!r}  ({len(skill['steps'])} steps)")
     print(f"  File: {SKILLS_FILE}\n")
+
+# =============================================================================
+# FROM-LOG MODE
+# =============================================================================
+
+# Tap labels to always skip (system UI, keyboard keys, etc.)
+_SKIP_LOG_TEXTS = {
+    "","back","home","recents","recent apps",
+    "more options","menu",
+}
+# Resource-id fragments that indicate keyboard/system — skip
+_SKIP_LOG_RID = (
+    "com.android.systemui",
+    "com.google.android.inputmethod",
+    "com.samsung.android.honeyboard",
+    "com.oppo.inputmethod",
+)
+
+def _is_system_tap(entry):
+    rid = entry.get("resource_id","")
+    if any(rid.startswith(p) for p in _SKIP_LOG_RID):
+        return True
+    text = entry.get("text","").lower().strip()
+    if text in _SKIP_LOG_TEXTS:
+        return True
+    return False
+
+
+def _group_typing(entries):
+    """
+    Merge consecutive tap entries on keyboard keys into a single 'type' event.
+    Heuristic: if an entry has resource_id containing 'key' and single-char
+    text, group with neighbours on the same keyboard activity.
+    For now we rely on the user to mark typing manually in the review step.
+    Returns entries unchanged — typing is handled in review loop.
+    """
+    return entries
+
+
+def from_log_mode(device):
+    """
+    Read tap_log.json, walk through each entry interactively,
+    let user confirm/skip/mark-as-type, build steps, save skill.
+    """
+    if not LOG_FILE.exists():
+        print(f"\n  ERROR: {LOG_FILE} not found.")
+        print("  Run tap_logger.py first to capture a flow.\n")
+        sys.exit(1)
+
+    raw_entries = json.loads(LOG_FILE.read_text())
+    if not raw_entries:
+        print("  Log is empty — nothing to process.\n")
+        sys.exit(0)
+
+    print(f"""
+╔══════════════════════════════════════════════════════╗
+║   SKILL RECORDER  — From Log Mode                   ║
+║   Entries : {len(raw_entries):<42}║
+╚══════════════════════════════════════════════════════╝
+
+  For each logged tap you can:
+    Enter / y    include this step
+    s            skip this step
+    t <text>     mark as TYPE step with this text
+    r            rename the tap label
+    q            stop and save what we have so far
+
+""")
+
+    # Filter obvious system taps upfront
+    entries = [e for e in raw_entries if not _is_system_tap(e)]
+    print(f"  {len(raw_entries)} raw entries → {len(entries)} after filtering system taps\n")
+
+    steps        = []
+    context_hint = ""
+
+    for i, entry in enumerate(entries):
+        act_short = entry.get("activity","").split("/")[-1].split(".")[-1][:20]
+        text      = entry.get("text","")
+        x, y      = entry.get("x",0), entry.get("y",0)
+        rid       = entry.get("resource_id","")
+        cls       = entry.get("cls","")
+        etype     = entry.get("type","tap")
+
+        if etype == "type":
+            label = f"[AUTO TYPE] {text!r}"
+        elif text:
+            label = f"tap {text!r}"
+        else:
+            label = f"tap ({x},{y})"
+
+        print(f"  [{i+1:2d}/{len(entries)}] {label:<50} [{act_short}]")
+
+        try:
+            ans = input("         > ").strip().lower()
+        except (KeyboardInterrupt, EOFError):
+            print("\n  Stopping early.")
+            break
+
+        if ans in ("q","quit"):
+            break
+        elif ans in ("s","skip","n","no"):
+            print("         skipped")
+            continue
+        elif ans.startswith("t ") or ans.startswith("type "):
+            typed = ans.split(None, 1)[1].strip()
+            step  = build_type_step(typed, context_hint,
+                                    entry.get("activity",""))
+            steps.append(step)
+            print(f"         → {step['_label']}")
+            context_hint = text  # last tap label as hint
+        elif ans.startswith("r "):
+            new_label = ans.split(None, 1)[1].strip()
+            step = build_tap_step(new_label, rid, cls, x, y,
+                                  entry.get("activity",""))
+            steps.append(step)
+            print(f"         → {step['_label']}")
+            context_hint = new_label
+        else:
+            # Default: include as tap
+            if etype == "type":
+                step = build_type_step(text, context_hint,
+                                       entry.get("activity",""))
+            else:
+                step = build_tap_step(text, rid, cls, x, y,
+                                      entry.get("activity",""))
+            steps.append(step)
+            context_hint = text
+
+    save_dialog(steps, device)
+
+
+# =============================================================================
+# MANUAL MODE (original)
+# =============================================================================
+
+CMD_MAP = {
+    "t": "tap",   "tap": "tap",
+    "y": "type",  "type": "type",
+    "s": "swipe", "swipe": "swipe",
+    "b": "back",  "back": "back",
+    "h": "home",  "home": "home",
+    "e": "enter", "enter": "enter",
+    "l": "launch","launch": "launch",
+    "w": "wait_for","wait": "wait_for",
+}
+
+def manual_mode(device):
+    print(f"""
+╔══════════════════════════════════════════════════════╗
+║   JARVIS SKILL RECORDER  v4  (manual)               ║
+║   Device : {device:<42}║
+╚══════════════════════════════════════════════════════╝
+
+  Do each action on your phone, then describe it here.
+
+  t <label>   tap element     (e.g.  t New chat)
+  y <text>    type text       (e.g.  y Ayush Kumar)
+  b / h / e   back / home / enter
+  s up|down   swipe
+  w <label>   wait for element
+  l <pkg>     app launched
+  done        finish + save
+  skip / quit
+  (blank)     refresh current screen state
+""")
+
+    steps        = []
+    activity     = get_activity(device)
+    elements     = []
+    context_hint = ""
+    step_num     = 1
+    print(f"  Screen: {activity}\n")
+
+    while True:
+        try:
+            raw = input(f"  Step {step_num:2d} > ").strip()
+        except (KeyboardInterrupt, EOFError):
+            print("\n  Interrupted — discarding.")
+            sys.exit(0)
+
+        if not raw:
+            activity = get_activity(device)
+            elements = get_ui_elements(device)
+            labels   = [e["text"] for e in elements if e["text"]][:12]
+            print(f"  Screen : {activity.split('/')[-1]}")
+            print(f"  Labels : {labels}\n")
+            continue
+
+        parts = raw.split(None, 1)
+        cmd   = parts[0].lower()
+        rest  = parts[1].strip() if len(parts) > 1 else ""
+
+        if cmd in ("quit","q","discard"):
+            print("  Discarded.")
+            sys.exit(0)
+
+        if cmd in ("done","d","finish"):
+            break
+
+        if cmd == "skip":
+            continue
+
+        action_type = CMD_MAP.get(cmd)
+        if not action_type:
+            print(f"  Unknown: {cmd!r}  — use t/y/s/b/h/e/l/w/done/quit")
+            continue
+
+        activity = get_activity(device)
+        elements = get_ui_elements(device)
+
+        if action_type == "tap":
+            el   = find_element(elements, rest)
+            step = build_tap_step(
+                rest,
+                el["resource_id"] if el else "",
+                el["cls"]         if el else "",
+                el["x"]           if el else 0,
+                el["y"]           if el else 0,
+                activity
+            )
+            context_hint = rest
+
+        elif action_type == "type":
+            step = build_type_step(rest, context_hint, activity)
+            context_hint = ""
+
+        elif action_type == "wait_for":
+            el     = find_element(elements, rest)
+            target = {"text": rest}
+            if el and el["resource_id"]: target["resource_id"] = el["resource_id"]
+            step = {"action":"wait_for","target":target,"screen":activity,
+                    "_label":f"wait_for {rest!r}"}
+
+        elif action_type == "launch":
+            step = {"action":"launch","package":rest,"screen":activity,
+                    "_label":f"launch {rest}"}
+
+        elif action_type == "swipe":
+            step = {"action":"swipe","direction":rest or "up","screen":activity,
+                    "_label":f"swipe {rest or 'up'}"}
+
+        else:
+            step = {"action":action_type,"screen":activity,"_label":action_type}
+
+        steps.append(step)
+        print(f"  ✓ [{step_num:2d}] {step['_label']}")
+        step_num += 1
+
+    save_dialog(steps, device)
+
+
+# =============================================================================
+# Entry point
+# =============================================================================
+
+def main():
+    p = argparse.ArgumentParser()
+    p.add_argument("--device",    required=True)
+    p.add_argument("--from-log",  action="store_true",
+                   help="Build skill from tap_log.json (recorded by tap_logger.py)")
+    args = p.parse_args()
+
+    if args.from_log:
+        from_log_mode(args.device)
+    else:
+        manual_mode(args.device)
+
 
 if __name__ == "__main__":
     main()
@@ -2685,7 +2783,6 @@ if __name__ == "__main__":
   }
 }
 
-//===== TERMUXFILE: ai-output.txt =====
 //===== TERMUXFILE: tap_logger.py =====
 #!/usr/bin/env python3
 """
@@ -3037,529 +3134,6 @@ def main():
         print(f"  Log: {LOG_FILE}")
         print(f"\n  Now run:")
         print(f"    python3 skill_recorder.py --device {device} --from-log\n")
-
-
-if __name__ == "__main__":
-    main()
-
-//===== TERMUXFILE: skill_recorder.py =====
-#!/usr/bin/env python3
-"""
-skill_recorder.py  —  JarvisMinI Skill Recorder v4
-
-Two modes:
-
-  MANUAL MODE (original):
-    python3 skill_recorder.py --device "192.168.29.48:34011"
-    Do each action on phone, then describe it in Termux.
-
-  AUTO MODE (new — from tap log):
-    1. python3 tap_logger.py --device "192.168.29.48:34011" --clear
-    2. (use phone to do the flow)
-    3. Ctrl+C the logger
-    4. python3 skill_recorder.py --device "192.168.29.48:34011" --from-log
-    Shows each logged tap, lets you confirm/skip/mark-as-type, saves skill.
-"""
-
-import argparse
-import json
-import os
-import re
-import subprocess
-import sys
-import tempfile
-import time
-import xml.etree.ElementTree as ET
-from pathlib import Path
-from datetime import datetime
-
-SKILLS_FILE = Path.home() / "workflows" / "skills.json"
-LOG_FILE    = Path.home() / "workflows" / "tap_log.json"
-ADB         = "adb"
-_SKIP_PKG   = {"com.android.systemui"}
-
-# -- Variable detection -------------------------------------------------------
-
-_VAR_PATTERNS = [
-    (r"^\+?\d[\d\s\-]{7,}$",          "$PHONE"),
-    (r"^https?://",                    "$URL"),
-    (r"^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$", "$EMAIL"),
-]
-
-def detect_variable(typed_text, context_hint=""):
-    t   = typed_text.strip()
-    ctx = context_hint.lower()
-    for pattern, var in _VAR_PATTERNS:
-        if re.match(pattern, t):
-            return var
-    if any(k in ctx for k in ("contact","name","to","who","search name")):
-        return "$CONTACT"
-    if any(k in ctx for k in ("message","msg","text","say","write","type")):
-        return "$TEXT"
-    if any(k in ctx for k in ("search","query","find","look","youtube","play")):
-        return "$QUERY"
-    if any(k in ctx for k in ("app","install","package")):
-        return "$APP"
-    if len(t.split()) <= 3:
-        return "$CONTACT"
-    return "$TEXT"
-
-# -- ADB helpers --------------------------------------------------------------
-
-def _shell(device, *args, timeout=20):
-    r = subprocess.run(
-        [ADB, "-s", device, "shell"] + list(args),
-        capture_output=True, timeout=timeout
-    )
-    return r.stdout.decode(errors="replace").strip()
-
-def _adb(device, *args, timeout=15):
-    return subprocess.run(
-        [ADB, "-s", device] + list(args),
-        capture_output=True, timeout=timeout
-    )
-
-def get_activity(device):
-    out = _shell(device, "dumpsys", "activity", "activities", timeout=10)
-    m = re.search(r"topResumedActivity[=:\s]+ActivityRecord\{[^ ]+\s+[^ ]+\s+([^ ]+)", out)
-    if m: return m.group(1)
-    m = re.search(r"mResumedActivity[:\s]+ActivityRecord\{[^ ]+\s+[^ ]+\s+([^ ]+)", out)
-    if m: return m.group(1)
-    return "unknown"
-
-def get_ui_elements(device):
-    _shell(device, "rm", "-f", "/sdcard/rec_dump.xml")
-    result = _shell(device, "uiautomator", "dump", "/sdcard/rec_dump.xml", timeout=20)
-    if "ERROR" in result.upper():
-        return []
-    tmp = tempfile.NamedTemporaryFile(suffix=".xml", delete=False)
-    tmp.close()
-    r = _adb(device, "pull", "/sdcard/rec_dump.xml", tmp.name, timeout=10)
-    if r.returncode != 0:
-        os.unlink(tmp.name)
-        return []
-    elements = []
-    try:
-        for _, elem in ET.iterparse(tmp.name, ["start"]):
-            pkg = elem.attrib.get("package","")
-            if pkg in _SKIP_PKG:
-                continue
-            clickable = elem.attrib.get("clickable") == "true"
-            focusable = elem.attrib.get("focusable") == "true"
-            if not (clickable or focusable):
-                continue
-            bounds_str = elem.attrib.get("bounds","")
-            try:
-                parts = bounds_str[1:-1].split("][")
-                x1,y1 = map(int, parts[0].split(","))
-                x2,y2 = map(int, parts[1].split(","))
-            except:
-                continue
-            if (x2-x1)*(y2-y1) < 100:
-                continue
-            text = (elem.attrib.get("text","") or
-                    elem.attrib.get("content-desc","")).strip()
-            elements.append({
-                "text":        text,
-                "resource_id": elem.attrib.get("resource-id",""),
-                "cls":         elem.attrib.get("class",""),
-                "x": (x1+x2)//2,
-                "y": (y1+y2)//2,
-            })
-    except Exception as e:
-        print(f"  [warn] UI parse: {e}")
-    finally:
-        try: os.unlink(tmp.name)
-        except: pass
-    return elements
-
-def find_element(elements, label):
-    label_l = label.lower().strip()
-    for el in elements:
-        if el["text"].lower() == label_l:
-            return el
-    for el in elements:
-        if label_l in el["text"].lower() and el["text"]:
-            return el
-    for el in elements:
-        rid = el["resource_id"].split("/")[-1].replace("_"," ")
-        if label_l in rid:
-            return el
-    return None
-
-# -- Step builders ------------------------------------------------------------
-
-def build_tap_step(label, resource_id, cls, x, y, activity):
-    target = {"text": label}
-    if resource_id: target["resource_id"] = resource_id
-    if cls and "Layout" not in cls: target["cls"] = cls
-    target["x"] = x
-    target["y"] = y
-    return {
-        "action":  "tap",
-        "target":  target,
-        "screen":  activity,
-        "_label":  f"tap {label!r}" if label else f"tap ({x},{y})",
-    }
-
-def build_type_step(typed_text, context_hint, activity):
-    var = detect_variable(typed_text, context_hint)
-    return {
-        "action":  "type",
-        "text":    var,
-        "_typed":  typed_text,
-        "screen":  activity,
-        "_label":  f"type {var}  (was: {typed_text[:24]!r})",
-    }
-
-def extract_variables(steps):
-    vars_ = set()
-    for s in steps:
-        if s.get("action") == "type":
-            t = s.get("text","")
-            if t.startswith("$"):
-                vars_.add(t[1:])
-    return sorted(vars_)
-
-# -- Skills persistence -------------------------------------------------------
-
-def load_skills():
-    if SKILLS_FILE.exists():
-        try: return json.loads(SKILLS_FILE.read_text())
-        except: pass
-    return []
-
-def save_skill(skill):
-    SKILLS_FILE.parent.mkdir(parents=True, exist_ok=True)
-    skills = load_skills()
-    clean_steps = []
-    for s in skill["steps"]:
-        clean = {k:v for k,v in s.items() if not k.startswith("_")}
-        clean_steps.append(clean)
-    skill = dict(skill)
-    skill["steps"] = clean_steps
-    skills.append(skill)
-    SKILLS_FILE.write_text(json.dumps(skills, indent=2))
-    return skill
-
-# -- Preview ------------------------------------------------------------------
-
-def preview_skill(steps, name, pattern, variables):
-    print(f"""
-  ┌─ SKILL PREVIEW ─────────────────────────────────────┐
-  │ Name     : {name:<43}│
-  │ Pattern  : {pattern:<43}│
-  │ Variables: {', '.join('$'+v for v in variables) or 'none':<43}│
-  ├─────────────────────────────────────────────────────┤""")
-    for i, s in enumerate(steps, 1):
-        label  = s.get("_label", s.get("action","?"))
-        screen = s.get("screen","").split("/")[-1].split(".")[-1][:14]
-        print(f"  │ {i:2d}. {label:<38} [{screen}]│")
-    print("  └─────────────────────────────────────────────────────┘")
-
-# -- Save dialog --------------------------------------------------------------
-
-def save_dialog(steps, device):
-    if not steps:
-        print("\n  No steps recorded.")
-        return
-
-    print(f"\n{'─'*56}")
-    name    = input("  Skill name    : ").strip()
-    pattern = input("  Match pattern (Enter = same as name): ").strip() or name
-
-    if not name:
-        print("  No name — not saved.")
-        return
-
-    variables = extract_variables(steps)
-    preview_skill(steps, name, pattern, variables)
-
-    confirm = input("\n  Save this skill? [Y/n]: ").strip().lower()
-    if confirm not in ("","y","yes"):
-        print("  Discarded.")
-        return
-
-    skill = save_skill({
-        "name":         name,
-        "pattern":      pattern.lower(),
-        "variables":    variables,
-        "task_example": name,
-        "steps":        steps,
-        "stats":        {"success": 0, "fail": 0},
-        "recorded_at":  datetime.now().isoformat(),
-        "uses":         0,
-        "version":      4,
-    })
-    print(f"\n  ✅ Saved: {name!r}  ({len(skill['steps'])} steps)")
-    print(f"  File: {SKILLS_FILE}\n")
-
-# =============================================================================
-# FROM-LOG MODE
-# =============================================================================
-
-# Tap labels to always skip (system UI, keyboard keys, etc.)
-_SKIP_LOG_TEXTS = {
-    "","back","home","recents","recent apps",
-    "more options","menu",
-}
-# Resource-id fragments that indicate keyboard/system — skip
-_SKIP_LOG_RID = (
-    "com.android.systemui",
-    "com.google.android.inputmethod",
-    "com.samsung.android.honeyboard",
-    "com.oppo.inputmethod",
-)
-
-def _is_system_tap(entry):
-    rid = entry.get("resource_id","")
-    if any(rid.startswith(p) for p in _SKIP_LOG_RID):
-        return True
-    text = entry.get("text","").lower().strip()
-    if text in _SKIP_LOG_TEXTS:
-        return True
-    return False
-
-
-def _group_typing(entries):
-    """
-    Merge consecutive tap entries on keyboard keys into a single 'type' event.
-    Heuristic: if an entry has resource_id containing 'key' and single-char
-    text, group with neighbours on the same keyboard activity.
-    For now we rely on the user to mark typing manually in the review step.
-    Returns entries unchanged — typing is handled in review loop.
-    """
-    return entries
-
-
-def from_log_mode(device):
-    """
-    Read tap_log.json, walk through each entry interactively,
-    let user confirm/skip/mark-as-type, build steps, save skill.
-    """
-    if not LOG_FILE.exists():
-        print(f"\n  ERROR: {LOG_FILE} not found.")
-        print("  Run tap_logger.py first to capture a flow.\n")
-        sys.exit(1)
-
-    raw_entries = json.loads(LOG_FILE.read_text())
-    if not raw_entries:
-        print("  Log is empty — nothing to process.\n")
-        sys.exit(0)
-
-    print(f"""
-╔══════════════════════════════════════════════════════╗
-║   SKILL RECORDER  — From Log Mode                   ║
-║   Entries : {len(raw_entries):<42}║
-╚══════════════════════════════════════════════════════╝
-
-  For each logged tap you can:
-    Enter / y    include this step
-    s            skip this step
-    t <text>     mark as TYPE step with this text
-    r            rename the tap label
-    q            stop and save what we have so far
-
-""")
-
-    # Filter obvious system taps upfront
-    entries = [e for e in raw_entries if not _is_system_tap(e)]
-    print(f"  {len(raw_entries)} raw entries → {len(entries)} after filtering system taps\n")
-
-    steps        = []
-    context_hint = ""
-
-    for i, entry in enumerate(entries):
-        act_short = entry.get("activity","").split("/")[-1].split(".")[-1][:20]
-        text      = entry.get("text","")
-        x, y      = entry.get("x",0), entry.get("y",0)
-        rid       = entry.get("resource_id","")
-        cls       = entry.get("cls","")
-        etype     = entry.get("type","tap")
-
-        if etype == "type":
-            label = f"[AUTO TYPE] {text!r}"
-        elif text:
-            label = f"tap {text!r}"
-        else:
-            label = f"tap ({x},{y})"
-
-        print(f"  [{i+1:2d}/{len(entries)}] {label:<50} [{act_short}]")
-
-        try:
-            ans = input("         > ").strip().lower()
-        except (KeyboardInterrupt, EOFError):
-            print("\n  Stopping early.")
-            break
-
-        if ans in ("q","quit"):
-            break
-        elif ans in ("s","skip","n","no"):
-            print("         skipped")
-            continue
-        elif ans.startswith("t ") or ans.startswith("type "):
-            typed = ans.split(None, 1)[1].strip()
-            step  = build_type_step(typed, context_hint,
-                                    entry.get("activity",""))
-            steps.append(step)
-            print(f"         → {step['_label']}")
-            context_hint = text  # last tap label as hint
-        elif ans.startswith("r "):
-            new_label = ans.split(None, 1)[1].strip()
-            step = build_tap_step(new_label, rid, cls, x, y,
-                                  entry.get("activity",""))
-            steps.append(step)
-            print(f"         → {step['_label']}")
-            context_hint = new_label
-        else:
-            # Default: include as tap
-            if etype == "type":
-                step = build_type_step(text, context_hint,
-                                       entry.get("activity",""))
-            else:
-                step = build_tap_step(text, rid, cls, x, y,
-                                      entry.get("activity",""))
-            steps.append(step)
-            context_hint = text
-
-    save_dialog(steps, device)
-
-
-# =============================================================================
-# MANUAL MODE (original)
-# =============================================================================
-
-CMD_MAP = {
-    "t": "tap",   "tap": "tap",
-    "y": "type",  "type": "type",
-    "s": "swipe", "swipe": "swipe",
-    "b": "back",  "back": "back",
-    "h": "home",  "home": "home",
-    "e": "enter", "enter": "enter",
-    "l": "launch","launch": "launch",
-    "w": "wait_for","wait": "wait_for",
-}
-
-def manual_mode(device):
-    print(f"""
-╔══════════════════════════════════════════════════════╗
-║   JARVIS SKILL RECORDER  v4  (manual)               ║
-║   Device : {device:<42}║
-╚══════════════════════════════════════════════════════╝
-
-  Do each action on your phone, then describe it here.
-
-  t <label>   tap element     (e.g.  t New chat)
-  y <text>    type text       (e.g.  y Ayush Kumar)
-  b / h / e   back / home / enter
-  s up|down   swipe
-  w <label>   wait for element
-  l <pkg>     app launched
-  done        finish + save
-  skip / quit
-  (blank)     refresh current screen state
-""")
-
-    steps        = []
-    activity     = get_activity(device)
-    elements     = []
-    context_hint = ""
-    step_num     = 1
-    print(f"  Screen: {activity}\n")
-
-    while True:
-        try:
-            raw = input(f"  Step {step_num:2d} > ").strip()
-        except (KeyboardInterrupt, EOFError):
-            print("\n  Interrupted — discarding.")
-            sys.exit(0)
-
-        if not raw:
-            activity = get_activity(device)
-            elements = get_ui_elements(device)
-            labels   = [e["text"] for e in elements if e["text"]][:12]
-            print(f"  Screen : {activity.split('/')[-1]}")
-            print(f"  Labels : {labels}\n")
-            continue
-
-        parts = raw.split(None, 1)
-        cmd   = parts[0].lower()
-        rest  = parts[1].strip() if len(parts) > 1 else ""
-
-        if cmd in ("quit","q","discard"):
-            print("  Discarded.")
-            sys.exit(0)
-
-        if cmd in ("done","d","finish"):
-            break
-
-        if cmd == "skip":
-            continue
-
-        action_type = CMD_MAP.get(cmd)
-        if not action_type:
-            print(f"  Unknown: {cmd!r}  — use t/y/s/b/h/e/l/w/done/quit")
-            continue
-
-        activity = get_activity(device)
-        elements = get_ui_elements(device)
-
-        if action_type == "tap":
-            el   = find_element(elements, rest)
-            step = build_tap_step(
-                rest,
-                el["resource_id"] if el else "",
-                el["cls"]         if el else "",
-                el["x"]           if el else 0,
-                el["y"]           if el else 0,
-                activity
-            )
-            context_hint = rest
-
-        elif action_type == "type":
-            step = build_type_step(rest, context_hint, activity)
-            context_hint = ""
-
-        elif action_type == "wait_for":
-            el     = find_element(elements, rest)
-            target = {"text": rest}
-            if el and el["resource_id"]: target["resource_id"] = el["resource_id"]
-            step = {"action":"wait_for","target":target,"screen":activity,
-                    "_label":f"wait_for {rest!r}"}
-
-        elif action_type == "launch":
-            step = {"action":"launch","package":rest,"screen":activity,
-                    "_label":f"launch {rest}"}
-
-        elif action_type == "swipe":
-            step = {"action":"swipe","direction":rest or "up","screen":activity,
-                    "_label":f"swipe {rest or 'up'}"}
-
-        else:
-            step = {"action":action_type,"screen":activity,"_label":action_type}
-
-        steps.append(step)
-        print(f"  ✓ [{step_num:2d}] {step['_label']}")
-        step_num += 1
-
-    save_dialog(steps, device)
-
-
-# =============================================================================
-# Entry point
-# =============================================================================
-
-def main():
-    p = argparse.ArgumentParser()
-    p.add_argument("--device",    required=True)
-    p.add_argument("--from-log",  action="store_true",
-                   help="Build skill from tap_log.json (recorded by tap_logger.py)")
-    args = p.parse_args()
-
-    if args.from_log:
-        from_log_mode(args.device)
-    else:
-        manual_mode(args.device)
 
 
 if __name__ == "__main__":

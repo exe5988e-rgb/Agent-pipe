@@ -6,7 +6,7 @@
 #    1. ADB connect Phone A + Phone B
 #    2. Verify Phone B Claude bridge is reachable
 #
-#  Phone A : 192.168.29.48:34011
+#  Phone A : 192.168.29.48:39237
 #  Phone B : 192.168.29.110:8890  (Claude brain)
 #
 #  Usage:
@@ -14,7 +14,7 @@
 #    bash ~/workflows/jarvis_start.sh --stop
 # ================================================================
 
-PHONE_A="192.168.29.48:34011"
+PHONE_A="192.168.29.48:39237"
 PHONE_B="192.168.29.110:35617"
 PHONE_B_BRIDGE="http://192.168.29.110:8890"
 

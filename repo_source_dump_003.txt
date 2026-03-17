@@ -2817,9 +2817,9 @@ if __name__ == "__main__":
     "last_seen": 1773735968.8396266
   },
   "4203f6dd32c9|opt4_launch:settings": {
-    "to": "8c512c8be2eb",
-    "count": 8,
-    "last_seen": 1773736467.196039
+    "to": "2b412b36d6a6",
+    "count": 1,
+    "last_seen": 1773736522.098721
   },
   "4203f6dd32c9|opt4_launch:chrome": {
     "to": "ec2d5cc0aa50",

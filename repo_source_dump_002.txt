@@ -98,12 +98,14 @@ _SKIP_ACTIVITIES = {
     "com.whatsapp/.voip.calling.ui.VoipActivity",
 }
 
-# WhatsApp Chats tab intent — lands on HomeActivity with Chats tab active
-_WA_CHATS_INTENT = (
-    "am start -n com.whatsapp/.home.ui.HomeActivity "
-    "-a android.intent.action.MAIN "
-    "-c android.intent.category.LAUNCHER"
-)
+# Per-app forced launch intents (avoids landing on wrong tab via monkey)
+_APP_LAUNCH_INTENTS = {
+    "com.whatsapp": (
+        "am start -n com.whatsapp/.home.ui.HomeActivity "
+        "-a android.intent.action.MAIN "
+        "-c android.intent.category.LAUNCHER"
+    ),
+}
 
 # ── ADB helpers ───────────────────────────────────────────────────────────────
 
@@ -120,9 +122,14 @@ def _adb_pull(device, src, dst, timeout=10):
         capture_output=True, timeout=timeout
     )
 
-def launch_chats(device):
-    """Launch WhatsApp directly to Chats tab (not last-used tab)."""
-    _shell(device, _WA_CHATS_INTENT)
+def launch_app(device, package):
+    """Launch app via explicit intent if known, otherwise monkey."""
+    intent = _APP_LAUNCH_INTENTS.get(package)
+    if intent:
+        _shell(device, intent)
+    else:
+        _shell(device, "monkey", "-p", package,
+               "-c", "android.intent.category.LAUNCHER", "1")
     time.sleep(2.5)
 
 def tap_xy(device, x, y):
@@ -230,20 +237,20 @@ def _stable_fingerprint(sm: ScreenMap, activity: str, elements: list) -> str:
 
 # ── Path replay ───────────────────────────────────────────────────────────────
 
-def navigate_to(device, action_path):
+def navigate_to(device, package, action_path):
     """
-    Launch WhatsApp to Chats tab then replay action_path = [(x,y), ...].
-    Returns (activity, elements) of the final screen, or (None, None) on fail.
+    Launch app then replay action_path = [(x,y), ...] to reach a deep screen.
+    Returns (activity, elements) or (None, None) on failure.
     """
-    launch_chats(device)
+    launch_app(device, package)
     for (x, y) in action_path:
         tap_xy(device, x, y)
         act = get_activity(device)
-        if "com.whatsapp" not in act:
+        if package not in act:
             return None, None
     activity = get_activity(device)
     elements = get_elements(device)
-    if "com.whatsapp" not in activity:
+    if package not in activity:
         return None, None
     return activity, elements
 
@@ -262,9 +269,9 @@ def crawl(device, package, max_depth=3, max_screens=80):
 ╚══════════════════════════════════════════════════════╝
 """)
 
-    # Launch to Chats tab specifically
-    print("  Launching WhatsApp → Chats tab...")
-    launch_chats(device)
+    # Launch to correct starting screen
+    print(f"  Launching {package}...")
+    launch_app(device, package)
     time.sleep(0.5)
 
     activity = get_activity(device)
@@ -329,7 +336,7 @@ def crawl(device, package, max_depth=3, max_screens=80):
         # Navigate to this screen
         if path_to_here:
             print(f"\n  Navigating to {screen_id[:8]} (depth {len(path_to_here)})...")
-            activity, elements = navigate_to(device, path_to_here)
+            activity, elements = navigate_to(device, package, path_to_here)
             if activity is None:
                 print(f"  [crawl] navigation failed — skipping")
                 continue
@@ -382,12 +389,12 @@ def crawl(device, package, max_depth=3, max_screens=80):
 
             # Navigate cleanly to this screen then tap
             if path_to_here:
-                r_act, r_els = navigate_to(device, path_to_here)
+                r_act, r_els = navigate_to(device, package, path_to_here)
                 if r_act is None:
                     print(f" ✗ navigation failed")
                     continue
             else:
-                launch_chats(device)
+                launch_app(device, package)
 
             tap_xy(device, x, y)
 

@@ -7550,6 +7550,10 @@ java.lang.IllegalArgumentException: Argument expected after "text"
 ========================================================
 [device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3598997 bytes)[parser] DEBUG normalized: 'tap 1'
 [parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
+[parser] DEBUG normalized: 'tap 1'
+[parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
+[parser] DEBUG normalized: 'tap 1'
+[parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

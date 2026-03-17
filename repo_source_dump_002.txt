@@ -30744,6 +30744,225 @@
           "resource_id": ""
         }
       ]
+    },
+    "e78c6d4ab5c3": {
+      "screen_id": "e78c6d4ab5c3",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Navigate up",
+        "Clear",
+        "Voice search",
+        "Cast",
+        "More options",
+        "lofi hip hop music",
+        "element_7",
+        "Sponsored \u2013 Integrating Music Generation into the production workflow. \u2013 2 minutes, 30 seconds \u2013 Unleash your creativity with our AI-powered music studio. Generate pro-quality vocals. \u2013 ACE Studio \u2013 play video",
+        "element_9",
+        "element_10",
+        "More options",
+        "Watch",
+        "Sign up",
+        "1 A.M Study Session \ud83d\udcda [lofi hip hop] \u2013 1 hour, 1 minute, 14 seconds \u2013  \u2013 Lofi Girl - 130 million views - 6 years ago \u2013 play video",
+        "Minimised player",
+        "Play video",
+        "Close minimised player",
+        "Tap to watch live, Lofi Girl channel",
+        "Action menu",
+        "3 minutes 14 seconds of 1 hour 1 minute 13 seconds",
+        "Shorts",
+        "Create",
+        "Subscriptions: New content is available",
+        "You",
+        "element_26"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Clear",
+          "x": 680,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/search_clear"
+        },
+        {
+          "text": "Voice search",
+          "x": 848,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/voice_search"
+        },
+        {
+          "text": "Cast",
+          "x": 1016,
+          "y": 223,
+          "cls": "android.widget.Button",
+          "resource_id": "com.google.android.youtube:id/mdx_entry_point_button"
+        },
+        {
+          "text": "More options",
+          "x": 1170,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "lofi hip hop music",
+          "x": 396,
+          "y": 223,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.google.android.youtube:id/search_query"
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 1539,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results"
+        },
+        {
+          "text": "Sponsored \u2013 Integrating Music Generation into the production workflow. \u2013 2 minutes, 30 seconds \u2013 Unleash your creativity with our AI-powered music studio. Generate pro-quality vocals. \u2013 ACE Studio \u2013 play video",
+          "x": 620,
+          "y": 999,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_9",
+          "x": 620,
+          "y": 1242,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "element_10",
+          "x": 105,
+          "y": 1137,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "More options",
+          "x": 1142,
+          "y": 1116,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Watch",
+          "x": 324,
+          "y": 1516,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Sign up",
+          "x": 916,
+          "y": 1516,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "1 A.M Study Session \ud83d\udcda [lofi hip hop] \u2013 1 hour, 1 minute, 14 seconds \u2013  \u2013 Lofi Girl - 130 million views - 6 years ago \u2013 play video",
+          "x": 620,
+          "y": 2165,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Minimised player",
+          "x": 876,
+          "y": 2331,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.youtube:id/floaty_bar_controls_view"
+        },
+        {
+          "text": "Play video",
+          "x": 624,
+          "y": 2226,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/modern_miniplayer_overlay_action_button"
+        },
+        {
+          "text": "Close minimised player",
+          "x": 1128,
+          "y": 2226,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/modern_miniplayer_close"
+        },
+        {
+          "text": "Tap to watch live, Lofi Girl channel",
+          "x": 105,
+          "y": 2507,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Action menu",
+          "x": 1142,
+          "y": 2472,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "3 minutes 14 seconds of 1 hour 1 minute 13 seconds",
+          "x": 876,
+          "y": 2517,
+          "cls": "android.widget.SeekBar",
+          "resource_id": "com.google.android.youtube:id/floaty_bar_time_bar_view"
+        },
+        {
+          "text": "Home",
+          "x": 124,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 372,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Create",
+          "x": 620,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscriptions: New content is available",
+          "x": 868,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "You",
+          "x": 1116,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_26",
+          "x": 620,
+          "y": 2727,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -31040,7 +31259,8 @@
     "90f6cca629c6|tap:Edit suggestion lofi hip hop radio": "3c9076acc8ff",
     "06c59ed8f4e7|tap:element_4": "f024dd6aa1fa",
     "73e58d141483|tap:element_15": "963eb2fb8785",
-    "963eb2fb8785|tap:element_5": "8bd4aa0f7819"
+    "963eb2fb8785|tap:element_5": "8bd4aa0f7819",
+    "fc36bc1fb8c7|tap:element_3": "e78c6d4ab5c3"
   }
 }
 

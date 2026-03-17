@@ -2784,100 +2784,41 @@ if __name__ == "__main__":
 }
 
 //===== TERMUXFILE: gauntlet_log.txt =====
-[10:09:43] 
+[10:41:12] 
 ╔══════════════════════════════════════════════════════════════╗
 ║   JARVIS GAUNTLET RUNNER  — Overnight Mode                  ║
 ║   Device  : 192.168.29.48:34011                              ║
-║   Tasks   : 33                                               ║
+║   Tasks   : 1                                                ║
 ║   Skills  : 0                                                ║
-║   Started : 2026-03-17 10:09:43                              ║
+║   Started : 2026-03-17 10:41:12                              ║
 ╚══════════════════════════════════════════════════════════════╝
 
-[10:09:43]   Preparing device...
-[10:09:53]   Phone B bridge: ✓ reachable
-[10:09:53] 
+[10:41:12]   Preparing device...
+[10:41:18]   Phone B bridge: ✓ reachable
+[10:41:18] 
 ════════════════════════════════════════════════════════════════
-[10:09:53]   TASK 1/33  [1★]  [whatsapp]  timeout=255s
-[10:09:53]   Open WhatsApp
-[10:09:53] ════════════════════════════════════════════════════════════════
-[10:09:59] 
-  ✗ FAIL  |  1.3s  |  skills: 0
-[10:09:59]   Error: returncode=1
-[10:09:59]   Retrying once...
-[10:09:59]   Recovering device...
-[10:10:19]   Retry: ✗ FAIL  |  0.7s
-[10:10:19]   Recovering device...
-[10:10:28]   Pausing 5s...
-[10:10:33] 
-════════════════════════════════════════════════════════════════
-[10:10:33]   TASK 2/33  [1★]  [youtube]  timeout=255s
-[10:10:33]   Open YouTube
-[10:10:33] ════════════════════════════════════════════════════════════════
-[10:10:38] 
+[10:41:18]   TASK 1/1  [1★]  [whatsapp]  timeout=255s
+[10:41:18]   Open WhatsApp
+[10:41:18] ════════════════════════════════════════════════════════════════
+[10:41:24] 
   ✗ FAIL  |  0.3s  |  skills: 0
-[10:10:38]   Error: returncode=1
-[10:10:38]   Retrying once...
-[10:10:38]   Recovering device...
-[10:10:53]   Retry: ✗ FAIL  |  0.2s
-[10:10:53]   Recovering device...
-[10:10:59]   Pausing 5s...
-[10:11:04] 
-════════════════════════════════════════════════════════════════
-[10:11:04]   TASK 3/33  [1★]  [settings]  timeout=255s
-[10:11:04]   Open Settings
-[10:11:04] ════════════════════════════════════════════════════════════════
-[10:11:11] 
-  ✗ FAIL  |  0.2s  |  skills: 0
-[10:11:11]   Error: returncode=1
-[10:11:11]   Retrying once...
-[10:11:11]   Recovering device...
-[10:11:26]   Retry: ✗ FAIL  |  0.4s
-[10:11:26]   Recovering device...
-[10:11:33]   Pausing 5s...
-[10:11:38] 
-════════════════════════════════════════════════════════════════
-[10:11:38]   TASK 4/33  [1★]  [chrome]  timeout=255s
-[10:11:38]   Open Chrome
-[10:11:38] ════════════════════════════════════════════════════════════════
-[10:11:45] 
-  ✗ FAIL  |  0.7s  |  skills: 0
-[10:11:45]   Error: returncode=1
-[10:11:45]   Retrying once...
-[10:11:45]   Recovering device...
-[10:12:04]   Retry: ✗ FAIL  |  0.2s
-[10:12:04]   Recovering device...
-[10:12:12]   Pausing 5s...
-[10:12:17] 
-════════════════════════════════════════════════════════════════
-[10:12:17]   TASK 5/33  [1★]  [playstore]  timeout=255s
-[10:12:17]   Open Play Store
-[10:12:17] ════════════════════════════════════════════════════════════════
-[10:12:22] 
-  ✗ FAIL  |  0.2s  |  skills: 0
-[10:12:22]   Error: returncode=1
-[10:12:22]   Retrying once...
-[10:12:22]   Recovering device...
-[10:12:37]   Retry: ✗ FAIL  |  0.2s
-[10:12:37]   Recovering device...
-[10:12:44]   Pausing 5s...
-[10:12:49] 
-════════════════════════════════════════════════════════════════
-[10:12:49]   TASK 6/33  [1★]  [phone]  timeout=255s
-[10:12:49]   Open Phone app
-[10:12:49] ════════════════════════════════════════════════════════════════
-[10:12:54] 
-  ✗ FAIL  |  0.3s  |  skills: 0
-[10:12:54]   Error: returncode=1
-[10:12:54]   Retrying once...
-[10:12:54]   Recovering device...
-[10:13:09]   Retry: ✗ FAIL  |  0.1s
-[10:13:09]   Recovering device...
-[10:13:15]   Pausing 5s...
-[10:13:20] 
-════════════════════════════════════════════════════════════════
-[10:13:20]   TASK 7/33  [1★]  [phone]  timeout=255s
-[10:13:20]   Open Contacts
-[10:13:20] ════════════════════════════════════════════════════════════════
+[10:41:24]   Error: returncode=1
+[10:41:24]   Recovering device...
+[10:41:31] 
+╔══════════════════════════════════════════════════════════════╗
+║   GAUNTLET COMPLETE                                         ║
+╠══════════════════════════════════════════════════════════════╣
+║  Tasks    : 1                                                ║
+║  Passed   : 0                                                ║
+║  Failed   : 1                                                ║
+║  Skills   : 0 → 0 (+0)                                       ║
+║  Duration : 0m 18s                                             ║
+╠══════════════════════════════════════════════════════════════╣
+[10:41:31] ║  ✗ Open WhatsApp                                        0.3s  ║
+[10:41:31] ╚══════════════════════════════════════════════════════════════╝
+[10:41:31] 
+  Report: /data/data/com.termux/files/home/workflows/gauntlet_report.json
+[10:41:31]   Log   : /data/data/com.termux/files/home/workflows/gauntlet_log.txt
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4217,67 +4158,55 @@ if __name__ == "__main__":
 
 //===== TERMUXFILE: gauntlet_report.json =====
 {
-  "run_at": "2026-03-17T10:13:15.883163",
-  "in_progress": true,
+  "run_at": "2026-03-17T10:41:31.402194",
   "skills_before": 0,
-  "skills_current": 0,
+  "skills_after": 0,
+  "total_elapsed": 18.8,
   "results": [
     {
       "task": "Open WhatsApp",
       "category": "whatsapp",
       "difficulty": 1,
       "success": false,
-      "elapsed_s": 1.3,
-      "error": "orig=returncode=1 retry=returncode=1",
-      "retried": false
-    },
-    {
-      "task": "Open YouTube",
-      "category": "youtube",
-      "difficulty": 1,
-      "success": false,
       "elapsed_s": 0.3,
-      "error": "orig=returncode=1 retry=returncode=1",
-      "retried": false
-    },
-    {
-      "task": "Open Settings",
-      "category": "settings",
-      "difficulty": 1,
-      "success": false,
-      "elapsed_s": 0.2,
-      "error": "orig=returncode=1 retry=returncode=1",
-      "retried": false
-    },
-    {
-      "task": "Open Chrome",
-      "category": "chrome",
-      "difficulty": 1,
-      "success": false,
-      "elapsed_s": 0.7,
-      "error": "orig=returncode=1 retry=returncode=1",
-      "retried": false
-    },
-    {
-      "task": "Open Play Store",
-      "category": "playstore",
-      "difficulty": 1,
-      "success": false,
-      "elapsed_s": 0.2,
-      "error": "orig=returncode=1 retry=returncode=1",
-      "retried": false
-    },
-    {
-      "task": "Open Phone app",
-      "category": "phone",
-      "difficulty": 1,
-      "success": false,
-      "elapsed_s": 0.3,
-      "error": "orig=returncode=1 retry=returncode=1",
+      "error": "returncode=1",
       "retried": false
     }
   ]
 }
+
+//===== TERMUXFILE: keep_awake.sh =====
+#!/data/data/com.termux/files/usr/bin/bash
+# keep_awake.sh — prevents screen sleep by simulating activity every 15 seconds
+# Run in background: bash keep_awake.sh "192.168.29.48:34011" &
+# Stop with: kill $AWAKE_PID  or  pkill -f keep_awake.sh
+
+DEVICE="${1:-192.168.29.48:34011}"
+ADB="/data/data/com.termux/files/usr/bin/adb"
+INTERVAL=15
+
+echo "[keepawake] started for $DEVICE (interval=${INTERVAL}s) PID=$$"
+
+while true; do
+    # Check if screen is on
+    STATE=$($ADB -s "$DEVICE" shell dumpsys power 2>/dev/null | grep -c "mHoldingDisplaySuspendBlocker=true")
+
+    if [ "$STATE" -eq 0 ]; then
+        # Screen is off — wake it with KEYCODE_WAKEUP (never locks)
+        $ADB -s "$DEVICE" shell input keyevent 224 2>/dev/null
+        sleep 1
+        # Dismiss keyguard
+        $ADB -s "$DEVICE" shell wm dismiss-keyguard 2>/dev/null
+        echo "[keepawake] $(date +%H:%M:%S) screen was off — woke it"
+    else
+        # Screen is on — send a tiny movement to reset inactivity timer
+        # Move mouse by 0 pixels (triggers activity without moving anything)
+        $ADB -s "$DEVICE" shell input touchscreen swipe 500 1400 500 1400 100 2>/dev/null
+    fi
+
+    sleep $INTERVAL
+done
+
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash

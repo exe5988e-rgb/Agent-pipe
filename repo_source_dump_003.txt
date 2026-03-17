@@ -7092,7 +7092,149 @@ java.lang.IllegalArgumentException: Argument expected after "text"
 [parser] INFO parsed 'tap 15' -> {'action': 'tap', 'target': 15}
 [parser] DEBUG normalized: 'tap 16'
 [parser] INFO parsed 'tap 16' -> {'action': 'tap', 'target': 16}
+[parser] DEBUG normalized: 'tap 2'
+[parser] INFO parsed 'tap 2' -> {'action': 'tap', 'target': 2}
 
+########################################################
+  JARVIS  |  Search for Spotify on Play Store
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 210 screens (0 tainted), 275 transitions
+    whatsapp             132 screens
+    youtube              35 screens
+    vending              16 screens
+    chrome               12 screens
+    settings             6 screens
+    launcher             4 screens
+    termux               3 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+  TransitionMemory: 275 transitions (246 confirmed, threshold=2)
+[init] task_apps (ordered): ['spotify', 'play store']
+
+========================================================
+  STEP 1  |  Search for Spotify on Play Store
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3595434 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=5381e5683765 elements=26
+[step] UI: ['Clock', '11', ':', '42', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[OPT4v2] launcher -> launching spotify (com.spotify.music)
+[llm] OPT4v2 am start: com.spotify.music
+[OPT4v2] app_index -> 1/2
+[mem] invalidated com.android.launcher/.Launcher
+
+========================================================
+  STEP 2  |  Search for Spotify on Play Store
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3599730 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=5381e5683765 elements=26
+[step] UI: ['Clock', '11', ':', '42', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[OPT4v2] launcher -> launching play store (com.android.vending)
+[llm] OPT4v2 am start: com.android.vending
+[OPT4v2] app_index -> 2/2
+
+========================================================
+  STEP 3  |  Search for Spotify on Play Store
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (821847 bytes)
+[ui_parser] activity=com.android.vending/.AssetBrowserActivity
+[ui_parser] signal='com.android.vending/.AssetBrowserActivity'
+[mem] miss (unknown): com.android.vending/.AssetBrowserActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 23 elements from 192.168.29.48:34011
+[mem] stored com.android.vending/.AssetBrowserActivity hash=2542d3289e8f elements=23
+[step] UI: ['element_1', 'element_2', 'element_3', 'element_4', 'element_5', 'element_6', 'element_7', 'element_8']
+[map] new screen: vending_assetbrowseractivity (5d1a1d70d4c0)
+[tm] transition changed: 4203f6dd32c9|opt4_launch:play store 06c59ed8 -> 5d1a1d70
+[map] transition: launcher_launcher --[opt4_launch:play store]--> vending_assetbrowseractivity
+[map] screen: vending_assetbrowseractivity (5d1a1d70)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 1'
+[step] LLM: 'tap 1'
+[step] action: {'action': 'tap', 'target': 1}
+[input] dispatching: TouchEvent(x=946, y=237)
+[input] adb -s 192.168.29.48:34011 shell input tap 946 237
+[mem] invalidated com.android.vending/.AssetBrowserActivity
+[step] step=3/10 done=False history=['opt4_launch:spotify', 'opt4_launch:play store', 'tap [1] element_1']
+
+========================================================
+  STEP 4  |  Search for Spotify on Play Store
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (594851 bytes)
+[ui_parser] activity=com.android.vending/.AssetBrowserActivity
+[ui_parser] signal='com.android.vending/.AssetBrowserActivity'
+[mem] miss (unknown): com.android.vending/.AssetBrowserActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 16 elements from 192.168.29.48:34011
+[mem] stored com.android.vending/.AssetBrowserActivity hash=3c3d1aa78950 elements=16
+[step] UI: ['element_1', 'element_2', 'Options', 'element_4', 'Options', 'element_6', 'Options', 'element_8']
+[map] new screen: vending_assetbrowseractivity (46ae78626a87)
+[map] transition: vending_assetbrowseractivity --[tap:element_2]--> vending_assetbrowseractivity
+[map] screen: vending_assetbrowseractivity (46ae7862)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 15'
+[step] LLM: 'tap 15'
+[step] action: {'action': 'tap', 'target': 15}
+[input] dispatching: TouchEvent(x=775, y=2744)
+[input] adb -s 192.168.29.48:34011 shell input tap 775 2744
+[mem] invalidated com.android.vending/.AssetBrowserActivity
+[step] step=4/10 done=False history=['opt4_launch:spotify', 'opt4_launch:play store', 'tap [1] element_1', 'tap [15] element_15']
+
+========================================================
+  STEP 5  |  Search for Spotify on Play Store
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (366330 bytes)
+[ui_parser] activity=com.android.vending/.AssetBrowserActivity
+[ui_parser] signal='com.android.vending/.AssetBrowserActivity'
+[mem] miss (unknown): com.android.vending/.AssetBrowserActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 16 elements from 192.168.29.48:34011
+[mem] stored com.android.vending/.AssetBrowserActivity hash=3c3d1aa78950 elements=16
+[step] UI: ['element_1', 'element_2', 'Options', 'element_4', 'Options', 'element_6', 'Options', 'element_8']
+[map] screen: vending_assetbrowseractivity (46ae7862)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 16'
+[step] LLM: 'tap 16'
+[step] action: {'action': 'tap', 'target': 16}
+[input] dispatching: TouchEvent(x=1085, y=2744)
+[input] adb -s 192.168.29.48:34011 shell input tap 1085 2744
+[mem] invalidated com.android.vending/.AssetBrowserActivity
+[step] step=5/10 done=False history=['opt4_launch:spotify', 'opt4_launch:play store', 'tap [1] element_1', 'tap [15] element_15', 'tap [16] element_16']
+
+========================================================
+  STEP 6  |  Search for Spotify on Play Store
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (366268 bytes)
+[ui_parser] activity=com.android.vending/.AssetBrowserActivity
+[ui_parser] signal='com.android.vending/.AssetBrowserActivity'
+[mem] miss (unknown): com.android.vending/.AssetBrowserActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 16 elements from 192.168.29.48:34011
+[mem] stored com.android.vending/.AssetBrowserActivity hash=3c3d1aa78950 elements=16
+[step] UI: ['element_1', 'element_2', 'Options', 'element_4', 'Options', 'element_6', 'Options', 'element_8']
+[map] screen: vending_assetbrowseractivity (46ae7862)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 2'
+[step] LLM: 'tap 2'
+[step] action: {'action': 'tap', 'target': 2}
+[input] dispatching: TouchEvent(x=620, y=549)
+[input] adb -s 192.168.29.48:34011 shell input tap 620 549
+[mem] invalidated com.android.vending/.AssetBrowserActivity
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash

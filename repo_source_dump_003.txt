@@ -3038,8 +3038,8 @@ if __name__ == "__main__":
   },
   "963eb2fb8785|tap:element_5": {
     "to": "8bd4aa0f7819",
-    "count": 7,
-    "last_seen": 1773729673.2488809
+    "count": 8,
+    "last_seen": 1773729690.3282704
   }
 }
 
@@ -3134,6 +3134,7 @@ if __name__ == "__main__":
 [12:07:53]   PASS  27.2s  skills=5
 [12:07:58] 
 [29/33] [4★] [youtube] Play Warriyo Mortals on YouTube
+[12:11:30]   PASS  208.2s  skills=5
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4301,7 +4302,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-17T12:07:53.960388",
+  "run_at": "2026-03-17T12:11:30.473049",
   "skills_before": 0,
   "skills_current": 5,
   "results": [
@@ -4554,6 +4555,15 @@ if __name__ == "__main__":
       "difficulty": 4,
       "success": true,
       "elapsed_s": 27.2,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Play Warriyo Mortals on YouTube",
+      "category": "youtube",
+      "difficulty": 4,
+      "success": true,
+      "elapsed_s": 208.2,
       "error": null,
       "retried": false
     }
@@ -9544,6 +9554,72 @@ RuntimeError: No LLM backend available.
 [device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1120213 bytes)
 [ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
 [ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] dump failed: ''
+[step] UI: []
+[map] screen: youtube_shell$homeactivity (8bd4aa0f)
+[step] empty UI (5/8)
+
+========================================================
+  STEP 9  |  Play Warriyo Mortals on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1135182 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] dump failed: ''
+[step] UI: []
+[map] screen: youtube_shell$homeactivity (8bd4aa0f)
+[step] empty UI (6/8)
+
+========================================================
+  STEP 10  |  Play Warriyo Mortals on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1137591 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] dump failed: ''
+[step] UI: []
+[map] screen: youtube_shell$homeactivity (8bd4aa0f)
+[step] empty UI (7/8)
+
+========================================================
+  STEP 11  |  Play Warriyo Mortals on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1135750 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] dump failed: ''
+[step] UI: []
+[map] screen: youtube_shell$homeactivity (8bd4aa0f)
+[step] empty UI (8/8)
+[step] empty UI budget exhausted
+
+[controller] done in 10 steps
+
+[controller] history:
+  1. opt4_launch:youtube
+  2. tap [14] Close ad panel
+  3. tap [4] Close
+
+  Screen Map: 236 screens (0 tainted), 294 transitions
+    whatsapp             137 screens
+    youtube              48 screens
+    vending              21 screens
+    chrome               12 screens
+    settings             6 screens
+    termux               5 screens
+    launcher             5 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+  TransitionMemory: 294 transitions (253 confirmed, threshold=2)
+
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash

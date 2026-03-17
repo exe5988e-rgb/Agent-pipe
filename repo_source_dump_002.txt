@@ -16054,6 +16054,135 @@
           "y": 2632
         }
       ]
+    },
+    "836a9f602633": {
+      "screen_id": "836a9f602633",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/com.google.android.apps.youtube.app.watchwhile.InternalMainActivity",
+      "name": "youtube_internalmainactivity",
+      "labels": [
+        "Expand Mini Player",
+        "0 minutes 1 second of 2 minutes 40 seconds",
+        "TechFixIT 316k subscribers",
+        "Options",
+        "Share",
+        "Ask",
+        "Save to playlist",
+        "Comment\u2026",
+        "Gabimaru TRUE Power & Identity Explained - How He Became The STRONGEST Tensen | Hell's Paradise \u2013 34 minutes, 57 seconds \u2013 Go to channel Anime Balls Deep \u2013 Anime Balls Deep - 520 thousand views - 3 weeks ago \u2013 play video",
+        "Go to channel Anime Balls Deep",
+        "Action menu",
+        "Can Prime Yuji Beat Gojo and Sukuna 2 vs 1? (How Strong is Yuji) | JUJUTSU KAISEN MODULO \u2013 20 minutes, 58 seconds \u2013 Go to channel Anime Balls Deep \u2013 Anime Balls Deep - 394 thousand views - 12 days ago \u2013 play video"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Expand Mini Player",
+          "resource_id": "com.google.android.youtube:id/player_overlays",
+          "cls": "android.view.ViewGroup",
+          "x": 620,
+          "y": 488
+        },
+        {
+          "text": "0 minutes 1 second of 2 minutes 40 seconds",
+          "resource_id": "",
+          "cls": "android.widget.SeekBar",
+          "x": 620,
+          "y": 834
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 954
+        },
+        {
+          "text": "TechFixIT 316k subscribers",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 91,
+          "y": 1149
+        },
+        {
+          "text": "Options",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 273,
+          "y": 1149
+        },
+        {
+          "text": "Share",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 807,
+          "y": 1149
+        },
+        {
+          "text": "Ask",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 983,
+          "y": 1149
+        },
+        {
+          "text": "Save to playlist",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1162,
+          "y": 1149
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.ViewGroup",
+          "x": 620,
+          "y": 1397
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.ViewGroup",
+          "x": 619,
+          "y": 1443
+        },
+        {
+          "text": "Comment\u2026",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 682,
+          "y": 1443
+        },
+        {
+          "text": "Gabimaru TRUE Power & Identity Explained - How He Became The STRONGEST Tensen | Hell's Paradise \u2013 34 minutes, 57 seconds \u2013 Go to channel Anime Balls Deep \u2013 Anime Balls Deep - 520 thousand views - 3 weeks ago \u2013 play video",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 2071
+        },
+        {
+          "text": "Go to channel Anime Balls Deep",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 105,
+          "y": 2399
+        },
+        {
+          "text": "Action menu",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1142,
+          "y": 2378
+        },
+        {
+          "text": "Can Prime Yuji Beat Gojo and Sukuna 2 vs 1? (How Strong is Yuji) | JUJUTSU KAISEN MODULO \u2013 20 minutes, 58 seconds \u2013 Go to channel Anime Balls Deep \u2013 Anime Balls Deep - 394 thousand views - 12 days ago \u2013 play video",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 2687
+        }
+      ]
     }
   },
   "transitions": {
@@ -16255,7 +16384,8 @@
     "e1c8fa5142a3|New notification JensJulius Tejlgaard Uploaded: If \u2018David Guetta\u2019 had Electric Guitar 14 hours ago": "d04ca4685506",
     "e1c8fa5142a3|New notification The Infographics Show Uploaded 2 videos 2 hours ago": "d04ca4685506",
     "e1c8fa5142a3|New notification BRIGHT SIDE Uploaded 3 videos 3 hours ago": "d04ca4685506",
-    "e1c8fa5142a3|New notification Unexplained Mysteries Uploaded: 5 Mysteries About The Shroud Of Turin That Cannot Be Explained 4 hours ago": "5ca448df8e66"
+    "e1c8fa5142a3|New notification Unexplained Mysteries Uploaded: 5 Mysteries About The Shroud Of Turin That Cannot Be Explained 4 hours ago": "5ca448df8e66",
+    "e1c8fa5142a3|New notification TechFixIT Uploaded 3 videos 6 hours ago": "836a9f602633"
   }
 }
 

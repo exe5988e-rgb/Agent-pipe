@@ -5069,6 +5069,109 @@ RuntimeError: No LLM backend available.
   TransitionMemory: 253 transitions (244 confirmed, threshold=2)
 [parser] DEBUG normalized: 'tap 33'
 [parser] INFO parsed 'tap 33' -> {'action': 'tap', 'target': 33}
+[parser] DEBUG normalized: 'done'
+[parser] INFO parsed 'done' -> {'action': 'done'}
+
+########################################################
+  JARVIS  |  Open WhatsApp and go to Updates tab
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 185 screens (0 tainted), 253 transitions
+    whatsapp             130 screens
+    youtube              29 screens
+    vending              16 screens
+    launcher             4 screens
+    termux               3 screens
+    unknown              1 screens
+    settings             1 screens
+    chrome               1 screens
+  TransitionMemory: 253 transitions (244 confirmed, threshold=2)
+[init] task_apps (ordered): ['whatsapp']
+
+========================================================
+  STEP 1  |  Open WhatsApp and go to Updates tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3597361 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=81366d384a40 elements=26
+[step] UI: ['Clock', '11', ':', '20', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[OPT4v2] launcher -> launching whatsapp (com.whatsapp)
+[llm] OPT4v2 am start: com.whatsapp
+[OPT4v2] app_index -> 1/1
+
+========================================================
+  STEP 2  |  Open WhatsApp and go to Updates tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (425398 bytes)
+[OPT7] predicted next screen: whatsapp_homeactivity (7c51d7e8)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 36 elements from 192.168.29.48:34011
+[mem] stored com.whatsapp/.home.ui.HomeActivity hash=dd5242850229 elements=36
+[step] UI: ['element_1', 'Search', 'More options', 'element_4', 'Call', 'Schedule', 'Keypad', 'element_8']
+[map] new screen: whatsapp_homeactivity (d3d30bd552b1)
+[tm] transition changed: 4203f6dd32c9|opt4_launch:whatsapp 7c51d7e8 -> d3d30bd5
+[map] transition: launcher_launcher --[opt4_launch:whatsapp]--> whatsapp_homeactivity
+[map] screen: whatsapp_homeactivity (d3d30bd5)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 33'
+[step] LLM: 'tap 33'
+[step] action: {'action': 'tap', 'target': 33}
+[input] dispatching: TouchEvent(x=372, y=2576)
+[input] adb -s 192.168.29.48:34011 shell input tap 372 2576
+[mem] invalidated com.whatsapp/.home.ui.HomeActivity
+[step] step=2/8 done=False history=['opt4_launch:whatsapp', 'tap [33] Updates']
+
+========================================================
+  STEP 3  |  Open WhatsApp and go to Updates tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (615911 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 27 elements from 192.168.29.48:34011
+[mem] stored com.whatsapp/.home.ui.HomeActivity hash=71226a108a9f elements=27
+[step] UI: ['element_1', 'Search', 'More options', 'element_4', 'My status updates', 'New status update', 'Asif Mudassir, 0 unread statuses', 'element_8']
+[map] new screen: whatsapp_homeactivity (24f4242fbb4f)
+[map] transition: whatsapp_homeactivity --[tap:Communities]--> whatsapp_homeactivity
+[map] screen: whatsapp_homeactivity (24f4242f)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'done'
+[step] LLM: 'done'
+[step] action: {'action': 'done'}
+[input] DONE — no dispatch
+[mem] invalidated com.whatsapp/.home.ui.HomeActivity
+[skill] learned: 'open whatsapp and go'  (2 steps)  activity=HomeActivity
+[step] step=3/8 done=True history=['opt4_launch:whatsapp', 'tap [33] Updates', 'done']
+
+[controller] done in 3 steps
+
+[controller] history:
+  1. opt4_launch:whatsapp
+  2. tap [33] Updates
+  3. done
+
+  Screen Map: 187 screens (0 tainted), 254 transitions
+    whatsapp             132 screens
+    youtube              29 screens
+    vending              16 screens
+    launcher             4 screens
+    termux               3 screens
+    unknown              1 screens
+    settings             1 screens
+    chrome               1 screens
+  TransitionMemory: 254 transitions (243 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

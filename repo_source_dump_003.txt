@@ -6382,6 +6382,8 @@ java.lang.IllegalArgumentException: Argument expected after "text"
   TransitionMemory: 265 transitions (246 confirmed, threshold=2)
 [parser] DEBUG normalized: 'tap 3'
 [parser] INFO parsed 'tap 3' -> {'action': 'tap', 'target': 3}
+[parser] DEBUG normalized: 'type google.com'
+[parser] INFO parsed 'type google.com' -> {'action': 'type', 'text': 'google.com'}
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

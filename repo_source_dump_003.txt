@@ -2836,6 +2836,7 @@ if __name__ == "__main__":
 [11:13:41]   PASS  42.7s  skills=0
 [11:13:46] 
 [3/33] [1★] [settings] Open Settings
+[11:14:26]   PASS  36.6s  skills=0
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4003,7 +4004,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-17T11:13:41.546151",
+  "run_at": "2026-03-17T11:14:26.380094",
   "skills_before": 0,
   "skills_current": 0,
   "results": [
@@ -4022,6 +4023,15 @@ if __name__ == "__main__":
       "difficulty": 1,
       "success": true,
       "elapsed_s": 42.7,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Open Settings",
+      "category": "settings",
+      "difficulty": 1,
+      "success": true,
+      "elapsed_s": 36.6,
       "error": null,
       "retried": false
     }
@@ -4302,6 +4312,80 @@ RuntimeError: No LLM backend available.
     termux               3 screens
     unknown              1 screens
   TransitionMemory: 249 transitions (242 confirmed, threshold=2)
+[parser] DEBUG normalized: 'done'
+[parser] INFO parsed 'done' -> {'action': 'done'}
+
+########################################################
+  JARVIS  |  Open Settings
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 182 screens (0 tainted), 249 transitions
+    whatsapp             130 screens
+    youtube              29 screens
+    vending              15 screens
+    launcher             4 screens
+    termux               3 screens
+    unknown              1 screens
+  TransitionMemory: 249 transitions (242 confirmed, threshold=2)
+[init] task_apps (ordered): ['settings']
+
+========================================================
+  STEP 1  |  Open Settings
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3596223 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=660c1950eb45 elements=26
+[step] UI: ['Clock', '11', ':', '13', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[OPT4v2] launcher -> launching settings (com.android.settings)
+[llm] OPT4v2 am start: com.android.settings
+[OPT4v2] app_index -> 1/1
+
+========================================================
+  STEP 2  |  Open Settings
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (211515 bytes)
+[ui_parser] activity=com.android.settings/.Settings
+[ui_parser] signal='com.android.settings/.Settings'
+[mem] miss (unknown): com.android.settings/.Settings
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 13 elements from 192.168.29.48:34011
+[mem] stored com.android.settings/.Settings hash=a5e8e83d4ae9 elements=13
+[step] UI: ['Search box', 'Search', 'element_3', 'element_4', 'element_5', 'element_6', 'element_7', 'element_8']
+[map] new screen: settings_settings (f3100103b174)
+[map] transition: launcher_launcher --[opt4_launch:settings]--> settings_settings
+[map] screen: settings_settings (f3100103)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'done'
+[step] LLM: 'done'
+[step] action: {'action': 'done'}
+[input] DONE — no dispatch
+[mem] invalidated com.android.settings/.Settings
+[skill] too few steps to save
+[step] step=2/5 done=True history=['opt4_launch:settings', 'done']
+
+[controller] done in 2 steps
+
+[controller] history:
+  1. opt4_launch:settings
+  2. done
+
+  Screen Map: 183 screens (0 tainted), 250 transitions
+    whatsapp             130 screens
+    youtube              29 screens
+    vending              15 screens
+    launcher             4 screens
+    termux               3 screens
+    unknown              1 screens
+    settings             1 screens
+  TransitionMemory: 250 transitions (242 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

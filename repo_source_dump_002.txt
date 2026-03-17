@@ -19928,6 +19928,483 @@
           "resource_id": ""
         }
       ]
+    },
+    "4203f6dd32c9": {
+      "screen_id": "4203f6dd32c9",
+      "package": "com.android.launcher",
+      "activity": "com.android.launcher/.Launcher",
+      "name": "launcher_launcher",
+      "labels": [
+        "Clock",
+        ":",
+        "element_5",
+        "Haze",
+        "29\u200e\u00b0\u200e",
+        "Tue 17 Mar",
+        "At a Glance",
+        "element_10",
+        "element_11",
+        "element_12",
+        "element_13",
+        "element_14",
+        "element_15",
+        "element_16",
+        "element_17",
+        "Google Search",
+        "Play Store",
+        "Weather",
+        "Maps",
+        "Meet (original)",
+        "Phone",
+        "Messages",
+        "Photos",
+        "Camera"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Clock",
+          "x": 620,
+          "y": 418,
+          "cls": "com.android.launcher3.widget.CustomLauncherAppWidgetHostView",
+          "resource_id": ""
+        },
+        {
+          "text": "11",
+          "x": 199,
+          "y": 396,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.oneplus.deskclock:id/local_hour_txt"
+        },
+        {
+          "text": ":",
+          "x": 340,
+          "y": 389,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.oneplus.deskclock:id/local_colon_txt"
+        },
+        {
+          "text": "07",
+          "x": 481,
+          "y": 396,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.oneplus.deskclock:id/local_minutes_txt"
+        },
+        {
+          "text": "element_5",
+          "x": 1052,
+          "y": 377,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.oneplus.deskclock:id/local_weather_description"
+        },
+        {
+          "text": "Haze",
+          "x": 1020,
+          "y": 377,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.oneplus.deskclock:id/iv_weather_type"
+        },
+        {
+          "text": "29\u200e\u00b0\u200e",
+          "x": 1113,
+          "y": 377,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.oneplus.deskclock:id/local_weather_info_txt"
+        },
+        {
+          "text": "Tue 17 Mar",
+          "x": 1000,
+          "y": 459,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.oneplus.deskclock:id/local_date_info_txt"
+        },
+        {
+          "text": "At a Glance",
+          "x": 620,
+          "y": 996,
+          "cls": "com.android.launcher3.widget.CustomLauncherAppWidgetHostView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_10",
+          "x": 411,
+          "y": 995,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_11",
+          "x": 746,
+          "y": 995,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_12",
+          "x": 996,
+          "y": 995,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_13",
+          "x": 147,
+          "y": 1573,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_google_logo"
+        },
+        {
+          "text": "element_14",
+          "x": 452,
+          "y": 1573,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_text_search"
+        },
+        {
+          "text": "element_15",
+          "x": 757,
+          "y": 1573,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_shortcut"
+        },
+        {
+          "text": "element_16",
+          "x": 925,
+          "y": 1573,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_voice_search"
+        },
+        {
+          "text": "element_17",
+          "x": 1093,
+          "y": 1573,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_lens"
+        },
+        {
+          "text": "Google Search",
+          "x": 620,
+          "y": 1573,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_background"
+        },
+        {
+          "text": "Play Store",
+          "x": 152,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Weather",
+          "x": 386,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Maps",
+          "x": 620,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Meet (original)",
+          "x": 854,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Phone",
+          "x": 269,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Messages",
+          "x": 503,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Photos",
+          "x": 737,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Camera",
+          "x": 971,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        }
+      ]
+    },
+    "7c51d7e864c3": {
+      "screen_id": "7c51d7e864c3",
+      "package": "com.whatsapp",
+      "activity": "com.whatsapp/.home.ui.HomeActivity",
+      "name": "whatsapp_homeactivity",
+      "labels": [
+        "element_1",
+        "Scan to Pay",
+        "More options",
+        "Ask Meta AI or Search",
+        "Swipe down to reveal additional actions",
+        "Inbox filters, Radio Group",
+        "All filter, , selected",
+        "Unread filter, 2, unselected",
+        "Favourites filter, , unselected",
+        "Groups filter, , unselected",
+        "Family filter, , unselected",
+        "element_12",
+        "element_13",
+        "element_14",
+        "element_15",
+        "element_16",
+        "element_17",
+        "element_18",
+        "element_19",
+        "element_20",
+        "Message your assistant",
+        "element_22",
+        "element_23",
+        "New chat",
+        "element_25",
+        "element_26",
+        "Chats, 2 new notifications",
+        "Updates",
+        "Communities",
+        "Calls"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 620,
+          "y": 1286,
+          "cls": "androidx.viewpager.widget.ViewPager",
+          "resource_id": "com.whatsapp:id/pager"
+        },
+        {
+          "text": "Scan to Pay",
+          "x": 1016,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/menuitem_payment_qr"
+        },
+        {
+          "text": "More options",
+          "x": 1170,
+          "y": 237,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/menuitem_overflow"
+        },
+        {
+          "text": "Ask Meta AI or Search",
+          "x": 620,
+          "y": 433,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/my_search_bar"
+        },
+        {
+          "text": "Swipe down to reveal additional actions",
+          "x": 620,
+          "y": 1489,
+          "cls": "androidx.recyclerview.widget.RecyclerView",
+          "resource_id": "android:id/list"
+        },
+        {
+          "text": "Inbox filters, Radio Group",
+          "x": 620,
+          "y": 671,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "All filter, , selected",
+          "x": 126,
+          "y": 657,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Unread filter, 2, unselected",
+          "x": 356,
+          "y": 657,
+          "cls": "android.widget.RadioButton",
+          "resource_id": "com.whatsapp:id/conversations_filter_debug_view_id_unread"
+        },
+        {
+          "text": "Favourites filter, , unselected",
+          "x": 671,
+          "y": 657,
+          "cls": "android.widget.RadioButton",
+          "resource_id": "com.whatsapp:id/conversations_filter_debug_view_id_favorite"
+        },
+        {
+          "text": "Groups filter, , unselected",
+          "x": 969,
+          "y": 657,
+          "cls": "android.widget.RadioButton",
+          "resource_id": "com.whatsapp:id/conversations_filter_debug_view_id_groups"
+        },
+        {
+          "text": "Family filter, , unselected",
+          "x": 1175,
+          "y": 657,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "element_12",
+          "x": 620,
+          "y": 853,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/conversations_archive_header"
+        },
+        {
+          "text": "element_13",
+          "x": 620,
+          "y": 1070,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "element_14",
+          "x": 126,
+          "y": 1070,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "element_15",
+          "x": 620,
+          "y": 1336,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "element_16",
+          "x": 126,
+          "y": 1336,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "element_17",
+          "x": 620,
+          "y": 1602,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "element_18",
+          "x": 126,
+          "y": 1602,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "element_19",
+          "x": 620,
+          "y": 1868,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "element_20",
+          "x": 126,
+          "y": 1868,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "Message your assistant",
+          "x": 940,
+          "y": 2042,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/extended_mini_fab"
+        },
+        {
+          "text": "element_22",
+          "x": 620,
+          "y": 2134,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "element_23",
+          "x": 126,
+          "y": 2134,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "New chat",
+          "x": 1086,
+          "y": 2280,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/fab"
+        },
+        {
+          "text": "element_25",
+          "x": 620,
+          "y": 2350,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "element_26",
+          "x": 126,
+          "y": 2357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "Chats, 2 new notifications",
+          "x": 124,
+          "y": 2576,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Updates",
+          "x": 372,
+          "y": 2576,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Communities",
+          "x": 620,
+          "y": 2576,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Calls",
+          "x": 868,
+          "y": 2576,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "You",
+          "x": 1116,
+          "y": 2576,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -20172,7 +20649,8 @@
     "866f5ed64950|element_154_237": "7571051ef9ea",
     "866f5ed64950|element_1114_237": "583c296ce79a",
     "866f5ed64950|element_17_419": "583c296ce79a",
-    "866f5ed64950|element_246_419": "583c296ce79a"
+    "866f5ed64950|element_246_419": "583c296ce79a",
+    "4203f6dd32c9|opt4_launch:whatsapp": "7c51d7e864c3"
   }
 }
 

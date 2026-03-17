@@ -18256,6 +18256,159 @@
           "y": 2604
         }
       ]
+    },
+    "2021bab01443": {
+      "screen_id": "2021bab01443",
+      "package": "com.android.vending",
+      "activity": "com.android.vending/.AssetBrowserActivity",
+      "name": "vending_assetbrowseractivity",
+      "labels": [
+        "Unacademy",
+        "Average rating 4.0 stars in 1 million reviews",
+        "Content rating Rated for 3+",
+        "Screenshot 1 of 8",
+        "Screenshot 2 of 8",
+        "Screenshot 3 of 8",
+        "Screenshot 4 of 8",
+        "Learn more About this app"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Unacademy",
+          "resource_id": "",
+          "cls": "android.widget.TextView",
+          "x": 514,
+          "y": 622
+        },
+        {
+          "text": "Average rating 4.0 stars in 1 million reviews",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 182,
+          "y": 892
+        },
+        {
+          "text": "Content rating Rated for 3+",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 677,
+          "y": 892
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 620,
+          "y": 1130
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1114,
+          "y": 1130
+        },
+        {
+          "text": "Screenshot 1 of 8",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 212,
+          "y": 1609
+        },
+        {
+          "text": "Screenshot 2 of 8",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 585,
+          "y": 1609
+        },
+        {
+          "text": "Screenshot 3 of 8",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 958,
+          "y": 1609
+        },
+        {
+          "text": "Screenshot 4 of 8",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1204,
+          "y": 1609
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 620,
+          "y": 2047
+        },
+        {
+          "text": "Learn more About this app",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1135,
+          "y": 2047
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 213,
+          "y": 2437
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 633,
+          "y": 2437
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 98,
+          "y": 237
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 974,
+          "y": 237
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1142,
+          "y": 237
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 155,
+          "y": 2604
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 775,
+          "y": 2604
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1085,
+          "y": 2604
+        }
+      ]
     }
   },
   "transitions": {
@@ -18474,7 +18627,8 @@
     "b57a107c23b7|Search": "d31fa54810f0",
     "7571051ef9ea|element_806_419": "866f5ed64950",
     "7571051ef9ea|element_598_1232": "5ebd141c4c82",
-    "7571051ef9ea|element_598_1804": "e85d868a15f2"
+    "7571051ef9ea|element_598_1804": "e85d868a15f2",
+    "7571051ef9ea|element_598_2120": "2021bab01443"
   }
 }
 

@@ -18744,6 +18744,145 @@
           "y": 2604
         }
       ]
+    },
+    "04321b652bb5": {
+      "screen_id": "04321b652bb5",
+      "package": "com.android.vending",
+      "activity": "com.android.vending/.AssetBrowserActivity",
+      "name": "vending_assetbrowseractivity",
+      "labels": [
+        "Meta Platforms, Inc.",
+        "Average rating 4.4 stars in 173 million reviews",
+        "Content rating Rated for 12+",
+        "Screenshot 1 of 8",
+        "Screenshot 2 of 8",
+        "Screenshot 3 of 8",
+        "Screenshot 4 of 8",
+        "Learn more About this app"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Meta Platforms, Inc.",
+          "resource_id": "",
+          "cls": "android.widget.TextView",
+          "x": 608,
+          "y": 535
+        },
+        {
+          "text": "Average rating 4.4 stars in 173 million reviews",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 200,
+          "y": 787
+        },
+        {
+          "text": "Content rating Rated for 12+",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 693,
+          "y": 787
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 620,
+          "y": 1025
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1114,
+          "y": 1025
+        },
+        {
+          "text": "Screenshot 1 of 8",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 183,
+          "y": 1840
+        },
+        {
+          "text": "Screenshot 2 of 8",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 498,
+          "y": 1840
+        },
+        {
+          "text": "Screenshot 3 of 8",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 813,
+          "y": 1840
+        },
+        {
+          "text": "Screenshot 4 of 8",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1117,
+          "y": 1840
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 620,
+          "y": 2278
+        },
+        {
+          "text": "Learn more About this app",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1135,
+          "y": 2278
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 98,
+          "y": 237
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 974,
+          "y": 237
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1142,
+          "y": 237
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 155,
+          "y": 2604
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 775,
+          "y": 2604
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1085,
+          "y": 2604
+        }
+      ]
     }
   },
   "transitions": {
@@ -18965,7 +19104,8 @@
     "7571051ef9ea|element_598_1804": "e85d868a15f2",
     "7571051ef9ea|element_598_2120": "2021bab01443",
     "7571051ef9ea|element_598_2385": "8853acfb0c72",
-    "7571051ef9ea|element_1208_2120": "68dbc2f46e71"
+    "7571051ef9ea|element_1208_2120": "68dbc2f46e71",
+    "7571051ef9ea|element_1208_2385": "04321b652bb5"
   }
 }
 

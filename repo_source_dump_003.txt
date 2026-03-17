@@ -3228,8 +3228,8 @@ if __name__ == "__main__":
   },
   "572db9f8d8bd|retry": {
     "to": "35187eb4193b",
-    "count": 2,
-    "last_seen": 1773737699.5304685
+    "count": 3,
+    "last_seen": 1773737707.4310458
   }
 }
 
@@ -3297,6 +3297,7 @@ if __name__ == "__main__":
 [14:20:22]   PASS  220.2s  skills=6
 [14:20:27] 
 [20/33] [2★] [playstore] Search for Spotify on Play Store
+[14:25:13]   PASS  282.7s  skills=6
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4464,7 +4465,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-17T14:20:22.708236",
+  "run_at": "2026-03-17T14:25:13.589876",
   "skills_before": 6,
   "skills_current": 6,
   "results": [
@@ -4636,6 +4637,15 @@ if __name__ == "__main__":
       "difficulty": 2,
       "success": true,
       "elapsed_s": 220.2,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Search for Spotify on Play Store",
+      "category": "playstore",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 282.7,
       "error": null,
       "retried": false
     }
@@ -8082,6 +8092,114 @@ Traceback (most recent call last):
 RuntimeError: No LLM backend available.
   Phone B offline? Check: curl http://192.168.29.110:8890/health
   Local LLM down? Run:    bash ~/jarvis_server_init.sh
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 311, in run
+    run_step(state, device=device, model_path=model_path)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 267, in run_step
+    llm_out = generate(prompt, model_path=model_path)
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/reasoning/llm_client.py", line 109, in generate
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+
+========================================================
+  STEP 7  |  Search for Spotify on Play Store
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1305546 bytes)
+[ui_parser] activity=com.termux/.app.TermuxActivity
+[ui_parser] signal='com.termux/.app.TermuxActivity'
+[mem] miss (unknown): com.termux/.app.TermuxActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 16 elements from 192.168.29.48:34011
+[mem] stored com.termux/.app.TermuxActivity hash=4df953706210 elements=16
+[step] UI: ['[13:53:36]   PASS  13.1s  skills=6\n[13:53:41]\n[9/33] [2★] [whatsapp] Open WhatsApp and go to Updates tab\n[13:53:58]   PASS  14.2s  skills=6\n[13:54:03]\n[10/33] [2★] [whatsapp] Open WhatsApp and search for Mummy in chats\n[13:54:20]   PASS  13.6s  skills=6\n[13:54:25]\n[11/33] [2★] [youtube] Open YouTube and go to Subscriptions\n[13:55:48]   PASS  79.2s  skills=6\n[13:55:53]\n[12/33] [2★] [youtube] Search for MrBeast on YouTube\n[14:00:36]   PASS  279.6s  skills=6\n[14:00:41]\n[13/33] [2★] [settings] Open Settings and go to WiFi\n[14:03:21]   PASS  157.2s  skills=6\n[14:03:26]\n[14/33] [2★] [settings] Open Settings and go to Display\n[14:05:01]   PASS  91.0s  skills=6\n[14:05:06]\n[15/33] [2★] [settings] Open Settings and go to Notifications\n[14:07:01]   PASS  112.4s  skills=6\n[14:07:06]\n[16/33] [2★] [settings] Open Settings and check battery percentage\n[14:07:28]   PASS  18.4s  skills=6\n[14:07:33]\n[17/33] [2★] [chrome] Open Chrome and go to google.com\n[14:13:28]   PASS  351.6s  skills=6\n[14:13:33]\n[18/33] [2★] [chrome] Open Chrome and open a new tab\n[14:16:34]   PASS  177.2s  skills=6\n[14:16:39]\n[19/33] [2★] [chrome] Search for weather today in Chrome\n[14:20:22]   PASS  220.2s  skills=6\n[14:20:27]\n[20/33] [2★] [playstore] Search for Spotify on Play Store', 'ESC', 'element_3', '☰', '⇳', 'HOME', '↑', 'END']
+[map] new screen: launcher_launcher (d6f8a689a070)
+[map] transition: vending_assetbrowseractivity --[retry]--> launcher_launcher
+[map] screen: launcher_launcher (d6f8a689)
+[step] repeat warning: 'retry'
+[llm] prompt tail: ..."ion:\nWARNING: 'retry' repeated 3+ times with no change — try a different action."
+[llm] Phone B unreachable: timed out
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 8  |  Search for Spotify on Play Store
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (2102148 bytes)
+[ui_parser] activity=com.instagram.android/com.instagram.mainactivity.InstagramMainActivity
+[ui_parser] signal='com.instagram.android/com.instagram.mainactivity.InstagramMainActivity'
+[mem] miss (unknown): com.instagram.android/com.instagram.mainactivity.InstagramMainActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 33 elements from 192.168.29.48:34011
+[mem] stored com.instagram.android/com.instagram.mainactivity.InstagramMainActivity hash=dc4019d3a103 elements=33
+[step] UI: ['element_1', 'element_2', 'element_3', 'element_4', 'element_5', "amirshams8321's story, 0 of 26, Unseen.", 'reels tray container', 'element_8']
+[map] new screen: android_instagrammainactivity (35187eb4193b)
+[tm] transition changed: 572db9f8d8bd|retry d6f8a689 -> 35187eb4
+[map] transition: vending_assetbrowseractivity --[retry]--> android_instagrammainactivity
+[map] screen: android_instagrammainactivity (35187eb4)
+[step] repeat warning: 'retry'
+[llm] prompt tail: ..."ion:\nWARNING: 'retry' repeated 3+ times with no change — try a different action."
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 9  |  Search for Spotify on Play Store
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1858243 bytes)
+[ui_parser] activity=com.instagram.android/com.instagram.mainactivity.InstagramMainActivity
+[ui_parser] signal='com.instagram.android/com.instagram.mainactivity.InstagramMainActivity'
+[mem] HIT com.instagram.android/com.instagram.mainactivity.InstagramMainActivity hash=dc4019d3a103 hits=1 elements=33
+[step] UI: ['element_1', 'element_2', 'element_3', 'element_4', 'element_5', "amirshams8321's story, 0 of 26, Unseen.", 'reels tray container', 'element_8']
+[map] screen: android_instagrammainactivity (35187eb4)
+[step] repeat warning: 'retry'
+[llm] prompt tail: ..."ion:\nWARNING: 'retry' repeated 3+ times with no change — try a different action."
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 10  |  Search for Spotify on Play Store
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1801556 bytes)
+[ui_parser] activity=com.instagram.android/com.instagram.mainactivity.InstagramMainActivity
+[ui_parser] signal='com.instagram.android/com.instagram.mainactivity.InstagramMainActivity'
+[mem] HIT com.instagram.android/com.instagram.mainactivity.InstagramMainActivity hash=dc4019d3a103 hits=2 elements=33
+[step] UI: ['element_1', 'element_2', 'element_3', 'element_4', 'element_5', "amirshams8321's story, 0 of 26, Unseen.", 'reels tray container', 'element_8']
+[map] screen: android_instagrammainactivity (35187eb4)
+[step] repeat warning: 'retry'
+[llm] prompt tail: ..."ion:\nWARNING: 'retry' repeated 3+ times with no change — try a different action."
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+[controller] history:
+  1. opt4_launch:spotify
+  2. opt4_launch:play store
+  3. retry
+  4. retry
+  5. retry
+  6. retry
+
+  Screen Map: 278 screens (0 tainted), 332 transitions
+    whatsapp             142 screens
+    youtube              54 screens
+    chrome               25 screens
+    vending              22 screens
+    settings             15 screens
+    launcher             9 screens
+    termux               7 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+    dialer               1 screens
+    android              1 screens
+  TransitionMemory: 332 transitions (255 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
@@ -12231,202 +12349,5 @@ MOCK_ELEMENTS = [
 def parse_ui(image_path: str) -> list:
     print(f"[parser] mock — {len(MOCK_ELEMENTS)} elements")
     return [dict(e) for e in MOCK_ELEMENTS]
-
-
-//===== TERMUXFILE: jarvis-agent/perception/ui_parser.py =====
-"""
-perception/ui_parser.py
-
-Real UI parser — replaces ui_mock_parser.py.
-Uses ADB uiautomator dump to get actual screen elements.
-
-Interface unchanged: parse_ui(image_path, adb_device) -> list[{id,text,x,y}]
-
-What we extract per element:
-  id    : sequential int starting at 1
-  text  : content-desc or text attribute (whichever is non-empty)
-  x, y  : center of bounds
-  bounds: raw string e.g. "[0,0][100,50]"
-  cls   : short class name e.g. "Button", "TextView"
-  clickable: bool
-
-Filtering:
-  - Skip nodes with no text and no content-desc
-  - Skip zero-size bounds [x,y][x,y]
-  - Skip pure containers (FrameLayout, LinearLayout etc) unless clickable
-  - Cap at MAX_ELEMENTS to keep prompt token budget sane
-"""
-
-import re
-import subprocess
-import os
-
-MAX_ELEMENTS = 20
-
-# Short class name map
-_CLS_SHORT = {
-    "android.widget.TextView":       "Text",
-    "android.widget.EditText":       "Input",
-    "android.widget.Button":         "Button",
-    "android.widget.ImageButton":    "ImgBtn",
-    "android.widget.ImageView":      "Image",
-    "android.widget.CheckBox":       "Check",
-    "android.widget.RadioButton":    "Radio",
-    "android.widget.Switch":         "Switch",
-    "android.widget.ProgressBar":    "Progress",
-    "android.view.View":             "View",
-    "android.widget.FrameLayout":    "Frame",
-    "android.widget.LinearLayout":   "Linear",
-    "android.widget.RelativeLayout": "Relative",
-    "android.widget.ScrollView":     "Scroll",
-    "androidx.recyclerview.widget.RecyclerView": "List",
-}
-
-_CONTAINER_CLS = {
-    "android.widget.FrameLayout",
-    "android.widget.LinearLayout",
-    "android.widget.RelativeLayout",
-    "android.view.ViewGroup",
-    "android.widget.ScrollView",
-    "androidx.recyclerview.widget.RecyclerView",
-}
-
-def _adb_dump(adb_device: str) -> str:
-    """Run uiautomator dump and return XML string."""
-    dump_cmd = ["adb", "-s", adb_device, "shell",
-                "uiautomator", "dump", "/sdcard/uidump.xml"]
-    subprocess.run(dump_cmd, capture_output=True, timeout=15)
-    r = subprocess.run(
-        ["adb", "-s", adb_device, "shell", "cat", "/sdcard/uidump.xml"],
-        capture_output=True, timeout=10
-    )
-    return r.stdout.decode(errors="replace")
-
-def _parse_bounds(bounds_str: str):
-    """'[x1,y1][x2,y2]' → (cx, cy, w, h)"""
-    m = re.match(r"\[(\d+),(\d+)\]\[(\d+),(\d+)\]", bounds_str)
-    if not m:
-        return None
-    x1, y1, x2, y2 = int(m.group(1)), int(m.group(2)), int(m.group(3)), int(m.group(4))
-    if x1 == x2 or y1 == y2:
-        return None   # zero-size
-    cx = (x1 + x2) // 2
-    cy = (y1 + y2) // 2
-    return cx, cy, x2 - x1, y2 - y1
-
-def _extract_nodes(xml: str) -> list:
-    """Parse all <node> attributes from flat XML."""
-    nodes = []
-    for attrs in re.findall(r"<node([^>]+)>?", xml):
-        def get(attr):
-            m = re.search(rf'{attr}="([^"]*)"', attrs)
-            return m.group(1) if m else ""
-
-        text      = get("text").strip()
-        desc      = get("content-desc").strip()
-        bounds    = get("bounds")
-        cls       = get("class")
-        clickable = get("clickable") == "true"
-        enabled   = get("enabled") != "false"
-
-        label = desc or text
-        if not label:
-            continue
-        if not bounds:
-            continue
-        coords = _parse_bounds(bounds)
-        if coords is None:
-            continue
-        cx, cy, w, h = coords
-
-        # Skip pure containers unless they are clickable and have a label
-        if cls in _CONTAINER_CLS and not clickable:
-            continue
-
-        # Skip disabled
-        if not enabled:
-            continue
-
-        short_cls = _CLS_SHORT.get(cls, cls.split(".")[-1] if cls else "")
-
-        nodes.append({
-            "text":      label,
-            "x":         cx,
-            "y":         cy,
-            "w":         w,
-            "h":         h,
-            "cls":       short_cls,
-            "clickable": clickable,
-            "bounds":    bounds,
-        })
-
-    return nodes
-
-def _deduplicate(nodes: list) -> list:
-    """Remove nodes with identical text+coords."""
-    seen = set()
-    out  = []
-    for n in nodes:
-        key = (n["text"], n["x"], n["y"])
-        if key not in seen:
-            seen.add(key)
-            out.append(n)
-    return out
-
-def _prioritise(nodes: list) -> list:
-    """
-    Sort: clickable first, then by vertical position.
-    Helps Claude see interactive elements at the top of the list.
-    """
-    return sorted(nodes, key=lambda n: (not n["clickable"], n["y"]))
-
-def parse_ui(image_path: str, adb_device: str = None) -> list:
-    """
-    Parse real UI from device via uiautomator dump.
-
-    Args:
-        image_path : path to screenshot (kept for interface compat — not used here)
-        adb_device : ADB serial e.g. '192.168.29.48:39601'
-                     Falls back to ADB_DEVICE env var or default.
-
-    Returns:
-        list of dicts: [{id, text, x, y, cls, clickable}, ...]
-    """
-    if adb_device is None:
-        adb_device = os.environ.get("ADB_DEVICE", "192.168.29.48:39601")
-
-    try:
-        xml = _adb_dump(adb_device)
-    except Exception as e:
-        print(f"[parser] uiautomator dump failed: {e} — returning empty")
-        return []
-
-    if not xml or "<hierarchy" not in xml:
-        print(f"[parser] bad XML dump — returning empty")
-        return []
-
-    nodes = _extract_nodes(xml)
-    nodes = _deduplicate(nodes)
-    nodes = _prioritise(nodes)
-    nodes = nodes[:MAX_ELEMENTS]
-
-    # Assign sequential IDs
-    elements = []
-    for i, n in enumerate(nodes, 1):
-        elements.append({
-            "id":        i,
-            "text":      n["text"],
-            "x":         n["x"],
-            "y":         n["y"],
-            "cls":       n["cls"],
-            "clickable": n["clickable"],
-        })
-
-    print(f"[parser] {len(elements)} elements from uiautomator dump")
-    for e in elements:
-        flag = "✓" if e["clickable"] else " "
-        print(f"  [{e['id']}]{flag} {e['cls']:8} ({e['x']:4},{e['y']:4}) {e['text'][:40]}")
-
-    return elements
 
 

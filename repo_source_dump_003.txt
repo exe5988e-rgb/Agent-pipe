@@ -6902,6 +6902,8 @@ java.lang.IllegalArgumentException: Argument expected after "text"
 [step] step=5/10 done=False history=['opt4_launch:chrome', 'tap [6] Search Google or type URL', "type 'weather today'", 'tap [6] element_6', 'tap [6] Search Google or type URL']
 [parser] DEBUG normalized: 'tap 10'
 [parser] INFO parsed 'tap 10' -> {'action': 'tap', 'target': 10}
+[parser] DEBUG normalized: 'tap 3'
+[parser] INFO parsed 'tap 3' -> {'action': 'tap', 'target': 3}
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

@@ -8571,6 +8571,95 @@ RuntimeError: No LLM backend available.
   Phone B offline? Check: curl http://192.168.29.110:8890/health
   Local LLM down? Run:    bash ~/jarvis_server_init.sh
 
+########################################################
+  JARVIS  |  Search for lofi hip hop on YouTube and play the first video
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 223 screens (0 tainted), 286 transitions
+    whatsapp             136 screens
+    youtube              39 screens
+    vending              20 screens
+    chrome               12 screens
+    settings             6 screens
+    termux               4 screens
+    launcher             4 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+  TransitionMemory: 286 transitions (250 confirmed, threshold=2)
+[init] task_apps (ordered): ['youtube']
+
+========================================================
+  STEP 1  |  Search for lofi hip hop on YouTube and play the first video
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1900286 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 16 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=5d54dcf1c52d elements=16
+[step] UI: ["[7/33] [1★] [phone] Open Contacts\n[11:17:32]   PASS  39.7s  skills=0\n[11:17:37]\n[8/33] [2★] [whatsapp] Open WhatsApp and go to Calls tab\n[11:19:59]   PASS  139.2s  skills=0\n[11:20:04]\n[9/33] [2★] [whatsapp] Open WhatsApp and go to Updates tab\n[11:21:20]   PASS  72.1s  skills=1\n[11:21:25]\n[10/33] [2★] [whatsapp] Open WhatsApp and search for Mummy in chats\n[11:21:41]   PASS  12.9s  skills=1\n[11:21:46]\n[11/33] [2★] [youtube] Open YouTube and go to Subscriptions\n[11:23:00]   PASS  70.8s  skills=2\n[11:23:05]\n[12/33] [2★] [youtube] Search for MrBeast on YouTube\n[11:27:19]   PASS  251.1s  skills=2\n[11:27:24]\n[13/33] [2★] [settings] Open Settings and go to WiFi\n[11:29:46]   PASS  138.9s  skills=3\n[11:29:51]\n[14/33] [2★] [settings] Open Settings and go to Display\n[11:31:14]   PASS  79.1s  skills=3\n[11:31:19]\n[15/33] [2★] [settings] Open Settings and go to Notifications\n[11:32:07]   PASS  45.1s  skills=3\n[11:32:12]\n[16/33] [2★] [settings] Open Settings and check battery percentage\n[11:33:00]   PASS  44.6s  skills=3\n[11:33:05]\n[17/33] [2★] [chrome] Open Chrome and go to google.com\n[11:35:26]   PASS  137.8s  skills=4\n[11:35:31]\n[18/33] [2★] [chrome] Open Chrome and open a new tab\n[11:37:16]   PASS  101.6s  skills=4\n[11:37:21]\n[19/33] [2★] [chrome] Search for weather today in Chrome\n[11:41:49]   PASS  264.6s  skills=5\n[11:41:54]\n[20/33] [2★] [playstore] Search for Spotify on Play Store\n[11:46:32]   PASS  274.6s  skills=5\n[11:46:37]\n[21/33] [2★] [phone] Open Contacts and search for Mummy\n[11:47:59]   PASS  79.4s  skills=5\n[11:48:04]\n[22/33] [3★] [whatsapp] Send a WhatsApp message to Mummy saying Good morning\n[11:49:33]   PASS  85.8s  skills=5\n[11:49:39]\n[23/33] [3★] [whatsapp] Send a WhatsApp message to Ayush Kumar saying Hey what's up\n[11:50:05]   PASS  23.0s  skills=5\n[11:50:10]\n[24/33] [3★] [whatsapp] Send a WhatsApp message to Sadique faridi saying Hello brother\n[11:50:35]   PASS  22.3s  skills=5\n[11:50:40]\n[25/33] [3★] [youtube] Play Warriyo Mortals on YouTube\n[11:55:56]   PASS  312.1s  skills=5\n[11:56:01]\n[26/33] [3★] [youtube] Search for lofi hip hop on YouTube and play the first video", 'ESC', 'element_3', '☰', '⇳', 'HOME', '↑', 'END']
+[map] new screen: launcher_launcher (5a35adb71b8f)
+[map] screen: launcher_launcher (5a35adb7)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B unreachable: timed out
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 2  |  Search for lofi hip hop on YouTube and play the first video
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (642867 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] dump failed: ''
+[step] UI: []
+[map] screen: youtube_shell$homeactivity (8bd4aa0f)
+[step] empty UI (1/8)
+
+========================================================
+  STEP 3  |  Search for lofi hip hop on YouTube and play the first video
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1685086 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] dump failed: ''
+[step] UI: []
+[map] new screen: termux_termuxactivity (02423f98daab)
+[map] screen: termux_termuxactivity (02423f98)
+[step] empty UI (2/8)
+
+========================================================
+  STEP 4  |  Search for lofi hip hop on YouTube and play the first video
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1298343 bytes)
+[ui_parser] activity=com.termux/.app.TermuxActivity
+[ui_parser] signal='com.termux/.app.TermuxActivity'
+[mem] miss (unknown): com.termux/.app.TermuxActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 16 elements from 192.168.29.48:34011
+[mem] stored com.termux/.app.TermuxActivity hash=613db7baafa2 elements=16
+[step] UI: ["[11:35:26]   PASS  137.8s  skills=4\n[11:35:31]\n[18/33] [2★] [chrome] Open Chrome and open a new tab\n[11:37:16]   PASS  101.6s  skills=4\n[11:37:21]\n[19/33] [2★] [chrome] Search for weather today in Chrome\n[11:41:49]   PASS  264.6s  skills=5\n[11:41:54]\n[20/33] [2★] [playstore] Search for Spotify on Play Store\n[11:46:32]   PASS  274.6s  skills=5\n[11:46:37]\n[21/33] [2★] [phone] Open Contacts and search for Mummy\n[11:47:59]   PASS  79.4s  skills=5\n[11:48:04]\n[22/33] [3★] [whatsapp] Send a WhatsApp message to Mummy saying Good morning\n[11:49:33]   PASS  85.8s  skills=5\n[11:49:39]\n[23/33] [3★] [whatsapp] Send a WhatsApp message to Ayush Kumar saying Hey what's up\n[11:50:05]   PASS  23.0s  skills=5\n[11:50:10]\n[24/33] [3★] [whatsapp] Send a WhatsApp message to Sadique faridi saying Hello brother\n[11:50:35]   PASS  22.3s  skills=5\n[11:50:40]\n[25/33] [3★] [youtube] Play Warriyo Mortals on YouTube\n[11:55:56]   PASS  312.1s  skills=5\n[11:56:01]\n[26/33] [3★] [youtube] Search for lofi hip hop on YouTube and play the first video", 'ESC', 'element_3', '☰', '⇳', 'HOME', '↑', 'END']
+[map] new screen: youtube_shell$homeactivity (3f339d097f0a)
+[map] screen: youtube_shell$homeactivity (3f339d09)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 5  |  Search for lofi hip hop on YouTube and play the first video
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1314339 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash
@@ -11929,225 +12018,4 @@ t 
 ))+
 #&>
 >    hN hNr   
-
-//===== TERMUXFILE: jarvis-agent/reasoning/action_parser.py =====
-"""
-reasoning/action_parser.py
-
-Informed by UI-TARS/codes/ui_tars/action_parser.py
-Source: https://github.com/bytedance/UI-TARS
-
-UI-TARS uses parse_action() with ast.parse() to handle structured calls like:
-  click(start_box='(x,y)')
-  type(content='...')
-  finished()
-  press_home()
-  press_back()
-  scroll(start_box='(x,y)', direction='down')
-
-Their full parser handles:
-  - coordinate scaling (IMAGE_FACTOR, smart_resize, qwen25vl mode)
-  - thought/reflection extraction from "Thought: ... Action: ..."
-  - pyautogui code generation
-
-We simplify for two reasons:
-  1. Our LLM (Qwen2.5-3B local) outputs plain text, not structured Python calls
-  2. We don't need pyautogui or coordinate scaling (we use element IDs)
-
-What we DO borrow from UI-TARS:
-  - The MOBILE_USE_DOUBAO action vocabulary (press_home, press_back, type, scroll, finished)
-  - The AST-based fallback parser for when LLM outputs UI-TARS-style calls
-  - The thought/action split pattern ("Action: ..." on its own line)
-
-Prototype grammar (plain text — easier for 3B models):
-  tap <id>           → {"action": "tap", "target": int}
-  tap <x>,<y>        → {"action": "tap", "x": int, "y": int}
-  type <text>        → {"action": "type", "text": str}
-  swipe up|down|...  → {"action": "swipe", ...coords...}
-  back / press_back  → {"action": "back"}
-  home / press_home  → {"action": "home"}
-  enter              → {"action": "enter"}
-  done / finished    → {"action": "done"}
-
-UI-TARS rich fallback (in case LLM outputs structured calls):
-  click(start_box='(x,y)')   type(content='...')
-  press_back()  press_home()  finished()
-  scroll(..., direction='down')
-"""
-
-import re
-import ast
-
-# ── Prototype grammar patterns ────────────────────────────────────────────────
-
-_TAP_ID    = re.compile(r"\btap\s+(\d+)",                          re.I)
-_TAP_XY    = re.compile(r"\btap\s+(\d+)\s*[,x]\s*(\d+)",          re.I)
-_TYPE      = re.compile(r"\btype\s+(.+)",                          re.I)
-_SWIPE_DIR = re.compile(r"\bswipe\s+(up|down|left|right)",         re.I)
-_BACK      = re.compile(r"\b(back|press_back)\b",                  re.I)
-_HOME      = re.compile(r"\b(home|press_home)\b",                  re.I)
-_ENTER     = re.compile(r"\benter\b",                              re.I)
-_DONE      = re.compile(r"\b(done|finished)\b",                    re.I)
-
-# ── UI-TARS rich syntax patterns ──────────────────────────────────────────────
-# Adapted from UI-TARS action_parser.py parse_action() AST approach
-
-_TARS_CLICK  = re.compile(r"(?:click|left_single|left_double)\s*\(\s*(?:start_box|point)\s*=\s*['\"]?\((\d+)\s*,\s*(\d+)\)", re.I)
-_TARS_TYPE   = re.compile(r"type\s*\(\s*content\s*=\s*['\"](.+?)['\"]",  re.I)
-_TARS_DONE   = re.compile(r"finished\s*\(",                               re.I)
-_TARS_BACK   = re.compile(r"press_back\s*\(",                             re.I)
-_TARS_HOME   = re.compile(r"press_home\s*\(",                             re.I)
-_TARS_SCROLL = re.compile(r"scroll\s*\(.*?direction\s*=\s*['\"](\w+)['\"]", re.I)
-
-# ── Swipe deltas (screen centre 540,1200 baseline) ───────────────────────────
-_SWIPE_DELTAS = {
-    "up":    (0, -600),
-    "down":  (0,  600),
-    "left":  (-400, 0),
-    "right": ( 400, 0),
-}
-
-def _swipe_from_dir(direction: str) -> dict:
-    dx, dy = _SWIPE_DELTAS.get(direction.lower(), (0, -600))
-    return {"action": "swipe",
-            "x1": 540, "y1": 1200,
-            "x2": 540 + dx, "y2": 1200 + dy,
-            "duration_ms": 400}
-
-# ── UI-TARS AST fallback ──────────────────────────────────────────────────────
-# From UI-TARS action_parser.py parse_action() — parses Python-style function calls
-
-def _tars_ast_parse(line: str):
-    """
-    UI-TARS parse_action() approach: ast.parse the line as a Python expression.
-    Returns {"function": name, "args": {kwargs}} or None.
-    """
-    try:
-        node = ast.parse(line.strip(), mode="eval")
-        if not isinstance(node, ast.Expression):
-            return None
-        call = node.body
-        if not isinstance(call, ast.Call):
-            return None
-        func_name = (call.func.id if isinstance(call.func, ast.Name)
-                     else call.func.attr if isinstance(call.func, ast.Attribute)
-                     else None)
-        kwargs = {}
-        for kw in call.keywords:
-            if isinstance(kw.value, ast.Constant):
-                kwargs[kw.arg] = kw.value.value
-            elif isinstance(kw.value, ast.Str):
-                kwargs[kw.arg] = kw.value.s
-        return {"function": func_name, "args": kwargs}
-    except Exception:
-        return None
-
-def _from_tars_ast(parsed: dict):
-    """Convert UI-TARS AST parse result → our action dict."""
-    if parsed is None:
-        return None
-    fn   = (parsed.get("function") or "").lower()
-    args = parsed.get("args", {})
-
-    if fn in ("click", "left_single", "left_double", "hover"):
-        box = args.get("start_box") or args.get("point")
-        if box:
-            coords = re.findall(r"\d+", str(box))
-            if len(coords) >= 2:
-                return {"action": "tap", "x": int(coords[0]), "y": int(coords[1])}
-
-    elif fn == "type":
-        return {"action": "type", "text": args.get("content", "")}
-
-    elif fn in ("finished",):
-        return {"action": "done"}
-
-    elif fn == "press_back":
-        return {"action": "back"}
-
-    elif fn == "press_home":
-        return {"action": "home"}
-
-    elif fn == "scroll":
-        direction = args.get("direction", "down")
-        return _swipe_from_dir(direction)
-
-    return None
-
-# ── Per-line parser ───────────────────────────────────────────────────────────
-
-def _parse_line(line: str):
-    """Try all patterns on a single line. Returns action dict or None."""
-
-    # UI-TARS: "Action: ..." prefix — strip it
-    if line.lower().startswith("action:"):
-        line = line[7:].strip()
-
-    # Prototype grammar (plain text)
-    m = _TAP_ID.search(line)
-    if m: return {"action": "tap", "target": int(m.group(1))}
-
-    m = _TAP_XY.search(line)
-    if m: return {"action": "tap", "x": int(m.group(1)), "y": int(m.group(2))}
-
-    m = _TYPE.search(line)
-    if m: return {"action": "type", "text": m.group(1).strip()}
-
-    m = _SWIPE_DIR.search(line)
-    if m: return _swipe_from_dir(m.group(1))
-
-    if _BACK.search(line):  return {"action": "back"}
-    if _HOME.search(line):  return {"action": "home"}
-    if _ENTER.search(line): return {"action": "enter"}
-    if _DONE.search(line):  return {"action": "done"}
-
-    # UI-TARS regex shortcuts (faster than AST)
-    m = _TARS_CLICK.search(line)
-    if m: return {"action": "tap", "x": int(m.group(1)), "y": int(m.group(2))}
-
-    m = _TARS_TYPE.search(line)
-    if m: return {"action": "type", "text": m.group(1)}
-
-    if _TARS_DONE.search(line):  return {"action": "done"}
-    if _TARS_BACK.search(line):  return {"action": "back"}
-    if _TARS_HOME.search(line):  return {"action": "home"}
-
-    m = _TARS_SCROLL.search(line)
-    if m: return _swipe_from_dir(m.group(1))
-
-    # UI-TARS AST fallback for complex structured calls
-    ast_parsed = _tars_ast_parse(line)
-    result = _from_tars_ast(ast_parsed)
-    if result:
-        return result
-
-    return None
-
-# ── Public API ────────────────────────────────────────────────────────────────
-
-def parse_action(llm_output: str) -> dict:
-    """
-    Parse LLM output into action dict.
-
-    Handles both plain text (prototype grammar) and
-    UI-TARS structured format ("Thought: ...\nAction: click(...)").
-
-    Falls back to {"action": "home"} if nothing recognised.
-    """
-    if not llm_output or not llm_output.strip():
-        print("[parser] empty output → home")
-        return {"action": "home"}
-
-    for line in llm_output.splitlines():
-        line = line.strip()
-        if not line:
-            continue
-        result = _parse_line(line)
-        if result is not None:
-            print(f"[parser] '{line[:60]}' → {result}")
-            return result
-
-    print(f"[parser] unrecognised: {llm_output[:80]!r} → home")
-    return {"action": "home"}
-
 

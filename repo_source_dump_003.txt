@@ -3227,9 +3227,9 @@ if __name__ == "__main__":
     "last_seen": 1773737554.4735677
   },
   "572db9f8d8bd|retry": {
-    "to": "d6f8a689a070",
+    "to": "35187eb4193b",
     "count": 1,
-    "last_seen": 1773737588.984395
+    "last_seen": 1773737691.70719
   }
 }
 
@@ -8044,6 +8044,19 @@ RuntimeError: No LLM backend available.
 [step] action: {'action': 'retry', '_warn': "unrecognised: 'Tue, 17 March'"}
 [input] cannot build event from: {'action': 'retry', '_warn': "unrecognised: 'Tue, 17 March'"}
 [step] step=6/10 done=False history=['opt4_launch:spotify', 'opt4_launch:play store', 'retry', 'retry', 'retry', 'retry']Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 311, in run
+    run_step(state, device=device, model_path=model_path)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 267, in run_step
+    llm_out = generate(prompt, model_path=model_path)
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/reasoning/llm_client.py", line 109, in generate
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+Traceback (most recent call last):
   File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 311, in run
     run_step(state, device=device, model_path=model_path)
     ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -16568,6 +16568,170 @@
           "y": 2632
         }
       ]
+    },
+    "ab612c16894d": {
+      "screen_id": "ab612c16894d",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/com.google.android.apps.youtube.app.watchwhile.InternalMainActivity",
+      "name": "youtube_internalmainactivity",
+      "labels": [
+        "Cast",
+        "Search",
+        "A-Z",
+        "Playlist - 11 - Private - 9 videos",
+        "Action menu",
+        "Playlist - 12 - Private - 2 videos",
+        "Action menu",
+        "Playlist - all the stars radio - Amir Shams - 97 videos",
+        "Action menu",
+        "Course - Alpha 11 Chap 4 : Vectors - Physics Wallah - Alakh Pandey - 11 videos",
+        "Action menu",
+        "Playlist - arc radio - Amir Shams - 146 videos",
+        "Action menu",
+        "Playlist - Chemistry - Private - 3 videos",
+        "Action menu",
+        "Shorts",
+        "Create",
+        "Subscriptions",
+        "You"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Cast",
+          "resource_id": "com.google.android.youtube:id/mdx_entry_point_button",
+          "cls": "android.widget.Button",
+          "x": 848,
+          "y": 223
+        },
+        {
+          "text": "Search",
+          "resource_id": "com.google.android.youtube:id/menu_search",
+          "cls": "android.widget.Button",
+          "x": 1016,
+          "y": 223
+        },
+        {
+          "text": "A-Z",
+          "resource_id": "",
+          "cls": "android.widget.Spinner",
+          "x": 166,
+          "y": 580
+        },
+        {
+          "text": "Playlist - 11 - Private - 9 videos",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 850
+        },
+        {
+          "text": "Action menu",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1184,
+          "y": 741
+        },
+        {
+          "text": "Playlist - 12 - Private - 2 videos",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 1222
+        },
+        {
+          "text": "Action menu",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1184,
+          "y": 1113
+        },
+        {
+          "text": "Playlist - all the stars radio - Amir Shams - 97 videos",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 1594
+        },
+        {
+          "text": "Action menu",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1184,
+          "y": 1485
+        },
+        {
+          "text": "Course - Alpha 11 Chap 4 : Vectors - Physics Wallah - Alakh Pandey - 11 videos",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 1966
+        },
+        {
+          "text": "Action menu",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1184,
+          "y": 1857
+        },
+        {
+          "text": "Playlist - arc radio - Amir Shams - 146 videos",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 2338
+        },
+        {
+          "text": "Action menu",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1184,
+          "y": 2229
+        },
+        {
+          "text": "Playlist - Chemistry - Private - 3 videos",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 2648
+        },
+        {
+          "text": "Action menu",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1184,
+          "y": 2601
+        },
+        {
+          "text": "Shorts",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 372,
+          "y": 2632
+        },
+        {
+          "text": "Create",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 2632
+        },
+        {
+          "text": "Subscriptions",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 868,
+          "y": 2632
+        },
+        {
+          "text": "You",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1116,
+          "y": 2632
+        }
+      ]
     }
   },
   "transitions": {
@@ -16772,7 +16936,8 @@
     "e1c8fa5142a3|New notification Unexplained Mysteries Uploaded: 5 Mysteries About The Shroud Of Turin That Cannot Be Explained 4 hours ago": "5ca448df8e66",
     "e1c8fa5142a3|New notification TechFixIT Uploaded 3 videos 6 hours ago": "836a9f602633",
     "e1c8fa5142a3|Subscriptions": "da00409df024",
-    "e1c8fa5142a3|You": "f911caa9edca"
+    "e1c8fa5142a3|You": "f911caa9edca",
+    "bf229eb46cda|Voice search": "ab612c16894d"
   }
 }
 

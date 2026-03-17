@@ -2783,8 +2783,8 @@ if __name__ == "__main__":
   },
   "4203f6dd32c9|opt4_launch:whatsapp": {
     "to": "9175dd22bb23",
-    "count": 1,
-    "last_seen": 1773726147.4224422
+    "count": 2,
+    "last_seen": 1773726154.6999884
   },
   "7c51d7e864c3|tap:element_25": {
     "to": "7770f0561545",

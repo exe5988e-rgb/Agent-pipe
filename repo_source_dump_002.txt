@@ -32414,6 +32414,82 @@
           "resource_id": "com.android.chrome:id/menu_button"
         }
       ]
+    },
+    "de32cdc23c0d": {
+      "screen_id": "de32cdc23c0d",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "New Incognito tab",
+        "Learn more",
+        "When you're in Incognito mode, sites can't use third-party cookies. If a site that relies on these cookies isn't working, you can try giving that site temporary access to third-party cookies.",
+        "Open the homepage",
+        "element_5",
+        "Search Google or type URL",
+        "See 1 tab",
+        "Customise and control Google Chrome"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "New Incognito tab",
+          "x": 620,
+          "y": 1327,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Learn more",
+          "x": 240,
+          "y": 2072,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.android.chrome:id/learn_more"
+        },
+        {
+          "text": "When you're in Incognito mode, sites can't use third-party cookies. If a site that relies on these cookies isn't working, you can try giving that site temporary access to third-party cookies.",
+          "x": 620,
+          "y": 2429,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.android.chrome:id/tracking_protection_card_description"
+        },
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 2618,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "element_5",
+          "x": 224,
+          "y": 2618,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "Search Google or type URL",
+          "x": 592,
+          "y": 2618,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "See 1 tab",
+          "x": 988,
+          "y": 2618,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 2618,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        }
+      ]
     }
   },
   "transitions": {
@@ -32723,7 +32799,8 @@
     "0ffd7f03efc6|tap:23": "5086bd87137e",
     "5086bd87137e|tap:element_8": "54001c27a626",
     "54001c27a626|tap:: 192.168.29.110": "558ab09c987a",
-    "558ab09c987a|tap:22": "5086bd87137e"
+    "558ab09c987a|tap:22": "5086bd87137e",
+    "5086bd87137e|tap:element_9": "de32cdc23c0d"
   }
 }
 

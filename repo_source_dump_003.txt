@@ -2837,6 +2837,8 @@ if __name__ == "__main__":
 [11:13:46] 
 [3/33] [1★] [settings] Open Settings
 [11:14:26]   PASS  36.6s  skills=0
+[11:14:31] 
+[4/33] [1★] [chrome] Open Chrome
 
 
 //===== TERMUXFILE: tap_logger.py =====

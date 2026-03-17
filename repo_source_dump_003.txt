@@ -2839,6 +2839,11 @@ if __name__ == "__main__":
 [10:11:38]   TASK 4/33  [1★]  [chrome]  timeout=255s
 [10:11:38]   Open Chrome
 [10:11:38] ════════════════════════════════════════════════════════════════
+[10:11:45] 
+  ✗ FAIL  |  0.7s  |  skills: 0
+[10:11:45]   Error: returncode=1
+[10:11:45]   Retrying once...
+[10:11:45]   Recovering device...
 
 
 //===== TERMUXFILE: tap_logger.py =====

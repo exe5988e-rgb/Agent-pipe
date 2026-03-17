@@ -1,3 +1,338 @@
+//===== TERMUXFILE: jarvis-agent/reasoning/action_parser.py =====
+"""
+reasoning/action_parser.py
+
+Informed by UI-TARS/codes/ui_tars/action_parser.py
+Source: https://github.com/bytedance/UI-TARS
+
+UI-TARS uses parse_action() with ast.parse() to handle structured calls like:
+  click(start_box='(x,y)')
+  type(content='...')
+  finished()
+  press_home()
+  press_back()
+  scroll(start_box='(x,y)', direction='down')
+
+Their full parser handles:
+  - coordinate scaling (IMAGE_FACTOR, smart_resize, qwen25vl mode)
+  - thought/reflection extraction from "Thought: ... Action: ..."
+  - pyautogui code generation
+
+We simplify for two reasons:
+  1. Our LLM (Qwen2.5-3B local) outputs plain text, not structured Python calls
+  2. We don't need pyautogui or coordinate scaling (we use element IDs)
+
+What we DO borrow from UI-TARS:
+  - The MOBILE_USE_DOUBAO action vocabulary (press_home, press_back, type, scroll, finished)
+  - The AST-based fallback parser for when LLM outputs UI-TARS-style calls
+  - The thought/action split pattern ("Action: ..." on its own line)
+
+Prototype grammar (plain text — easier for 3B models):
+  tap <id>           → {"action": "tap", "target": int}
+  tap <x>,<y>        → {"action": "tap", "x": int, "y": int}
+  type <text>        → {"action": "type", "text": str}
+  swipe up|down|...  → {"action": "swipe", ...coords...}
+  back / press_back  → {"action": "back"}
+  home / press_home  → {"action": "home"}
+  enter              → {"action": "enter"}
+  done / finished    → {"action": "done"}
+
+UI-TARS rich fallback (in case LLM outputs structured calls):
+  click(start_box='(x,y)')   type(content='...')
+  press_back()  press_home()  finished()
+  scroll(..., direction='down')
+"""
+
+import re
+import ast
+
+# ── Prototype grammar patterns ────────────────────────────────────────────────
+
+_TAP_ID    = re.compile(r"\btap\s+(\d+)",                          re.I)
+_TAP_XY    = re.compile(r"\btap\s+(\d+)\s*[,x]\s*(\d+)",          re.I)
+_TYPE      = re.compile(r"\btype\s+(.+)",                          re.I)
+_SWIPE_DIR = re.compile(r"\bswipe\s+(up|down|left|right)",         re.I)
+_BACK      = re.compile(r"\b(back|press_back)\b",                  re.I)
+_HOME      = re.compile(r"\b(home|press_home)\b",                  re.I)
+_ENTER     = re.compile(r"\benter\b",                              re.I)
+_DONE      = re.compile(r"\b(done|finished)\b",                    re.I)
+
+# ── UI-TARS rich syntax patterns ──────────────────────────────────────────────
+# Adapted from UI-TARS action_parser.py parse_action() AST approach
+
+_TARS_CLICK  = re.compile(r"(?:click|left_single|left_double)\s*\(\s*(?:start_box|point)\s*=\s*['\"]?\((\d+)\s*,\s*(\d+)\)", re.I)
+_TARS_TYPE   = re.compile(r"type\s*\(\s*content\s*=\s*['\"](.+?)['\"]",  re.I)
+_TARS_DONE   = re.compile(r"finished\s*\(",                               re.I)
+_TARS_BACK   = re.compile(r"press_back\s*\(",                             re.I)
+_TARS_HOME   = re.compile(r"press_home\s*\(",                             re.I)
+_TARS_SCROLL = re.compile(r"scroll\s*\(.*?direction\s*=\s*['\"](\w+)['\"]", re.I)
+
+# ── Swipe deltas (screen centre 540,1200 baseline) ───────────────────────────
+_SWIPE_DELTAS = {
+    "up":    (0, -600),
+    "down":  (0,  600),
+    "left":  (-400, 0),
+    "right": ( 400, 0),
+}
+
+def _swipe_from_dir(direction: str) -> dict:
+    dx, dy = _SWIPE_DELTAS.get(direction.lower(), (0, -600))
+    return {"action": "swipe",
+            "x1": 540, "y1": 1200,
+            "x2": 540 + dx, "y2": 1200 + dy,
+            "duration_ms": 400}
+
+# ── UI-TARS AST fallback ──────────────────────────────────────────────────────
+# From UI-TARS action_parser.py parse_action() — parses Python-style function calls
+
+def _tars_ast_parse(line: str):
+    """
+    UI-TARS parse_action() approach: ast.parse the line as a Python expression.
+    Returns {"function": name, "args": {kwargs}} or None.
+    """
+    try:
+        node = ast.parse(line.strip(), mode="eval")
+        if not isinstance(node, ast.Expression):
+            return None
+        call = node.body
+        if not isinstance(call, ast.Call):
+            return None
+        func_name = (call.func.id if isinstance(call.func, ast.Name)
+                     else call.func.attr if isinstance(call.func, ast.Attribute)
+                     else None)
+        kwargs = {}
+        for kw in call.keywords:
+            if isinstance(kw.value, ast.Constant):
+                kwargs[kw.arg] = kw.value.value
+            elif isinstance(kw.value, ast.Str):
+                kwargs[kw.arg] = kw.value.s
+        return {"function": func_name, "args": kwargs}
+    except Exception:
+        return None
+
+def _from_tars_ast(parsed: dict):
+    """Convert UI-TARS AST parse result → our action dict."""
+    if parsed is None:
+        return None
+    fn   = (parsed.get("function") or "").lower()
+    args = parsed.get("args", {})
+
+    if fn in ("click", "left_single", "left_double", "hover"):
+        box = args.get("start_box") or args.get("point")
+        if box:
+            coords = re.findall(r"\d+", str(box))
+            if len(coords) >= 2:
+                return {"action": "tap", "x": int(coords[0]), "y": int(coords[1])}
+
+    elif fn == "type":
+        return {"action": "type", "text": args.get("content", "")}
+
+    elif fn in ("finished",):
+        return {"action": "done"}
+
+    elif fn == "press_back":
+        return {"action": "back"}
+
+    elif fn == "press_home":
+        return {"action": "home"}
+
+    elif fn == "scroll":
+        direction = args.get("direction", "down")
+        return _swipe_from_dir(direction)
+
+    return None
+
+# ── Per-line parser ───────────────────────────────────────────────────────────
+
+def _parse_line(line: str):
+    """Try all patterns on a single line. Returns action dict or None."""
+
+    # UI-TARS: "Action: ..." prefix — strip it
+    if line.lower().startswith("action:"):
+        line = line[7:].strip()
+
+    # Prototype grammar (plain text)
+    m = _TAP_ID.search(line)
+    if m: return {"action": "tap", "target": int(m.group(1))}
+
+    m = _TAP_XY.search(line)
+    if m: return {"action": "tap", "x": int(m.group(1)), "y": int(m.group(2))}
+
+    m = _TYPE.search(line)
+    if m: return {"action": "type", "text": m.group(1).strip()}
+
+    m = _SWIPE_DIR.search(line)
+    if m: return _swipe_from_dir(m.group(1))
+
+    if _BACK.search(line):  return {"action": "back"}
+    if _HOME.search(line):  return {"action": "home"}
+    if _ENTER.search(line): return {"action": "enter"}
+    if _DONE.search(line):  return {"action": "done"}
+
+    # UI-TARS regex shortcuts (faster than AST)
+    m = _TARS_CLICK.search(line)
+    if m: return {"action": "tap", "x": int(m.group(1)), "y": int(m.group(2))}
+
+    m = _TARS_TYPE.search(line)
+    if m: return {"action": "type", "text": m.group(1)}
+
+    if _TARS_DONE.search(line):  return {"action": "done"}
+    if _TARS_BACK.search(line):  return {"action": "back"}
+    if _TARS_HOME.search(line):  return {"action": "home"}
+
+    m = _TARS_SCROLL.search(line)
+    if m: return _swipe_from_dir(m.group(1))
+
+    # UI-TARS AST fallback for complex structured calls
+    ast_parsed = _tars_ast_parse(line)
+    result = _from_tars_ast(ast_parsed)
+    if result:
+        return result
+
+    return None
+
+# ── Public API ────────────────────────────────────────────────────────────────
+
+def parse_action(llm_output: str) -> dict:
+    """
+    Parse LLM output into action dict.
+
+    Handles both plain text (prototype grammar) and
+    UI-TARS structured format ("Thought: ...\nAction: click(...)").
+
+    Falls back to {"action": "home"} if nothing recognised.
+    """
+    if not llm_output or not llm_output.strip():
+        print("[parser] empty output → home")
+        return {"action": "home"}
+
+    for line in llm_output.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        result = _parse_line(line)
+        if result is not None:
+            print(f"[parser] '{line[:60]}' → {result}")
+            return result
+
+    print(f"[parser] unrecognised: {llm_output[:80]!r} → home")
+    return {"action": "home"}
+
+
+//===== TERMUXFILE: jarvis-agent/reasoning/prompt_builder.py =====
+"""
+reasoning/prompt_builder.py
+
+Informed by UI-TARS/codes/ui_tars/prompt.py
+Source: https://github.com/bytedance/UI-TARS
+
+UI-TARS defines two prompt templates:
+  COMPUTER_USE_DOUBAO — desktop agent (click, drag, hotkey, scroll, type, wait, finished)
+  MOBILE_USE_DOUBAO   — mobile agent (click, long_press, type, scroll, open_app,
+                         drag, press_home, press_back, finished)
+
+Their format:
+  "You are a GUI agent. You are given a task and your action history,
+   with screenshots. You need to perform the next action to complete the task.
+   ## Output Format
+     Thought: ...
+     Action: ..."
+
+Key decisions for our prototype:
+  - We use MOBILE_USE_DOUBAO vocabulary (it's Android)
+  - We DROP "Thought:" requirement — 3B models waste tokens on it
+  - We use element IDs instead of pixel coordinates (no vision model yet)
+  - We keep the action vocabulary from MOBILE_USE_DOUBAO but in plain text form
+  - We add explicit "Output ONLY the action line" instruction
+"""
+
+# ── UI-TARS MOBILE_USE_DOUBAO action vocabulary (adapted) ────────────────────
+# From tars_prompt.py:
+#   click(point=...) long_press(point=...) type(content='')
+#   scroll(point=..., direction='down/up/left/right')
+#   open_app(app_name='') drag(start_point=..., end_point=...)
+#   press_home() press_back()
+#   finished(content='...')
+#
+# We translate to plain-text equivalents for small LLMs:
+
+SYSTEM_PROMPT = """\
+You are a mobile device control agent.
+Your job: complete the TASK by choosing one action per step.
+
+Output ONLY the action on a single line. No Thought. No explanation.\
+"""
+
+# Action menu — vocabulary from UI-TARS MOBILE_USE_DOUBAO, plain-text form
+ACTION_MENU = """\
+ACTIONS (one per step):
+  tap <id>            click the element
+  type <text>         type text (field must be focused)
+  swipe up            scroll up
+  swipe down          scroll down
+  swipe left          swipe left
+  swipe right         swipe right
+  back                press back button (press_back)
+  home                press home button (press_home)
+  enter               press enter/confirm
+  done                task is complete (finished)\
+"""
+
+
+def build_prompt(
+    task: str,
+    ui_elements: list,
+    history: list = None,
+    max_elements: int = 15,
+    max_history: int = 4,
+) -> str:
+    """
+    Build LLM prompt.
+
+    UI-TARS MOBILE_USE_DOUBAO provides:
+      {instruction} — task
+      action history — what we've done
+      screenshots — we replace with element list (no vision yet)
+
+    Args:
+        task         : goal string
+        ui_elements  : list of dicts {id, text, x, y}
+        history      : list of past action strings
+        max_elements : cap elements (3B token budget ~512 tokens)
+        max_history  : cap history shown (last N steps)
+
+    Returns:
+        Full prompt string
+    """
+    lines = [SYSTEM_PROMPT, ""]
+
+    # UI-TARS: "## User Instruction\n{instruction}"
+    lines.append(f"TASK: {task}")
+    lines.append("")
+
+    # UI elements (replaces screenshots in UI-TARS)
+    lines.append("SCREEN ELEMENTS:")
+    for el in ui_elements[:max_elements]:
+        lines.append(f"  [{el['id']}] {el['text']}")
+    if len(ui_elements) > max_elements:
+        lines.append(f"  ... +{len(ui_elements) - max_elements} more")
+    lines.append("")
+
+    # UI-TARS: "your action history"
+    if history:
+        recent = history[-max_history:]
+        lines.append("HISTORY:")
+        for i, h in enumerate(recent, 1):
+            lines.append(f"  {i}. {h}")
+        lines.append("")
+
+    lines.append(ACTION_MENU)
+    lines.append("")
+    lines.append("Action:")
+
+    return "\n".join(lines)
+
+
 //===== TERMUXFILE: jarvis-agent/reasoning/llm_client.py =====
 """
 reasoning/llm_client.py

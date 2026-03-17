@@ -1,3 +1,193 @@
+//===== TERMUXFILE: workflows/test/jarvis-agent/agent/controller.py =====
+"""
+agent/controller.py  --  Jarvis Agent  (Phase 3)
+=================================================
+Key changes vs Phase 2:
+  - parse_ui() now called with adb_device argument (live UIAutomator2)
+  - _is_goal_achieved() wired to real is_goal_achieved() from ui_parser
+  - Empty UI list handled: agent re-prompts instead of crashing
+  - adb_device passed through all the way from run() to parse_ui()
+"""
+
+import sys, os, time, argparse
+from typing import Optional
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, ROOT)
+
+from perception.screen_capture import capture_screen
+from perception.ui_parser       import parse_ui, is_goal_achieved   # real parser
+from reasoning.prompt_builder   import build_prompt
+from reasoning.llm_client       import generate, health_check
+from reasoning.action_parser    import parse_action
+from executor.adb_executor      import execute
+from agent.state                import AgentState
+
+DEFAULT_DEVICE = "192.168.29.48:44047"
+DEFAULT_TASK   = "Open WhatsApp"
+DEFAULT_MODEL  = os.path.expanduser(
+    "~/ai-workspace/llama.cpp/models/Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf"
+)
+LOOP_SLEEP_SEC = 1.5
+MAX_RETRIES    = 3
+
+
+# -- Validation layer ---------------------------------------------------------
+
+def _validate_action(action: dict, ui_elements: list) -> Optional[str]:
+    act = action.get("action", "")
+    if act == "tap":
+        tid = action.get("target")
+        x   = action.get("x")
+        if tid is not None:
+            el = next((e for e in ui_elements if e.get("id") == tid), None)
+            if el is None:
+                return f"tap target id={tid} not in UI list ({len(ui_elements)} elements)"
+        elif x is None:
+            return "tap has neither 'target' nor 'x'/'y'"
+    elif act == "type":
+        if not action.get("text"):
+            return "type action has empty text"
+    return None
+
+
+# -- Single step --------------------------------------------------------------
+
+def run_step(state: AgentState, device: str, model_path: str,
+             retry_reason: str = None) -> str:
+    """Returns: "ok" | "retry:<text>" | "done" | "error:<msg>" """
+    print(f"\n{'='*55}\n  STEP {state.step+1}  |  {state.task}\n{'='*55}")
+
+    # Screenshot
+    try:
+        img_path = capture_screen(adb_device=device)
+        state.last_screen = img_path
+    except Exception as e:
+        return f"error:screencap: {e}"
+
+    # Live UI parse (Phase 3: real UIAutomator2, not mock)
+    try:
+        ui = parse_ui(img_path, adb_device=device)
+        state.last_ui = ui
+    except Exception as e:
+        return f"error:ui_parse: {e}"
+
+    # Handle empty UI -- device may be animating, retry
+    if not ui:
+        print("[step] UI empty -- device may be mid-transition, retrying")
+        return f"retry:empty UI list"
+
+    # Goal check BEFORE prompting LLM (saves a round-trip if already done)
+    if is_goal_achieved(state.task, device, ui):
+        state.done = True
+        return "done"
+
+    prompt = build_prompt(state.task, ui,
+                          history=state.history,
+                          retry_reason=retry_reason)
+
+    # LLM
+    try:
+        llm_output = generate(prompt, model_path=model_path)
+    except Exception as e:
+        return f"error:llm: {e}"
+
+    print(f"[step] LLM raw : {llm_output!r}")
+
+    action = parse_action(llm_output, ui)
+    print(f"[step] Parsed  : {action}")
+
+    if action.get("action") == "retry":
+        return f"retry:{llm_output.strip()[:80]}"
+
+    err = _validate_action(action, ui)
+    if err:
+        print(f"[step] VALIDATION FAIL: {err}")
+        return f"retry:{llm_output.strip()[:80]}"
+
+    execute(action, ui, adb_device=device)
+    state.record(action, ui)
+
+    if action.get("action") == "done":
+        state.done = True
+        return "done"
+
+    print(f"[step] {state.summary()}")
+    return "ok"
+
+
+# -- Main loop ----------------------------------------------------------------
+
+def run(task: str, device: str, model_path: str, max_steps: int = 20):
+    print(f"\n{'#'*55}")
+    print(f"  JARVIS AGENT  --  {task}")
+    print(f"  Device : {device}")
+    print(f"  Model  : {os.path.basename(model_path)}")
+    print(f"{'#'*55}\n")
+
+    hc = health_check()
+    print(f"[init] backends: {hc}")
+    if not any([hc["proxy"], hc["llamafile"], hc["binary"]]):
+        print("[init] WARNING: no LLM backend. Run: bash ~/jarvis_server_init.sh")
+
+    state        = AgentState(task=task, max_steps=max_steps)
+    retry_count  = 0
+    retry_reason = None
+
+    while not state.is_finished():
+        try:
+            result = run_step(state, device=device, model_path=model_path,
+                              retry_reason=retry_reason)
+        except KeyboardInterrupt:
+            print("\n[controller] Interrupted.")
+            break
+        except Exception as e:
+            print(f"[controller] Unhandled: {e}")
+            time.sleep(3)
+            state.step += 1
+            retry_count = 0; retry_reason = None
+            continue
+
+        if result == "done":
+            print(f"\n[controller] Task complete in {state.step} steps.")
+            break
+
+        elif result == "ok":
+            retry_count = 0; retry_reason = None
+            time.sleep(LOOP_SLEEP_SEC)
+
+        elif result.startswith("retry:"):
+            retry_reason = result[len("retry:"):]
+            retry_count += 1
+            print(f"[controller] Retry {retry_count}/{MAX_RETRIES} -- reason: {retry_reason!r}")
+            if retry_count >= MAX_RETRIES:
+                print("[controller] RETRY BUDGET EXHAUSTED -- pressing HOME, stopping.")
+                execute({"action": "home"}, [], adb_device=device)
+                break
+            time.sleep(0.5)
+
+        elif result.startswith("error:"):
+            msg = result[len("error:"):]
+            print(f"[controller] Error: {msg} -- retrying in 3s")
+            time.sleep(3)
+            state.step += 1
+            retry_count = 0; retry_reason = None
+
+    print(f"\n[controller] History ({state.step} steps):")
+    for i, h in enumerate(state.history, 1):
+        print(f"  {i}. {h}")
+
+
+if __name__ == "__main__":
+    p = argparse.ArgumentParser()
+    p.add_argument("--task",      default=DEFAULT_TASK)
+    p.add_argument("--device",    default=DEFAULT_DEVICE)
+    p.add_argument("--model",     default=DEFAULT_MODEL)
+    p.add_argument("--max-steps", default=20, type=int)
+    args = p.parse_args()
+    run(args.task, args.device, args.model, args.max_steps)
+
+
 //===== TERMUXFILE: workflows/test/jarvis-agent/perception/ui_parser.py =====
 """
 perception/ui_parser.py  --  Jarvis Agent  (Phase 3)

@@ -32832,6 +32832,137 @@
           "resource_id": ""
         }
       ]
+    },
+    "aa4068217749": {
+      "screen_id": "aa4068217749",
+      "package": "com.android.settings",
+      "activity": "com.android.settings/.Settings",
+      "name": "settings_settings",
+      "labels": [
+        "Search",
+        "WiFi",
+        "Clear text",
+        "element_5",
+        "element_6",
+        "element_7",
+        "element_8",
+        "element_9",
+        "element_10",
+        "element_11",
+        "element_12",
+        "element_13",
+        "element_14",
+        "element_15"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Search",
+          "x": 620,
+          "y": 230,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.android.settings:id/searchView"
+        },
+        {
+          "text": "WiFi",
+          "x": 503,
+          "y": 230,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.settings:id/search_src_text"
+        },
+        {
+          "text": "Clear text",
+          "x": 888,
+          "y": 230,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Cancel",
+          "x": 1109,
+          "y": 230,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_5",
+          "x": 620,
+          "y": 571,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_6",
+          "x": 620,
+          "y": 426,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.settings:id/icon_title"
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 1009,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_8",
+          "x": 620,
+          "y": 899,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.settings:id/icon_title"
+        },
+        {
+          "text": "element_9",
+          "x": 620,
+          "y": 1291,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_10",
+          "x": 620,
+          "y": 1546,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_11",
+          "x": 620,
+          "y": 1800,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_12",
+          "x": 620,
+          "y": 2019,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_13",
+          "x": 620,
+          "y": 2274,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_14",
+          "x": 620,
+          "y": 2564,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_15",
+          "x": 620,
+          "y": 2740,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -33144,7 +33275,8 @@
     "558ab09c987a|tap:22": "5086bd87137e",
     "5086bd87137e|tap:element_9": "de32cdc23c0d",
     "de32cdc23c0d|back": "4203f6dd32c9",
-    "468f775ed5c9|tap:Search": "30d320eab354"
+    "468f775ed5c9|tap:Search": "30d320eab354",
+    "30d320eab354|tap:time": "aa4068217749"
   }
 }
 

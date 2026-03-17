@@ -17417,6 +17417,110 @@
           "y": 1688
         }
       ]
+    },
+    "09795a0aa8ec": {
+      "screen_id": "09795a0aa8ec",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/com.google.android.apps.youtube.app.settings.SettingsActivity",
+      "name": "youtube_settingsactivity",
+      "labels": [
+        "View"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.LinearLayout",
+          "x": 620,
+          "y": 591
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.LinearLayout",
+          "x": 620,
+          "y": 780
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.LinearLayout",
+          "x": 620,
+          "y": 969
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.LinearLayout",
+          "x": 620,
+          "y": 1158
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.LinearLayout",
+          "x": 620,
+          "y": 1347
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.LinearLayout",
+          "x": 620,
+          "y": 1536
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.LinearLayout",
+          "x": 620,
+          "y": 1725
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.LinearLayout",
+          "x": 620,
+          "y": 1914
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.LinearLayout",
+          "x": 620,
+          "y": 2103
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.LinearLayout",
+          "x": 620,
+          "y": 2292
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.LinearLayout",
+          "x": 620,
+          "y": 2481
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.LinearLayout",
+          "x": 620,
+          "y": 2646
+        },
+        {
+          "text": "View",
+          "resource_id": "com.google.android.youtube:id/action",
+          "cls": "android.widget.Button",
+          "x": 1075,
+          "y": 2567
+        }
+      ]
     }
   },
   "transitions": {
@@ -17629,7 +17733,8 @@
     "bf229eb46cda|Edit suggestion luz roja": "7ef217436dcb",
     "bf229eb46cda|Edit suggestion funk criminal": "f911caa9edca",
     "bf229eb46cda|Edit suggestion funk sereno": "1aac69f7e1ea",
-    "bf229eb46cda|Edit suggestion te conoci": "6e76c7a9bf3d"
+    "bf229eb46cda|Edit suggestion te conoci": "6e76c7a9bf3d",
+    "b57a107c23b7|Cast": "09795a0aa8ec"
   }
 }
 

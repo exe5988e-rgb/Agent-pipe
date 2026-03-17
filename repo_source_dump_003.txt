@@ -3198,8 +3198,8 @@ if __name__ == "__main__":
   },
   "6d33d4320f5d|tap:element_4": {
     "to": "a080221dda39",
-    "count": 2,
-    "last_seen": 1773736096.5832875
+    "count": 3,
+    "last_seen": 1773736104.1627545
   }
 }
 
@@ -5855,6 +5855,19 @@ java.lang.IllegalArgumentException: Argument expected after "text"
   TransitionMemory: 325 transitions (250 confirmed, threshold=2)
 [parser] DEBUG normalized: 'tap 3'
 [parser] INFO parsed 'tap 3' -> {'action': 'tap', 'target': 3}
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 311, in run
+    run_step(state, device=device, model_path=model_path)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 267, in run_step
+    llm_out = generate(prompt, model_path=model_path)
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/reasoning/llm_client.py", line 109, in generate
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
 Traceback (most recent call last):
   File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 311, in run
     run_step(state, device=device, model_path=model_path)

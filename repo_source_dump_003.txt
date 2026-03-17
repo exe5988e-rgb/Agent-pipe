@@ -2855,6 +2855,7 @@ if __name__ == "__main__":
 [11:15:56]   PASS  37.1s  skills=0
 [11:16:01] 
 [6/33] [1★] [phone] Open Phone app
+[11:16:44]   PASS  39.7s  skills=0
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4022,7 +4023,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-17T11:15:56.472641",
+  "run_at": "2026-03-17T11:16:44.401879",
   "skills_before": 0,
   "skills_current": 0,
   "results": [
@@ -4068,6 +4069,15 @@ if __name__ == "__main__":
       "difficulty": 1,
       "success": true,
       "elapsed_s": 37.1,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Open Phone app",
+      "category": "phone",
+      "difficulty": 1,
+      "success": true,
+      "elapsed_s": 39.7,
       "error": null,
       "retried": false
     }
@@ -4581,6 +4591,147 @@ RuntimeError: No LLM backend available.
 [parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
 [parser] DEBUG normalized: 'tap 1'
 [parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
+[parser] DEBUG normalized: 'tap 1'
+[parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
+
+########################################################
+  JARVIS  |  Open Phone app
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 185 screens (0 tainted), 252 transitions
+    whatsapp             130 screens
+    youtube              29 screens
+    vending              16 screens
+    launcher             4 screens
+    termux               3 screens
+    unknown              1 screens
+    settings             1 screens
+    chrome               1 screens
+  TransitionMemory: 252 transitions (242 confirmed, threshold=2)
+[init] task_apps (ordered): ['phone']
+
+========================================================
+  STEP 1  |  Open Phone app
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3596232 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=95bce3ad0fcc elements=26
+[step] UI: ['Clock', '11', ':', '16', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[OPT4v2] launcher -> launching phone (com.samsung.android.dialer)
+[llm] OPT4v2 am start: com.samsung.android.dialer
+[OPT4v2] app_index -> 1/1
+[mem] invalidated com.android.launcher/.Launcher
+
+========================================================
+  STEP 2  |  Open Phone app
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3596247 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=95bce3ad0fcc elements=26
+[step] UI: ['Clock', '11', ':', '16', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 1'
+[step] LLM: 'tap 1'
+[step] action: {'action': 'tap', 'target': 1}
+[input] dispatching: TouchEvent(x=620, y=418)
+[input] adb -s 192.168.29.48:34011 shell input tap 620 418
+[mem] invalidated com.android.launcher/.Launcher
+[step] step=2/5 done=False history=['opt4_launch:phone', 'tap [1] Clock']
+
+========================================================
+  STEP 3  |  Open Phone app
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3596233 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=95bce3ad0fcc elements=26
+[step] UI: ['Clock', '11', ':', '16', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 1'
+[step] LLM: 'tap 1'
+[step] action: {'action': 'tap', 'target': 1}
+[input] dispatching: TouchEvent(x=620, y=418)
+[input] adb -s 192.168.29.48:34011 shell input tap 620 418
+[mem] invalidated com.android.launcher/.Launcher
+[step] step=3/5 done=False history=['opt4_launch:phone', 'tap [1] Clock', 'tap [1] Clock']
+
+========================================================
+  STEP 4  |  Open Phone app
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3595744 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=95bce3ad0fcc elements=26
+[step] UI: ['Clock', '11', ':', '16', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 1'
+[step] LLM: 'tap 1'
+[step] action: {'action': 'tap', 'target': 1}
+[input] dispatching: TouchEvent(x=620, y=418)
+[input] adb -s 192.168.29.48:34011 shell input tap 620 418
+[mem] invalidated com.android.launcher/.Launcher
+[step] step=4/5 done=False history=['opt4_launch:phone', 'tap [1] Clock', 'tap [1] Clock', 'tap [1] Clock']
+
+========================================================
+  STEP 5  |  Open Phone app
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3595953 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=95bce3ad0fcc elements=26
+[step] UI: ['Clock', '11', ':', '16', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[step] repeat warning: 'tap [1] Clock'
+[llm] prompt tail: ..."NING: 'tap [1] Clock' repeated 3+ times with no change — try a different action."
+[llm] Phone B (Claude): 'tap 1'
+[step] LLM: 'tap 1'
+[step] action: {'action': 'tap', 'target': 1}
+[input] dispatching: TouchEvent(x=620, y=418)
+[input] adb -s 192.168.29.48:34011 shell input tap 620 418
+[mem] invalidated com.android.launcher/.Launcher
+[step] step=5/5 done=False history=['opt4_launch:phone', 'tap [1] Clock', 'tap [1] Clock', 'tap [1] Clock', 'tap [1] Clock']
+
+[controller] history:
+  1. opt4_launch:phone
+  2. tap [1] Clock
+  3. tap [1] Clock
+  4. tap [1] Clock
+  5. tap [1] Clock
+
+  Screen Map: 185 screens (0 tainted), 252 transitions
+    whatsapp             130 screens
+    youtube              29 screens
+    vending              16 screens
+    launcher             4 screens
+    termux               3 screens
+    unknown              1 screens
+    settings             1 screens
+    chrome               1 screens
+  TransitionMemory: 252 transitions (242 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

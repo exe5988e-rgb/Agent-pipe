@@ -19960,7 +19960,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 66,
+      "visits": 67,
       "tainted": false,
       "elements": [
         {
@@ -34869,6 +34869,307 @@
           "resource_id": ""
         }
       ]
+    },
+    "6d33d4320f5d": {
+      "screen_id": "6d33d4320f5d",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Cast",
+        "Notifications, 5",
+        "Search",
+        "element_4",
+        "MrBeast has new content",
+        "JensJulius Tejlgaard has new content",
+        "Competition Wallah has new content",
+        "TechFixIT has new content",
+        "NEFFEX has new content",
+        "All",
+        "element_11",
+        "All Selected",
+        "Today",
+        "Videos",
+        "Shorts",
+        "Live",
+        "Podcasts",
+        "element_18",
+        "element_19",
+        "Most relevant",
+        "element_21",
+        "Survive 30 Days Stranded With Your Ex, Win $250,000 \u2013 30 minutes, 4 seconds \u2013  \u2013 MrBeast - 92 million views - 9 days ago \u2013 play video",
+        "Yujiro Hanma TRUE Power & Demon Back Explained \u2013The Strongest Creature in BAKI | Complete Story \u2013 27 minutes, 31 seconds \u2013  \u2013 Anime Balls Deep - 201 thousand views - 4 days ago \u2013 play video",
+        "Action menu",
+        "element_25",
+        "Shorts",
+        "element_27",
+        "My life in Ramadan | Dr Amir AIIMS #shorts #minivlog #shorts, 343 thousand views \u2013 play Short",
+        "FIRST 1/4 Mile Lamborghini Temerario 1/4 Mile Dragy Test, 21 thousand views \u2013 play Short",
+        "The Most Luxurious Car In The World!, 100 thousand views \u2013 play Short"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Cast",
+          "x": 820,
+          "y": 223,
+          "cls": "android.widget.Button",
+          "resource_id": "com.google.android.youtube:id/mdx_entry_point_button"
+        },
+        {
+          "text": "Notifications, 5",
+          "x": 988,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/menu_item_view"
+        },
+        {
+          "text": "Search",
+          "x": 1156,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/menu_item_view"
+        },
+        {
+          "text": "element_4",
+          "x": 536,
+          "y": 482,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": ""
+        },
+        {
+          "text": "MrBeast has new content",
+          "x": 140,
+          "y": 482,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "JensJulius Tejlgaard has new content",
+          "x": 392,
+          "y": 482,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Competition Wallah has new content",
+          "x": 644,
+          "y": 482,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "TechFixIT has new content",
+          "x": 896,
+          "y": 482,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "NEFFEX has new content",
+          "x": 1047,
+          "y": 482,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "All",
+          "x": 1156,
+          "y": 440,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_11",
+          "x": 620,
+          "y": 741,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "All Selected",
+          "x": 113,
+          "y": 741,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Today",
+          "x": 321,
+          "y": 741,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Videos",
+          "x": 577,
+          "y": 741,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 839,
+          "y": 741,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Live",
+          "x": 1070,
+          "y": 741,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Podcasts",
+          "x": 1212,
+          "y": 741,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "element_18",
+          "x": 620,
+          "y": 1798,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results"
+        },
+        {
+          "text": "element_19",
+          "x": 620,
+          "y": 1355,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Most relevant",
+          "x": 250,
+          "y": 909,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "element_21",
+          "x": 620,
+          "y": 1411,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": ""
+        },
+        {
+          "text": "Survive 30 Days Stranded With Your Ex, Win $250,000 \u2013 30 minutes, 4 seconds \u2013  \u2013 MrBeast - 92 million views - 9 days ago \u2013 play video",
+          "x": 560,
+          "y": 1411,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Yujiro Hanma TRUE Power & Demon Back Explained \u2013The Strongest Creature in BAKI | Complete Story \u2013 27 minutes, 31 seconds \u2013  \u2013 Anime Balls Deep - 201 thousand views - 4 days ago \u2013 play video",
+          "x": 1166,
+          "y": 1411,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Action menu",
+          "x": 1050,
+          "y": 1637,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_25",
+          "x": 620,
+          "y": 2328,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 318,
+          "y": 1976,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "element_27",
+          "x": 620,
+          "y": 2433,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": ""
+        },
+        {
+          "text": "My life in Ramadan | Dr Amir AIIMS #shorts #minivlog #shorts, 343 thousand views \u2013 play Short",
+          "x": 313,
+          "y": 2433,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "FIRST 1/4 Mile Lamborghini Temerario 1/4 Mile Dragy Test, 21 thousand views \u2013 play Short",
+          "x": 870,
+          "y": 2433,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "The Most Luxurious Car In The World!, 100 thousand views \u2013 play Short",
+          "x": 1205,
+          "y": 2433,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 525,
+          "y": 2154,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 1082,
+          "y": 2154,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Home",
+          "x": 124,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 372,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Create",
+          "x": 620,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscriptions",
+          "x": 868,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "You",
+          "x": 1116,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -35120,7 +35421,7 @@
     "307d903852e1|type": "b128d851f827",
     "b128d851f827|tap:None": "955fca488005",
     "366c9a634a55|type": "3770450be101",
-    "4203f6dd32c9|opt4_launch:youtube": "fc36bc1fb8c7",
+    "4203f6dd32c9|opt4_launch:youtube": "6d33d4320f5d",
     "4203f6dd32c9|opt4_launch:settings": "468f775ed5c9",
     "4203f6dd32c9|opt4_launch:chrome": "ec2d5cc0aa50",
     "4203f6dd32c9|opt4_launch:play store": "06c59ed8f4e7",

@@ -2975,6 +2975,11 @@ if __name__ == "__main__":
     "to": "7c51d7e864c3",
     "count": 1,
     "last_seen": 1773728339.0529592
+  },
+  "082a9e286aa7|type": {
+    "to": "678cb33200f5",
+    "count": 1,
+    "last_seen": 1773728434.9564176
   }
 }
 
@@ -3054,6 +3059,7 @@ if __name__ == "__main__":
 [11:50:05]   PASS  23.0s  skills=5
 [11:50:10] 
 [24/33] [3★] [whatsapp] Send a WhatsApp message to Sadique faridi saying Hello brother
+[11:50:35]   PASS  22.3s  skills=5
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4221,7 +4227,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-17T11:50:05.289597",
+  "run_at": "2026-03-17T11:50:35.953302",
   "skills_before": 0,
   "skills_current": 5,
   "results": [
@@ -4429,6 +4435,15 @@ if __name__ == "__main__":
       "difficulty": 3,
       "success": true,
       "elapsed_s": 23.0,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Send a WhatsApp message to Sadique faridi saying Hello brother",
+      "category": "whatsapp",
+      "difficulty": 3,
+      "success": true,
+      "elapsed_s": 22.3,
       "error": null,
       "retried": false
     }
@@ -8033,6 +8048,115 @@ java.lang.IllegalArgumentException: Argument expected after "text"
     unknown              1 screens
     wirelesssettings     1 screens
   TransitionMemory: 281 transitions (250 confirmed, threshold=2)
+
+########################################################
+  JARVIS  |  Send a WhatsApp message to Sadique faridi saying Hello brother
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 216 screens (0 tainted), 281 transitions
+    whatsapp             134 screens
+    youtube              35 screens
+    vending              20 screens
+    chrome               12 screens
+    settings             6 screens
+    launcher             4 screens
+    termux               3 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+  TransitionMemory: 281 transitions (250 confirmed, threshold=2)
+[init] task_apps (ordered): ['whatsapp']
+
+========================================================
+  STEP 1  |  Send a WhatsApp message to Sadique faridi saying Hello brother
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3601894 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=416e66c63547 elements=26
+[step] UI: ['Clock', '11', ':', '50', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[OPT4v2] launcher -> launching whatsapp (com.whatsapp)
+[llm] OPT4v2 am start: com.whatsapp
+[OPT4v2] app_index -> 1/1
+
+========================================================
+  STEP 2  |  Send a WhatsApp message to Sadique faridi saying Hello brother
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1563043 bytes)
+[ui_parser] activity=com.whatsapp/.Conversation
+[ui_parser] signal='com.whatsapp/.Conversation'
+[mem] miss (unknown): com.whatsapp/.Conversation
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 16 elements from 192.168.29.48:34011
+[mem] stored com.whatsapp/.Conversation hash=9f491658b421 elements=16
+[step] UI: ['element_1', 'Back', 'element_3', 'Video call', 'Voice call', 'More options', 'element_7', 'element_8']
+[map] new screen: whatsapp_conversation (082a9e286aa7)
+[tm] transition changed: 4203f6dd32c9|opt4_launch:whatsapp 366c9a63 -> 082a9e28
+[map] transition: launcher_launcher --[opt4_launch:whatsapp]--> whatsapp_conversation
+[map] screen: whatsapp_conversation (082a9e28)
+[policy] send_message phase1: 'Hello brother' -> tap [16] + type
+[policy] matched — executing 2 actions directly
+[policy] action: {'action': 'tap', 'target': 16}
+[input] dispatching: TouchEvent(x=362, y=1625)
+[input] adb -s 192.168.29.48:34011 shell input tap 362 1625
+[mem] invalidated com.whatsapp/.Conversation
+[policy] action: {'action': 'type', 'text': 'Hello brother'}
+[input] dispatching: SetTextEvent('Hello brother')
+[input] adb -s 192.168.29.48:34011 shell input text Hello%sbrother
+[policy] done — skipped Claude entirely
+[step] step=3/15 done=False history=['opt4_launch:whatsapp', 'tap [16] Message', "type 'Hello brother'"]
+
+========================================================
+  STEP 4  |  Send a WhatsApp message to Sadique faridi saying Hello brother
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1560907 bytes)
+[ui_parser] activity=com.whatsapp/.Conversation
+[ui_parser] signal='com.whatsapp/.Conversation'
+[mem] miss (unknown): com.whatsapp/.Conversation
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 14 elements from 192.168.29.48:34011
+[mem] stored com.whatsapp/.Conversation hash=539c89f34b64 elements=14
+[step] UI: ['element_1', 'Back', 'element_3', 'Video call', 'Voice call', 'More options', 'element_7', 'element_8']
+[map] new screen: whatsapp_conversation (678cb33200f5)
+[map] transition: whatsapp_conversation --[type]--> whatsapp_conversation
+[map] screen: whatsapp_conversation (678cb332)
+[policy] send_message phase2: tapping Send [13]
+[policy] matched — executing 2 actions directly
+[policy] action: {'action': 'tap', 'target': 13}
+[input] dispatching: TouchEvent(x=1141, y=1626)
+[input] adb -s 192.168.29.48:34011 shell input tap 1141 1626
+[mem] invalidated com.whatsapp/.Conversation
+[policy] action: {'action': 'done'}
+[input] DONE — no dispatch
+[policy] done — skipped Claude entirely
+[step] step=5/15 done=True history=['opt4_launch:whatsapp', 'tap [16] Message', "type 'Hello brother'", 'tap [13] Send', 'done']
+
+[controller] done in 5 steps
+
+[controller] history:
+  1. opt4_launch:whatsapp
+  2. tap [16] Message
+  3. type 'Hello brother'
+  4. tap [13] Send
+  5. done
+
+  Screen Map: 218 screens (0 tainted), 282 transitions
+    whatsapp             136 screens
+    youtube              35 screens
+    vending              20 screens
+    chrome               12 screens
+    settings             6 screens
+    launcher             4 screens
+    termux               3 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+  TransitionMemory: 282 transitions (250 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
@@ -12182,202 +12306,5 @@ MOCK_ELEMENTS = [
 def parse_ui(image_path: str) -> list:
     print(f"[parser] mock — {len(MOCK_ELEMENTS)} elements")
     return [dict(e) for e in MOCK_ELEMENTS]
-
-
-//===== TERMUXFILE: jarvis-agent/perception/ui_parser.py =====
-"""
-perception/ui_parser.py
-
-Real UI parser — replaces ui_mock_parser.py.
-Uses ADB uiautomator dump to get actual screen elements.
-
-Interface unchanged: parse_ui(image_path, adb_device) -> list[{id,text,x,y}]
-
-What we extract per element:
-  id    : sequential int starting at 1
-  text  : content-desc or text attribute (whichever is non-empty)
-  x, y  : center of bounds
-  bounds: raw string e.g. "[0,0][100,50]"
-  cls   : short class name e.g. "Button", "TextView"
-  clickable: bool
-
-Filtering:
-  - Skip nodes with no text and no content-desc
-  - Skip zero-size bounds [x,y][x,y]
-  - Skip pure containers (FrameLayout, LinearLayout etc) unless clickable
-  - Cap at MAX_ELEMENTS to keep prompt token budget sane
-"""
-
-import re
-import subprocess
-import os
-
-MAX_ELEMENTS = 20
-
-# Short class name map
-_CLS_SHORT = {
-    "android.widget.TextView":       "Text",
-    "android.widget.EditText":       "Input",
-    "android.widget.Button":         "Button",
-    "android.widget.ImageButton":    "ImgBtn",
-    "android.widget.ImageView":      "Image",
-    "android.widget.CheckBox":       "Check",
-    "android.widget.RadioButton":    "Radio",
-    "android.widget.Switch":         "Switch",
-    "android.widget.ProgressBar":    "Progress",
-    "android.view.View":             "View",
-    "android.widget.FrameLayout":    "Frame",
-    "android.widget.LinearLayout":   "Linear",
-    "android.widget.RelativeLayout": "Relative",
-    "android.widget.ScrollView":     "Scroll",
-    "androidx.recyclerview.widget.RecyclerView": "List",
-}
-
-_CONTAINER_CLS = {
-    "android.widget.FrameLayout",
-    "android.widget.LinearLayout",
-    "android.widget.RelativeLayout",
-    "android.view.ViewGroup",
-    "android.widget.ScrollView",
-    "androidx.recyclerview.widget.RecyclerView",
-}
-
-def _adb_dump(adb_device: str) -> str:
-    """Run uiautomator dump and return XML string."""
-    dump_cmd = ["adb", "-s", adb_device, "shell",
-                "uiautomator", "dump", "/sdcard/uidump.xml"]
-    subprocess.run(dump_cmd, capture_output=True, timeout=15)
-    r = subprocess.run(
-        ["adb", "-s", adb_device, "shell", "cat", "/sdcard/uidump.xml"],
-        capture_output=True, timeout=10
-    )
-    return r.stdout.decode(errors="replace")
-
-def _parse_bounds(bounds_str: str):
-    """'[x1,y1][x2,y2]' → (cx, cy, w, h)"""
-    m = re.match(r"\[(\d+),(\d+)\]\[(\d+),(\d+)\]", bounds_str)
-    if not m:
-        return None
-    x1, y1, x2, y2 = int(m.group(1)), int(m.group(2)), int(m.group(3)), int(m.group(4))
-    if x1 == x2 or y1 == y2:
-        return None   # zero-size
-    cx = (x1 + x2) // 2
-    cy = (y1 + y2) // 2
-    return cx, cy, x2 - x1, y2 - y1
-
-def _extract_nodes(xml: str) -> list:
-    """Parse all <node> attributes from flat XML."""
-    nodes = []
-    for attrs in re.findall(r"<node([^>]+)>?", xml):
-        def get(attr):
-            m = re.search(rf'{attr}="([^"]*)"', attrs)
-            return m.group(1) if m else ""
-
-        text      = get("text").strip()
-        desc      = get("content-desc").strip()
-        bounds    = get("bounds")
-        cls       = get("class")
-        clickable = get("clickable") == "true"
-        enabled   = get("enabled") != "false"
-
-        label = desc or text
-        if not label:
-            continue
-        if not bounds:
-            continue
-        coords = _parse_bounds(bounds)
-        if coords is None:
-            continue
-        cx, cy, w, h = coords
-
-        # Skip pure containers unless they are clickable and have a label
-        if cls in _CONTAINER_CLS and not clickable:
-            continue
-
-        # Skip disabled
-        if not enabled:
-            continue
-
-        short_cls = _CLS_SHORT.get(cls, cls.split(".")[-1] if cls else "")
-
-        nodes.append({
-            "text":      label,
-            "x":         cx,
-            "y":         cy,
-            "w":         w,
-            "h":         h,
-            "cls":       short_cls,
-            "clickable": clickable,
-            "bounds":    bounds,
-        })
-
-    return nodes
-
-def _deduplicate(nodes: list) -> list:
-    """Remove nodes with identical text+coords."""
-    seen = set()
-    out  = []
-    for n in nodes:
-        key = (n["text"], n["x"], n["y"])
-        if key not in seen:
-            seen.add(key)
-            out.append(n)
-    return out
-
-def _prioritise(nodes: list) -> list:
-    """
-    Sort: clickable first, then by vertical position.
-    Helps Claude see interactive elements at the top of the list.
-    """
-    return sorted(nodes, key=lambda n: (not n["clickable"], n["y"]))
-
-def parse_ui(image_path: str, adb_device: str = None) -> list:
-    """
-    Parse real UI from device via uiautomator dump.
-
-    Args:
-        image_path : path to screenshot (kept for interface compat — not used here)
-        adb_device : ADB serial e.g. '192.168.29.48:39601'
-                     Falls back to ADB_DEVICE env var or default.
-
-    Returns:
-        list of dicts: [{id, text, x, y, cls, clickable}, ...]
-    """
-    if adb_device is None:
-        adb_device = os.environ.get("ADB_DEVICE", "192.168.29.48:39601")
-
-    try:
-        xml = _adb_dump(adb_device)
-    except Exception as e:
-        print(f"[parser] uiautomator dump failed: {e} — returning empty")
-        return []
-
-    if not xml or "<hierarchy" not in xml:
-        print(f"[parser] bad XML dump — returning empty")
-        return []
-
-    nodes = _extract_nodes(xml)
-    nodes = _deduplicate(nodes)
-    nodes = _prioritise(nodes)
-    nodes = nodes[:MAX_ELEMENTS]
-
-    # Assign sequential IDs
-    elements = []
-    for i, n in enumerate(nodes, 1):
-        elements.append({
-            "id":        i,
-            "text":      n["text"],
-            "x":         n["x"],
-            "y":         n["y"],
-            "cls":       n["cls"],
-            "clickable": n["clickable"],
-        })
-
-    print(f"[parser] {len(elements)} elements from uiautomator dump")
-    for e in elements:
-        flag = "✓" if e["clickable"] else " "
-        print(f"  [{e['id']}]{flag} {e['cls']:8} ({e['x']:4},{e['y']:4}) {e['text'][:40]}")
-
-    return elements
 
 

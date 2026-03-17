@@ -2926,6 +2926,7 @@ if __name__ == "__main__":
 [11:27:19]   PASS  251.1s  skills=2
 [11:27:24] 
 [13/33] [2★] [settings] Open Settings and go to WiFi
+[11:29:46]   PASS  138.9s  skills=3
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4093,9 +4094,9 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-17T11:27:19.607209",
+  "run_at": "2026-03-17T11:29:46.842112",
   "skills_before": 0,
-  "skills_current": 2,
+  "skills_current": 3,
   "results": [
     {
       "task": "Open WhatsApp",
@@ -4204,6 +4205,15 @@ if __name__ == "__main__":
       "elapsed_s": 251.1,
       "error": null,
       "retried": false
+    },
+    {
+      "task": "Open Settings and go to WiFi",
+      "category": "settings",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 138.9,
+      "error": null,
+      "retried": false
     }
   ]
 }
@@ -4234,6 +4244,30 @@ if __name__ == "__main__":
       {
         "action": "tap",
         "target": "Subscriptions: New content is available"
+      },
+      {
+        "action": "done"
+      }
+    ],
+    "uses": 0,
+    "version": 2
+  },
+  {
+    "pattern": "open settings and go",
+    "activity": "com.oplus.wirelesssettings/com.android.settings.SettingsActivity",
+    "task_example": "Open Settings and go to WiFi",
+    "steps": [
+      {
+        "action": "tap",
+        "target": "Search"
+      },
+      {
+        "action": "type",
+        "text": "$QUERY"
+      },
+      {
+        "action": "tap",
+        "target": "element_5"
       },
       {
         "action": "done"
@@ -5726,6 +5760,153 @@ RuntimeError: No LLM backend available.
 [parser] INFO parsed 'type WiFi' -> {'action': 'type', 'text': 'WiFi'}
 [parser] DEBUG normalized: 'tap 5'
 [parser] INFO parsed 'tap 5' -> {'action': 'tap', 'target': 5}
+[parser] DEBUG normalized: 'done'
+[parser] INFO parsed 'done' -> {'action': 'done'}
+
+########################################################
+  JARVIS  |  Open Settings and go to WiFi
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 193 screens (0 tainted), 259 transitions
+    whatsapp             132 screens
+    youtube              35 screens
+    vending              16 screens
+    launcher             4 screens
+    termux               3 screens
+    unknown              1 screens
+    settings             1 screens
+    chrome               1 screens
+  TransitionMemory: 259 transitions (244 confirmed, threshold=2)
+[init] task_apps (ordered): ['settings']
+
+========================================================
+  STEP 1  |  Open Settings and go to WiFi
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3599904 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=d4a67e073c5e elements=26
+[step] UI: ['Clock', '11', ':', '27', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[OPT4v2] launcher -> launching settings (com.android.settings)
+[llm] OPT4v2 am start: com.android.settings
+[OPT4v2] app_index -> 1/1
+
+========================================================
+  STEP 2  |  Open Settings and go to WiFi
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (218398 bytes)
+[ui_parser] activity=com.android.settings/.Settings
+[ui_parser] signal='com.android.settings/.Settings'
+[mem] miss (unknown): com.android.settings/.Settings
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 13 elements from 192.168.29.48:34011
+[mem] stored com.android.settings/.Settings hash=a5e8e83d4ae9 elements=13
+[step] UI: ['Search box', 'Search', 'element_3', 'element_4', 'element_5', 'element_6', 'element_7', 'element_8']
+[map] screen: settings_settings (f3100103)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 2'
+[step] LLM: 'tap 2'
+[step] action: {'action': 'tap', 'target': 2}
+[input] dispatching: TouchEvent(x=683, y=603)
+[input] adb -s 192.168.29.48:34011 shell input tap 683 603
+[mem] invalidated com.android.settings/.Settings
+[step] step=2/8 done=False history=['opt4_launch:settings', 'tap [2] Search']
+
+========================================================
+  STEP 3  |  Open Settings and go to WiFi
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1163149 bytes)
+[ui_parser] activity=com.android.settings/.Settings
+[ui_parser] signal='com.android.settings/.Settings'
+[mem] miss (unknown): com.android.settings/.Settings
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 22 elements from 192.168.29.48:34011
+[mem] stored com.android.settings/.Settings hash=0222f914185b elements=22
+[step] UI: ['Search', 'Search', 'Cancel', 'element_4', 'Clear', 'time', 'displa', 'double tap']
+[map] new screen: settings_settings (5d79fdb685d6)
+[map] transition: settings_settings --[tap:element_3]--> settings_settings
+[map] screen: settings_settings (5d79fdb6)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'type WiFi'
+[step] LLM: 'type WiFi'
+[step] action: {'action': 'type', 'text': 'WiFi'}
+[input] dispatching: SetTextEvent('WiFi')
+[input] adb -s 192.168.29.48:34011 shell input text WiFi
+[mem] invalidated com.android.settings/.Settings
+[step] step=3/8 done=False history=['opt4_launch:settings', 'tap [2] Search', "type 'WiFi'"]
+
+========================================================
+  STEP 4  |  Open Settings and go to WiFi
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1140982 bytes)
+[ui_parser] activity=com.android.settings/.Settings
+[ui_parser] signal='com.android.settings/.Settings'
+[mem] miss (unknown): com.android.settings/.Settings
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 16 elements from 192.168.29.48:34011
+[mem] stored com.android.settings/.Settings hash=b1f95668523b elements=16
+[step] UI: ['Search', 'WiFi', 'Clear text', 'Cancel', 'element_5', 'element_6', 'element_7', 'element_8']
+[map] new screen: settings_settings (267104668fb5)
+[map] transition: settings_settings --[type]--> settings_settings
+[map] screen: settings_settings (26710466)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 5'
+[step] LLM: 'tap 5'
+[step] action: {'action': 'tap', 'target': 5}
+[input] dispatching: TouchEvent(x=620, y=1546)
+[input] adb -s 192.168.29.48:34011 shell input tap 620 1546
+[step] step=4/8 done=False history=['opt4_launch:settings', 'tap [2] Search', "type 'WiFi'", 'tap [5] element_5']
+
+========================================================
+  STEP 5  |  Open Settings and go to WiFi
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (109685 bytes)
+[ui_parser] activity=com.oplus.wirelesssettings/com.android.settings.SettingsActivity
+[ui_parser] signal='com.oplus.wirelesssettings/com.android.settings.SettingsActivity'
+[mem] miss (unknown): com.oplus.wirelesssettings/com.android.settings.SettingsActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 4 elements from 192.168.29.48:34011
+[mem] stored com.oplus.wirelesssettings/com.android.settings.SettingsActivity hash=34cd1a48eba7 elements=4
+[step] UI: ['element_1', 'Navigate up', 'element_3', 'element_4']
+[map] new screen: wirelesssettings_settingsactivity (1d0f3d79dcfd)
+[map] transition: settings_settings --[tap:element_6]--> wirelesssettings_settingsactivity
+[map] screen: wirelesssettings_settingsactivity (1d0f3d79)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'done'
+[step] LLM: 'done'
+[step] action: {'action': 'done'}
+[input] DONE — no dispatch
+[mem] invalidated com.oplus.wirelesssettings/com.android.settings.SettingsActivity
+[skill] learned: 'open settings and go'  (4 steps)  activity=SettingsActivity
+[step] step=5/8 done=True history=['opt4_launch:settings', 'tap [2] Search', "type 'WiFi'", 'tap [5] element_5', 'done']
+
+[controller] done in 5 steps
+
+[controller] history:
+  1. opt4_launch:settings
+  2. tap [2] Search
+  3. type 'WiFi'
+  4. tap [5] element_5
+  5. done
+
+  Screen Map: 196 screens (0 tainted), 262 transitions
+    whatsapp             132 screens
+    youtube              35 screens
+    vending              16 screens
+    launcher             4 screens
+    termux               3 screens
+    settings             3 screens
+    unknown              1 screens
+    chrome               1 screens
+    wirelesssettings     1 screens
+  TransitionMemory: 262 transitions (245 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

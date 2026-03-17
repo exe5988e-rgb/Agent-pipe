@@ -35379,7 +35379,7 @@
         "Default apps",
         "Device & app notifications"
       ],
-      "visits": 8,
+      "visits": 9,
       "tainted": false,
       "elements": [
         {

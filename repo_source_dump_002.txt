@@ -15055,6 +15055,251 @@
           "y": 2632
         }
       ]
+    },
+    "0a5db92131e4": {
+      "screen_id": "0a5db92131e4",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/com.google.android.apps.youtube.app.watchwhile.InternalMainActivity",
+      "name": "youtube_internalmainactivity",
+      "labels": [
+        "Cast",
+        "Notifications, 9+",
+        "Search",
+        "Settings",
+        "Switch account",
+        "Google Account",
+        "Turn on Incognito",
+        "History",
+        "View all",
+        "The ONLY Being Zeno Won\u2019t Fight#animeshort#viral#zeno#dragonball#goku#shortfeed \u2013 1 minute, 26 seconds \u2013  \u2013 Saiyan_Doctrine  \u2013 play Short",
+        "Action menu",
+        "Google Cloud: Your one-stop shop for AI and everything cloud \u2013 31 seconds \u2013  \u2013 Google Cloud \u2013 play video",
+        "Action menu",
+        "Warriyo - Mortals (ft. Laura Brehm) (Slowed) \u2013 4 minutes, 34 seconds \u2013  \u2013 Warriyo \u2013 play video",
+        "Playlists",
+        "Create a new playlist",
+        "View all",
+        "Action menu",
+        "Action menu",
+        "Shorts",
+        "Create",
+        "Subscriptions",
+        "You"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Cast",
+          "resource_id": "com.google.android.youtube:id/mdx_entry_point_button",
+          "cls": "android.widget.Button",
+          "x": 652,
+          "y": 223
+        },
+        {
+          "text": "Notifications, 9+",
+          "resource_id": "com.google.android.youtube:id/menu_item_view",
+          "cls": "android.widget.ImageView",
+          "x": 820,
+          "y": 223
+        },
+        {
+          "text": "Search",
+          "resource_id": "com.google.android.youtube:id/menu_item_view",
+          "cls": "android.widget.ImageView",
+          "x": 988,
+          "y": 223
+        },
+        {
+          "text": "Settings",
+          "resource_id": "com.google.android.youtube:id/menu_item_view",
+          "cls": "android.widget.ImageView",
+          "x": 1156,
+          "y": 223
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.ViewGroup",
+          "x": 620,
+          "y": 475
+        },
+        {
+          "text": "Switch account",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 259,
+          "y": 727
+        },
+        {
+          "text": "Google Account",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 729,
+          "y": 727
+        },
+        {
+          "text": "Turn on Incognito",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1111,
+          "y": 727
+        },
+        {
+          "text": "History",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 923
+        },
+        {
+          "text": "View all",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1040,
+          "y": 923
+        },
+        {
+          "text": "The ONLY Being Zeno Won\u2019t Fight#animeshort#viral#zeno#dragonball#goku#shortfeed \u2013 1 minute, 26 seconds \u2013  \u2013 Saiyan_Doctrine  \u2013 play Short",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 308,
+          "y": 1299
+        },
+        {
+          "text": "Action menu",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 546,
+          "y": 1367
+        },
+        {
+          "text": "Google Cloud: Your one-stop shop for AI and everything cloud \u2013 31 seconds \u2013  \u2013 Google Cloud \u2013 play video",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 868,
+          "y": 1299
+        },
+        {
+          "text": "Action menu",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1106,
+          "y": 1367
+        },
+        {
+          "text": "Warriyo - Mortals (ft. Laura Brehm) (Slowed) \u2013 4 minutes, 34 seconds \u2013  \u2013 Warriyo \u2013 play video",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1194,
+          "y": 1299
+        },
+        {
+          "text": "Playlists",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 1676
+        },
+        {
+          "text": "Create a new playlist",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 804,
+          "y": 1676
+        },
+        {
+          "text": "View all",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1040,
+          "y": 1676
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 308,
+          "y": 2043
+        },
+        {
+          "text": "Action menu",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 546,
+          "y": 2120
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 868,
+          "y": 2043
+        },
+        {
+          "text": "Action menu",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1106,
+          "y": 2120
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1194,
+          "y": 2043
+        },
+        {
+          "text": "",
+          "resource_id": "com.google.android.youtube:id/compact_list_item",
+          "cls": "android.widget.LinearLayout",
+          "x": 620,
+          "y": 2425
+        },
+        {
+          "text": "",
+          "resource_id": "com.google.android.youtube:id/compact_list_item",
+          "cls": "android.widget.LinearLayout",
+          "x": 620,
+          "y": 2621
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.LinearLayout",
+          "x": 620,
+          "y": 2745
+        },
+        {
+          "text": "Shorts",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 372,
+          "y": 2632
+        },
+        {
+          "text": "Create",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 2632
+        },
+        {
+          "text": "Subscriptions",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 868,
+          "y": 2632
+        },
+        {
+          "text": "You",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1116,
+          "y": 2632
+        }
+      ]
     }
   },
   "transitions": {
@@ -15248,7 +15493,8 @@
     "74d6715f5e29|Is one of Yuji's fingers stronger than all 20 Sukuna's #anime #edit #viral #jjk \u2013 play Short": "03404722b81a",
     "74d6715f5e29|She Lost Everything in 24 Hours \u2013 play Short": "03404722b81a",
     "74d6715f5e29|Shorts": "58fbda4556ef",
-    "74d6715f5e29|Subscriptions: New content is available": "ce95ce71af4a"
+    "74d6715f5e29|Subscriptions: New content is available": "ce95ce71af4a",
+    "74d6715f5e29|You": "0a5db92131e4"
   }
 }
 
@@ -17796,96 +18042,5 @@ jobs:
         run: |
           echo "Cleaning act cache..."
           rm -rf ~/.cache/act || true
-
-
-//===== TERMUXFILE: workflows/jarvis_start.sh =====
-#!/data/data/com.termux/files/usr/bin/bash
-# ================================================================
-#  jarvis_start.sh  —  Minimal Phone A startup
-#  Only starts what is essential for the A→B agent loop:
-#    1. ADB connect Phone A + Phone B
-#    2. Verify Phone B Claude bridge is reachable
-#
-#  Phone A : 192.168.29.48:37891
-#  Phone B : 192.168.29.110:45999  (Claude brain)
-#
-#  Usage:
-#    bash ~/workflows/jarvis_start.sh
-#    bash ~/workflows/jarvis_start.sh --stop
-# ================================================================
-
-PHONE_A="192.168.29.48:37891"
-PHONE_B="192.168.29.110:45999"
-PHONE_B_BRIDGE="http://192.168.29.110:8890"
-
-GREEN="\033[0;32m"; YELLOW="\033[1;33m"; RED="\033[0;31m"; NC="\033[0m"
-log()  { echo -e "${GREEN}[jarvis]${NC} $*"; }
-warn() { echo -e "${YELLOW}[jarvis]${NC} $*"; }
-err()  { echo -e "${RED}[jarvis]${NC} $*"; }
-
-# ── Stop mode ────────────────────────────────────────────────────────────────
-if [ "$1" = "--stop" ]; then
-    log "Disconnecting ADB devices..."
-    adb disconnect "$PHONE_A" 2>/dev/null && log "  ✓ Phone A disconnected" || true
-    adb disconnect "$PHONE_B" 2>/dev/null && log "  ✓ Phone B disconnected" || true
-    log "Done."; exit 0
-fi
-
-echo ""
-echo "╔══════════════════════════════════════════════════════╗"
-echo "║   JARVIS START  —  Agent Loop (A → B)               ║"
-echo "╚══════════════════════════════════════════════════════╝"
-echo ""
-
-# ── 1. ADB connect ───────────────────────────────────────────────────────────
-log "Connecting ADB devices..."
-
-adb connect "$PHONE_A" 2>&1 | grep -q "connected" \
-    && log "  ✓ Phone A ($PHONE_A)" \
-    || warn "  ✗ Phone A failed — screencap will fail"
-
-adb connect "$PHONE_B" 2>&1 | grep -q "connected" \
-    && log "  ✓ Phone B ($PHONE_B)" \
-    || warn "  ✗ Phone B failed — bridge unreachable"
-
-# ── 2. Verify Phone B bridge ─────────────────────────────────────────────────
-log "Checking Phone B Claude bridge..."
-HEALTH=$(curl -sf --max-time 5 "$PHONE_B_BRIDGE/health")
-if [ $? -eq 0 ]; then
-    log "  ✓ Bridge online — Claude brain ACTIVE"
-    log "  $HEALTH"
-else
-    err "  ✗ Bridge offline!"
-    err "  On Phone B run: python3 ~/claude_bridge.py"
-    echo ""
-    exit 1
-fi
-
-# ── 3. Quick A→B smoke test ──────────────────────────────────────────────────
-log "Running A→B smoke test..."
-RESULT=$(curl -sf --max-time 30 -X POST "$PHONE_B_BRIDGE/chat" \
-    -H "Content-Type: application/json" \
-    -d '{"prompt": "Reply with only the word: ready"}')
-if echo "$RESULT" | grep -q '"success":true'; then
-    log "  ✓ A→B round-trip OK"
-    log "  Response: $RESULT"
-else
-    warn "  ✗ Smoke test failed or timed out"
-    warn "  Raw: $RESULT"
-fi
-
-# ── Summary ──────────────────────────────────────────────────────────────────
-echo ""
-echo "╔══════════════════════════════════════════════════════╗"
-echo "║   READY                                              ║"
-echo "╚══════════════════════════════════════════════════════╝"
-echo ""
-log "Phone A (agent)  : $PHONE_A"
-log "Phone B (brain)  : $PHONE_B_BRIDGE"
-echo ""
-log "Run agent:"
-log "  cd ~/workflows"
-log "  python3 test/jarvis-agent/agent/controller.py --task 'Open WhatsApp' --device '$PHONE_A'"
-echo ""
 
 

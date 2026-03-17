@@ -19532,6 +19532,141 @@
           "y": 2604
         }
       ]
+    },
+    "041f47639776": {
+      "screen_id": "041f47639776",
+      "package": "com.android.vending",
+      "activity": "com.android.vending/.AssetBrowserActivity",
+      "name": "vending_assetbrowseractivity",
+      "labels": [
+        "Refine search to 'bgmi'",
+        "Refine search to 'kiwi'",
+        "Refine search to 'gemini'",
+        "Refine search to 'autoclicker'"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 98,
+          "y": 237
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1142,
+          "y": 237
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 620,
+          "y": 567
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 620,
+          "y": 799
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 620,
+          "y": 1143
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 620,
+          "y": 1375
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 620,
+          "y": 1701
+        },
+        {
+          "text": "Refine search to 'bgmi'",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1107,
+          "y": 1701
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 620,
+          "y": 1897
+        },
+        {
+          "text": "Refine search to 'kiwi'",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1107,
+          "y": 1897
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 620,
+          "y": 2093
+        },
+        {
+          "text": "Refine search to 'gemini'",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1107,
+          "y": 2093
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 620,
+          "y": 2289
+        },
+        {
+          "text": "Refine search to 'autoclicker'",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1107,
+          "y": 2289
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 155,
+          "y": 2744
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 465,
+          "y": 2744
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.view.View",
+          "x": 1085,
+          "y": 2744
+        }
+      ]
     }
   },
   "transitions": {
@@ -19766,7 +19901,8 @@
     "866f5ed64950|element_1172_1062": "66891f978e09",
     "866f5ed64950|element_620_1566": "7571051ef9ea",
     "866f5ed64950|More results for New and notable comics": "68dbc2f46e71",
-    "866f5ed64950|element_213_2030": "7571051ef9ea"
+    "866f5ed64950|element_213_2030": "7571051ef9ea",
+    "866f5ed64950|element_598_2030": "041f47639776"
   }
 }
 

@@ -23895,6 +23895,50 @@
           "resource_id": ""
         }
       ]
+    },
+    "1d0f3d79dcfd": {
+      "screen_id": "1d0f3d79dcfd",
+      "package": "com.oplus.wirelesssettings",
+      "activity": "com.oplus.wirelesssettings/com.android.settings.SettingsActivity",
+      "name": "wirelesssettings_settingsactivity",
+      "labels": [
+        "element_1",
+        "Navigate up",
+        "element_3",
+        "element_4"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 620,
+          "y": 1455,
+          "cls": "androidx.recyclerview.widget.RecyclerView",
+          "resource_id": "com.oplus.wirelesssettings:id/recycler_view"
+        },
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 230,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.oplus.wirelesssettings:id/coui_toolbar_back_view"
+        },
+        {
+          "text": "element_3",
+          "x": 620,
+          "y": 454,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_4",
+          "x": 620,
+          "y": 827,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -24158,7 +24202,8 @@
     "6d8964ace959|tap:element_7": "501f21096105",
     "501f21096105|tap:Edit suggestion mrbeast gaming": "8bd4aa0f7819",
     "f3100103b174|tap:element_3": "5d79fdb685d6",
-    "5d79fdb685d6|type": "267104668fb5"
+    "5d79fdb685d6|type": "267104668fb5",
+    "267104668fb5|tap:element_6": "1d0f3d79dcfd"
   }
 }
 

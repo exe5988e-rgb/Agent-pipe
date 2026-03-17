@@ -24300,6 +24300,138 @@
           "resource_id": ""
         }
       ]
+    },
+    "c120d24cf7c6": {
+      "screen_id": "c120d24cf7c6",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "element_1",
+        "element_2",
+        "Search Google or type URL",
+        "Start voice search",
+        "Search with your camera using Google Lens",
+        "2 suggested items in list below.",
+        "element_7",
+        "Share link to web page Watch YouTube on your smart TV by linking to your devices - Android - YouTube Help. Source: support.google.com",
+        "Copy link to web page Watch YouTube on your smart TV by linking to your devices - Android - YouTube Help. Source: support.google.com",
+        "Edit URL pointing to page on: support.google.com",
+        "Most-visited sites",
+        "Directory listing for /: [::]",
+        "Build APK \u00b7 exe5988e-rgb/JarvisMerged@d5529f8: github.com",
+        "192.168.29.110: 192.168.29.110",
+        "finet.org is available for purchase - Sedo.com: finet.org"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 620,
+          "y": 1427,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_2",
+          "x": 126,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "Search Google or type URL",
+          "x": 550,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "Start voice search",
+          "x": 960,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/mic_button"
+        },
+        {
+          "text": "Search with your camera using Google Lens",
+          "x": 1128,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/lens_camera_button"
+        },
+        {
+          "text": "2 suggested items in list below.",
+          "x": 620,
+          "y": 619,
+          "cls": "androidx.recyclerview.widget.RecyclerView",
+          "resource_id": "com.android.chrome:id/omnibox_suggestions_dropdown"
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 433,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Share link to web page Watch YouTube on your smart TV by linking to your devices - Android - YouTube Help. Source: support.google.com",
+          "x": 792,
+          "y": 433,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Copy link to web page Watch YouTube on your smart TV by linking to your devices - Android - YouTube Help. Source: support.google.com",
+          "x": 960,
+          "y": 433,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Edit URL pointing to page on: support.google.com",
+          "x": 1128,
+          "y": 433,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Most-visited sites",
+          "x": 620,
+          "y": 703,
+          "cls": "androidx.recyclerview.widget.RecyclerView",
+          "resource_id": ""
+        },
+        {
+          "text": "Directory listing for /: [::]",
+          "x": 210,
+          "y": 691,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Build APK \u00b7 exe5988e-rgb/JarvisMerged@d5529f8: github.com",
+          "x": 552,
+          "y": 691,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "192.168.29.110: 192.168.29.110",
+          "x": 894,
+          "y": 691,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "finet.org is available for purchase - Sedo.com: finet.org",
+          "x": 1168,
+          "y": 691,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -24567,7 +24699,8 @@
     "267104668fb5|tap:element_6": "1d0f3d79dcfd",
     "1d0f3d79dcfd|tap:element_3": "92250c07bf1a",
     "92250c07bf1a|type": "6aecc338ecf3",
-    "ff3d5d3179d0|back": "6aecc338ecf3"
+    "ff3d5d3179d0|back": "6aecc338ecf3",
+    "aa1600c67941|tap:See 19 tabs": "c120d24cf7c6"
   }
 }
 

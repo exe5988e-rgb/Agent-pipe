@@ -44053,6 +44053,250 @@
           "resource_id": ""
         }
       ]
+    },
+    "90b2e5af0eb8": {
+      "screen_id": "90b2e5af0eb8",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "element_1",
+        "element_2",
+        "best restaurants in dhanbad",
+        "Clear input",
+        "element_5",
+        "Refine: best restaurants in dhanbad",
+        "element_7",
+        "Refine: best restaurants in dhanbad for family",
+        "element_9",
+        "Refine: best restaurants in dhanbad bank more",
+        "Ask AI Mode",
+        "New Incognito tab",
+        "element_13",
+        "Refine: best restaurants in dhanbad jharkhand",
+        "element_15",
+        "element_16",
+        "Refine: best restaurants in dhanbad for birthday celebration",
+        "Directory listing for /: [::]",
+        "Wikipedia: wikipedia.org",
+        "Build APK \u00b7 exe5988e-rgb/JarvisMerged@d5529f8: github.com",
+        "Google: google.com",
+        ": 192.168.29.110",
+        "Refine: best restaurants in dhanbad for couples",
+        "element_24",
+        "Refine: best restaurants in dhanbad for party",
+        "element_26",
+        "Share Robert Downey Jr, Chris Evans Have Avengers Reunion at Oscars",
+        "Card menu Robert Downey Jr, Chris Evans Have Avengers Reunion at Oscars",
+        "element_29"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 620,
+          "y": 1455,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_2",
+          "x": 126,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "best restaurants in dhanbad",
+          "x": 634,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "Clear input",
+          "x": 1128,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/delete_button"
+        },
+        {
+          "text": "element_5",
+          "x": 620,
+          "y": 433,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: best restaurants in dhanbad",
+          "x": 1128,
+          "y": 433,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 636,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: best restaurants in dhanbad for family",
+          "x": 1128,
+          "y": 636,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_9",
+          "x": 620,
+          "y": 846,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: best restaurants in dhanbad bank more",
+          "x": 1128,
+          "y": 846,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Ask AI Mode",
+          "x": 331,
+          "y": 990,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/composeplate_button"
+        },
+        {
+          "text": "New Incognito tab",
+          "x": 909,
+          "y": 990,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/incognito_button"
+        },
+        {
+          "text": "element_13",
+          "x": 620,
+          "y": 1056,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: best restaurants in dhanbad jharkhand",
+          "x": 1128,
+          "y": 1056,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_15",
+          "x": 620,
+          "y": 1366,
+          "cls": "android.widget.HorizontalScrollView",
+          "resource_id": "com.android.chrome:id/mv_tiles_container"
+        },
+        {
+          "text": "element_16",
+          "x": 620,
+          "y": 1266,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: best restaurants in dhanbad for birthday celebration",
+          "x": 1128,
+          "y": 1266,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Directory listing for /: [::]",
+          "x": 238,
+          "y": 1357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Wikipedia: wikipedia.org",
+          "x": 504,
+          "y": 1357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Build APK \u00b7 exe5988e-rgb/JarvisMerged@d5529f8: github.com",
+          "x": 770,
+          "y": 1357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Google: google.com",
+          "x": 1036,
+          "y": 1357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": ": 192.168.29.110",
+          "x": 1173,
+          "y": 1357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: best restaurants in dhanbad for couples",
+          "x": 1128,
+          "y": 1476,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_24",
+          "x": 620,
+          "y": 1681,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: best restaurants in dhanbad for party",
+          "x": 1128,
+          "y": 1681,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_26",
+          "x": 620,
+          "y": 1913,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Share Robert Downey Jr, Chris Evans Have Avengers Reunion at Oscars",
+          "x": 929,
+          "y": 2109,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Card menu Robert Downey Jr, Chris Evans Have Avengers Reunion at Oscars",
+          "x": 1097,
+          "y": 2109,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_29",
+          "x": 620,
+          "y": 2484,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -44414,7 +44658,7 @@
     "4e3d027411e1|swipe": "7be8acd10806",
     "7be8acd10806|tap:element_10": "f68c7157ae35",
     "f68c7157ae35|tap:Rooftop restaurants in Dhanbad": "ad89b0c3b391",
-    "0bb5585ab8d0|opt4_launch:chrome": "245d2f71b329",
+    "0bb5585ab8d0|opt4_launch:chrome": "90b2e5af0eb8",
     "245d2f71b329|opt4_launch:whatsapp": "3949001d1ca1",
     "3949001d1ca1|retry": "f6971c299e21",
     "f6971c299e21|tap:Bugjaeger": "5efa4e5116e0",

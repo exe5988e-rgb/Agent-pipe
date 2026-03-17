@@ -10389,7 +10389,9 @@ RuntimeError: No LLM backend available.
 
 ========================================================
   STEP 16  |  Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
-========================================================
+========================================================[parser] DEBUG normalized: 'tap 23'
+[parser] INFO parsed 'tap 23' -> {'action': 'tap', 'target': 23}
+
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash

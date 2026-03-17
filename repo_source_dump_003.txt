@@ -2782,9 +2782,9 @@ if __name__ == "__main__":
     "seeded": true
   },
   "4203f6dd32c9|opt4_launch:whatsapp": {
-    "to": "d3d30bd552b1",
+    "to": "24f4242fbb4f",
     "count": 1,
-    "last_seen": 1773726620.2837284
+    "last_seen": 1773726700.4540155
   },
   "7c51d7e864c3|tap:element_25": {
     "to": "7770f0561545",
@@ -2877,6 +2877,9 @@ if __name__ == "__main__":
 [11:21:20]   PASS  72.1s  skills=1
 [11:21:25] 
 [10/33] [2★] [whatsapp] Open WhatsApp and search for Mummy in chats
+[11:21:41]   PASS  12.9s  skills=1
+[11:21:46] 
+[11/33] [2★] [youtube] Open YouTube and go to Subscriptions
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -4044,7 +4047,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-17T11:21:20.240404",
+  "run_at": "2026-03-17T11:21:41.395660",
   "skills_before": 0,
   "skills_current": 1,
   "results": [
@@ -4128,6 +4131,15 @@ if __name__ == "__main__":
       "elapsed_s": 72.1,
       "error": null,
       "retried": false
+    },
+    {
+      "task": "Open WhatsApp and search for Mummy in chats",
+      "category": "whatsapp",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 12.9,
+      "error": null,
+      "retried": false
     }
   ]
 }
@@ -4147,7 +4159,7 @@ if __name__ == "__main__":
         "action": "done"
       }
     ],
-    "uses": 0,
+    "uses": 1,
     "version": 2
   }
 ]
@@ -5192,6 +5204,84 @@ RuntimeError: No LLM backend available.
 [controller] history:
   1. opt4_launch:whatsapp
   2. tap [33] Updates
+  3. done
+
+  Screen Map: 187 screens (0 tainted), 254 transitions
+    whatsapp             132 screens
+    youtube              29 screens
+    vending              16 screens
+    launcher             4 screens
+    termux               3 screens
+    unknown              1 screens
+    settings             1 screens
+    chrome               1 screens
+  TransitionMemory: 254 transitions (243 confirmed, threshold=2)
+
+########################################################
+  JARVIS  |  Open WhatsApp and search for Mummy in chats
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 187 screens (0 tainted), 254 transitions
+    whatsapp             132 screens
+    youtube              29 screens
+    vending              16 screens
+    launcher             4 screens
+    termux               3 screens
+    unknown              1 screens
+    settings             1 screens
+    chrome               1 screens
+  TransitionMemory: 254 transitions (243 confirmed, threshold=2)
+[init] task_apps (ordered): ['whatsapp']
+
+========================================================
+  STEP 1  |  Open WhatsApp and search for Mummy in chats
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3595447 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=efabc42cacd0 elements=26
+[step] UI: ['Clock', '11', ':', '21', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[OPT4v2] launcher -> launching whatsapp (com.whatsapp)
+[llm] OPT4v2 am start: com.whatsapp
+[OPT4v2] app_index -> 1/1
+
+========================================================
+  STEP 2  |  Open WhatsApp and search for Mummy in chats
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (614660 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 27 elements from 192.168.29.48:34011
+[mem] stored com.whatsapp/.home.ui.HomeActivity hash=71226a108a9f elements=27
+[step] UI: ['element_1', 'Search', 'More options', 'element_4', 'My status updates', 'New status update', 'Asif Mudassir, 0 unread statuses', 'element_8']
+[tm] transition changed: 4203f6dd32c9|opt4_launch:whatsapp d3d30bd5 -> 24f4242f
+[map] transition: launcher_launcher --[opt4_launch:whatsapp]--> whatsapp_homeactivity
+[map] screen: whatsapp_homeactivity (24f4242f)
+[skill] matched: 'open whatsapp and go'  score=1.00  act_match=True
+[skill] executing 2 steps from memory
+[skill] action: {'action': 'tap', 'target': 24}
+[input] dispatching: TouchEvent(x=372, y=2576)
+[input] adb -s 192.168.29.48:34011 shell input tap 372 2576
+[mem] invalidated com.whatsapp/.home.ui.HomeActivity
+[skill] action: {'action': 'done'}
+[input] DONE — no dispatch
+[skill] done — skipped Claude
+[step] step=3/10 done=True history=['opt4_launch:whatsapp', 'tap [24] Updates', 'done']
+
+[controller] done in 3 steps
+
+[controller] history:
+  1. opt4_launch:whatsapp
+  2. tap [24] Updates
   3. done
 
   Screen Map: 187 screens (0 tainted), 254 transitions

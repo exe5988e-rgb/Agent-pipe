@@ -32963,6 +32963,129 @@
           "resource_id": ""
         }
       ]
+    },
+    "752389f3a0d3": {
+      "screen_id": "752389f3a0d3",
+      "package": "com.android.settings",
+      "activity": "com.android.settings/.SubSettings",
+      "name": "settings_subsettings",
+      "labels": [
+        "element_2",
+        "element_3",
+        "element_4",
+        "element_5",
+        "element_6",
+        "element_7",
+        "element_8",
+        "element_9",
+        "element_10",
+        "element_11",
+        "element_12",
+        "element_13",
+        "element_14"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Back",
+          "x": 98,
+          "y": 230,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.settings:id/coui_toolbar_back_view"
+        },
+        {
+          "text": "element_2",
+          "x": 620,
+          "y": 338,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_3",
+          "x": 620,
+          "y": 1546,
+          "cls": "androidx.recyclerview.widget.RecyclerView",
+          "resource_id": "com.android.settings:id/recycler_view"
+        },
+        {
+          "text": "element_4",
+          "x": 620,
+          "y": 461,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_5",
+          "x": 620,
+          "y": 671,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_6",
+          "x": 620,
+          "y": 881,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 1091,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_8",
+          "x": 620,
+          "y": 1301,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_9",
+          "x": 620,
+          "y": 1511,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_10",
+          "x": 620,
+          "y": 1721,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_11",
+          "x": 620,
+          "y": 1931,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_12",
+          "x": 620,
+          "y": 2141,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_13",
+          "x": 620,
+          "y": 2351,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_14",
+          "x": 620,
+          "y": 2564,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -33276,7 +33399,8 @@
     "5086bd87137e|tap:element_9": "de32cdc23c0d",
     "de32cdc23c0d|back": "4203f6dd32c9",
     "468f775ed5c9|tap:Search": "30d320eab354",
-    "30d320eab354|tap:time": "aa4068217749"
+    "30d320eab354|tap:time": "aa4068217749",
+    "aa4068217749|tap:element_6": "752389f3a0d3"
   }
 }
 

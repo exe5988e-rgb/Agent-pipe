@@ -1,3 +1,134 @@
+//===== TERMUXFILE: jarvis-agent/executor/input_manager.py =====
+"""
+executor/input_manager.py
+
+Extracted from DroidBot/droidbot/input_manager.py
+Source: https://github.com/honeynet/droidbot
+
+What we keep:
+  __init__    device reference, event_interval
+  add_event   dispatch one event to device + sleep (DroidBot pattern)
+
+What we drop (all require exploration policies we don't use):
+  get_input_policy (UtgBased*, Greedy*, Replay*, Manual*, Monkey, LLM)
+  start / stop (policy loop runner)
+  app, policy_name, random_input, script_path, profiling_method
+
+New addition:
+  execute_action(action_dict, ui_elements) — agent loop interface.
+  Maps action dicts from action_parser → InputEvent → add_event.
+"""
+
+import time
+from executor.input_event import (
+    InputEvent, KeyEvent, TouchEvent, SwipeEvent, SetTextEvent, from_action
+)
+from executor.device import Device
+
+
+class InputManager:
+    """
+    Dispatches InputEvent objects to device via ADB.
+    DroidBot InputManager interface (policy-free subset).
+    """
+
+    def __init__(self, device: Device, event_interval: float = 0.5):
+        """
+        DroidBot InputManager.__init__ (subset).
+        :param device: Device instance
+        :param event_interval: seconds to sleep after each event (DroidBot default=1s)
+        """
+        self.device         = device
+        self.event_interval = event_interval
+        self.events         = []   # DroidBot keeps event history
+
+    def add_event(self, event: InputEvent) -> bool:
+        """
+        DroidBot InputManager.add_event():
+          1. Appends to self.events
+          2. Calls event_log.start() → device.send_event(event)
+          3. Sleeps event_interval
+          4. Calls event_log.stop()
+
+        We skip EventLog (requires App + DeviceState), keep the core:
+          device.send_event(event) + sleep.
+        """
+        if event is None:
+            return False
+
+        self.events.append(event)
+
+        import subprocess
+        cmd = ["adb", "-s", self.device.serial, "shell"] + event.to_adb_cmd()
+        print(f"[input] {' '.join(cmd)}")
+
+        try:
+            result = subprocess.run(cmd, capture_output=True, text=True, timeout=10)
+            if result.returncode != 0 and result.stderr:
+                print(f"[input] stderr: {result.stderr.strip()}")
+            success = result.returncode == 0
+        except subprocess.TimeoutExpired:
+            print(f"[input] timeout: {event}")
+            success = False
+        except Exception as e:
+            print(f"[input] error: {e}")
+            success = False
+
+        time.sleep(self.event_interval)
+        return success
+
+    # ── Typed helpers (convenience, not in DroidBot InputManager) ────────────
+
+    def tap(self, x: int, y: int) -> bool:
+        return self.add_event(TouchEvent(x=x, y=y))
+
+    def swipe(self, start_x, start_y, end_x, end_y, duration=400) -> bool:
+        return self.add_event(SwipeEvent(
+            start_x=start_x, start_y=start_y,
+            end_x=end_x, end_y=end_y, duration=duration))
+
+    def key(self, name: str) -> bool:
+        return self.add_event(KeyEvent(name=name))
+
+    def type_text(self, text: str) -> bool:
+        return self.add_event(SetTextEvent(text=text))
+
+    def back(self)  -> bool: return self.key("BACK")
+    def home(self)  -> bool: return self.key("HOME")
+    def enter(self) -> bool: return self.key("ENTER")
+
+    # ── Agent interface ───────────────────────────────────────────────────────
+
+    def execute_action(self, action: dict, ui_elements: list) -> bool:
+        """
+        Execute a parsed action dict from action_parser.
+        This is the primary interface called by adb_executor / controller.
+
+        Args:
+            action      : {"action": "tap", "target": 1} etc.
+            ui_elements : current UI element list {id, text, x, y}
+
+        Returns:
+            True if dispatched, False if skipped
+        """
+        act = action.get("action", "").lower()
+
+        if act == "done":
+            print("[input] DONE — no dispatch")
+            return False
+
+        event = from_action(action, ui_elements)
+        if event is None:
+            print(f"[input] cannot build event from: {action}")
+            return False
+
+        print(f"[input] dispatching: {event}")
+        return self.add_event(event)
+
+    def __repr__(self):
+        return f"InputManager(device={self.device.serial}, events={len(self.events)})"
+
+
 //===== TERMUXFILE: jarvis-agent/executor/adb_executor.py =====
 """
 executor/adb_executor.py

@@ -2828,6 +2828,7 @@ if __name__ == "__main__":
 [11:12:50]   PASS  133.5s  skills=0
 [11:12:55] 
 [2/33] [1★] [youtube] Open YouTube
+[11:13:41]   PASS  42.7s  skills=0
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -3995,7 +3996,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-17T11:12:50.445837",
+  "run_at": "2026-03-17T11:13:41.546151",
   "skills_before": 0,
   "skills_current": 0,
   "results": [
@@ -4005,6 +4006,15 @@ if __name__ == "__main__":
       "difficulty": 1,
       "success": true,
       "elapsed_s": 133.5,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Open YouTube",
+      "category": "youtube",
+      "difficulty": 1,
+      "success": true,
+      "elapsed_s": 42.7,
       "error": null,
       "retried": false
     }
@@ -4211,6 +4221,80 @@ RuntimeError: No LLM backend available.
     termux               3 screens
     unknown              1 screens
   TransitionMemory: 248 transitions (242 confirmed, threshold=2)
+[parser] DEBUG normalized: 'done'
+[parser] INFO parsed 'done' -> {'action': 'done'}
+
+########################################################
+  JARVIS  |  Open YouTube
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': False, 'proxy': False, 'llamafile': False, 'binary': None}
+[init] WARNING: no LLM backend reachable!
+
+  Screen Map: 181 screens (0 tainted), 248 transitions
+    whatsapp             130 screens
+    youtube              28 screens
+    vending              15 screens
+    launcher             4 screens
+    termux               3 screens
+    unknown              1 screens
+  TransitionMemory: 248 transitions (242 confirmed, threshold=2)
+[init] task_apps (ordered): ['youtube']
+
+========================================================
+  STEP 1  |  Open YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3596163 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=660c1950eb45 elements=26
+[step] UI: ['Clock', '11', ':', '13', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[OPT4v2] launcher -> launching youtube (com.google.android.youtube)
+[llm] OPT4v2 am start: com.google.android.youtube
+[OPT4v2] app_index -> 1/1
+
+========================================================
+  STEP 2  |  Open YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (39920 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 27 elements from 192.168.29.48:34011
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=50cd1c640304 elements=27
+[step] UI: ['Cast', 'Notifications, 2', 'Search', 'Expand Mini Player', 'Sponsored – Create high-quality videos in minutes with Gemini in Plus. – 20 seconds – Anyone can be a creator with Gemini. Visualize and share your ideas in minutes – Google One – play video', 'element_6', 'Tap to mute or unmute playback audio', 'Captions']
+[map] new screen: youtube_shell$homeactivity (bf3964237b0d)
+[map] transition: launcher_launcher --[opt4_launch:youtube]--> youtube_shell$homeactivity
+[map] screen: youtube_shell$homeactivity (bf396423)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'done'
+[step] LLM: 'done'
+[step] action: {'action': 'done'}
+[input] DONE — no dispatch
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[skill] too few steps to save
+[step] step=2/5 done=True history=['opt4_launch:youtube', 'done']
+
+[controller] done in 2 steps
+
+[controller] history:
+  1. opt4_launch:youtube
+  2. done
+
+  Screen Map: 182 screens (0 tainted), 249 transitions
+    whatsapp             130 screens
+    youtube              29 screens
+    vending              15 screens
+    launcher             4 screens
+    termux               3 screens
+    unknown              1 screens
+  TransitionMemory: 249 transitions (242 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

@@ -2813,6 +2813,11 @@ if __name__ == "__main__":
 [10:10:33]   TASK 2/33  [1★]  [youtube]  timeout=255s
 [10:10:33]   Open YouTube
 [10:10:33] ════════════════════════════════════════════════════════════════
+[10:10:38] 
+  ✗ FAIL  |  0.3s  |  skills: 0
+[10:10:38]   Error: returncode=1
+[10:10:38]   Retrying once...
+[10:10:38]   Recovering device...
 
 
 //===== TERMUXFILE: tap_logger.py =====

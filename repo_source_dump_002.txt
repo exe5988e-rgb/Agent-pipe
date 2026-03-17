@@ -19960,7 +19960,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 59,
+      "visits": 61,
       "tainted": false,
       "elements": [
         {
@@ -34951,7 +34951,8 @@
     "efa43c0a8f87|opt4_launch:chrome": "58c13236645d",
     "efa43c0a8f87|opt4_launch:play store": "06c59ed8f4e7",
     "06c59ed8f4e7|back": "efa43c0a8f87",
-    "efa43c0a8f87|tap:Instagram": "e341b6be3d43"
+    "efa43c0a8f87|tap:Instagram": "e341b6be3d43",
+    "d7b9c92091c7|home": "4203f6dd32c9"
   }
 }
 

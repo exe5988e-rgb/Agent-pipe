@@ -3190,6 +3190,11 @@ if __name__ == "__main__":
     "to": "e341b6be3d43",
     "count": 1,
     "last_seen": 1773735658.5476973
+  },
+  "d7b9c92091c7|home": {
+    "to": "4203f6dd32c9",
+    "count": 1,
+    "last_seen": 1773735769.0914283
   }
 }
 
@@ -5273,6 +5278,8 @@ java.lang.IllegalArgumentException: Argument expected after "text"
   TransitionMemory: 324 transitions (251 confirmed, threshold=2)
 [parser] DEBUG normalized: 'home'
 [parser] INFO parsed 'home' -> {'action': 'home'}
+[parser] DEBUG normalized: 'tap 1'
+[parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

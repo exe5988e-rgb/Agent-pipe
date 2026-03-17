@@ -3267,9 +3267,9 @@ if __name__ == "__main__":
     "last_seen": 1773753355.8060327
   },
   "93e7bdafeb42|swipe": {
-    "to": "e33228fe4cb4",
-    "count": 6,
-    "last_seen": 1773753519.721764
+    "to": "af94bed40cff",
+    "count": 1,
+    "last_seen": 1773753527.0875306
   }
 }
 

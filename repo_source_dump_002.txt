@@ -38682,6 +38682,122 @@
           "resource_id": ""
         }
       ]
+    },
+    "af94bed40cff": {
+      "screen_id": "af94bed40cff",
+      "package": "com.termux",
+      "activity": "com.termux/.app.TermuxActivity",
+      "name": "termux_termuxactivity",
+      "labels": [
+        "Open the homepage",
+        "element_2",
+        "element_3",
+        "google.com/search?q=best+rated+restaurants+near+me&oq=best+rated+restaurants+near+me&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHC",
+        "See 21 tabs",
+        "Customise and control Google Chrome",
+        "element_7",
+        "element_8",
+        "Expand map",
+        "element_10",
+        "element_11",
+        "element_12",
+        "element_13"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "element_2",
+          "x": 620,
+          "y": 1455,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.android.chrome:id/compositor_view_holder"
+        },
+        {
+          "text": "element_3",
+          "x": 224,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "google.com/search?q=best+rated+restaurants+near+me&oq=best+rated+restaurants+near+me&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHC",
+          "x": 592,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "See 21 tabs",
+          "x": 988,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 1526,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_8",
+          "x": 620,
+          "y": 427,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Expand map",
+          "x": 1100,
+          "y": 336,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_10",
+          "x": 252,
+          "y": 427,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_11",
+          "x": 957,
+          "y": 427,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_12",
+          "x": 620,
+          "y": 1194,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_13",
+          "x": 620,
+          "y": 2245,
+          "cls": "android.view.View",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -39024,7 +39140,7 @@
     "abe260fd616f|tap:Start voice search": "5029805e79b5",
     "5029805e79b5|type": "95d66370b486",
     "95d66370b486|tap:Clear input": "93e7bdafeb42",
-    "93e7bdafeb42|swipe": "e33228fe4cb4"
+    "93e7bdafeb42|swipe": "af94bed40cff"
   }
 }
 

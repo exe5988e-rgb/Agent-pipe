@@ -6895,6 +6895,8 @@ java.lang.IllegalArgumentException: Argument expected after "text"
 [input] adb -s 192.168.29.48:34011 shell input tap 529 755
 [mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
 [step] step=5/10 done=False history=['opt4_launch:chrome', 'tap [6] Search Google or type URL', "type 'weather today'", 'tap [6] element_6', 'tap [6] Search Google or type URL']
+[parser] DEBUG normalized: 'tap 10'
+[parser] INFO parsed 'tap 10' -> {'action': 'tap', 'target': 10}
 
 
 //===== TERMUXFILE: scripts/build_runner.sh =====

@@ -3045,6 +3045,11 @@ if __name__ == "__main__":
     "to": "e78c6d4ab5c3",
     "count": 1,
     "last_seen": 1773729743.3252296
+  },
+  "e78c6d4ab5c3|tap:Minimised player": {
+    "to": "d8b0a05d806b",
+    "count": 1,
+    "last_seen": 1773729775.922298
   }
 }
 
@@ -11803,44 +11808,5 @@ if __name__ == '__main__':
     except KeyboardInterrupt:
         print("\n🛑 Shutting down...")
         server.shutdown()
-
-
-//===== TERMUXFILE: test/extract_ai_output.sh =====
-#!/data/data/com.termux/files/usr/bin/bash
-# Extract all files from ai-output.txt
-# Usage: bash ~/extract_ai_output.sh [/path/to/ai-output.txt]
-INPUT="${1:-$HOME/ai-output.txt}"
-BASE="$HOME"
-[ -f "$INPUT" ] || { echo "Not found: $INPUT"; exit 1; }
-echo "Extracting: $INPUT"
-current_file=""; current_content=""; count=0
-while IFS= read -r line || [ -n "$line" ]; do
-    if [[ "$line" =~ ^=====\ FILE:\ (.+)\ =====$ ]]; then
-        if [ -n "$current_file" ] && [ -n "$current_content" ]; then
-            dest="$BASE/$current_file"
-            mkdir -p "$(dirname "$dest")"
-            printf '%s\n' "$current_content" > "$dest"
-            [[ "$dest" == *.sh ]] && chmod +x "$dest"
-            echo "  ✓ $current_file"; count=$((count+1))
-        fi
-        current_file="${BASH_REMATCH[1]}"; current_content=""
-    elif [ -n "$current_file" ]; then
-        [ -z "$current_content" ] && current_content="$line" \
-            || current_content="$current_content"$'\n'"$line"
-    fi
-done < "$INPUT"
-if [ -n "$current_file" ] && [ -n "$current_content" ]; then
-    dest="$BASE/$current_file"; mkdir -p "$(dirname "$dest")"
-    printf '%s\n' "$current_content" > "$dest"
-    [[ "$dest" == *.sh ]] && chmod +x "$dest"
-    echo "  ✓ $current_file"; count=$((count+1))
-fi
-echo ""
-echo "Extracted $count files."
-echo ""
-echo "Start system:"
-echo "  bash ~/jarvis_server_init.sh"
-echo "  bash ~/jarvis_executor.sh &"
-echo "  cd ~/jarvis-agent && python3 agent/controller.py"
 
 

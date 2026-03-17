@@ -37339,7 +37339,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 6,
+      "visits": 7,
       "tainted": false,
       "elements": [
         {
@@ -43006,6 +43006,146 @@
           "resource_id": ""
         }
       ]
+    },
+    "5efa4e5116e0": {
+      "screen_id": "5efa4e5116e0",
+      "package": "com.github.standardadb",
+      "activity": "com.github.standardadb/.SplashActivity",
+      "name": "standardadb_splashactivity",
+      "labels": [
+        "element_1",
+        "element_2",
+        "element_3",
+        "element_4",
+        "element_5",
+        "ADB",
+        "Pro\nTab 1 of 23",
+        "Device\nTab 2 of 23",
+        "Features\nTab 3 of 23",
+        "Terminal\nTab 4 of 23",
+        "App\nTab 5 of 23",
+        "CPH2491\n127.0.0.1\n:\n5555\nTCP/IP wireless mode",
+        "element_13",
+        "CPH2491\n127.0.0.1\n:\n46031\nPairing mode",
+        "element_15",
+        "element_16"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 620,
+          "y": 1386,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_2",
+          "x": 98,
+          "y": 212,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_3",
+          "x": 820,
+          "y": 212,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_4",
+          "x": 988,
+          "y": 212,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_5",
+          "x": 1156,
+          "y": 212,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "ADB",
+          "x": 274,
+          "y": 213,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Pro\nTab 1 of 23",
+          "x": 94,
+          "y": 373,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Device\nTab 2 of 23",
+          "x": 317,
+          "y": 373,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Features\nTab 3 of 23",
+          "x": 597,
+          "y": 373,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Terminal\nTab 4 of 23",
+          "x": 899,
+          "y": 373,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "App\nTab 5 of 23",
+          "x": 1145,
+          "y": 373,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "CPH2491\n127.0.0.1\n:\n5555\nTCP/IP wireless mode",
+          "x": 620,
+          "y": 671,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_13",
+          "x": 1107,
+          "y": 671,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "CPH2491\n127.0.0.1\n:\n46031\nPairing mode",
+          "x": 620,
+          "y": 1022,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_15",
+          "x": 1107,
+          "y": 1023,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_16",
+          "x": 1079,
+          "y": 2562,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -43368,7 +43508,9 @@
     "7be8acd10806|tap:element_10": "f68c7157ae35",
     "f68c7157ae35|tap:Rooftop restaurants in Dhanbad": "ad89b0c3b391",
     "0bb5585ab8d0|opt4_launch:chrome": "245d2f71b329",
-    "245d2f71b329|opt4_launch:whatsapp": "3949001d1ca1"
+    "245d2f71b329|opt4_launch:whatsapp": "3949001d1ca1",
+    "3949001d1ca1|retry": "f6971c299e21",
+    "f6971c299e21|tap:Bugjaeger": "5efa4e5116e0"
   }
 }
 

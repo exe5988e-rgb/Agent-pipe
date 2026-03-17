@@ -3052,6 +3052,8 @@ if __name__ == "__main__":
 [11:49:39] 
 [23/33] [3★] [whatsapp] Send a WhatsApp message to Ayush Kumar saying Hey what's up
 [11:50:05]   PASS  23.0s  skills=5
+[11:50:10] 
+[24/33] [3★] [whatsapp] Send a WhatsApp message to Sadique faridi saying Hello brother
 
 
 //===== TERMUXFILE: tap_logger.py =====

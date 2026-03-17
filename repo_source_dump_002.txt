@@ -19960,7 +19960,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 23,
+      "visits": 24,
       "tainted": false,
       "elements": [
         {
@@ -24257,6 +24257,49 @@
           "resource_id": ""
         }
       ]
+    },
+    "ff3d5d3179d0": {
+      "screen_id": "ff3d5d3179d0",
+      "package": "com.android.settings",
+      "activity": "com.android.settings/.SubSettings",
+      "name": "settings_subsettings",
+      "labels": [
+        "element_2",
+        "element_3",
+        "element_4"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Back",
+          "x": 98,
+          "y": 230,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.settings:id/coui_toolbar_back_view"
+        },
+        {
+          "text": "element_2",
+          "x": 620,
+          "y": 1120,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_3",
+          "x": 620,
+          "y": 1342,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_4",
+          "x": 620,
+          "y": 1546,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -24509,7 +24552,7 @@
     "b128d851f827|tap:None": "366c9a634a55",
     "366c9a634a55|type": "9068f3819b2b",
     "4203f6dd32c9|opt4_launch:youtube": "8e74d0f0627a",
-    "4203f6dd32c9|opt4_launch:settings": "1d0f3d79dcfd",
+    "4203f6dd32c9|opt4_launch:settings": "ff3d5d3179d0",
     "4203f6dd32c9|opt4_launch:chrome": "aa1600c67941",
     "4203f6dd32c9|opt4_launch:play store": "06c59ed8f4e7",
     "7c51d7e864c3|tap:You": "47d448eaba6d",

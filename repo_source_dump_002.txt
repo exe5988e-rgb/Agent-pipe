@@ -21784,7 +21784,7 @@
         "element_21",
         "element_22"
       ],
-      "visits": 12,
+      "visits": 13,
       "tainted": false,
       "elements": [
         {
@@ -33647,7 +33647,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 4,
+      "visits": 5,
       "tainted": false,
       "elements": [
         {
@@ -34757,7 +34757,8 @@
     "efa43c0a8f87|opt4_launch:whatsapp": "b37f4f8d4aed",
     "efa43c0a8f87|opt4_launch:youtube": "1dbfe781af53",
     "efa43c0a8f87|opt4_launch:settings": "225fda90f5ad",
-    "efa43c0a8f87|opt4_launch:chrome": "58c13236645d"
+    "efa43c0a8f87|opt4_launch:chrome": "58c13236645d",
+    "efa43c0a8f87|opt4_launch:play store": "06c59ed8f4e7"
   }
 }
 

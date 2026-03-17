@@ -3198,8 +3198,8 @@ if __name__ == "__main__":
   },
   "6d33d4320f5d|tap:element_4": {
     "to": "a080221dda39",
-    "count": 3,
-    "last_seen": 1773736104.1627545
+    "count": 4,
+    "last_seen": 1773736111.9061089
   }
 }
 
@@ -5895,6 +5895,134 @@ RuntimeError: No LLM backend available.
   Phone B offline? Check: curl http://192.168.29.110:8890/health
   Local LLM down? Run:    bash ~/jarvis_server_init.sh
 
+########################################################
+  JARVIS  |  Search for MrBeast on YouTube
+  Device : 192.168.29.48:34011
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 267 screens (0 tainted), 325 transitions
+    whatsapp             142 screens
+    youtube              53 screens
+    chrome               22 screens
+    vending              21 screens
+    settings             12 screens
+    launcher             8 screens
+    termux               6 screens
+    unknown              1 screens
+    wirelesssettings     1 screens
+    dialer               1 screens
+  TransitionMemory: 325 transitions (250 confirmed, threshold=2)
+[init] task_apps (ordered): ['youtube']
+
+========================================================
+  STEP 1  |  Search for MrBeast on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3600801 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 26 elements from 192.168.29.48:34011
+[mem] stored com.android.launcher/.Launcher hash=d3a8e8e572c5 elements=26
+[step] UI: ['Clock', '13', ':', '56', 'element_5', 'Haze', '29\u200e°\u200e', 'Tue 17 Mar']
+[map] screen: launcher_launcher (4203f6dd)
+[OPT4v2] launcher -> launching youtube (com.google.android.youtube)
+[llm] OPT4v2 am start: com.google.android.youtube
+[OPT4v2] app_index -> 1/1
+
+========================================================
+  STEP 2  |  Search for MrBeast on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (2005400 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 37 elements from 192.168.29.48:34011
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=67c6e2deb40b elements=37
+[step] UI: ['Cast', 'Notifications, 5', 'Search', 'element_4', 'MrBeast has new content', 'JensJulius Tejlgaard has new content', 'Competition Wallah has new content', 'TechFixIT has new content']
+[map] screen: youtube_shell$homeactivity (6d33d432)
+[skill] matched: 'search for on youtube and play'  score=0.67  act_match=True
+[skill] cannot resolve tap target: 'Minimise'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 3'
+[step] LLM: 'tap 3'
+[step] action: {'action': 'tap', 'target': 3}
+[input] dispatching: TouchEvent(x=1156, y=223)
+[input] adb -s 192.168.29.48:34011 shell input tap 1156 223
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[step] step=2/10 done=False history=['opt4_launch:youtube', 'tap [3] Search']
+
+========================================================
+  STEP 3  |  Search for MrBeast on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1559875 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 21 elements from 192.168.29.48:34011
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=1071e5fda09a elements=21
+[step] UI: ['Navigate up', 'Voice search', 'Search YouTube', 'element_4', 'element_5', 'Edit suggestion dream', 'element_7', 'Edit suggestion trading']
+[map] new screen: youtube_shell$homeactivity (a080221dda39)
+[map] transition: youtube_shell$homeactivity --[tap:element_4]--> youtube_shell$homeactivity
+[map] screen: youtube_shell$homeactivity (a080221d)
+[skill] matched: 'search for on youtube and play'  score=0.67  act_match=True
+[skill] cannot resolve tap target: 'Minimise'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B unreachable: timed out
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 4  |  Search for MrBeast on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1560125 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] HIT com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=1071e5fda09a hits=1 elements=21
+[step] UI: ['Navigate up', 'Voice search', 'Search YouTube', 'element_4', 'element_5', 'Edit suggestion dream', 'element_7', 'Edit suggestion trading']
+[map] screen: youtube_shell$homeactivity (a080221d)
+[skill] matched: 'search for on youtube and play'  score=0.67  act_match=True
+[skill] cannot resolve tap target: 'Minimise'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 5  |  Search for MrBeast on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1559247 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] HIT com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=1071e5fda09a hits=2 elements=21
+[step] UI: ['Navigate up', 'Voice search', 'Search YouTube', 'element_4', 'element_5', 'Edit suggestion dream', 'element_7', 'Edit suggestion trading']
+[map] screen: youtube_shell$homeactivity (a080221d)
+[skill] matched: 'search for on youtube and play'  score=0.67  act_match=True
+[skill] cannot resolve tap target: 'Minimise'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 6  |  Search for MrBeast on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1559076 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] HIT com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=1071e5fda09a hits=3 elements=21
+[step] UI: ['Navigate up', 'Voice search', 'Search YouTube', 'element_4', 'element_5', 'Edit suggestion dream', 'element_7', 'Edit suggestion trading']
+[map] screen: youtube_shell$homeactivity (a080221d)
+[skill] matched: 'search for on youtube and play'  score=0.67  act_match=True
 
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash

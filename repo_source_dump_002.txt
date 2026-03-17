@@ -15732,6 +15732,78 @@
           "y": 2632
         }
       ]
+    },
+    "b9b2caf51826": {
+      "screen_id": "b9b2caf51826",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/com.google.android.apps.youtube.app.watchwhile.InternalMainActivity",
+      "name": "youtube_internalmainactivity",
+      "labels": [
+        "Shorts",
+        "Create",
+        "Subscriptions",
+        "You"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 1752
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 318,
+          "y": 2614
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 885,
+          "y": 2614
+        },
+        {
+          "text": "",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1215,
+          "y": 2614
+        },
+        {
+          "text": "Shorts",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 372,
+          "y": 2632
+        },
+        {
+          "text": "Create",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 620,
+          "y": 2632
+        },
+        {
+          "text": "Subscriptions",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 868,
+          "y": 2632
+        },
+        {
+          "text": "You",
+          "resource_id": "",
+          "cls": "android.widget.Button",
+          "x": 1116,
+          "y": 2632
+        }
+      ]
     }
   },
   "transitions": {
@@ -15929,7 +16001,7 @@
     "74d6715f5e29|You": "0a5db92131e4",
     "e1c8fa5142a3|Search": "b57a107c23b7",
     "e1c8fa5142a3|New notification MR. INDIAN HACKER Uploaded: Mr. indian Hacker Ki Mustang Destroyed...\ud83d\ude2d - \u0905\u092c \u0906\u090f\u0917\u093e \u0924\u0942\u092b\u093c\u093e\u0928\u26a1 | Bhasad Part-3 2 hours ago": "5ca448df8e66",
-    "e1c8fa5142a3|Action menu": "b482a9fcd5d6",
+    "e1c8fa5142a3|Action menu": "b9b2caf51826",
     "e1c8fa5142a3|New notification JensJulius Tejlgaard Uploaded: If \u2018David Guetta\u2019 had Electric Guitar 14 hours ago": "d04ca4685506",
     "e1c8fa5142a3|New notification The Infographics Show Uploaded 2 videos 2 hours ago": "d04ca4685506",
     "e1c8fa5142a3|New notification BRIGHT SIDE Uploaded 3 videos 3 hours ago": "d04ca4685506"

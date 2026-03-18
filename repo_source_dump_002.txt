@@ -48370,6 +48370,146 @@
           "resource_id": ""
         }
       ]
+    },
+    "78311c064f1a": {
+      "screen_id": "78311c064f1a",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Open the homepage",
+        "element_2",
+        "element_3",
+        "tripadvisor.in/Restaurants-g1011999-Dhanbad_Dhanbad_District_Jharkhand.html",
+        "See 23 tabs",
+        "Customise and control Google Chrome",
+        "element_7",
+        "Restaurants ranked according to page views, reviews and individual attributes such as price range, cuisine and location, as well as aggregated Tripadvisor data comparing user interactions with all the other restaurant pages for this locale.",
+        "See all",
+        "Filters",
+        "View map",
+        "Vista:For delicious dining all day, our restaurant vista on the lower floor is the ideal spot. Indulge in a fusion of international flavors in an inviting and elegant atmosphere. With an open kitchen setup, watch our culinary experts in action. Each dish is carefully prepared . Vista:For delicious dining all day, our restaurant vista on the lower floor is the ideal spot. Indulge in a fusion of international flavors in an inviting and elegant atmosphere. With an open kitchen setup, watch our culinary experts in action. Each dish is carefully prepared . Vista PDR Executive Suite bathroom \u2013 Ideal for business travelers or families, feel at home in our spacious Executive Suites. These suites offer extra space, including a spacious living area, workspace, and modern bathroom. Get a great night\u2019s sleep in the plush king bed. After a long day. Premium Suite -Enjoy a relaxing stay in one of our stylish Premium Suites. These suites are the ideal sanctuary in the city for business and leisure travelers alike. Rest up in a comfortable king size bed, refresh in the rain shower with premium bath amenities and cozy up in a soft bathrobe . Executive Suite \u2013 Ideal for business travelers or families, feel at home in our spacious Executive Suites. These suites offer extra space, including a spacious living area, workspace, and modern bathroom. Get a great night\u2019s sleep in the plush king bed. After a long day, enjoy a rejuvenating rain .",
+        "1. Vista 5 of 5 bubbles (19 reviews) Save to a trip Chinese, Indian",
+        "How about some Indian Culinary Delight!! Delicious Kebabs Caramel Ambience - The long view Nimbu Murgh Tikka - the lemony and tangy delicacy from tandoor Oriental Platter Veg - the best of greens from Chinese Kitchen The best in Kebabs The Wowest in Kebabs :-) Chinese Food or Mughlai Food Meat balls in Thyme reduction - made flowery with an amazing art of culinary",
+        "2. Caramel Multicuisine Restaurant 4.8 of 5 bubbles (148 reviews) Save to a trip Chinese, American \u00b7\u20b9\u20b9\u20b9\u20b9 Closed now",
+        "\u201cThank you caramel for tasty food .... Service is so great, staff are very...\u201d \u201cExcellent food and service\u201d"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "element_2",
+          "x": 620,
+          "y": 1455,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.android.chrome:id/compositor_view_holder"
+        },
+        {
+          "text": "element_3",
+          "x": 224,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "tripadvisor.in/Restaurants-g1011999-Dhanbad_Dhanbad_District_Jharkhand.html",
+          "x": 592,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "See 23 tabs",
+          "x": 988,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 1553,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Restaurants ranked according to page views, reviews and individual attributes such as price range, cuisine and location, as well as aggregated Tripadvisor data comparing user interactions with all the other restaurant pages for this locale.",
+          "x": 615,
+          "y": 345,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "See all",
+          "x": 1072,
+          "y": 380,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Filters",
+          "x": 253,
+          "y": 546,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "View map",
+          "x": 1020,
+          "y": 548,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Vista:For delicious dining all day, our restaurant vista on the lower floor is the ideal spot. Indulge in a fusion of international flavors in an inviting and elegant atmosphere. With an open kitchen setup, watch our culinary experts in action. Each dish is carefully prepared . Vista:For delicious dining all day, our restaurant vista on the lower floor is the ideal spot. Indulge in a fusion of international flavors in an inviting and elegant atmosphere. With an open kitchen setup, watch our culinary experts in action. Each dish is carefully prepared . Vista PDR Executive Suite bathroom \u2013 Ideal for business travelers or families, feel at home in our spacious Executive Suites. These suites offer extra space, including a spacious living area, workspace, and modern bathroom. Get a great night\u2019s sleep in the plush king bed. After a long day. Premium Suite -Enjoy a relaxing stay in one of our stylish Premium Suites. These suites are the ideal sanctuary in the city for business and leisure travelers alike. Rest up in a comfortable king size bed, refresh in the rain shower with premium bath amenities and cozy up in a soft bathrobe . Executive Suite \u2013 Ideal for business travelers or families, feel at home in our spacious Executive Suites. These suites offer extra space, including a spacious living area, workspace, and modern bathroom. Get a great night\u2019s sleep in the plush king bed. After a long day, enjoy a rejuvenating rain .",
+          "x": 619,
+          "y": 926,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "1. Vista 5 of 5 bubbles (19 reviews) Save to a trip Chinese, Indian",
+          "x": 619,
+          "y": 1274,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "How about some Indian Culinary Delight!! Delicious Kebabs Caramel Ambience - The long view Nimbu Murgh Tikka - the lemony and tangy delicacy from tandoor Oriental Platter Veg - the best of greens from Chinese Kitchen The best in Kebabs The Wowest in Kebabs :-) Chinese Food or Mughlai Food Meat balls in Thyme reduction - made flowery with an amazing art of culinary",
+          "x": 619,
+          "y": 2022,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "2. Caramel Multicuisine Restaurant 4.8 of 5 bubbles (148 reviews) Save to a trip Chinese, American \u00b7\u20b9\u20b9\u20b9\u20b9 Closed now",
+          "x": 619,
+          "y": 2454,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u201cThank you caramel for tasty food .... Service is so great, staff are very...\u201d \u201cExcellent food and service\u201d",
+          "x": 619,
+          "y": 2745,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -48763,7 +48903,8 @@
     "ec0b6ebb8948|swipe": "00bc2bbcd4eb",
     "00bc2bbcd4eb|swipe": "521f5ee7f089",
     "521f5ee7f089|swipe": "00d209027475",
-    "00d209027475|tap:About this result": "4d84377e1164"
+    "00d209027475|tap:About this result": "4d84377e1164",
+    "4d84377e1164|swipe": "78311c064f1a"
   }
 }
 

@@ -9873,7 +9873,9 @@ nohup: ignoring input
 [ui_parser] child: (0,1651) → 'Edit suggestion warriyo mortals edit'
 [ui_parser] full parse -- 23 elements (23 labeled, 10 via OCR/rid/child) from 192.168.29.48:35253
 [mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=2d5eab384b92 elements=23
-[step] UI: ['Navigate up', 'Clear', 'Warriyo Mortals', 'Edit suggestion warriyo mortals', 'Edit suggestion warriyo mortals slowed reverb', 'Edit suggestion warriyo mortals', 'Edit suggestion warriyo mortals slowed', 'Edit suggestion warriyo mortals slowed']
+[step] UI: ['Navigate up', 'Clear', 'Warriyo Mortals', 'Edit suggestion warriyo mortals', 'Edit suggestion warriyo mortals slowed reverb', 'Edit suggestion warriyo mortals', 'Edit suggestion warriyo mortals slowed', 'Edit suggestion warriyo mortals slowed'][parser] DEBUG normalized: 'tap 4'
+[parser] INFO parsed 'tap 4' -> {'action': 'tap', 'target': 4}
+
 
 //===== TERMUXFILE: --task =====
 

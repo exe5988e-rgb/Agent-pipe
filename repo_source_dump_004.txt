@@ -6282,7 +6282,9 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
 [ui_parser] child: (481,335) → 'Videos'
 [ui_parser] child: (744,335) → 'Unwatched'
 [ui_parser] child: (1100,335) → 'Watched'
-[ui_parser] child: (0,475) → 'Lo-fi girl disappearance SOLVED? #shorts #fyp #viral #lofi #lofigirl #edit #editing #music, 1.2 million views, Noogitz, 2 years ago – play Short'
+[ui_parser] child: (0,475) → 'Lo-fi girl disappearance SOLVED? #shorts #fyp #viral #lofi #lofigirl #edit #editing #music, 1.2 million views, Noogitz, 2 years ago – play Short'[parser] DEBUG normalized: 'tap 20'
+[parser] INFO parsed 'tap 20' -> {'action': 'tap', 'target': 20}
+
 
 //===== TERMUXFILE: --task =====
 

@@ -4635,6 +4635,7 @@ if __name__ == "__main__":
 [21:18:24] 
 [17/33] [2★] [chrome] Open Chrome and go to google.com
 [21:18:24]   max_steps=10  skill_threshold=12  skills=4
+[21:20:51]   PASS  143.8s
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -5776,9 +5777,9 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-18T21:18:19.223258",
+  "run_at": "2026-03-18T21:20:51.227121",
   "skills_before": 0,
-  "skills_current": 4,
+  "skills_current": 5,
   "results": [
     {
       "task": "Open WhatsApp",
@@ -5923,6 +5924,15 @@ if __name__ == "__main__":
       "elapsed_s": 75.0,
       "error": null,
       "retried": false
+    },
+    {
+      "task": "Open Chrome and go to google.com",
+      "category": "chrome",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 143.8,
+      "error": null,
+      "retried": false
     }
   ]
 }
@@ -5993,6 +6003,26 @@ if __name__ == "__main__":
       {
         "action": "tap",
         "target": "JioFiber-ia1"
+      },
+      {
+        "action": "done"
+      }
+    ],
+    "uses": 0,
+    "version": 3
+  },
+  {
+    "pattern": "open chrome and go to",
+    "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+    "task_example": "Open Chrome and go to google.com",
+    "steps": [
+      {
+        "action": "type",
+        "text": "$URL"
+      },
+      {
+        "action": "tap",
+        "target": "Switch to this tab."
       },
       {
         "action": "done"
@@ -9051,6 +9081,104 @@ nohup: ignoring input
 [mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
 [step] step=3/10 done=False history=['opt4_launch:chrome', 'tap [3] google.com/search?q=weather+today&oq=&gs_lcrp=EgZjaHJvbWUqCQgEECMYJxjqAjIPCAAQIxgnGOoCGPAFGJ4GMgkIARAjGCcY6gIyDwgCECMYJxjqAhjwBRieBjIJCAMQIxgnGOoCMgkIBBAjGCcY', "type 'google.com'"][parser] DEBUG normalized: 'tap 6'
 [parser] INFO parsed 'tap 6' -> {'action': 'tap', 'target': 6}
+[parser] DEBUG normalized: 'done'
+[parser] INFO parsed 'done' -> {'action': 'done'}
+
+
+========================================================
+  STEP 4  |  Open Chrome and go to google.com
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1198755 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (70,139) → 'Connection is secure'
+[ui_parser] child: (28,335) → 'Switch to this tab.'
+[ui_parser] child: (28,531) → 'google.com'
+[ui_parser] child: (28,727) → 'Refine: google.com/android/find'
+[ui_parser] child: (28,923) → 'Refine: google.com/ai'
+[ui_parser] child: (28,1119) → 'Refine: google.com/find'
+[ui_parser] child: (28,1315) → 'Refine: https://accounts.google.com/ServiceLogin?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1'
+[ui_parser] child: (28,1511) → 'Refine: https://www.google.com/search?q=in+google+meet+how+i+can+take+photo+of+everyone+present&oq=&aqs=chrome.2.69i59l8.16661755j0j15&sourceid=chrome&ie=UTF-8'
+[ui_parser] child: (28,1707) → 'Refine: https://accounts.google.com/b/0/AddMailService'
+[ui_parser] full parse -- 20 elements (19 labeled, 9 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=989ad18b73e4 elements=20
+[step] UI: ['element_1', 'Connection is secure', 'google.com', 'Clear input', '8 suggested items in list below.', 'Switch to this tab.', 'Switch to this tab.', 'google.com']
+[map] new screen: chrome_main (bf144b1262a3)
+[map] transition: chrome_main --[type]--> chrome_main
+[map] screen: chrome_main (bf144b12)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 6'
+[step] LLM: 'tap 6'
+[step] action: {'action': 'tap', 'target': 6}
+[input] dispatching: TouchEvent(x=620, y=433)
+[input] dispatching: TouchEvent(x=620, y=433)
+[input] adb -s 192.168.29.48:33117 shell input tap 620 433
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[step] step=4/10 done=False history=['opt4_launch:chrome', 'tap [3] google.com/search?q=weather+today&oq=&gs_lcrp=EgZjaHJvbWUqCQgEECMYJxjqAjIPCAAQIxgnGOoCGPAFGJ4GMgkIARAjGCcY6gIyDwgCECMYJxjqAhjwBRieBjIJCAMQIxgnGOoCMgkIBBAjGCcY', "type 'google.com'", 'tap [6] Switch to this tab.']
+
+========================================================
+  STEP 5  |  Open Chrome and go to google.com
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (162328 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,139) → 'Dragon Ball Is Rolling Out Its Next Big Update as the Series Celebrates Another Milestone IGN India 23h'
+[ui_parser] child: (168,139) → 'Connection is secure'
+[ui_parser] child: (0,335) → 'Dragon Ball Is Rolling Out Its Next Big Update as the Series Celebrates Another Milestone IGN India 23h'
+[ui_parser] child: (889,335) → 'Google apps'
+[ui_parser] OCR: (679,860)-(850,1031) → 'ce'
+[ui_parser] full parse -- 29 elements (27 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=bff211903067 elements=29
+[step] UI: ['Open the homepage', 'Dragon Ball Is Rolling Out Its Next Big Update as the Series Celebrates Another Milestone IGN India 23h', 'Connection is secure', 'google.com', 'See 29 tabs', 'Customise and control Google Chrome', 'Dragon Ball Is Rolling Out Its Next Big Update as the Series Celebrates Another Milestone IGN India 23h', 'IMAGES']
+[map] new screen: chrome_main (24491ecc0614)
+[map] transition: chrome_main --[tap:Switch to this tab.]--> chrome_main
+[map] screen: chrome_main (24491ecc)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'done'
+[step] LLM: 'done'
+[step] action: {'action': 'done'}
+[input] DONE — no dispatch
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[skill] skipping dynamic label: 'google.com/search?q=weather+today&oq=&gs'
+[skill] learned: 'open chrome and go to'  (3 steps)  [Main]
+[step] step=5/10 done=True history=['opt4_launch:chrome', 'tap [3] google.com/search?q=weather+today&oq=&gs_lcrp=EgZjaHJvbWUqCQgEECMYJxjqAjIPCAAQIxgnGOoCGPAFGJ4GMgkIARAjGCcY6gIyDwgCECMYJxjqAhjwBRieBjIJCAMQIxgnGOoCMgkIBBAjGCcY', "type 'google.com'", 'tap [6] Switch to this tab.', 'done']
+
+[controller] done in 5 steps
+
+[controller] history:
+  1. opt4_launch:chrome
+  2. tap [3] google.com/search?q=weather+today&oq=&gs_lcrp=EgZjaHJvbWUqCQgEECMYJxjqAjIPCAAQIxgnGOoCGPAFGJ4GMgkIARAjGCcY6gIyDwgCECMYJxjqAhjwBRieBjIJCAMQIxgnGOoCMgkIBBAjGCcY
+  3. type 'google.com'
+  4. tap [6] Switch to this tab.
+  5. done
+
+  Screen Map: 532 screens (0 tainted), 648 transitions
+    whatsapp             175 screens
+    chrome               109 screens
+    youtube              104 screens
+    vending              43 screens
+    termux               25 screens
+    settings             25 screens
+    launcher             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+    notificationmanager  1 screens
+    battery              1 screens
+  TransitionMemory: 598 transitions (280 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: --task =====
@@ -12762,142 +12890,5 @@ def build_prompt(
     lines.append("Action:")
 
     return "\n".join(lines)
-
-
-//===== TERMUXFILE: jarvis-agent/reasoning/llm_client.py =====
-"""
-reasoning/llm_client.py
-
-LLM backend priority chain (two-device setup):
-  1. Phone B Claude bridge  http://192.168.29.110:8890
-  2. Local proxy            http://127.0.0.1:8888
-  3. Llamafile direct       http://127.0.0.1:8080
-  4. subprocess llama-cli
-
-OPT-4 v2 (Session 6):
-  generate() accepts bypass_pkg=<package>.
-  When set, fires am start on Phone A directly — no network call at all.
-  Returns the special token 'opt4_bypass' so controller can handle it.
-"""
-
-import json
-import os
-import subprocess
-import shutil
-import urllib.request
-
-PHONE_B_URL   = "http://192.168.29.110:8890"
-PROXY_URL     = "http://127.0.0.1:8888"
-LLAMAFILE_URL = "http://127.0.0.1:8080"
-DEFAULT_MODEL = os.path.expanduser(
-    "~/ai-workspace/llama.cpp/models/Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf"
-)
-LLAMA_BINS    = ["llama-cli", "llama-simple-chat", "llamafile", "main"]
-PHONE_A_SERIAL = "192.168.29.48:38577"
-ADB            = "/data/data/com.termux/files/usr/bin/adb"
-
-def _post(url, payload, timeout=90):
-    body = json.dumps(payload).encode()
-    req  = urllib.request.Request(
-        url, data=body,
-        headers={"Content-Type": "application/json"},
-        method="POST"
-    )
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return json.loads(r.read().decode())
-
-def _ok(url, t=3):
-    try:
-        with urllib.request.urlopen(url, timeout=t) as r:
-            return r.status == 200
-    except:
-        return False
-
-def _am_start(package: str):
-    """Fire monkey launcher intent on Phone A for package."""
-    print(f"[llm] OPT4v2 am start: {package}")
-    subprocess.run(
-        [ADB, "-s", PHONE_A_SERIAL,
-         "shell", "monkey", "-p", package,
-         "-c", "android.intent.category.LAUNCHER", "1"],
-        capture_output=True, timeout=10
-    )
-
-def generate(prompt, model_path=DEFAULT_MODEL, max_tokens=256,
-             temperature=0.1, timeout=90, bypass_pkg=None):
-    """
-    bypass_pkg: package to launch via am start on Phone A.
-                When set, skips all backends and returns 'opt4_bypass'.
-    """
-    if bypass_pkg:
-        _am_start(bypass_pkg)
-        return "opt4_bypass"
-
-    print(f"[llm] prompt tail: ...{prompt[-80:].strip()!r}")
-
-    if _ok(f"{PHONE_B_URL}/health"):
-        try:
-            d = _post(f"{PHONE_B_URL}/chat", {"prompt": prompt}, timeout=timeout)
-            if d.get("success"):
-                out = (d.get("response") or "").strip()
-                print(f"[llm] Phone B (Claude): {out[:80]!r}")
-                return out
-            else:
-                print(f"[llm] Phone B error: {d.get('error')}")
-        except Exception as e:
-            print(f"[llm] Phone B unreachable: {e}")
-
-    if _ok(f"{PROXY_URL}/health"):
-        try:
-            d = _post(f"{PROXY_URL}/chat_sync", {"query": prompt}, timeout=timeout)
-            if d.get("success"):
-                out = (d.get("response") or "").strip()
-                print(f"[llm] proxy (local): {out[:80]!r}")
-                return out
-        except Exception as e:
-            print(f"[llm] proxy err: {e}")
-
-    if _ok(f"{LLAMAFILE_URL}/health"):
-        try:
-            d = _post(f"{LLAMAFILE_URL}/v1/chat/completions",
-                      {"messages":    [{"role": "user", "content": prompt}],
-                       "max_tokens":  max_tokens,
-                       "temperature": temperature},
-                      timeout=timeout)
-            out = d["choices"][0]["message"]["content"].strip()
-            print(f"[llm] llamafile: {out[:80]!r}")
-            return out
-        except Exception as e:
-            print(f"[llm] llamafile err: {e}")
-
-    mp     = os.path.expanduser(model_path)
-    binary = next((shutil.which(b) for b in LLAMA_BINS if shutil.which(b)), None)
-    if not binary or not os.path.isfile(mp):
-        raise RuntimeError(
-            "No LLM backend available.\n"
-            "  Phone B offline? Check: curl http://192.168.29.110:8890/health\n"
-            "  Local LLM down? Run:    bash ~/jarvis_server_init.sh"
-        )
-    r = subprocess.run(
-        [binary, "-m", mp, "-p", prompt,
-         "-n", str(max_tokens), "--temp", str(temperature),
-         "--no-display-prompt", "-e", "--log-disable"],
-        capture_output=True, text=True, timeout=timeout
-    )
-    out = "\n".join(
-        l for l in r.stdout.strip().splitlines()
-        if not l.startswith("llama") and not l.startswith("[")
-    ).strip()
-    print(f"[llm] subprocess: {out[:80]!r}")
-    return out
-
-def health_check():
-    return {
-        "phone_b":   _ok(f"{PHONE_B_URL}/health"),
-        "proxy":     _ok(f"{PROXY_URL}/health"),
-        "llamafile": _ok(f"{LLAMAFILE_URL}/health"),
-        "binary":    next((shutil.which(b) for b in LLAMA_BINS
-                           if shutil.which(b)), None),
-    }
 
 

@@ -7288,7 +7288,8 @@ nohup: ignoring input
 [ui_parser] child: (0,139) → 'रणवीर सिंह की फिल्म को लेकर जबरदस्त क्रेज देखने को मिल रहा है। Dhurandhar 2: The Revenge की शुरुआत भगवद गीता के श्लोक से हुई, जिसने फिल्म को एक दमदार'
 [ui_parser] child: (0,520) → 'Dr Masood Alam Vet, 4 unread statuses'
 [ui_parser] child: (1184,520) → 'Hidden'
-[ui_parser] child: (0,1194) → 'रणवीर सिंह की फिल्म को लेकर जबरदस्त क्रेज देखने को मिल रहा है। Dhurandhar 2: The Revenge की शुरुआत भगवद गीता के श्लोक से हुई, जिसने फिल्म को एक दमदार'
+[ui_parser] child: (0,1194) → 'रणवीर सिंह की फिल्म को लेकर जबरदस्त क्रेज देखने को मिल रहा है। Dhurandhar 2: The Revenge की शुरुआत भगवद गीता के श्लोक से हुई, जिसने फिल्म को एक दमदार'[parser] DEBUG normalized: 'Still working on it...'
+
 
 //===== TERMUXFILE: --task =====
 

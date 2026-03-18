@@ -90866,6 +90866,257 @@
           "resource_id": ""
         }
       ]
+    },
+    "cce393f689c6": {
+      "screen_id": "cce393f689c6",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Cast",
+        "Notifications, 9+",
+        "Search",
+        "filters",
+        "Explore menu",
+        "All",
+        "Music",
+        "Mixes",
+        "Gaming",
+        "Boruto: Naruto Next Generations",
+        "Sponsored \u2013 Create high-quality videos in minutes with Gemini in Plus. \u2013 20 seconds \u2013 Anyone can be a creator with Gemini. Visualize and share your ideas in minutes \u2013 Google One \u2013 play video",
+        "Sponsored \u2013 Create high-quality videos in minutes with Gemini in Plus. \u2013 20 seconds \u2013 Anyone can be a creator with Gemini. Visualize and share your ideas in minutes \u2013 Google One \u2013 play video",
+        "More options",
+        "element_14",
+        "More options",
+        "Action menu",
+        "Shorts",
+        "How Many Versions Of Ultra Instinct Goku Has Achieved \u2013 play Short",
+        "Can your PC repeat ts comfort conditions \ud83d\udc40\ud83d\udcbb #macbook #pc  #apple #macos #laptop #tech #workspace \u2013 play Short",
+        "More actions",
+        "More actions",
+        "Shorts",
+        "Create",
+        "Subscriptions: New content is available",
+        "You",
+        "opm creator REVEALS saitama will LOSE 100% of his power.. \ud83d\udc94 \u2013 play Short",
+        "Viral TikTok, Early Morning Cold Start!!! on a Lamborghini Aventador LP700-4 #automobile #aventador \u2013 play Short",
+        "More actions",
+        "More actions"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Cast",
+          "x": 820,
+          "y": 223,
+          "cls": "android.widget.Button",
+          "resource_id": "com.google.android.youtube:id/mdx_entry_point_button"
+        },
+        {
+          "text": "Notifications, 9+",
+          "x": 988,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/menu_item_view"
+        },
+        {
+          "text": "Search",
+          "x": 1156,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/menu_item_view"
+        },
+        {
+          "text": "filters",
+          "x": 620,
+          "y": 391,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": ""
+        },
+        {
+          "text": "Explore menu",
+          "x": 115,
+          "y": 391,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "All",
+          "x": 315,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Music",
+          "x": 521,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Mixes",
+          "x": 765,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Gaming",
+          "x": 1027,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Boruto: Naruto Next Generations",
+          "x": 1211,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Sponsored \u2013 Create high-quality videos in minutes with Gemini in Plus. \u2013 20 seconds \u2013 Anyone can be a creator with Gemini. Visualize and share your ideas in minutes \u2013 Google One \u2013 play video",
+          "x": 620,
+          "y": 992,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Sponsored \u2013 Create high-quality videos in minutes with Gemini in Plus. \u2013 20 seconds \u2013 Anyone can be a creator with Gemini. Visualize and share your ideas in minutes \u2013 Google One \u2013 play video",
+          "x": 620,
+          "y": 1623,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results"
+        },
+        {
+          "text": "More options",
+          "x": 620,
+          "y": 1319,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "element_14",
+          "x": 105,
+          "y": 1277,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "More options",
+          "x": 1142,
+          "y": 1256,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Action menu",
+          "x": 1142,
+          "y": 1628,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 318,
+          "y": 1628,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "How Many Versions Of Ultra Instinct Goku Has Achieved \u2013 play Short",
+          "x": 324,
+          "y": 2143,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Can your PC repeat ts comfort conditions \ud83d\udc40\ud83d\udcbb #macbook #pc  #apple #macos #laptop #tech #workspace \u2013 play Short",
+          "x": 916,
+          "y": 2143,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 560,
+          "y": 1780,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 1152,
+          "y": 1780,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Home",
+          "x": 124,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 372,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Create",
+          "x": 620,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscriptions: New content is available",
+          "x": 868,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "You",
+          "x": 1116,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "opm creator REVEALS saitama will LOSE 100% of his power.. \ud83d\udc94 \u2013 play Short",
+          "x": 324,
+          "y": 2683,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Viral TikTok, Early Morning Cold Start!!! on a Lamborghini Aventador LP700-4 #automobile #aventador \u2013 play Short",
+          "x": 916,
+          "y": 2683,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 560,
+          "y": 2654,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 1152,
+          "y": 2654,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -91362,7 +91613,7 @@
     "9630709f3ce0|back": "ba1a981b7b83",
     "ba1a981b7b83|back": "7c51d7e864c3",
     "9630709f3ce0|type": "0b8ebca132ad",
-    "17d655c4f84a|opt4_launch:youtube": "ccab2504780d",
+    "17d655c4f84a|opt4_launch:youtube": "cce393f689c6",
     "1ef49de82872|retry": "df6c4a48f8d7",
     "df6c4a48f8d7|retry": "f4fc72db7542",
     "f4fc72db7542|retry": "1d9e3ca5035d",

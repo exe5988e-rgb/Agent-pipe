@@ -53834,7 +53834,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 21,
+      "visits": 22,
       "tainted": false,
       "elements": [
         {
@@ -67613,6 +67613,328 @@
           "resource_id": ""
         }
       ]
+    },
+    "0dc27a148200": {
+      "screen_id": "0dc27a148200",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Open the homepage",
+        "Connection is secure",
+        "animex.one/watch/dragon-ball-223-episode-70",
+        "See 28 tabs",
+        "Customise and control Google Chrome",
+        "Goku Son is a young boy who lives in the woods all alone\u2014that is until a girl named Bulma runs into him in her search for a set of magical objects cal...see more",
+        "61. Korin Tower",
+        "logo AnimeX",
+        "Open search",
+        "Notifications",
+        "Open login",
+        "Google Cast disconnected",
+        "ws",
+        "Mute",
+        "Play",
+        "62. Sacred Water",
+        "Fullscreen",
+        "Seek",
+        "63. The Return of Goku",
+        "element_20",
+        "element_21",
+        "element_22",
+        "64. The Last of Mercenary Tao",
+        "Hardsub",
+        "Select",
+        "Softsub",
+        "Select",
+        "65. Confront the Red Ribbon Army",
+        "Dubbed",
+        "Select"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "Connection is secure",
+          "x": 224,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "animex.one/watch/dragon-ball-223-episode-70",
+          "x": 592,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "See 28 tabs",
+          "x": 988,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        },
+        {
+          "text": "Goku Son is a young boy who lives in the woods all alone\u2014that is until a girl named Bulma runs into him in her search for a set of magical objects cal...see more",
+          "x": 620,
+          "y": 1526,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "61. Korin Tower",
+          "x": 621,
+          "y": 494,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "logo AnimeX",
+          "x": 192,
+          "y": 459,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Open search",
+          "x": 845,
+          "y": 459,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Notifications",
+          "x": 1002,
+          "y": 459,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Open login",
+          "x": 1149,
+          "y": 459,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Google Cast disconnected",
+          "x": 113,
+          "y": 494,
+          "cls": "android.widget.ToggleButton",
+          "resource_id": ""
+        },
+        {
+          "text": "ws",
+          "x": 981,
+          "y": 494,
+          "cls": "android.widget.Button",
+          "resource_id": "media-menu-button-1"
+        },
+        {
+          "text": "Mute",
+          "x": 1128,
+          "y": 494,
+          "cls": "android.widget.ToggleButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Play",
+          "x": 621,
+          "y": 742,
+          "cls": "android.widget.ToggleButton",
+          "resource_id": ""
+        },
+        {
+          "text": "62. Sacred Water",
+          "x": 621,
+          "y": 802,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Fullscreen",
+          "x": 1114,
+          "y": 865,
+          "cls": "android.widget.ToggleButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Seek",
+          "x": 619,
+          "y": 991,
+          "cls": "android.widget.SeekBar",
+          "resource_id": ""
+        },
+        {
+          "text": "63. The Return of Goku",
+          "x": 621,
+          "y": 1110,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_20",
+          "x": 736,
+          "y": 1180,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_21",
+          "x": 946,
+          "y": 1180,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_22",
+          "x": 1142,
+          "y": 1180,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "64. The Last of Mercenary Tao",
+          "x": 621,
+          "y": 1418,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Hardsub",
+          "x": 253,
+          "y": 1383,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Select",
+          "x": 673,
+          "y": 1383,
+          "cls": "android.widget.Button",
+          "resource_id": "bits-c16"
+        },
+        {
+          "text": "Softsub",
+          "x": 248,
+          "y": 1537,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Select",
+          "x": 663,
+          "y": 1537,
+          "cls": "android.widget.Button",
+          "resource_id": "bits-c17"
+        },
+        {
+          "text": "65. Confront the Red Ribbon Army",
+          "x": 621,
+          "y": 1726,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Dubbed",
+          "x": 246,
+          "y": 1691,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Select",
+          "x": 659,
+          "y": 1691,
+          "cls": "android.widget.Button",
+          "resource_id": "bits-c18"
+        },
+        {
+          "text": "66. A Real Bind",
+          "x": 621,
+          "y": 2034,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Toggle view type",
+          "x": 1058,
+          "y": 1943,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Sort order: Ascending",
+          "x": 1170,
+          "y": 1943,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Refresh episodes",
+          "x": 379,
+          "y": 1943,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_35",
+          "x": 406,
+          "y": 2065,
+          "cls": "android.widget.EditText",
+          "resource_id": ""
+        },
+        {
+          "text": "Select",
+          "x": 1058,
+          "y": 2065,
+          "cls": "android.widget.Button",
+          "resource_id": "bits-c22"
+        },
+        {
+          "text": "67. The End of Commander Red",
+          "x": 621,
+          "y": 2342,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Home",
+          "x": 143,
+          "y": 2592,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Catalog",
+          "x": 372,
+          "y": 2592,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Settings",
+          "x": 867,
+          "y": 2592,
+          "cls": "android.view.View",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -68115,7 +68437,7 @@
     "f4fc72db7542|retry": "1d9e3ca5035d",
     "17d655c4f84a|opt4_launch:settings": "edd4f565ccb7",
     "5bef859e23ff|retry": "225fda90f5ad",
-    "17d655c4f84a|opt4_launch:chrome": "c3b92b58857f",
+    "17d655c4f84a|opt4_launch:chrome": "0dc27a148200",
     "17d655c4f84a|opt4_launch:play store": "5f4667f78fd4",
     "17d655c4f84a|tap:Instagram": "1777629e89ea",
     "4148e6457ea1|retry": "b47fc49a44e5",

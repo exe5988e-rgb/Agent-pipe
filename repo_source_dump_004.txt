@@ -7249,6 +7249,114 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
 [parser] DEBUG normalized: 'tap 40'
 [parser] INFO parsed 'tap 40' -> {'action': 'tap', 'target': 40}
 
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[step] step=7/12 done=False history=['home', 'opt4_launch:youtube', 'tap [2] Minimise', 'tap [6] lofi hip hop', "type 'Warriyo Mortals'", 'tap [2] Clear', "type 'Warriyo Mortals'"]
+
+========================================================
+  STEP 8  |  Play Warriyo Mortals on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1471287 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,307) → 'Edit suggestion warriyo mortals'
+[ui_parser] child: (0,307) → 'Edit suggestion warriyo mortals slowed reverb'
+[ui_parser] child: (0,475) → 'Edit suggestion warriyo mortals slowed'
+[ui_parser] child: (0,643) → 'Edit suggestion warriyo mortals slowed reverb'
+[ui_parser] child: (0,811) → 'Edit suggestion warriyo mortals ringtone'
+[ui_parser] child: (0,979) → 'Edit suggestion warriyo mortals funk'
+[ui_parser] child: (0,1147) → 'Edit suggestion warriyo mortals song'
+[ui_parser] child: (0,1315) → 'Edit suggestion warriyo mortals remix'
+[ui_parser] child: (0,1483) → 'Edit suggestion warriyo mortals lyrics'
+[ui_parser] child: (0,1651) → 'Edit suggestion warriyo mortals edit'
+[ui_parser] full parse -- 26 elements (26 labeled, 10 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=71042c74d023 elements=26
+[step] UI: ['Navigate up', 'Clear', 'Warriyo Mortals', 'Edit suggestion warriyo mortals', 'Edit suggestion warriyo mortals slowed reverb', 'Edit suggestion warriyo mortals', 'Edit suggestion warriyo mortals slowed', 'Edit suggestion warriyo mortals slowed']
+[map] new screen: youtube_shell$homeactivity (382f94af9f92)
+[map] transition: youtube_shell$homeactivity --[type]--> youtube_shell$homeactivity
+[map] screen: youtube_shell$homeactivity (382f94af)
+[skill] matched: 'play on youtube'  score=1.00  act=True
+[skill] cannot resolve: 'Search'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 4'
+[step] LLM: 'tap 4'
+[step] action: {'action': 'tap', 'target': 4}
+[input] dispatching: TouchEvent(x=620, y=391)
+[input] dispatching: TouchEvent(x=620, y=391)
+[input] adb -s 192.168.29.48:33117 shell input tap 620 391
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[step] step=8/12 done=False history=['home', 'opt4_launch:youtube', 'tap [2] Minimise', 'tap [6] lofi hip hop', "type 'Warriyo Mortals'", 'tap [2] Clear', "type 'Warriyo Mortals'", 'tap [4] Edit suggestion warriyo mortals']
+
+========================================================
+  STEP 9  |  Play Warriyo Mortals on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (2061364 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (56,335) → 'All'
+[ui_parser] child: (224,335) → 'Shorts'
+[ui_parser] child: (481,335) → 'Videos'
+[ui_parser] child: (744,335) → 'Unwatched'
+[ui_parser] child: (1100,335) → 'Watched'
+[ui_parser] child: (0,475) → 'warriyo - mortals (feat. laura brehm) Mahabharat#bhagvadgita #srikrishna #jayshreeram #slok, 1 million views, Urban headshot, 1 year ago – play Short'
+[ui_parser] child: (196,1421) → '1.2m views · 1 yr ago'
+[ui_parser] child: (788,1421) → '1m views · 5 mo ago'
+[ui_parser] child: (0,1537) → 'warriyo - mortals (feat. laura brehm) Mahabharat#bhagvadgita #srikrishna #jayshreeram #slok, 1 million views, Urban headshot, 1 year ago – play Short'
+[ui_parser] child: (622,1537) → 'Legend of Warriors ⚔️🔥 Ft. Warriyo - Mortals #shorts #animation, 2 million views, AMR Story, 10 months ago – play Short'
+[ui_parser] child: (196,2481) → '1m views · 1 yr ago'
+[ui_parser] child: (788,2481) → '2m views · 10 mo ago'
+[ui_parser] full parse -- 40 elements (40 labeled, 12 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=b52384617218 elements=40
+[step] UI: ['Navigate up', 'Clear', 'Voice search', 'Cast', 'More options', 'warriyo mortals', 'All', 'Shorts']
+[map] new screen: youtube_shell$homeactivity (d4acf313b80b)
+[map] transition: youtube_shell$homeactivity --[tap:Edit suggestion warriyo mortals slowed reverb]--> youtube_shell$homeactivity
+[map] screen: youtube_shell$homeactivity (d4acf313)
+[skill] matched: 'play on youtube'  score=1.00  act=True
+[skill] cannot resolve: 'Edit suggestion warriyo mortals'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B timeout/error (attempt 1/3): timed out
+[llm] Retrying in 5s...
+[llm] Phone B (Claude): 'tap 40'
+[step] LLM: 'tap 40'
+[step] action: {'action': 'tap', 'target': 40}
+[input] dispatching: TouchEvent(x=620, y=2725)
+[input] dispatching: TouchEvent(x=620, y=2725)
+[input] adb -s 192.168.29.48:33117 shell input tap 620 2725
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[step] step=9/12 done=False history=['home', 'opt4_launch:youtube', 'tap [2] Minimise', 'tap [6] lofi hip hop', "type 'Warriyo Mortals'", 'tap [2] Clear', "type 'Warriyo Mortals'", 'tap [4] Edit suggestion warriyo mortals', 'tap [40] Warriyo - Mortals (ft. Laura Brehm) – 3 minutes, 49 seconds – Go to channel Warriyo – Warriyo - 37 million views - 9 years ago – play video']
+
+========================================================
+  STEP 10  |  Play Warriyo Mortals on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1751770 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (56,335) → 'All'
+[ui_parser] child: (224,335) → 'Shorts'
+[ui_parser] child: (481,335) → 'Videos'
+[ui_parser] child: (744,335) → 'Unwatched'
+[ui_parser] child: (1100,335) → 'Watched'
+[ui_parser] child: (0,475) → 'warriyo - mortals (feat. laura brehm) Mahabharat#bhagvadgita #srikrishna #jayshreeram #slok, 1 million views, Urban headshot, 1 year ago – play Short'
+[ui_parser] child: (622,475) → 'Legend of Warriors ⚔️🔥 Ft. Warriyo - Mortals #shorts #animation, 2 million views, AMR Story, 10 months ago – play Short'
+[ui_parser] child: (196,937) → '1m views · 1 yr ago'
+[ui_parser] child: (788,937) → '2m views · 10 mo ago'
+[ui_parser] full parse -- 32 elements (32 labeled, 9 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=334a301c5c13 elements=32
+[step] UI: ['Navigate up', 'Clear', 'Voice search', 'Cast', 'More options', 'warriyo mortals', 'All', 'Shorts']
+[map] new screen: youtube_shell$homeactivity (0ce4a043d67c)
+[map] transition: youtube_shell$homeactivity --[tap:40]--> youtube_shell$homeactivity
+[map] screen: youtube_shell$homeactivity (0ce4a043)
+[skill] matched: 'play on youtube'  score=1.00  act=True
+[skill] cannot resolve: 'Edit suggestion warriyo mortals'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
 
 //===== TERMUXFILE: --task =====
 

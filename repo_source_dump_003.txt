@@ -4785,6 +4785,11 @@ if __name__ == "__main__":
     "to": "0ce4a043d67c",
     "count": 1,
     "last_seen": 1773851623.3953633
+  },
+  "0ce4a043d67c|tap:Go to channel Warriyo": {
+    "to": "4d58cb7e4062",
+    "count": 1,
+    "last_seen": 1773851655.5801868
   }
 }
 

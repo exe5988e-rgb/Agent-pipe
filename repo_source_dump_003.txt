@@ -4720,6 +4720,9 @@ if __name__ == "__main__":
 [22/33] [3★] [whatsapp] Send a WhatsApp message to Mummy saying Good morning
 [21:37:51]   max_steps=15  skill_threshold=12  skills=6
 [21:38:40]   PASS  46.2s
+[21:38:45] 
+[23/33] [3★] [whatsapp] Send a WhatsApp message to Ayush Kumar saying Hey what is up
+[21:38:45]   max_steps=15  skill_threshold=12  skills=6
 
 
 //===== TERMUXFILE: tap_logger.py =====

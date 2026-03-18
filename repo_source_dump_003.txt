@@ -4531,6 +4531,10 @@ if __name__ == "__main__":
 [21:00:56] 
 [6/33] [1★] [phone] Open Phone app
 [21:00:56]   max_steps=5  skill_threshold=12  skills=3
+[21:01:37]   PASS  37.4s
+[21:01:42] 
+[7/33] [1★] [phone] Open Contacts
+[21:01:42]   max_steps=5  skill_threshold=12  skills=3
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -5672,7 +5676,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-18T21:00:51.885518",
+  "run_at": "2026-03-18T21:01:37.497604",
   "skills_before": 0,
   "skills_current": 3,
   "results": [
@@ -5718,6 +5722,15 @@ if __name__ == "__main__":
       "difficulty": 1,
       "success": true,
       "elapsed_s": 42.5,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Open Phone app",
+      "category": "phone",
+      "difficulty": 1,
+      "success": true,
+      "elapsed_s": 37.4,
       "error": null,
       "retried": false
     }
@@ -6727,6 +6740,36 @@ nohup: ignoring input
 [input] adb -s 192.168.29.48:33117 shell input tap 620 418
 [mem] invalidated com.android.launcher/.Launcher
 [step] step=5/5 done=False history=['opt4_launch:phone', 'tap [1] Clock', 'tap [1] Clock', 'tap [1] Clock', 'tap [1] Clock']
+
+[controller] history:
+  1. opt4_launch:phone
+  2. tap [1] Clock
+  3. tap [1] Clock
+  4. tap [1] Clock
+  5. tap [1] Clock
+
+  Screen Map: 520 screens (0 tainted), 636 transitions
+    whatsapp             173 screens
+    chrome               106 screens
+    youtube              101 screens
+    vending              43 screens
+    termux               25 screens
+    launcher             23 screens
+    settings             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+  TransitionMemory: 586 transitions (280 confirmed, threshold=2)
+
 
 //===== TERMUXFILE: --task =====
 

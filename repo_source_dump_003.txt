@@ -10806,6 +10806,8 @@ RuntimeError: No LLM backend available.
   STEP 11  |  Search for VLC on Play Store and open its page
 ========================================================[parser] DEBUG normalized: 'tap 15'
 [parser] INFO parsed 'tap 15' -> {'action': 'tap', 'target': 15}
+[parser] DEBUG normalized: 'tap 2'
+[parser] INFO parsed 'tap 2' -> {'action': 'tap', 'target': 2}
 
 
 //===== TERMUXFILE: --task =====

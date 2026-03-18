@@ -7397,6 +7397,126 @@ nohup: ignoring input
 [parser] DEBUG normalized: 'tap 27'
 [parser] INFO parsed 'tap 27' -> {'action': 'tap', 'target': 27}
 
+########################################################
+  JARVIS  |  Open WhatsApp and search for Mummy in chats
+  Device : 192.168.29.48:33117
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 521 screens (0 tainted), 636 transitions
+    whatsapp             174 screens
+    chrome               106 screens
+    youtube              101 screens
+    vending              43 screens
+    termux               25 screens
+    launcher             23 screens
+    settings             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+  TransitionMemory: 586 transitions (279 confirmed, threshold=2)
+[init] task_apps: ['whatsapp']
+[init] max_skill_steps: 20 (threshold: 12)
+
+========================================================
+  STEP 1  |  Open WhatsApp and search for Mummy in chats
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3310423 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Cloudy'
+[ui_parser] OCR: (841,1475)-(1009,1671) → 'lt'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.launcher/.Launcher hash=417639186c94 elements=26
+[step] UI: ['Clock', '21', ':', '06', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (1025dd6b)
+[OPT4v2] launcher -> launching whatsapp (com.whatsapp)
+[llm] OPT4v2 am start: com.whatsapp
+
+========================================================
+  STEP 2  |  Open WhatsApp and search for Mummy in chats
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (820434 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,139) → 'रणवीर सिंह की फिल्म को लेकर जबरदस्त क्रेज देखने को मिल रहा है। Dhurandhar 2: The Revenge की शुरुआत भगवद गीता के श्लोक से हुई, जिसने फिल्म को एक दमदार'
+[ui_parser] child: (0,520) → 'Dr Masood Alam Vet, 4 unread statuses'
+[ui_parser] child: (1184,520) → 'Hidden'
+[ui_parser] child: (0,1194) → 'रणवीर सिंह की फिल्म को लेकर जबरदस्त क्रेज देखने को मिल रहा है। Dhurandhar 2: The Revenge की शुरुआत भगवद गीता के श्लोक से हुई, जिसने फिल्म को एक दमदार'
+[ui_parser] child: (0,1460) → 'In China, some foreigners are hired just for being white — a practice locals call “white monkey.” They’re paid to pose as executives or attend events'
+[ui_parser] child: (0,1726) → "होर्मुज पर 'अंडरग्राउंड वॉर: ईरान के गढ़ में अमेरिका ने कैसे किया हमला? अब समुद्र में होगा महायुद्ध  पश्चिम एशिया में तनाव के बीच, अमेरिका ने होर्मुज"
+[ui_parser] child: (0,1992) → 'Favourite dish? 😋'
+[ui_parser] child: (0,2258) → '🇮🇷 Iran has ordered evacuations of major oil refineries in the gulf states.  They are preparing for a major strike at oil.'
+[ui_parser] full parse -- 31 elements (28 labeled, 8 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.whatsapp/.home.ui.HomeActivity hash=2f28e46d1c52 elements=31
+[step] UI: ['रणवीर सिंह की फिल्म को लेकर जबरदस्त क्रेज देखने को मिल रहा है। Dhurandhar 2: The Revenge की शुरुआत भगवद गीता के श्लोक से हुई, जिसने फिल्म को एक दमदार', 'Search', 'More options', 'Dr Masood Alam Vet, 4 unread statuses', 'My status, tap to add new status', 'Shivang Gupta, 1 unread status', 'Dr Masood Alam Vet, 4 unread statuses', 'Mishra nursery, 1 unread status']
+[tm] transition changed: 1025dd6b857e|opt4_launch:whatsapp 13dcb650 -> 615edd0c
+[map] transition: launcher_launcher --[opt4_launch:whatsapp]--> whatsapp_homeactivity
+[map] screen: whatsapp_homeactivity (615edd0c)
+[skill] matched: 'open whatsapp'  score=1.00  act=True
+[skill] cannot resolve: 'Back'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 27'
+[step] LLM: 'tap 27'
+[step] action: {'action': 'tap', 'target': 27}
+[input] dispatching: TouchEvent(x=124, y=2576)
+[input] dispatching: TouchEvent(x=124, y=2576)
+[input] adb -s 192.168.29.48:33117 shell input tap 124 2576
+[mem] invalidated com.whatsapp/.home.ui.HomeActivity
+[step] step=2/10 done=False history=['opt4_launch:whatsapp', 'tap [27] Chats, 2 new notifications']
+
+========================================================
+  STEP 3  |  Open WhatsApp and search for Mummy in chats
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (410149 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,139) → 'FTS-01B(P1)_17-03-2026_Sol.pdf (26 pages)'
+[ui_parser] child: (0,937) → 'Door desgin ideas, group'
+[ui_parser] child: (0,951) → 'Door desgin ideas, group'
+[ui_parser] child: (0,1203) → 'Mummy Jio (You)'
+[ui_parser] child: (0,1217) → 'You'
+[ui_parser] child: (0,1469) → 'Papa'
+[ui_parser] child: (0,1483) → 'Papa'
+[ui_parser] child: (0,1735) → 'Mummy'
+[ui_parser] child: (0,1749) → 'Mummy'
+[ui_parser] child: (0,2001) → 'FTS-01B(P1)_17-03-2026_Sol.pdf (26 pages)'
+[ui_parser] child: (0,2015) → 'Yash Raj'
+[ui_parser] child: (0,2267) → 'Jio को चुनने के लिए आपका धन्यवाद! ❤️…'
+[ui_parser] child: (0,2281) → 'MyJio'
+[ui_parser] full parse -- 31 elements (31 labeled, 14 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.whatsapp/.home.ui.HomeActivity hash=2b661b4ce801 elements=31
+[step] UI: ['FTS-01B(P1)_17-03-2026_Sol.pdf (26 pages)', 'Scan to Pay', 'More options', 'Ask Meta AI or Search', 'Swipe down to reveal additional actions', 'Inbox filters, Radio Group', 'All filter, , selected', 'Unread filter, 2, unselected']
+[map] transition: whatsapp_homeactivity --[tap:Updates]--> whatsapp_homeactivity
+[map] screen: whatsapp_homeactivity (6dcc8357)
+[skill] matched: 'open whatsapp'  score=1.00  act=True
+[skill] cannot resolve: 'Back'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 4'
+[step] LLM: 'tap 4'[parser] DEBUG normalized: 'tap 4'
+[parser] INFO parsed 'tap 4' -> {'action': 'tap', 'target': 4}
+
 
 //===== TERMUXFILE: --task =====
 

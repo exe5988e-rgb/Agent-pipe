@@ -4763,6 +4763,9 @@ if __name__ == "__main__":
 [24/33] [3★] [whatsapp] Send a WhatsApp message to Sadique faridi saying Hello brother
 [21:39:48]   max_steps=15  skill_threshold=12  skills=6
 [21:41:07]   PASS  75.4s
+[21:41:12] 
+[25/33] [3★] [youtube] Play Warriyo Mortals on YouTube
+[21:41:12]   max_steps=12  skill_threshold=12  skills=6
 
 
 //===== TERMUXFILE: tap_logger.py =====

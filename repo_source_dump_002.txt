@@ -82770,6 +82770,193 @@
           "resource_id": ""
         }
       ]
+    },
+    "4811387dbea0": {
+      "screen_id": "4811387dbea0",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "like this video along with 484 thousand other people",
+        "Search",
+        "More",
+        "It's almost time for bed. You'll get a reminder in 19 minutes.",
+        "like this video along with 484 thousand other people",
+        "Dislike this video",
+        "View 3,791 comments",
+        "Share this video",
+        "Remix this Short along with 5 other remixes",
+        "@OfficialShivamic",
+        "Go to channel",
+        "@OfficialShivamic",
+        "Subscribe to @OfficialShivamic.",
+        "See more videos using this sound",
+        "Why Desert Driving Can Kill an Engine \ud83d\ude33",
+        "This Machine Eats Students\u2019 Leftover Food \ud83e\udd2f",
+        "0 minutes 4 seconds of 0 minutes 21 seconds",
+        "Shorts",
+        "Create",
+        "Subscriptions: New content is available",
+        "You"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "like this video along with 484 thousand other people",
+          "x": 620,
+          "y": 1343,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/reel_recycler"
+        },
+        {
+          "text": "Search",
+          "x": 988,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/menu_item_view"
+        },
+        {
+          "text": "More",
+          "x": 1156,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/menu_item_view"
+        },
+        {
+          "text": "It's almost time for bed. You'll get a reminder in 19 minutes.",
+          "x": 620,
+          "y": 287,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.google.android.youtube:id/snackbar"
+        },
+        {
+          "text": "like this video along with 484 thousand other people",
+          "x": 1128,
+          "y": 1379,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Dislike this video",
+          "x": 1128,
+          "y": 1589,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "View 3,791 comments",
+          "x": 1128,
+          "y": 1799,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Share this video",
+          "x": 1128,
+          "y": 2009,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Remix this Short along with 5 other remixes",
+          "x": 1128,
+          "y": 2219,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "@OfficialShivamic",
+          "x": 339,
+          "y": 2260,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Go to channel",
+          "x": 112,
+          "y": 2260,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "@OfficialShivamic",
+          "x": 394,
+          "y": 2260,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscribe to @OfficialShivamic.",
+          "x": 758,
+          "y": 2260,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "See more videos using this sound",
+          "x": 1128,
+          "y": 2436,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Why Desert Driving Can Kill an Engine \ud83d\ude33",
+          "x": 508,
+          "y": 2372,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "This Machine Eats Students\u2019 Leftover Food \ud83e\udd2f",
+          "x": 508,
+          "y": 2460,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "0 minutes 4 seconds of 0 minutes 21 seconds",
+          "x": 620,
+          "y": 2546,
+          "cls": "android.widget.SeekBar",
+          "resource_id": ""
+        },
+        {
+          "text": "Home",
+          "x": 124,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 372,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Create",
+          "x": 620,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscriptions: New content is available",
+          "x": 868,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "You",
+          "x": 1116,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -83359,7 +83546,7 @@
     "5731aaff4c94|opt4_launch:whatsapp": "397d0027180a",
     "6dcc835738aa|tap:You": "13dcb6504714",
     "13dcb6504714|tap:Communities": "615edd0c907f",
-    "5731aaff4c94|opt4_launch:youtube": "a2a7a2e70c76",
+    "5731aaff4c94|opt4_launch:youtube": "4811387dbea0",
     "b94fe430b394|tap:You": "caf601112185",
     "caf601112185|tap:JensJulius Tejlgaard has new content": "6dd8030404cd",
     "6dd8030404cd|tap:Edit suggestion mrbeast": "571ebe27696a",

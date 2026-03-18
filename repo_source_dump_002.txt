@@ -72513,7 +72513,7 @@
         "Edit suggestion warriyo mortals edit",
         "Edit suggestion warriyo mortals edit"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {
@@ -83807,7 +83807,8 @@
     "397d0027180a|back": "b71e73538af0",
     "b71e73538af0|back": "eb822f47a422",
     "5731aaff4c94|swipe": "6f1ebc2312ae",
-    "4811387dbea0|tap:More": "0ef41110984b"
+    "4811387dbea0|tap:More": "0ef41110984b",
+    "0ef41110984b|type": "87fee6983a2f"
   }
 }
 

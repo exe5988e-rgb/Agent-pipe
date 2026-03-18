@@ -68695,6 +68695,265 @@
           "resource_id": ""
         }
       ]
+    },
+    "e593131cf7fc": {
+      "screen_id": "e593131cf7fc",
+      "package": "com.whatsapp",
+      "activity": "com.whatsapp/.home.ui.HomeActivity",
+      "name": "whatsapp_homeactivity",
+      "labels": [
+        "\u092c\u0939\u0930\u0940\u0928 \u092e\u0947\u0902 \u091c\u0902\u0917 \u0915\u0947 \u092c\u0940\u091a \u092b\u0902\u0938\u0947 \u092d\u093e\u0930\u0924\u0940\u092f \u092a\u0930\u093f\u0935\u093e\u0930 \u0915\u0940 \u0926\u0930\u094d\u0926\u0928\u093e\u0915 \u0915\u0939\u093e\u0928\u0940 \u0938\u093e\u092e\u0928\u0947 \u0906\u0908 \u0939\u0948\u0964 \u0936\u093e\u0939\u091c\u0939\u093e\u0902\u092a\u0941\u0930 \u0915\u0940 \u092e\u0949\u0921\u0932 Priyanka Pathak \u0928\u0947 \u092c\u0924\u093e\u092f\u093e \u0915\u093f \u0915\u0948\u0938\u0947 \u0909\u0928\u094d\u0939\u094b\u0902\u0928\u0947 15 \u0926\u093f\u0928 \u0924\u0915 \u092e\u094c\u0924 \u0915\u0947 \u0938\u093e",
+        "Search",
+        "More options",
+        "Dr Masood Alam Vet, 4 unread statuses",
+        "My status, tap to add new status",
+        "Shivang Gupta, 1 unread status",
+        "Dr Masood Alam Vet, 4 unread statuses",
+        "Mishra nursery, 1 unread status",
+        "Hidden",
+        "element_10",
+        "element_11",
+        "element_12",
+        "You",
+        "EXPLORE",
+        "\u092c\u0939\u0930\u0940\u0928 \u092e\u0947\u0902 \u091c\u0902\u0917 \u0915\u0947 \u092c\u0940\u091a \u092b\u0902\u0938\u0947 \u092d\u093e\u0930\u0924\u0940\u092f \u092a\u0930\u093f\u0935\u093e\u0930 \u0915\u0940 \u0926\u0930\u094d\u0926\u0928\u093e\u0915 \u0915\u0939\u093e\u0928\u0940 \u0938\u093e\u092e\u0928\u0947 \u0906\u0908 \u0939\u0948\u0964 \u0936\u093e\u0939\u091c\u0939\u093e\u0902\u092a\u0941\u0930 \u0915\u0940 \u092e\u0949\u0921\u0932 Priyanka Pathak \u0928\u0947 \u092c\u0924\u093e\u092f\u093e \u0915\u093f \u0915\u0948\u0938\u0947 \u0909\u0928\u094d\u0939\u094b\u0902\u0928\u0947 15 \u0926\u093f\u0928 \u0924\u0915 \u092e\u094c\u0924 \u0915\u0947 \u0938\u093e",
+        "News18 India",
+        "\u0926\u093f\u0932\u094d\u0932\u0940, UP \u0938\u0939\u093f\u0924 21 \u0930\u093e\u091c\u094d\u092f\u094b\u0902 \u092e\u0947\u0902 \u092c\u093e\u0930\u093f\u2026",
+        "News24 Bihar Jharkhand",
+        "Favourite \ud83d\ude0b",
+        "Cravings",
+        "New text status",
+        "\u0924\u0902\u0924\u094d\u0930-\u092e\u0902\u0924\u094d\u0930 \u0915\u0947 \u091a\u0915\u094d\u0915\u0930 \u092e\u0947\u0902 \u0916\u0941\u0926 \u0915\u093e \u0917\u0932\u093e \u0915\u093e\u091f\u093e: \u092c\u093f\u0932\u093e\u0938\u092a\u0941\u0930 \u092e\u0947\u0902 \u091a\u093e\u0915\u0942 \u0916\u0930\u0940\u0926\u0915\u0930 \u0932\u093e\u092f\u093e, \u092c\u0940\u095c\u0940 \u092a\u0940\u0915\u0930 \u092a\u0942\u091c\u093e-\u0930\u0942\u092e \u092e\u0947\u0902 \u0917\u092f\u093e, \u092c\u0939\u0942 \u0928\u0947 \u0926\u0947\u0916\u0940 \u0932\u0939\u0942\u0932\u0941\u0939\u093e\u0928 \u0932\u093e\u0936   \u092a\u0922\u093c\u0947\u0902 \u092a\u0942\u0930\u0940 \u0916\u092c\u0930- https:",
+        "News - Dainik Bhaskar Hindi - India, Rajasthan, Madhya Pradesh, MP, CG, UP, Bihar, Delhi",
+        "New status update",
+        "Couple Burger and King went\u2026",
+        "No One Cares",
+        "Chats, 2 new notifications",
+        "Updates",
+        "Communities",
+        "Calls"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "\u092c\u0939\u0930\u0940\u0928 \u092e\u0947\u0902 \u091c\u0902\u0917 \u0915\u0947 \u092c\u0940\u091a \u092b\u0902\u0938\u0947 \u092d\u093e\u0930\u0924\u0940\u092f \u092a\u0930\u093f\u0935\u093e\u0930 \u0915\u0940 \u0926\u0930\u094d\u0926\u0928\u093e\u0915 \u0915\u0939\u093e\u0928\u0940 \u0938\u093e\u092e\u0928\u0947 \u0906\u0908 \u0939\u0948\u0964 \u0936\u093e\u0939\u091c\u0939\u093e\u0902\u092a\u0941\u0930 \u0915\u0940 \u092e\u0949\u0921\u0932 Priyanka Pathak \u0928\u0947 \u092c\u0924\u093e\u092f\u093e \u0915\u093f \u0915\u0948\u0938\u0947 \u0909\u0928\u094d\u0939\u094b\u0902\u0928\u0947 15 \u0926\u093f\u0928 \u0924\u0915 \u092e\u094c\u0924 \u0915\u0947 \u0938\u093e",
+          "x": 620,
+          "y": 1286,
+          "cls": "androidx.viewpager.widget.ViewPager",
+          "resource_id": "com.whatsapp:id/pager"
+        },
+        {
+          "text": "Search",
+          "x": 1016,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/menuitem_search"
+        },
+        {
+          "text": "More options",
+          "x": 1170,
+          "y": 237,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/menuitem_overflow"
+        },
+        {
+          "text": "Dr Masood Alam Vet, 4 unread statuses",
+          "x": 620,
+          "y": 752,
+          "cls": "androidx.recyclerview.widget.RecyclerView",
+          "resource_id": "com.whatsapp:id/status_list"
+        },
+        {
+          "text": "My status, tap to add new status",
+          "x": 186,
+          "y": 752,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/status_tile_layout"
+        },
+        {
+          "text": "Shivang Gupta, 1 unread status",
+          "x": 468,
+          "y": 752,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/status_tile_layout"
+        },
+        {
+          "text": "Dr Masood Alam Vet, 4 unread statuses",
+          "x": 750,
+          "y": 752,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/status_tile_layout"
+        },
+        {
+          "text": "Mishra nursery, 1 unread status",
+          "x": 1032,
+          "y": 752,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/status_tile_layout"
+        },
+        {
+          "text": "Hidden",
+          "x": 1212,
+          "y": 752,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.whatsapp:id/buttons_layout"
+        },
+        {
+          "text": "element_10",
+          "x": 432,
+          "y": 613,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/wds_profile_picture"
+        },
+        {
+          "text": "element_11",
+          "x": 714,
+          "y": 613,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/wds_profile_picture"
+        },
+        {
+          "text": "element_12",
+          "x": 996,
+          "y": 613,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/wds_profile_picture"
+        },
+        {
+          "text": "You",
+          "x": 193,
+          "y": 683,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/wds_profile_picture"
+        },
+        {
+          "text": "EXPLORE",
+          "x": 1042,
+          "y": 1110,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/addon_button"
+        },
+        {
+          "text": "\u092c\u0939\u0930\u0940\u0928 \u092e\u0947\u0902 \u091c\u0902\u0917 \u0915\u0947 \u092c\u0940\u091a \u092b\u0902\u0938\u0947 \u092d\u093e\u0930\u0924\u0940\u092f \u092a\u0930\u093f\u0935\u093e\u0930 \u0915\u0940 \u0926\u0930\u094d\u0926\u0928\u093e\u0915 \u0915\u0939\u093e\u0928\u0940 \u0938\u093e\u092e\u0928\u0947 \u0906\u0908 \u0939\u0948\u0964 \u0936\u093e\u0939\u091c\u0939\u093e\u0902\u092a\u0941\u0930 \u0915\u0940 \u092e\u0949\u0921\u0932 Priyanka Pathak \u0928\u0947 \u092c\u0924\u093e\u092f\u093e \u0915\u093f \u0915\u0948\u0938\u0947 \u0909\u0928\u094d\u0939\u094b\u0902\u0928\u0947 15 \u0926\u093f\u0928 \u0924\u0915 \u092e\u094c\u0924 \u0915\u0947 \u0938\u093e",
+          "x": 620,
+          "y": 1327,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "News18 India",
+          "x": 140,
+          "y": 1327,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/contact_photo"
+        },
+        {
+          "text": "\u0926\u093f\u0932\u094d\u0932\u0940, UP \u0938\u0939\u093f\u0924 21 \u0930\u093e\u091c\u094d\u092f\u094b\u0902 \u092e\u0947\u0902 \u092c\u093e\u0930\u093f\u2026",
+          "x": 620,
+          "y": 1593,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "News24 Bihar Jharkhand",
+          "x": 140,
+          "y": 1593,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/contact_photo"
+        },
+        {
+          "text": "Favourite \ud83d\ude0b",
+          "x": 620,
+          "y": 1859,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "Cravings",
+          "x": 140,
+          "y": 1859,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/contact_photo"
+        },
+        {
+          "text": "New text status",
+          "x": 1082,
+          "y": 2042,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/extended_mini_fab"
+        },
+        {
+          "text": "\u0924\u0902\u0924\u094d\u0930-\u092e\u0902\u0924\u094d\u0930 \u0915\u0947 \u091a\u0915\u094d\u0915\u0930 \u092e\u0947\u0902 \u0916\u0941\u0926 \u0915\u093e \u0917\u0932\u093e \u0915\u093e\u091f\u093e: \u092c\u093f\u0932\u093e\u0938\u092a\u0941\u0930 \u092e\u0947\u0902 \u091a\u093e\u0915\u0942 \u0916\u0930\u0940\u0926\u0915\u0930 \u0932\u093e\u092f\u093e, \u092c\u0940\u095c\u0940 \u092a\u0940\u0915\u0930 \u092a\u0942\u091c\u093e-\u0930\u0942\u092e \u092e\u0947\u0902 \u0917\u092f\u093e, \u092c\u0939\u0942 \u0928\u0947 \u0926\u0947\u0916\u0940 \u0932\u0939\u0942\u0932\u0941\u0939\u093e\u0928 \u0932\u093e\u0936   \u092a\u0922\u093c\u0947\u0902 \u092a\u0942\u0930\u0940 \u0916\u092c\u0930- https:",
+          "x": 620,
+          "y": 2125,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "News - Dainik Bhaskar Hindi - India, Rajasthan, Madhya Pradesh, MP, CG, UP, Bihar, Delhi",
+          "x": 140,
+          "y": 2125,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/contact_photo"
+        },
+        {
+          "text": "New status update",
+          "x": 1086,
+          "y": 2280,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/fab"
+        },
+        {
+          "text": "Couple Burger and King went\u2026",
+          "x": 620,
+          "y": 2346,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "No One Cares",
+          "x": 140,
+          "y": 2367,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/contact_photo"
+        },
+        {
+          "text": "Chats, 2 new notifications",
+          "x": 124,
+          "y": 2576,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Updates",
+          "x": 372,
+          "y": 2576,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Communities",
+          "x": 620,
+          "y": 2576,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Calls",
+          "x": 868,
+          "y": 2576,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "You",
+          "x": 1116,
+          "y": 2576,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -69282,7 +69541,8 @@
     "f3100103b174|tap:element_7": "5e14b687adda",
     "22cbdc77930c|opt4_launch:contacts": "5731aaff4c94",
     "5731aaff4c94|opt4_launch:whatsapp": "13dcb6504714",
-    "6dcc835738aa|tap:You": "47d448eaba6d"
+    "6dcc835738aa|tap:You": "47d448eaba6d",
+    "13dcb6504714|tap:Communities": "e593131cf7fc"
   }
 }
 

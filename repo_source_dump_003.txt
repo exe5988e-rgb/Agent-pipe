@@ -4645,6 +4645,11 @@ if __name__ == "__main__":
     "to": "b71e73538af0",
     "count": 1,
     "last_seen": 1773850212.1573458
+  },
+  "b71e73538af0|back": {
+    "to": "eb822f47a422",
+    "count": 1,
+    "last_seen": 1773850217.568266
   }
 }
 
@@ -11528,6 +11533,150 @@ RuntimeError: No LLM backend available.
     battery              1 screens
   TransitionMemory: 614 transitions (282 confirmed, threshold=2)
 
+########################################################
+  JARVIS  |  Send a WhatsApp message to Sadique faridi saying Hello brother
+  Device : 192.168.29.48:33117
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 548 screens (0 tainted), 664 transitions
+    whatsapp             184 screens
+    chrome               112 screens
+    youtube              104 screens
+    vending              46 screens
+    termux               26 screens
+    settings             25 screens
+    launcher             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+    notificationmanager  1 screens
+    battery              1 screens
+  TransitionMemory: 614 transitions (282 confirmed, threshold=2)
+[init] task_apps: ['whatsapp']
+[init] max_skill_steps: 20 (threshold: 12)
+
+========================================================
+  STEP 1  |  Send a WhatsApp message to Sadique faridi saying Hello brother
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3308923 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Mostly cloudy'
+[ui_parser] OCR: (841,1475)-(1009,1671) → 'lt'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.launcher/.Launcher hash=4dbae0a90025 elements=26
+[step] UI: ['Clock', '21', ':', '39', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (5731aaff)
+[OPT4v2] launcher -> launching whatsapp (com.whatsapp)
+[llm] OPT4v2 am start: com.whatsapp
+
+========================================================
+  STEP 2  |  Send a WhatsApp message to Sadique faridi saying Hello brother
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1643800 bytes)
+[ui_parser] activity=com.whatsapp/.Conversation
+[ui_parser] signal='com.whatsapp/.Conversation'
+[mem] miss (unknown): com.whatsapp/.Conversation
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (336,139) → 'Ayush Kr(Personal)'
+[ui_parser] child: (0,335) → 'Hn zyada kuch nai gaali denge'
+[ui_parser] full parse -- 13 elements (12 labeled, 2 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.whatsapp/.Conversation hash=8c55319daa5b elements=13
+[step] UI: ['Ayush Kr(Personal)', 'Back', 'element_3', 'Video call', 'Voice call', 'More options', 'Hn zyada kuch nai gaali denge', 'Emoji, GIFs and stickers']
+[map] new screen: whatsapp_conversation (397d0027180a)
+[tm] transition changed: 5731aaff4c94|opt4_launch:whatsapp 67d20aa8 -> 397d0027
+[map] transition: launcher_launcher --[opt4_launch:whatsapp]--> whatsapp_conversation
+[map] screen: whatsapp_conversation (397d0027)
+[policy] wrong_contact: not from picker for 'Sadique faridi' — going back
+[policy] matched — executing 1 actions
+[policy] action: {'action': 'back'}
+[input] dispatching: KeyEvent(BACK)
+[input] dispatching: KeyEvent(BACK)
+[input] adb -s 192.168.29.48:33117 shell input keyevent 4
+[mem] invalidated com.whatsapp/.Conversation
+[policy] done — skipped Claude
+[step] step=2/15 done=False history=['opt4_launch:whatsapp', 'back']
+
+========================================================
+  STEP 3  |  Send a WhatsApp message to Sadique faridi saying Hello brother
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1033972 bytes)
+[ui_parser] activity=com.whatsapp/.Conversation
+[ui_parser] signal='com.whatsapp/.Conversation'
+[mem] miss (unknown): com.whatsapp/.Conversation
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (336,139) → 'Ayush Kr(Personal)'
+[ui_parser] child: (0,335) → 'Agent train ho rha oneplus aur dev b mae isliye random msg aye toh paglayio😂💩'
+[ui_parser] full parse -- 13 elements (12 labeled, 2 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.whatsapp/.Conversation hash=8b16d4b0eabe elements=13
+[step] UI: ['Ayush Kr(Personal)', 'Back', 'element_3', 'Video call', 'Voice call', 'More options', 'Agent train ho rha oneplus aur dev b mae isliye random msg aye toh paglayio😂💩', 'Emoji, GIFs and stickers']
+[map] transition: whatsapp_conversation --[back]--> whatsapp_conversation
+[map] screen: whatsapp_conversation (b71e7353)
+[policy] wrong_contact: not from picker for 'Sadique faridi' — going back
+[policy] matched — executing 1 actions
+[policy] action: {'action': 'back'}
+[input] dispatching: KeyEvent(BACK)
+[input] dispatching: KeyEvent(BACK)
+[input] adb -s 192.168.29.48:33117 shell input keyevent 4
+[policy] done — skipped Claude
+[step] step=3/15 done=False history=['opt4_launch:whatsapp', 'back', 'back']
+
+========================================================
+  STEP 4  |  Send a WhatsApp message to Sadique faridi saying Hello brother
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (411097 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,139) → 'FTS-01B(P1)_17-03-2026_Sol.pdf (26 pages)'
+[ui_parser] child: (0,937) → 'Door desgin ideas, group'
+[ui_parser] child: (0,951) → 'Door desgin ideas, group'
+[ui_parser] child: (0,1203) → 'Mummy Jio (You)'
+[ui_parser] child: (0,1217) → 'You'
+[ui_parser] child: (0,1469) → 'Good morning'
+[ui_parser] child: (0,1483) → 'Mummy'
+[ui_parser] child: (0,1735) → 'Papa'
+[ui_parser] child: (0,1749) → 'Papa'
+[ui_parser] child: (0,2001) → 'FTS-01B(P1)_17-03-2026_Sol.pdf (26 pages)'
+[ui_parser] child: (0,2015) → 'Yash Raj'
+[ui_parser] child: (0,2267) → 'Jio को चुनने के लिए आपका धन्यवाद! ❤️…'
+[ui_parser] child: (0,2281) → 'MyJio'
+[ui_parser] full parse -- 31 elements (31 labeled, 14 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.whatsapp/.home.ui.HomeActivity hash=a24bae3aa0c2 elements=31
+[step] UI: ['FTS-01B(P1)_17-03-2026_Sol.pdf (26 pages)', 'Scan to Pay', 'More options', 'Ask Meta AI or Search', 'Swipe down to reveal additional actions', 'Inbox filters, Radio Group', 'All filter, , selected', 'Unread filter, 2, unselected']
+[map] transition: whatsapp_conversation --[back]--> whatsapp_homeactivity
+[map] screen: whatsapp_homeactivity (eb822f47)
+[policy] search_contact: tapping New chat [24]
+[policy] matched — executing 1 actions
+[policy] action: {'action': 'tap', 'target': 24}
+[input] dispatching: TouchEvent(x=1086, y=2280)
+[input] dispatching: TouchEvent(x=1086, y=2280)
+[input] adb -s 192.168.29.48:33117 shell input tap 1086 2280
+[policy] done — skipped Claude
+[step] step=4/15 done=False history=['opt4_launch:whatsapp', 'back', 'back', 'tap [24] New chat']
+
+========================================================
+  STEP 5  |  Send a WhatsApp message to Sadique faridi saying Hello brother
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (313338 bytes)
+[ui_parser] activity=com.whatsapp/.contact.ui.picker.ContactPicker
 
 //===== TERMUXFILE: --task =====
 
@@ -11536,339 +11685,5 @@ RuntimeError: No LLM backend available.
 
 
 //===== TERMUXFILE: --max-steps =====
-
-
-//===== TERMUXFILE: scripts/build_runner.sh =====
-#!/data/data/com.termux/files/usr/bin/bash
-#
-# build_runner.sh — Autonomous-safe version
-#
-# Build status contract:
-#   /sdcard/ai-automation/build_status.txt    → "SUCCESS" or "FAILURE"
-#   /sdcard/ai-automation/build_complete.flag → touched last, always
-#
-# Android reads build_status.txt for result. Folder existence never used.
-
-set -euo pipefail
-
-REPO_DIR="/data/data/com.termux/files/home/jarvis"
-BASE_DIR="/sdcard/ai-automation"
-AI_OUTPUT="$BASE_DIR/ai-output.txt"
-DOWNLOAD_DIR="/sdcard/Download"
-COMPLETE_FLAG="$BASE_DIR/build_complete.flag"
-ASSEMBLED_FLAG="$BASE_DIR/downloads_assembled.flag"
-SNAPSHOT_FILE="$BASE_DIR/download_snapshot.txt"
-STATUS_FILE="$BASE_DIR/build_status.txt"
-LOG_DIR="$BASE_DIR/logs"
-ERROR_LOG_DIR="$BASE_DIR/build_error_logs"
-
-mkdir -p "$LOG_DIR"
-exec >> "$LOG_DIR/build_runner.log" 2>&1
-
-echo ""
-echo "=== build_runner.sh START $(date) args=${*:-none} ==="
-
-# ─────────────────────────────────────────────────────────────
-# MODE: snapshot
-# ─────────────────────────────────────────────────────────────
-if [[ "${1:-}" == "--snapshot" ]]; then
-    echo "[snapshot] Recording existing files"
-    rm -f "$SNAPSHOT_FILE"
-    find "$DOWNLOAD_DIR" -maxdepth 1 -type f -exec basename {} \; \
-        > "$SNAPSHOT_FILE" 2>/dev/null || true
-    echo "[snapshot] Done"
-    exit 0
-fi
-
-# ─────────────────────────────────────────────────────────────
-# MODE: assemble downloaded files
-# ─────────────────────────────────────────────────────────────
-if [[ "${1:-}" == "--assemble-downloads" ]]; then
-    echo "[assemble] Starting"
-
-    declare -A BEFORE
-    if [[ -f "$SNAPSHOT_FILE" ]]; then
-        while IFS= read -r name; do
-            BEFORE["$name"]=1
-        done < "$SNAPSHOT_FILE"
-    fi
-
-    CODE_EXTS="kt java py txt xml json gradle kts sh cpp c h ts js md"
-    NEW_FILES=()
-    DEADLINE=$(( $(date +%s) + 30 ))
-
-    while (( $(date +%s) < DEADLINE )); do
-        while IFS= read -r -d '' f; do
-            NAME=$(basename "$f")
-            EXT="${NAME##*.}"
-            if [[ -z "${BEFORE[$NAME]+_}" ]] && \
-               [[ -s "$f" ]] && \
-               echo "$CODE_EXTS" | grep -qw "$EXT"; then
-                NEW_FILES+=("$f")
-            fi
-        done < <(find "$DOWNLOAD_DIR" -maxdepth 1 -type f -print0 2>/dev/null)
-        [[ ${#NEW_FILES[@]} -gt 0 ]] && break
-        sleep 1
-    done
-
-    if [[ ${#NEW_FILES[@]} -eq 0 ]]; then
-        echo "[assemble] ERROR: No new files"
-        exit 1
-    fi
-
-    > "$AI_OUTPUT"
-    for f in "${NEW_FILES[@]}"; do
-        NAME=$(basename "$f")
-        printf '//===== FILE: %s =====\n' "$NAME" >> "$AI_OUTPUT"
-        cat "$f" >> "$AI_OUTPUT"
-        printf '\n\n' >> "$AI_OUTPUT"
-    done
-
-    touch "$ASSEMBLED_FLAG"
-    rm -f "$SNAPSHOT_FILE"
-    echo "[assemble] DONE"
-    exit 0
-fi
-
-# ─────────────────────────────────────────────────────────────
-# MODE: normal build
-# ─────────────────────────────────────────────────────────────
-
-# Stale state cleanup — always before a new build
-echo "[cleanup] Removing stale flags and error logs"
-rm -f "$COMPLETE_FLAG"
-rm -f "$STATUS_FILE"
-rm -rf "$ERROR_LOG_DIR"
-mkdir -p "$ERROR_LOG_DIR"
-
-echo "[normal] Starting build mode"
-cd "$REPO_DIR"
-
-# Clean old error logs from repo before reset to prevent re-detection
-echo "[cleanup] Removing old build_error_logs from repo"
-rm -rf "$REPO_DIR/build_error_logs"
-
-echo "[sync] Force syncing with origin/main"
-git fetch origin main
-git reset --hard origin/main
-echo "[sync] Repo synced"
-
-echo "[copy] Updating ai-output.txt"
-cp "$AI_OUTPUT" "$REPO_DIR/ai-output.txt"
-
-git config user.name  "AutoBuild Bot"
-git config user.email "bot@autobuild.local"
-
-git add ai-output.txt
-git commit -m "AutoBuild: update ai-output.txt" || echo "[skip] Nothing to commit"
-git push origin main || echo "[warn] git push failed"
-
-echo "[wait] Waiting 20s for workflows to queue..."
-sleep 20
-
-# ─────────────────────────────────────────────────────────────
-# Watch APK workflow
-# ─────────────────────────────────────────────────────────────
-APK_WORKFLOW_NAME="Build APK"
-CONCLUSION=""
-
-echo "[watch] Looking for APK workflow run..."
-APK_RUN_ID=$(gh run list \
-    --workflow="$APK_WORKFLOW_NAME" \
-    --limit=1 \
-    --json databaseId \
-    -q '.[0].databaseId' 2>/dev/null || true)
-
-if [[ -z "${APK_RUN_ID:-}" ]]; then
-    echo "[warn] No APK workflow run found — writing FAILURE"
-    echo "FAILURE" > "$STATUS_FILE"
-    touch "$COMPLETE_FLAG"
-    echo "=== build_runner.sh DONE (no run found) $(date) ==="
-    exit 0
-fi
-
-echo "[watch] Watching run $APK_RUN_ID..."
-gh run watch "$APK_RUN_ID" --exit-status || true
-
-# Deterministic result via gh run view
-echo "[status] Querying conclusion for run $APK_RUN_ID..."
-CONCLUSION=$(gh run view "$APK_RUN_ID" \
-    --json conclusion \
-    -q '.conclusion' 2>/dev/null || echo "unknown")
-echo "[status] Conclusion = $CONCLUSION"
-
-# Final sync to fetch any committed error logs
-echo "[sync] Final git pull"
-git fetch origin main
-git reset --hard origin/main
-
-# Write build_status.txt and handle logs
-if [[ "$CONCLUSION" == "success" ]]; then
-    echo "[result] BUILD SUCCESS"
-    echo "SUCCESS" > "$STATUS_FILE"
-    rm -rf "$ERROR_LOG_DIR"
-    mkdir -p "$ERROR_LOG_DIR"
-    echo "[result] Cleared error logs from shared storage"
-else
-    echo "[result] BUILD FAILURE (conclusion=$CONCLUSION)"
-    echo "FAILURE" > "$STATUS_FILE"
-
-    if [[ -d "$REPO_DIR/build_error_logs" ]] && \
-       [[ -f "$REPO_DIR/build_error_logs/error_summary.txt" ]]; then
-        rm -rf "$ERROR_LOG_DIR"
-        mkdir -p "$ERROR_LOG_DIR"
-        cp -f "$REPO_DIR/build_error_logs/"* "$ERROR_LOG_DIR/" 2>/dev/null || true
-        echo "[result] Error logs copied to $ERROR_LOG_DIR"
-    else
-        echo "[warn] FAILURE but no error_summary.txt found in repo"
-        mkdir -p "$ERROR_LOG_DIR"
-        echo "Build failed but no error_summary.txt was committed." \
-            > "$ERROR_LOG_DIR/error_summary.txt"
-        echo "(gh conclusion=$CONCLUSION, no log files found)" \
-            >> "$ERROR_LOG_DIR/error_summary.txt"
-    fi
-fi
-
-# Always touch build_complete.flag last
-echo "[final] Touching build_complete.flag"
-touch "$COMPLETE_FLAG" || true
-
-echo "=== build_runner.sh DONE (conclusion=$CONCLUSION) $(date) ==="
-
-
-//===== TERMUXFILE: workflows/Ai-codegen.yml =====
-name: AI Code Generator
-
-on:
-  workflow_dispatch:
-  push:
-    paths:
-      - ai-output.txt
-
-permissions:
-  contents: write
-
-jobs:
-  generate:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Set up Python (GitHub runner only)
-        if: ${{ !env.ACT }}
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Use system Python (Termux / act)
-        if: ${{ env.ACT }}
-        run: |
-          echo "Using Termux Python"
-          python --version
-
-      - name: Run AI Code Generator
-        run: |
-          python ai-code.py ~/storage/shared/Download/ai-output.txt
-
-      - name: Clean act cache (local only)
-        if: ${{ env.ACT }}
-        run: |
-          echo "Cleaning act cache..."
-          rm -rf ~/.cache/act || true
-
-
-//===== TERMUXFILE: workflows/jarvis_start.sh =====
-#!/data/data/com.termux/files/usr/bin/bash
-# ================================================================
-#  jarvis_start.sh  —  Minimal Phone A startup
-#  Only starts what is essential for the A→B agent loop:
-#    1. ADB connect Phone A + Phone B
-#    2. Verify Phone B Claude bridge is reachable
-#
-#  Phone A : 192.168.29.48:37891
-#  Phone B : 192.168.29.110:45999  (Claude brain)
-#
-#  Usage:
-#    bash ~/workflows/jarvis_start.sh
-#    bash ~/workflows/jarvis_start.sh --stop
-# ================================================================
-
-PHONE_A="192.168.29.48:37891"
-PHONE_B="192.168.29.110:45999"
-PHONE_B_BRIDGE="http://192.168.29.110:8890"
-
-GREEN="\033[0;32m"; YELLOW="\033[1;33m"; RED="\033[0;31m"; NC="\033[0m"
-log()  { echo -e "${GREEN}[jarvis]${NC} $*"; }
-warn() { echo -e "${YELLOW}[jarvis]${NC} $*"; }
-err()  { echo -e "${RED}[jarvis]${NC} $*"; }
-
-# ── Stop mode ────────────────────────────────────────────────────────────────
-if [ "$1" = "--stop" ]; then
-    log "Disconnecting ADB devices..."
-    adb disconnect "$PHONE_A" 2>/dev/null && log "  ✓ Phone A disconnected" || true
-    adb disconnect "$PHONE_B" 2>/dev/null && log "  ✓ Phone B disconnected" || true
-    log "Done."; exit 0
-fi
-
-echo ""
-echo "╔══════════════════════════════════════════════════════╗"
-echo "║   JARVIS START  —  Agent Loop (A → B)               ║"
-echo "╚══════════════════════════════════════════════════════╝"
-echo ""
-
-# ── 1. ADB connect ───────────────────────────────────────────────────────────
-log "Connecting ADB devices..."
-
-adb connect "$PHONE_A" 2>&1 | grep -q "connected" \
-    && log "  ✓ Phone A ($PHONE_A)" \
-    || warn "  ✗ Phone A failed — screencap will fail"
-
-adb connect "$PHONE_B" 2>&1 | grep -q "connected" \
-    && log "  ✓ Phone B ($PHONE_B)" \
-    || warn "  ✗ Phone B failed — bridge unreachable"
-
-# ── 2. Verify Phone B bridge ─────────────────────────────────────────────────
-log "Checking Phone B Claude bridge..."
-HEALTH=$(curl -sf --max-time 5 "$PHONE_B_BRIDGE/health")
-if [ $? -eq 0 ]; then
-    log "  ✓ Bridge online — Claude brain ACTIVE"
-    log "  $HEALTH"
-else
-    err "  ✗ Bridge offline!"
-    err "  On Phone B run: python3 ~/claude_bridge.py"
-    echo ""
-    exit 1
-fi
-
-# ── 3. Quick A→B smoke test ──────────────────────────────────────────────────
-log "Running A→B smoke test..."
-RESULT=$(curl -sf --max-time 30 -X POST "$PHONE_B_BRIDGE/chat" \
-    -H "Content-Type: application/json" \
-    -d '{"prompt": "Reply with only the word: ready"}')
-if echo "$RESULT" | grep -q '"success":true'; then
-    log "  ✓ A→B round-trip OK"
-    log "  Response: $RESULT"
-else
-    warn "  ✗ Smoke test failed or timed out"
-    warn "  Raw: $RESULT"
-fi
-
-# ── Summary ──────────────────────────────────────────────────────────────────
-echo ""
-echo "╔══════════════════════════════════════════════════════╗"
-echo "║   READY                                              ║"
-echo "╚══════════════════════════════════════════════════════╝"
-echo ""
-log "Phone A (agent)  : $PHONE_A"
-log "Phone B (brain)  : $PHONE_B_BRIDGE"
-echo ""
-log "Run agent:"
-log "  cd ~/workflows"
-log "  python3 test/jarvis-agent/agent/controller.py --task 'Open WhatsApp' --device '$PHONE_A'"
-echo ""
 
 

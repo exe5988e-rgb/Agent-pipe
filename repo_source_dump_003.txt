@@ -7901,7 +7901,8 @@ nohup: ignoring input
 [ui_parser] child: (0,825) → 'THE MOST DANGEROUS VOLCANOES ARE THE SMALLEST –  –  – BRIGHT SIDE - 46 watching - Live – play video'
 [ui_parser] child: (0,825) → 'Lakshya Batch Update!!🚨 @PhysicsWallah  #pw #neet #physicswallah, 108 thousand views – play Short'
 [ui_parser] child: (0,1035) → 'Lakshya Batch Update!!🚨 @PhysicsWallah  #pw #neet #physicswallah, 108 thousand views – play Short'
-[ui_parser] full parse -- 35 elements (35 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117
+[ui_parser] full parse -- 35 elements (35 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117[parser] DEBUG normalized: 'Still working on it...'
+
 
 //===== TERMUXFILE: --task =====
 

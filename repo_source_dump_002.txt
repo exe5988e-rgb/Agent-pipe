@@ -67217,7 +67217,7 @@
         "Communities",
         "Calls"
       ],
-      "visits": 4,
+      "visits": 5,
       "tainted": false,
       "elements": [
         {
@@ -78467,7 +78467,8 @@
     "1025dd6b857e|opt4_launch:settings": "f6f258ae70ad",
     "f6f258ae70ad|tap:On": "2c1be995ec82",
     "1025dd6b857e|opt4_launch:chrome": "99751df5ec71",
-    "1025dd6b857e|opt4_launch:play store": "73181ac31bda"
+    "1025dd6b857e|opt4_launch:play store": "73181ac31bda",
+    "615edd0c907f|tap:Updates": "6dcc835738aa"
   }
 }
 

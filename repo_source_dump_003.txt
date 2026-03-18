@@ -3600,6 +3600,11 @@ if __name__ == "__main__":
     "to": "4098d83e5b9a",
     "count": 1,
     "last_seen": 1773794382.9628642
+  },
+  "4098d83e5b9a|swipe": {
+    "to": "36e8ae87b6fc",
+    "count": 1,
+    "last_seen": 1773794415.6299963
   }
 }
 

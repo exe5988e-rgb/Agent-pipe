@@ -48643,7 +48643,7 @@
         "\u201cThank you caramel for tasty food .... Service is so great, staff are very...\u201d \u201cExcellent food and service\u201d",
         "Perfect for date nights, family dinners, or simply treating yourself. A fresh take on global flavors\u2014our menu is inventive, playful, and full of surprises. Where great food meets laughter, love, and unforgettable memories. Not just a meal, but an experience designed to relax and inspire Refreshing drinks and creative cocktails that bring tropical vibes to your table. Bright, cozy, and stylish\u2014perfect for a laid-back meal or a lively evening with friends. Step into a tropical-inspired escape with chic art deco seating and lush vibes that make every visit unforgettable. Not just a meal, but an experience designed to relax and inspire. From colorful platters to indulgent bites, every dish is crafted to delight your taste buds. Refreshing drinks and creative cocktails that bring tropical vibes to your table"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {

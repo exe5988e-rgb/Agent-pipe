@@ -70421,7 +70421,7 @@
         "Show Reading mode",
         "Add to home screen"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {
@@ -80517,7 +80517,8 @@
     "2c1be995ec82|swipe": "049a76f6a15c",
     "049a76f6a15c|tap:14": "228335378cda",
     "cabb12a803f3|type": "bf144b1262a3",
-    "bf144b1262a3|tap:Switch to this tab.": "24491ecc0614"
+    "bf144b1262a3|tap:Switch to this tab.": "24491ecc0614",
+    "24491ecc0614|tap:Dragon Ball Is Rolling Out Its Next Big Update as the Series Celebrates Another Milestone IGN India 23h": "5b8b2957dadb"
   }
 }
 

@@ -10448,6 +10448,8 @@ RuntimeError: No LLM backend available.
     notificationmanager  1 screens
     battery              1 screens
   TransitionMemory: 604 transitions (281 confirmed, threshold=2)
+[parser] DEBUG normalized: 'tap 1'
+[parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
 
 
 //===== TERMUXFILE: --task =====

@@ -68215,7 +68215,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 33,
+      "visits": 34,
       "tainted": false,
       "elements": [
         {
@@ -72014,7 +72014,7 @@
         "Search",
         "Books"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {
@@ -73492,7 +73492,7 @@
     "5b8b2957dadb|tap:New Incognito tab": "7c92bc2f95a3",
     "7c92bc2f95a3|tap:Start voice search": "91b98e24a7db",
     "91b98e24a7db|tap:Refine: weather today": "99751df5ec71",
-    "5731aaff4c94|opt4_launch:play store": "c3c160d6730f",
+    "5731aaff4c94|opt4_launch:play store": "815905513523",
     "c3c160d6730f|tap:Books": "e921768c497c",
     "e921768c497c|tap:Voice search": "fc4050d517f1",
     "fc4050d517f1|type": "2a3055394a68",

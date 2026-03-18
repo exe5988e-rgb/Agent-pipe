@@ -80077,7 +80077,7 @@
         "More options for Weather",
         "Wed, Partly cloudy, High of 36, Low of 21, Selected"
       ],
-      "visits": 5,
+      "visits": 6,
       "tainted": false,
       "elements": [
         {

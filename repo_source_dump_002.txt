@@ -53834,7 +53834,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 19,
+      "visits": 20,
       "tainted": false,
       "elements": [
         {
@@ -67438,6 +67438,65 @@
           "resource_id": ""
         }
       ]
+    },
+    "ccab2504780d": {
+      "screen_id": "ccab2504780d",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "element_1",
+        "Shorts",
+        "Create",
+        "Subscriptions: New content is available",
+        "You"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 620,
+          "y": 1139,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/reel_recycler"
+        },
+        {
+          "text": "Home",
+          "x": 124,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 372,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Create",
+          "x": 620,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscriptions: New content is available",
+          "x": 868,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "You",
+          "x": 1116,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -67934,7 +67993,7 @@
     "9630709f3ce0|back": "ba1a981b7b83",
     "ba1a981b7b83|back": "7c51d7e864c3",
     "9630709f3ce0|type": "0b8ebca132ad",
-    "17d655c4f84a|opt4_launch:youtube": "4148e6457ea1",
+    "17d655c4f84a|opt4_launch:youtube": "ccab2504780d",
     "1ef49de82872|retry": "df6c4a48f8d7",
     "df6c4a48f8d7|retry": "f4fc72db7542",
     "f4fc72db7542|retry": "1d9e3ca5035d",

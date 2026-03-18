@@ -8531,4 +8531,169 @@ Traceback (most recent call last):
     raise RuntimeError(f"screencap failed: {r.stderr.decode().strip()}")
 RuntimeError: screencap failed: error: device offline
 
+########################################################
+  JARVIS  |  Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy
+  Device : 192.168.29.48:33117
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 589 screens (0 tainted), 706 transitions
+    whatsapp             190 screens
+    youtube              137 screens
+    chrome               114 screens
+    vending              46 screens
+    termux               26 screens
+    settings             25 screens
+    launcher             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+    notificationmanager  1 screens
+    battery              1 screens
+  TransitionMemory: 656 transitions (287 confirmed, threshold=2)
+[init] task_apps: ['settings', 'whatsapp']
+[init] max_skill_steps: 20 (threshold: 12)
+
+========================================================
+  STEP 1  |  Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3305389 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Mostly cloudy'
+[ui_parser] OCR: (841,1475)-(1009,1671) → 'lt'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.launcher/.Launcher hash=9b1f403bc374 elements=26
+[step] UI: ['Clock', '22', ':', '15', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (5731aaff)
+[OPT4v2] launcher -> launching settings (com.android.settings)
+[llm] OPT4v2 am start: com.android.settings
+
+========================================================
+  STEP 2  |  Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (154935 bytes)
+[ui_parser] activity=com.oplus.wirelesssettings/com.android.settings.SettingsActivity
+[ui_parser] signal='com.oplus.wirelesssettings/com.android.settings.SettingsActivity'
+[mem] miss (unknown): com.oplus.wirelesssettings/com.android.settings.SettingsActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,139) → 'Available networks'
+[ui_parser] child: (0,363) → 'Wi-Fi'
+[ui_parser] child: (0,538) → 'Wi-Fi Assistant'
+[ui_parser] child: (0,882) → 'Wi-Fi details'
+[ui_parser] child: (0,1269) → 'JioFiber-bfeMq'
+[ui_parser] child: (0,1480) → 'JioFiber-bfeMq_5G'
+[ui_parser] child: (0,1684) → 'Wi-Fi details'
+[ui_parser] child: (0,1888) → 'Add network'
+[ui_parser] full parse -- 16 elements (16 labeled, 8 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.oplus.wirelesssettings/com.android.settings.SettingsActivity hash=5fb1b241a11e elements=16
+[step] UI: ['Available networks', 'Navigate up', 'Scan', 'More options', 'Wi-Fi', 'Wi-Fi Assistant', 'Wi-Fi details', 'Wi-Fi details']
+[tm] transition changed: 5731aaff4c94|opt4_launch:settings edd4f565 -> bcfd9287
+[map] transition: launcher_launcher --[opt4_launch:settings]--> wirelesssettings_settingsactivity
+[map] screen: wirelesssettings_settingsactivity (bcfd9287)
+[skill] matched: 'open settings and go'  score=1.00  act=True
+[skill] cannot resolve: 'JioFiber-ia1'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 5'
+[step] LLM: 'tap 5'
+[step] action: {'action': 'tap', 'target': 5}
+[input] dispatching: TouchEvent(x=620, y=450)
+[input] dispatching: TouchEvent(x=620, y=450)
+[input] adb -s 192.168.29.48:33117 shell input tap 620 450
+[step] step=2/30 done=False history=['opt4_launch:settings', 'tap [5] Wi-Fi']
+
+========================================================
+  STEP 3  |  Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy
+========================================================
+[controller] step error: screencap failed: error: device offline
+
+========================================================
+  STEP 4  |  Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy
+========================================================
+[controller] step error: screencap failed: error: device offline
+
+========================================================
+  STEP 5  |  Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy
+========================================================
+[controller] step error: screencap failed: error: device offline
+
+========================================================
+  STEP 6  |  Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy
+========================================================
+[controller] step error: screencap failed: error: device offline
+
+========================================================
+  STEP 7  |  Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy
+========================================================
+[controller] step error: screencap failed: error: device offline
+
+========================================================
+  STEP 8  |  Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy
+========================================================
+[controller] step error: screencap failed: error: device offline
+
+========================================================
+  STEP 9  |  Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy
+========================================================
+[controller] step error: screencap failed: error: device offline
+
+========================================================
+  STEP 10  |  Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy
+========================================================
+[controller] step error: screencap failed: error: device offline
+
+========================================================
+  STEP 11  |  Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy
+========================================================
+[controller] step error: screencap failed: error: device offline
+
+========================================================
+  STEP 12  |  Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy
+========================================================
+[controller] step error: screencap failed: error: device offline
+
+========================================================
+  STEP 13  |  Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy
+========================================================
+[controller] step error: screencap failed: error: device offline
+
+========================================================
+  STEP 14  |  Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy
+========================================================
+[controller] step error: screencap failed: error: device offline
+
+========================================================
+  STEP 15  |  Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy
+========================================================
+[controller] step error: screencap failed: error: device offlineTraceback (most recent call last):
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 271, in run
+    run_step(state, device=device, model_path=model_path,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             max_skill_steps=max_skill_steps)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 124, in run_step
+    img = capture_screen(adb_device=device)
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/perception/screen_capture.py", line 15, in capture_screen
+    return _cache[adb_device].take_screenshot(filename=filename)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/executor/device.py", line 119, in take_screenshot
+    raise RuntimeError(f"screencap failed: {r.stderr.decode().strip()}")
+RuntimeError: screencap failed: error: device offline
+
 

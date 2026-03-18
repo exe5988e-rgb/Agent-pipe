@@ -3535,6 +3535,11 @@ if __name__ == "__main__":
     "to": "6e151b55eab4",
     "count": 1,
     "last_seen": 1773793590.4539397
+  },
+  "6e151b55eab4|tap:Establishment type": {
+    "to": "78311c064f1a",
+    "count": 1,
+    "last_seen": 1773793622.94724
   }
 }
 

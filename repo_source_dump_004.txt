@@ -6166,6 +6166,8 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
 [ui_parser] child: (0,307) → 'Edit suggestion warriyo mortals'
 [ui_parser] child: (0,307) → 'Edit suggestion mortals funk remix'[parser] DEBUG normalized: 'type lofi hip hop'
 [parser] INFO parsed 'type lofi hip hop' -> {'action': 'type', 'text': 'lofi hip hop'}
+[parser] DEBUG normalized: 'tap 4'
+[parser] INFO parsed 'tap 4' -> {'action': 'tap', 'target': 4}
 
 
 //===== TERMUXFILE: --task =====

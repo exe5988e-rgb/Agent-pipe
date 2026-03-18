@@ -6981,6 +6981,8 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
   TransitionMemory: 635 transitions (286 confirmed, threshold=2)
 [parser] DEBUG normalized: 'home'
 [parser] INFO parsed 'home' -> {'action': 'home'}
+[parser] DEBUG normalized: 'tap 2'
+[parser] INFO parsed 'tap 2' -> {'action': 'tap', 'target': 2}
 
 
 //===== TERMUXFILE: --task =====

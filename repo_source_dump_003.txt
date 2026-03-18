@@ -9173,6 +9173,8 @@ nohup: ignoring input
 [parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
 [parser] DEBUG normalized: 'tap 1'
 [parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
+[parser] DEBUG normalized: 'tap 1'
+[parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
 
 
 //===== TERMUXFILE: --task =====

@@ -10669,6 +10669,8 @@ RuntimeError: No LLM backend available.
 [ui_parser] full parse -- 16 elements (16 labeled, 10 via OCR/rid/child) from 192.168.29.48:35253
 [mem] stored com.android.vending/.AssetBrowserActivity hash=8f35053a2aee elements=16[parser] DEBUG normalized: 'tap 4'
 [parser] INFO parsed 'tap 4' -> {'action': 'tap', 'target': 4}
+[parser] DEBUG normalized: 'tap 12'
+[parser] INFO parsed 'tap 12' -> {'action': 'tap', 'target': 12}
 
 
 //===== TERMUXFILE: --task =====

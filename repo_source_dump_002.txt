@@ -73301,6 +73301,146 @@
           "resource_id": ""
         }
       ]
+    },
+    "a7d826671887": {
+      "screen_id": "a7d826671887",
+      "package": "com.android.vending",
+      "activity": "com.android.vending/.AssetBrowserActivity",
+      "name": "vending_assetbrowseractivity",
+      "labels": [
+        "Navigate up",
+        "VLC",
+        "Clear",
+        "Refine search to 'vlc'",
+        "Refine search to 'vlc'",
+        "Refine search to 'vlc video app'",
+        "Refine search to 'vlc video app'",
+        "Refine search to 'vlc apps'",
+        "Refine search to 'vlc apps'",
+        "Refine search to 'vlc player for android phone 2024'",
+        "Refine search to 'vlc player for android phone 2024'",
+        "Refine search to 'vlcc blended learning'",
+        "Refine search to 'vlcc blended learning'",
+        "re",
+        "Dee",
+        "re"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "VLC",
+          "x": 620,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": ""
+        },
+        {
+          "text": "Clear",
+          "x": 1142,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'vlc'",
+          "x": 620,
+          "y": 437,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'vlc'",
+          "x": 1107,
+          "y": 437,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'vlc video app'",
+          "x": 620,
+          "y": 633,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'vlc video app'",
+          "x": 1107,
+          "y": 633,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'vlc apps'",
+          "x": 620,
+          "y": 829,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'vlc apps'",
+          "x": 1107,
+          "y": 829,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'vlc player for android phone 2024'",
+          "x": 620,
+          "y": 1025,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'vlc player for android phone 2024'",
+          "x": 1107,
+          "y": 1025,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'vlcc blended learning'",
+          "x": 620,
+          "y": 1221,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'vlcc blended learning'",
+          "x": 1107,
+          "y": 1221,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "re",
+          "x": 155,
+          "y": 2744,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Dee",
+          "x": 465,
+          "y": 2744,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "re",
+          "x": 1085,
+          "y": 2744,
+          "cls": "android.view.View",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -73914,7 +74054,8 @@
     "87fee6983a2f|tap:Edit suggestion warriyo mortals slowed reverb": "8bd4aa0f7819",
     "815905513523|tap:Voice Search": "3b20c5a1dd9f",
     "3b20c5a1dd9f|type": "95f0bd34d77b",
-    "95f0bd34d77b|tap:Refine search to 'spotify vlc'": "968cea81146b"
+    "95f0bd34d77b|tap:Refine search to 'spotify vlc'": "968cea81146b",
+    "968cea81146b|type": "a7d826671887"
   }
 }
 

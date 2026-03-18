@@ -4237,9 +4237,9 @@ if __name__ == "__main__":
     "last_seen": 1773840318.0086448
   },
   "5731aaff4c94|opt4_launch:whatsapp": {
-    "to": "13dcb6504714",
+    "to": "e593131cf7fc",
     "count": 1,
-    "last_seen": 1773840504.5409615
+    "last_seen": 1773840727.227934
   },
   "6dcc835738aa|tap:You": {
     "to": "47d448eaba6d",
@@ -4297,6 +4297,7 @@ if __name__ == "__main__":
 [19:01:51] 
 [10/33] [2★] [whatsapp] Open WhatsApp and search for Mummy in chats
 [19:01:51]   max_steps=10  skill_threshold=12  skills=1
+[19:02:08]   PASS  13.7s
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -5438,7 +5439,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-18T19:01:46.211270",
+  "run_at": "2026-03-18T19:02:08.131327",
   "skills_before": 0,
   "skills_current": 1,
   "results": [
@@ -5522,6 +5523,15 @@ if __name__ == "__main__":
       "elapsed_s": 214.8,
       "error": null,
       "retried": false
+    },
+    {
+      "task": "Open WhatsApp and search for Mummy in chats",
+      "category": "whatsapp",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 13.7,
+      "error": null,
+      "retried": false
     }
   ]
 }
@@ -5541,7 +5551,7 @@ if __name__ == "__main__":
         "action": "done"
       }
     ],
-    "uses": 0,
+    "uses": 1,
     "version": 3
   }
 ]
@@ -6768,6 +6778,118 @@ nohup: ignoring input
 [controller] history:
   1. opt4_launch:whatsapp
   2. tap [33] Updates
+  3. done
+
+  Screen Map: 472 screens (0 tainted), 586 transitions
+    whatsapp             168 screens
+    chrome               100 screens
+    youtube              84 screens
+    vending              30 screens
+    termux               25 screens
+    launcher             22 screens
+    settings             21 screens
+    claude               6 screens
+    wirelesssettings     5 screens
+    dialer               2 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+  TransitionMemory: 536 transitions (278 confirmed, threshold=2)
+
+########################################################
+  JARVIS  |  Open WhatsApp and search for Mummy in chats
+  Device : 192.168.29.48:35253
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 472 screens (0 tainted), 586 transitions
+    whatsapp             168 screens
+    chrome               100 screens
+    youtube              84 screens
+    vending              30 screens
+    termux               25 screens
+    launcher             22 screens
+    settings             21 screens
+    claude               6 screens
+    wirelesssettings     5 screens
+    dialer               2 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+  TransitionMemory: 536 transitions (278 confirmed, threshold=2)
+[init] task_apps: ['whatsapp']
+[init] max_skill_steps: 20 (threshold: 12)
+
+========================================================
+  STEP 1  |  Open WhatsApp and search for Mummy in chats
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3311278 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Mostly cloudy'
+[ui_parser] OCR: (841,1475)-(1009,1671) → 'lt'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.android.launcher/.Launcher hash=3e9c4f4db0d5 elements=26
+[step] UI: ['Clock', '19', ':', '01', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (5731aaff)
+[OPT4v2] launcher -> launching whatsapp (com.whatsapp)
+[llm] OPT4v2 am start: com.whatsapp
+
+========================================================
+  STEP 2  |  Open WhatsApp and search for Mummy in chats
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (822685 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,139) → 'इच्छामृत्यु पाने वाले हरीश की मां का दर्द: भगवान बेटे को इतना मत तड़पाना कि देख न पाऊं, अस्पताल में कर रहीं प्रार्थना   पढ़ें पूरी खबर-  https://dainik'
+[ui_parser] child: (0,520) → 'Dr Masood Alam Vet, 4 unread statuses'
+[ui_parser] child: (1184,520) → 'Hidden'
+[ui_parser] child: (0,1194) → 'इच्छामृत्यु पाने वाले हरीश की मां का दर्द: भगवान बेटे को इतना मत तड़पाना कि देख न पाऊं, अस्पताल में कर रहीं प्रार्थना   पढ़ें पूरी खबर-  https://dainik'
+[ui_parser] child: (0,1460) → 'बहरीन में जंग के बीच फंसे भारतीय परिवार की दर्दनाक कहानी सामने आई है। शाहजहांपुर की मॉडल Priyanka Pathak ने बताया कि कैसे उन्होंने 15 दिन तक मौत के सा'
+[ui_parser] child: (0,1726) → 'दिल्ली, UP सहित 21 राज्यों में बारि…'
+[ui_parser] child: (0,1992) → 'Favourite 😋'
+[ui_parser] child: (0,2258) → 'Couple Burger and King went…'
+[ui_parser] full parse -- 31 elements (28 labeled, 8 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.whatsapp/.home.ui.HomeActivity hash=24b1bd05565f elements=31
+[step] UI: ['इच्छामृत्यु पाने वाले हरीश की मां का दर्द: भगवान बेटे को इतना मत तड़पाना कि देख न पाऊं, अस्पताल में कर रहीं प्रार्थना   पढ़ें पूरी खबर-  https://dainik', 'Search', 'More options', 'Dr Masood Alam Vet, 4 unread statuses', 'My status, tap to add new status', 'Shivang Gupta, 1 unread status', 'Dr Masood Alam Vet, 4 unread statuses', 'Mishra nursery, 1 unread status']
+[tm] transition changed: 5731aaff4c94|opt4_launch:whatsapp 13dcb650 -> e593131c
+[map] transition: launcher_launcher --[opt4_launch:whatsapp]--> whatsapp_homeactivity
+[map] screen: whatsapp_homeactivity (e593131c)
+[skill] matched: 'open whatsapp and go'  score=1.00  act=True
+[skill] executing 2 steps from memory
+[skill] action: {'action': 'tap', 'target': 28}
+[input] dispatching: TouchEvent(x=372, y=2576)
+[input] dispatching: TouchEvent(x=372, y=2576)
+[input] adb -s 192.168.29.48:35253 shell input tap 372 2576
+[mem] invalidated com.whatsapp/.home.ui.HomeActivity
+[skill] action: {'action': 'done'}
+[input] DONE — no dispatch
+[skill] done — skipped Claude
+[step] step=3/10 done=True history=['opt4_launch:whatsapp', 'tap [28] Updates', 'done']
+
+[controller] done in 3 steps
+
+[controller] history:
+  1. opt4_launch:whatsapp
+  2. tap [28] Updates
   3. done
 
   Screen Map: 472 screens (0 tainted), 586 transitions

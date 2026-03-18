@@ -68215,7 +68215,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 6,
+      "visits": 7,
       "tainted": false,
       "elements": [
         {
@@ -68733,7 +68733,7 @@
         "Communities",
         "Calls"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {
@@ -69540,7 +69540,7 @@
     "831d7ec0ebae|back": "f3100103b174",
     "f3100103b174|tap:element_7": "5e14b687adda",
     "22cbdc77930c|opt4_launch:contacts": "5731aaff4c94",
-    "5731aaff4c94|opt4_launch:whatsapp": "13dcb6504714",
+    "5731aaff4c94|opt4_launch:whatsapp": "e593131cf7fc",
     "6dcc835738aa|tap:You": "47d448eaba6d",
     "13dcb6504714|tap:Communities": "e593131cf7fc"
   }

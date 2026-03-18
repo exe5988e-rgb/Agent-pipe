@@ -79024,6 +79024,130 @@
           "resource_id": ""
         }
       ]
+    },
+    "049a76f6a15c": {
+      "screen_id": "049a76f6a15c",
+      "package": "com.android.settings",
+      "activity": "com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity",
+      "name": "settings_oplussettingshomepageactivity",
+      "labels": [
+        "Search box",
+        "Not connected",
+        "Mobile network",
+        "Device Connect",
+        "Home screen, Lock screen & style",
+        "Display & brightness",
+        "Sound & vibration",
+        "Notifications & Quick Settings",
+        "Security and privacy",
+        "Safety & emergency",
+        "Location",
+        "Digital Wellbeing & parental controls",
+        "Apps",
+        "Battery"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Search box",
+          "x": 620,
+          "y": 277,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.android.settings:id/searchView"
+        },
+        {
+          "text": "Not connected",
+          "x": 620,
+          "y": 335,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Mobile network",
+          "x": 620,
+          "y": 439,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Device Connect",
+          "x": 620,
+          "y": 624,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Home screen, Lock screen & style",
+          "x": 620,
+          "y": 890,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Display & brightness",
+          "x": 620,
+          "y": 1100,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Sound & vibration",
+          "x": 620,
+          "y": 1345,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Notifications & Quick Settings",
+          "x": 620,
+          "y": 1534,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Security and privacy",
+          "x": 620,
+          "y": 1779,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Safety & emergency",
+          "x": 620,
+          "y": 1965,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Location",
+          "x": 620,
+          "y": 2147,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Digital Wellbeing & parental controls",
+          "x": 620,
+          "y": 2353,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Apps",
+          "x": 620,
+          "y": 2619,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Battery",
+          "x": 620,
+          "y": 2743,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -79670,7 +79794,8 @@
     "83a7783f7b10|tap:Edit suggestion mrbeast new video": "c80ebc098a67",
     "2c1be995ec82|tap:Not connected": "bcfd9287cbfa",
     "2c1be995ec82|tap:Sound & vibration": "bda901bbd4b0",
-    "2c1be995ec82|tap:13": "0c7572520870"
+    "2c1be995ec82|tap:13": "0c7572520870",
+    "2c1be995ec82|swipe": "049a76f6a15c"
   }
 }
 

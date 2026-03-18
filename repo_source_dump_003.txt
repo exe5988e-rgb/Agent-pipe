@@ -10681,6 +10681,120 @@ RuntimeError: No LLM backend available.
 [parser] DEBUG normalized: 'back'
 [parser] INFO parsed 'back' -> {'action': 'back'}
 
+[step] UI: ['Navigate up', 'VLC', 'Clear', "Refine search to 'vlc'", "Refine search to 'vlc'", "Refine search to 'vlc video app'", "Refine search to 'vlc video app'", "Refine search to 'vlc apps'"]
+[map] new screen: vending_assetbrowseractivity (a7d826671887)
+[map] transition: vending_assetbrowseractivity --[type]--> vending_assetbrowseractivity
+[map] screen: vending_assetbrowseractivity (a7d82667)
+[skill] matched: 'search for on play'  score=1.00  act=True
+[skill] cannot resolve: 'Search Google Play'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 4'
+[step] LLM: 'tap 4'
+[step] action: {'action': 'tap', 'target': 4}
+[input] dispatching: TouchEvent(x=620, y=437)
+[input] dispatching: TouchEvent(x=620, y=437)
+[input] adb -s 192.168.29.48:35253 shell input tap 620 437
+[mem] invalidated com.android.vending/.AssetBrowserActivity
+[step] step=7/12 done=False history=['opt4_launch:play store', 'tap [3] Search Google Play', "type 'VLC'", 'tap [3] Clear', 'tap [2] Search Apps & Games', "type 'VLC'", "tap [4] Refine search to 'vlc'"]
+
+========================================================
+  STEP 8  |  Search for VLC on Play Store and open its page
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (640605 bytes)
+[ui_parser] activity=com.android.vending/.AssetBrowserActivity
+[ui_parser] signal='com.android.vending/.AssetBrowserActivity'
+[mem] miss (unknown): com.android.vending/.AssetBrowserActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (196,139) → 'vlc'
+[ui_parser] child: (14,153) → 'Navigate up'
+[ui_parser] child: (890,153) → 'Search Google Play'
+[ui_parser] child: (1058,153) → 'Voice Search'
+[ui_parser] child: (42,507) → 'Prakash Jha is back with another gritty drama - Sankalp. Watch free on Amazon MX Player'
+[ui_parser] child: (918,577) → 'Open'
+[ui_parser] child: (42,997) → 'Prakash Jha is back with another gritty drama - Sankalp. Watch free on Amazon MX Player'
+[ui_parser] child: (0,1197) → 'VLC for Android is the best open source video and music player, fast and easy!'
+[ui_parser] child: (793,1267) → 'Install on more devices'
+[ui_parser] child: (1030,1267) → 'Install on more devices'
+[ui_parser] child: (0,2492) → 'Games'
+[ui_parser] child: (310,2492) → 'Apps'
+[ui_parser] child: (620,2492) → 'Search'
+[ui_parser] child: (930,2492) → 'Books'
+[ui_parser] full parse -- 25 elements (25 labeled, 14 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.android.vending/.AssetBrowserActivity hash=f824189ae1e9 elements=25
+[step] UI: ['vlc', 'Navigate up', 'Search Google Play', 'Voice Search', 'More options', 'Prakash Jha is back with another gritty drama - Sankalp. Watch free on Amazon MX Player', 'Open', 'Average rating 4.3 stars in 13 million reviews']
+[map] new screen: vending_assetbrowseractivity (ab87f07727b4)
+[map] transition: vending_assetbrowseractivity --[tap:Refine search to 'vlc']--> vending_assetbrowseractivity
+[map] screen: vending_assetbrowseractivity (ab87f077)
+[skill] matched: 'search for on play'  score=1.00  act=True
+[skill] cannot resolve: "Refine search to 'spotify'"
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 12'
+[step] LLM: 'tap 12'
+[step] action: {'action': 'tap', 'target': 12}
+[input] dispatching: TouchEvent(x=620, y=1837)
+[input] dispatching: TouchEvent(x=620, y=1837)
+[input] adb -s 192.168.29.48:35253 shell input tap 620 1837
+[step] step=8/12 done=False history=['opt4_launch:play store', 'tap [3] Search Google Play', "type 'VLC'", 'tap [3] Clear', 'tap [2] Search Apps & Games', "type 'VLC'", "tap [4] Refine search to 'vlc'", 'tap [12] VLC for Android is the best open source video and music player, fast and easy!']
+
+========================================================
+  STEP 9  |  Search for VLC on Play Store and open its page
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (859448 bytes)
+[ui_parser] activity=com.android.vending/com.google.android.finsky.screenshotsactivity.ScreenshotsActivityV2
+[ui_parser] signal='com.android.vending/com.google.android.finsky.screenshotsactivity.ScreenshotsActivityV2'
+[mem] miss (unknown): com.android.vending/com.google.android.finsky.screenshotsactivity.ScreenshotsActivityV2
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,0) → "Screenshot for 'VLC for Android'"
+[ui_parser] full parse -- 2 elements (2 labeled, 1 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.android.vending/com.google.android.finsky.screenshotsactivity.ScreenshotsActivityV2 hash=f4e911ef5ef4 elements=2
+[step] UI: ["Screenshot for 'VLC for Android'", 'Back']
+[map] new screen: vending_screenshotsactivityv2 (878450f0a90b)
+[map] transition: vending_assetbrowseractivity --[tap:Install on more devices]--> vending_screenshotsactivityv2
+[map] screen: vending_screenshotsactivityv2 (878450f0)
+[skill] matched: 'search for on play'  score=1.00  act=False
+[skill] cannot resolve: 'Search'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 2'
+[step] LLM: 'tap 2'
+[step] action: {'action': 'tap', 'target': 2}
+[input] dispatching: TouchEvent(x=98, y=237)
+[input] dispatching: TouchEvent(x=98, y=237)
+[input] adb -s 192.168.29.48:35253 shell input tap 98 237
+[mem] invalidated com.android.vending/com.google.android.finsky.screenshotsactivity.ScreenshotsActivityV2
+[step] step=9/12 done=False history=['opt4_launch:play store', 'tap [3] Search Google Play', "type 'VLC'", 'tap [3] Clear', 'tap [2] Search Apps & Games', "type 'VLC'", "tap [4] Refine search to 'vlc'", 'tap [12] VLC for Android is the best open source video and music player, fast and easy!', 'tap [2] Back']
+
+========================================================
+  STEP 10  |  Search for VLC on Play Store and open its page
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (859452 bytes)
+[ui_parser] activity=com.android.vending/com.google.android.finsky.screenshotsactivity.ScreenshotsActivityV2
+[ui_parser] signal='com.android.vending/com.google.android.finsky.screenshotsactivity.ScreenshotsActivityV2'
+[mem] miss (unknown): com.android.vending/com.google.android.finsky.screenshotsactivity.ScreenshotsActivityV2
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,0) → "Screenshot for 'VLC for Android'"
+[ui_parser] full parse -- 2 elements (2 labeled, 1 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.android.vending/com.google.android.finsky.screenshotsactivity.ScreenshotsActivityV2 hash=f4e911ef5ef4 elements=2
+[step] UI: ["Screenshot for 'VLC for Android'", 'Back']
+[map] screen: vending_screenshotsactivityv2 (878450f0)
+[skill] matched: 'search for on play'  score=1.00  act=False
+[skill] cannot resolve: 'Search'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'back'
+[step] LLM: 'back'
+[step] action: {'action': 'back'}
+[input] dispatching: KeyEvent(BACK)
+[input] dispatching: KeyEvent(BACK)
+[input] adb -s 192.168.29.48:35253 shell input keyevent 4
+[mem] invalidated com.android.vending/.AssetBrowserActivity
+[step] step=10/12 done=False history=['opt4_launch:play store', 'tap [3] Search Google Play', "type 'VLC'", 'tap [3] Clear', 'tap [2] Search Apps & Games', "type 'VLC'", "tap [4] Refine search to 'vlc'", 'tap [12] VLC for Android is the best open source video and music player, fast and easy!', 'tap [2] Back', 'back']
+
+========================================================
+  STEP 11  |  Search for VLC on Play Store and open its page
+========================================================
 
 //===== TERMUXFILE: --task =====
 
@@ -12211,253 +12325,5 @@ echo "📦 llamafile can run models directly!"
 echo ""
 echo "Start server with:"
 echo "  ./llamafile -m ~/ai-workspace/llama.cpp/models/Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf --server --port 8080 --host 127.0.0.1"
-
-
-//===== TERMUXFILE: test/llamafile_proxy.py =====
-#!/usr/bin/env python3
-"""
-ENHANCED PROXY - Executes commands in Termux properly via file queue
-Works around Android sandbox limitations
-"""
-from http.server import HTTPServer, BaseHTTPRequestHandler
-import json
-import requests
-import subprocess
-import os
-import time
-from pathlib import Path
-
-LLAMAFILE_URL = "http://127.0.0.1:8080"
-PORT = 8888
-
-# Command queue directory
-QUEUE_DIR = Path.home() / ".jarvis_queue"
-QUEUE_DIR.mkdir(exist_ok=True)
-
-class EnhancedProxyHandler(BaseHTTPRequestHandler):
-    def log_message(self, format, *args):
-        print(f"[{self.log_date_time_string()}] {format % args}")
-    
-    def send_json(self, code, data):
-        response = json.dumps(data, indent=2).encode()
-        self.send_response(code)
-        self.send_header('Content-Type', 'application/json')
-        self.send_header('Access-Control-Allow-Origin', '*')
-        self.end_headers()
-        self.wfile.write(response)
-    
-    def do_OPTIONS(self):
-        self.send_response(200)
-        self.send_header('Access-Control-Allow-Origin', '*')
-        self.send_header('Access-Control-Allow-Methods', 'GET, POST')
-        self.send_header('Access-Control-Allow-Headers', 'Content-Type')
-        self.end_headers()
-    
-    def do_GET(self):
-        if self.path == '/health':
-            try:
-                response = requests.get(f"{LLAMAFILE_URL}/health", timeout=2)
-                if response.status_code == 200:
-                    self.send_json(200, {
-                        "status": "healthy",
-                        "model": "Qwen2.5-Coder-3B",
-                        "backend": "llamafile",
-                        "executor": "enhanced"
-                    })
-                else:
-                    self.send_json(503, {"status": "unhealthy"})
-            except:
-                self.send_json(503, {"status": "unhealthy"})
-        else:
-            self.send_json(404, {"error": "Not found"})
-    
-    def do_POST(self):
-        try:
-            content_length = int(self.headers['Content-Length'])
-            body = self.rfile.read(content_length)
-            data = json.loads(body.decode())
-            
-            # ======= CHAT ENDPOINT =======
-            if self.path == '/chat_sync':
-                query = data.get('query', '').strip()
-                if not query:
-                    self.send_json(400, {"error": "Missing query"})
-                    return
-                
-                print(f"\n[CHAT] {query}")
-                
-                response = requests.post(
-                    f"{LLAMAFILE_URL}/v1/chat/completions",
-                    json={
-                        "messages": [{"role": "user", "content": query}],
-                        "max_tokens": 100,
-                        "temperature": 0.7
-                    },
-                    timeout=30
-                )
-                
-                if response.status_code != 200:
-                    self.send_json(500, {"success": False, "error": "LLM error"})
-                    return
-                
-                result = response.json()
-                text = result['choices'][0]['message']['content']
-                print(f"[RESPONSE] {text}")
-                
-                self.send_json(200, {"success": True, "response": text})
-            
-            # ======= COMMAND GENERATION =======
-            elif self.path == '/generate_sync':
-                query = data.get('query', '').strip()
-                if not query:
-                    self.send_json(400, {"error": "Missing query"})
-                    return
-                
-                print(f"\n[GENERATE] {query}")
-                
-                prompt = f"""Generate a Termux/Android shell command for: {query}
-
-Requirements:
-- Single line command only
-- Use Termux-compatible syntax
-- No placeholders or variables
-- Use termux-* commands when appropriate (termux-notification, termux-toast, etc.)
-- Output ONLY the command
-
-Command:"""
-                
-                response = requests.post(
-                    f"{LLAMAFILE_URL}/v1/chat/completions",
-                    json={
-                        "messages": [{"role": "user", "content": prompt}],
-                        "max_tokens": 50,
-                        "temperature": 0.3,
-                        "stop": ["\n"]
-                    },
-                    timeout=30
-                )
-                
-                if response.status_code != 200:
-                    self.send_json(500, {"success": False, "error": "LLM error"})
-                    return
-                
-                result = response.json()
-                command = result['choices'][0]['message']['content'].strip().strip('`"\'')
-                
-                print(f"[COMMAND] {command}")
-                
-                self.send_json(200, {
-                    "success": True,
-                    "command": command,
-                    "response": command
-                })
-            
-            # ======= ENHANCED COMMAND EXECUTION =======
-            elif self.path == '/execute':
-                command = data.get('command', '').strip()
-                if not command:
-                    self.send_json(400, {"error": "Missing command"})
-                    return
-                
-                print(f"\n[EXECUTE] {command}")
-                
-                # Try multiple execution methods
-                
-                # Method 1: Direct execution (works for simple commands)
-                try:
-                    result = subprocess.run(
-                        command,
-                        shell=True,
-                        capture_output=True,
-                        text=True,
-                        timeout=30,
-                        cwd=str(Path.home())  # Execute in home directory
-                    )
-                    
-                    output = result.stdout + result.stderr
-                    success = result.returncode == 0
-                    
-                    print(f"[EXIT CODE] {result.returncode}")
-                    if output:
-                        print(f"[OUTPUT] {output[:200]}")
-                    
-                    self.send_json(200, {
-                        "success": success,
-                        "output": output if output else "Command executed successfully (no output)",
-                        "exit_code": result.returncode,
-                        "method": "direct"
-                    })
-                    
-                except subprocess.TimeoutExpired:
-                    # Method 2: Queue for background execution
-                    cmd_id = int(time.time() * 1000)
-                    cmd_file = QUEUE_DIR / f"cmd_{cmd_id}.sh"
-                    result_file = QUEUE_DIR / f"result_{cmd_id}.txt"
-                    
-                    # Write command to queue
-                    cmd_file.write_text(f"""#!/bin/bash
-cd ~
-{command} > {result_file} 2>&1
-echo "EXIT_CODE=$?" >> {result_file}
-""")
-                    cmd_file.chmod(0o755)
-                    
-                    # Execute in background
-                    subprocess.Popen([str(cmd_file)], start_new_session=True)
-                    
-                    self.send_json(200, {
-                        "success": True,
-                        "output": f"Command queued for execution (ID: {cmd_id})\nCheck {result_file} for results",
-                        "exit_code": 0,
-                        "method": "queued",
-                        "result_file": str(result_file)
-                    })
-                    
-                except Exception as e:
-                    print(f"[ERROR] {e}")
-                    self.send_json(500, {
-                        "success": False,
-                        "error": f"Execution failed: {e}\n\nTip: For complex commands, use Termux directly.",
-                        "exit_code": -1
-                    })
-            
-            else:
-                self.send_json(404, {"error": "Endpoint not found"})
-                
-        except Exception as e:
-            print(f"[ERROR] {e}")
-            import traceback
-            traceback.print_exc()
-            self.send_json(500, {"error": str(e)})
-
-if __name__ == '__main__':
-    print("="*70)
-    print("ENHANCED JARVIS PROXY SERVER")
-    print("="*70)
-    print(f"Port: {PORT}")
-    print(f"Backend: {LLAMAFILE_URL}")
-    print(f"Queue: {QUEUE_DIR}")
-    print()
-    print("Features:")
-    print("  ✅ Direct command execution")
-    print("  ✅ Background queue for long commands")
-    print("  ✅ Proper working directory (~)")
-    print("  ✅ Termux-API compatible")
-    print()
-    print("Endpoints:")
-    print("  GET  /health")
-    print("  POST /chat_sync")
-    print("  POST /generate_sync")
-    print("  POST /execute")
-    print("="*70)
-    print()
-    
-    server = HTTPServer(('0.0.0.0', PORT), EnhancedProxyHandler)
-    
-    try:
-        server.serve_forever()
-    except KeyboardInterrupt:
-        print("\n🛑 Shutting down...")
-        server.shutdown()
 
 

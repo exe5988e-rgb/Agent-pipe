@@ -74617,6 +74617,66 @@
           "resource_id": ""
         }
       ]
+    },
+    "ffe4b24675ad": {
+      "screen_id": "ffe4b24675ad",
+      "package": "com.google.android.dialer",
+      "activity": "com.google.android.dialer/com.android.dialer.incall.activity.ui.InCallActivity",
+      "name": "dialer_incallactivity",
+      "labels": [
+        "element_1",
+        "Keypad",
+        "Mute",
+        "Speaker",
+        "Show more",
+        "End call"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 620,
+          "y": 1939,
+          "cls": "android.widget.ScrollView",
+          "resource_id": "com.google.android.dialer:id/bottom_sheet_fragment_scroll_view"
+        },
+        {
+          "text": "Keypad",
+          "x": 207,
+          "y": 2065,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Mute",
+          "x": 482,
+          "y": 2065,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Speaker",
+          "x": 757,
+          "y": 2065,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Show more",
+          "x": 1032,
+          "y": 2065,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "End call",
+          "x": 620,
+          "y": 2478,
+          "cls": "android.view.View",
+          "resource_id": "end_call_fab_test_tag"
+        }
+      ]
     }
   },
   "transitions": {
@@ -75237,7 +75297,7 @@
     "878450f0a90b|back": "ab87f07727b4",
     "ab87f07727b4|tap:Content rating Rated for 3+": "4c38e663dba1",
     "a2a7a2e70c76|tap:Auto-play is off": "c9ef977845dc",
-    "c9ef977845dc|tap:Voice search": "a878aeaaaae9"
+    "c9ef977845dc|tap:Voice search": "ffe4b24675ad"
   }
 }
 

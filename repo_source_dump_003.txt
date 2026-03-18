@@ -4557,6 +4557,10 @@ if __name__ == "__main__":
 [21:06:16] 
 [10/33] [2★] [whatsapp] Open WhatsApp and search for Mummy in chats
 [21:06:16]   max_steps=10  skill_threshold=12  skills=3
+[21:07:37]   PASS  78.6s
+[21:07:42] 
+[11/33] [2★] [youtube] Open YouTube and go to Subscriptions
+[21:07:42]   max_steps=8  skill_threshold=12  skills=3
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -5698,7 +5702,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-18T21:06:11.016516",
+  "run_at": "2026-03-18T21:07:37.858084",
   "skills_before": 0,
   "skills_current": 3,
   "results": [
@@ -5780,6 +5784,15 @@ if __name__ == "__main__":
       "difficulty": 2,
       "success": true,
       "elapsed_s": 141.4,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Open WhatsApp and search for Mummy in chats",
+      "category": "whatsapp",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 78.6,
       "error": null,
       "retried": false
     }
@@ -7521,6 +7534,80 @@ nohup: ignoring input
 [llm] Phone B (Claude): 'tap 4'
 [step] LLM: 'tap 4'[parser] DEBUG normalized: 'tap 4'
 [parser] INFO parsed 'tap 4' -> {'action': 'tap', 'target': 4}
+
+[step] action: {'action': 'tap', 'target': 4}
+[input] dispatching: TouchEvent(x=620, y=433)
+[input] dispatching: TouchEvent(x=620, y=433)
+[input] adb -s 192.168.29.48:33117 shell input tap 620 433
+[mem] invalidated com.whatsapp/.home.ui.HomeActivity
+[step] step=3/10 done=False history=['opt4_launch:whatsapp', 'tap [27] Chats, 2 new notifications', 'tap [4] Ask Meta AI or Search']
+
+========================================================
+  STEP 4  |  Open WhatsApp and search for Mummy in chats
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1232861 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,139) → 'Swipe down to reveal additional actions'
+[ui_parser] child: (0,337) → 'Documents'
+[ui_parser] child: (0,575) → 'Door desgin ideas, group'
+[ui_parser] child: (0,589) → 'Door desgin ideas, group'
+[ui_parser] child: (0,841) → 'Mummy Jio (You)'
+[ui_parser] child: (0,855) → 'You'
+[ui_parser] child: (0,1107) → 'Papa'
+[ui_parser] child: (0,1121) → 'Papa'
+[ui_parser] child: (0,1373) → 'Mummy'
+[ui_parser] child: (0,1387) → 'Mummy'
+[ui_parser] full parse -- 23 elements (23 labeled, 11 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.whatsapp/.home.ui.HomeActivity hash=c3a4d35f5ff4 elements=23
+[step] UI: ['Swipe down to reveal additional actions', 'Back', 'Ask Meta AI or Search', 'Ask Meta AI or Search', 'Documents', 'Unread', 'Photos', 'Videos']
+[map] new screen: whatsapp_homeactivity (462e8bea51f2)
+[map] transition: whatsapp_homeactivity --[tap:Swipe down to reveal additional actions]--> whatsapp_homeactivity
+[map] screen: whatsapp_homeactivity (462e8bea)
+[skill] matched: 'open whatsapp'  score=1.00  act=True
+[skill] executing 2 steps from memory
+[skill] action: {'action': 'tap', 'target': 2}
+[input] dispatching: TouchEvent(x=126, y=223)
+[input] dispatching: TouchEvent(x=126, y=223)
+[input] adb -s 192.168.29.48:33117 shell input tap 126 223
+[mem] invalidated com.whatsapp/.home.ui.HomeActivity
+[skill] action: {'action': 'done'}
+[input] DONE — no dispatch
+[skill] done — skipped Claude
+[step] step=5/10 done=True history=['opt4_launch:whatsapp', 'tap [27] Chats, 2 new notifications', 'tap [4] Ask Meta AI or Search', 'tap [2] Back', 'done']
+
+[controller] done in 5 steps
+
+[controller] history:
+  1. opt4_launch:whatsapp
+  2. tap [27] Chats, 2 new notifications
+  3. tap [4] Ask Meta AI or Search
+  4. tap [2] Back
+  5. done
+
+  Screen Map: 522 screens (0 tainted), 638 transitions
+    whatsapp             175 screens
+    chrome               106 screens
+    youtube              101 screens
+    vending              43 screens
+    termux               25 screens
+    launcher             23 screens
+    settings             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+  TransitionMemory: 588 transitions (279 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: --task =====

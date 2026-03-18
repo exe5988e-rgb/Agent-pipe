@@ -7483,6 +7483,141 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
 [parser] DEBUG normalized: 'tap 6'
 [parser] INFO parsed 'tap 6' -> {'action': 'tap', 'target': 6}
 
+########################################################
+  JARVIS  |  Search for lofi hip hop on YouTube and play the first video
+  Device : 192.168.29.48:33117
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 579 screens (0 tainted), 695 transitions
+    whatsapp             190 screens
+    youtube              129 screens
+    chrome               112 screens
+    vending              46 screens
+    termux               26 screens
+    settings             25 screens
+    launcher             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+    notificationmanager  1 screens
+    battery              1 screens
+  TransitionMemory: 645 transitions (286 confirmed, threshold=2)
+[init] task_apps: ['youtube']
+[init] max_skill_steps: 20 (threshold: 12)
+
+========================================================
+  STEP 1  |  Search for lofi hip hop on YouTube and play the first video
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3307781 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Mostly cloudy'
+[ui_parser] OCR: (841,1475)-(1009,1671) → 'lt'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.launcher/.Launcher hash=978181450420 elements=26
+[step] UI: ['Clock', '22', ':', '05', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (5731aaff)
+[OPT4v2] launcher -> launching youtube (com.google.android.youtube)
+[llm] OPT4v2 am start: com.google.android.youtube
+
+========================================================
+  STEP 2  |  Search for lofi hip hop on YouTube and play the first video
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (857448 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (540,146) → 'Auto-play is off'
+[ui_parser] child: (0,837) → 'Drag handle'
+[ui_parser] child: (0,1051) → 'Spotify 🎧: https://open.spotify.c...\u200b\nItunes 💿: https://itunes.apple.c...\u200b\n\nSupport on all platforms: https://ncs.lnk.to/Mor...\u200b\n\n...more'
+[ui_parser] child: (56,2123) → 'Get answers, explore topics and more'
+[ui_parser] child: (42,2333) → 'Recommend related content'
+[ui_parser] child: (0,2537) → 'Shorts remixing this video, 9.6k Shorts'
+[ui_parser] full parse -- 26 elements (26 labeled, 6 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=3b6b6973ca1d elements=26
+[step] UI: ['Expand Mini Player', 'Minimise', 'Auto-play is off', 'Cast', 'Captions', 'More options', 'Previous video', 'Next video']
+[map] new screen: youtube_shell$homeactivity (f0c8036aaadb)
+[tm] transition changed: 5731aaff4c94|opt4_launch:youtube 9cd54d2c -> f0c8036a
+[map] transition: launcher_launcher --[opt4_launch:youtube]--> youtube_shell$homeactivity
+[map] screen: youtube_shell$homeactivity (f0c8036a)
+[skill] matched: 'search for on youtube'  score=1.00  act=True
+[skill] cannot resolve: 'Search'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 2'
+[step] LLM: 'tap 2'
+[step] action: {'action': 'tap', 'target': 2}
+[input] dispatching: TouchEvent(x=84, y=223)
+[input] dispatching: TouchEvent(x=84, y=223)
+[input] adb -s 192.168.29.48:33117 shell input tap 84 223
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[step] step=2/12 done=False history=['opt4_launch:youtube', 'tap [2] Minimise']
+
+========================================================
+  STEP 3  |  Search for lofi hip hop on YouTube and play the first video
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1709004 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (56,335) → 'All'
+[ui_parser] child: (224,335) → 'Shorts'
+[ui_parser] child: (481,335) → 'Videos'
+[ui_parser] child: (744,335) → 'Unwatched'
+[ui_parser] child: (1100,335) → 'Watched'
+[ui_parser] child: (0,475) → 'warriyo - mortals (feat. laura brehm) Mahabharat#bhagvadgita #srikrishna #jayshreeram #slok, 1 million views, Urban headshot, 1 year ago – play Short'
+[ui_parser] child: (622,475) → 'Legend of Warriors ⚔️🔥 Ft. Warriyo - Mortals #shorts #animation, 2 million views, AMR Story, 10 months ago – play Short'
+[ui_parser] child: (196,937) → '1m views · 1 yr ago'
+[ui_parser] child: (788,937) → '2m views · 10 mo ago'
+[ui_parser] full parse -- 32 elements (32 labeled, 9 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=8f7847b43218 elements=32
+[step] UI: ['Navigate up', 'Clear', 'Voice search', 'Cast', 'More options', 'warriyo mortals', 'All', 'Shorts']
+[map] new screen: youtube_shell$homeactivity (405898b1eee6)
+[map] transition: youtube_shell$homeactivity --[tap:Auto-play is off]--> youtube_shell$homeactivity
+[map] screen: youtube_shell$homeactivity (405898b1)
+[skill] matched: 'search for on youtube'  score=1.00  act=True
+[skill] cannot resolve: 'Edit suggestion mrbeast'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 6'
+[step] LLM: 'tap 6'
+[step] action: {'action': 'tap', 'target': 6}
+[input] dispatching: TouchEvent(x=396, y=223)
+[input] dispatching: TouchEvent(x=396, y=223)
+[input] adb -s 192.168.29.48:33117 shell input tap 396 223
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[step] step=3/12 done=False history=['opt4_launch:youtube', 'tap [2] Minimise', 'tap [6] warriyo mortals']
+
+========================================================
+  STEP 4  |  Search for lofi hip hop on YouTube and play the first video
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1438955 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,307) → 'Edit suggestion warriyo mortals'
+[ui_parser] child: (0,307) → 'Edit suggestion warriyo mortals slowed reverb'
+[ui_parser] child: (0,475) → 'Edit suggestion warriyo mortals slowed'
+[ui_parser] child: (0,643) → 'Edit suggestion warriyo mortals slowed reverb'
 
 //===== TERMUXFILE: --task =====
 
@@ -8788,239 +8923,5 @@ echo ""
 echo "  Custom task:"
 echo "       python3 agent/controller.py --task 'Open Chrome' --device $ADB_DEVICE"
 echo ""
-
-
-//===== TERMUXFILE: test/jarvis_executor.sh =====
-#!/data/data/com.termux/files/usr/bin/bash
-# OPTIMIZED JARVIS Command Executor Service
-# ZERO-DELAY file-based execution using inotify
-# NOW WITH: Non-interactive mode + Command timeout
-
-# ==============================================================================================================================
-# CONFIGURATION
-# ==============================================================================================================================
-
-WORK_DIR="/sdcard/jarvis"
-COMMAND_FILE="$WORK_DIR/command.txt"
-RESULT_FILE="$WORK_DIR/result.txt"
-STATUS_FILE="$WORK_DIR/status.txt"
-LOG_FILE="$WORK_DIR/executor.log"
-
-# Command timeout in seconds (prevent hanging on interactive commands)
-COMMAND_TIMEOUT=60
-
-# ==============================================================================================================================
-# SETUP
-# ==============================================================================================================================
-
-# Install inotify-tools if not present (for instant file monitoring)
-if ! command -v inotifywait &> /dev/null; then
-    echo "Installing inotify-tools for zero-delay execution..."
-    pkg install -y inotify-tools
-fi
-
-# Create directory
-mkdir -p "$WORK_DIR" || {
-    echo "❌ Error: Cannot create directory $WORK_DIR"
-    exit 1
-}
-
-# Set permissions
-chmod 777 "$WORK_DIR" 2>/dev/null
-
-# Clean up old files
-rm -f "$COMMAND_FILE" "$RESULT_FILE" "$STATUS_FILE" 2>/dev/null
-
-# Create empty files
-touch "$COMMAND_FILE" "$RESULT_FILE" "$STATUS_FILE" 2>/dev/null
-chmod 666 "$COMMAND_FILE" "$RESULT_FILE" "$STATUS_FILE" 2>/dev/null
-
-# ==============================================================================================================================
-# LOGGING FUNCTION
-# ==============================================================================================================================
-
-log() {
-    local timestamp=$(date '+%Y-%m-%d %H:%M:%S')
-    local message="[$timestamp] $1"
-    echo "$message"
-    echo "$message" >> "$LOG_FILE" 2>/dev/null
-}
-
-# ==============================================================================================================================
-# STARTUP MESSAGE
-# ==============================================================================================================================
-
-clear
-echo "╔════════════════════════════════════════════════════════════╗"
-echo "║       🚀 JARVIS Command Executor Service v3.1            ║"
-echo "║    (NON-INTERACTIVE + TIMEOUT PROTECTION + INOTIFY)      ║"
-echo "╚════════════════════════════════════════════════════════════╝"
-echo ""
-echo "📍 Working Directory: $WORK_DIR"
-echo "📥 Command File: $COMMAND_FILE"
-echo "📤 Result File: $RESULT_FILE"
-echo "📊 Status File: $STATUS_FILE"
-echo "📝 Log File: $LOG_FILE"
-echo "⏱️  Command Timeout: ${COMMAND_TIMEOUT}s"
-echo ""
-
-# Verify files exist
-if [ -f "$COMMAND_FILE" ] && [ -f "$RESULT_FILE" ]; then
-    echo "✅ Communication files created successfully"
-else
-    echo "❌ ERROR: Failed to create communication files"
-    exit 1
-fi
-
-# Write status
-echo "ready" > "$STATUS_FILE"
-
-echo ""
-echo "⚡ Using inotify for instant command detection (NO POLLING!)"
-echo "🔒 Non-interactive mode enabled (auto-yes for prompts)"
-echo "⏱️  Timeout protection: ${COMMAND_TIMEOUT}s per command"
-echo "🎧 Listening for commands from JARVIS app..."
-echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo ""
-
-log "JARVIS Executor v3.1 started (NON-INTERACTIVE + TIMEOUT mode)"
-
-# ==============================================================================================================================
-# COMMAND PROCESSING LOOP - ZERO DELAY WITH INOTIFY
-# ==============================================================================================================================
-
-# Trap to handle script termination
-trap 'log "Executor stopped"; echo "stopped" > "$STATUS_FILE"; exit 0' INT TERM
-
-# Command counter
-CMD_COUNT=0
-LAST_COMMAND=""
-
-# Monitor file changes with inotify (instant detection, no polling!)
-inotifywait -m -e modify,close_write "$COMMAND_FILE" 2>/dev/null | while read -r directory events filename
-do
-    # Read command immediately when file is modified
-    if [ -f "$COMMAND_FILE" ] && [ -s "$COMMAND_FILE" ]; then
-        command=$(cat "$COMMAND_FILE" 2>/dev/null | tr -d '\r\n')
-        
-        # Skip if empty or same as last command
-        if [ -z "$command" ] || [ "$command" = "$LAST_COMMAND" ]; then
-            continue
-        fi
-        
-        LAST_COMMAND="$command"
-        CMD_COUNT=$((CMD_COUNT + 1))
-        
-        # Update status
-        echo "executing" > "$STATUS_FILE"
-        
-        # Log received command
-        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-        echo "⚡ Command #$CMD_COUNT received INSTANTLY at $(date '+%H:%M:%S.%3N')"
-        echo "   Command: $command"
-        log "INSTANT execution #$CMD_COUNT: $command"
-        
-        # Execute command with timeout and non-interactive stdin
-        # Key changes:
-        # 1. Close stdin with </dev/null (prevents waiting for user input)
-        # 2. Use 'yes' to auto-answer prompts
-        # 3. Wrap in timeout command
-        START_TIME=$(date +%s%3N)
-        
-        # Create a temporary script to execute with timeout
-        temp_script=$(mktemp)
-        cat > "$temp_script" << EOF
-#!/data/data/com.termux/files/usr/bin/bash
-# Auto-answer 'yes' to all prompts and execute command
-yes | eval "$command" 2>&1
-EOF
-        chmod +x "$temp_script"
-        
-        # Execute with timeout (will kill after COMMAND_TIMEOUT seconds)
-        if command -v timeout &> /dev/null; then
-            # Use timeout if available
-            output=$(timeout ${COMMAND_TIMEOUT}s bash "$temp_script" 2>&1)
-            exit_code=$?
-            
-            # Check if timeout occurred (exit code 124)
-            if [ $exit_code -eq 124 ]; then
-                output="ERROR: Command timed out after ${COMMAND_TIMEOUT} seconds. This usually means:\n- Command is waiting for user input (use -y flags)\n- Command is stuck or taking too long\n\nOriginal output:\n$output"
-                exit_code=124
-            fi
-        else
-            # Fallback without timeout (not recommended but still better than hanging)
-            output=$(bash "$temp_script" 2>&1)
-            exit_code=$?
-        fi
-        
-        # Clean up temp script
-        rm -f "$temp_script"
-        
-        END_TIME=$(date +%s%3N)
-        DURATION=$(( (END_TIME - START_TIME) ))
-        
-        # Write result to file IMMEDIATELY
-        # Format: exit_code|output
-        echo "$exit_code|$output" > "$RESULT_FILE"
-        
-        # Force sync to ensure file is written
-        sync
-        
-        # Update status
-        echo "ready" > "$STATUS_FILE"
-        
-        # Clear command file to be ready for next command
-        echo "" > "$COMMAND_FILE"
-        
-        # Log completion
-        if [ $exit_code -eq 0 ]; then
-            echo "✅ Command completed in ${DURATION}ms"
-            log "Command #$CMD_COUNT completed: exit=$exit_code, ${DURATION}ms"
-        elif [ $exit_code -eq 124 ]; then
-            echo "⏱️  Command TIMED OUT after ${COMMAND_TIMEOUT}s"
-            log "Command #$CMD_COUNT TIMEOUT: ${COMMAND_TIMEOUT}s"
-        else
-            echo "❌ Command failed with exit code: $exit_code in ${DURATION}ms"
-            log "Command #$CMD_COUNT failed: exit=$exit_code, ${DURATION}ms"
-        fi
-        
-        # Show output preview (first 3 lines)
-        if [ -n "$output" ]; then
-            echo "   Output preview:"
-            echo "$output" | head -3 | sed 's/^/   │ /'
-            if [ $(echo "$output" | wc -l) -gt 3 ]; then
-                echo "   │ ... ($(echo "$output" | wc -l) total lines)"
-            fi
-        fi
-        echo ""
-    fi
-done
-
-
-//===== TERMUXFILE: test/setupllama_file.sh =====
-#!/bin/bash
-# Use llamafile - a single executable that runs LLMs with built-in server
-
-echo "🦙 Setting up llamafile..."
-echo ""
-
-# Download llamafile executable
-LLAMAFILE_URL="https://github.com/Mozilla-Ocho/llamafile/releases/download/0.8.13/llamafile-0.8.13"
-LLAMAFILE="$HOME/llamafile"
-
-if [ -f "$LLAMAFILE" ]; then
-    echo "✅ llamafile already downloaded"
-else
-    echo "📥 Downloading llamafile..."
-    wget -O "$LLAMAFILE" "$LLAMAFILE_URL"
-    chmod +x "$LLAMAFILE"
-    echo "✅ Downloaded"
-fi
-
-echo ""
-echo "📦 llamafile can run models directly!"
-echo ""
-echo "Start server with:"
-echo "  ./llamafile -m ~/ai-workspace/llama.cpp/models/Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf --server --port 8080 --host 127.0.0.1"
 
 

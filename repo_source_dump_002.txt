@@ -79451,6 +79451,178 @@
           "resource_id": ""
         }
       ]
+    },
+    "bf144b1262a3": {
+      "screen_id": "bf144b1262a3",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "element_1",
+        "Connection is secure",
+        "google.com",
+        "Clear input",
+        "8 suggested items in list below.",
+        "Switch to this tab.",
+        "Switch to this tab.",
+        "google.com",
+        "Refine: google.com/android/find",
+        "Refine: google.com/android/find",
+        "Refine: google.com/ai",
+        "Refine: google.com/ai",
+        "Refine: google.com/find",
+        "Refine: google.com/find",
+        "Refine: https://accounts.google.com/ServiceLogin?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1",
+        "Refine: https://accounts.google.com/ServiceLogin?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1",
+        "Refine: https://www.google.com/search?q=in+google+meet+how+i+can+take+photo+of+everyone+present&oq=&aqs=chrome.2.69i59l8.16661755j0j15&sourceid=chrome&ie=UTF-8",
+        "Refine: https://www.google.com/search?q=in+google+meet+how+i+can+take+photo+of+everyone+present&oq=&aqs=chrome.2.69i59l8.16661755j0j15&sourceid=chrome&ie=UTF-8",
+        "Refine: https://accounts.google.com/b/0/AddMailService",
+        "Refine: https://accounts.google.com/b/0/AddMailService"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 620,
+          "y": 1455,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Connection is secure",
+          "x": 126,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "google.com",
+          "x": 634,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "Clear input",
+          "x": 1128,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/delete_button"
+        },
+        {
+          "text": "8 suggested items in list below.",
+          "x": 620,
+          "y": 1058,
+          "cls": "androidx.recyclerview.widget.RecyclerView",
+          "resource_id": "com.android.chrome:id/omnibox_suggestions_dropdown"
+        },
+        {
+          "text": "Switch to this tab.",
+          "x": 620,
+          "y": 433,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Switch to this tab.",
+          "x": 1128,
+          "y": 433,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "google.com",
+          "x": 620,
+          "y": 629,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: google.com/android/find",
+          "x": 620,
+          "y": 825,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: google.com/android/find",
+          "x": 1128,
+          "y": 825,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: google.com/ai",
+          "x": 620,
+          "y": 1021,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: google.com/ai",
+          "x": 1128,
+          "y": 1021,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: google.com/find",
+          "x": 620,
+          "y": 1217,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: google.com/find",
+          "x": 1128,
+          "y": 1217,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: https://accounts.google.com/ServiceLogin?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1",
+          "x": 620,
+          "y": 1413,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: https://accounts.google.com/ServiceLogin?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1",
+          "x": 1128,
+          "y": 1413,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: https://www.google.com/search?q=in+google+meet+how+i+can+take+photo+of+everyone+present&oq=&aqs=chrome.2.69i59l8.16661755j0j15&sourceid=chrome&ie=UTF-8",
+          "x": 620,
+          "y": 1609,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: https://www.google.com/search?q=in+google+meet+how+i+can+take+photo+of+everyone+present&oq=&aqs=chrome.2.69i59l8.16661755j0j15&sourceid=chrome&ie=UTF-8",
+          "x": 1128,
+          "y": 1609,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: https://accounts.google.com/b/0/AddMailService",
+          "x": 620,
+          "y": 1744,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: https://accounts.google.com/b/0/AddMailService",
+          "x": 1128,
+          "y": 1744,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -80099,7 +80271,8 @@
     "2c1be995ec82|tap:Sound & vibration": "bda901bbd4b0",
     "2c1be995ec82|tap:13": "0c7572520870",
     "2c1be995ec82|swipe": "049a76f6a15c",
-    "049a76f6a15c|tap:14": "228335378cda"
+    "049a76f6a15c|tap:14": "228335378cda",
+    "cabb12a803f3|type": "bf144b1262a3"
   }
 }
 

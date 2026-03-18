@@ -72450,7 +72450,7 @@
         "Search YouTube",
         "Voice search"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {
@@ -78952,7 +78952,8 @@
     "1025dd6b857e|opt4_launch:play store": "73181ac31bda",
     "615edd0c907f|tap:Updates": "6dcc835738aa",
     "6dcc835738aa|tap:Swipe down to reveal additional actions": "462e8bea51f2",
-    "0b5a9aba0337|tap:You": "0cfd22e776c8"
+    "0b5a9aba0337|tap:You": "0cfd22e776c8",
+    "0cfd22e776c8|tap:JensJulius Tejlgaard has new content": "80ff94df1647"
   }
 }
 

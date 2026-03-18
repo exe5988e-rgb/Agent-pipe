@@ -46721,6 +46721,114 @@
           "resource_id": ""
         }
       ]
+    },
+    "7f10a5188f17": {
+      "screen_id": "7f10a5188f17",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Open the homepage",
+        "element_2",
+        "element_3",
+        "google.com/search?q=Best+Restaurants+in+Dhanbad&oq=best+restaurants+in+dhanbad&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIGCAEQRRg7MgcIAhA",
+        "See 23 tabs",
+        "Customise and control Google Chrome",
+        "element_7",
+        "element_8",
+        "element_9",
+        "element_10",
+        "element_11",
+        "element_12"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "element_2",
+          "x": 620,
+          "y": 1455,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.android.chrome:id/compositor_view_holder"
+        },
+        {
+          "text": "element_3",
+          "x": 224,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "google.com/search?q=Best+Restaurants+in+Dhanbad&oq=best+restaurants+in+dhanbad&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIGCAEQRRg7MgcIAhA",
+          "x": 592,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "See 23 tabs",
+          "x": 988,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 1526,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_8",
+          "x": 620,
+          "y": 427,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_9",
+          "x": 252,
+          "y": 425,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_10",
+          "x": 957,
+          "y": 425,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_11",
+          "x": 620,
+          "y": 1106,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_12",
+          "x": 620,
+          "y": 2198,
+          "cls": "android.view.View",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -47105,7 +47213,8 @@
     "da4580ee1dee|tap:See 23 tabs": "3642b2e6fdba",
     "3642b2e6fdba|type": "e80155e4c1b5",
     "e80155e4c1b5|tap:Switch to this tab.": "f26fcd5f93eb",
-    "f26fcd5f93eb|swipe": "1f432998f498"
+    "f26fcd5f93eb|swipe": "1f432998f498",
+    "1f432998f498|swipe": "7f10a5188f17"
   }
 }
 

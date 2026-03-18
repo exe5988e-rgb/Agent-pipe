@@ -4249,6 +4249,7 @@ if __name__ == "__main__":
 [18:51:51] 
 [3/33] [1★] [settings] Open Settings
 [18:51:51]   max_steps=5  skill_threshold=12  skills=0
+[18:52:30]   PASS  36.3s
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -5390,7 +5391,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-18T18:51:46.166403",
+  "run_at": "2026-03-18T18:52:30.648442",
   "skills_before": 0,
   "skills_current": 0,
   "results": [
@@ -5409,6 +5410,15 @@ if __name__ == "__main__":
       "difficulty": 1,
       "success": true,
       "elapsed_s": 39.2,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Open Settings",
+      "category": "settings",
+      "difficulty": 1,
+      "success": true,
+      "elapsed_s": 36.3,
       "error": null,
       "retried": false
     }
@@ -5647,6 +5657,115 @@ nohup: ignoring input
     termux               25 screens
     launcher             20 screens
     settings             20 screens
+    claude               6 screens
+    wirelesssettings     5 screens
+    dialer               2 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+  TransitionMemory: 532 transitions (277 confirmed, threshold=2)
+[parser] DEBUG normalized: 'done'
+[parser] INFO parsed 'done' -> {'action': 'done'}
+
+########################################################
+  JARVIS  |  Open Settings
+  Device : 192.168.29.48:35253
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 465 screens (0 tainted), 582 transitions
+    whatsapp             166 screens
+    chrome               99 screens
+    youtube              84 screens
+    vending              29 screens
+    termux               25 screens
+    launcher             20 screens
+    settings             20 screens
+    claude               6 screens
+    wirelesssettings     5 screens
+    dialer               2 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+  TransitionMemory: 532 transitions (277 confirmed, threshold=2)
+[init] task_apps: ['settings']
+[init] max_skill_steps: 20 (threshold: 12)
+
+========================================================
+  STEP 1  |  Open Settings
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3644679 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 7 elements (7 labeled, 0 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.android.launcher/.Launcher hash=4ab071e8efcf elements=7
+[step] UI: ['Clipper', 'Instagram', 'SearchButton', 'Phone', 'Messages', 'Photos', 'Camera']
+[map] screen: launcher_launcher (17d655c4)
+[OPT4v2] launcher -> launching settings (com.android.settings)
+[llm] OPT4v2 am start: com.android.settings
+
+========================================================
+  STEP 2  |  Open Settings
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (227163 bytes)
+[ui_parser] activity=com.android.settings/.Settings
+[ui_parser] signal='com.android.settings/.Settings'
+[mem] miss (unknown): com.android.settings/.Settings
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,694) → 'Enjoy exclusive benefits and services designed for you!'
+[ui_parser] child: (0,736) → 'Enjoy exclusive benefits and services designed for you!'
+[ui_parser] child: (0,1049) → 'Aeroplane mode'
+[ui_parser] child: (0,1238) → 'JioFiber-ia1'
+[ui_parser] child: (0,1420) → 'Not connected'
+[ui_parser] child: (0,1602) → 'Mobile network'
+[ui_parser] child: (0,1784) → 'Device Connect'
+[ui_parser] child: (0,2029) → 'Home screen, Lock screen & style'
+[ui_parser] child: (0,2260) → 'Display & brightness'
+[ui_parser] child: (0,2505) → 'Sound & vibration'
+[ui_parser] child: (0,2694) → 'Notifications & Quick Settings'
+[ui_parser] full parse -- 13 elements (13 labeled, 11 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.android.settings/.Settings hash=526863f8fbf6 elements=13
+[step] UI: ['Search box', 'Search', 'Enjoy exclusive benefits and services designed for you!', 'Enjoy exclusive benefits and services designed for you!', 'Aeroplane mode', 'JioFiber-ia1', 'Not connected', 'Mobile network']
+[map] new screen: settings_settings (edd4f565ccb7)
+[tm] transition changed: 17d655c4f84a|opt4_launch:settings 5bef859e -> edd4f565
+[map] transition: launcher_launcher --[opt4_launch:settings]--> settings_settings
+[map] screen: settings_settings (edd4f565)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'done'
+[step] LLM: 'done'
+[step] action: {'action': 'done'}
+[input] DONE — no dispatch
+[mem] invalidated com.android.settings/.Settings
+[skill] too few steps (1) — not saving
+[step] step=2/5 done=True history=['opt4_launch:settings', 'done']
+
+[controller] done in 2 steps
+
+[controller] history:
+  1. opt4_launch:settings
+  2. done
+
+  Screen Map: 466 screens (0 tainted), 582 transitions
+    whatsapp             166 screens
+    chrome               99 screens
+    youtube              84 screens
+    vending              29 screens
+    termux               25 screens
+    settings             21 screens
+    launcher             20 screens
     claude               6 screens
     wirelesssettings     5 screens
     dialer               2 screens

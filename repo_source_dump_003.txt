@@ -3615,6 +3615,11 @@ if __name__ == "__main__":
     "to": "7c51d7e864c3",
     "count": 7,
     "last_seen": 1773794730.298097
+  },
+  "7c51d7e864c3|tap:Swipe down to reveal additional actions": {
+    "to": "4d9720e7da52",
+    "count": 1,
+    "last_seen": 1773794761.8967915
   }
 }
 

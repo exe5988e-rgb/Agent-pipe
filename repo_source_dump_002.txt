@@ -50152,6 +50152,201 @@
           "resource_id": ""
         }
       ]
+    },
+    "4d9720e7da52": {
+      "screen_id": "4d9720e7da52",
+      "package": "com.whatsapp",
+      "activity": "com.whatsapp/.home.ui.HomeActivity",
+      "name": "whatsapp_homeactivity",
+      "labels": [
+        "element_1",
+        "Ask Meta AI or Search",
+        "Ask Meta AI or Search",
+        "element_5",
+        "Unread",
+        "Photos",
+        "Videos",
+        "element_9",
+        "Links",
+        "GIFs",
+        "Audio",
+        "element_13",
+        "element_14",
+        "Documents",
+        "Stickers",
+        "Polls",
+        "element_18",
+        "element_19",
+        "element_20",
+        "element_21",
+        "element_22",
+        "element_23"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 620,
+          "y": 932,
+          "cls": "androidx.viewpager.widget.ViewPager",
+          "resource_id": "com.whatsapp:id/pager"
+        },
+        {
+          "text": "Back",
+          "x": 126,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Ask Meta AI or Search",
+          "x": 704,
+          "y": 223,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.whatsapp:id/search_input"
+        },
+        {
+          "text": "Ask Meta AI or Search",
+          "x": 620,
+          "y": 267,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/my_search_bar"
+        },
+        {
+          "text": "element_5",
+          "x": 620,
+          "y": 589,
+          "cls": "androidx.recyclerview.widget.RecyclerView",
+          "resource_id": "com.whatsapp:id/result_list"
+        },
+        {
+          "text": "Unread",
+          "x": 221,
+          "y": 421,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/search_unread_filter"
+        },
+        {
+          "text": "Photos",
+          "x": 577,
+          "y": 421,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/search_media_filter_image"
+        },
+        {
+          "text": "Videos",
+          "x": 930,
+          "y": 421,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/search_media_filter_video"
+        },
+        {
+          "text": "element_9",
+          "x": 620,
+          "y": 491,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/conversations_archive_header"
+        },
+        {
+          "text": "Links",
+          "x": 198,
+          "y": 589,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/search_media_filter_link"
+        },
+        {
+          "text": "GIFs",
+          "x": 506,
+          "y": 589,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/search_media_filter_gif"
+        },
+        {
+          "text": "Audio",
+          "x": 817,
+          "y": 589,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/search_media_filter_audio"
+        },
+        {
+          "text": "element_13",
+          "x": 620,
+          "y": 708,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "element_14",
+          "x": 126,
+          "y": 708,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "Documents",
+          "x": 262,
+          "y": 757,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/search_media_filter_doc"
+        },
+        {
+          "text": "Stickers",
+          "x": 667,
+          "y": 757,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/search_media_filter_sticker"
+        },
+        {
+          "text": "Polls",
+          "x": 1000,
+          "y": 757,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/search_poll_filter"
+        },
+        {
+          "text": "element_18",
+          "x": 620,
+          "y": 974,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "element_19",
+          "x": 126,
+          "y": 974,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "element_20",
+          "x": 620,
+          "y": 1240,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "element_21",
+          "x": 126,
+          "y": 1240,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "element_22",
+          "x": 620,
+          "y": 1466,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "element_23",
+          "x": 126,
+          "y": 1473,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        }
+      ]
     }
   },
   "transitions": {
@@ -50563,7 +50758,8 @@
     "54ab1d5cd380|swipe": "4098d83e5b9a",
     "4098d83e5b9a|swipe": "36e8ae87b6fc",
     "36e8ae87b6fc|swipe": "a3b75eb433e2",
-    "a3b75eb433e2|opt4_launch:whatsapp": "7c51d7e864c3"
+    "a3b75eb433e2|opt4_launch:whatsapp": "7c51d7e864c3",
+    "7c51d7e864c3|tap:Swipe down to reveal additional actions": "4d9720e7da52"
   }
 }
 

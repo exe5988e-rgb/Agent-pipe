@@ -4855,6 +4855,11 @@ if __name__ == "__main__":
     "to": "e6e2d7bad11c",
     "count": 1,
     "last_seen": 1773858395.053881
+  },
+  "e6e2d7bad11c|type": {
+    "to": "87fee6983a2f",
+    "count": 1,
+    "last_seen": 1773858432.563027
   }
 }
 

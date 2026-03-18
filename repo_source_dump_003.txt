@@ -4820,6 +4820,11 @@ if __name__ == "__main__":
     "to": "f36939de0715",
     "count": 1,
     "last_seen": 1773851898.692183
+  },
+  "f36939de0715|swipe": {
+    "to": "3c7ef8df5fb2",
+    "count": 1,
+    "last_seen": 1773851931.2203963
   }
 }
 

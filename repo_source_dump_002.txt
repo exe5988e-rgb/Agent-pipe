@@ -90164,6 +90164,328 @@
           "resource_id": ""
         }
       ]
+    },
+    "3c7ef8df5fb2": {
+      "screen_id": "3c7ef8df5fb2",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Navigate up",
+        "Clear",
+        "Voice search",
+        "Cast",
+        "More options",
+        "lofi hip hop",
+        "All",
+        "Shorts",
+        "Videos",
+        "Unwatched",
+        "Watched",
+        "Why Lofi Music Is So Evil#relaxing music#lo fi#study music#lofi chill beats#lofi hiphop#chillhop, 467 thousand views, Dancer , 5 months ago \u2013 play Short",
+        "The LOFI Girl Has Finally Finished Studying, 1 million views, Dan Lambert, 3 years ago \u2013 play Short",
+        "More actions",
+        "Lofi Girl\u2019s neighbour \ud83d\udc40, 2.2 million views, Lofi Girl, 3 years ago \u2013 play Short",
+        "More actions",
+        "Go to channel Dan Lambert",
+        "Go to channel Lofi Girl",
+        "1m views \u00b7 3 yr ago",
+        "2.2m views \u00b7 3 yr ago",
+        "Lo-fi girl disappearance SOLVED? #shorts #fyp #viral #lofi #lofigirl #edit #editing #music, 1.2 million views, Noogitz, 2 years ago \u2013 play Short",
+        "Lo-fi girl disappearance SOLVED? #shorts #fyp #viral #lofi #lofigirl #edit #editing #music, 1.2 million views, Noogitz, 2 years ago \u2013 play Short",
+        "Why Lofi Music Is So Evil#relaxing music#lo fi#study music#lofi chill beats#lofi hiphop#chillhop, 467 thousand views, Dancer , 5 months ago \u2013 play Short",
+        "Why Lofi Music Is So Evil#relaxing music#lo fi#study music#lofi chill beats#lofi hiphop#chillhop, 467 thousand views, Dancer , 5 months ago \u2013 play Short",
+        "More actions",
+        "More actions",
+        "Minimised player",
+        "Play video",
+        "Close minimised player",
+        "Go to channel Noogitz"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Clear",
+          "x": 680,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/search_clear"
+        },
+        {
+          "text": "Voice search",
+          "x": 848,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/voice_search"
+        },
+        {
+          "text": "Cast",
+          "x": 1016,
+          "y": 223,
+          "cls": "android.widget.Button",
+          "resource_id": "com.google.android.youtube:id/mdx_entry_point_button"
+        },
+        {
+          "text": "More options",
+          "x": 1170,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "lofi hip hop",
+          "x": 396,
+          "y": 223,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.google.android.youtube:id/search_query"
+        },
+        {
+          "text": "All",
+          "x": 126,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 338,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Videos",
+          "x": 598,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Unwatched",
+          "x": 908,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Watched",
+          "x": 1170,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Why Lofi Music Is So Evil#relaxing music#lo fi#study music#lofi chill beats#lofi hiphop#chillhop, 467 thousand views, Dancer , 5 months ago \u2013 play Short",
+          "x": 620,
+          "y": 1623,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results"
+        },
+        {
+          "text": "The LOFI Girl Has Finally Finished Studying, 1 million views, Dan Lambert, 3 years ago \u2013 play Short",
+          "x": 324,
+          "y": 944,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 550,
+          "y": 484,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Lofi Girl\u2019s neighbour \ud83d\udc40, 2.2 million views, Lofi Girl, 3 years ago \u2013 play Short",
+          "x": 916,
+          "y": 944,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 1142,
+          "y": 484,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Go to channel Dan Lambert",
+          "x": 105,
+          "y": 1318,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Go to channel Lofi Girl",
+          "x": 697,
+          "y": 1318,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "1m views \u00b7 3 yr ago",
+          "x": 374,
+          "y": 1354,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "2.2m views \u00b7 3 yr ago",
+          "x": 984,
+          "y": 1354,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Lo-fi girl disappearance SOLVED? #shorts #fyp #viral #lofi #lofigirl #edit #editing #music, 1.2 million views, Noogitz, 2 years ago \u2013 play Short",
+          "x": 309,
+          "y": 1998,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Lo-fi girl disappearance SOLVED? #shorts #fyp #viral #lofi #lofigirl #edit #editing #music, 1.2 million views, Noogitz, 2 years ago \u2013 play Short",
+          "x": 324,
+          "y": 1957,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Why Lofi Music Is So Evil#relaxing music#lo fi#study music#lofi chill beats#lofi hiphop#chillhop, 467 thousand views, Dancer , 5 months ago \u2013 play Short",
+          "x": 931,
+          "y": 1998,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Why Lofi Music Is So Evil#relaxing music#lo fi#study music#lofi chill beats#lofi hiphop#chillhop, 467 thousand views, Dancer , 5 months ago \u2013 play Short",
+          "x": 916,
+          "y": 1957,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 550,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 1142,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Minimised player",
+          "x": 876,
+          "y": 2331,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.youtube:id/floaty_bar_controls_view"
+        },
+        {
+          "text": "Play video",
+          "x": 624,
+          "y": 2226,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/modern_miniplayer_overlay_action_button"
+        },
+        {
+          "text": "Close minimised player",
+          "x": 1128,
+          "y": 2226,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/modern_miniplayer_close"
+        },
+        {
+          "text": "Go to channel Noogitz",
+          "x": 105,
+          "y": 2378,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Go to channel Dancer",
+          "x": 697,
+          "y": 2378,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "1.2m views \u00b7 2 yr ago",
+          "x": 392,
+          "y": 2414,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "467k views \u00b7 5 mo ago",
+          "x": 993,
+          "y": 2414,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "1 minute 0 seconds of 3 minutes 48 seconds",
+          "x": 876,
+          "y": 2517,
+          "cls": "android.widget.SeekBar",
+          "resource_id": "com.google.android.youtube:id/floaty_bar_time_bar_view"
+        },
+        {
+          "text": "Home",
+          "x": 124,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 372,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Create",
+          "x": 620,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscriptions: New content is available",
+          "x": 868,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "You",
+          "x": 1116,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "1 A.M Study Session \ud83d\udcda [lofi hip hop] \u2013 1 hour, 1 minute, 14 seconds \u2013  \u2013 Lofi Girl - 131 million views - 6 years ago \u2013 play video",
+          "x": 620,
+          "y": 2678,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -90866,7 +91188,8 @@
     "405898b1eee6|tap:All": "cfa5d9c2cc3f",
     "cfa5d9c2cc3f|tap:warriyo mortals": "aa00584ce02f",
     "aa00584ce02f|type": "30bc8a798cd1",
-    "30bc8a798cd1|tap:Edit suggestion lofi hip hop songs hindi": "f36939de0715"
+    "30bc8a798cd1|tap:Edit suggestion lofi hip hop songs hindi": "f36939de0715",
+    "f36939de0715|swipe": "3c7ef8df5fb2"
   }
 }
 

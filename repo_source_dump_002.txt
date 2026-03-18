@@ -72014,7 +72014,7 @@
         "Search",
         "Books"
       ],
-      "visits": 2,
+      "visits": 3,
       "tainted": false,
       "elements": [
         {
@@ -81846,7 +81846,8 @@
     "55537c11ef86|tap:Start voice search": "91b98e24a7db",
     "b18147a134e5|tap:Books": "e921768c497c",
     "e921768c497c|tap:Search Google Play": "774d9889be8e",
-    "774d9889be8e|type": "a5b9d401b079"
+    "774d9889be8e|type": "a5b9d401b079",
+    "a5b9d401b079|tap:Refine search to 'spotify'": "815905513523"
   }
 }
 

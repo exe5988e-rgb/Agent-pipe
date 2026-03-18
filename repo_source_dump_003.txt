@@ -10541,6 +10541,8 @@ RuntimeError: No LLM backend available.
 [ui_parser] cache miss -- full uiautomator dump
 [ui_parser] child: (14,153) → 'Navigate up'[parser] DEBUG normalized: 'tap 3'
 [parser] INFO parsed 'tap 3' -> {'action': 'tap', 'target': 3}
+[parser] DEBUG normalized: 'tap 2'
+[parser] INFO parsed 'tap 2' -> {'action': 'tap', 'target': 2}
 
 
 //===== TERMUXFILE: --task =====

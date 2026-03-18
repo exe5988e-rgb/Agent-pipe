@@ -4230,6 +4230,11 @@ if __name__ == "__main__":
     "to": "5e14b687adda",
     "count": 1,
     "last_seen": 1773823069.6333277
+  },
+  "22cbdc77930c|opt4_launch:contacts": {
+    "to": "5731aaff4c94",
+    "count": 1,
+    "last_seen": 1773840318.0086448
   }
 }
 
@@ -6180,6 +6185,10 @@ nohup: ignoring input
     phone                1 screens
     membership           1 screens
   TransitionMemory: 532 transitions (277 confirmed, threshold=2)
+[parser] DEBUG normalized: 'tap 1'
+[parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
+[parser] DEBUG normalized: 'tap 1'
+[parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
 
 
 //===== TERMUXFILE: --task =====

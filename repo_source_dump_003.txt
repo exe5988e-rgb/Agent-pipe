@@ -4910,6 +4910,11 @@ if __name__ == "__main__":
     "to": "453ba5ac8d59",
     "count": 1,
     "last_seen": 1773859687.0383477
+  },
+  "453ba5ac8d59|type": {
+    "to": "87fee6983a2f",
+    "count": 1,
+    "last_seen": 1773859718.6726959
   }
 }
 

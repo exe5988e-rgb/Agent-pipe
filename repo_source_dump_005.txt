@@ -1,3 +1,12 @@
+//===== TERMUXFILE: --task =====
+
+
+//===== TERMUXFILE: --device =====
+
+
+//===== TERMUXFILE: --max-steps =====
+
+
 //===== TERMUXFILE: scripts/build_runner.sh =====
 #!/data/data/com.termux/files/usr/bin/bash
 #

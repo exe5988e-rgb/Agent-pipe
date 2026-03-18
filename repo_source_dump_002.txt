@@ -81770,6 +81770,121 @@
           "resource_id": ""
         }
       ]
+    },
+    "67d20aa8828e": {
+      "screen_id": "67d20aa8828e",
+      "package": "com.whatsapp",
+      "activity": "com.whatsapp/.Conversation",
+      "name": "whatsapp_conversation",
+      "labels": [
+        "Mummy",
+        "element_3",
+        "Video call",
+        "Voice call",
+        "More options",
+        "Jarvis Gauntlet done. 33/33 passed. 6 new skills. Total 6 skills. 79 min.",
+        "Emoji, GIFs and stickers",
+        "Attach",
+        "Payment",
+        "Camera",
+        "Voice message, Button. Double tap and hold to record, slide left to cancel recording, slide up to lock recording on. Release to send.",
+        "Message"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Mummy",
+          "x": 550,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/conversation_contact"
+        },
+        {
+          "text": "Back",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/whatsapp_toolbar_home"
+        },
+        {
+          "text": "element_3",
+          "x": 252,
+          "y": 237,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_photo_view"
+        },
+        {
+          "text": "Video call",
+          "x": 848,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Voice call",
+          "x": 1016,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "More options",
+          "x": 1170,
+          "y": 237,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/menuitem_overflow"
+        },
+        {
+          "text": "Jarvis Gauntlet done. 33/33 passed. 6 new skills. Total 6 skills. 79 min.",
+          "x": 620,
+          "y": 933,
+          "cls": "android.widget.ListView",
+          "resource_id": "android:id/list"
+        },
+        {
+          "text": "Emoji, GIFs and stickers",
+          "x": 98,
+          "y": 1626,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/emoji_picker_btn"
+        },
+        {
+          "text": "Attach",
+          "x": 627,
+          "y": 1626,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/input_attach_button"
+        },
+        {
+          "text": "Payment",
+          "x": 795,
+          "y": 1626,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/payment_button"
+        },
+        {
+          "text": "Camera",
+          "x": 956,
+          "y": 1626,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/camera_btn"
+        },
+        {
+          "text": "Voice message, Button. Double tap and hold to record, slide left to cancel recording, slide up to lock recording on. Release to send.",
+          "x": 1141,
+          "y": 1626,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/voice_note_btn"
+        },
+        {
+          "text": "Message",
+          "x": 362,
+          "y": 1625,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.whatsapp:id/entry"
+        }
+      ]
     }
   },
   "transitions": {
@@ -82430,7 +82545,8 @@
     "1025dd6b857e|tap:21": "d0e35202b7f2",
     "6dcc835738aa|tap:Jio \u0915\u094b \u091a\u0941\u0928\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f \u0906\u092a\u0915\u093e \u0927\u0928\u094d\u092f\u0935\u093e\u0926! \u2764\ufe0f\u2026": "c1027f04709d",
     "c1027f04709d|tap:More options": "35cc9568adf1",
-    "35cc9568adf1|type": "6d26e82dd7ee"
+    "35cc9568adf1|type": "6d26e82dd7ee",
+    "6d26e82dd7ee|tap:None": "67d20aa8828e"
   }
 }
 

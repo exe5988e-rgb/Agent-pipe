@@ -4311,6 +4311,7 @@ if __name__ == "__main__":
 [19:02:13] 
 [11/33] [2★] [youtube] Open YouTube and go to Subscriptions
 [19:02:13]   max_steps=8  skill_threshold=12  skills=1
+[19:03:33]   PASS  77.3s
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -5452,9 +5453,9 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-18T19:02:08.131327",
+  "run_at": "2026-03-18T19:03:33.677324",
   "skills_before": 0,
-  "skills_current": 1,
+  "skills_current": 2,
   "results": [
     {
       "task": "Open WhatsApp",
@@ -5543,6 +5544,15 @@ if __name__ == "__main__":
       "difficulty": 2,
       "success": true,
       "elapsed_s": 13.7,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Open YouTube and go to Subscriptions",
+      "category": "youtube",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 77.3,
       "error": null,
       "retried": false
     }

@@ -51074,7 +51074,7 @@
         "Voice message, Button. Double tap and hold to record, slide left to cancel recording, slide up to lock recording on. Release to send.",
         "Message"
       ],
-      "visits": 13,
+      "visits": 14,
       "tainted": false,
       "elements": [
         {

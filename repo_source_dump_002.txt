@@ -72889,6 +72889,178 @@
           "resource_id": ""
         }
       ]
+    },
+    "3b20c5a1dd9f": {
+      "screen_id": "3b20c5a1dd9f",
+      "package": "com.android.vending",
+      "activity": "com.android.vending/.AssetBrowserActivity",
+      "name": "vending_assetbrowseractivity",
+      "labels": [
+        "Navigate up",
+        "spotify",
+        "Clear",
+        "Refine search to 'spotify'",
+        "Refine search to 'spotify'",
+        "Refine search to 'music streaming'",
+        "Refine search to 'music streaming'",
+        "Refine search to 'spotify tv'",
+        "Refine search to 'spotify tv'",
+        "Refine search to 'spotify for artists'",
+        "Refine search to 'spotify for artists'",
+        "Refine search to 'spotify for podcasters'",
+        "Refine search to 'spotify for podcasters'",
+        "Refine search to 'spotify kids'",
+        "Refine search to 'spotify kids'",
+        "Refine search to 'spotify lite'",
+        "Refine search to 'spotify lite'",
+        "re",
+        "Dee",
+        "re"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "spotify",
+          "x": 620,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": ""
+        },
+        {
+          "text": "Clear",
+          "x": 1142,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'spotify'",
+          "x": 620,
+          "y": 437,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'spotify'",
+          "x": 1107,
+          "y": 437,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'music streaming'",
+          "x": 620,
+          "y": 633,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'music streaming'",
+          "x": 1107,
+          "y": 633,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'spotify tv'",
+          "x": 620,
+          "y": 829,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'spotify tv'",
+          "x": 1107,
+          "y": 829,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'spotify for artists'",
+          "x": 620,
+          "y": 1025,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'spotify for artists'",
+          "x": 1107,
+          "y": 1025,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'spotify for podcasters'",
+          "x": 620,
+          "y": 1221,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'spotify for podcasters'",
+          "x": 1107,
+          "y": 1221,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'spotify kids'",
+          "x": 620,
+          "y": 1417,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'spotify kids'",
+          "x": 1107,
+          "y": 1417,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'spotify lite'",
+          "x": 620,
+          "y": 1613,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'spotify lite'",
+          "x": 1107,
+          "y": 1613,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "re",
+          "x": 155,
+          "y": 2744,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Dee",
+          "x": 465,
+          "y": 2744,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "re",
+          "x": 1085,
+          "y": 2744,
+          "cls": "android.view.View",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -73499,7 +73671,8 @@
     "2a3055394a68|tap:Refine search to 'spotify'": "815905513523",
     "571ebe27696a|tap:Voice search": "80ff94df1647",
     "80ff94df1647|type": "87fee6983a2f",
-    "87fee6983a2f|tap:Edit suggestion warriyo mortals slowed reverb": "8bd4aa0f7819"
+    "87fee6983a2f|tap:Edit suggestion warriyo mortals slowed reverb": "8bd4aa0f7819",
+    "815905513523|tap:Voice Search": "3b20c5a1dd9f"
   }
 }
 

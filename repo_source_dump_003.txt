@@ -10186,7 +10186,22 @@ nohup: ignoring input
 [ui_parser] child: (1100,335) → 'Watched'
 [ui_parser] child: (0,475) → 'Warriyo - Mortals (feat. Laura Brehm) | Future Trap | NCS - Copyright Free Music – 3 minutes, 50 seconds – Go to channel NoCopyrightSounds – NoCopyrightSounds - 311 million views - 9 years ago – play video'
 [ui_parser] child: (0,475) → 'Warriyo - Mortals (ft. Laura Brehm) – 3 minutes, 49 seconds – Go to channel Warriyo – Warriyo - 37 million views - 9 years ago – play video'
-[ui_parser] child: (0,1508) → 'Warriyo - Mortals (feat. Laura Brehm) | Future Trap | NCS - Copyright Free Music – 3 minutes, 50 seconds – Go to channel NoCopyrightSounds – NoCopyrightSounds - 311 million views - 9 years ago – play video'
+[ui_parser] child: (0,1508) → 'Warriyo - Mortals (feat. Laura Brehm) | Future Trap | NCS - Copyright Free Music – 3 minutes, 50 seconds – Go to channel NoCopyrightSounds – NoCopyrightSounds - 311 million views - 9 years ago – play video'Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 271, in run
+    run_step(state, device=device, model_path=model_path,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             max_skill_steps=max_skill_steps)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 223, in run_step
+    llm_out = generate(prompt, model_path=model_path)
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/reasoning/llm_client.py", line 136, in generate
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
 
 //===== TERMUXFILE: --task =====
 

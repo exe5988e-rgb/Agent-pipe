@@ -10243,6 +10243,8 @@ RuntimeError: No LLM backend available.
 [parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
 [parser] DEBUG normalized: 'type spotify'
 [parser] INFO parsed 'type spotify' -> {'action': 'type', 'text': 'spotify'}
+[parser] DEBUG normalized: 'tap 4'
+[parser] INFO parsed 'tap 4' -> {'action': 'tap', 'target': 4}
 
 
 //===== TERMUXFILE: --task =====

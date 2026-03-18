@@ -5906,6 +5906,146 @@ RuntimeError: No LLM backend available.
 [parser] DEBUG normalized: 'tap 2'
 [parser] INFO parsed 'tap 2' -> {'action': 'tap', 'target': 2}
 
+########################################################
+  JARVIS  |  Search for lofi hip hop on YouTube and play the first video
+  Device : 192.168.29.48:33117
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 556 screens (0 tainted), 672 transitions
+    whatsapp             186 screens
+    chrome               112 screens
+    youtube              110 screens
+    vending              46 screens
+    termux               26 screens
+    settings             25 screens
+    launcher             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+    notificationmanager  1 screens
+    battery              1 screens
+  TransitionMemory: 622 transitions (282 confirmed, threshold=2)
+[init] task_apps: ['youtube']
+[init] max_skill_steps: 20 (threshold: 12)
+
+========================================================
+  STEP 1  |  Search for lofi hip hop on YouTube and play the first video
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3308562 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Mostly cloudy'
+[ui_parser] OCR: (841,1475)-(1009,1671) → 'lt'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.launcher/.Launcher hash=9d86529c2a6d elements=26
+[step] UI: ['Clock', '21', ':', '45', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (5731aaff)
+[OPT4v2] launcher -> launching youtube (com.google.android.youtube)
+[llm] OPT4v2 am start: com.google.android.youtube
+
+========================================================
+  STEP 2  |  Search for lofi hip hop on YouTube and play the first video
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (863531 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (540,146) → 'Auto-play is off'
+[ui_parser] child: (0,837) → 'Drag handle'
+[ui_parser] child: (0,1051) → 'Spotify 🎧: https://open.spotify.c...\u200b\nItunes 💿: https://itunes.apple.c...\u200b\n\nSupport on all platforms: https://ncs.lnk.to/Mor...\u200b\n\n...more'
+[ui_parser] child: (56,2123) → 'Get answers, explore topics and more'
+[ui_parser] child: (42,2333) → 'Recommend related content'
+[ui_parser] child: (0,2537) → 'Shorts remixing this video, 9.6k Shorts'
+[ui_parser] full parse -- 26 elements (26 labeled, 6 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=31f8beafee57 elements=26
+[step] UI: ['Expand Mini Player', 'Minimise', 'Auto-play is off', 'Cast', 'Captions', 'More options', 'Previous video', 'Next video']
+[map] new screen: youtube_shell$homeactivity (0e2e17571165)
+[tm] transition changed: 5731aaff4c94|opt4_launch:youtube 4811387d -> 0e2e1757
+[map] transition: launcher_launcher --[opt4_launch:youtube]--> youtube_shell$homeactivity
+[map] screen: youtube_shell$homeactivity (0e2e1757)
+[skill] matched: 'search for on youtube'  score=1.00  act=True
+[skill] cannot resolve: 'Search'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 13'
+[step] LLM: 'tap 13'
+[step] action: {'action': 'tap', 'target': 13}
+[input] dispatching: TouchEvent(x=1156, y=963)
+[input] dispatching: TouchEvent(x=1156, y=963)
+[input] adb -s 192.168.29.48:33117 shell input tap 1156 963
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[step] step=2/12 done=False history=['opt4_launch:youtube', 'tap [13] Close']
+
+========================================================
+  STEP 3  |  Search for lofi hip hop on YouTube and play the first video
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1006949 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (540,146) → 'Auto-play is off'
+[ui_parser] child: (0,837) → 'Warriyo - Mortals (ft. Laura Brehm)'
+[ui_parser] child: (0,837) → 'Sponsored – Get 30 GB+ of cloud storage\nGet expanded cloud storage for photos, videos, and files.\nGoogle – Visit site'
+[ui_parser] child: (35,1072) → 'Warriyo, Official Artist Channel 129k subscribers'
+[ui_parser] child: (42,1254) → 'March listeners ❤️🔥'
+[ui_parser] child: (42,1254) → 'Comments'
+[ui_parser] child: (42,1359) → 'March listeners ❤️🔥'
+[ui_parser] full parse -- 26 elements (25 labeled, 7 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=6dcad6624b3f elements=26
+[step] UI: ['Expand Mini Player', 'Minimise', 'Auto-play is off', 'Cast', 'Captions', 'More options', 'Previous video', 'Next video']
+[map] new screen: youtube_shell$homeactivity (3ae0a21c45be)
+[map] transition: youtube_shell$homeactivity --[tap:Spotify 🎧: https://open.spotify.c...​
+Itunes 💿: https://itunes.apple.c...​
+
+Support on all platforms: https://ncs.lnk.to/Mor...​
+
+...more]--> youtube_shell$homeactivity
+[map] screen: youtube_shell$homeactivity (3ae0a21c)
+[skill] matched: 'search for on youtube'  score=1.00  act=True
+[skill] cannot resolve: 'Search'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 2'
+[step] LLM: 'tap 2'
+[step] action: {'action': 'tap', 'target': 2}
+[input] dispatching: TouchEvent(x=84, y=223)
+[input] dispatching: TouchEvent(x=84, y=223)
+[input] adb -s 192.168.29.48:33117 shell input tap 84 223
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[step] step=3/12 done=False history=['opt4_launch:youtube', 'tap [13] Close', 'tap [2] Minimise']
+
+========================================================
+  STEP 4  |  Search for lofi hip hop on YouTube and play the first video
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1997128 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (56,335) → 'All'
+[ui_parser] child: (224,335) → 'Shorts'
+[ui_parser] child: (481,335) → 'Videos'
+[ui_parser] child: (744,335) → 'Unwatched'
+[ui_parser] child: (1100,335) → 'Watched'
+[ui_parser] child: (0,475) → 'warriyo - mortals (feat. laura brehm) Mahabharat#bhagvadgita #srikrishna #jayshreeram #slok, 1 million views, Urban headshot, 1 year ago – play Short'
 
 //===== TERMUXFILE: --task =====
 
@@ -9616,142 +9756,5 @@ def build_prompt(
     lines.append("Action:")
 
     return "\n".join(lines)
-
-
-//===== TERMUXFILE: jarvis-agent/reasoning/llm_client.py =====
-"""
-reasoning/llm_client.py
-
-LLM backend priority chain (two-device setup):
-  1. Phone B Claude bridge  http://192.168.29.110:8890
-  2. Local proxy            http://127.0.0.1:8888
-  3. Llamafile direct       http://127.0.0.1:8080
-  4. subprocess llama-cli
-
-OPT-4 v2 (Session 6):
-  generate() accepts bypass_pkg=<package>.
-  When set, fires am start on Phone A directly — no network call at all.
-  Returns the special token 'opt4_bypass' so controller can handle it.
-"""
-
-import json
-import os
-import subprocess
-import shutil
-import urllib.request
-
-PHONE_B_URL   = "http://192.168.29.110:8890"
-PROXY_URL     = "http://127.0.0.1:8888"
-LLAMAFILE_URL = "http://127.0.0.1:8080"
-DEFAULT_MODEL = os.path.expanduser(
-    "~/ai-workspace/llama.cpp/models/Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf"
-)
-LLAMA_BINS    = ["llama-cli", "llama-simple-chat", "llamafile", "main"]
-PHONE_A_SERIAL = "192.168.29.48:38577"
-ADB            = "/data/data/com.termux/files/usr/bin/adb"
-
-def _post(url, payload, timeout=90):
-    body = json.dumps(payload).encode()
-    req  = urllib.request.Request(
-        url, data=body,
-        headers={"Content-Type": "application/json"},
-        method="POST"
-    )
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return json.loads(r.read().decode())
-
-def _ok(url, t=3):
-    try:
-        with urllib.request.urlopen(url, timeout=t) as r:
-            return r.status == 200
-    except:
-        return False
-
-def _am_start(package: str):
-    """Fire monkey launcher intent on Phone A for package."""
-    print(f"[llm] OPT4v2 am start: {package}")
-    subprocess.run(
-        [ADB, "-s", PHONE_A_SERIAL,
-         "shell", "monkey", "-p", package,
-         "-c", "android.intent.category.LAUNCHER", "1"],
-        capture_output=True, timeout=10
-    )
-
-def generate(prompt, model_path=DEFAULT_MODEL, max_tokens=256,
-             temperature=0.1, timeout=90, bypass_pkg=None):
-    """
-    bypass_pkg: package to launch via am start on Phone A.
-                When set, skips all backends and returns 'opt4_bypass'.
-    """
-    if bypass_pkg:
-        _am_start(bypass_pkg)
-        return "opt4_bypass"
-
-    print(f"[llm] prompt tail: ...{prompt[-80:].strip()!r}")
-
-    if _ok(f"{PHONE_B_URL}/health"):
-        try:
-            d = _post(f"{PHONE_B_URL}/chat", {"prompt": prompt}, timeout=timeout)
-            if d.get("success"):
-                out = (d.get("response") or "").strip()
-                print(f"[llm] Phone B (Claude): {out[:80]!r}")
-                return out
-            else:
-                print(f"[llm] Phone B error: {d.get('error')}")
-        except Exception as e:
-            print(f"[llm] Phone B unreachable: {e}")
-
-    if _ok(f"{PROXY_URL}/health"):
-        try:
-            d = _post(f"{PROXY_URL}/chat_sync", {"query": prompt}, timeout=timeout)
-            if d.get("success"):
-                out = (d.get("response") or "").strip()
-                print(f"[llm] proxy (local): {out[:80]!r}")
-                return out
-        except Exception as e:
-            print(f"[llm] proxy err: {e}")
-
-    if _ok(f"{LLAMAFILE_URL}/health"):
-        try:
-            d = _post(f"{LLAMAFILE_URL}/v1/chat/completions",
-                      {"messages":    [{"role": "user", "content": prompt}],
-                       "max_tokens":  max_tokens,
-                       "temperature": temperature},
-                      timeout=timeout)
-            out = d["choices"][0]["message"]["content"].strip()
-            print(f"[llm] llamafile: {out[:80]!r}")
-            return out
-        except Exception as e:
-            print(f"[llm] llamafile err: {e}")
-
-    mp     = os.path.expanduser(model_path)
-    binary = next((shutil.which(b) for b in LLAMA_BINS if shutil.which(b)), None)
-    if not binary or not os.path.isfile(mp):
-        raise RuntimeError(
-            "No LLM backend available.\n"
-            "  Phone B offline? Check: curl http://192.168.29.110:8890/health\n"
-            "  Local LLM down? Run:    bash ~/jarvis_server_init.sh"
-        )
-    r = subprocess.run(
-        [binary, "-m", mp, "-p", prompt,
-         "-n", str(max_tokens), "--temp", str(temperature),
-         "--no-display-prompt", "-e", "--log-disable"],
-        capture_output=True, text=True, timeout=timeout
-    )
-    out = "\n".join(
-        l for l in r.stdout.strip().splitlines()
-        if not l.startswith("llama") and not l.startswith("[")
-    ).strip()
-    print(f"[llm] subprocess: {out[:80]!r}")
-    return out
-
-def health_check():
-    return {
-        "phone_b":   _ok(f"{PHONE_B_URL}/health"),
-        "proxy":     _ok(f"{PROXY_URL}/health"),
-        "llamafile": _ok(f"{LLAMAFILE_URL}/health"),
-        "binary":    next((shutil.which(b) for b in LLAMA_BINS
-                           if shutil.which(b)), None),
-    }
 
 

@@ -9561,7 +9561,101 @@ Traceback (most recent call last):
 RuntimeError: No LLM backend available.
   Phone B offline? Check: curl http://192.168.29.110:8890/health
   Local LLM down? Run:    bash ~/jarvis_server_init.sh
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 271, in run
+    run_step(state, device=device, model_path=model_path,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             max_skill_steps=max_skill_steps)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 223, in run_step
+    llm_out = generate(prompt, model_path=model_path)
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/reasoning/llm_client.py", line 136, in generate
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
 
+[ui_parser] child: (168,139) → 'Connection is secure'
+[ui_parser] child: (0,335) → 'Ahmedabad 98° Bengaluru 79° Bhopal 94° Chandigarh 79° Chennai 86° Delhi 87° Dispur 79° Faridabad 90° Guwahati 79° Jaipur 91° Kolkata 85° Lucknow 94° Ludhiana 71° Mumbai 85° New Delhi 89° Patna 93° Pune 89° Raipur 87° Ranchi 88° Surat 88°. Weather News See More · Hawaii Kona storm sweeps state with 135-mph winds,\xa0...'
+[ui_parser] child: (0,706) → 'Filters and topics'
+[ui_parser] child: (14,706) → 'AI Mode'
+[ui_parser] child: (287,706) → 'All'
+[ui_parser] child: (427,706) → 'News'
+[ui_parser] child: (637,706) → 'Images'
+[ui_parser] child: (885,706) → 'Videos'
+[ui_parser] child: (1127,706) → 'Forums'
+[ui_parser] child: (0,877) → 'Home Rohraband, Jharkhand'
+[ui_parser] child: (0,1182) → 'Ahmedabad 98° Bengaluru 79° Bhopal 94° Chandigarh 79° Chennai 86° Delhi 87° Dispur 79° Faridabad 90° Guwahati 79° Jaipur 91° Kolkata 85° Lucknow 94° Ludhiana 71° Mumbai 85° New Delhi 89° Patna 93° Pune 89° Raipur 87° Ranchi 88° Surat 88°. Weather News See More · Hawaii Kona storm sweeps state with 135-mph winds,\xa0...'
+[ui_parser] child: (0,1182) → 'More options for Weather'
+[ui_parser] child: (0,1378) → 'Wed, Partly cloudy, High of 36, Low of 21, Selected'
+[ui_parser] child: (56,1392) → 'Now, 25°C, Mostly cloudy, Feels like 26°C'
+[ui_parser] child: (0,1721) → '10\u202fpm,25°C,Partly cloudy'
+[ui_parser] child: (0,2508) → 'Wed, Partly cloudy, High of 36, Low of 21, Selected'
+[ui_parser] child: (56,2508) → 'Wed, Partly cloudy, High of 36, Low of 21, Selected'
+[ui_parser] child: (294,2508) → 'Thu, Partly sunny, High of 34, Low of 21'
+[ui_parser] child: (770,2508) → 'Sat, Rain, High of 28, Low of 17'
+[ui_parser] child: (1008,2508) → 'Sun, Partly sunny, High of 30, Low of 18'
+[ui_parser] full parse -- 44 elements (36 labeled, 21 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=aeb8d9a25b6f elements=44
+[step] UI: ['Open the homepage', 'Ahmedabad 98° Bengaluru 79° Bhopal 94° Chandigarh 79° Chennai 86° Delhi 87° Dispur 79° Faridabad 90° Guwahati 79° Jaipur 91° Kolkata 85° Lucknow 94° Ludhiana 71° Mumbai 85° New Delhi 89° Patna 93° Pune 89° Raipur 87° Ranchi 88° Surat 88°. Weather News See More · Hawaii Kona storm sweeps state with 135-mph winds,\xa0...', 'Connection is secure', 'google.com/search?q=weather+today&oq=&gs_lcrp=EgZjaHJvbWUqCQgBECMYJxjqAjIPCAAQIxgnGOoCGPAFGJ4GMgkIARAjGCcY6gIyCQgCECMYJxjqAjIJCAMQIxgnGOoCMgkIBBAjGCcY6gIyCQgF', 'See 30 tabs', 'Customise and control Google Chrome', 'Ahmedabad 98° Bengaluru 79° Bhopal 94° Chandigarh 79° Chennai 86° Delhi 87° Dispur 79° Faridabad 90° Guwahati 79° Jaipur 91° Kolkata 85° Lucknow 94° Ludhiana 71° Mumbai 85° New Delhi 89° Patna 93° Pune 89° Raipur 87° Ranchi 88° Surat 88°. Weather News See More · Hawaii Kona storm sweeps state with 135-mph winds,\xa0...', 'Google']
+[map] new screen: chrome_main (9422593bf3dd)
+[tm] transition changed: 91b98e24a7db|tap:Refine: weather today 99751df5 -> 9422593b
+[map] transition: chrome_main --[tap:Refine: weather today]--> chrome_main
+[map] screen: chrome_main (9422593b)
+[skill] matched: 'open chrome and go to'  score=1.00  act=True
+[skill] cannot resolve: 'Switch to this tab.'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B timeout/error (attempt 1/3): timed out
+[llm] Retrying in 5s...
+[llm] Phone B timeout/error (attempt 2/3): timed out
+[llm] Retrying in 5s...
+[llm] Phone B failed after 3 attempts: timed out
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 5  |  Search for weather today in Chrome
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (723308 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] HIT com.android.chrome/com.google.android.apps.chrome.Main hash=aeb8d9a25b6f hits=1 elements=44
+[step] UI: ['Open the homepage', 'Ahmedabad 98° Bengaluru 79° Bhopal 94° Chandigarh 79° Chennai 86° Delhi 87° Dispur 79° Faridabad 90° Guwahati 79° Jaipur 91° Kolkata 85° Lucknow 94° Ludhiana 71° Mumbai 85° New Delhi 89° Patna 93° Pune 89° Raipur 87° Ranchi 88° Surat 88°. Weather News See More · Hawaii Kona storm sweeps state with 135-mph winds,\xa0...', 'Connection is secure', 'google.com/search?q=weather+today&oq=&gs_lcrp=EgZjaHJvbWUqCQgBECMYJxjqAjIPCAAQIxgnGOoCGPAFGJ4GMgkIARAjGCcY6gIyCQgCECMYJxjqAjIJCAMQIxgnGOoCMgkIBBAjGCcY6gIyCQgF', 'See 30 tabs', 'Customise and control Google Chrome', 'Ahmedabad 98° Bengaluru 79° Bhopal 94° Chandigarh 79° Chennai 86° Delhi 87° Dispur 79° Faridabad 90° Guwahati 79° Jaipur 91° Kolkata 85° Lucknow 94° Ludhiana 71° Mumbai 85° New Delhi 89° Patna 93° Pune 89° Raipur 87° Ranchi 88° Surat 88°. Weather News See More · Hawaii Kona storm sweeps state with 135-mph winds,\xa0...', 'Google']
+[map] screen: chrome_main (9422593b)
+[skill] matched: 'open chrome and go to'  score=1.00  act=True
+[skill] cannot resolve: 'Switch to this tab.'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 6  |  Search for weather today in Chrome
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (722292 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] HIT com.android.chrome/com.google.android.apps.chrome.Main hash=aeb8d9a25b6f hits=2 elements=44
+[step] UI: ['Open the homepage', 'Ahmedabad 98° Bengaluru 79° Bhopal 94° Chandigarh 79° Chennai 86° Delhi 87° Dispur 79° Faridabad 90° Guwahati 79° Jaipur 91° Kolkata 85° Lucknow 94° Ludhiana 71° Mumbai 85° New Delhi 89° Patna 93° Pune 89° Raipur 87° Ranchi 88° Surat 88°. Weather News See More · Hawaii Kona storm sweeps state with 135-mph winds,\xa0...', 'Connection is secure', 'google.com/search?q=weather+today&oq=&gs_lcrp=EgZjaHJvbWUqCQgBECMYJxjqAjIPCAAQIxgnGOoCGPAFGJ4GMgkIARAjGCcY6gIyCQgCECMYJxjqAjIJCAMQIxgnGOoCMgkIBBAjGCcY6gIyCQgF', 'See 30 tabs', 'Customise and control Google Chrome', 'Ahmedabad 98° Bengaluru 79° Bhopal 94° Chandigarh 79° Chennai 86° Delhi 87° Dispur 79° Faridabad 90° Guwahati 79° Jaipur 91° Kolkata 85° Lucknow 94° Ludhiana 71° Mumbai 85° New Delhi 89° Patna 93° Pune 89° Raipur 87° Ranchi 88° Surat 88°. Weather News See More · Hawaii Kona storm sweeps state with 135-mph winds,\xa0...', 'Google']
+[map] screen: chrome_main (9422593b)
+[skill] matched: 'open chrome and go to'  score=1.00  act=True
+[skill] cannot resolve: 'Switch to this tab.'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 7  |  Search for weather today in Chrome
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (716016 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
 
 //===== TERMUXFILE: --task =====
 
@@ -12610,199 +12704,4 @@ class TransitionMemory:
         print(f"  TransitionMemory: {st['total_transitions']} transitions "
               f"({st['confirmed']} confirmed, threshold={MIN_OBSERVATIONS})")
 
-
-//===== TERMUXFILE: perception/__pycache__/screen_map.cpython-313.pyc =====
-
-
-    i1                         S r SSKrSSKrSSKrSSKJr  SSKJr  \R                  " 5       S-  S-  r	1 Skr
-/ SQr1 S	kr1 S
-kr
-1 SkrS\S
-\4S jrS\S
-\4S jrS\S
-\4S jrS\S
-\4S jr " S S5      rg)u  
-perception/screen_map.py  —  Screen Understanding + App Navigation Graph
-
-Session 8 fixes:
-  - Canonical screen deduplication: filter-tab variants of HomeActivity all
-    resolve to one canonical screen_id so the graph stays small and coherent.
-  - Unknown-screen filter: screens with package=="unknown" are never registered.
-  - Call-overlay guard: screens whose labels include active-call markers
-    (Turn microphone off / Leave call / WhatsApp voice call) are recognised as
-    a call-overlay variant of their base screen and kept separate but labelled.
-  - get_canonical_id(): returns the highest-visit variant for a given activity
-    so controller.py and transition_memory.py always use a stable anchor node.
-
-Data stored in ~/workflows/screen_map.json:
-  screens:     fingerprinted UI states
-  transitions: (screen_id, action) → screen_id edges
-
-Usage:
-  from perception.screen_map import ScreenMap
-  sm = ScreenMap()
-  screen_id = sm.identify(activity, elements)
-  path = sm.find_path(start_id, target_id)
-    N)Path)Optional	workflowszscreen_map.json>	    123okbackdonehomecancel)z^\d{1,2}:\d{2}(:\d{2})?$z^\d+$z^[+\-]?\d+[\d.,]*$>   buypayblockcleareraseresetdeleteformatlogoutremovereportdisablefactoryunblockpurchase	uninstall
-deactivatesign outturn off>   
-leave call
-minimize calladd person to callturn microphone offwhatsapp voice call>   gifsaudiolinkspollsphotosunreadvideosstickers	documentsadd new list
-manage family
-manage unread
-search familymanage favouritessearch group chatssearch unread chatsall filter, , selectedsearch favourite chatsfamily filter, , unselectedgroups filter, , unselectedunread filter, 0, unselectedunread filter, 2, unselectedfavourites filter, , unselectedtextreturnc                     U R                  5       [        ;   a  g[         H.  n[        R                  " XR                  5       5      (       d  M.    g   g)NTF)lower
-_IGNORE_TEXTS_IGNORE_PATTERNSrematchstrip)r>   pats     C/data/data/com.termux/files/home/workflows/perception/screen_map.py_is_dynamicrI   S   s:    zz|}$
-88C&&       c                 V   ^ U R                  5       m[        U4S j[         5       5      $ )Nc              3   ,   >#    U  H	  oT;   v   M     g 7fN ).0wtls     rH   	<genexpr> _is_dangerous.<locals>.<genexpr>^   s     .
-1Bw
-s   )rA   any
-_DANGER_WORDS)r>   rQ   s    @rH   
-_is_dangerousrV   \   s    	
-B.
-...rJ   labelsc                    ^ U  Vs1 s H  oR                  5       iM     snm[        U4S j[         5       5      $ s  snf )z?Return True if any call-overlay label is present in label list.c              3   J   >#    U  H  oS R                  T5      ;   v   M     g7f) N)join)rO   cllows     rH   rR   $_has_call_overlay.<locals>.<genexpr>d   s     B-ArSXXc]"-As    #)rA   rT   _CALL_OVERLAY_LABELS)rW   lr]   s     @rH   _has_call_overlayra   a   s2    $
-%f779f
-%CB-ABBB &s   ;c                 d    U  Vs/ s H  oR                  5       [        ;  d  M  UPM      sn$ s  snf )z@Remove filter-tab / search-overlay labels before fingerprinting.)rA   _HOME_FILTER_LABELS)rW   r`   s     rH   _strip_filter_labelsrd   g   s&    Fv!2E!EAvFFFs   --c                   <   \ rS rSrSrS rS\4S jrS r\	S\
-S\S\
-4S	 j5       r\	S
-\S\S\
-4S j5       rS\
-S\S\\
-   4S
- jrS\
-S\\   4S jrS\
-S\\
-   4S jrS\
-S\\
-   4S jrSS\S\\
-   4S jjrS\
-S\
-S\
-4S jrSS\
-S\
-S\\   4S jjrS\4S jrS rSrg) 	ScreenMapl   z
-Stores screen fingerprints and navigation graph.
-
-Screen fingerprint:
-  screen_id = md5(package + "/" + activity_tail + "|" + sorted_stable_labels)
-
-Navigation graph:
-  transitions[(screen_id, element_text)] = target_screen_id
-c                 .    U R                  5       U l        g rM   )_load_dataselfs    rH   __init__ScreenMap.__init__w   s    ZZ\
-rJ   r?   c                     [         R                  5       (       a)   [        R                  " [         R	                  5       5      $ 0 0 S.$ ! [
-         a     Nf = f)N)screenstransitions)MAP_FILEexistsjsonloads	read_text	Exceptionrk   s    rH   ri   ScreenMap._load|   sM    ??
-zz("4"4"677 b11  
-
-s   'A 
-AAc                     [         R                  R                  SSS9  [         R                  [        R
-                  " U R                  SS95        g )NT)parentsexist_ok   )indent)rr   parentmkdir
-write_textrt   dumpsrj   rk   s    rH   _saveScreenMap._save   s6    dT:DJJtzz!<=rJ   activityelementsc           	      d   SU ;   a  U R                  S5      S   OU nU R                  S5      S   R                  S5      S   nU Vs/ s HP  nUR                  SS5      (       d  M  [        UR                  SS5      5      (       a  M>  UR                  SS5      PMR     nnSU;   d  SUR                  5       ;   a  [	        U5      nOUn[        [
-        U5      5      nU SU S	S	R                  US
-S 5       3n[        R                  " UR                  5       5      R                  5       S
-S $ s  snf )
-z
-Stable hash for a screen state.
-Filter-tab variants of HomeActivity collapse to one fingerprint.
-Call overlays get their own fingerprint (tainted screen).
-/r   .r>   r   HomeActivityhomeactivity|N      )splitgetrI   rA   rd   sortedsetr[   hashlibmd5encode	hexdigest)	r   r   pkgact_taile
-raw_labelsrW   
-labels_sortedblobs	            rH   fingerprintScreenMap.fingerprint   s    .1H_8>>#&q)(>>#&r*005b9 (0
-'/!uuVR  
-)4QUU625F)G 
-AEE&"x 	 
- X%8>>;K)K)*5FFs6{+
-az388M#2,>#?"@A{{4;;=)335cr::
-s   D-&D-D-labels_alabels_bc                    U  Vs1 s H  o"(       d  M  [        U5      (       a  M  UiM!     nnU Vs1 s H  o"(       d  M  [        U5      (       a  M  UiM!     nnU(       d  g[        X4-  5      [        U5      -  $ s  snf s  snf )z-Overlap ratio between two element label sets.        )rI   len)r   r   tabs        rH   
-similarityScreenMap.similarity   sc     !=1AQk!nQ= =1AQk!nQ=15zCF""	 
->=s   
-A:A:A:
-A?A?A?c                    SU;   a  UR                  S5      S   OUnUS;   d  U(       d  gU R                  X5      nU R                  S   nXE;   a.  XT   R                  SS5      S-   XT   S'   U R	                  5         U$ UR                  S5      S   R                  S	5      S   nU Vs/ s HP  nUR                  S
-S5      (       d  M  [        UR                  S
-S5      5      (       a  M>  UR                  S
-S5      PMR     nn[
-        U5      n	UR                  S	5      S    SU 3R                  5       n
-U	(       a  U
-S
--
-  n
-UUUU
-USS SU	USS  VVVs/ s H0  nUR                  5        VVs0 s H  u  pUS;   d  M
-  X_M     snnPM2     snnnS.XT'   U R	                  5         U	(       a  SOSn
-[        SU
- SU SU
- 35        U$ s  snf s  snnf s  snnnf )z
-Return screen_id for the current state.
-Returns None for screens with unknown package (loading screens etc.)
-Call-overlay screens are registered but labelled as tainted.
-r   r   )unknownr   Nrp   visits   r   r   r>   r   _
-_call_overlay   (   )r>   resource_idclsxy)	screen_idpackager   namerW   r   taintedr   z [CALL OVERLAY]z[map] new screen: z ())
-r   r   rj   r   r   rI   ra   rA   itemsprint)rl   r   r   r   fprp   r   r   rW   r   r   kvflags                 rH   identifyScreenMap.identify   s    ),xhnnS!!$X/!
-
-
-h
-1**Y'
-=$+KOOHa$@1$DGK!JJLI >>#&r*005b9'/
-'/!uuVR  
-)4QUU625F)G 
-AEE&"x 	 
-
- $F+YYs^B'((4::<O#D   %!#CR[$ "#2 'A #$'') C)$!AA ) C&
-
- 	
-
-$+ 
-"4&2$av67	7
-&Cs0   (GG)GG+G;GGGr   c                 >    U R                   S   R                  U5      $ )Nrp   )rj   r   )rl   r   s     rH   
-get_screenScreenMap.get_screen   s    zz)$((33rJ   c                     Su  p#U R                   S   R                  5        HS  u  pEUR                  SS5      U:w  a  M  UR                  SS5      (       a  M6  UR                  SS5      nXc:  d  MO  UnUnMU     U$ )	z
-Return the screen_id with the most visits for a given activity string.
-Used by controller to get a stable anchor when multiple fingerprint
-variants exist for the same activity (e.g. WhatsApp home w/ filter tabs).
-Ignores tainted (call-overlay) screens.
-Nr   rp   r   r   r   Fr   r   )rj   r   r   )rl   r   best_idbest_visitssidsr   s          rH   get_canonical_idScreenMap.get_canonical_id   sz      (jj+113FCuuZ$0uuY&&h"A 4 rJ   r   c                 0   UR                  5       nSu  p4U R                  S   R                  5        H`  u  pVUR                  SS5      (       a  M  X&R                  SS5      R                  5       ;   d  MC  UR                  SS5      nXt:  d  M\  UnUnMb     U$ )	zBFind screen_id by partial name match. Returns highest-visit match.r   rp   r   Fr   r   r   r   )rA   rj   r   r   )rl   r   name_lr   r   r   r   r   s           rH   find_by_nameScreenMap.find_by_name   s    'jj+113FCuuY&&vr*0022EE(A&?"#K!G 4 rJ   rW   c                     Su  p4U R                   S   R                  5        HJ  u  pVUR                  SS5      (       a  M  U R                  XR                  S/ 5      5      nXt:  d  MF  UnUnML     XB:  a  U$ g)zDFind screen_id by element label similarity. Ignores tainted screens.)Nr   rp   r   FrW   N)rj   r   r   r   )rl   rW   	thresholdr   
-best_scorer   r   scores           rH   find_by_labelsScreenMap.find_by_labels  su    'jj+113FCuuY&&OOFEE(B,?@E!"
-
- 4 "NrJ   from_idaction_labelto_idc                    X:X  a  gUb  Uc  gU R                   S   R                  U0 5      nU R                   S   R                  U0 5      nUR                  S5      (       d  UR                  S5      (       a  gU SU 3nU R                   S   nUR                  U5      U:w  aS  X7U'   U R                  5         UR                  SUSS 5      nUR                  SUSS 5      n	[        SU S	U S
-U	 35        gg)uh   
-Record a (screen, action) → screen edge.
-Skips transitions involving tainted (call-overlay) screens.
-Nrp   r   r   rq   r      z[map] transition: z --[z]--> )rj   r   r   r   )
-rl   r   r   r   from_screen	to_screenkeyrq   	from_nameto_names
-             rH   record_transitionScreenMap.record_transition  s    
- ?emjj+//<jj+//r:	??9%%y)A)A	<.)jj/??35($JJL#<I!
-
-fbq	:G&ykl^5	RS )rJ   c                    X:X  a  / $ Ub  Uc  gU R                   S   n0 nUR                  5        H;  u  pgUR                  SS5      u  pUR                  U/ 5      R	                  X45        M=     U/ 4/n
-U1nU
-(       a  U
-R                  S5      u  p[
-        U
-5      U:  a  M+  UR                  U/ 5       H?  u  pX;   a  M  XU4/-   nX:X  a  Us  $ UR                  U5        U
-R	                  X45        MA     U
-(       a  M  g)u   
-BFS over transition graph to find action sequence from_id → to_id.
-Returns list of (action_label, screen_id) tuples or None.
-Nrq   r   r   r   )	rj   r   rsplit
-setdefaultappendpopr   r   add)rl   r   r   	max_depthrq   adjr   targetsrcactionqueuevisitedcurrpathnxtnew_paths                   rH   	find_pathScreenMap.find_path,  s   
- I?emjj/&,,.KC**S!,KCNN3#**F+;< / R=/)1JD4yI%"wwtR0>C=/1<#OC c_-  1	 e rJ   c                 2   U R                   S   nU R                   S   n0 nSnUR                  5        HI  nUR                  SS5      nUR                  US5      S-   X6'   UR                  S5      (       d  MD  US-
-  nMK     [        U5      U[        U5      US.$ )	Nrp   rq   r   r   ?r   r   )
-total_screenstainted_screenstotal_transitions
-by_package)rj   valuesr   r   )rl   rp   rq   by_pkg
-tainted_countr   r   s          rH   statsScreenMap.statsN  s    jj+jj/
-!A%%	3'C **S!,q0FKuuY"
-	 " "%W!.!$[!1!'	
- 	
-rJ   c           	          U R                  5       n[        SUS    SUS    SUS    S35        [        US   R                  5       S	 S
-9 H*  u  p#[        SUR	                  S5      S
-   S SU S35        M,     g )Nz
-  Screen Map: r   z
- screens (r   z tainted), r   z transitionsr   c                     U S   * $ )Nr   rN   )r   s    rH   <lambda>'ScreenMap.print_stats.<locals>.<lambda>e  s
-    1rJ   )r   z    r   r   z<20rZ   z screens)r   r   r   r   r   )rl   str   counts       rH   print_statsScreenMap.print_stats_  s    
-ZZ\
- O!4 5 6&'('()7 	8 !L!1!7!7!9&57JCD3+C0%AB7rJ   )rj   N)g333333?)r   )__name__
-__module____qualname____firstlineno____doc__rm   dictri   r   staticmethodstrlistr   floatr   r   r   r   r   r   r   r   r   r   r  __static_attributes__rN   rJ   rH   rf   rf   l   s9   "
-2t 2> ;c ;T ;c ; ;0 #T #T #e # #0 0 0# 0d4C 4HTN 4 # & # T Xc]  T TC T T0 S (4. D
-t 
-"CrJ   rf   )r
-  r   rt   rD   pathlibr   typingr   r
-   rr   rB   rC   rU   r_   rc   r  boolrI   rV   r  ra   rd   rf   rN   rJ   rH   <module>r     s   0   	  99;$'88
- 
-  *c d / / /
-Cd Ct CG G$ G
-zC zCrJ   
 

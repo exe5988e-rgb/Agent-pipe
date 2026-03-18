@@ -7841,7 +7841,9 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
 [map] new screen: youtube_creationmodesactivity (d8f6b34a2f10)
 [map] transition: permissioncontroller_grantpermissionsactivity --[tap:3]--> youtube_creationmodesactivity
 [map] screen: youtube_creationmodesactivity (d8f6b34a)
-[skill] matched: 'search for on youtube'  score=1.00  act=False
+[skill] matched: 'search for on youtube'  score=1.00  act=False[parser] DEBUG normalized: 'tap 1'
+[parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
+
 
 //===== TERMUXFILE: --task =====
 

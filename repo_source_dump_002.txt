@@ -23566,7 +23566,7 @@
       "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
       "name": "youtube_shell$homeactivity",
       "labels": [],
-      "visits": 46,
+      "visits": 47,
       "tainted": false,
       "elements": []
     },

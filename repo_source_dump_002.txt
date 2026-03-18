@@ -90202,7 +90202,7 @@
         "Close minimised player",
         "Go to channel Noogitz"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {
@@ -91275,7 +91275,8 @@
     "30bc8a798cd1|tap:Edit suggestion lofi hip hop songs hindi": "f36939de0715",
     "f36939de0715|swipe": "3c7ef8df5fb2",
     "3c7ef8df5fb2|tap:40": "65840c1afc29",
-    "65840c1afc29|tap:3": "d8f6b34a2f10"
+    "65840c1afc29|tap:3": "d8f6b34a2f10",
+    "d8f6b34a2f10|tap:Camera": "3c7ef8df5fb2"
   }
 }
 

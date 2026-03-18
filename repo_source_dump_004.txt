@@ -6883,6 +6883,104 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
 [policy] done — skipped Claude
 [step] step=8/15 done=False history=['opt4_launch:whatsapp', 'tap [4] Enable', 'back', 'back', 'tap [24] New chat', 'tap [2] Search', "type 'Mummy'", 'tap (620,602)']
 
+========================================================
+  STEP 9  |  Send a WhatsApp message to Mummy saying Good night
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1583363 bytes)
+[ui_parser] activity=com.whatsapp/.Conversation
+[ui_parser] signal='com.whatsapp/.Conversation'
+[mem] miss (unknown): com.whatsapp/.Conversation
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (336,139) → 'Mummy'
+[ui_parser] child: (0,335) → 'Jarvis Gauntlet done. 33/33 passed. 6 new skills. Total 6 skills. 79 min.'
+[ui_parser] full parse -- 13 elements (12 labeled, 2 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.whatsapp/.Conversation hash=5b4954fdd074 elements=13
+[step] UI: ['Mummy', 'Back', 'element_3', 'Video call', 'Voice call', 'More options', 'Jarvis Gauntlet done. 33/33 passed. 6 new skills. Total 6 skills. 79 min.', 'Emoji, GIFs and stickers']
+[map] screen: whatsapp_conversation (67d20aa8)
+[policy] send_message phase1: 'Good night' -> tap [13] + type
+[policy] matched — executing 2 actions
+[policy] action: {'action': 'tap', 'target': 13}
+[input] dispatching: TouchEvent(x=362, y=1625)
+[input] dispatching: TouchEvent(x=362, y=1625)
+[input] adb -s 192.168.29.48:33117 shell input tap 362 1625
+[mem] invalidated com.whatsapp/.Conversation
+[policy] action: {'action': 'type', 'text': 'Good night'}
+[input] dispatching: SetTextEvent('Good night')
+[input] dispatching: SetTextEvent('Good night')
+[input] adb -s 192.168.29.48:33117 shell input text Good%snight
+[policy] done — skipped Claude
+[step] step=10/15 done=False history=['opt4_launch:whatsapp', 'tap [4] Enable', 'back', 'back', 'tap [24] New chat', 'tap [2] Search', "type 'Mummy'", 'tap (620,602)', 'tap [13] Message', "type 'Good night'"]
+
+========================================================
+  STEP 11  |  Send a WhatsApp message to Mummy saying Good night
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1582450 bytes)
+[ui_parser] activity=com.whatsapp/.Conversation
+[ui_parser] signal='com.whatsapp/.Conversation'
+[mem] miss (unknown): com.whatsapp/.Conversation
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (336,139) → 'Mummy'
+[ui_parser] child: (0,335) → 'Jarvis Gauntlet done. 33/33 passed. 6 new skills. Total 6 skills. 79 min.'
+[ui_parser] full parse -- 11 elements (10 labeled, 2 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.whatsapp/.Conversation hash=1487dba3d199 elements=11
+[step] UI: ['Mummy', 'Back', 'element_3', 'Video call', 'Voice call', 'More options', 'Jarvis Gauntlet done. 33/33 passed. 6 new skills. Total 6 skills. 79 min.', 'Emoji, GIFs and stickers']
+[map] new screen: whatsapp_conversation (fe049153ebc2)
+[tm] transition changed: 67d20aa8828e|type 40a38260 -> fe049153
+[map] transition: whatsapp_conversation --[type]--> whatsapp_conversation
+[map] screen: whatsapp_conversation (fe049153)
+[policy] send_message phase2: tapping Send [10]
+[policy] matched — executing 2 actions
+[policy] action: {'action': 'tap', 'target': 10}
+[input] dispatching: TouchEvent(x=1141, y=1626)
+[input] dispatching: TouchEvent(x=1141, y=1626)
+[input] adb -s 192.168.29.48:33117 shell input tap 1141 1626
+[mem] invalidated com.whatsapp/.Conversation
+[policy] action: {'action': 'done'}
+[input] DONE — no dispatch
+[policy] done — skipped Claude
+[step] step=12/15 done=True history=['opt4_launch:whatsapp', 'tap [4] Enable', 'back', 'back', 'tap [24] New chat', 'tap [2] Search', "type 'Mummy'", 'tap (620,602)', 'tap [13] Message', "type 'Good night'", 'tap [10] Send', 'done']
+
+[controller] done in 12 steps
+
+[controller] history:
+  1. opt4_launch:whatsapp
+  2. tap [4] Enable
+  3. back
+  4. back
+  5. tap [24] New chat
+  6. tap [2] Search
+  7. type 'Mummy'
+  8. tap (620,602)
+  9. tap [13] Message
+  10. type 'Good night'
+  11. tap [10] Send
+  12. done
+
+  Screen Map: 569 screens (0 tainted), 685 transitions
+    whatsapp             190 screens
+    youtube              119 screens
+    chrome               112 screens
+    vending              46 screens
+    termux               26 screens
+    settings             25 screens
+    launcher             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+    notificationmanager  1 screens
+    battery              1 screens
+  TransitionMemory: 635 transitions (286 confirmed, threshold=2)
+
+
 //===== TERMUXFILE: --task =====
 
 

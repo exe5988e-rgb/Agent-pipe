@@ -87120,6 +87120,226 @@
           "resource_id": ""
         }
       ]
+    },
+    "24e847386b90": {
+      "screen_id": "24e847386b90",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Navigate up",
+        "Clear",
+        "lofi hip hop",
+        "Edit suggestion lofi hip hop",
+        "Edit suggestion lofi hip hop no lyrics music",
+        "Edit suggestion lofi hip hop",
+        "Edit suggestion lofi hip hop no lyrics",
+        "Edit suggestion lofi hip hop no lyrics",
+        "Edit suggestion lofi hip hop music",
+        "Edit suggestion lofi hip hop music",
+        "Edit suggestion lofi hip hop song",
+        "Edit suggestion lofi hip hop song",
+        "Edit suggestion lofi hip hop beats",
+        "Edit suggestion lofi hip hop beats",
+        "Edit suggestion lofi hip hop songs hindi",
+        "Edit suggestion lofi hip hop songs hindi",
+        "Edit suggestion lofi hip hop lyrics",
+        "Edit suggestion lofi hip hop lyrics",
+        "Minimised player",
+        "Play video",
+        "Close minimised player",
+        "Edit suggestion lofi hip hop soft",
+        "Edit suggestion lofi hip hop soft",
+        "Edit suggestion lofi hip hop no lyrics music",
+        "Edit suggestion lofi hip hop no lyrics music",
+        "4 minutes 33 seconds of 1 hour 1 minute 14 seconds"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Clear",
+          "x": 1156,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/search_clear"
+        },
+        {
+          "text": "lofi hip hop",
+          "x": 634,
+          "y": 223,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.google.android.youtube:id/search_edit_text"
+        },
+        {
+          "text": "Edit suggestion lofi hip hop",
+          "x": 620,
+          "y": 391,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion lofi hip hop no lyrics music",
+          "x": 620,
+          "y": 1016,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results_recycler_view"
+        },
+        {
+          "text": "Edit suggestion lofi hip hop",
+          "x": 1156,
+          "y": 391,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion lofi hip hop no lyrics",
+          "x": 620,
+          "y": 559,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion lofi hip hop no lyrics",
+          "x": 1156,
+          "y": 559,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion lofi hip hop music",
+          "x": 620,
+          "y": 727,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion lofi hip hop music",
+          "x": 1156,
+          "y": 727,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion lofi hip hop song",
+          "x": 620,
+          "y": 895,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion lofi hip hop song",
+          "x": 1156,
+          "y": 895,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion lofi hip hop beats",
+          "x": 620,
+          "y": 1063,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion lofi hip hop beats",
+          "x": 1156,
+          "y": 1063,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion lofi hip hop songs hindi",
+          "x": 620,
+          "y": 1231,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion lofi hip hop songs hindi",
+          "x": 1156,
+          "y": 1231,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion lofi hip hop lyrics",
+          "x": 620,
+          "y": 1399,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion lofi hip hop lyrics",
+          "x": 1156,
+          "y": 1399,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Minimised player",
+          "x": 876,
+          "y": 1564,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.youtube:id/floaty_bar_controls_view"
+        },
+        {
+          "text": "Play video",
+          "x": 624,
+          "y": 1459,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/modern_miniplayer_overlay_action_button"
+        },
+        {
+          "text": "Close minimised player",
+          "x": 1128,
+          "y": 1459,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/modern_miniplayer_close"
+        },
+        {
+          "text": "Edit suggestion lofi hip hop soft",
+          "x": 620,
+          "y": 1567,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion lofi hip hop soft",
+          "x": 1156,
+          "y": 1567,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion lofi hip hop no lyrics music",
+          "x": 620,
+          "y": 1688,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion lofi hip hop no lyrics music",
+          "x": 1156,
+          "y": 1688,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "4 minutes 33 seconds of 1 hour 1 minute 14 seconds",
+          "x": 876,
+          "y": 1734,
+          "cls": "android.widget.SeekBar",
+          "resource_id": "com.google.android.youtube:id/floaty_bar_time_bar_view"
+        }
+      ]
     }
   },
   "transitions": {
@@ -87809,7 +88029,8 @@
     "045bb0062c24|back": "551be7ca5a88",
     "551be7ca5a88|back": "eb822f47a422",
     "67d20aa8828e|home": "5731aaff4c94",
-    "9cd54d2c0f76|tap:Auto-play is off": "c5a08195b577"
+    "9cd54d2c0f76|tap:Auto-play is off": "c5a08195b577",
+    "c5a08195b577|tap:All": "24e847386b90"
   }
 }
 

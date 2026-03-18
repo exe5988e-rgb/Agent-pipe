@@ -74677,6 +74677,226 @@
           "resource_id": "end_call_fab_test_tag"
         }
       ]
+    },
+    "ddedcea55765": {
+      "screen_id": "ddedcea55765",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Navigate up",
+        "Clear",
+        "warriyo mortals",
+        "Edit suggestion warriyo mortals",
+        "Edit suggestion warriyo mortals slowed reverb",
+        "Edit suggestion warriyo mortals",
+        "Edit suggestion warriyo mortals slowed",
+        "Edit suggestion warriyo mortals slowed",
+        "Edit suggestion warriyo mortals funk",
+        "Edit suggestion warriyo mortals funk",
+        "Edit suggestion warriyo mortals remix",
+        "Edit suggestion warriyo mortals remix",
+        "Edit suggestion warriyo mortals slowed reverb",
+        "Edit suggestion warriyo mortals slowed reverb",
+        "Edit suggestion warriyo mortals song",
+        "Edit suggestion warriyo mortals song",
+        "Edit suggestion warriyo mortals ringtone",
+        "Edit suggestion warriyo mortals ringtone",
+        "Minimised player",
+        "Play video",
+        "Close minimised player",
+        "Edit suggestion warriyo mortals lyrics",
+        "Edit suggestion warriyo mortals lyrics",
+        "Edit suggestion warriyo mortals edit",
+        "Edit suggestion warriyo mortals edit",
+        "1 minute 32 seconds of 3 minutes 48 seconds"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Clear",
+          "x": 1156,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/search_clear"
+        },
+        {
+          "text": "warriyo mortals",
+          "x": 634,
+          "y": 223,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.google.android.youtube:id/search_edit_text"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals",
+          "x": 620,
+          "y": 391,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals slowed reverb",
+          "x": 620,
+          "y": 1016,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results_recycler_view"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals",
+          "x": 1156,
+          "y": 391,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals slowed",
+          "x": 620,
+          "y": 559,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals slowed",
+          "x": 1156,
+          "y": 559,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals funk",
+          "x": 620,
+          "y": 727,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals funk",
+          "x": 1156,
+          "y": 727,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals remix",
+          "x": 620,
+          "y": 895,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals remix",
+          "x": 1156,
+          "y": 895,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals slowed reverb",
+          "x": 620,
+          "y": 1063,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals slowed reverb",
+          "x": 1156,
+          "y": 1063,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals song",
+          "x": 620,
+          "y": 1231,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals song",
+          "x": 1156,
+          "y": 1231,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals ringtone",
+          "x": 620,
+          "y": 1399,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals ringtone",
+          "x": 1156,
+          "y": 1399,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Minimised player",
+          "x": 876,
+          "y": 1564,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.youtube:id/floaty_bar_controls_view"
+        },
+        {
+          "text": "Play video",
+          "x": 624,
+          "y": 1459,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/modern_miniplayer_overlay_action_button"
+        },
+        {
+          "text": "Close minimised player",
+          "x": 1128,
+          "y": 1459,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/modern_miniplayer_close"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals lyrics",
+          "x": 620,
+          "y": 1567,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals lyrics",
+          "x": 1156,
+          "y": 1567,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals edit",
+          "x": 620,
+          "y": 1688,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals edit",
+          "x": 1156,
+          "y": 1688,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "1 minute 32 seconds of 3 minutes 48 seconds",
+          "x": 876,
+          "y": 1734,
+          "cls": "android.widget.SeekBar",
+          "resource_id": "com.google.android.youtube:id/floaty_bar_time_bar_view"
+        }
+      ]
     }
   },
   "transitions": {
@@ -75298,7 +75518,8 @@
     "ab87f07727b4|tap:Content rating Rated for 3+": "4c38e663dba1",
     "a2a7a2e70c76|tap:Auto-play is off": "c9ef977845dc",
     "c9ef977845dc|tap:Voice search": "ffe4b24675ad",
-    "ffe4b24675ad|back": "c9ef977845dc"
+    "ffe4b24675ad|back": "c9ef977845dc",
+    "c9ef977845dc|tap:Warriyo - Mortals (ft. Laura Brehm) \u2013 3 minutes, 49 seconds \u2013 Go to channel Warriyo \u2013 Warriyo - 37 million views - 9 years ago \u2013 play video": "ddedcea55765"
   }
 }
 

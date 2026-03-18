@@ -10386,6 +10386,8 @@ RuntimeError: No LLM backend available.
   TransitionMemory: 558 transitions (283 confirmed, threshold=2)
 [parser] DEBUG normalized: 'tap 3'
 [parser] INFO parsed 'tap 3' -> {'action': 'tap', 'target': 3}
+[parser] DEBUG normalized: 'type VLC'
+[parser] INFO parsed 'type VLC' -> {'action': 'type', 'text': 'VLC'}
 
 
 //===== TERMUXFILE: --task =====

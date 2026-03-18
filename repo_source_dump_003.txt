@@ -4535,6 +4535,7 @@ if __name__ == "__main__":
 [21:01:42] 
 [7/33] [1★] [phone] Open Contacts
 [21:01:42]   max_steps=5  skill_threshold=12  skills=3
+[21:02:23]   PASS  38.2s
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -5676,7 +5677,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-18T21:01:37.497604",
+  "run_at": "2026-03-18T21:02:23.887195",
   "skills_before": 0,
   "skills_current": 3,
   "results": [
@@ -5731,6 +5732,15 @@ if __name__ == "__main__":
       "difficulty": 1,
       "success": true,
       "elapsed_s": 37.4,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Open Contacts",
+      "category": "phone",
+      "difficulty": 1,
+      "success": true,
+      "elapsed_s": 38.2,
       "error": null,
       "retried": false
     }
@@ -6773,6 +6783,196 @@ nohup: ignoring input
 [parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
 [parser] DEBUG normalized: 'tap 1'
 [parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
+[parser] DEBUG normalized: 'tap 1'
+[parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
+[parser] DEBUG normalized: 'tap 1'
+[parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
+
+########################################################
+  JARVIS  |  Open Contacts
+  Device : 192.168.29.48:33117
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 520 screens (0 tainted), 636 transitions
+    whatsapp             173 screens
+    chrome               106 screens
+    youtube              101 screens
+    vending              43 screens
+    termux               25 screens
+    launcher             23 screens
+    settings             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+  TransitionMemory: 586 transitions (280 confirmed, threshold=2)
+[init] task_apps: ['contacts']
+[init] max_skill_steps: 20 (threshold: 12)
+
+========================================================
+  STEP 1  |  Open Contacts
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3306750 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Cloudy'
+[ui_parser] OCR: (841,1475)-(1009,1671) → 'lt'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.launcher/.Launcher hash=21de1dd06945 elements=26
+[step] UI: ['Clock', '21', ':', '01', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (1025dd6b)
+[OPT4v2] launcher -> launching contacts (com.android.contacts)
+[llm] OPT4v2 am start: com.android.contacts
+[mem] invalidated com.android.launcher/.Launcher
+
+========================================================
+  STEP 2  |  Open Contacts
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3306723 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Cloudy'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.launcher/.Launcher hash=21de1dd06945 elements=26
+[step] UI: ['Clock', '21', ':', '01', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (1025dd6b)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 1'
+[step] LLM: 'tap 1'
+[step] action: {'action': 'tap', 'target': 1}
+[input] dispatching: TouchEvent(x=620, y=418)
+[input] dispatching: TouchEvent(x=620, y=418)
+[input] adb -s 192.168.29.48:33117 shell input tap 620 418
+[mem] invalidated com.android.launcher/.Launcher
+[step] step=2/5 done=False history=['opt4_launch:contacts', 'tap [1] Clock']
+
+========================================================
+  STEP 3  |  Open Contacts
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3307374 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Cloudy'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.launcher/.Launcher hash=90e7b049387c elements=26
+[step] UI: ['Clock', '21', ':', '02', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (1025dd6b)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 1'
+[step] LLM: 'tap 1'
+[step] action: {'action': 'tap', 'target': 1}
+[input] dispatching: TouchEvent(x=620, y=418)
+[input] dispatching: TouchEvent(x=620, y=418)
+[input] adb -s 192.168.29.48:33117 shell input tap 620 418
+[mem] invalidated com.android.launcher/.Launcher
+[step] step=3/5 done=False history=['opt4_launch:contacts', 'tap [1] Clock', 'tap [1] Clock']
+
+========================================================
+  STEP 4  |  Open Contacts
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3307054 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Cloudy'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.launcher/.Launcher hash=90e7b049387c elements=26
+[step] UI: ['Clock', '21', ':', '02', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (1025dd6b)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 1'
+[step] LLM: 'tap 1'
+[step] action: {'action': 'tap', 'target': 1}
+[input] dispatching: TouchEvent(x=620, y=418)
+[input] dispatching: TouchEvent(x=620, y=418)
+[input] adb -s 192.168.29.48:33117 shell input tap 620 418
+[mem] invalidated com.android.launcher/.Launcher
+[step] step=4/5 done=False history=['opt4_launch:contacts', 'tap [1] Clock', 'tap [1] Clock', 'tap [1] Clock']
+
+========================================================
+  STEP 5  |  Open Contacts
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3307120 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Cloudy'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.launcher/.Launcher hash=90e7b049387c elements=26
+[step] UI: ['Clock', '21', ':', '02', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (1025dd6b)
+[step] repeat warning: 'tap [1] Clock'
+[llm] prompt tail: ..."our action:\nWARNING: 'tap [1] Clock' repeated 3+ times — try a different action."
+[llm] Phone B (Claude): 'tap 1'
+[step] LLM: 'tap 1'
+[step] action: {'action': 'tap', 'target': 1}
+[input] dispatching: TouchEvent(x=620, y=418)
+[input] dispatching: TouchEvent(x=620, y=418)
+[input] adb -s 192.168.29.48:33117 shell input tap 620 418
+[mem] invalidated com.android.launcher/.Launcher
+[step] step=5/5 done=False history=['opt4_launch:contacts', 'tap [1] Clock', 'tap [1] Clock', 'tap [1] Clock', 'tap [1] Clock']
+
+[controller] history:
+  1. opt4_launch:contacts
+  2. tap [1] Clock
+  3. tap [1] Clock
+  4. tap [1] Clock
+  5. tap [1] Clock
+
+  Screen Map: 520 screens (0 tainted), 636 transitions
+    whatsapp             173 screens
+    chrome               106 screens
+    youtube              101 screens
+    vending              43 screens
+    termux               25 screens
+    launcher             23 screens
+    settings             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+  TransitionMemory: 586 transitions (280 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: --task =====

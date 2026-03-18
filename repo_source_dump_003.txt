@@ -4791,6 +4791,7 @@ if __name__ == "__main__":
 [21:41:12] 
 [25/33] [3★] [youtube] Play Warriyo Mortals on YouTube
 [21:41:12]   max_steps=12  skill_threshold=12  skills=6
+[21:45:15]   PASS  239.7s
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -5932,9 +5933,9 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-18T21:41:07.478325",
+  "run_at": "2026-03-18T21:45:15.383388",
   "skills_before": 0,
-  "skills_current": 6,
+  "skills_current": 7,
   "results": [
     {
       "task": "Open WhatsApp",
@@ -6151,6 +6152,15 @@ if __name__ == "__main__":
       "elapsed_s": 75.4,
       "error": null,
       "retried": false
+    },
+    {
+      "task": "Play Warriyo Mortals on YouTube",
+      "category": "youtube",
+      "difficulty": 3,
+      "success": true,
+      "elapsed_s": 239.7,
+      "error": null,
+      "retried": false
     }
   ]
 }
@@ -6269,6 +6279,38 @@ if __name__ == "__main__":
       {
         "action": "tap",
         "target": "Refine search to 'spotify'"
+      },
+      {
+        "action": "done"
+      }
+    ],
+    "uses": 0,
+    "version": 3
+  },
+  {
+    "pattern": "play on youtube",
+    "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+    "task_example": "Play Warriyo Mortals on YouTube",
+    "steps": [
+      {
+        "action": "tap",
+        "target": "Search"
+      },
+      {
+        "action": "type",
+        "text": "$QUERY"
+      },
+      {
+        "action": "tap",
+        "target": "Edit suggestion warriyo mortals"
+      },
+      {
+        "action": "tap",
+        "target": "Close ad panel"
+      },
+      {
+        "action": "tap",
+        "target": "Expand Mini Player"
       },
       {
         "action": "done"

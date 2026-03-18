@@ -5712,6 +5712,8 @@ RuntimeError: No LLM backend available.
 [ui_parser] child: (0,1315) → 'Edit suggestion warriyo mortals remix'
 [ui_parser] child: (0,1483) → 'Edit suggestion warriyo mortals lyrics'[parser] DEBUG normalized: 'tap 4'
 [parser] INFO parsed 'tap 4' -> {'action': 'tap', 'target': 4}
+[parser] DEBUG normalized: 'tap 31'
+[parser] INFO parsed 'tap 31' -> {'action': 'tap', 'target': 31}
 
 
 //===== TERMUXFILE: --task =====

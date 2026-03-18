@@ -1,3 +1,217 @@
+//===== TERMUXFILE: jarvis-agent/perception/ui_mock_parser.py =====
+"""
+perception/ui_mock_parser.py
+Mock until OmniParser integration.
+Same interface: parse_ui(image_path) -> list[{id,text,x,y}]
+"""
+MOCK_ELEMENTS = [
+    {"id": 1,  "text": "WhatsApp",   "x": 160,  "y": 1200},
+    {"id": 2,  "text": "Chrome",     "x": 480,  "y": 1200},
+    {"id": 3,  "text": "Camera",     "x": 800,  "y": 1200},
+    {"id": 4,  "text": "Settings",   "x": 160,  "y": 1600},
+    {"id": 5,  "text": "YouTube",    "x": 480,  "y": 1600},
+    {"id": 6,  "text": "Files",      "x": 800,  "y": 1600},
+    {"id": 7,  "text": "Search bar", "x": 540,  "y": 200},
+    {"id": 8,  "text": "Gmail",      "x": 160,  "y": 800},
+    {"id": 9,  "text": "Maps",       "x": 480,  "y": 800},
+    {"id": 10, "text": "Clock",      "x": 800,  "y": 800},
+]
+
+def parse_ui(image_path: str) -> list:
+    print(f"[parser] mock — {len(MOCK_ELEMENTS)} elements")
+    return [dict(e) for e in MOCK_ELEMENTS]
+
+
+//===== TERMUXFILE: jarvis-agent/perception/ui_parser.py =====
+import re
+import subprocess
+import os
+
+MAX_ELEMENTS = 20  # unchanged as you requested
+
+_CLS_SHORT = {
+    "android.widget.TextView":       "Text",
+    "android.widget.EditText":       "Input",
+    "android.widget.Button":         "Button",
+    "android.widget.ImageButton":    "ImgBtn",
+    "android.widget.ImageView":      "Image",
+    "android.widget.CheckBox":       "Check",
+    "android.widget.RadioButton":    "Radio",
+    "android.widget.Switch":         "Switch",
+    "android.widget.ProgressBar":    "Progress",
+    "android.view.View":             "View",
+    "android.widget.FrameLayout":    "Frame",
+    "android.widget.LinearLayout":   "Linear",
+    "android.widget.RelativeLayout": "Relative",
+    "android.widget.ScrollView":     "Scroll",
+    "androidx.recyclerview.widget.RecyclerView": "List",
+}
+
+_CONTAINER_CLS = {
+    "android.widget.FrameLayout",
+    "android.widget.LinearLayout",
+    "android.widget.RelativeLayout",
+    "android.view.ViewGroup",
+    "android.widget.ScrollView",
+    "androidx.recyclerview.widget.RecyclerView",
+}
+
+# 🔥 NEW: label cleaner
+def _clean_label(label: str) -> str:
+    label = label.replace("_", " ")
+    label = re.sub(r"\s+", " ", label)
+    return label.strip()
+
+def _adb_dump(adb_device: str) -> str:
+    subprocess.run(
+        ["adb", "-s", adb_device, "shell", "uiautomator", "dump", "/sdcard/uidump.xml"],
+        capture_output=True, timeout=15
+    )
+    r = subprocess.run(
+        ["adb", "-s", adb_device, "shell", "cat", "/sdcard/uidump.xml"],
+        capture_output=True, timeout=10
+    )
+    return r.stdout.decode(errors="replace")
+
+def _parse_bounds(bounds_str: str):
+    m = re.match(r"\[(\d+),(\d+)\]\[(\d+),(\d+)\]", bounds_str)
+    if not m:
+        return None
+    x1, y1, x2, y2 = map(int, m.groups())
+    if x1 == x2 or y1 == y2:
+        return None
+    cx = (x1 + x2) // 2
+    cy = (y1 + y2) // 2
+    return cx, cy, x2 - x1, y2 - y1
+
+def _extract_nodes(xml: str) -> list:
+    nodes = []
+
+    for attrs in re.findall(r"<node([^>]+)>?", xml):
+        def get(attr):
+            m = re.search(rf'{attr}="([^"]*)"', attrs)
+            return m.group(1) if m else ""
+
+        text      = get("text").strip()
+        desc      = get("content-desc").strip()
+        rid_raw   = get("resource-id")
+        rid       = rid_raw.split("/")[-1] if rid_raw else ""
+        bounds    = get("bounds")
+        cls       = get("class")
+        clickable = get("clickable") == "true"
+        enabled   = get("enabled") != "false"
+
+        # 🔥 FIX: better label priority
+        label = desc or text or rid
+        if not label:
+            continue
+
+        label = _clean_label(label)
+
+        if not bounds:
+            continue
+
+        coords = _parse_bounds(bounds)
+        if coords is None:
+            continue
+
+        cx, cy, w, h = coords
+
+        # improved container filtering
+        if cls in _CONTAINER_CLS and not clickable and not label:
+            continue
+
+        if not enabled:
+            continue
+
+        short_cls = _CLS_SHORT.get(cls, cls.split(".")[-1] if cls else "")
+
+        nodes.append({
+            "text":      label,
+            "x":         cx,
+            "y":         cy,
+            "w":         w,
+            "h":         h,
+            "cls":       short_cls,
+            "clickable": clickable,
+            "bounds":    bounds,
+        })
+
+    return nodes
+
+def _deduplicate(nodes: list) -> list:
+    seen = set()
+    out = []
+    for n in nodes:
+        key = (n["text"], n["x"], n["y"])
+        if key not in seen:
+            seen.add(key)
+            out.append(n)
+    return out
+
+# 🔥 NEW: smarter scoring
+def _score(n):
+    score = 0
+
+    if n["clickable"]:
+        score += 3
+
+    txt = n["text"].lower()
+
+    if any(k in txt for k in [
+        "search", "tab", "new", "send", "install",
+        "open", "next", "ok", "done", "go"
+    ]):
+        score += 5
+
+    if n["cls"] in ["Button", "ImgBtn", "Input"]:
+        score += 2
+
+    # penalize junk
+    if any(k in txt for k in ["help", "feedback", "terms"]):
+        score -= 2
+
+    return score
+
+def _prioritise(nodes: list) -> list:
+    return sorted(nodes, key=_score, reverse=True)
+
+def parse_ui(image_path: str, adb_device: str = None) -> list:
+    if adb_device is None:
+        adb_device = os.environ.get("ADB_DEVICE", "192.168.29.48:39601")
+
+    try:
+        xml = _adb_dump(adb_device)
+    except Exception as e:
+        print(f"[parser] dump failed: {e}")
+        return []
+
+    if not xml or "<hierarchy" not in xml:
+        print("[parser] bad XML")
+        return []
+
+    nodes = _extract_nodes(xml)
+    nodes = _deduplicate(nodes)
+    nodes = _prioritise(nodes)
+    nodes = nodes[:MAX_ELEMENTS]  # unchanged
+
+    elements = []
+    for i, n in enumerate(nodes, 1):
+        elements.append({
+            "id": i,
+            "text": n["text"],
+            "x": n["x"],
+            "y": n["y"],
+            "cls": n["cls"],
+            "clickable": n["clickable"],
+        })
+
+    print(f"[parser] {len(elements)} elements")
+    for e in elements:
+        print(f"  [{e['id']}] {e['text'][:50]} ({e['cls']})")
+
+    return elements
+
 //===== TERMUXFILE: jarvis-agent/executor/input_event.py =====
 """
 executor/input_event.py

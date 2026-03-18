@@ -77829,6 +77829,201 @@
           "resource_id": ""
         }
       ]
+    },
+    "462e8bea51f2": {
+      "screen_id": "462e8bea51f2",
+      "package": "com.whatsapp",
+      "activity": "com.whatsapp/.home.ui.HomeActivity",
+      "name": "whatsapp_homeactivity",
+      "labels": [
+        "Swipe down to reveal additional actions",
+        "Ask Meta AI or Search",
+        "Ask Meta AI or Search",
+        "Documents",
+        "Unread",
+        "Photos",
+        "Videos",
+        "Archived",
+        "Links",
+        "GIFs",
+        "Audio",
+        "Door desgin ideas, group",
+        "Door desgin ideas, group",
+        "Documents",
+        "Stickers",
+        "Polls",
+        "Mummy Jio (You)",
+        "You",
+        "Papa",
+        "Papa",
+        "Mummy",
+        "Mummy"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Swipe down to reveal additional actions",
+          "x": 620,
+          "y": 932,
+          "cls": "androidx.viewpager.widget.ViewPager",
+          "resource_id": "com.whatsapp:id/pager"
+        },
+        {
+          "text": "Back",
+          "x": 126,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Ask Meta AI or Search",
+          "x": 704,
+          "y": 223,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.whatsapp:id/search_input"
+        },
+        {
+          "text": "Ask Meta AI or Search",
+          "x": 620,
+          "y": 267,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/my_search_bar"
+        },
+        {
+          "text": "Documents",
+          "x": 620,
+          "y": 589,
+          "cls": "androidx.recyclerview.widget.RecyclerView",
+          "resource_id": "com.whatsapp:id/result_list"
+        },
+        {
+          "text": "Unread",
+          "x": 221,
+          "y": 421,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/search_unread_filter"
+        },
+        {
+          "text": "Photos",
+          "x": 577,
+          "y": 421,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/search_media_filter_image"
+        },
+        {
+          "text": "Videos",
+          "x": 930,
+          "y": 421,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/search_media_filter_video"
+        },
+        {
+          "text": "Archived",
+          "x": 620,
+          "y": 491,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/conversations_archive_header"
+        },
+        {
+          "text": "Links",
+          "x": 198,
+          "y": 589,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/search_media_filter_link"
+        },
+        {
+          "text": "GIFs",
+          "x": 506,
+          "y": 589,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/search_media_filter_gif"
+        },
+        {
+          "text": "Audio",
+          "x": 817,
+          "y": 589,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/search_media_filter_audio"
+        },
+        {
+          "text": "Door desgin ideas, group",
+          "x": 620,
+          "y": 708,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "Door desgin ideas, group",
+          "x": 126,
+          "y": 708,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "Documents",
+          "x": 262,
+          "y": 757,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/search_media_filter_doc"
+        },
+        {
+          "text": "Stickers",
+          "x": 667,
+          "y": 757,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/search_media_filter_sticker"
+        },
+        {
+          "text": "Polls",
+          "x": 1000,
+          "y": 757,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/search_poll_filter"
+        },
+        {
+          "text": "Mummy Jio (You)",
+          "x": 620,
+          "y": 974,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "You",
+          "x": 126,
+          "y": 974,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "Papa",
+          "x": 620,
+          "y": 1240,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "Papa",
+          "x": 126,
+          "y": 1240,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "Mummy",
+          "x": 620,
+          "y": 1466,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "Mummy",
+          "x": 126,
+          "y": 1473,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        }
+      ]
     }
   },
   "transitions": {
@@ -78468,7 +78663,8 @@
     "f6f258ae70ad|tap:On": "2c1be995ec82",
     "1025dd6b857e|opt4_launch:chrome": "99751df5ec71",
     "1025dd6b857e|opt4_launch:play store": "73181ac31bda",
-    "615edd0c907f|tap:Updates": "6dcc835738aa"
+    "615edd0c907f|tap:Updates": "6dcc835738aa",
+    "6dcc835738aa|tap:Swipe down to reveal additional actions": "462e8bea51f2"
   }
 }
 

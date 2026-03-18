@@ -4505,6 +4505,11 @@ if __name__ == "__main__":
     "to": "6dcc835738aa",
     "count": 1,
     "last_seen": 1773848225.757802
+  },
+  "6dcc835738aa|tap:Swipe down to reveal additional actions": {
+    "to": "462e8bea51f2",
+    "count": 1,
+    "last_seen": 1773848256.9830167
   }
 }
 
@@ -5796,7 +5801,7 @@ if __name__ == "__main__":
         "action": "done"
       }
     ],
-    "uses": 0,
+    "uses": 1,
     "version": 3
   },
   {

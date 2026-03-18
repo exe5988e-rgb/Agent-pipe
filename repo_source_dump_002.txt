@@ -74897,6 +74897,210 @@
           "resource_id": "com.google.android.youtube:id/floaty_bar_time_bar_view"
         }
       ]
+    },
+    "c35eb75a1a4a": {
+      "screen_id": "c35eb75a1a4a",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Navigate up",
+        "Voice search",
+        "Search YouTube",
+        "Edit suggestion mortals funk remix",
+        "Edit suggestion mortals funk remix",
+        "Edit suggestion mortals funk remix",
+        "Edit suggestion heathens",
+        "Edit suggestion heathens",
+        "Edit suggestion legend never die",
+        "Edit suggestion legend never die",
+        "Edit suggestion manasha",
+        "Edit suggestion manasha",
+        "Edit suggestion tiki tiki slowed",
+        "Edit suggestion tiki tiki slowed",
+        "Edit suggestion luz roja",
+        "Edit suggestion luz roja",
+        "Minimised player",
+        "Play video",
+        "Close minimised player",
+        "Edit suggestion after dark",
+        "Edit suggestion after dark",
+        "Edit suggestion alone",
+        "Edit suggestion alone",
+        "1 minute 32 seconds of 3 minutes 48 seconds"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Voice search",
+          "x": 1156,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/voice_search"
+        },
+        {
+          "text": "Search YouTube",
+          "x": 634,
+          "y": 223,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.google.android.youtube:id/search_edit_text"
+        },
+        {
+          "text": "Edit suggestion mortals funk remix",
+          "x": 620,
+          "y": 1016,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results_recycler_view"
+        },
+        {
+          "text": "Edit suggestion mortals funk remix",
+          "x": 620,
+          "y": 559,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion mortals funk remix",
+          "x": 1156,
+          "y": 559,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion heathens",
+          "x": 620,
+          "y": 727,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion heathens",
+          "x": 1156,
+          "y": 727,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion legend never die",
+          "x": 620,
+          "y": 895,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion legend never die",
+          "x": 1156,
+          "y": 895,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion manasha",
+          "x": 620,
+          "y": 1063,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion manasha",
+          "x": 1156,
+          "y": 1063,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion tiki tiki slowed",
+          "x": 620,
+          "y": 1231,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion tiki tiki slowed",
+          "x": 1156,
+          "y": 1231,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion luz roja",
+          "x": 620,
+          "y": 1399,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion luz roja",
+          "x": 1156,
+          "y": 1399,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Minimised player",
+          "x": 876,
+          "y": 1564,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.youtube:id/floaty_bar_controls_view"
+        },
+        {
+          "text": "Play video",
+          "x": 624,
+          "y": 1459,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/modern_miniplayer_overlay_action_button"
+        },
+        {
+          "text": "Close minimised player",
+          "x": 1128,
+          "y": 1459,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/modern_miniplayer_close"
+        },
+        {
+          "text": "Edit suggestion after dark",
+          "x": 620,
+          "y": 1567,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion after dark",
+          "x": 1156,
+          "y": 1567,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion alone",
+          "x": 620,
+          "y": 1688,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion alone",
+          "x": 1156,
+          "y": 1688,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "1 minute 32 seconds of 3 minutes 48 seconds",
+          "x": 876,
+          "y": 1734,
+          "cls": "android.widget.SeekBar",
+          "resource_id": "com.google.android.youtube:id/floaty_bar_time_bar_view"
+        }
+      ]
     }
   },
   "transitions": {
@@ -75519,7 +75723,8 @@
     "a2a7a2e70c76|tap:Auto-play is off": "c9ef977845dc",
     "c9ef977845dc|tap:Voice search": "ffe4b24675ad",
     "ffe4b24675ad|back": "c9ef977845dc",
-    "c9ef977845dc|tap:Warriyo - Mortals (ft. Laura Brehm) \u2013 3 minutes, 49 seconds \u2013 Go to channel Warriyo \u2013 Warriyo - 37 million views - 9 years ago \u2013 play video": "ddedcea55765"
+    "c9ef977845dc|tap:Warriyo - Mortals (ft. Laura Brehm) \u2013 3 minutes, 49 seconds \u2013 Go to channel Warriyo \u2013 Warriyo - 37 million views - 9 years ago \u2013 play video": "ddedcea55765",
+    "ddedcea55765|tap:warriyo mortals": "c35eb75a1a4a"
   }
 }
 

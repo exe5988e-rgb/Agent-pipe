@@ -91117,6 +91117,82 @@
           "resource_id": ""
         }
       ]
+    },
+    "e6e2d7bad11c": {
+      "screen_id": "e6e2d7bad11c",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Navigate up",
+        "Voice search",
+        "Search YouTube",
+        "Edit suggestion lofi music",
+        "Edit suggestion lofi music",
+        "Edit suggestion lofi music",
+        "binaural beats",
+        "Voice search"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Voice search",
+          "x": 1156,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/voice_search"
+        },
+        {
+          "text": "Search YouTube",
+          "x": 634,
+          "y": 223,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.google.android.youtube:id/search_edit_text"
+        },
+        {
+          "text": "Edit suggestion lofi music",
+          "x": 620,
+          "y": 1016,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results_recycler_view"
+        },
+        {
+          "text": "Edit suggestion lofi music",
+          "x": 620,
+          "y": 559,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion lofi music",
+          "x": 1156,
+          "y": 559,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "binaural beats",
+          "x": 620,
+          "y": 727,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Voice search",
+          "x": 1114,
+          "y": 1655,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/fab"
+        }
+      ]
     }
   },
   "transitions": {
@@ -91825,7 +91901,8 @@
     "65840c1afc29|tap:3": "d8f6b34a2f10",
     "d8f6b34a2f10|tap:Camera": "3c7ef8df5fb2",
     "33be04de2357|tap:See 28 tabs": "6a196709544c",
-    "6a196709544c|type": "ea824627166e"
+    "6a196709544c|type": "ea824627166e",
+    "cce393f689c6|tap:filters": "e6e2d7bad11c"
   }
 }
 

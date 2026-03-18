@@ -3688,8 +3688,8 @@ if __name__ == "__main__":
   },
   "5193b772df54|opt4_launch:whatsapp": {
     "to": "f358bf809a6b",
-    "count": 1,
-    "last_seen": 1773801368.5727174
+    "count": 2,
+    "last_seen": 1773802020.603777
   },
   "f358bf809a6b|retry": {
     "to": "73a672bfe623",

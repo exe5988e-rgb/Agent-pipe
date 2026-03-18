@@ -4298,6 +4298,9 @@ if __name__ == "__main__":
 [10/33] [2★] [whatsapp] Open WhatsApp and search for Mummy in chats
 [19:01:51]   max_steps=10  skill_threshold=12  skills=1
 [19:02:08]   PASS  13.7s
+[19:02:13] 
+[11/33] [2★] [youtube] Open YouTube and go to Subscriptions
+[19:02:13]   max_steps=8  skill_threshold=12  skills=1
 
 
 //===== TERMUXFILE: tap_logger.py =====

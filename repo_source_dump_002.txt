@@ -45322,7 +45322,7 @@
         "Card menu Robert Downey Jr, Chris Evans Have Avengers Reunion at Oscars",
         "element_20"
       ],
-      "visits": 27,
+      "visits": 28,
       "tainted": false,
       "elements": [
         {
@@ -46289,7 +46289,8 @@
     "2edcf1eb90cd|tap:None": "7c51d7e864c3",
     "635910cc4897|opt4_launch:chrome": "d8894d8bf6b5",
     "d8894d8bf6b5|tap:Start voice search": "61c36514dee6",
-    "61c36514dee6|swipe": "e0eb2b0591e0"
+    "61c36514dee6|swipe": "e0eb2b0591e0",
+    "e0eb2b0591e0|tap:Wikipedia: wikipedia.org": "d8894d8bf6b5"
   }
 }
 

@@ -4404,6 +4404,9 @@ if __name__ == "__main__":
 [19/33] [2★] [chrome] Search for weather today in Chrome
 [19:13:32]   max_steps=10  skill_threshold=12  skills=4
 [19:15:35]   PASS  118.9s
+[19:15:40] 
+[20/33] [2★] [playstore] Search for Spotify on Play Store
+[19:15:40]   max_steps=10  skill_threshold=12  skills=5
 
 
 //===== TERMUXFILE: tap_logger.py =====

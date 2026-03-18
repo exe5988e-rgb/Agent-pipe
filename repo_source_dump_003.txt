@@ -11553,7 +11553,9 @@ RuntimeError: No LLM backend available.
 
 ========================================================
   STEP 11  |  Search for lofi hip hop on YouTube and play the first video
-========================================================
+========================================================[parser] DEBUG normalized: 'tap 25'
+[parser] INFO parsed 'tap 25' -> {'action': 'tap', 'target': 25}
+
 
 //===== TERMUXFILE: --task =====
 

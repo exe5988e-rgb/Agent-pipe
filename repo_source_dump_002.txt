@@ -77266,6 +77266,122 @@
           "resource_id": ""
         }
       ]
+    },
+    "2c1be995ec82": {
+      "screen_id": "2c1be995ec82",
+      "package": "com.android.settings",
+      "activity": "com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity",
+      "name": "settings_oplussettingshomepageactivity",
+      "labels": [
+        "Search box",
+        "Search",
+        "Enjoy exclusive benefits and services designed for you!",
+        "Enjoy exclusive benefits and services designed for you!",
+        "Aeroplane mode",
+        "JioFiber-ia1",
+        "Not connected",
+        "Mobile network",
+        "Device Connect",
+        "Home screen, Lock screen & style",
+        "Display & brightness",
+        "Sound & vibration",
+        "Notifications & Quick Settings"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Search box",
+          "x": 620,
+          "y": 603,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.android.settings:id/searchView"
+        },
+        {
+          "text": "Search",
+          "x": 683,
+          "y": 603,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.settings:id/search_src_text"
+        },
+        {
+          "text": "Enjoy exclusive benefits and services designed for you!",
+          "x": 620,
+          "y": 1733,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "android:id/list_container"
+        },
+        {
+          "text": "Enjoy exclusive benefits and services designed for you!",
+          "x": 620,
+          "y": 864,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Aeroplane mode",
+          "x": 620,
+          "y": 1143,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "JioFiber-ia1",
+          "x": 620,
+          "y": 1329,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Not connected",
+          "x": 620,
+          "y": 1511,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Mobile network",
+          "x": 620,
+          "y": 1693,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Device Connect",
+          "x": 620,
+          "y": 1878,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Home screen, Lock screen & style",
+          "x": 620,
+          "y": 2144,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Display & brightness",
+          "x": 620,
+          "y": 2354,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Sound & vibration",
+          "x": 620,
+          "y": 2599,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Notifications & Quick Settings",
+          "x": 620,
+          "y": 2733,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -77901,7 +78017,8 @@
     "1025dd6b857e|opt4_launch:youtube": "740ae23375a8",
     "740ae23375a8|tap:Watch most of YouTube ad-free, offline and in the background": "5f41671576ab",
     "5f41671576ab|tap:Voice search": "0b5a9aba0337",
-    "1025dd6b857e|opt4_launch:settings": "f6f258ae70ad"
+    "1025dd6b857e|opt4_launch:settings": "f6f258ae70ad",
+    "f6f258ae70ad|tap:On": "2c1be995ec82"
   }
 }
 

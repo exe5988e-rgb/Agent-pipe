@@ -80399,7 +80399,7 @@
         "Wed, Partly cloudy, High of 36, Low of 21, Selected",
         "Now, 25\u00b0C, Mostly cloudy, Feels like 26\u00b0C"
       ],
-      "visits": 2,
+      "visits": 3,
       "tainted": false,
       "elements": [
         {

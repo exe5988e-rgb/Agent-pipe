@@ -71843,6 +71843,146 @@
           "resource_id": ""
         }
       ]
+    },
+    "2a3055394a68": {
+      "screen_id": "2a3055394a68",
+      "package": "com.android.vending",
+      "activity": "com.android.vending/.AssetBrowserActivity",
+      "name": "vending_assetbrowseractivity",
+      "labels": [
+        "Navigate up",
+        "Spotify",
+        "Clear",
+        "Refine search to 'spotify'",
+        "Refine search to 'spotify'",
+        "Refine search to 'spotify for artists'",
+        "Refine search to 'spotify for artists'",
+        "Refine search to 'spotify for podcasters'",
+        "Refine search to 'spotify for podcasters'",
+        "Refine search to 'spotify lite offline'",
+        "Refine search to 'spotify lite offline'",
+        "Refine search to 'spotify tv'",
+        "Refine search to 'spotify tv'",
+        "re",
+        "Dee",
+        "re"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Spotify",
+          "x": 620,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": ""
+        },
+        {
+          "text": "Clear",
+          "x": 1142,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'spotify'",
+          "x": 620,
+          "y": 437,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'spotify'",
+          "x": 1107,
+          "y": 437,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'spotify for artists'",
+          "x": 620,
+          "y": 633,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'spotify for artists'",
+          "x": 1107,
+          "y": 633,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'spotify for podcasters'",
+          "x": 620,
+          "y": 829,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'spotify for podcasters'",
+          "x": 1107,
+          "y": 829,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'spotify lite offline'",
+          "x": 620,
+          "y": 1025,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'spotify lite offline'",
+          "x": 1107,
+          "y": 1025,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'spotify tv'",
+          "x": 620,
+          "y": 1221,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'spotify tv'",
+          "x": 1107,
+          "y": 1221,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "re",
+          "x": 155,
+          "y": 2744,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Dee",
+          "x": 465,
+          "y": 2744,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "re",
+          "x": 1085,
+          "y": 2744,
+          "cls": "android.view.View",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -72448,7 +72588,8 @@
     "91b98e24a7db|tap:Refine: weather today": "99751df5ec71",
     "5731aaff4c94|opt4_launch:play store": "c3c160d6730f",
     "c3c160d6730f|tap:Books": "e921768c497c",
-    "e921768c497c|tap:Voice search": "fc4050d517f1"
+    "e921768c497c|tap:Voice search": "fc4050d517f1",
+    "fc4050d517f1|type": "2a3055394a68"
   }
 }
 

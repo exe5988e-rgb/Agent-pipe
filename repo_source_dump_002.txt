@@ -67217,7 +67217,7 @@
         "Communities",
         "Calls"
       ],
-      "visits": 2,
+      "visits": 3,
       "tainted": false,
       "elements": [
         {
@@ -77314,7 +77314,8 @@
     "99751df5ec71|tap:See 29 tabs": "a34183adf43f",
     "a34183adf43f|home": "5731aaff4c94",
     "1025dd6b857e|opt4_launch:whatsapp": "af62a7d780e2",
-    "af62a7d780e2|tap:WO": "a206f27488e6"
+    "af62a7d780e2|tap:WO": "a206f27488e6",
+    "a206f27488e6|tap:Updates": "6dcc835738aa"
   }
 }
 

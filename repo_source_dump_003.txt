@@ -8302,6 +8302,8 @@ nohup: ignoring input
   TransitionMemory: 592 transitions (279 confirmed, threshold=2)
 [parser] DEBUG normalized: 'tap 2'
 [parser] INFO parsed 'tap 2' -> {'action': 'tap', 'target': 2}
+[parser] DEBUG normalized: 'tap 11'
+[parser] INFO parsed 'tap 11' -> {'action': 'tap', 'target': 11}
 
 
 //===== TERMUXFILE: --task =====

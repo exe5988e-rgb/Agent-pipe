@@ -8913,6 +8913,133 @@ nohup: ignoring input
 [parser] DEBUG normalized: 'type google.com'
 [parser] INFO parsed 'type google.com' -> {'action': 'type', 'text': 'google.com'}
 
+########################################################
+  JARVIS  |  Open Chrome and go to google.com
+  Device : 192.168.29.48:33117
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 529 screens (0 tainted), 646 transitions
+    whatsapp             175 screens
+    chrome               106 screens
+    youtube              104 screens
+    vending              43 screens
+    termux               25 screens
+    settings             25 screens
+    launcher             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+    notificationmanager  1 screens
+    battery              1 screens
+  TransitionMemory: 596 transitions (279 confirmed, threshold=2)
+[init] task_apps: ['chrome']
+[init] max_skill_steps: 20 (threshold: 12)
+
+========================================================
+  STEP 1  |  Open Chrome and go to google.com
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3309252 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Cloudy'
+[ui_parser] OCR: (841,1475)-(1009,1671) → 'lt'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.launcher/.Launcher hash=898b8a62a624 elements=26
+[step] UI: ['Clock', '21', ':', '18', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (1025dd6b)
+[OPT4v2] launcher -> launching chrome (com.android.chrome)
+[llm] OPT4v2 am start: com.android.chrome
+
+========================================================
+  STEP 2  |  Open Chrome and go to google.com
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (503053 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (168,139) → 'Connection is secure'
+[ui_parser] child: (0,335) → 'Current Dhanbad weather condition is Sunny with real-time temperature (36°C), humidity 13%, wind 10.8km/h, pressure (1007mb), UV (6.9), visibility (10km) in\xa0...'
+[ui_parser] child: (0,706) → 'Filters and topics'
+[ui_parser] child: (14,706) → 'AI Mode'
+[ui_parser] child: (287,706) → 'All'
+[ui_parser] child: (427,706) → 'News'
+[ui_parser] child: (637,706) → 'Images'
+[ui_parser] child: (885,706) → 'Videos'
+[ui_parser] child: (1127,706) → 'Forums'
+[ui_parser] child: (0,877) → 'Home Rohraband, Jharkhand'
+[ui_parser] child: (0,1182) → 'Current Dhanbad weather condition is Sunny with real-time temperature (36°C), humidity 13%, wind 10.8km/h, pressure (1007mb), UV (6.9), visibility (10km) in\xa0...'
+[ui_parser] child: (0,1182) → 'More options for Weather'
+[ui_parser] child: (0,1378) → 'Wed, Partly cloudy, High of 36, Low of 21, Selected'
+[ui_parser] child: (56,1392) → 'Now, 26°C, Mostly cloudy, Feels like 26°C'
+[ui_parser] child: (0,1721) → '11\u202fpm,23°C,Partly cloudy'
+[ui_parser] child: (0,2508) → 'Wed, Partly cloudy, High of 36, Low of 21, Selected'
+[ui_parser] child: (56,2508) → 'Wed, Partly cloudy, High of 36, Low of 21, Selected'
+[ui_parser] child: (294,2508) → 'Thu, Partly sunny, High of 34, Low of 21'
+[ui_parser] child: (770,2508) → 'Sat, Rain, High of 28, Low of 17'
+[ui_parser] child: (1008,2508) → 'Sun, Partly sunny, High of 29, Low of 18'
+[ui_parser] full parse -- 43 elements (35 labeled, 20 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=61f602daf47e elements=43
+[step] UI: ['Open the homepage', 'Connection is secure', 'google.com/search?q=weather+today&oq=&gs_lcrp=EgZjaHJvbWUqCQgEECMYJxjqAjIPCAAQIxgnGOoCGPAFGJ4GMgkIARAjGCcY6gIyDwgCECMYJxjqAhjwBRieBjIJCAMQIxgnGOoCMgkIBBAjGCcY', 'See 29 tabs', 'Customise and control Google Chrome', 'Current Dhanbad weather condition is Sunny with real-time temperature (36°C), humidity 13%, wind 10.8km/h, pressure (1007mb), UV (6.9), visibility (10km) in\xa0...', 'Google', 'Google Account: Amir Shams (amirshamse8@gmail.com)']
+[map] screen: chrome_main (99751df5)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 3'
+[step] LLM: 'tap 3'
+[step] action: {'action': 'tap', 'target': 3}
+[input] dispatching: TouchEvent(x=592, y=237)
+[input] dispatching: TouchEvent(x=592, y=237)
+[input] adb -s 192.168.29.48:33117 shell input tap 592 237
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[step] step=2/10 done=False history=['opt4_launch:chrome', 'tap [3] google.com/search?q=weather+today&oq=&gs_lcrp=EgZjaHJvbWUqCQgEECMYJxjqAjIPCAAQIxgnGOoCGPAFGJ4GMgkIARAjGCcY6gIyDwgCECMYJxjqAhjwBRieBjIJCAMQIxgnGOoCMgkIBBAjGCcY']
+
+========================================================
+  STEP 3  |  Open Chrome and go to google.com
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1160391 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (70,139) → 'Connection is secure'
+[ui_parser] child: (28,335) → 'Share link to search results page for: weather today. Source: google.com'
+[ui_parser] child: (28,671) → 'Refine: weather tomorrow'
+[ui_parser] child: (28,867) → 'Refine: weather report'
+[ui_parser] child: (28,1063) → 'Refine: weather today at my location'
+[ui_parser] child: (28,1259) → 'Refine: restaurants nearby'
+[ui_parser] child: (28,1455) → 'Refine: weather today rain'
+[ui_parser] child: (28,1651) → 'Refine: weather this week'
+[ui_parser] full parse -- 22 elements (21 labeled, 8 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=5f436fdaba56 elements=22
+[step] UI: ['element_1', 'Connection is secure', 'Search Google or type URL', 'Start voice search', 'Search with your camera using Google Lens', '17 suggested items in list below.', 'Share link to search results page for: weather today. Source: google.com', 'Share link to search results page for: weather today. Source: google.com']
+[map] new screen: chrome_main (cabb12a803f3)
+[tm] transition changed: 99751df5ec71|tap:See 29 tabs a34183ad -> cabb12a8
+[map] transition: chrome_main --[tap:See 29 tabs]--> chrome_main
+[map] screen: chrome_main (cabb12a8)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'type google.com'
+[step] LLM: 'type google.com'
+[step] action: {'action': 'type', 'text': 'google.com'}
+[input] dispatching: SetTextEvent('google.com')
+[input] dispatching: SetTextEvent('google.com')
+[input] adb -s 192.168.29.48:33117 shell input text google.com
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[step] step=3/10 done=False history=['opt4_launch:chrome', 'tap [3] google.com/search?q=weather+today&oq=&gs_lcrp=EgZjaHJvbWUqCQgEECMYJxjqAjIPCAAQIxgnGOoCGPAFGJ4GMgkIARAjGCcY6gIyDwgCECMYJxjqAhjwBRieBjIJCAMQIxgnGOoCMgkIBBAjGCcY', "type 'google.com'"]
 
 //===== TERMUXFILE: --task =====
 
@@ -12760,324 +12887,5 @@ def health_check():
         "binary":    next((shutil.which(b) for b in LLAMA_BINS
                            if shutil.which(b)), None),
     }
-
-
-//===== TERMUXFILE: jarvis-agent/agent/controller.py =====
-"""
-agent/controller.py  —  Main Jarvis agent loop
-
-OPT-4 v2 (Session 6): step-aware app launch bypass.
-
-At task start, controller extracts the ordered app list from the task string.
-It maintains app_index pointing to the next app that needs to be launched.
-
-On each step, before building a prompt:
-  1. Call get_top_activity() to check if launcher is foreground.
-  2. If yes AND app_index < len(task_apps): fire am start via bypass_pkg,
-     advance app_index, skip LLM call for this step.
-
-This means every app-open in a multi-step task is handled by OPT-4.
-Claude only handles navigation within each app.
-
-Example for "Open Chrome, find headline, then open WhatsApp and send to Mummy":
-  task_apps = ['chrome', 'whatsapp']
-  Step 1: launcher -> OPT4 launches Chrome (app_index -> 1)
-  Steps 2-N: Claude navigates Chrome, finds headline
-  Step N+1: Claude presses home -> launcher
-  Step N+2: launcher -> OPT4 launches WhatsApp (app_index -> 2)
-  Steps N+3...: Claude navigates WhatsApp, sends message, returns done
-"""
-
-import sys, os, time, argparse
-
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, ROOT)
-
-from perception.screen_capture  import capture_screen
-from perception.ui_parser       import parse_ui, get_top_activity
-from reasoning.prompt_builder   import build_prompt
-from reasoning.llm_client       import generate, health_check
-from reasoning.action_parser    import parse_action
-from executor.adb_executor      import execute
-from agent.state                import AgentState
-
-DEFAULT_DEVICE  = "192.168.29.48:38577"
-DEFAULT_TASK    = "Open WhatsApp"
-DEFAULT_MODEL   = os.path.expanduser(
-    "~/ai-workspace/llama.cpp/models/Qwen2.5-Coder-3B-Instruct-Q4_K_M.gguf")
-LOOP_SLEEP      = 1.5
-MAX_REPEAT      = 3
-MAX_EMPTY_WAITS = 8
-
-_LAUNCHER_PKGS = (
-    "com.sec.android.app.launcher",
-    "com.android.launcher",
-    "com.google.android.apps.nexuslauncher",
-    "com.miui.home",
-    "com.oppo.launcher",
-    "com.bbk.launcher2",
-    "com.huawei.android.launcher",
-    "com.asus.launcher",
-)
-
-APP_PACKAGES = {
-    "whatsapp"   : "com.whatsapp",
-    "chrome"     : "com.android.chrome",
-    "youtube"    : "com.google.android.youtube",
-    "settings"   : "com.android.settings",
-    "camera"     : "com.android.camera2",
-    "gallery"    : "com.sec.android.gallery3d",
-    "contacts"   : "com.android.contacts",
-    "phone"      : "com.samsung.android.dialer",
-    "messages"   : "com.samsung.android.messaging",
-    "gmail"      : "com.google.android.gm",
-    "maps"       : "com.google.android.apps.maps",
-    "instagram"  : "com.instagram.android",
-    "facebook"   : "com.facebook.katana",
-    "twitter"    : "com.twitter.android",
-    "x"          : "com.twitter.android",
-    "spotify"    : "com.spotify.music",
-    "telegram"   : "org.telegram.messenger",
-    "snapchat"   : "com.snapchat.android",
-    "netflix"    : "com.netflix.mediaclient",
-    "calculator" : "com.samsung.android.calculator",
-    "clock"      : "com.samsung.android.app.clockpackage",
-    "files"      : "com.sec.android.app.myfiles",
-    "play store" : "com.android.vending",
-    "playstore"  : "com.android.vending",
-}
-
-def extract_apps_in_order(task: str) -> list:
-    """
-    Scan task left-to-right and return app keywords in the order they appear.
-    Longest key wins to handle multi-word keys like 'play store'.
-
-      "Open Chrome then open WhatsApp"  ->  ['chrome', 'whatsapp']
-      "Play Warriyo Mortals on YouTube" ->  ['youtube']
-    """
-    tl   = task.lower()
-    seen = set()
-    out  = []
-    i    = 0
-    while i < len(tl):
-        matched = False
-        for key in sorted(APP_PACKAGES.keys(), key=len, reverse=True):
-            if tl[i:i + len(key)] == key:
-                if key not in seen:
-                    seen.add(key)
-                    out.append(key)
-                i += len(key)
-                matched = True
-                break
-        if not matched:
-            i += 1
-    return out
-
-def _is_on_launcher(device: str) -> bool:
-    """
-    Authoritative launcher check via dumpsys — works regardless of prompt content.
-    get_top_activity() already exists in ui_parser.py.
-    """
-    activity = get_top_activity(device)
-    if not activity:
-        return False
-    pkg = activity.split("/")[0]
-    return any(pkg.startswith(lp) for lp in _LAUNCHER_PKGS)
-
-def _repeat_count(history: list) -> int:
-    """Count consecutive identical trailing history entries."""
-    if not history:
-        return 0
-    last  = history[-1]
-    count = 0
-    for entry in reversed(history):
-        if entry == last:
-            count += 1
-        else:
-            break
-    return count
-
-def run_step(state, device, model_path):
-    print(f"\n{'='*56}\n  STEP {state.step+1}  |  {state.task}\n{'='*56}")
-
-    img = capture_screen(adb_device=device)
-    state.last_screen = img
-    ui  = parse_ui(img, adb_device=device)
-    state.last_ui = ui
-    print(f"[step] UI: {[e['text'] for e in ui]}")
-
-    # -- OPT-4 v2: launcher + app_index bypass --------------------------------
-    if state.app_index < len(state.task_apps):
-        if _is_on_launcher(device):
-            next_app = state.task_apps[state.app_index]
-            pkg      = APP_PACKAGES[next_app]
-            print(f"[OPT4v2] launcher -> launching {next_app} ({pkg})")
-            generate("", model_path=model_path, bypass_pkg=pkg)
-            state.history.append(f"opt4_launch:{next_app}")
-            state.step += 1
-            state.app_index += 1
-            print(f"[OPT4v2] app_index -> {state.app_index}/{len(state.task_apps)}")
-            return
-
-    # -- Empty UI handling ----------------------------------------------------
-    if not ui:
-        state.empty_ui_count += 1
-        print(f"[step] empty UI ({state.empty_ui_count}/{MAX_EMPTY_WAITS})")
-        if state.empty_ui_count >= MAX_EMPTY_WAITS:
-            print("[step] empty UI budget exhausted")
-            state.done = True
-            return
-        time.sleep(2)
-        state.step += 1
-        return
-    state.empty_ui_count = 0
-
-    # -- Repeat action warning ------------------------------------------------
-    extra = ""
-    if _repeat_count(state.history) >= MAX_REPEAT:
-        last  = state.history[-1]
-        extra = f"\nWARNING: {last!r} repeated {MAX_REPEAT}+ times with no change — try a different action."
-        print(f"[step] repeat warning: {last!r}")
-
-    # -- Normal LLM step ------------------------------------------------------
-    prompt  = build_prompt(state.task, ui, history=state.history) + extra
-    llm_out = generate(prompt, model_path=model_path)
-    print(f"[step] LLM: {llm_out!r}")
-
-    action = parse_action(llm_out)
-    print(f"[step] action: {action}")
-
-    execute(action, ui, adb_device=device)
-    state.record(action, ui)
-
-    if action.get("action") == "done":
-        state.done = True
-
-    print(f"[step] {state.summary()}")
-
-def run(task, device, model_path, max_steps=20):
-    print(f"\n{'#'*56}\n  JARVIS  |  {task}\n  Device : {device}\n{'#'*56}\n")
-
-    hc = health_check()
-    print(f"[init] backends: {hc}")
-    if not any([hc["phone_b"], hc["proxy"], hc["llamafile"], hc["binary"]]):
-        print("[init] WARNING: no LLM backend reachable!")
-
-    state                = AgentState(task=task, max_steps=max_steps)
-    state.task_apps      = extract_apps_in_order(task)
-    state.app_index      = 0
-    state.empty_ui_count = 0
-    print(f"[init] task_apps (ordered): {state.task_apps}")
-
-    while not state.is_finished():
-        try:
-            run_step(state, device=device, model_path=model_path)
-        except KeyboardInterrupt:
-            print("\n[controller] interrupted")
-            break
-        except Exception as e:
-            print(f"[controller] step error: {e}")
-            import traceback; traceback.print_exc()
-            time.sleep(3)
-            state.step += 1
-            continue
-
-        if state.done:
-            print(f"\n[controller] done in {state.step} steps")
-            break
-
-        time.sleep(LOOP_SLEEP)
-
-    print(f"\n[controller] history:")
-    for i, h in enumerate(state.history, 1):
-        print(f"  {i}. {h}")
-
-if __name__ == "__main__":
-    p = argparse.ArgumentParser()
-    p.add_argument("--task",      default=DEFAULT_TASK)
-    p.add_argument("--device",    default=DEFAULT_DEVICE)
-    p.add_argument("--model",     default=DEFAULT_MODEL)
-    p.add_argument("--max-steps", default=20, type=int)
-    a = p.parse_args()
-    run(a.task, a.device, a.model, a.max_steps)
-
-
-//===== TERMUXFILE: jarvis-agent/agent/state.py =====
-from dataclasses import dataclass, field
-
-@dataclass
-class AgentState:
-    task: str
-    step: int = 0
-    history: list = field(default_factory=list)
-    last_screen: str = ""
-    last_ui: list = field(default_factory=list)
-    done: bool = False
-    max_steps: int = 20
-
-    def record(self, action: dict, ui_elements: list) -> None:
-        act = action.get("action", "?")
-        if act == "tap":
-            tid = action.get("target")
-            if tid is not None:
-                label = next((e["text"] for e in ui_elements if e["id"] == tid), f"id={tid}")
-                self.history.append(f"tap [{tid}] {label}")
-            else:
-                self.history.append(f"tap ({action.get('x')},{action.get('y')})")
-        elif act == "type":
-            self.history.append(f"type {action.get('text','')!r}")
-        elif act == "swipe":
-            self.history.append(f"swipe ({action.get('x1')},{action.get('y1')})→({action.get('x2')},{action.get('y2')})")
-        else:
-            self.history.append(act)
-        self.step += 1
-
-    def is_finished(self) -> bool:
-        return self.done or self.step >= self.max_steps
-
-    def summary(self) -> str:
-        return f"step={self.step}/{self.max_steps} done={self.done} history={self.history}"
-
-
-//===== TERMUXFILE: jarvis-agent/perception/screen_capture.py =====
-"""perception/screen_capture.py — wraps Device.take_screenshot()"""
-import os, sys
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, ROOT)
-from executor.device import Device
-
-_cache = {}
-
-def capture_screen(adb_device: str, filename="screen.png") -> str:
-    if adb_device not in _cache:
-        _cache[adb_device] = Device(
-            device_serial = adb_device,
-            output_dir    = os.path.join(ROOT, "screenshots")
-        )
-    return _cache[adb_device].take_screenshot(filename=filename)
-
-
-//===== TERMUXFILE: jarvis-agent/perception/ui_mock_parser.py =====
-"""
-perception/ui_mock_parser.py
-Mock until OmniParser integration.
-Same interface: parse_ui(image_path) -> list[{id,text,x,y}]
-"""
-MOCK_ELEMENTS = [
-    {"id": 1,  "text": "WhatsApp",   "x": 160,  "y": 1200},
-    {"id": 2,  "text": "Chrome",     "x": 480,  "y": 1200},
-    {"id": 3,  "text": "Camera",     "x": 800,  "y": 1200},
-    {"id": 4,  "text": "Settings",   "x": 160,  "y": 1600},
-    {"id": 5,  "text": "YouTube",    "x": 480,  "y": 1600},
-    {"id": 6,  "text": "Files",      "x": 800,  "y": 1600},
-    {"id": 7,  "text": "Search bar", "x": 540,  "y": 200},
-    {"id": 8,  "text": "Gmail",      "x": 160,  "y": 800},
-    {"id": 9,  "text": "Maps",       "x": 480,  "y": 800},
-    {"id": 10, "text": "Clock",      "x": 800,  "y": 800},
-]
-
-def parse_ui(image_path: str) -> list:
-    print(f"[parser] mock — {len(MOCK_ELEMENTS)} elements")
-    return [dict(e) for e in MOCK_ELEMENTS]
 
 

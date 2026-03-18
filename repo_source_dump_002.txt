@@ -50475,7 +50475,7 @@
         "Voice message, Button. Double tap and hold to record, slide left to cancel recording, slide up to lock recording on. Release to send.",
         "Message"
       ],
-      "visits": 3,
+      "visits": 4,
       "tainted": false,
       "elements": [
         {
@@ -51029,7 +51029,8 @@
     "4d9720e7da52|type": "d5969964a2f4",
     "d5969964a2f4|tap:element_6": "366c9a634a55",
     "366c9a634a55|tap:17": "f57d9a835af4",
-    "f57d9a835af4|tap:Emoji, GIFs and stickers": "120aaa05f405"
+    "f57d9a835af4|tap:Emoji, GIFs and stickers": "120aaa05f405",
+    "120aaa05f405|back": "f57d9a835af4"
   }
 }
 

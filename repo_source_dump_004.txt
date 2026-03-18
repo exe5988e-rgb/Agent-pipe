@@ -7356,7 +7356,9 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
 [skill] matched: 'play on youtube'  score=1.00  act=True
 [skill] cannot resolve: 'Edit suggestion warriyo mortals'
 [skill] resolution failed — falling through to LLM
-[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'[parser] DEBUG normalized: 'tap 20'
+[parser] INFO parsed 'tap 20' -> {'action': 'tap', 'target': 20}
+
 
 //===== TERMUXFILE: --task =====
 

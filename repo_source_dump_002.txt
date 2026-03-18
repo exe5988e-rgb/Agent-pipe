@@ -76092,7 +76092,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 20,
+      "visits": 21,
       "tainted": false,
       "elements": [
         {
@@ -77287,7 +77287,7 @@
         "Sound & vibration",
         "Notifications & Quick Settings"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {
@@ -79429,7 +79429,7 @@
     "1025dd6b857e|opt4_launch:youtube": "0cfd22e776c8",
     "740ae23375a8|tap:Watch most of YouTube ad-free, offline and in the background": "5f41671576ab",
     "5f41671576ab|tap:Voice search": "0b5a9aba0337",
-    "1025dd6b857e|opt4_launch:settings": "f6f258ae70ad",
+    "1025dd6b857e|opt4_launch:settings": "2c1be995ec82",
     "f6f258ae70ad|tap:On": "2c1be995ec82",
     "1025dd6b857e|opt4_launch:chrome": "99751df5ec71",
     "1025dd6b857e|opt4_launch:play store": "73181ac31bda",

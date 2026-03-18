@@ -4389,6 +4389,7 @@ if __name__ == "__main__":
 [19:11:30] 
 [18/33] [2★] [chrome] Open Chrome and open a new tab
 [19:11:30]   max_steps=8  skill_threshold=12  skills=4
+[19:13:27]   PASS  114.1s
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -5530,7 +5531,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-18T19:11:25.616332",
+  "run_at": "2026-03-18T19:13:27.874546",
   "skills_before": 0,
   "skills_current": 4,
   "results": [
@@ -5686,6 +5687,15 @@ if __name__ == "__main__":
       "elapsed_s": 108.5,
       "error": null,
       "retried": false
+    },
+    {
+      "task": "Open Chrome and open a new tab",
+      "category": "chrome",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 114.1,
+      "error": null,
+      "retried": false
     }
   ]
 }
@@ -5745,13 +5755,17 @@ if __name__ == "__main__":
     "version": 3
   },
   {
-    "pattern": "open chrome and go to",
+    "pattern": "open chrome and open a new tab",
     "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
-    "task_example": "Open Chrome and go to google.com",
+    "task_example": "Open Chrome and open a new tab",
     "steps": [
       {
         "action": "tap",
-        "target": "animex.one/watch/dragon-ball-223-episode-70"
+        "target": "Customise and control Google Chrome"
+      },
+      {
+        "action": "tap",
+        "target": "New tab"
       },
       {
         "action": "done"
@@ -8338,7 +8352,57 @@ nohup: ignoring input
 [ui_parser] cache miss -- full uiautomator dump
 [ui_parser] child: (0,139) → 'Card menu Will Privacy Display come to Galaxy S25 and other devices with One UI 8.5?'
 [ui_parser] child: (56,1155) → 'Build APK · exe5988e-rgb/JarvisMerged@d5529f8: github.com'
-[ui_parser] child: (56,1633) → 'Card menu Will Privacy Display come to Galaxy S25 and other devices with One UI 8.5?'
+[ui_parser] child: (56,1633) → 'Card menu Will Privacy Display come to Galaxy S25 and other devices with One UI 8.5?'[parser] DEBUG normalized: 'done'
+[parser] INFO parsed 'done' -> {'action': 'done'}
+
+[ui_parser] OCR: (56,2281)-(1184,2772) → 'See Ce'
+[ui_parser] full parse -- 20 elements (20 labeled, 4 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=5852f4887d31 elements=20
+[step] UI: ['Open the homepage', 'Card menu Will Privacy Display come to Galaxy S25 and other devices with One UI 8.5?', 'Signed in as Amir Shams. amirshamse8@gmail.com. Opens settings.', 'See 29 tabs', 'Customise and control Google Chrome', 'Search Google or type URL', 'Start voice search', 'Search with your camera using Google Lens']
+[map] new screen: chrome_main (7c92bc2f95a3)
+[map] transition: chrome_main --[tap:New Incognito tab]--> chrome_main
+[map] screen: chrome_main (7c92bc2f)
+[skill] matched: 'open chrome and go to'  score=1.00  act=True
+[skill] cannot resolve: 'animex.one/watch/dragon-ball-223-episode-70'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'done'
+[step] LLM: 'done'
+[step] action: {'action': 'done'}
+[input] DONE — no dispatch
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[skill] replacing shorter skill with better version (2 → 3 steps)
+[step] step=4/8 done=True history=['opt4_launch:chrome', 'tap [6] Customise and control Google Chrome', 'tap [6] New tab', 'done']
+
+[controller] done in 4 steps
+
+[controller] history:
+  1. opt4_launch:chrome
+  2. tap [6] Customise and control Google Chrome
+  3. tap [6] New tab
+  4. done
+
+  Screen Map: 481 screens (0 tainted), 598 transitions
+    whatsapp             168 screens
+    chrome               104 screens
+    youtube              88 screens
+    vending              30 screens
+    termux               25 screens
+    launcher             22 screens
+    settings             21 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               2 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+  TransitionMemory: 548 transitions (280 confirmed, threshold=2)
+
 
 //===== TERMUXFILE: --task =====
 

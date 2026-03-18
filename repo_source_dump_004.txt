@@ -8238,6 +8238,8 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
 [ui_parser] full parse -- 22 elements (21 labeled, 8 via OCR/rid/child) from 192.168.29.48:33117
 [mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=1e73f94692ef elements=22[parser] DEBUG normalized: 'tap 3'
 [parser] INFO parsed 'tap 3' -> {'action': 'tap', 'target': 3}
+[parser] DEBUG normalized: 'type wikipedia.org'
+[parser] INFO parsed 'type wikipedia.org' -> {'action': 'type', 'text': 'wikipedia.org'}
 
 
 //===== TERMUXFILE: --task =====

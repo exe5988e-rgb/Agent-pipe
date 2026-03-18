@@ -9044,7 +9044,9 @@ nohup: ignoring input
 [input] dispatching: SetTextEvent('google.com')
 [input] adb -s 192.168.29.48:33117 shell input text google.com
 [mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
-[step] step=3/10 done=False history=['opt4_launch:chrome', 'tap [3] google.com/search?q=weather+today&oq=&gs_lcrp=EgZjaHJvbWUqCQgEECMYJxjqAjIPCAAQIxgnGOoCGPAFGJ4GMgkIARAjGCcY6gIyDwgCECMYJxjqAhjwBRieBjIJCAMQIxgnGOoCMgkIBBAjGCcY', "type 'google.com'"]
+[step] step=3/10 done=False history=['opt4_launch:chrome', 'tap [3] google.com/search?q=weather+today&oq=&gs_lcrp=EgZjaHJvbWUqCQgEECMYJxjqAjIPCAAQIxgnGOoCGPAFGJ4GMgkIARAjGCcY6gIyDwgCECMYJxjqAhjwBRieBjIJCAMQIxgnGOoCMgkIBBAjGCcY', "type 'google.com'"][parser] DEBUG normalized: 'tap 6'
+[parser] INFO parsed 'tap 6' -> {'action': 'tap', 'target': 6}
+
 
 //===== TERMUXFILE: --task =====
 

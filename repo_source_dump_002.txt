@@ -69125,6 +69125,293 @@
           "resource_id": ""
         }
       ]
+    },
+    "caf601112185": {
+      "screen_id": "caf601112185",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Cast",
+        "Notifications, 9+",
+        "Search",
+        "JensJulius Tejlgaard has new content",
+        "MrBeast has new content",
+        "Competition Wallah has new content",
+        "JensJulius Tejlgaard has new content",
+        "TechFixIT has new content",
+        "NEFFEX has new content",
+        "All",
+        "All Selected",
+        "All Selected",
+        "Today",
+        "Videos",
+        "Shorts",
+        "Live",
+        "Podcasts",
+        "Shorts",
+        "CS50 for Business - Lecture 4 - Approaching Artificial Intelligence \u2013 49 minutes, 31 seconds \u2013 Go to channel CS50 \u2013 CS50 - 60 watching \u2013 play video",
+        "Most Value For Money Car In India!, 87 thousand views \u2013 play Short",
+        "Shorts",
+        "Most Value For Money Car In India!, 87 thousand views \u2013 play Short",
+        "The struggle is real \ud83d\ude2b, 434 thousand views \u2013 play Short",
+        "Most Value For Money Car In India!, 87 thousand views \u2013 play Short",
+        "Neji Was Always A MASSIVE Threat.., 59 thousand views \u2013 play Short",
+        "More actions",
+        "More actions",
+        "CS50 for Business - Lecture 4 - Approaching Artificial Intelligence \u2013 49 minutes, 31 seconds \u2013 Go to channel CS50 \u2013 CS50 - 60 watching \u2013 play video",
+        "Shorts",
+        "Create"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Cast",
+          "x": 820,
+          "y": 223,
+          "cls": "android.widget.Button",
+          "resource_id": "com.google.android.youtube:id/mdx_entry_point_button"
+        },
+        {
+          "text": "Notifications, 9+",
+          "x": 988,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/menu_item_view"
+        },
+        {
+          "text": "Search",
+          "x": 1156,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/menu_item_view"
+        },
+        {
+          "text": "JensJulius Tejlgaard has new content",
+          "x": 536,
+          "y": 482,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": ""
+        },
+        {
+          "text": "MrBeast has new content",
+          "x": 140,
+          "y": 482,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Competition Wallah has new content",
+          "x": 392,
+          "y": 482,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "JensJulius Tejlgaard has new content",
+          "x": 644,
+          "y": 482,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "TechFixIT has new content",
+          "x": 896,
+          "y": 482,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "NEFFEX has new content",
+          "x": 1047,
+          "y": 482,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "All",
+          "x": 1156,
+          "y": 440,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "All Selected",
+          "x": 620,
+          "y": 741,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "All Selected",
+          "x": 113,
+          "y": 741,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Today",
+          "x": 321,
+          "y": 741,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Videos",
+          "x": 577,
+          "y": 741,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 839,
+          "y": 741,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Live",
+          "x": 1070,
+          "y": 741,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Podcasts",
+          "x": 1212,
+          "y": 741,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 620,
+          "y": 916,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "CS50 for Business - Lecture 4 - Approaching Artificial Intelligence \u2013 49 minutes, 31 seconds \u2013 Go to channel CS50 \u2013 CS50 - 60 watching \u2013 play video",
+          "x": 620,
+          "y": 1798,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results"
+        },
+        {
+          "text": "Most Value For Money Car In India!, 87 thousand views \u2013 play Short",
+          "x": 620,
+          "y": 1393,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 454,
+          "y": 916,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Most Value For Money Car In India!, 87 thousand views \u2013 play Short",
+          "x": 620,
+          "y": 1463,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": ""
+        },
+        {
+          "text": "The struggle is real \ud83d\ude2b, 434 thousand views \u2013 play Short",
+          "x": 313,
+          "y": 1463,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Most Value For Money Car In India!, 87 thousand views \u2013 play Short",
+          "x": 870,
+          "y": 1463,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Neji Was Always A MASSIVE Threat.., 59 thousand views \u2013 play Short",
+          "x": 1205,
+          "y": 1463,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 525,
+          "y": 1094,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 1082,
+          "y": 1094,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "CS50 for Business - Lecture 4 - Approaching Artificial Intelligence \u2013 49 minutes, 31 seconds \u2013 Go to channel CS50 \u2013 CS50 - 60 watching \u2013 play video",
+          "x": 620,
+          "y": 2367,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Home",
+          "x": 124,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 372,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Create",
+          "x": 620,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscriptions",
+          "x": 868,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "You",
+          "x": 1116,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Go to channel CS50",
+          "x": 105,
+          "y": 2736,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Action menu",
+          "x": 1142,
+          "y": 2736,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -69714,7 +70001,8 @@
     "5731aaff4c94|opt4_launch:whatsapp": "e593131cf7fc",
     "6dcc835738aa|tap:You": "47d448eaba6d",
     "13dcb6504714|tap:Communities": "e593131cf7fc",
-    "5731aaff4c94|opt4_launch:youtube": "b94fe430b394"
+    "5731aaff4c94|opt4_launch:youtube": "b94fe430b394",
+    "b94fe430b394|tap:You": "caf601112185"
   }
 }
 

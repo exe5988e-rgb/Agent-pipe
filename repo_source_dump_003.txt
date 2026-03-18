@@ -5692,6 +5692,8 @@ done
 
 //===== TERMUXFILE: gauntlet_nohup.log =====
 nohup: ignoring input
+[parser] DEBUG normalized: 'tap 2'
+[parser] INFO parsed 'tap 2' -> {'action': 'tap', 'target': 2}
 
 
 //===== TERMUXFILE: --task =====

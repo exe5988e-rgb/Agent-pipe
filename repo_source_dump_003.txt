@@ -3607,9 +3607,9 @@ if __name__ == "__main__":
     "last_seen": 1773794415.6299963
   },
   "36e8ae87b6fc|swipe": {
-    "to": "f8874e498a0c",
-    "count": 7,
-    "last_seen": 1773794585.5799575
+    "to": "a3b75eb433e2",
+    "count": 1,
+    "last_seen": 1773794683.742868
   }
 }
 

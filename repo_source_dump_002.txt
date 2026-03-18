@@ -48798,7 +48798,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {
@@ -50562,7 +50562,7 @@
     "3723d0d9b6da|back": "54ab1d5cd380",
     "54ab1d5cd380|swipe": "4098d83e5b9a",
     "4098d83e5b9a|swipe": "36e8ae87b6fc",
-    "36e8ae87b6fc|swipe": "f8874e498a0c"
+    "36e8ae87b6fc|swipe": "a3b75eb433e2"
   }
 }
 

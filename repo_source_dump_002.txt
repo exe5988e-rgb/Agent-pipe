@@ -47794,6 +47794,178 @@
           "resource_id": ""
         }
       ]
+    },
+    "00bc2bbcd4eb": {
+      "screen_id": "00bc2bbcd4eb",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Open the homepage",
+        "element_2",
+        "element_3",
+        "google.com/search?client=ms-android-oneplus-terr1-rso3&hs=WuC&sca_esv=9d975e0fdc86a6e5&sxsrf=ANbL-n72AAjlz-j94IXN5Fc8-9PiPABE9w%3A1773793142545&q=Best+Restaur",
+        "See 23 tabs",
+        "Customise and control Google Chrome",
+        "element_7",
+        "Choose area",
+        "How location is used",
+        "Remove Top rated",
+        "Remove Open now",
+        "element_12",
+        "View 3 corroboration links",
+        "About this result",
+        "Change language to Hindi",
+        "Listen",
+        "element_17",
+        "element_18",
+        "Expand map",
+        "Vibes rooftop restro and cafe Rated 4.4 out of 5, 90 user reviews \u00b7 \u20b9200\u2013400 Chinese \u00b7 Vibes Dine-in\u00b7 Drive-through\u00b7 Delivery Order delivery Menu Directions Share"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "element_2",
+          "x": 620,
+          "y": 1455,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.android.chrome:id/compositor_view_holder"
+        },
+        {
+          "text": "element_3",
+          "x": 224,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "google.com/search?client=ms-android-oneplus-terr1-rso3&hs=WuC&sca_esv=9d975e0fdc86a6e5&sxsrf=ANbL-n72AAjlz-j94IXN5Fc8-9PiPABE9w%3A1773793142545&q=Best+Restaur",
+          "x": 592,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "See 23 tabs",
+          "x": 988,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 1526,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Choose area",
+          "x": 796,
+          "y": 377,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "How location is used",
+          "x": 1155,
+          "y": 385,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Remove Top rated",
+          "x": 252,
+          "y": 427,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Remove Open now",
+          "x": 652,
+          "y": 427,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_12",
+          "x": 620,
+          "y": 1050,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "View 3 corroboration links",
+          "x": 958,
+          "y": 532,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "About this result",
+          "x": 1153,
+          "y": 532,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Change language to Hindi",
+          "x": 559,
+          "y": 532,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Listen",
+          "x": 719,
+          "y": 532,
+          "cls": "android.widget.ToggleButton",
+          "resource_id": ""
+        },
+        {
+          "text": "element_17",
+          "x": 621,
+          "y": 1671,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_18",
+          "x": 621,
+          "y": 1005,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Expand map",
+          "x": 1100,
+          "y": 1985,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Vibes rooftop restro and cafe Rated 4.4 out of 5, 90 user reviews \u00b7 \u20b9200\u2013400 Chinese \u00b7 Vibes Dine-in\u00b7 Drive-through\u00b7 Delivery Order delivery Menu Directions Share",
+          "x": 620,
+          "y": 2604,
+          "cls": "android.widget.Button",
+          "resource_id": "pv-/g/11shtc1zmz"
+        }
+      ]
     }
   },
   "transitions": {
@@ -48183,7 +48355,8 @@
     "7f10a5188f17|tap:element_9": "8a7ad9916fb6",
     "8a7ad9916fb6|tap:element_37": "1def2c77ddc7",
     "1def2c77ddc7|swipe": "e28b49f9232a",
-    "e28b49f9232a|tap:View 3 corroboration links": "ec0b6ebb8948"
+    "e28b49f9232a|tap:View 3 corroboration links": "ec0b6ebb8948",
+    "ec0b6ebb8948|swipe": "00bc2bbcd4eb"
   }
 }
 

@@ -7909,6 +7909,8 @@ nohup: ignoring input
 [ui_parser] full parse -- 35 elements (35 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117[parser] DEBUG normalized: 'Still working on it...'
 [parser] DEBUG normalized: 'tap 3'
 [parser] INFO parsed 'tap 3' -> {'action': 'tap', 'target': 3}
+[parser] DEBUG normalized: 'type MrBeast'
+[parser] INFO parsed 'type MrBeast' -> {'action': 'type', 'text': 'MrBeast'}
 
 
 //===== TERMUXFILE: --task =====

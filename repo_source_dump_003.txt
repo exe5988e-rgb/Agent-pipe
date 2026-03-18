@@ -4867,9 +4867,9 @@ if __name__ == "__main__":
     "last_seen": 1773858509.951579
   },
   "f025aa4a0cd3|tap:Sponsored": {
-    "to": "8bd4aa0f7819",
-    "count": 4,
-    "last_seen": 1773858610.5765133
+    "to": "12e7bef4e607",
+    "count": 1,
+    "last_seen": 1773858619.7726707
   }
 }
 

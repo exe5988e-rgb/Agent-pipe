@@ -91536,6 +91536,144 @@
           "resource_id": ""
         }
       ]
+    },
+    "12e7bef4e607": {
+      "screen_id": "12e7bef4e607",
+      "package": "com.android.launcher",
+      "activity": "com.android.launcher/.Launcher",
+      "name": "launcher_launcher",
+      "labels": [
+        "[ui_parser] cache miss -- full uiautomator dump\n[ui_parser] dump failed: ''\n[step] UI: []\n[map] screen: youtube_shell$homeactivity (8bd4aa0f)\n[step] empty UI (4/8)\n\n========================================================\n  STEP 11  |  Play Warriyo Mortals on YouTube\n========================================================\n[device] screenshot \u2192 /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (2326736 bytes)\n[ui_parser] activity=com.termux/.app.TermuxActivity\n[ui_parser] signal='com.termux/.app.TermuxActivity'\n[mem] miss (unknown): com.termux/.app.TermuxActivity\n[ui_parser] cache miss -- full uiautomator dump",
+        "ESC",
+        "\u2630",
+        "\u21f3",
+        "\u2191",
+        "END",
+        "PGUP",
+        "\u21b9",
+        "CTRL",
+        "ALT",
+        "\u2190",
+        "\u2193",
+        "\u2192",
+        "PGDN"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "[ui_parser] cache miss -- full uiautomator dump\n[ui_parser] dump failed: ''\n[step] UI: []\n[map] screen: youtube_shell$homeactivity (8bd4aa0f)\n[step] empty UI (4/8)\n\n========================================================\n  STEP 11  |  Play Warriyo Mortals on YouTube\n========================================================\n[device] screenshot \u2192 /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (2326736 bytes)\n[ui_parser] activity=com.termux/.app.TermuxActivity\n[ui_parser] signal='com.termux/.app.TermuxActivity'\n[mem] miss (unknown): com.termux/.app.TermuxActivity\n[ui_parser] cache miss -- full uiautomator dump",
+          "x": 620,
+          "y": 727,
+          "cls": "android.view.View",
+          "resource_id": "com.termux:id/terminal_view"
+        },
+        {
+          "text": "ESC",
+          "x": 97,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "HOME",
+          "x": 620,
+          "y": 1447,
+          "cls": "androidx.viewpager.widget.ViewPager",
+          "resource_id": "com.termux:id/terminal_toolbar_view_pager"
+        },
+        {
+          "text": "\u2630",
+          "x": 271,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u21f3",
+          "x": 445,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "HOME",
+          "x": 619,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u2191",
+          "x": 794,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "END",
+          "x": 968,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "PGUP",
+          "x": 1143,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u21b9",
+          "x": 97,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "CTRL",
+          "x": 271,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "ALT",
+          "x": 445,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u2190",
+          "x": 619,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u2193",
+          "x": 794,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u2192",
+          "x": 968,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "PGDN",
+          "x": 1143,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -92248,7 +92386,7 @@
     "cce393f689c6|tap:filters": "e6e2d7bad11c",
     "e6e2d7bad11c|type": "87fee6983a2f",
     "99af5f5e5dfc|tap:Warriyo - Mortals (ft. Laura Brehm) \u2013 3 minutes, 49 seconds \u2013 Go to channel Warriyo \u2013 Warriyo - 37 million views - 9 years ago \u2013 play video": "f025aa4a0cd3",
-    "f025aa4a0cd3|tap:Sponsored": "8bd4aa0f7819"
+    "f025aa4a0cd3|tap:Sponsored": "12e7bef4e607"
   }
 }
 

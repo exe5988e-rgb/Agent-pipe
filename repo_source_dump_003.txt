@@ -10534,7 +10534,9 @@ RuntimeError: No LLM backend available.
 [ui_parser] signal='com.android.vending/.AssetBrowserActivity'
 [mem] miss (unknown): com.android.vending/.AssetBrowserActivity
 [ui_parser] cache miss -- full uiautomator dump
-[ui_parser] child: (14,153) → 'Navigate up'
+[ui_parser] child: (14,153) → 'Navigate up'[parser] DEBUG normalized: 'tap 3'
+[parser] INFO parsed 'tap 3' -> {'action': 'tap', 'target': 3}
+
 
 //===== TERMUXFILE: --task =====
 

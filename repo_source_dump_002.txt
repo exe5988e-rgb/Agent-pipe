@@ -95745,7 +95745,7 @@
         "Edit suggestion warriyo mortals phonk",
         "Edit suggestion warriyo mortals phonk"
       ],
-      "visits": 4,
+      "visits": 5,
       "tainted": false,
       "elements": [
         {
@@ -97063,7 +97063,8 @@
     "32b120725efd|tap:More": "598ffb8d71c4",
     "598ffb8d71c4|type": "b05565f390c0",
     "b05565f390c0|tap:Edit suggestion warriyo mortals slowed": "4347dab37f93",
-    "4347dab37f93|tap:warriyo mortals": "27ae579c1b34"
+    "4347dab37f93|tap:warriyo mortals": "27ae579c1b34",
+    "27ae579c1b34|type": "b05565f390c0"
   }
 }
 

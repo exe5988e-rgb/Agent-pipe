@@ -4535,6 +4535,11 @@ if __name__ == "__main__":
     "to": "bda901bbd4b0",
     "count": 1,
     "last_seen": 1773848758.8703096
+  },
+  "2c1be995ec82|tap:13": {
+    "to": "0c7572520870",
+    "count": 1,
+    "last_seen": 1773848815.2024522
   }
 }
 
@@ -4602,6 +4607,7 @@ if __name__ == "__main__":
 [21:16:04] 
 [15/33] [2★] [settings] Open Settings and go to Notifications
 [21:16:04]   max_steps=8  skill_threshold=12  skills=4
+[21:16:56]   PASS  48.1s
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -5743,7 +5749,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-18T21:15:59.752203",
+  "run_at": "2026-03-18T21:16:56.088254",
   "skills_before": 0,
   "skills_current": 4,
   "results": [
@@ -5872,6 +5878,15 @@ if __name__ == "__main__":
       "elapsed_s": 79.0,
       "error": null,
       "retried": false
+    },
+    {
+      "task": "Open Settings and go to Notifications",
+      "category": "settings",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 48.1,
+      "error": null,
+      "retried": false
     }
   ]
 }
@@ -5931,7 +5946,7 @@ if __name__ == "__main__":
         "action": "done"
       }
     ],
-    "uses": 1,
+    "uses": 2,
     "version": 3
   },
   {
@@ -8513,6 +8528,161 @@ nohup: ignoring input
   TransitionMemory: 593 transitions (278 confirmed, threshold=2)
 [parser] DEBUG normalized: 'tap 13'
 [parser] INFO parsed 'tap 13' -> {'action': 'tap', 'target': 13}
+
+########################################################
+  JARVIS  |  Open Settings and go to Notifications
+  Device : 192.168.29.48:33117
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 526 screens (0 tainted), 643 transitions
+    whatsapp             175 screens
+    chrome               106 screens
+    youtube              104 screens
+    vending              43 screens
+    termux               25 screens
+    settings             24 screens
+    launcher             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+  TransitionMemory: 593 transitions (278 confirmed, threshold=2)
+[init] task_apps: ['settings']
+[init] max_skill_steps: 20 (threshold: 12)
+
+========================================================
+  STEP 1  |  Open Settings and go to Notifications
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3308238 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Cloudy'
+[ui_parser] OCR: (841,1475)-(1009,1671) → 'lt'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.launcher/.Launcher hash=3e06d23eef17 elements=26
+[step] UI: ['Clock', '21', ':', '16', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (1025dd6b)
+[OPT4v2] launcher -> launching settings (com.android.settings)
+[llm] OPT4v2 am start: com.android.settings
+
+========================================================
+  STEP 2  |  Open Settings and go to Notifications
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (227125 bytes)
+[ui_parser] activity=com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity
+[ui_parser] signal='com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity'
+[mem] miss (unknown): com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,694) → 'Enjoy exclusive benefits and services designed for you!'
+[ui_parser] child: (0,736) → 'Enjoy exclusive benefits and services designed for you!'
+[ui_parser] child: (0,1049) → 'Aeroplane mode'
+[ui_parser] child: (0,1238) → 'JioFiber-ia1'
+[ui_parser] child: (0,1420) → 'Not connected'
+[ui_parser] child: (0,1602) → 'Mobile network'
+[ui_parser] child: (0,1784) → 'Device Connect'
+[ui_parser] child: (0,2029) → 'Home screen, Lock screen & style'
+[ui_parser] child: (0,2260) → 'Display & brightness'
+[ui_parser] child: (0,2505) → 'Sound & vibration'
+[ui_parser] child: (0,2694) → 'Notifications & Quick Settings'
+[ui_parser] full parse -- 13 elements (13 labeled, 11 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity hash=526863f8fbf6 elements=13
+[step] UI: ['Search box', 'Search', 'Enjoy exclusive benefits and services designed for you!', 'Enjoy exclusive benefits and services designed for you!', 'Aeroplane mode', 'JioFiber-ia1', 'Not connected', 'Mobile network']
+[tm] transition changed: 1025dd6b857e|opt4_launch:settings bcfd9287 -> 2c1be995
+[map] transition: launcher_launcher --[opt4_launch:settings]--> settings_oplussettingshomepageactivity
+[map] screen: settings_oplussettingshomepageactivity (2c1be995)
+[skill] matched: 'open settings'  score=1.00  act=True
+[skill] cannot resolve: 'Back'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 13'
+[step] LLM: 'tap 13'
+[step] action: {'action': 'tap', 'target': 13}
+[input] dispatching: TouchEvent(x=620, y=2733)
+[input] dispatching: TouchEvent(x=620, y=2733)
+[input] adb -s 192.168.29.48:33117 shell input tap 620 2733
+[step] step=2/8 done=False history=['opt4_launch:settings', 'tap [13] Notifications & Quick Settings']
+
+========================================================
+  STEP 3  |  Open Settings and go to Notifications
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (221941 bytes)
+[ui_parser] activity=com.oplus.notificationmanager/.NotificationCenterActivity
+[ui_parser] signal='com.oplus.notificationmanager/.NotificationCenterActivity'
+[mem] miss (unknown): com.oplus.notificationmanager/.NotificationCenterActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,0) → 'Send you real-time updates about ride hailing, food deliveries and other service information in the notification drawer and the status bar in real time.'
+[ui_parser] child: (0,546) → 'Status bar'
+[ui_parser] child: (0,721) → 'Quick Settings'
+[ui_parser] child: (0,889) → 'Send you real-time updates about ride hailing, food deliveries and other service information in the notification drawer and the status bar in real time.'
+[ui_parser] child: (56,1467) → 'Lock screen'
+[ui_parser] child: (441,1467) → 'Allowed'
+[ui_parser] child: (826,1467) → 'App icon badges'
+[ui_parser] child: (0,2201) → 'Manage conversations'
+[ui_parser] child: (0,2376) → 'Do not display notification content when the device is locked.'
+[ui_parser] OCR: (0,2744)-(1240,2772) → 'oo'
+[ui_parser] full parse -- 14 elements (13 labeled, 10 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.oplus.notificationmanager/.NotificationCenterActivity hash=3532c2f8d22c elements=14
+[step] UI: ['Send you real-time updates about ride hailing, food deliveries and other service information in the notification drawer and the status bar in real time.', 'Back', 'Search box', 'Search for apps', 'element_5', 'Status bar', 'Quick Settings', 'Send you real-time updates about ride hailing, food deliveries and other service information in the notification drawer and the status bar in real time.']
+[map] new screen: notificationmanager_notificationcenteractivity (0c7572520870)
+[map] transition: settings_oplussettingshomepageactivity --[tap:13]--> notificationmanager_notificationcenteractivity
+[map] screen: notificationmanager_notificationcenteractivity (0c757252)
+[skill] matched: 'open settings'  score=1.00  act=False
+[skill] executing 2 steps from memory
+[skill] action: {'action': 'tap', 'target': 2}
+[input] dispatching: TouchEvent(x=98, y=230)
+[input] dispatching: TouchEvent(x=98, y=230)
+[input] adb -s 192.168.29.48:33117 shell input tap 98 230
+[mem] invalidated com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity
+[skill] action: {'action': 'done'}
+[input] DONE — no dispatch
+[skill] done — skipped Claude
+[step] step=4/8 done=True history=['opt4_launch:settings', 'tap [13] Notifications & Quick Settings', 'tap [2] Back', 'done']
+
+[controller] done in 4 steps
+
+[controller] history:
+  1. opt4_launch:settings
+  2. tap [13] Notifications & Quick Settings
+  3. tap [2] Back
+  4. done
+
+  Screen Map: 527 screens (0 tainted), 644 transitions
+    whatsapp             175 screens
+    chrome               106 screens
+    youtube              104 screens
+    vending              43 screens
+    termux               25 screens
+    settings             24 screens
+    launcher             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+    notificationmanager  1 screens
+  TransitionMemory: 594 transitions (278 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: --task =====
@@ -13131,205 +13301,5 @@ def from_action(action: dict, ui_elements: list):
         return None
 
     return None
-
-
-//===== TERMUXFILE: jarvis-agent/executor/device.py =====
-"""
-executor/device.py
-
-Extracted from DroidBot/droidbot/device.py
-Source: https://github.com/honeynet/droidbot
-
-What we keep:
-  __init__    serial, output_dir, display_info cache
-  get_width / get_height   (from get_display_info — DroidBot pattern)
-  take_screenshot          (ADB screencap via exec-out, not minicap)
-  key_press                → adb shell input keyevent
-  view_touch               → adb shell input tap
-  view_drag                → adb shell input swipe
-  view_set_text            → adb shell input text
-  get_top_activity_name    (dumpsys, DroidBot regex)
-  unlock                   (simple keyevent wake)
-
-What we drop (all require DroidBot adapters we don't have):
-  All adapter setup (ADB, Minicap, DroidBotApp, Telnet, Logcat, IME)
-  install_app, uninstall_app, send_intent, send_sms, GPS, shake, etc.
-  get_current_state (requires DeviceState import)
-  get_views (requires DroidBotApp or CV module)
-
-ADB calls: raw subprocess instead of DroidBot's ADB adapter class.
-"""
-
-import os
-import re
-import subprocess
-import time
-
-
-class Device:
-    """
-    Minimal ADB device — DroidBot Device interface, ADB-only backend.
-    """
-
-    def __init__(self, device_serial=None, output_dir=None):
-        """
-        DroidBot Device.__init__ signature (subset).
-        :param device_serial: e.g. "192.168.29.48:37891"
-        :param output_dir: local dir to save screenshots
-        """
-        self.serial     = device_serial
-        self.output_dir = output_dir or os.path.expanduser("~/jarvis-agent/screenshots")
-        os.makedirs(self.output_dir, exist_ok=True)
-
-        # DroidBot caches display_info dict — we do the same
-        self.display_info = None
-
-    # ── Raw ADB ──────────────────────────────────────────────────────────────
-
-    def _adb(self, *args, timeout=15) -> subprocess.CompletedProcess:
-        cmd = ["adb", "-s", self.serial] + list(str(a) for a in args)
-        return subprocess.run(cmd, capture_output=True, timeout=timeout)
-
-    def _shell(self, *args, timeout=15) -> str:
-        """Run adb shell, return stdout string. Mirrors DroidBot adb.shell()."""
-        r = self._adb("shell", *args, timeout=timeout)
-        return r.stdout.decode(errors="replace").strip()
-
-    # ── Connection (DroidBot Device.connect / check_connectivity) ────────────
-
-    def connect(self):
-        """Connect WiFi ADB. DroidBot Device.connect() calls adapter.connect()."""
-        result = subprocess.run(
-            ["adb", "connect", self.serial],
-            capture_output=True, text=True, timeout=10
-        )
-        ok = "connected" in result.stdout.lower()
-        print(f"[device] connect {self.serial}: {result.stdout.strip()}")
-        return ok
-
-    def is_connected(self) -> bool:
-        r = subprocess.run(["adb", "devices"], capture_output=True, text=True, timeout=5)
-        return self.serial in r.stdout
-
-    # ── Display info (DroidBot Device.get_display_info / get_width / get_height) ─
-
-    def get_display_info(self, refresh=True) -> dict:
-        """
-        DroidBot Device.get_display_info() calls self.adb.get_display_info().
-        We replicate by parsing `adb shell wm size`.
-        Returns dict with 'width' and 'height' keys (DroidBot format).
-        """
-        if self.display_info is None or refresh:
-            out = self._shell("wm", "size")
-            m = re.search(r"(\d+)x(\d+)", out)
-            if m:
-                self.display_info = {
-                    "width":  int(m.group(1)),
-                    "height": int(m.group(2)),
-                }
-            else:
-                self.display_info = {"width": 1080, "height": 2400}
-            print(f"[device] display_info: {self.display_info}")
-        return self.display_info
-
-    def get_width(self, refresh=False) -> int:
-        """DroidBot Device.get_width()"""
-        return self.get_display_info(refresh=refresh).get("width", 1080)
-
-    def get_height(self, refresh=False) -> int:
-        """DroidBot Device.get_height()"""
-        return self.get_display_info(refresh=refresh).get("height", 2400)
-
-    # ── Screenshot (DroidBot Device.take_screenshot — screencap path) ────────
-
-    def take_screenshot(self, filename="screen.png") -> str:
-        """
-        DroidBot Device.take_screenshot() uses minicap or screencap+pull.
-        We always use exec-out screencap -p (faster, no temp file on device).
-        Returns local path to saved PNG.
-        """
-        local_path = os.path.join(self.output_dir, filename)
-
-        r = self._adb("exec-out", "screencap", "-p", timeout=15)
-        if r.returncode != 0:
-            raise RuntimeError(f"screencap failed: {r.stderr.decode().strip()}")
-        if len(r.stdout) < 100:
-            raise RuntimeError("screencap: empty output")
-
-        with open(local_path, "wb") as f:
-            f.write(r.stdout)
-
-        print(f"[device] screenshot → {local_path} ({len(r.stdout)} bytes)")
-        return local_path
-
-    # ── Input dispatch (DroidBot Device view_touch / view_drag / key_press) ──
-
-    def key_press(self, key_code):
-        """DroidBot Device.key_press() → self.adb.press(key_code)"""
-        from executor.input_event import KeyEvent
-        ev = KeyEvent(name=str(key_code))
-        cmd = ["adb", "-s", self.serial, "shell"] + ev.to_adb_cmd()
-        subprocess.run(cmd, capture_output=True, timeout=10)
-
-    def view_touch(self, x, y):
-        """DroidBot Device.view_touch() → self.adb.touch(x, y)"""
-        self._shell("input", "tap", str(int(x)), str(int(y)))
-
-    def view_long_touch(self, x, y, duration=200):
-        """
-        DroidBot Device.view_long_touch() → self.adb.long_touch(x, y, duration).
-        For agent taps, duration=200ms is fine.
-        """
-        self._shell("input", "swipe",
-                    str(int(x)), str(int(y)),
-                    str(int(x)), str(int(y)),
-                    str(int(duration)))
-
-    def view_drag(self, start_xy, end_xy, duration):
-        """DroidBot Device.view_drag() → self.adb.drag(start_xy, end_xy, duration)"""
-        sx, sy = start_xy
-        ex, ey = end_xy
-        self._shell("input", "swipe",
-                    str(int(sx)), str(int(sy)),
-                    str(int(ex)), str(int(ey)),
-                    str(int(duration)))
-
-    def view_set_text(self, text: str):
-        """DroidBot Device.view_set_text() → adb.type(text)"""
-        safe = (text.replace(" ", "%s")
-                    .replace("'", "\\'")
-                    .replace('"', '\\"'))
-        self._shell("input", "text", safe)
-
-    def unlock(self):
-        """DroidBot Device.unlock() — wake + swipe up."""
-        self._shell("input", "keyevent", "224")   # KEYCODE_WAKEUP
-        time.sleep(0.3)
-        w = self.get_width()
-        h = self.get_height()
-        cx = w // 2
-        self._shell("input", "swipe",
-                    str(cx), str(int(h * 0.8)),
-                    str(cx), str(int(h * 0.2)), "400")
-        time.sleep(0.5)
-
-    # ── Activity info (DroidBot Device.get_top_activity_name) ────────────────
-
-    def get_top_activity_name(self):
-        """
-        DroidBot Device.get_top_activity_name() — same dumpsys regex.
-        """
-        r = self._shell("dumpsys", "activity", "activities")
-        m = re.search(r'\*\s*Hist\s*#\d+:\s*ActivityRecord\{[^ ]+\s*[^ ]+\s*([^ ]+)\s*t\d+\}', r)
-        if m:
-            return m.group(1)
-        return None
-
-    def send_event(self, event):
-        """DroidBot Device.send_event(event) → event.send(self)"""
-        event.send(self)
-
-    def __repr__(self):
-        return f"Device({self.serial})"
 
 

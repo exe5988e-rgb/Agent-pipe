@@ -78901,6 +78901,129 @@
           "resource_id": ""
         }
       ]
+    },
+    "0c7572520870": {
+      "screen_id": "0c7572520870",
+      "package": "com.oplus.notificationmanager",
+      "activity": "com.oplus.notificationmanager/.NotificationCenterActivity",
+      "name": "notificationmanager_notificationcenteractivity",
+      "labels": [
+        "Send you real-time updates about ride hailing, food deliveries and other service information in the notification drawer and the status bar in real time.",
+        "Search box",
+        "Search for apps",
+        "element_5",
+        "Status bar",
+        "Quick Settings",
+        "Send you real-time updates about ride hailing, food deliveries and other service information in the notification drawer and the status bar in real time.",
+        "Lock screen",
+        "Allowed",
+        "App icon badges",
+        "Manage conversations",
+        "Do not display notification content when the device is locked.",
+        "oo"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Send you real-time updates about ride hailing, food deliveries and other service information in the notification drawer and the status bar in real time.",
+          "x": 620,
+          "y": 1386,
+          "cls": "androidx.recyclerview.widget.RecyclerView",
+          "resource_id": "com.oplus.notificationmanager:id/recycler_view"
+        },
+        {
+          "text": "Back",
+          "x": 98,
+          "y": 230,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.oplus.notificationmanager:id/coui_toolbar_back_view"
+        },
+        {
+          "text": "Search box",
+          "x": 620,
+          "y": 412,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.oplus.notificationmanager:id/search_view"
+        },
+        {
+          "text": "Search for apps",
+          "x": 683,
+          "y": 412,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.oplus.notificationmanager:id/search_src_text"
+        },
+        {
+          "text": "element_5",
+          "x": 133,
+          "y": 412,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.oplus.notificationmanager:id/animated_search_icon"
+        },
+        {
+          "text": "Status bar",
+          "x": 620,
+          "y": 633,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Quick Settings",
+          "x": 620,
+          "y": 805,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Send you real-time updates about ride hailing, food deliveries and other service information in the notification drawer and the status bar in real time.",
+          "x": 620,
+          "y": 1107,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Lock screen",
+          "x": 234,
+          "y": 1806,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.oplus.notificationmanager:id/show_on_lock_screen"
+        },
+        {
+          "text": "Allowed",
+          "x": 619,
+          "y": 1806,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.oplus.notificationmanager:id/show_on_banner"
+        },
+        {
+          "text": "App icon badges",
+          "x": 1005,
+          "y": 1806,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.oplus.notificationmanager:id/badge_setting_entry_container"
+        },
+        {
+          "text": "Manage conversations",
+          "x": 620,
+          "y": 2288,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Do not display notification content when the device is locked.",
+          "x": 620,
+          "y": 2560,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "oo",
+          "x": 620,
+          "y": 2758,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -79546,7 +79669,8 @@
     "0cfd22e776c8|tap:JensJulius Tejlgaard has new content": "80ff94df1647",
     "83a7783f7b10|tap:Edit suggestion mrbeast new video": "c80ebc098a67",
     "2c1be995ec82|tap:Not connected": "bcfd9287cbfa",
-    "2c1be995ec82|tap:Sound & vibration": "bda901bbd4b0"
+    "2c1be995ec82|tap:Sound & vibration": "bda901bbd4b0",
+    "2c1be995ec82|tap:13": "0c7572520870"
   }
 }
 

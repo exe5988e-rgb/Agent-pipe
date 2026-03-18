@@ -73441,6 +73441,218 @@
           "resource_id": ""
         }
       ]
+    },
+    "ab87f07727b4": {
+      "screen_id": "ab87f07727b4",
+      "package": "com.android.vending",
+      "activity": "com.android.vending/.AssetBrowserActivity",
+      "name": "vending_assetbrowseractivity",
+      "labels": [
+        "vlc",
+        "Navigate up",
+        "Search Google Play",
+        "Voice Search",
+        "More options",
+        "Prakash Jha is back with another gritty drama - Sankalp. Watch free on Amazon MX Player",
+        "Open",
+        "Average rating 4.3 stars in 13 million reviews",
+        "Content rating Rated for 3+",
+        "Downloaded 1 billion plus times",
+        "Prakash Jha is back with another gritty drama - Sankalp. Watch free on Amazon MX Player",
+        "VLC for Android is the best open source video and music player, fast and easy!",
+        "Install on more devices",
+        "Install on more devices",
+        "Average rating 4.4 stars in 1 million reviews",
+        "Content rating Rated for 3+",
+        "34 MB",
+        "Screenshot 1 of 8",
+        "Screenshot 2 of 8",
+        "Screenshot 3 of 8",
+        "Screenshot 4 of 8",
+        "Games",
+        "Apps",
+        "Search",
+        "Books"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "vlc",
+          "x": 536,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Search Google Play",
+          "x": 974,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Voice Search",
+          "x": 1142,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "More options",
+          "x": 1153,
+          "y": 435,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Prakash Jha is back with another gritty drama - Sankalp. Watch free on Amazon MX Player",
+          "x": 641,
+          "y": 822,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Open",
+          "x": 1037,
+          "y": 661,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Average rating 4.3 stars in 13 million reviews",
+          "x": 203,
+          "y": 899,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Content rating Rated for 3+",
+          "x": 641,
+          "y": 899,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Downloaded 1 billion plus times",
+          "x": 1079,
+          "y": 899,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Prakash Jha is back with another gritty drama - Sankalp. Watch free on Amazon MX Player",
+          "x": 641,
+          "y": 1081,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "VLC for Android is the best open source video and music player, fast and easy!",
+          "x": 620,
+          "y": 1837,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Install on more devices",
+          "x": 995,
+          "y": 1351,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Install on more devices",
+          "x": 1114,
+          "y": 1351,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Average rating 4.4 stars in 1 million reviews",
+          "x": 182,
+          "y": 1603,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Content rating Rated for 3+",
+          "x": 677,
+          "y": 1603,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "34 MB",
+          "x": 1136,
+          "y": 1603,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Screenshot 1 of 8",
+          "x": 212,
+          "y": 2012,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Screenshot 2 of 8",
+          "x": 585,
+          "y": 2012,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Screenshot 3 of 8",
+          "x": 958,
+          "y": 2012,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Screenshot 4 of 8",
+          "x": 1204,
+          "y": 2012,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Games",
+          "x": 155,
+          "y": 2604,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Apps",
+          "x": 465,
+          "y": 2604,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Search",
+          "x": 775,
+          "y": 2604,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Books",
+          "x": 1085,
+          "y": 2604,
+          "cls": "android.view.View",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {

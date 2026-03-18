@@ -7122,6 +7122,8 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
 [ui_parser] child: (42,2119) → '28 chapters'
 [ui_parser] full parse -- 34 elements (34 labeled, 11 via OCR/rid/child) from 192.168.29.48:33117[parser] DEBUG normalized: 'tap 6'
 [parser] INFO parsed 'tap 6' -> {'action': 'tap', 'target': 6}
+[parser] DEBUG normalized: 'type Warriyo Mortals'
+[parser] INFO parsed 'type Warriyo Mortals' -> {'action': 'type', 'text': 'Warriyo Mortals'}
 
 
 //===== TERMUXFILE: --task =====

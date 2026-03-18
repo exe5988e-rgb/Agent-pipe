@@ -83749,6 +83749,154 @@
           "resource_id": ""
         }
       ]
+    },
+    "0de04f35ed6a": {
+      "screen_id": "0de04f35ed6a",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Expand Mini Player",
+        "0 minutes 54 seconds of 3 minutes 48 seconds",
+        "Drag handle",
+        "Close",
+        "Spotify \ud83c\udfa7: https://open.spotify.c...\u200b\nItunes \ud83d\udcbf: https://itunes.apple.c...\u200b\n\nSupport on all platforms: https://ncs.lnk.to/Mor...\u200b\n\n...more",
+        "472,046 likes",
+        "37,739,650 views",
+        "15 Dec 2016",
+        "Spotify \ud83c\udfa7: https://open.spotify.c...\u200b\nItunes \ud83d\udcbf: https://itunes.apple.c...\u200b\n\nSupport on all platforms: https://ncs.lnk.to/Mor...\u200b\n\n...more",
+        "Ask",
+        "Get answers, explore topics and more",
+        "Recommend related content",
+        "Summarise the video",
+        "Recommend related content",
+        "Shorts remixing this video, 9.6k Shorts",
+        "Shorts remixing this video, 9.6k Shorts",
+        "View all"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Expand Mini Player",
+          "x": 620,
+          "y": 488,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/player_overlays"
+        },
+        {
+          "text": "0 minutes 54 seconds of 3 minutes 48 seconds",
+          "x": 620,
+          "y": 834,
+          "cls": "android.widget.SeekBar",
+          "resource_id": ""
+        },
+        {
+          "text": "Drag handle",
+          "x": 620,
+          "y": 944,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.google.android.youtube:id/header_container"
+        },
+        {
+          "text": "Close",
+          "x": 1156,
+          "y": 963,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/close_button"
+        },
+        {
+          "text": "Spotify \ud83c\udfa7: https://open.spotify.c...\u200b\nItunes \ud83d\udcbf: https://itunes.apple.c...\u200b\n\nSupport on all platforms: https://ncs.lnk.to/Mor...\u200b\n\n...more",
+          "x": 620,
+          "y": 1883,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results"
+        },
+        {
+          "text": "472,046 likes",
+          "x": 204,
+          "y": 1359,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "37,739,650 views",
+          "x": 619,
+          "y": 1359,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "15 Dec 2016",
+          "x": 1034,
+          "y": 1359,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Spotify \ud83c\udfa7: https://open.spotify.c...\u200b\nItunes \ud83d\udcbf: https://itunes.apple.c...\u200b\n\nSupport on all platforms: https://ncs.lnk.to/Mor...\u200b\n\n...more",
+          "x": 620,
+          "y": 1766,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Ask",
+          "x": 620,
+          "y": 2291,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Get answers, explore topics and more",
+          "x": 406,
+          "y": 2193,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Recommend related content",
+          "x": 620,
+          "y": 2400,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": ""
+        },
+        {
+          "text": "Summarise the video",
+          "x": 346,
+          "y": 2400,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Recommend related content",
+          "x": 938,
+          "y": 2400,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts remixing this video, 9.6k Shorts",
+          "x": 620,
+          "y": 2626,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts remixing this video, 9.6k Shorts",
+          "x": 427,
+          "y": 2635,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "View all",
+          "x": 1064,
+          "y": 2635,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -84422,7 +84570,8 @@
     "4811387dbea0|tap:More": "0ef41110984b",
     "0ef41110984b|type": "87fee6983a2f",
     "308993855721|tap:Home": "34a0308428f7",
-    "34a0308428f7|tap:Drag handle": "f128da47c0b8"
+    "34a0308428f7|tap:Drag handle": "f128da47c0b8",
+    "f128da47c0b8|tap:Drag handle": "0de04f35ed6a"
   }
 }
 

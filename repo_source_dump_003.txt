@@ -4675,6 +4675,11 @@ if __name__ == "__main__":
     "to": "f128da47c0b8",
     "count": 1,
     "last_seen": 1773850457.9683263
+  },
+  "f128da47c0b8|tap:Drag handle": {
+    "to": "0de04f35ed6a",
+    "count": 1,
+    "last_seen": 1773850490.1193602
   }
 }
 

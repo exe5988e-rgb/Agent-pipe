@@ -8236,7 +8236,9 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
 [ui_parser] child: (28,1455) → 'Refine: weather today rain'
 [ui_parser] child: (28,1651) → 'Refine: weather this week'
 [ui_parser] full parse -- 22 elements (21 labeled, 8 via OCR/rid/child) from 192.168.29.48:33117
-[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=1e73f94692ef elements=22
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=1e73f94692ef elements=22[parser] DEBUG normalized: 'tap 3'
+[parser] INFO parsed 'tap 3' -> {'action': 'tap', 'target': 3}
+
 
 //===== TERMUXFILE: --task =====
 

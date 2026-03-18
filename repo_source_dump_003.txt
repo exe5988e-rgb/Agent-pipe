@@ -4323,8 +4323,8 @@ if __name__ == "__main__":
   },
   "5731aaff4c94|opt4_launch:play store": {
     "to": "815905513523",
-    "count": 1,
-    "last_seen": 1773842615.2124414
+    "count": 2,
+    "last_seen": 1773851032.7970624
   },
   "c3c160d6730f|tap:Books": {
     "to": "e921768c497c",

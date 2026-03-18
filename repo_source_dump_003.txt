@@ -3470,6 +3470,11 @@ if __name__ == "__main__":
     "to": "e80155e4c1b5",
     "count": 1,
     "last_seen": 1773793078.939791
+  },
+  "e80155e4c1b5|tap:Switch to this tab.": {
+    "to": "f26fcd5f93eb",
+    "count": 1,
+    "last_seen": 1773793142.8619695
   }
 }
 

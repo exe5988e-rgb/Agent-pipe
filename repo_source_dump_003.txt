@@ -4525,6 +4525,11 @@ if __name__ == "__main__":
     "to": "c80ebc098a67",
     "count": 1,
     "last_seen": 1773848569.890277
+  },
+  "2c1be995ec82|tap:Not connected": {
+    "to": "bcfd9287cbfa",
+    "count": 1,
+    "last_seen": 1773848647.2806525
   }
 }
 

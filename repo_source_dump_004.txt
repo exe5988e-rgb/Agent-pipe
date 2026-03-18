@@ -7619,6 +7619,8 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
 [ui_parser] child: (0,475) → 'Edit suggestion warriyo mortals slowed'
 [ui_parser] child: (0,643) → 'Edit suggestion warriyo mortals slowed reverb'[parser] DEBUG normalized: 'tap 2'
 [parser] INFO parsed 'tap 2' -> {'action': 'tap', 'target': 2}
+[parser] DEBUG normalized: 'type lofi hip hop'
+[parser] INFO parsed 'type lofi hip hop' -> {'action': 'type', 'text': 'lofi hip hop'}
 
 
 //===== TERMUXFILE: --task =====

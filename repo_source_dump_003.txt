@@ -4253,6 +4253,7 @@ if __name__ == "__main__":
 [18:52:35] 
 [4/33] [1★] [chrome] Open Chrome
 [18:52:35]   max_steps=5  skill_threshold=12  skills=0
+[18:53:22]   PASS  44.1s
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -5394,7 +5395,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-18T18:52:30.648442",
+  "run_at": "2026-03-18T18:53:22.949515",
   "skills_before": 0,
   "skills_current": 0,
   "results": [
@@ -5422,6 +5423,15 @@ if __name__ == "__main__":
       "difficulty": 1,
       "success": true,
       "elapsed_s": 36.3,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Open Chrome",
+      "category": "chrome",
+      "difficulty": 1,
+      "success": true,
+      "elapsed_s": 44.1,
       "error": null,
       "retried": false
     }
@@ -5764,6 +5774,107 @@ nohup: ignoring input
   Screen Map: 466 screens (0 tainted), 582 transitions
     whatsapp             166 screens
     chrome               99 screens
+    youtube              84 screens
+    vending              29 screens
+    termux               25 screens
+    settings             21 screens
+    launcher             20 screens
+    claude               6 screens
+    wirelesssettings     5 screens
+    dialer               2 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+  TransitionMemory: 532 transitions (277 confirmed, threshold=2)
+[parser] DEBUG normalized: 'done'
+[parser] INFO parsed 'done' -> {'action': 'done'}
+
+########################################################
+  JARVIS  |  Open Chrome
+  Device : 192.168.29.48:35253
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 466 screens (0 tainted), 582 transitions
+    whatsapp             166 screens
+    chrome               99 screens
+    youtube              84 screens
+    vending              29 screens
+    termux               25 screens
+    settings             21 screens
+    launcher             20 screens
+    claude               6 screens
+    wirelesssettings     5 screens
+    dialer               2 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+  TransitionMemory: 532 transitions (277 confirmed, threshold=2)
+[init] task_apps: ['chrome']
+[init] max_skill_steps: 20 (threshold: 12)
+
+========================================================
+  STEP 1  |  Open Chrome
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3645180 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] full parse -- 7 elements (7 labeled, 0 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.android.launcher/.Launcher hash=4ab071e8efcf elements=7
+[step] UI: ['Clipper', 'Instagram', 'SearchButton', 'Phone', 'Messages', 'Photos', 'Camera']
+[map] screen: launcher_launcher (17d655c4)
+[OPT4v2] launcher -> launching chrome (com.android.chrome)
+[llm] OPT4v2 am start: com.android.chrome
+
+========================================================
+  STEP 2  |  Open Chrome
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (129676 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (168,139) → 'Connection is secure'
+[ui_parser] child: (0,335) → 'Goku Son is a young boy who lives in the woods all alone—that is until a girl named Bulma runs into him in her search for a set of magical objects cal...see more'
+[ui_parser] OCR: (910,422)-(1053,566) → 'ws'
+[ui_parser] full parse -- 42 elements (38 labeled, 3 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=3129056b3abc elements=42
+[step] UI: ['Open the homepage', 'Connection is secure', 'animex.one/watch/dragon-ball-223-episode-70', 'See 28 tabs', 'Customise and control Google Chrome', 'Goku Son is a young boy who lives in the woods all alone—that is until a girl named Bulma runs into him in her search for a set of magical objects cal...see more', '61. Korin Tower', 'logo AnimeX']
+[map] new screen: chrome_main (0dc27a148200)
+[tm] transition changed: 17d655c4f84a|opt4_launch:chrome c3b92b58 -> 0dc27a14
+[map] transition: launcher_launcher --[opt4_launch:chrome]--> chrome_main
+[map] screen: chrome_main (0dc27a14)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'done'
+[step] LLM: 'done'
+[step] action: {'action': 'done'}
+[input] DONE — no dispatch
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[skill] too few steps (1) — not saving
+[step] step=2/5 done=True history=['opt4_launch:chrome', 'done']
+
+[controller] done in 2 steps
+
+[controller] history:
+  1. opt4_launch:chrome
+  2. done
+
+  Screen Map: 467 screens (0 tainted), 582 transitions
+    whatsapp             166 screens
+    chrome               100 screens
     youtube              84 screens
     vending              29 screens
     termux               25 screens

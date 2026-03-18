@@ -4295,6 +4295,11 @@ if __name__ == "__main__":
     "to": "550b970f5034",
     "count": 1,
     "last_seen": 1773841227.6483228
+  },
+  "550b970f5034|tap:Directory listing for /: [::]": {
+    "to": "7a90c98cab66",
+    "count": 1,
+    "last_seen": 1773841260.0634918
   }
 }
 
@@ -7994,6 +7999,127 @@ nohup: ignoring input
 [parser] DEBUG normalized: 'tap 13'
 [parser] INFO parsed 'tap 13' -> {'action': 'tap', 'target': 13}
 
+########################################################
+  JARVIS  |  Open Chrome and go to google.com
+  Device : 192.168.29.48:35253
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 477 screens (0 tainted), 593 transitions
+    whatsapp             168 screens
+    chrome               100 screens
+    youtube              88 screens
+    vending              30 screens
+    termux               25 screens
+    launcher             22 screens
+    settings             21 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               2 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+  TransitionMemory: 543 transitions (280 confirmed, threshold=2)
+[init] task_apps: ['chrome']
+[init] max_skill_steps: 20 (threshold: 12)
+
+========================================================
+  STEP 1  |  Open Chrome and go to google.com
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3311938 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Mostly cloudy'
+[ui_parser] OCR: (841,1475)-(1009,1671) → 'lt'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.android.launcher/.Launcher hash=0bb2c78a8c98 elements=26
+[step] UI: ['Clock', '19', ':', '09', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (5731aaff)
+[OPT4v2] launcher -> launching chrome (com.android.chrome)
+[llm] OPT4v2 am start: com.android.chrome
+
+========================================================
+  STEP 2  |  Open Chrome and go to google.com
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (573351 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (168,139) → 'Connection is secure'
+[ui_parser] child: (0,335) → 'Goku Son is a young boy who lives in the woods all alone—that is until a girl named Bulma runs into him in her search for a set of magical objects cal...see more'
+[ui_parser] OCR: (651,1136)-(822,1224) → 'faa'
+[ui_parser] OCR: (1071,1136)-(1214,1224) → 'ma'
+[ui_parser] OCR: (28,2004)-(784,2127) → 'Search'
+[ui_parser] full parse -- 42 elements (40 labeled, 5 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=025f11074e0b elements=42
+[step] UI: ['Open the homepage', 'Connection is secure', 'animex.one/watch/dragon-ball-223-episode-70', 'See 28 tabs', 'Customise and control Google Chrome', 'Goku Son is a young boy who lives in the woods all alone—that is until a girl named Bulma runs into him in her search for a set of magical objects cal...see more', '61. Korin Tower', 'logo AnimeX']
+[map] transition: launcher_launcher --[opt4_launch:chrome]--> chrome_main
+[map] screen: chrome_main (0dc27a14)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 3'
+[step] LLM: 'tap 3'
+[step] action: {'action': 'tap', 'target': 3}
+[input] dispatching: TouchEvent(x=592, y=237)
+[input] dispatching: TouchEvent(x=592, y=237)
+[input] adb -s 192.168.29.48:35253 shell input tap 592 237
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[step] step=2/10 done=False history=['opt4_launch:chrome', 'tap [3] animex.one/watch/dragon-ball-223-episode-70']
+
+========================================================
+  STEP 3  |  Open Chrome and go to google.com
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1133954 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (70,139) → 'Connection is secure'
+[ui_parser] child: (28,335) → 'Share link to web page Dragon Ball Episode 70 in English Sub/Dub Online for free - AnimeX. Source: animex.one'
+[ui_parser] full parse -- 15 elements (14 labeled, 2 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=8104a67df746 elements=15
+[step] UI: ['element_1', 'Connection is secure', 'Search Google or type URL', 'Start voice search', 'Search with your camera using Google Lens', '2 suggested items in list below.', 'Share link to web page Dragon Ball Episode 70 in English Sub/Dub Online for free - AnimeX. Source: animex.one', 'Share link to web page Dragon Ball Episode 70 in English Sub/Dub Online for free - AnimeX. Source: animex.one']
+[map] new screen: chrome_main (550b970f5034)
+[map] transition: chrome_main --[tap:See 28 tabs]--> chrome_main
+[map] screen: chrome_main (550b970f)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 13'
+[step] LLM: 'tap 13'
+[step] action: {'action': 'tap', 'target': 13}
+[input] dispatching: TouchEvent(x=552, y=691)
+[input] dispatching: TouchEvent(x=552, y=691)
+[input] adb -s 192.168.29.48:35253 shell input tap 552 691
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[step] step=3/10 done=False history=['opt4_launch:chrome', 'tap [3] animex.one/watch/dragon-ball-223-episode-70', 'tap [13] Google: google.com']
+
+========================================================
+  STEP 4  |  Open Chrome and go to google.com
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (158828 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,139) → 'Open source Mamba 3 arrives to surpass Transformer architecture with nearly 4% improved language modeling, reduced latency VentureBeat 14h'
+[ui_parser] child: (168,139) → 'Connection is secure'
+[ui_parser] child: (0,335) → 'Open source Mamba 3 arrives to surpass Transformer architecture with nearly 4% improved language modeling, reduced latency VentureBeat 14h'
+[ui_parser] child: (889,335) → 'Google apps'
+[ui_parser] OCR: (679,860)-(850,1031) → 'ce'
+[ui_parser] full parse -- 29 elements (27 labeled, 5 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=28f56142327a elements=29
+[step] UI: ['Open the homepage', 'Open source Mamba 3 arrives to surpass Transformer architecture with nearly 4% improved language modeling, reduced latency VentureBeat 14h', 'Connection is secure', 'google.com', 'See 28 tabs', 'Customise and control Google Chrome', 'Open source Mamba 3 arrives to surpass Transformer architecture with nearly 4% improved language modeling, reduced latency VentureBeat 14h', 'IMAGES']
+[map] new screen: chrome_main (7a90c98cab66)
 
 //===== TERMUXFILE: --task =====
 

@@ -7961,6 +7961,8 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
   TransitionMemory: 654 transitions (286 confirmed, threshold=2)
 [parser] DEBUG normalized: 'tap 6'
 [parser] INFO parsed 'tap 6' -> {'action': 'tap', 'target': 6}
+[parser] DEBUG normalized: 'done'
+[parser] INFO parsed 'done' -> {'action': 'done'}
 
 
 //===== TERMUXFILE: --task =====

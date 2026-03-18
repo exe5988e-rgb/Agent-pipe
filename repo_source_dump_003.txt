@@ -4293,6 +4293,7 @@ if __name__ == "__main__":
 [18:58:08] 
 [9/33] [2★] [whatsapp] Open WhatsApp and go to Updates tab
 [18:58:08]   max_steps=8  skill_threshold=12  skills=0
+[19:01:46]   PASS  214.8s
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -5434,9 +5435,9 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-18T18:58:03.172452",
+  "run_at": "2026-03-18T19:01:46.211270",
   "skills_before": 0,
-  "skills_current": 0,
+  "skills_current": 1,
   "results": [
     {
       "task": "Open WhatsApp",
@@ -5509,12 +5510,38 @@ if __name__ == "__main__":
       "elapsed_s": 132.7,
       "error": null,
       "retried": false
+    },
+    {
+      "task": "Open WhatsApp and go to Updates tab",
+      "category": "whatsapp",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 214.8,
+      "error": null,
+      "retried": false
     }
   ]
 }
 
 //===== TERMUXFILE: skills.json =====
-[]
+[
+  {
+    "pattern": "open whatsapp and go",
+    "activity": "com.whatsapp/.home.ui.HomeActivity",
+    "task_example": "Open WhatsApp and go to Updates tab",
+    "steps": [
+      {
+        "action": "tap",
+        "target": "Updates"
+      },
+      {
+        "action": "done"
+      }
+    ],
+    "uses": 0,
+    "version": 3
+  }
+]
 
 //===== TERMUXFILE: keep_awake.sh =====
 #!/data/data/com.termux/files/usr/bin/bash
@@ -6611,6 +6638,155 @@ nohup: ignoring input
   TransitionMemory: 535 transitions (278 confirmed, threshold=2)
 [parser] DEBUG normalized: 'tap 33'
 [parser] INFO parsed 'tap 33' -> {'action': 'tap', 'target': 33}
+[parser] DEBUG normalized: 'done'
+[parser] INFO parsed 'done' -> {'action': 'done'}
+
+########################################################
+  JARVIS  |  Open WhatsApp and go to Updates tab
+  Device : 192.168.29.48:35253
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 470 screens (0 tainted), 585 transitions
+    whatsapp             166 screens
+    chrome               100 screens
+    youtube              84 screens
+    vending              30 screens
+    termux               25 screens
+    launcher             22 screens
+    settings             21 screens
+    claude               6 screens
+    wirelesssettings     5 screens
+    dialer               2 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+  TransitionMemory: 535 transitions (278 confirmed, threshold=2)
+[init] task_apps: ['whatsapp']
+[init] max_skill_steps: 20 (threshold: 12)
+
+========================================================
+  STEP 1  |  Open WhatsApp and go to Updates tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3312512 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Mostly cloudy'
+[ui_parser] OCR: (841,1475)-(1009,1671) → 'lt'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.android.launcher/.Launcher hash=6a9ed40a81e3 elements=26
+[step] UI: ['Clock', '18', ':', '58', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (5731aaff)
+[OPT4v2] launcher -> launching whatsapp (com.whatsapp)
+[llm] OPT4v2 am start: com.whatsapp
+
+========================================================
+  STEP 2  |  Open WhatsApp and go to Updates tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (442433 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,139) → 'Start audio call with Ayush Kr(Personal)'
+[ui_parser] child: (0,377) → 'Ayush Kr(Personal)'
+[ui_parser] child: (896,377) → 'Stay fixed'
+[ui_parser] child: (1176,377) → 'Ayush Kr(Personal)'
+[ui_parser] child: (0,835) → 'Start audio call with Ayush Kr(Personal)'
+[ui_parser] child: (0,1066) → 'Start video call with Asif Mudassir'
+[ui_parser] child: (0,1297) → 'Start audio call with Asif Mudassir'
+[ui_parser] child: (0,1528) → 'Start audio call with Mummy'
+[ui_parser] child: (0,1759) → 'Start audio call with Ayush Kr(Personal)'
+[ui_parser] child: (0,1990) → 'Start audio call with Mummy'
+[ui_parser] child: (0,2221) → 'Start video call with Mummy'
+[ui_parser] full parse -- 36 elements (36 labeled, 11 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.whatsapp/.home.ui.HomeActivity hash=fe473f16ec0d elements=36
+[step] UI: ['Start audio call with Ayush Kr(Personal)', 'Search', 'More options', 'Ayush Kr(Personal)', 'Call', 'Schedule', 'Keypad', 'Stay fixed']
+[map] new screen: whatsapp_homeactivity (13dcb6504714)
+[tm] transition changed: 5731aaff4c94|opt4_launch:whatsapp 6dcc8357 -> 13dcb650
+[map] transition: launcher_launcher --[opt4_launch:whatsapp]--> whatsapp_homeactivity
+[map] screen: whatsapp_homeactivity (13dcb650)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 33'
+[step] LLM: 'tap 33'
+[step] action: {'action': 'tap', 'target': 33}
+[input] dispatching: TouchEvent(x=372, y=2576)
+[input] dispatching: TouchEvent(x=372, y=2576)
+[input] adb -s 192.168.29.48:35253 shell input tap 372 2576
+[mem] invalidated com.whatsapp/.home.ui.HomeActivity
+[step] step=2/8 done=False history=['opt4_launch:whatsapp', 'tap [33] Updates']
+
+========================================================
+  STEP 3  |  Open WhatsApp and go to Updates tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (818339 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,139) → 'बहरीन में जंग के बीच फंसे भारतीय परिवार की दर्दनाक कहानी सामने आई है। शाहजहांपुर की मॉडल Priyanka Pathak ने बताया कि कैसे उन्होंने 15 दिन तक मौत के सा'
+[ui_parser] child: (0,520) → 'Dr Masood Alam Vet, 4 unread statuses'
+[ui_parser] child: (1184,520) → 'Hidden'
+[ui_parser] child: (0,1194) → 'बहरीन में जंग के बीच फंसे भारतीय परिवार की दर्दनाक कहानी सामने आई है। शाहजहांपुर की मॉडल Priyanka Pathak ने बताया कि कैसे उन्होंने 15 दिन तक मौत के सा'
+[ui_parser] child: (0,1460) → 'दिल्ली, UP सहित 21 राज्यों में बारि…'
+[ui_parser] child: (0,1726) → 'Favourite 😋'
+[ui_parser] child: (0,1992) → 'तंत्र-मंत्र के चक्कर में खुद का गला काटा: बिलासपुर में चाकू खरीदकर लाया, बीड़ी पीकर पूजा-रूम में गया, बहू ने देखी लहूलुहान लाश   पढ़ें पूरी खबर- https:'
+[ui_parser] child: (0,2258) → 'Couple Burger and King went…'
+[ui_parser] full parse -- 31 elements (28 labeled, 8 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.whatsapp/.home.ui.HomeActivity hash=88daa2e582f1 elements=31
+[step] UI: ['बहरीन में जंग के बीच फंसे भारतीय परिवार की दर्दनाक कहानी सामने आई है। शाहजहांपुर की मॉडल Priyanka Pathak ने बताया कि कैसे उन्होंने 15 दिन तक मौत के सा', 'Search', 'More options', 'Dr Masood Alam Vet, 4 unread statuses', 'My status, tap to add new status', 'Shivang Gupta, 1 unread status', 'Dr Masood Alam Vet, 4 unread statuses', 'Mishra nursery, 1 unread status']
+[map] new screen: whatsapp_homeactivity (e593131cf7fc)
+[map] transition: whatsapp_homeactivity --[tap:Communities]--> whatsapp_homeactivity
+[map] screen: whatsapp_homeactivity (e593131c)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B timeout/error (attempt 1/3): timed out
+[llm] Retrying in 5s...
+[llm] Phone B (Claude): 'done'
+[step] LLM: 'done'
+[step] action: {'action': 'done'}
+[input] DONE — no dispatch
+[mem] invalidated com.whatsapp/.home.ui.HomeActivity
+[skill] learned: 'open whatsapp and go'  (2 steps)  [HomeActivity]
+[step] step=3/8 done=True history=['opt4_launch:whatsapp', 'tap [33] Updates', 'done']
+
+[controller] done in 3 steps
+
+[controller] history:
+  1. opt4_launch:whatsapp
+  2. tap [33] Updates
+  3. done
+
+  Screen Map: 472 screens (0 tainted), 586 transitions
+    whatsapp             168 screens
+    chrome               100 screens
+    youtube              84 screens
+    vending              30 screens
+    termux               25 screens
+    launcher             22 screens
+    settings             21 screens
+    claude               6 screens
+    wirelesssettings     5 screens
+    dialer               2 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+  TransitionMemory: 536 transitions (278 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: --task =====

@@ -3210,7 +3210,7 @@
       "activity": "com.android.launcher/.Launcher",
       "name": "launcher_launcher",
       "labels": [],
-      "visits": 1,
+      "visits": 2,
       "elements": []
     },
     "47d448eaba6d": {
@@ -52871,7 +52871,8 @@
     "1b8fd8109759|tap:11": "f358bf809a6b",
     "5e932108d73c|tap:16": "f358bf809a6b",
     "5193b772df54|opt4_launch:whatsapp": "f358bf809a6b",
-    "f358bf809a6b|retry": "73a672bfe623"
+    "f358bf809a6b|retry": "73a672bfe623",
+    "73a672bfe623|retry": "1dd157ba4340"
   }
 }
 

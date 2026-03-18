@@ -5770,6 +5770,99 @@ RuntimeError: No LLM backend available.
 [llm] Phone B (Claude): 'home'
 [step] LLM: 'home'
 [step] action: {'action': 'home'}
+[input] dispatching: KeyEvent(HOME)
+[input] dispatching: KeyEvent(HOME)
+[input] adb -s 192.168.29.48:35253 shell input keyevent 3
+[mem] invalidated com.android.launcher/.Launcher
+[step] step=3/30 done=False history=['opt4_launch:chrome', 'tap [3] google.com/search?q=weather+today&oq=&gs_lcrp=EgZjaHJvbWUqCQgEECMYJxjqAjIPCAAQIxgnGOoCGPAFGJ4GMgkIARAjGCcY6gIyDwgCECMYJxjqAhjwBRieBjIJCAMQIxgnGOoCMgkIBBAjGCcY', 'home']
+
+========================================================
+  STEP 4  |  Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3311274 bytes)
+[ui_parser] activity=com.truecaller/.details_view.ui.DetailsViewActivityLegacy
+[ui_parser] signal='com.truecaller/.details_view.ui.DetailsViewActivityLegacy'
+[mem] miss (unknown): com.truecaller/.details_view.ui.DetailsViewActivityLegacy
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Mostly cloudy'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.truecaller/.details_view.ui.DetailsViewActivityLegacy hash=81ffeb16e1a9 elements=26
+[step] UI: ['Clock', '19', ':', '55', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] transition: dialer_mainactivity --[home]--> launcher_launcher
+[map] screen: launcher_launcher (5731aaff)
+[OPT4v2] launcher -> launching whatsapp (com.whatsapp)
+[llm] OPT4v2 am start: com.whatsapp
+
+========================================================
+  STEP 5  |  Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (822786 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,139) → 'गैस एजेंसी की खराब सेवा से हैं परेशान? घर बैठे फ्री में बदलें अपना डिस्ट्रीब्यूटर    एलपीजी वितरकों की खराब सेवा से परेशान उपभोक्ता अब घर बैठे अपना वि'
+[ui_parser] child: (0,520) → 'Dr Masood Alam Vet, 4 unread statuses'
+[ui_parser] child: (1184,520) → 'Hidden'
+[ui_parser] child: (0,1194) → 'गैस एजेंसी की खराब सेवा से हैं परेशान? घर बैठे फ्री में बदलें अपना डिस्ट्रीब्यूटर    एलपीजी वितरकों की खराब सेवा से परेशान उपभोक्ता अब घर बैठे अपना वि'
+[ui_parser] child: (0,1460) → '🇮🇱 🇮🇷 Direct hits in Tel Aviv, incl…'
+[ui_parser] child: (0,1726) → 'Which pizza? 😍'
+[ui_parser] child: (0,1992) → 'She tried to teach him life’s s…'
+[ui_parser] child: (0,2258) → 'UPSC में 899वीं रैंक बताई, भास्कर पड़ताल में निकला फर्जी: अब बोला- गलती हो गई, असली कैंडिडेट ने कहा- लीगल एक्शन लूंगा   पढ़ें पूरी खबर-  https://daini'
+[ui_parser] full parse -- 31 elements (28 labeled, 8 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.whatsapp/.home.ui.HomeActivity hash=626f36047093 elements=31
+[step] UI: ['गैस एजेंसी की खराब सेवा से हैं परेशान? घर बैठे फ्री में बदलें अपना डिस्ट्रीब्यूटर    एलपीजी वितरकों की खराब सेवा से परेशान उपभोक्ता अब घर बैठे अपना वि', 'Search', 'More options', 'Dr Masood Alam Vet, 4 unread statuses', 'My status, tap to add new status', 'Shivang Gupta, 1 unread status', 'Dr Masood Alam Vet, 4 unread statuses', 'Mishra nursery, 1 unread status']
+[map] new screen: whatsapp_homeactivity (31c152067402)
+[tm] transition changed: 5731aaff4c94|opt4_launch:whatsapp d1e6e6b5 -> 31c15206
+[map] transition: launcher_launcher --[opt4_launch:whatsapp]--> whatsapp_homeactivity
+[map] screen: whatsapp_homeactivity (31c15206)
+[skill] matched: 'open whatsapp and go'  score=1.00  act=True
+[skill] executing 2 steps from memory
+[skill] action: {'action': 'tap', 'target': 28}
+[input] dispatching: TouchEvent(x=372, y=2576)
+[input] dispatching: TouchEvent(x=372, y=2576)
+[input] adb -s 192.168.29.48:35253 shell input tap 372 2576
+[mem] invalidated com.whatsapp/.home.ui.HomeActivity
+[skill] action: {'action': 'done'}
+[input] DONE — no dispatch
+[skill] done — skipped Claude
+[step] step=6/30 done=True history=['opt4_launch:chrome', 'tap [3] google.com/search?q=weather+today&oq=&gs_lcrp=EgZjaHJvbWUqCQgEECMYJxjqAjIPCAAQIxgnGOoCGPAFGJ4GMgkIARAjGCcY6gIyDwgCECMYJxjqAhjwBRieBjIJCAMQIxgnGOoCMgkIBBAjGCcY', 'home', 'opt4_launch:whatsapp', 'tap [28] Updates', 'done']
+
+[controller] done in 6 steps
+
+[controller] history:
+  1. opt4_launch:chrome
+  2. tap [3] google.com/search?q=weather+today&oq=&gs_lcrp=EgZjaHJvbWUqCQgEECMYJxjqAjIPCAAQIxgnGOoCGPAFGJ4GMgkIARAjGCcY6gIyDwgCECMYJxjqAhjwBRieBjIJCAMQIxgnGOoCMgkIBBAjGCcY
+  3. home
+  4. opt4_launch:whatsapp
+  5. tap [28] Updates
+  6. done
+
+  Screen Map: 511 screens (0 tainted), 626 transitions
+    whatsapp             171 screens
+    chrome               106 screens
+    youtube              98 screens
+    vending              42 screens
+    termux               25 screens
+    launcher             22 screens
+    settings             21 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+  TransitionMemory: 576 transitions (280 confirmed, threshold=2)
+
 
 //===== TERMUXFILE: --task =====
 
@@ -10118,265 +10211,4 @@ def parse_ui(image_path: str, adb_device: str = None) -> list:
         print(f"  [{e['id']}] {e['text'][:50]} ({e['cls']})")
 
     return elements
-
-//===== TERMUXFILE: jarvis-agent/executor/input_event.py =====
-"""
-executor/input_event.py
-
-Extracted from DroidBot/droidbot/input_event.py
-Source: https://github.com/honeynet/droidbot
-
-What we keep (prototype needs only):
-  KeyEvent     — key_press via adb (BACK, HOME, ENTER...)
-  TouchEvent   — tap a coordinate
-  SwipeEvent   — drag from→to
-  SetTextEvent — type text into focused field
-
-What we drop (exploration/testing only):
-  IntentEvent, SpawnEvent, KillAppEvent, ManualEvent, ExitEvent,
-  SelectEvent, LongTouchEvent, ScrollEvent, EventLog, UIEvent helpers
-
-Interface change: added to_adb_cmd() to each event so InputManager
-can dispatch without depending on DroidBot's internal ADB adapter.
-"""
-
-import re
-import subprocess
-import time
-
-# ── Key names (from DroidBot POSSIBLE_KEYS + Android keycodes) ───────────────
-POSSIBLE_KEYS = ["BACK", "MENU", "HOME"]
-
-KEY_CODES = {
-    "HOME":         3,
-    "BACK":         4,
-    "MENU":        82,
-    "ENTER":       66,
-    "POWER":       26,
-    "VOLUME_UP":   24,
-    "VOLUME_DOWN": 25,
-    "DELETE":      67,
-    "SPACE":       62,
-}
-
-# Event type strings (kept from DroidBot for future serialisation compat)
-KEY_KeyEvent    = "key"
-KEY_TouchEvent  = "touch"
-KEY_SwipeEvent  = "swipe"
-KEY_SetTextEvent = "set_text"
-
-
-class InvalidEventException(Exception):
-    pass
-
-
-# ── Base ─────────────────────────────────────────────────────────────────────
-
-class InputEvent:
-    """Base class. Mirrors DroidBot InputEvent interface."""
-
-    def __init__(self):
-        self.event_type = None
-
-    def to_adb_cmd(self) -> list:
-        """Return args for: adb shell <args>"""
-        raise NotImplementedError
-
-    def send(self, device):
-        """DroidBot-compatible send interface."""
-        cmd = ["adb", "-s", device.serial, "shell"] + self.to_adb_cmd()
-        subprocess.run(cmd, capture_output=True, timeout=10)
-        return True
-
-    def __str__(self):
-        return self.__class__.__name__
-
-
-# ── KeyEvent (from DroidBot KeyEvent) ────────────────────────────────────────
-
-class KeyEvent(InputEvent):
-    """
-    Press a hardware/virtual key.
-    DroidBot source: KeyEvent.send() → device.key_press(self.name)
-                     device.key_press() → self.adb.press(key_code)
-    We flatten that chain: directly emit 'input keyevent <code>'.
-    """
-
-    def __init__(self, name=None, event_dict=None):
-        super().__init__()
-        self.event_type = KEY_KeyEvent
-        self.name = name
-        if event_dict is not None:
-            self.__dict__.update(event_dict)
-
-    def to_adb_cmd(self) -> list:
-        # Look up integer code; fall through to raw int string if not in table
-        code = KEY_CODES.get(str(self.name).upper())
-        if code is None:
-            try:
-                code = int(self.name)
-            except (ValueError, TypeError):
-                code = 0
-        return ["input", "keyevent", str(code)]
-
-    def __str__(self):
-        return f"KeyEvent({self.name})"
-
-
-# ── TouchEvent (from DroidBot TouchEvent) ────────────────────────────────────
-
-class TouchEvent(InputEvent):
-    """
-    Tap a screen coordinate.
-    DroidBot source: TouchEvent.send() → device.view_long_touch(x, y, duration=200)
-                     view_long_touch() → self.adb.long_touch(x, y, duration)
-    We use 'input tap' which is simpler and sufficient for agent taps.
-    """
-
-    def __init__(self, x=None, y=None, event_dict=None):
-        super().__init__()
-        self.event_type = KEY_TouchEvent
-        self.x = x
-        self.y = y
-        if event_dict is not None:
-            self.__dict__.update(event_dict)
-
-    def to_adb_cmd(self) -> list:
-        if self.x is None or self.y is None:
-            raise InvalidEventException("TouchEvent missing x or y")
-        return ["input", "tap", str(int(self.x)), str(int(self.y))]
-
-    def __str__(self):
-        return f"TouchEvent(x={self.x}, y={self.y})"
-
-
-# ── SwipeEvent (from DroidBot SwipeEvent) ────────────────────────────────────
-
-class SwipeEvent(InputEvent):
-    """
-    Drag from (start_x, start_y) → (end_x, end_y) over duration ms.
-    DroidBot source: SwipeEvent.send() → device.view_drag((sx,sy),(ex,ey), duration)
-                     view_drag() → self.adb.drag(start_xy, end_xy, duration)
-    """
-
-    def __init__(self, start_x=None, start_y=None,
-                 end_x=None, end_y=None,
-                 duration=400, event_dict=None):
-        super().__init__()
-        self.event_type = KEY_SwipeEvent
-        self.start_x = start_x
-        self.start_y = start_y
-        self.end_x   = end_x
-        self.end_y   = end_y
-        self.duration = duration
-        if event_dict is not None:
-            self.__dict__.update(event_dict)
-
-    def to_adb_cmd(self) -> list:
-        return ["input", "swipe",
-                str(int(self.start_x)), str(int(self.start_y)),
-                str(int(self.end_x)),   str(int(self.end_y)),
-                str(int(self.duration))]
-
-    def __str__(self):
-        return (f"SwipeEvent(({self.start_x},{self.start_y})"
-                f"→({self.end_x},{self.end_y}), {self.duration}ms)")
-
-
-# ── SetTextEvent (from DroidBot SetTextEvent) ─────────────────────────────────
-
-class SetTextEvent(InputEvent):
-    """
-    Type text into currently focused field.
-    DroidBot source: SetTextEvent.send() →
-        1. TouchEvent(x,y).send(device)   — tap to focus
-        2. device.view_set_text(self.text) → adb.type(text)
-
-    For the agent we only need (2) — the field is already focused
-    by the preceding TapEvent. Spaces encoded as %s for adb shell.
-    """
-
-    def __init__(self, x=None, y=None, text=None, event_dict=None):
-        super().__init__()
-        self.event_type = KEY_SetTextEvent
-        self.x    = x
-        self.y    = y
-        self.text = text or ""
-        if event_dict is not None:
-            self.__dict__.update(event_dict)
-
-    def to_adb_cmd(self) -> list:
-        # adb shell input text: spaces must be %s, quotes escaped
-        safe = (self.text
-                .replace(" ", "%s")
-                .replace("'", "\\'")
-                .replace('"', '\\"'))
-        return ["input", "text", safe]
-
-    def __str__(self):
-        return f"SetTextEvent({self.text!r})"
-
-
-# ── Factory: action dict → InputEvent ─────────────────────────────────────────
-
-_SWIPE_DELTAS = {
-    "up":    (0, -600),
-    "down":  (0,  600),
-    "left":  (-400, 0),
-    "right": ( 400, 0),
-}
-
-def from_action(action: dict, ui_elements: list):
-    """
-    Build an InputEvent from a parsed action dict.
-
-    Args:
-        action      : dict from action_parser.parse_action()
-        ui_elements : list of dicts {id, text, x, y}
-
-    Returns:
-        InputEvent subclass, or None for 'done'
-    """
-    act = action.get("action", "").lower()
-
-    if act == "tap":
-        # Prefer element lookup by id; fall back to raw x,y
-        tid = action.get("target")
-        if tid is not None:
-            el = next((e for e in ui_elements if e["id"] == tid), None)
-            if el is None:
-                return None
-            return TouchEvent(x=el["x"], y=el["y"])
-        elif "x" in action and "y" in action:
-            return TouchEvent(x=action["x"], y=action["y"])
-        return None
-
-    elif act == "swipe":
-        if "x1" in action:
-            return SwipeEvent(start_x=action["x1"], start_y=action["y1"],
-                              end_x=action["x2"],   end_y=action["y2"],
-                              duration=action.get("duration_ms", 400))
-        direction = action.get("direction", "up").lower()
-        dx, dy = _SWIPE_DELTAS.get(direction, (0, -600))
-        cx, cy = 540, 1200
-        return SwipeEvent(start_x=cx, start_y=cy,
-                          end_x=cx+dx, end_y=cy+dy, duration=400)
-
-    elif act == "back":
-        return KeyEvent("BACK")
-
-    elif act == "home":
-        return KeyEvent("HOME")
-
-    elif act == "enter":
-        return KeyEvent("ENTER")
-
-    elif act == "type":
-        return SetTextEvent(text=action.get("text", ""))
-
-    elif act == "done":
-        return None
-
-    return None
-
 

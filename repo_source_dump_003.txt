@@ -4247,9 +4247,9 @@ if __name__ == "__main__":
     "last_seen": 1773847996.1283894
   },
   "13dcb6504714|tap:Communities": {
-    "to": "e593131cf7fc",
+    "to": "615edd0c907f",
     "count": 1,
-    "last_seen": 1773840535.6349597
+    "last_seen": 1773848109.5668764
   },
   "5731aaff4c94|opt4_launch:youtube": {
     "to": "a2a7a2e70c76",
@@ -7154,6 +7154,141 @@ nohup: ignoring input
 [parser] DEBUG normalized: 'tap 33'
 [parser] INFO parsed 'tap 33' -> {'action': 'tap', 'target': 33}
 
+########################################################
+  JARVIS  |  Open WhatsApp and go to Updates tab
+  Device : 192.168.29.48:33117
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 520 screens (0 tainted), 636 transitions
+    whatsapp             173 screens
+    chrome               106 screens
+    youtube              101 screens
+    vending              43 screens
+    termux               25 screens
+    launcher             23 screens
+    settings             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+  TransitionMemory: 586 transitions (279 confirmed, threshold=2)
+[init] task_apps: ['whatsapp']
+[init] max_skill_steps: 20 (threshold: 12)
+
+========================================================
+  STEP 1  |  Open WhatsApp and go to Updates tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3310430 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Cloudy'
+[ui_parser] OCR: (841,1475)-(1009,1671) → 'lt'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.launcher/.Launcher hash=1848905d53ed elements=26
+[step] UI: ['Clock', '21', ':', '03', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (1025dd6b)
+[OPT4v2] launcher -> launching whatsapp (com.whatsapp)
+[llm] OPT4v2 am start: com.whatsapp
+
+========================================================
+  STEP 2  |  Open WhatsApp and go to Updates tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (442254 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,139) → 'Start audio call with Ayush Kr(Personal)'
+[ui_parser] child: (0,377) → 'Ayush Kr(Personal)'
+[ui_parser] child: (896,377) → 'Stay fixed'
+[ui_parser] child: (1176,377) → 'Ayush Kr(Personal)'
+[ui_parser] child: (0,835) → 'Start audio call with Ayush Kr(Personal)'
+[ui_parser] child: (0,1066) → 'Start video call with Asif Mudassir'
+[ui_parser] child: (0,1297) → 'Start audio call with Asif Mudassir'
+[ui_parser] child: (0,1528) → 'Start audio call with Mummy'
+[ui_parser] child: (0,1759) → 'Start audio call with Ayush Kr(Personal)'
+[ui_parser] child: (0,1990) → 'Start audio call with Mummy'
+[ui_parser] child: (0,2221) → 'Start video call with Mummy'
+[ui_parser] full parse -- 36 elements (36 labeled, 11 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.whatsapp/.home.ui.HomeActivity hash=fe473f16ec0d elements=36
+[step] UI: ['Start audio call with Ayush Kr(Personal)', 'Search', 'More options', 'Ayush Kr(Personal)', 'Call', 'Schedule', 'Keypad', 'Stay fixed']
+[tm] transition changed: 1025dd6b857e|opt4_launch:whatsapp 6dcc8357 -> 13dcb650
+[map] transition: launcher_launcher --[opt4_launch:whatsapp]--> whatsapp_homeactivity
+[map] screen: whatsapp_homeactivity (13dcb650)
+[skill] matched: 'open whatsapp'  score=1.00  act=True
+[skill] cannot resolve: 'Back'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'Still working on it...'
+[step] LLM: 'Still working on it...'
+[step] action: {'action': 'retry', '_warn': "unrecognised: 'Still working on it...'"}
+[input] cannot build event from: {'action': 'retry', '_warn': "unrecognised: 'Still working on it...'"}
+[mem] invalidated com.whatsapp/.home.ui.HomeActivity
+[step] step=2/8 done=False history=['opt4_launch:whatsapp', 'retry']
+
+========================================================
+  STEP 3  |  Open WhatsApp and go to Updates tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (442558 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,139) → 'Start audio call with Ayush Kr(Personal)'
+[ui_parser] child: (0,377) → 'Ayush Kr(Personal)'
+[ui_parser] child: (896,377) → 'Stay fixed'
+[ui_parser] child: (1176,377) → 'Ayush Kr(Personal)'
+[ui_parser] child: (0,835) → 'Start audio call with Ayush Kr(Personal)'
+[ui_parser] child: (0,1066) → 'Start video call with Asif Mudassir'
+[ui_parser] child: (0,1297) → 'Start audio call with Asif Mudassir'
+[ui_parser] child: (0,1528) → 'Start audio call with Mummy'
+[ui_parser] child: (0,1759) → 'Start audio call with Ayush Kr(Personal)'
+[ui_parser] child: (0,1990) → 'Start audio call with Mummy'
+[ui_parser] child: (0,2221) → 'Start video call with Mummy'
+[ui_parser] full parse -- 36 elements (36 labeled, 11 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.whatsapp/.home.ui.HomeActivity hash=fe473f16ec0d elements=36
+[step] UI: ['Start audio call with Ayush Kr(Personal)', 'Search', 'More options', 'Ayush Kr(Personal)', 'Call', 'Schedule', 'Keypad', 'Stay fixed']
+[map] screen: whatsapp_homeactivity (13dcb650)
+[skill] matched: 'open whatsapp'  score=1.00  act=True
+[skill] cannot resolve: 'Back'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 33'
+[step] LLM: 'tap 33'
+[step] action: {'action': 'tap', 'target': 33}
+[input] dispatching: TouchEvent(x=372, y=2576)
+[input] dispatching: TouchEvent(x=372, y=2576)
+[input] adb -s 192.168.29.48:33117 shell input tap 372 2576
+[mem] invalidated com.whatsapp/.home.ui.HomeActivity
+[step] step=3/8 done=False history=['opt4_launch:whatsapp', 'retry', 'tap [33] Updates']
+
+========================================================
+  STEP 4  |  Open WhatsApp and go to Updates tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (819861 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,139) → 'रणवीर सिंह की फिल्म को लेकर जबरदस्त क्रेज देखने को मिल रहा है। Dhurandhar 2: The Revenge की शुरुआत भगवद गीता के श्लोक से हुई, जिसने फिल्म को एक दमदार'
+[ui_parser] child: (0,520) → 'Dr Masood Alam Vet, 4 unread statuses'
+[ui_parser] child: (1184,520) → 'Hidden'
+[ui_parser] child: (0,1194) → 'रणवीर सिंह की फिल्म को लेकर जबरदस्त क्रेज देखने को मिल रहा है। Dhurandhar 2: The Revenge की शुरुआत भगवद गीता के श्लोक से हुई, जिसने फिल्म को एक दमदार'
 
 //===== TERMUXFILE: --task =====
 

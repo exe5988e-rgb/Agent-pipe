@@ -4615,6 +4615,11 @@ if __name__ == "__main__":
     "to": "67d20aa8828e",
     "count": 1,
     "last_seen": 1773850112.286298
+  },
+  "67d20aa8828e|type": {
+    "to": "40a382601216",
+    "count": 1,
+    "last_seen": 1773850119.6537254
   }
 }
 
@@ -4714,6 +4719,7 @@ if __name__ == "__main__":
 [21:37:51] 
 [22/33] [3★] [whatsapp] Send a WhatsApp message to Mummy saying Good morning
 [21:37:51]   max_steps=15  skill_threshold=12  skills=6
+[21:38:40]   PASS  46.2s
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -5855,7 +5861,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-18T21:37:46.184300",
+  "run_at": "2026-03-18T21:38:40.539771",
   "skills_before": 0,
   "skills_current": 6,
   "results": [
@@ -6045,6 +6051,15 @@ if __name__ == "__main__":
       "difficulty": 2,
       "success": true,
       "elapsed_s": 102.0,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Send a WhatsApp message to Mummy saying Good morning",
+      "category": "whatsapp",
+      "difficulty": 3,
+      "success": true,
+      "elapsed_s": 46.2,
       "error": null,
       "retried": false
     }
@@ -10981,6 +10996,154 @@ RuntimeError: No LLM backend available.
 [ui_parser] child: (0,1192) → 'Message yourself'
 [ui_parser] child: (0,1192) → '+91 79911 96829'
 [ui_parser] child: (0,1430) → 'Available'
+[ui_parser] child: (0,1430) → 'Aakash'
+[ui_parser] child: (0,1668) → 'Aakash Asst'
+[ui_parser] child: (0,1668) → 'Aakash Asst'
+[ui_parser] full parse -- 15 elements (15 labeled, 11 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.whatsapp/.contact.ui.picker.ContactPicker hash=2073cb2ff496 elements=15
+[step] UI: ['Search name or number…', 'Show dial pad keyboard', 'Back', 'Add new contact via QR code', 'New group', 'Add new contact via QR code', 'Add new contact via QR code', 'New community']
+[map] new screen: whatsapp_contactpicker (35cc9568adf1)
+[map] transition: whatsapp_contactpicker --[tap:More options]--> whatsapp_contactpicker
+[map] screen: whatsapp_contactpicker (35cc9568)
+[policy] contact_picker phase2: typing 'Mummy'
+[policy] matched — executing 1 actions
+[policy] action: {'action': 'type', 'text': 'Mummy'}
+[input] dispatching: SetTextEvent('Mummy')
+[input] dispatching: SetTextEvent('Mummy')
+[input] adb -s 192.168.29.48:33117 shell input text Mummy
+[mem] invalidated com.whatsapp/.contact.ui.picker.ContactPicker
+[policy] done — skipped Claude
+[step] step=4/15 done=False history=['opt4_launch:whatsapp', 'tap [24] New chat', 'tap [2] Search', "type 'Mummy'"]
+
+========================================================
+  STEP 5  |  Send a WhatsApp message to Mummy saying Good morning
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1188256 bytes)
+[ui_parser] activity=com.whatsapp/.contact.ui.picker.ContactPicker
+[ui_parser] signal='com.whatsapp/.contact.ui.picker.ContactPicker'
+[mem] miss (unknown): com.whatsapp/.contact.ui.picker.ContactPicker
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,335) → 'Contacts on WhatsApp'
+[ui_parser] child: (0,356) → 'Contacts on WhatsApp'
+[ui_parser] child: (0,478) → 'Mummy'
+[ui_parser] child: (0,478) → 'Mummy'
+[ui_parser] child: (0,716) → 'Mummy Ziono'
+[ui_parser] child: (0,716) → 'Mummy Ziono'
+[ui_parser] child: (0,954) → 'Message yourself'
+[ui_parser] child: (0,954) → '+91 79911 96829'
+[ui_parser] child: (0,1192) → 'More'
+[ui_parser] child: (0,1314) → 'New contact'
+[ui_parser] child: (0,1552) → 'Share invite link'
+[ui_parser] full parse -- 14 elements (14 labeled, 11 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.whatsapp/.contact.ui.picker.ContactPicker hash=83fde41cba66 elements=14
+[step] UI: ['Mummy', 'Show dial pad keyboard', 'Back', 'Contacts on WhatsApp', 'Contacts on WhatsApp', 'Mummy', 'Mummy', 'Mummy Ziono']
+[map] new screen: whatsapp_contactpicker (6d26e82dd7ee)
+[map] transition: whatsapp_contactpicker --[type]--> whatsapp_contactpicker
+[map] screen: whatsapp_contactpicker (6d26e82d)
+[policy] contact_picker phase3: tapping first result for 'Mummy'
+[policy] matched — executing 1 actions
+[policy] action: {'action': 'tap', 'x': 620, 'y': 602}
+[input] dispatching: TouchEvent(x=620, y=602)
+[input] dispatching: TouchEvent(x=620, y=602)
+[input] adb -s 192.168.29.48:33117 shell input tap 620 602
+[policy] done — skipped Claude
+[step] step=5/15 done=False history=['opt4_launch:whatsapp', 'tap [24] New chat', 'tap [2] Search', "type 'Mummy'", 'tap (620,602)']
+
+========================================================
+  STEP 6  |  Send a WhatsApp message to Mummy saying Good morning
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1570620 bytes)
+[ui_parser] activity=com.whatsapp/.Conversation
+[ui_parser] signal='com.whatsapp/.Conversation'
+[mem] miss (unknown): com.whatsapp/.Conversation
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (336,139) → 'Mummy'
+[ui_parser] child: (0,335) → 'Jarvis Gauntlet done. 33/33 passed. 6 new skills. Total 6 skills. 79 min.'
+[ui_parser] full parse -- 13 elements (12 labeled, 2 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.whatsapp/.Conversation hash=5b4954fdd074 elements=13
+[step] UI: ['Mummy', 'Back', 'element_3', 'Video call', 'Voice call', 'More options', 'Jarvis Gauntlet done. 33/33 passed. 6 new skills. Total 6 skills. 79 min.', 'Emoji, GIFs and stickers']
+[map] new screen: whatsapp_conversation (67d20aa8828e)
+[map] transition: whatsapp_contactpicker --[tap:None]--> whatsapp_conversation
+[map] screen: whatsapp_conversation (67d20aa8)
+[policy] send_message phase1: 'Good morning' -> tap [13] + type
+[policy] matched — executing 2 actions
+[policy] action: {'action': 'tap', 'target': 13}
+[input] dispatching: TouchEvent(x=362, y=1625)
+[input] dispatching: TouchEvent(x=362, y=1625)
+[input] adb -s 192.168.29.48:33117 shell input tap 362 1625
+[mem] invalidated com.whatsapp/.Conversation
+[policy] action: {'action': 'type', 'text': 'Good morning'}
+[input] dispatching: SetTextEvent('Good morning')
+[input] dispatching: SetTextEvent('Good morning')
+[input] adb -s 192.168.29.48:33117 shell input text Good%smorning
+[policy] done — skipped Claude
+[step] step=7/15 done=False history=['opt4_launch:whatsapp', 'tap [24] New chat', 'tap [2] Search', "type 'Mummy'", 'tap (620,602)', 'tap [13] Message', "type 'Good morning'"]
+
+========================================================
+  STEP 8  |  Send a WhatsApp message to Mummy saying Good morning
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1577976 bytes)
+[ui_parser] activity=com.whatsapp/.Conversation
+[ui_parser] signal='com.whatsapp/.Conversation'
+[mem] miss (unknown): com.whatsapp/.Conversation
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (336,139) → 'Mummy'
+[ui_parser] child: (0,335) → 'Jarvis Gauntlet done. 33/33 passed. 6 new skills. Total 6 skills. 79 min.'
+[ui_parser] full parse -- 11 elements (10 labeled, 2 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.whatsapp/.Conversation hash=b4f01063ed78 elements=11
+[step] UI: ['Mummy', 'Back', 'element_3', 'Video call', 'Voice call', 'More options', 'Jarvis Gauntlet done. 33/33 passed. 6 new skills. Total 6 skills. 79 min.', 'Emoji, GIFs and stickers']
+[map] new screen: whatsapp_conversation (40a382601216)
+[map] transition: whatsapp_conversation --[type]--> whatsapp_conversation
+[map] screen: whatsapp_conversation (40a38260)
+[policy] send_message phase2: tapping Send [10]
+[policy] matched — executing 2 actions
+[policy] action: {'action': 'tap', 'target': 10}
+[input] dispatching: TouchEvent(x=1141, y=1626)
+[input] dispatching: TouchEvent(x=1141, y=1626)
+[input] adb -s 192.168.29.48:33117 shell input tap 1141 1626
+[mem] invalidated com.whatsapp/.Conversation
+[policy] action: {'action': 'done'}
+[input] DONE — no dispatch
+[policy] done — skipped Claude
+[step] step=9/15 done=True history=['opt4_launch:whatsapp', 'tap [24] New chat', 'tap [2] Search', "type 'Mummy'", 'tap (620,602)', 'tap [13] Message', "type 'Good morning'", 'tap [10] Send', 'done']
+
+[controller] done in 9 steps
+
+[controller] history:
+  1. opt4_launch:whatsapp
+  2. tap [24] New chat
+  3. tap [2] Search
+  4. type 'Mummy'
+  5. tap (620,602)
+  6. tap [13] Message
+  7. type 'Good morning'
+  8. tap [10] Send
+  9. done
+
+  Screen Map: 544 screens (0 tainted), 660 transitions
+    whatsapp             180 screens
+    chrome               112 screens
+    youtube              104 screens
+    vending              46 screens
+    termux               26 screens
+    settings             25 screens
+    launcher             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+    notificationmanager  1 screens
+    battery              1 screens
+  TransitionMemory: 610 transitions (281 confirmed, threshold=2)
+
 
 //===== TERMUXFILE: --task =====
 

@@ -4271,6 +4271,9 @@ if __name__ == "__main__":
 [7/33] [1★] [phone] Open Contacts
 [18:54:57]   max_steps=5  skill_threshold=12  skills=0
 [18:55:42]   PASS  42.2s
+[18:55:47] 
+[8/33] [2★] [whatsapp] Open WhatsApp and go to Calls tab
+[18:55:47]   max_steps=8  skill_threshold=12  skills=0
 
 
 //===== TERMUXFILE: tap_logger.py =====

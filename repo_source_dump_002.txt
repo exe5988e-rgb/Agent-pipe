@@ -52544,6 +52544,145 @@
           "resource_id": ""
         }
       ]
+    },
+    "bd0567c7c2e3": {
+      "screen_id": "bd0567c7c2e3",
+      "package": "com.termux",
+      "activity": "com.termux/.app.TermuxActivity",
+      "name": "termux_termuxactivity",
+      "labels": [
+        "Local LLM down? Run:    bash ~/jarvis_server_init.sh\nTraceback (most recent call last):\n  File \"/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py\", line 311, in run\n    run_step(state, device=device, model_path=model_path)\n    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py\", line 267, in run_step\n    llm_out = generate(prompt, model_path=model_path)\n  File \"/data/data/com.termux/files/home/workflows/test/jarvis-agent/reasoning/llm_client.py\", line 109, in generate\n    raise RuntimeError(\n    ...<3 lines>...\n    )\nRuntimeError: No LLM backend available.\n  Phone B offline? Check: curl http://192.168.29.110:8890/health",
+        "ESC",
+        "element_3",
+        "\u2630",
+        "\u21f3",
+        "\u2191",
+        "END",
+        "PGUP",
+        "\u21b9",
+        "CTRL",
+        "ALT",
+        "\u2190",
+        "\u2193",
+        "\u2192",
+        "PGDN"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Local LLM down? Run:    bash ~/jarvis_server_init.sh\nTraceback (most recent call last):\n  File \"/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py\", line 311, in run\n    run_step(state, device=device, model_path=model_path)\n    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py\", line 267, in run_step\n    llm_out = generate(prompt, model_path=model_path)\n  File \"/data/data/com.termux/files/home/workflows/test/jarvis-agent/reasoning/llm_client.py\", line 109, in generate\n    raise RuntimeError(\n    ...<3 lines>...\n    )\nRuntimeError: No LLM backend available.\n  Phone B offline? Check: curl http://192.168.29.110:8890/health",
+          "x": 620,
+          "y": 727,
+          "cls": "android.view.View",
+          "resource_id": "com.termux:id/terminal_view"
+        },
+        {
+          "text": "ESC",
+          "x": 97,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_3",
+          "x": 620,
+          "y": 1447,
+          "cls": "androidx.viewpager.widget.ViewPager",
+          "resource_id": "com.termux:id/terminal_toolbar_view_pager"
+        },
+        {
+          "text": "\u2630",
+          "x": 271,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u21f3",
+          "x": 445,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "HOME",
+          "x": 619,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u2191",
+          "x": 794,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "END",
+          "x": 968,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "PGUP",
+          "x": 1143,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u21b9",
+          "x": 97,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "CTRL",
+          "x": 271,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "ALT",
+          "x": 445,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u2190",
+          "x": 619,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u2193",
+          "x": 794,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u2192",
+          "x": 968,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "PGDN",
+          "x": 1143,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -52973,7 +53112,8 @@
     "5193b772df54|opt4_launch:whatsapp": "f358bf809a6b",
     "f358bf809a6b|retry": "73a672bfe623",
     "73a672bfe623|retry": "87338470af2a",
-    "87338470af2a|retry": "3466d3ef9371"
+    "87338470af2a|retry": "3466d3ef9371",
+    "3466d3ef9371|retry": "bd0567c7c2e3"
   }
 }
 

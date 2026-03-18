@@ -74438,7 +74438,7 @@
         "Subscriptions",
         "You"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {
@@ -75297,7 +75297,8 @@
     "878450f0a90b|back": "ab87f07727b4",
     "ab87f07727b4|tap:Content rating Rated for 3+": "4c38e663dba1",
     "a2a7a2e70c76|tap:Auto-play is off": "c9ef977845dc",
-    "c9ef977845dc|tap:Voice search": "ffe4b24675ad"
+    "c9ef977845dc|tap:Voice search": "ffe4b24675ad",
+    "ffe4b24675ad|back": "c9ef977845dc"
   }
 }
 

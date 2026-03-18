@@ -70395,6 +70395,162 @@
           "resource_id": ""
         }
       ]
+    },
+    "5b8b2957dadb": {
+      "screen_id": "5b8b2957dadb",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Forward",
+        "Bookmark",
+        "Download",
+        "Page info",
+        "Refresh",
+        "New tab",
+        "New Incognito tab",
+        "Add tab to group",
+        "History",
+        "Delete browsing data",
+        "Downloads",
+        "Bookmarks",
+        "Recent tabs",
+        "Share\u2026",
+        "Find in page",
+        "Translate\u2026",
+        "Show Reading mode",
+        "Add to home screen"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Forward",
+          "x": 428,
+          "y": 272,
+          "cls": "android.widget.CompoundButton",
+          "resource_id": "com.android.chrome:id/button_one"
+        },
+        {
+          "text": "Bookmark",
+          "x": 597,
+          "y": 272,
+          "cls": "android.widget.CompoundButton",
+          "resource_id": "com.android.chrome:id/button_two"
+        },
+        {
+          "text": "Download",
+          "x": 766,
+          "y": 272,
+          "cls": "android.widget.CompoundButton",
+          "resource_id": "com.android.chrome:id/button_three"
+        },
+        {
+          "text": "Page info",
+          "x": 936,
+          "y": 272,
+          "cls": "android.widget.CompoundButton",
+          "resource_id": "com.android.chrome:id/button_four"
+        },
+        {
+          "text": "Refresh",
+          "x": 1106,
+          "y": 272,
+          "cls": "android.widget.CompoundButton",
+          "resource_id": "com.android.chrome:id/button_five"
+        },
+        {
+          "text": "New tab",
+          "x": 767,
+          "y": 468,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/new_tab_menu_id"
+        },
+        {
+          "text": "New Incognito tab",
+          "x": 767,
+          "y": 636,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/new_incognito_tab_menu_id"
+        },
+        {
+          "text": "Add tab to group",
+          "x": 767,
+          "y": 804,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/add_to_group_menu_id"
+        },
+        {
+          "text": "History",
+          "x": 767,
+          "y": 1012,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/open_history_menu_id"
+        },
+        {
+          "text": "Delete browsing data",
+          "x": 767,
+          "y": 1180,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/quick_delete_menu_id"
+        },
+        {
+          "text": "Downloads",
+          "x": 767,
+          "y": 1388,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/downloads_menu_id"
+        },
+        {
+          "text": "Bookmarks",
+          "x": 767,
+          "y": 1556,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/all_bookmarks_menu_id"
+        },
+        {
+          "text": "Recent tabs",
+          "x": 767,
+          "y": 1724,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/recent_tabs_menu_id"
+        },
+        {
+          "text": "Share\u2026",
+          "x": 767,
+          "y": 1932,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/share_menu_id"
+        },
+        {
+          "text": "Find in page",
+          "x": 767,
+          "y": 2100,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/find_in_page_id"
+        },
+        {
+          "text": "Translate\u2026",
+          "x": 767,
+          "y": 2268,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/translate_id"
+        },
+        {
+          "text": "Show Reading mode",
+          "x": 767,
+          "y": 2436,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/reader_mode_menu_id"
+        },
+        {
+          "text": "Add to home screen",
+          "x": 767,
+          "y": 2562,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/universal_install"
+        }
+      ]
     }
   },
   "transitions": {
@@ -70993,7 +71149,8 @@
     "bcfd9287cbfa|tap:Scan": "edd4f565ccb7",
     "5731aaff4c94|opt4_launch:chrome": "7a90c98cab66",
     "0dc27a148200|tap:See 28 tabs": "550b970f5034",
-    "550b970f5034|tap:Directory listing for /: [::]": "7a90c98cab66"
+    "550b970f5034|tap:Directory listing for /: [::]": "7a90c98cab66",
+    "7a90c98cab66|tap:Open source Mamba 3 arrives to surpass Transformer architecture with nearly 4% improved language modeling, reduced latency VentureBeat 14h": "5b8b2957dadb"
   }
 }
 

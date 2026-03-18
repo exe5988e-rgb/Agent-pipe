@@ -4300,6 +4300,11 @@ if __name__ == "__main__":
     "to": "7a90c98cab66",
     "count": 1,
     "last_seen": 1773841260.0634918
+  },
+  "7a90c98cab66|tap:Open source Mamba 3 arrives to surpass Transformer architecture with nearly 4% improved language modeling, reduced latency VentureBeat 14h": {
+    "to": "5b8b2957dadb",
+    "count": 1,
+    "last_seen": 1773841340.0869732
   }
 }
 

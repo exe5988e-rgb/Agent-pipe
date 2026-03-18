@@ -47317,6 +47317,210 @@
           "resource_id": ""
         }
       ]
+    },
+    "e28b49f9232a": {
+      "screen_id": "e28b49f9232a",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Open the homepage",
+        "element_2",
+        "element_3",
+        "google.com/search?client=ms-android-oneplus-terr1-rso3&hs=WuC&sca_esv=9d975e0fdc86a6e5&sxsrf=ANbL-n72AAjlz-j94IXN5Fc8-9PiPABE9w%3A1773793142545&q=Best+Restaur",
+        "See 23 tabs",
+        "Customise and control Google Chrome",
+        "element_7",
+        "Close",
+        "View 3 corroboration links",
+        "About this result",
+        "Change language to Hindi",
+        "Listen",
+        "element_13",
+        "element_14",
+        "Tripadvisor (+2) \u2013 View related links",
+        "element_16",
+        "element_17",
+        "element_18",
+        "element_19",
+        "element_20",
+        "Microphone",
+        "Upload image",
+        "element_23",
+        "element_24"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "element_2",
+          "x": 620,
+          "y": 1455,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.android.chrome:id/compositor_view_holder"
+        },
+        {
+          "text": "element_3",
+          "x": 224,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "google.com/search?client=ms-android-oneplus-terr1-rso3&hs=WuC&sca_esv=9d975e0fdc86a6e5&sxsrf=ANbL-n72AAjlz-j94IXN5Fc8-9PiPABE9w%3A1773793142545&q=Best+Restaur",
+          "x": 592,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "See 23 tabs",
+          "x": 988,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 1526,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Close",
+          "x": 1107,
+          "y": 448,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "View 3 corroboration links",
+          "x": 958,
+          "y": 567,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "About this result",
+          "x": 1153,
+          "y": 567,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Change language to Hindi",
+          "x": 127,
+          "y": 567,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Listen",
+          "x": 285,
+          "y": 567,
+          "cls": "android.widget.ToggleButton",
+          "resource_id": ""
+        },
+        {
+          "text": "element_13",
+          "x": 621,
+          "y": 1688,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_14",
+          "x": 621,
+          "y": 1040,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Tripadvisor (+2) \u2013 View related links",
+          "x": 656,
+          "y": 1379,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_16",
+          "x": 621,
+          "y": 1558,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_17",
+          "x": 649,
+          "y": 1824,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_18",
+          "x": 649,
+          "y": 2118,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_19",
+          "x": 649,
+          "y": 2412,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_20",
+          "x": 621,
+          "y": 2580,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Microphone",
+          "x": 918,
+          "y": 2580,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Upload image",
+          "x": 1086,
+          "y": 2580,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_23",
+          "x": 460,
+          "y": 2622,
+          "cls": "android.widget.EditText",
+          "resource_id": ""
+        },
+        {
+          "text": "element_24",
+          "x": 649,
+          "y": 2647,
+          "cls": "android.view.View",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -47704,7 +47908,8 @@
     "f26fcd5f93eb|swipe": "1f432998f498",
     "1f432998f498|swipe": "7f10a5188f17",
     "7f10a5188f17|tap:element_9": "8a7ad9916fb6",
-    "8a7ad9916fb6|tap:element_37": "1def2c77ddc7"
+    "8a7ad9916fb6|tap:element_37": "1def2c77ddc7",
+    "1def2c77ddc7|swipe": "e28b49f9232a"
   }
 }
 

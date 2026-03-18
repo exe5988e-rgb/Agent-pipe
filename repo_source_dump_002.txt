@@ -75532,6 +75532,42 @@
           "resource_id": ""
         }
       ]
+    },
+    "65840c1afc29": {
+      "screen_id": "65840c1afc29",
+      "package": "com.google.android.permissioncontroller",
+      "activity": "com.google.android.permissioncontroller/com.android.permissioncontroller.permission.ui.GrantPermissionsActivity",
+      "name": "permissioncontroller_grantpermissionsactivity",
+      "labels": [
+        "Allow YouTube to record audio?",
+        "Only this time",
+        "Don't allow"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Allow YouTube to record audio?",
+          "x": 619,
+          "y": 2212,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.permissioncontroller:id/grant_singleton"
+        },
+        {
+          "text": "Only this time",
+          "x": 620,
+          "y": 2366,
+          "cls": "android.widget.Button",
+          "resource_id": "com.android.permissioncontroller:id/permission_allow_one_time_button"
+        },
+        {
+          "text": "Don't allow",
+          "x": 620,
+          "y": 2548,
+          "cls": "android.widget.Button",
+          "resource_id": "com.android.permissioncontroller:id/permission_deny_button"
+        }
+      ]
     }
   },
   "transitions": {
@@ -76157,7 +76193,8 @@
     "c9ef977845dc|tap:Warriyo - Mortals (ft. Laura Brehm) \u2013 3 minutes, 49 seconds \u2013 Go to channel Warriyo \u2013 Warriyo - 37 million views - 9 years ago \u2013 play video": "ddedcea55765",
     "ddedcea55765|tap:warriyo mortals": "c35eb75a1a4a",
     "c35eb75a1a4a|type": "1d16b25e8e24",
-    "1d16b25e8e24|tap:Edit suggestion lofi hip hop no lyrics music": "b2867628ccaa"
+    "1d16b25e8e24|tap:Edit suggestion lofi hip hop no lyrics music": "b2867628ccaa",
+    "b2867628ccaa|tap:25": "65840c1afc29"
   }
 }
 

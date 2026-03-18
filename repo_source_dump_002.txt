@@ -49580,6 +49580,146 @@
           "resource_id": ""
         }
       ]
+    },
+    "3723d0d9b6da": {
+      "screen_id": "3723d0d9b6da",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Open the homepage",
+        "element_2",
+        "tripadvisor.in/Restaurant_Review-g1011999-d4772080-Reviews-17_Degrees_Restaurant-Dhanbad_Dhanbad_District_Jharkhand.html#REVIEWS",
+        "See 23 tabs",
+        "Customise and control Google Chrome",
+        "element_6",
+        "element_7",
+        "Save to a trip",
+        "See all restaurants in Dhanbad",
+        "Photos",
+        "Overview",
+        "Menu",
+        "Reviews",
+        "Insider tips/Q&A (1)",
+        "All reviews (68)",
+        "Write a review"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "element_2",
+          "x": 224,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "tripadvisor.in/Restaurant_Review-g1011999-d4772080-Reviews-17_Degrees_Restaurant-Dhanbad_Dhanbad_District_Jharkhand.html#REVIEWS",
+          "x": 592,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "See 23 tabs",
+          "x": 988,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        },
+        {
+          "text": "element_6",
+          "x": 620,
+          "y": 1553,
+          "cls": "android.view.View",
+          "resource_id": "lithium-root"
+        },
+        {
+          "text": "element_7",
+          "x": 985,
+          "y": 429,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Save to a trip",
+          "x": 1098,
+          "y": 429,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "See all restaurants in Dhanbad",
+          "x": 465,
+          "y": 429,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Photos",
+          "x": 185,
+          "y": 636,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Overview",
+          "x": 472,
+          "y": 636,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Menu",
+          "x": 743,
+          "y": 636,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Reviews",
+          "x": 997,
+          "y": 636,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Insider tips/Q&A (1)",
+          "x": 323,
+          "y": 700,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "All reviews (68)",
+          "x": 831,
+          "y": 700,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Write a review",
+          "x": 621,
+          "y": 2691,
+          "cls": "android.view.View",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -49985,7 +50125,8 @@
     "71802160f49b|swipe": "9ea2df66c0e6",
     "9ea2df66c0e6|swipe": "4fe13740dde6",
     "4fe13740dde6|swipe": "f35a0da7c44b",
-    "f35a0da7c44b|swipe": "4fe13740dde6"
+    "f35a0da7c44b|swipe": "4fe13740dde6",
+    "4fe13740dde6|tap:\u201cour stay was comfortable, facilities were good & staff helpful. Food at the...\u201d \u201cDinner time\u201d": "3723d0d9b6da"
   }
 }
 

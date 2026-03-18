@@ -87340,6 +87340,90 @@
           "resource_id": "com.google.android.youtube:id/floaty_bar_time_bar_view"
         }
       ]
+    },
+    "c9ac5d3f0adc": {
+      "screen_id": "c9ac5d3f0adc",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Navigate up",
+        "Clear",
+        "lofi hip hopWarriyo Mortals",
+        "Edit suggestion \u2026 mortals 1 hour",
+        "Edit suggestion \u2026 mortals 1 hour",
+        "Minimised player",
+        "Play video",
+        "Close minimised player",
+        "4 minutes 33 seconds of 1 hour 1 minute 14 seconds"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Clear",
+          "x": 1156,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/search_clear"
+        },
+        {
+          "text": "lofi hip hopWarriyo Mortals",
+          "x": 634,
+          "y": 223,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.google.android.youtube:id/search_edit_text"
+        },
+        {
+          "text": "Edit suggestion \u2026 mortals 1 hour",
+          "x": 620,
+          "y": 391,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion \u2026 mortals 1 hour",
+          "x": 1156,
+          "y": 391,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Minimised player",
+          "x": 876,
+          "y": 1564,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.youtube:id/floaty_bar_controls_view"
+        },
+        {
+          "text": "Play video",
+          "x": 624,
+          "y": 1459,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/modern_miniplayer_overlay_action_button"
+        },
+        {
+          "text": "Close minimised player",
+          "x": 1128,
+          "y": 1459,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/modern_miniplayer_close"
+        },
+        {
+          "text": "4 minutes 33 seconds of 1 hour 1 minute 14 seconds",
+          "x": 876,
+          "y": 1734,
+          "cls": "android.widget.SeekBar",
+          "resource_id": "com.google.android.youtube:id/floaty_bar_time_bar_view"
+        }
+      ]
     }
   },
   "transitions": {
@@ -88030,7 +88114,8 @@
     "551be7ca5a88|back": "eb822f47a422",
     "67d20aa8828e|home": "5731aaff4c94",
     "9cd54d2c0f76|tap:Auto-play is off": "c5a08195b577",
-    "c5a08195b577|tap:All": "24e847386b90"
+    "c5a08195b577|tap:All": "24e847386b90",
+    "24e847386b90|type": "c9ac5d3f0adc"
   }
 }
 

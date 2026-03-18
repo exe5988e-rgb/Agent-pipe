@@ -4715,6 +4715,11 @@ if __name__ == "__main__":
     "to": "923e7b2582d4",
     "count": 1,
     "last_seen": 1773850908.5304458
+  },
+  "923e7b2582d4|tap:Go to channel: Karl Kite.": {
+    "to": "2f2fddf125c9",
+    "count": 1,
+    "last_seen": 1773850943.8040447
   }
 }
 

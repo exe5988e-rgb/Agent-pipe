@@ -6171,6 +6171,118 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
 [parser] DEBUG normalized: 'tap 13'
 [parser] INFO parsed 'tap 13' -> {'action': 'tap', 'target': 13}
 
+[ui_parser] child: (0,475) → 'Edit suggestion phonk'
+[ui_parser] child: (0,811) → 'Edit suggestion mortals funk remix'
+[ui_parser] child: (0,979) → 'Edit suggestion legend never die'
+[ui_parser] child: (0,1147) → 'Edit suggestion manasha'
+[ui_parser] child: (0,1315) → 'Edit suggestion tiki tiki slowed'
+[ui_parser] child: (0,1483) → 'Edit suggestion alone'
+[ui_parser] child: (0,1651) → 'Edit suggestion los voltaje'
+[ui_parser] full parse -- 24 elements (24 labeled, 9 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=4a5af7de3a16 elements=24
+[step] UI: ['Navigate up', 'Voice search', 'Search YouTube', 'Edit suggestion warriyo mortals', 'Edit suggestion mortals funk remix', 'Edit suggestion warriyo mortals', 'Edit suggestion phonk', 'Edit suggestion phonk']
+[map] new screen: youtube_shell$homeactivity (4f25786c665e)
+[map] transition: youtube_shell$homeactivity --[tap:warriyo mortals]--> youtube_shell$homeactivity
+[map] screen: youtube_shell$homeactivity (4f25786c)
+[skill] matched: 'search for on youtube'  score=1.00  act=True
+[skill] cannot resolve: 'Edit suggestion mrbeast'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'type lofi hip hop'
+[step] LLM: 'type lofi hip hop'
+[step] action: {'action': 'type', 'text': 'lofi hip hop'}
+[input] dispatching: SetTextEvent('lofi hip hop')
+[input] dispatching: SetTextEvent('lofi hip hop')
+[input] adb -s 192.168.29.48:33117 shell input text lofi%ship%shop
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[step] step=7/12 done=False history=['opt4_launch:youtube', 'tap [13] Close', 'tap [2] Minimise', "type 'lofi hip hop'", 'tap [6] warriyo mortals', 'tap [2] Clear', "type 'lofi hip hop'"]
+
+========================================================
+  STEP 8  |  Search for lofi hip hop on YouTube and play the first video
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1420161 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,307) → 'Edit suggestion lofi hip hop'
+[ui_parser] child: (0,307) → 'Edit suggestion lofi hip hop songs hindi'
+[ui_parser] child: (0,475) → 'Edit suggestion lofi hip hop beats'
+[ui_parser] child: (0,643) → 'Edit suggestion lofi hip hop mix'
+[ui_parser] child: (0,811) → 'Edit suggestion lofi hip hop no lyrics'
+[ui_parser] child: (0,979) → 'Edit suggestion lofi hip hop music'
+[ui_parser] child: (0,1147) → 'Edit suggestion lofi hip hop song'
+[ui_parser] child: (0,1315) → 'Edit suggestion lofi hip hop songs hindi'
+[ui_parser] child: (0,1483) → 'Edit suggestion lofi hip hop lyrics'
+[ui_parser] child: (0,1651) → 'Edit suggestion lofi hip hop soft'
+[ui_parser] full parse -- 26 elements (26 labeled, 10 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=efc249ad9670 elements=26
+[step] UI: ['Navigate up', 'Clear', 'lofi hip hop', 'Edit suggestion lofi hip hop', 'Edit suggestion lofi hip hop songs hindi', 'Edit suggestion lofi hip hop', 'Edit suggestion lofi hip hop beats', 'Edit suggestion lofi hip hop beats']
+[map] new screen: youtube_shell$homeactivity (2e2486088817)
+[map] transition: youtube_shell$homeactivity --[type]--> youtube_shell$homeactivity
+[map] screen: youtube_shell$homeactivity (2e248608)
+[skill] matched: 'search for on youtube'  score=1.00  act=True
+[skill] cannot resolve: 'Search'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 4'
+[step] LLM: 'tap 4'
+[step] action: {'action': 'tap', 'target': 4}
+[input] dispatching: TouchEvent(x=620, y=391)
+[input] dispatching: TouchEvent(x=620, y=391)
+[input] adb -s 192.168.29.48:33117 shell input tap 620 391
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[step] step=8/12 done=False history=['opt4_launch:youtube', 'tap [13] Close', 'tap [2] Minimise', "type 'lofi hip hop'", 'tap [6] warriyo mortals', 'tap [2] Clear', "type 'lofi hip hop'", 'tap [4] Edit suggestion lofi hip hop']
+
+========================================================
+  STEP 9  |  Search for lofi hip hop on YouTube and play the first video
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1829147 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (56,335) → 'All'
+[ui_parser] child: (224,335) → 'Shorts'
+[ui_parser] child: (481,335) → 'Videos'
+[ui_parser] child: (744,335) → 'Unwatched'
+[ui_parser] child: (1100,335) → 'Watched'
+[ui_parser] child: (0,475) → 'Why Lofi Music Is So Evil#relaxing music#lo fi#study music#lofi chill beats#lofi hiphop#chillhop, 467 thousand views, Dancer , 5 months ago – play Short'
+[ui_parser] child: (196,2483) → '1m views · 3 yr ago'
+[ui_parser] child: (788,2483) → '5.2m views · 4 yr ago'
+[ui_parser] full parse -- 36 elements (36 labeled, 8 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=dd031d312833 elements=36
+[step] UI: ['Navigate up', 'Clear', 'Voice search', 'Cast', 'More options', 'lofi hip hop', 'All', 'Shorts']
+[map] new screen: youtube_shell$homeactivity (923e7b2582d4)
+[map] transition: youtube_shell$homeactivity --[tap:Edit suggestion lofi hip hop songs hindi]--> youtube_shell$homeactivity
+[map] screen: youtube_shell$homeactivity (923e7b25)
+[skill] matched: 'search for on youtube'  score=1.00  act=True
+[skill] cannot resolve: 'Edit suggestion mrbeast'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 13'
+[step] LLM: 'tap 13'
+[step] action: {'action': 'tap', 'target': 13}
+[input] dispatching: TouchEvent(x=620, y=1020)
+[input] dispatching: TouchEvent(x=620, y=1020)
+[input] adb -s 192.168.29.48:33117 shell input tap 620 1020
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[step] step=9/12 done=False history=['opt4_launch:youtube', 'tap [13] Close', 'tap [2] Minimise', "type 'lofi hip hop'", 'tap [6] warriyo mortals', 'tap [2] Clear', "type 'lofi hip hop'", 'tap [4] Edit suggestion lofi hip hop', "tap [13] Sponsored – I'm Stumblin' In The Dark Official Music – 3 minutes, 31 seconds – Streamed 5 months ago – Karl Kite – play video"]
+
+========================================================
+  STEP 10  |  Search for lofi hip hop on YouTube and play the first video
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1864610 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (56,335) → 'All'
+[ui_parser] child: (224,335) → 'Shorts'
+[ui_parser] child: (481,335) → 'Videos'
+[ui_parser] child: (744,335) → 'Unwatched'
+[ui_parser] child: (1100,335) → 'Watched'
+[ui_parser] child: (0,475) → 'Lo-fi girl disappearance SOLVED? #shorts #fyp #viral #lofi #lofigirl #edit #editing #music, 1.2 million views, Noogitz, 2 years ago – play Short'
 
 //===== TERMUXFILE: --task =====
 
@@ -9414,137 +9526,4 @@ t 
   *c d / / /
 Cd Ct CG G$ G
 zC zCrJ   
-
-//===== TERMUXFILE: perception/__pycache__/transition_memory.cpython-313.pyc =====
-
-
-    i                     z    S r SSKrSSKrSSKJr  SSKJr  \R                  " 5       S-  S-  rSr	Sr
- " S	 S
-5      rg)u	  
-perception/transition_memory.py  —  OPT 7: UI Transition Prediction
-
-Eliminates the perception wait after known actions by predicting the next
-screen before the dump is complete.
-
-How it works:
-  After every action is executed, record_transition() stores:
-    (current_screen_id, action_description) -> expected_next_screen_id
-
-  Before the next perception step, get_predicted_screen() returns the
-  expected next screen if the action is known. The controller can then:
-    1. Skip the full UI dump if the predicted screen is cached in ScreenMemory
-    2. Return the cached UI immediately (~0ms vs 900ms)
-    3. If prediction is wrong (actual != predicted), record the correction
-
-Integration in controller.py run_step():
-  BEFORE parse_ui():
-    predicted = tm.get_predicted_screen(current_screen_id, last_action_label)
-    if predicted:
-        ui = screen_memory.get_by_screen_id(predicted)
-        if ui: ... use cached UI ...
-
-  AFTER action executes:
-    tm.record(current_screen_id, action_label, new_screen_id)
-
-Data stored in ~/workflows/transition_memory.json
-
-Timing impact (from report targets):
-  Without prediction: 3.7s/step   (dump + parse + wait)
-  With prediction:    2.0s/step   (cache hit → no dump)
-  Novel steps still take full 3.7s (first time on a transition)
-    N)Path)Optional	workflowsztransition_memory.jsong      @   c                       \ rS rSrSrS rS\4S jrS rS\	S\	S	\	4S
- jr
-S\	S\	4S jrS rS\	S\	S\
-\	   4S
- jrS\
-\	   4S jrS\4S jrS\4S jrS\4S jrS rSrg)TransitionMemory1   z
-Stores observed (screen_id, action) -> screen_id transitions
-with confidence counts.
-
-Keys:   "{from_screen_id}|{action_label}"
-Values: {"to": screen_id, "count": int, "last_seen": float}
-c                 <    U R                  5       U l        S U l        g N)_load_data_pendingselfs    J/data/data/com.termux/files/home/workflows/perception/transition_memory.py__init__TransitionMemory.__init__:   s    ZZ\
-)-
-    returnc                     [         R                  5       (       a)   [        R                  " [         R	                  5       5      $ 0 $ ! [
-         a     0 $ f = fr   )TM_FILEexistsjsonloads	read_text	Exceptionr   s    r   r   TransitionMemory._load@   sL    >>
-zz'"3"3"566 	  
-	
-s   'A 
-AAc                     [         R                  R                  SSS9  [         R                  [        R
-                  " U R                  SS95        g )NT)parentsexist_okr   )indent)r   parentmkdir
-write_textr   dumpsr
-   r   s    r   _saveTransitionMemory._saveH   s6    TD94::djj;<r   from_idaction_labelto_idc           
-         U(       a  U(       a  X:X  a  gU SU 3nU R                   R                  U5      nU(       aF  UR                  S5      U:X  a1  UR                  SS5      S-   US'   [        R                  " 5       US'   ObU(       a5  UR                  S5      U:w  a   [        SUSS  S	US   SS
-  SUSS
-  35        US[        R                  " 5       S.U R                   U'   U R	                  5         g)
-ze
-Record an observed transition.
-Called after every action executes and the new screen is identified.
-N|tocount   	last_seenz[tm] transition changed: (       z -> )r-   r.   r0   )r
-   gettimeprintr&   )r   r(   r)   r*   keyentrys         r   recordTransitionMemory.recordN   s    
- ew'7	<.)
-
-s#UYYt_-!&7A!6!:E'N!%E+ 4E11#cr(1tRa)eBQi[: ; #!YY[DJJsO 	
-
-r   c                 <    X[         R                   " 5       4U l        g)z
-Mark that we just executed an action and are waiting for the new screen.
-Call this immediately after the action executes, before the next
-perception step, so the controller can time the transition wait.
-N)r5   r   )r   r(   r)   s      r   set_pendingTransitionMemory.set_pendingj   s     !		<
-r   c                     S U l         g r   )r   r   s    r   
-clear_pendingTransitionMemory.clear_pendingr   s	    
-r   c                     U(       a  U(       d  gU SU 3nU R                   R                  U5      nU(       d  gUR                  SS5      [        :  a  gUS   $ )z
-Return predicted next screen_id if transition is known with sufficient
-confidence, or None if unknown / low confidence.
-
-Only returns predictions with MIN_OBSERVATIONS or more observations.
-Nr,   r.   r   r-   )r
-   r4   MIN_OBSERVATIONS)r   r(   r)   r7   r8   s        r   get_predicted_screen%TransitionMemory.get_predicted_screenw   sU     l)1\N+
-
-s#99Wa #33T{r   c                 f    U R                   (       d  gU R                   u  pnU R                  X5      $ )z
-If set_pending() was called, return the predicted next screen for the
-pending action. Returns None if no pending action or prediction unknown.
-N)r   rC   )r   r(   r)   _s       r   get_pending_prediction'TransitionMemory.get_pending_prediction   s-    
- }}#'== q((??r   c                 p    U R                   (       d  g[        R                  " 5       U R                   S   -
-  $ )z'Seconds since set_pending() was called.g        r   )r   r5   r   s    r   pending_elapsed TransitionMemory.pending_elapsed   s&    }}yy{T]]1---r   screen_map_datac                 "   UR                  S0 5      nUR                  S0 5      nSnUR                  5        H  u  pVUR                  U0 5      nUR                  S5      (       a  M/  UR                  S5      S   nUR                  U0 5      n	U	R                  S5      (       a  Mm  XPR                  ;  d  M~  U[        [
-        R
-                  " 5       SS.U R                  U'   US-
-  nM     U(       a   U R
-                  5         [        S	U S
-35        gg)a  
-Pre-populate TransitionMemory from an existing screen_map.json.
-Uses count=MIN_OBSERVATIONS so seeded transitions are immediately trusted.
-
-Call once after a crawl completes to bootstrap predictions.
-
-Usage:
-    import json
-    from pathlib import Path
-    from perception.transition_memory import TransitionMemory
-
-    sm_data = json.loads((Path.home()/"workflows"/"screen_map.json").read_text())
-    tm = TransitionMemory()
-    tm.seed_from_screen_map(sm_data)
-transitionsscreensr   taintedr,   T)r-   r.   r0   seededr/   z[tm] seeded z transitions from screen_mapN)r4   itemssplitr
-   rB   r5   r&   r6   )
-r   rL   rN   rO   rQ   r7   r*   	to_screenr(   from_screens
-             r   seed_from_screen_map%TransitionMemory.seed_from_screen_map   s      &))-<%)))R8%++-JCE2.I}}Y''iinQ'G!++gr2Ky)) **$!&!1!%!%	#
-
-3 !' .* JJLL(DEF r   c                     [        U R                  5      n[        S U R                  R                  5        5       5      nUUU R                  S LS.$ )Nc              3   ^   #    U  H#  nUR                  S S5      [        :  d  M  Sv   M%     g7f)r.   r   r/   N)r4   rB   ).0es     r   	<genexpr>)TransitionMemory.stats.<locals>.<genexpr>   s.      B#6a55!,0@@ #6s   -	-)total_transitions	confirmedpending)lenr
-   sumvaluesr   )r   totalr_   s      r   statsTransitionMemory.stats   sS    
-
-O B4::#4#4#6 B B	 "'!*!%d!:
- 	
-r   c           	      b    U R                  5       n[        SUS    SUS    S[         S35        g )Nz  TransitionMemory: r^   z transitions (r_   z confirmed, threshold=))re   r6   rB   )r   sts     r   print_statsTransitionMemory.print_stats   sD    
-ZZ\
-$R(;%<$= >[/""89I8J!M 	Nr   )r
-   r   N)__name__
-__module____qualname____firstlineno____doc__r   dictr   r&   strr9   r<   r?   r   rC   rG   floatrJ   rV   re   rj   __static_attributes__ r   r   r   r   1   s    .t =c  S 8=3 =c =
-C s xPS} (@
- @. .+GD +G^
-t 
-Nr   r   )rp   r   r5   pathlibr   typingr   homer   PREDICTION_TIMEOUTrB   r   ru   r   r   <module>rz      sM    D    
-))+
-#&>
->    hN hNr   
 

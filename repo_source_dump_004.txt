@@ -8432,5 +8432,33 @@ Traceback (most recent call last):
   File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/executor/device.py", line 119, in take_screenshot
     raise RuntimeError(f"screencap failed: {r.stderr.decode().strip()}")
 RuntimeError: screencap failed: error: device offline
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 271, in run
+    run_step(state, device=device, model_path=model_path,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             max_skill_steps=max_skill_steps)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 124, in run_step
+    img = capture_screen(adb_device=device)
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/perception/screen_capture.py", line 15, in capture_screen
+    return _cache[adb_device].take_screenshot(filename=filename)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/executor/device.py", line 119, in take_screenshot
+    raise RuntimeError(f"screencap failed: {r.stderr.decode().strip()}")
+RuntimeError: screencap failed: error: device offline
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 271, in run
+    run_step(state, device=device, model_path=model_path,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             max_skill_steps=max_skill_steps)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 124, in run_step
+    img = capture_screen(adb_device=device)
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/perception/screen_capture.py", line 15, in capture_screen
+    return _cache[adb_device].take_screenshot(filename=filename)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/executor/device.py", line 119, in take_screenshot
+    raise RuntimeError(f"screencap failed: {r.stderr.decode().strip()}")
+RuntimeError: screencap failed: error: device offline
 
 

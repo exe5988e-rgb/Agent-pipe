@@ -4976,6 +4976,9 @@ if __name__ == "__main__":
 [31/33] [4★] [settings] Open Settings and go to WiFi
 [22:11:35]   max_steps=8  skill_threshold=12  skills=7
 [22:12:47]   PASS  68.8s
+[22:12:52] 
+[32/33] [5★] [cross_app] Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+[22:12:52]   max_steps=30  skill_threshold=12  skills=7
 
 
 //===== TERMUXFILE: tap_logger.py =====

@@ -81516,6 +81516,137 @@
           "resource_id": "com.whatsapp:id/contact_selector"
         }
       ]
+    },
+    "35cc9568adf1": {
+      "screen_id": "35cc9568adf1",
+      "package": "com.whatsapp",
+      "activity": "com.whatsapp/.contact.ui.picker.ContactPicker",
+      "name": "whatsapp_contactpicker",
+      "labels": [
+        "Search name or number\u2026",
+        "Show dial pad keyboard",
+        "Add new contact via QR code",
+        "New group",
+        "Add new contact via QR code",
+        "Add new contact via QR code",
+        "New community",
+        "Contacts on WhatsApp",
+        "Message yourself",
+        "+91 79911 96829",
+        "Available",
+        "Aakash",
+        "Aakash Asst",
+        "Aakash Asst"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Search name or number\u2026",
+          "x": 620,
+          "y": 223,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.whatsapp:id/search_src_text"
+        },
+        {
+          "text": "Show dial pad keyboard",
+          "x": 1100,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/trailing_button"
+        },
+        {
+          "text": "Back",
+          "x": 140,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/back"
+        },
+        {
+          "text": "Add new contact via QR code",
+          "x": 620,
+          "y": 1030,
+          "cls": "android.widget.ListView",
+          "resource_id": "android:id/list"
+        },
+        {
+          "text": "New group",
+          "x": 620,
+          "y": 475,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Add new contact via QR code",
+          "x": 620,
+          "y": 713,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/header_footer_row"
+        },
+        {
+          "text": "Add new contact via QR code",
+          "x": 1100,
+          "y": 713,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/contactpicker_button_two"
+        },
+        {
+          "text": "New community",
+          "x": 620,
+          "y": 951,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Contacts on WhatsApp",
+          "x": 620,
+          "y": 1131,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Message yourself",
+          "x": 620,
+          "y": 1311,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "+91 79911 96829",
+          "x": 126,
+          "y": 1311,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "Available",
+          "x": 620,
+          "y": 1549,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Aakash",
+          "x": 126,
+          "y": 1549,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "Aakash Asst",
+          "x": 620,
+          "y": 1696,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Aakash Asst",
+          "x": 126,
+          "y": 1696,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        }
+      ]
     }
   },
   "transitions": {
@@ -82174,7 +82305,8 @@
     "774d9889be8e|type": "a5b9d401b079",
     "a5b9d401b079|tap:Refine search to 'spotify'": "815905513523",
     "1025dd6b857e|tap:21": "d0e35202b7f2",
-    "6dcc835738aa|tap:Jio \u0915\u094b \u091a\u0941\u0928\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f \u0906\u092a\u0915\u093e \u0927\u0928\u094d\u092f\u0935\u093e\u0926! \u2764\ufe0f\u2026": "c1027f04709d"
+    "6dcc835738aa|tap:Jio \u0915\u094b \u091a\u0941\u0928\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f \u0906\u092a\u0915\u093e \u0927\u0928\u094d\u092f\u0935\u093e\u0926! \u2764\ufe0f\u2026": "c1027f04709d",
+    "c1027f04709d|tap:More options": "35cc9568adf1"
   }
 }
 

@@ -9990,6 +9990,80 @@ Traceback (most recent call last):
 RuntimeError: No LLM backend available.
   Phone B offline? Check: curl http://192.168.29.110:8890/health
   Local LLM down? Run:    bash ~/jarvis_server_init.sh
+[parser] DEBUG normalized: 'done'
+[parser] INFO parsed 'done' -> {'action': 'done'}
+
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 9  |  Search for weather today in Chrome
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (710623 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] HIT com.android.chrome/com.google.android.apps.chrome.Main hash=bd7bb9642af0 hits=7 elements=43
+[step] UI: ['Open the homepage', 'Your connection to this site is not secure', 'google.com/search?q=weather+today&oq=&gs_lcrp=EgZjaHJvbWUqCQgBECMYJxjqAjIPCAAQIxgnGOoCGPAFGJ4GMgkIARAjGCcY6gIyCQgCECMYJxjqAjIJCAMQIxgnGOoCMgkIBBAjGCcY6gIyCQgF', 'See 28 tabs', 'Customise and control Google Chrome', 'Ahmedabad 98° Bengaluru 79° Bhopal 94° Chandigarh 79° Chennai 86° Delhi 87° Dispur 79° Faridabad 90° Guwahati 79° Jaipur 91° Kolkata 85° Lucknow 94° Ludhiana 71° Mumbai 85° New Delhi 89° Patna 93° Pune 89° Raipur 87° Ranchi 88° Surat 88°. Weather News See More · Hawaii Kona storm sweeps state with 135-mph winds,\xa0...', 'Google', 'Google Account: Amir Shams (amirshamse8@gmail.com)']
+[map] screen: chrome_main (33be04de)
+[skill] matched: 'open chrome and go to'  score=1.00  act=True
+[skill] cannot resolve: 'Switch to this tab.'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[controller] step error: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
+========================================================
+  STEP 10  |  Search for weather today in Chrome
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (715962 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] HIT com.android.chrome/com.google.android.apps.chrome.Main hash=bd7bb9642af0 hits=8 elements=43
+[step] UI: ['Open the homepage', 'Your connection to this site is not secure', 'google.com/search?q=weather+today&oq=&gs_lcrp=EgZjaHJvbWUqCQgBECMYJxjqAjIPCAAQIxgnGOoCGPAFGJ4GMgkIARAjGCcY6gIyCQgCECMYJxjqAjIJCAMQIxgnGOoCMgkIBBAjGCcY6gIyCQgF', 'See 28 tabs', 'Customise and control Google Chrome', 'Ahmedabad 98° Bengaluru 79° Bhopal 94° Chandigarh 79° Chennai 86° Delhi 87° Dispur 79° Faridabad 90° Guwahati 79° Jaipur 91° Kolkata 85° Lucknow 94° Ludhiana 71° Mumbai 85° New Delhi 89° Patna 93° Pune 89° Raipur 87° Ranchi 88° Surat 88°. Weather News See More · Hawaii Kona storm sweeps state with 135-mph winds,\xa0...', 'Google', 'Google Account: Amir Shams (amirshamse8@gmail.com)']
+[map] screen: chrome_main (33be04de)
+[skill] matched: 'open chrome and go to'  score=1.00  act=True
+[skill] cannot resolve: 'Switch to this tab.'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'done'
+[step] LLM: 'done'
+[step] action: {'action': 'done'}
+[input] DONE — no dispatch
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[skill] too few steps (1) — not saving
+[step] step=10/10 done=True history=['opt4_launch:chrome', 'done']
+
+[controller] done in 10 steps
+
+[controller] history:
+  1. opt4_launch:chrome
+  2. done
+
+  Screen Map: 535 screens (0 tainted), 650 transitions
+    whatsapp             175 screens
+    chrome               112 screens
+    youtube              104 screens
+    vending              43 screens
+    termux               25 screens
+    settings             25 screens
+    launcher             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+    notificationmanager  1 screens
+    battery              1 screens
+  TransitionMemory: 600 transitions (281 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: --task =====

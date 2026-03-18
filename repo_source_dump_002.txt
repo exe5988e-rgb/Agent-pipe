@@ -20870,7 +20870,7 @@
         "Voice message, Button. Double tap and hold to record, slide left to cancel recording, slide up to lock recording on. Release to send.",
         "Message"
       ],
-      "visits": 4,
+      "visits": 5,
       "tainted": false,
       "elements": [
         {
@@ -50867,7 +50867,8 @@
     "36e8ae87b6fc|swipe": "a3b75eb433e2",
     "a3b75eb433e2|opt4_launch:whatsapp": "7c51d7e864c3",
     "7c51d7e864c3|tap:Swipe down to reveal additional actions": "4d9720e7da52",
-    "4d9720e7da52|type": "d5969964a2f4"
+    "4d9720e7da52|type": "d5969964a2f4",
+    "d5969964a2f4|tap:element_6": "366c9a634a55"
   }
 }
 

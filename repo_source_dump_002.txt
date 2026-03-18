@@ -86840,6 +86840,286 @@
           "resource_id": ""
         }
       ]
+    },
+    "c5a08195b577": {
+      "screen_id": "c5a08195b577",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Navigate up",
+        "Clear",
+        "Voice search",
+        "Cast",
+        "More options",
+        "lofi hip hop",
+        "All",
+        "Shorts",
+        "Videos",
+        "Unwatched",
+        "Watched",
+        "Lo-fi girl disappearance SOLVED? #shorts #fyp #viral #lofi #lofigirl #edit #editing #music, 1.2 million views, Noogitz, 2 years ago \u2013 play Short",
+        "Lo-fi girl disappearance SOLVED? #shorts #fyp #viral #lofi #lofigirl #edit #editing #music, 1.2 million views, Noogitz, 2 years ago \u2013 play Short",
+        "Why Lofi Music Is So Evil#relaxing music#lo fi#study music#lofi chill beats#lofi hiphop#chillhop, 467 thousand views, Dancer , 5 months ago \u2013 play Short",
+        "Why Lofi Music Is So Evil#relaxing music#lo fi#study music#lofi chill beats#lofi hiphop#chillhop, 467 thousand views, Dancer , 5 months ago \u2013 play Short",
+        "Go to channel Noogitz",
+        "Go to channel Dancer",
+        "1.2m views \u00b7 2 yr ago",
+        "467k views \u00b7 5 mo ago",
+        "1 A.M Study Session \ud83d\udcda [lofi hip hop] \u2013 1 hour, 1 minute, 14 seconds \u2013  \u2013 Lofi Girl - 131 million views - 6 years ago \u2013 play video",
+        "1 A.M Study Session \ud83d\udcda [lofi hip hop] \u2013 1 hour, 1 minute, 14 seconds \u2013  \u2013 Lofi Girl - 131 million views - 6 years ago \u2013 play video",
+        "Tap to watch live, Lofi Girl channel",
+        "Action menu",
+        "28 chapters",
+        "Minimised player",
+        "Play video",
+        "Close minimised player",
+        "Sponsored \u2013 Coding Music | Rainy City Lofi for Late Night Focus Sessions \u2013 1 hour, 51 minutes \u2013 Streamed 4 days ago \u2013 Midnight Echo Club \u2013 play video",
+        "4 minutes 33 seconds of 1 hour 1 minute 14 seconds",
+        "Shorts"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Clear",
+          "x": 680,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/search_clear"
+        },
+        {
+          "text": "Voice search",
+          "x": 848,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/voice_search"
+        },
+        {
+          "text": "Cast",
+          "x": 1016,
+          "y": 223,
+          "cls": "android.widget.Button",
+          "resource_id": "com.google.android.youtube:id/mdx_entry_point_button"
+        },
+        {
+          "text": "More options",
+          "x": 1170,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "lofi hip hop",
+          "x": 396,
+          "y": 223,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.google.android.youtube:id/search_query"
+        },
+        {
+          "text": "All",
+          "x": 126,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 338,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Videos",
+          "x": 598,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Unwatched",
+          "x": 908,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Watched",
+          "x": 1170,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Lo-fi girl disappearance SOLVED? #shorts #fyp #viral #lofi #lofigirl #edit #editing #music, 1.2 million views, Noogitz, 2 years ago \u2013 play Short",
+          "x": 309,
+          "y": 786,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Lo-fi girl disappearance SOLVED? #shorts #fyp #viral #lofi #lofigirl #edit #editing #music, 1.2 million views, Noogitz, 2 years ago \u2013 play Short",
+          "x": 324,
+          "y": 746,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Why Lofi Music Is So Evil#relaxing music#lo fi#study music#lofi chill beats#lofi hiphop#chillhop, 467 thousand views, Dancer , 5 months ago \u2013 play Short",
+          "x": 931,
+          "y": 786,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Why Lofi Music Is So Evil#relaxing music#lo fi#study music#lofi chill beats#lofi hiphop#chillhop, 467 thousand views, Dancer , 5 months ago \u2013 play Short",
+          "x": 916,
+          "y": 746,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Go to channel Noogitz",
+          "x": 105,
+          "y": 922,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Go to channel Dancer",
+          "x": 697,
+          "y": 922,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "1.2m views \u00b7 2 yr ago",
+          "x": 392,
+          "y": 958,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "467k views \u00b7 5 mo ago",
+          "x": 993,
+          "y": 958,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "1 A.M Study Session \ud83d\udcda [lofi hip hop] \u2013 1 hour, 1 minute, 14 seconds \u2013  \u2013 Lofi Girl - 131 million views - 6 years ago \u2013 play video",
+          "x": 620,
+          "y": 1602,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "1 A.M Study Session \ud83d\udcda [lofi hip hop] \u2013 1 hour, 1 minute, 14 seconds \u2013  \u2013 Lofi Girl - 131 million views - 6 years ago \u2013 play video",
+          "x": 620,
+          "y": 1735,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Tap to watch live, Lofi Girl channel",
+          "x": 105,
+          "y": 1944,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Action menu",
+          "x": 1142,
+          "y": 1909,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "28 chapters",
+          "x": 620,
+          "y": 2189,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Minimised player",
+          "x": 876,
+          "y": 2331,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.youtube:id/floaty_bar_controls_view"
+        },
+        {
+          "text": "Play video",
+          "x": 624,
+          "y": 2226,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/modern_miniplayer_overlay_action_button"
+        },
+        {
+          "text": "Close minimised player",
+          "x": 1128,
+          "y": 2226,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/modern_miniplayer_close"
+        },
+        {
+          "text": "Sponsored \u2013 Coding Music | Rainy City Lofi for Late Night Focus Sessions \u2013 1 hour, 51 minutes \u2013 Streamed 4 days ago \u2013 Midnight Echo Club \u2013 play video",
+          "x": 620,
+          "y": 2571,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "4 minutes 33 seconds of 1 hour 1 minute 14 seconds",
+          "x": 876,
+          "y": 2517,
+          "cls": "android.widget.SeekBar",
+          "resource_id": "com.google.android.youtube:id/floaty_bar_time_bar_view"
+        },
+        {
+          "text": "Home",
+          "x": 124,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 372,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Create",
+          "x": 620,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscriptions: New content is available",
+          "x": 868,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "You",
+          "x": 1116,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -87528,7 +87808,8 @@
     "a5298e720b5a|tap:Enable": "045bb0062c24",
     "045bb0062c24|back": "551be7ca5a88",
     "551be7ca5a88|back": "eb822f47a422",
-    "67d20aa8828e|home": "5731aaff4c94"
+    "67d20aa8828e|home": "5731aaff4c94",
+    "9cd54d2c0f76|tap:Auto-play is off": "c5a08195b577"
   }
 }
 

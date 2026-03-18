@@ -72678,6 +72678,217 @@
           "resource_id": "com.google.android.youtube:id/edit_suggestion"
         }
       ]
+    },
+    "86c83189e2c8": {
+      "screen_id": "86c83189e2c8",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Navigate up",
+        "Clear",
+        "Voice search",
+        "Cast",
+        "More options",
+        "warriyo mortals",
+        "All",
+        "Shorts",
+        "Videos",
+        "Unwatched",
+        "Watched",
+        "Warriyo - Mortals (ft. Laura Brehm) \u2013 3 minutes, 49 seconds \u2013 Go to channel Warriyo \u2013 Warriyo - 37 million views - 9 years ago \u2013 play video",
+        "Warriyo - Mortals (feat. Laura Brehm) | Future Trap | NCS - Copyright Free Music \u2013 3 minutes, 50 seconds \u2013 Go to channel NoCopyrightSounds \u2013 NoCopyrightSounds - 311 million views - 9 years ago \u2013 play video",
+        "Warriyo - Mortals (ft. Laura Brehm) \u2013 3 minutes, 49 seconds \u2013 Go to channel Warriyo \u2013 Warriyo - 37 million views - 9 years ago \u2013 play video",
+        "Go to channel Warriyo",
+        "Action menu",
+        "Warriyo - Mortals (feat. Laura Brehm) | Future Trap | NCS - Copyright Free Music \u2013 3 minutes, 50 seconds \u2013 Go to channel NoCopyrightSounds \u2013 NoCopyrightSounds - 311 million views - 9 years ago \u2013 play video",
+        "Warriyo - Mortals (feat. Laura Brehm) | Future Trap | NCS - Copyright Free Music \u2013 3 minutes, 50 seconds \u2013 Go to channel NoCopyrightSounds \u2013 NoCopyrightSounds - 311 million views - 9 years ago \u2013 play video",
+        "Go to channel NoCopyrightSounds",
+        "Action menu",
+        "LXNGVX, Warriyo - Mortals Funk Remix (Official Music) \u2013 2 minutes, 27 seconds \u2013 Go to channel LXNGVX \u2013 LXNGVX - 12 million views - 1 year ago \u2013 play video",
+        "Shorts",
+        "Subscriptions",
+        "You"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Clear",
+          "x": 680,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/search_clear"
+        },
+        {
+          "text": "Voice search",
+          "x": 848,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/voice_search"
+        },
+        {
+          "text": "Cast",
+          "x": 1016,
+          "y": 223,
+          "cls": "android.widget.Button",
+          "resource_id": "com.google.android.youtube:id/mdx_entry_point_button"
+        },
+        {
+          "text": "More options",
+          "x": 1170,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "warriyo mortals",
+          "x": 396,
+          "y": 223,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.google.android.youtube:id/search_query"
+        },
+        {
+          "text": "All",
+          "x": 126,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 338,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Videos",
+          "x": 598,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Unwatched",
+          "x": 908,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Watched",
+          "x": 1170,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Warriyo - Mortals (ft. Laura Brehm) \u2013 3 minutes, 49 seconds \u2013 Go to channel Warriyo \u2013 Warriyo - 37 million views - 9 years ago \u2013 play video",
+          "x": 620,
+          "y": 949,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Warriyo - Mortals (feat. Laura Brehm) | Future Trap | NCS - Copyright Free Music \u2013 3 minutes, 50 seconds \u2013 Go to channel NoCopyrightSounds \u2013 NoCopyrightSounds - 311 million views - 9 years ago \u2013 play video",
+          "x": 620,
+          "y": 1623,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results"
+        },
+        {
+          "text": "Warriyo - Mortals (ft. Laura Brehm) \u2013 3 minutes, 49 seconds \u2013 Go to channel Warriyo \u2013 Warriyo - 37 million views - 9 years ago \u2013 play video",
+          "x": 620,
+          "y": 991,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Go to channel Warriyo",
+          "x": 105,
+          "y": 1277,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Action menu",
+          "x": 1142,
+          "y": 1256,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Warriyo - Mortals (feat. Laura Brehm) | Future Trap | NCS - Copyright Free Music \u2013 3 minutes, 50 seconds \u2013 Go to channel NoCopyrightSounds \u2013 NoCopyrightSounds - 311 million views - 9 years ago \u2013 play video",
+          "x": 620,
+          "y": 1982,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Warriyo - Mortals (feat. Laura Brehm) | Future Trap | NCS - Copyright Free Music \u2013 3 minutes, 50 seconds \u2013 Go to channel NoCopyrightSounds \u2013 NoCopyrightSounds - 311 million views - 9 years ago \u2013 play video",
+          "x": 620,
+          "y": 2024,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Go to channel NoCopyrightSounds",
+          "x": 105,
+          "y": 2310,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Action menu",
+          "x": 1142,
+          "y": 2289,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "LXNGVX, Warriyo - Mortals Funk Remix (Official Music) \u2013 2 minutes, 27 seconds \u2013 Go to channel LXNGVX \u2013 LXNGVX - 12 million views - 1 year ago \u2013 play video",
+          "x": 620,
+          "y": 2656,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Home",
+          "x": 124,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 372,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscriptions",
+          "x": 868,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "You",
+          "x": 1116,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -73267,7 +73478,7 @@
     "5731aaff4c94|opt4_launch:whatsapp": "dea1606c9f7a",
     "6dcc835738aa|tap:You": "47d448eaba6d",
     "13dcb6504714|tap:Communities": "e593131cf7fc",
-    "5731aaff4c94|opt4_launch:youtube": "8bd4aa0f7819",
+    "5731aaff4c94|opt4_launch:youtube": "86c83189e2c8",
     "b94fe430b394|tap:You": "caf601112185",
     "caf601112185|tap:JensJulius Tejlgaard has new content": "6dd8030404cd",
     "6dd8030404cd|tap:Edit suggestion mrbeast": "571ebe27696a",

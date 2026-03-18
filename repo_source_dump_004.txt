@@ -6748,6 +6748,140 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
 [mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
 [ui_parser] cache miss -- full uiautomator dump
 [ui_parser] child: (0,139) → 'FTS-01B(P1)_17-03-2026_Sol.pdf (26 pages)'
+[ui_parser] child: (0,937) → 'Door desgin ideas, group'
+[ui_parser] child: (0,951) → 'Door desgin ideas, group'
+[ui_parser] child: (0,1203) → 'Mummy Jio (You)'
+[ui_parser] child: (0,1217) → 'You'
+[ui_parser] child: (0,1469) → 'Good morning'
+[ui_parser] child: (0,1483) → 'Mummy'
+[ui_parser] child: (0,1735) → 'Papa'
+[ui_parser] child: (0,1749) → 'Papa'
+[ui_parser] child: (0,2001) → 'FTS-01B(P1)_17-03-2026_Sol.pdf (26 pages)'
+[ui_parser] child: (0,2015) → 'Yash Raj'
+[ui_parser] child: (0,2267) → 'Jio को चुनने के लिए आपका धन्यवाद! ❤️…'
+[ui_parser] child: (0,2281) → 'MyJio'
+[ui_parser] full parse -- 31 elements (31 labeled, 14 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.whatsapp/.home.ui.HomeActivity hash=a24bae3aa0c2 elements=31
+[step] UI: ['FTS-01B(P1)_17-03-2026_Sol.pdf (26 pages)', 'Scan to Pay', 'More options', 'Ask Meta AI or Search', 'Swipe down to reveal additional actions', 'Inbox filters, Radio Group', 'All filter, , selected', 'Unread filter, 2, unselected']
+[map] transition: whatsapp_conversation --[back]--> whatsapp_homeactivity
+[map] screen: whatsapp_homeactivity (eb822f47)
+[policy] search_contact: tapping New chat [24]
+[policy] matched — executing 1 actions
+[policy] action: {'action': 'tap', 'target': 24}
+[input] dispatching: TouchEvent(x=1086, y=2280)
+[input] dispatching: TouchEvent(x=1086, y=2280)
+[input] adb -s 192.168.29.48:33117 shell input tap 1086 2280
+[mem] invalidated com.whatsapp/.contact.ui.picker.ContactPicker
+[policy] done — skipped Claude
+[step] step=5/15 done=False history=['opt4_launch:whatsapp', 'tap [4] Enable', 'back', 'back', 'tap [24] New chat']
+
+========================================================
+  STEP 6  |  Send a WhatsApp message to Mummy saying Good night
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (315602 bytes)
+[ui_parser] activity=com.whatsapp/.contact.ui.picker.ContactPicker
+[ui_parser] signal='com.whatsapp/.contact.ui.picker.ContactPicker'
+[mem] miss (unknown): com.whatsapp/.contact.ui.picker.ContactPicker
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,356) → 'New group'
+[ui_parser] child: (0,594) → 'Add new contact via QR code'
+[ui_parser] child: (0,832) → 'New community'
+[ui_parser] child: (0,1070) → 'Contacts on WhatsApp'
+[ui_parser] child: (0,1192) → 'Message yourself'
+[ui_parser] child: (0,1192) → '+91 79911 96829'
+[ui_parser] child: (0,1430) → 'Available'
+[ui_parser] child: (0,1430) → 'Aakash'
+[ui_parser] child: (0,1668) → 'Aakash Asst'
+[ui_parser] child: (0,1668) → 'Aakash Asst'
+[ui_parser] child: (0,1906) → 'Aakash Mahaveer'
+[ui_parser] child: (0,1906) → 'Aakash Mahaveer'
+[ui_parser] child: (0,2144) → '"Immer nach vorne, nie zurück".'
+[ui_parser] child: (0,2144) → 'Abdul Akash'
+[ui_parser] child: (0,2382) → '"Immer nach vorne, nie zurück".'
+[ui_parser] child: (0,2382) → 'Abdul Qadir'
+[ui_parser] child: (0,2620) → 'Abdulbokaro'
+[ui_parser] child: (0,2620) → 'Abdulbokaro'
+[ui_parser] full parse -- 22 elements (22 labeled, 18 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.whatsapp/.contact.ui.picker.ContactPicker hash=76c5bf092645 elements=22
+[step] UI: ['Back', 'Search', 'More options', 'New group', 'Add new contact via QR code', 'Add new contact via QR code', 'New community', 'Contacts on WhatsApp']
+[map] screen: whatsapp_contactpicker (c1027f04)
+[policy] contact_picker phase1: tapping Search [2]
+[policy] matched — executing 1 actions
+[policy] action: {'action': 'tap', 'target': 2}
+[input] dispatching: TouchEvent(x=1016, y=237)
+[input] dispatching: TouchEvent(x=1016, y=237)
+[input] adb -s 192.168.29.48:33117 shell input tap 1016 237
+[mem] invalidated com.whatsapp/.contact.ui.picker.ContactPicker
+[policy] done — skipped Claude
+[step] step=6/15 done=False history=['opt4_launch:whatsapp', 'tap [4] Enable', 'back', 'back', 'tap [24] New chat', 'tap [2] Search']
+
+========================================================
+  STEP 7  |  Send a WhatsApp message to Mummy saying Good night
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1210666 bytes)
+[ui_parser] activity=com.whatsapp/.contact.ui.picker.ContactPicker
+[ui_parser] signal='com.whatsapp/.contact.ui.picker.ContactPicker'
+[mem] miss (unknown): com.whatsapp/.contact.ui.picker.ContactPicker
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,335) → 'Add new contact via QR code'
+[ui_parser] child: (0,356) → 'New group'
+[ui_parser] child: (0,594) → 'Add new contact via QR code'
+[ui_parser] child: (0,832) → 'New community'
+[ui_parser] child: (0,1070) → 'Contacts on WhatsApp'
+[ui_parser] child: (0,1192) → 'Message yourself'
+[ui_parser] child: (0,1192) → '+91 79911 96829'
+[ui_parser] child: (0,1430) → 'Available'
+[ui_parser] child: (0,1430) → 'Aakash'
+[ui_parser] child: (0,1668) → 'Aakash Asst'
+[ui_parser] child: (0,1668) → 'Aakash Asst'
+[ui_parser] full parse -- 15 elements (15 labeled, 11 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.whatsapp/.contact.ui.picker.ContactPicker hash=2073cb2ff496 elements=15
+[step] UI: ['Search name or number…', 'Show dial pad keyboard', 'Back', 'Add new contact via QR code', 'New group', 'Add new contact via QR code', 'Add new contact via QR code', 'New community']
+[map] screen: whatsapp_contactpicker (35cc9568)
+[policy] contact_picker phase2: typing 'Mummy'
+[policy] matched — executing 1 actions
+[policy] action: {'action': 'type', 'text': 'Mummy'}
+[input] dispatching: SetTextEvent('Mummy')
+[input] dispatching: SetTextEvent('Mummy')
+[input] adb -s 192.168.29.48:33117 shell input text Mummy
+[mem] invalidated com.whatsapp/.contact.ui.picker.ContactPicker
+[policy] done — skipped Claude
+[step] step=7/15 done=False history=['opt4_launch:whatsapp', 'tap [4] Enable', 'back', 'back', 'tap [24] New chat', 'tap [2] Search', "type 'Mummy'"]
+
+========================================================
+  STEP 8  |  Send a WhatsApp message to Mummy saying Good night
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1194656 bytes)
+[ui_parser] activity=com.whatsapp/.contact.ui.picker.ContactPicker
+[ui_parser] signal='com.whatsapp/.contact.ui.picker.ContactPicker'
+[mem] miss (unknown): com.whatsapp/.contact.ui.picker.ContactPicker
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,335) → 'Contacts on WhatsApp'
+[ui_parser] child: (0,356) → 'Contacts on WhatsApp'
+[ui_parser] child: (0,478) → 'Mummy'
+[ui_parser] child: (0,478) → 'Mummy'
+[ui_parser] child: (0,716) → 'Mummy Ziono'
+[ui_parser] child: (0,716) → 'Mummy Ziono'
+[ui_parser] child: (0,954) → 'Message yourself'
+[ui_parser] child: (0,954) → '+91 79911 96829'
+[ui_parser] child: (0,1192) → 'More'
+[ui_parser] child: (0,1314) → 'New contact'
+[ui_parser] child: (0,1552) → 'Share invite link'
+[ui_parser] full parse -- 14 elements (14 labeled, 11 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.whatsapp/.contact.ui.picker.ContactPicker hash=83fde41cba66 elements=14
+[step] UI: ['Mummy', 'Show dial pad keyboard', 'Back', 'Contacts on WhatsApp', 'Contacts on WhatsApp', 'Mummy', 'Mummy', 'Mummy Ziono']
+[tm] transition changed: 35cc9568adf1|type 5731aaff -> 6d26e82d
+[map] transition: whatsapp_contactpicker --[type]--> whatsapp_contactpicker
+[map] screen: whatsapp_contactpicker (6d26e82d)
+[policy] contact_picker phase3: tapping first result for 'Mummy'
+[policy] matched — executing 1 actions
+[policy] action: {'action': 'tap', 'x': 620, 'y': 602}
+[input] dispatching: TouchEvent(x=620, y=602)
+[input] dispatching: TouchEvent(x=620, y=602)
+[input] adb -s 192.168.29.48:33117 shell input tap 620 602
+[mem] invalidated com.whatsapp/.Conversation
+[policy] done — skipped Claude
+[step] step=8/15 done=False history=['opt4_launch:whatsapp', 'tap [4] Enable', 'back', 'back', 'tap [24] New chat', 'tap [2] Search', "type 'Mummy'", 'tap (620,602)']
 
 //===== TERMUXFILE: --task =====
 
@@ -9214,366 +9348,5 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-//===== TERMUXFILE: perception/screen_map.py =====
-"""
-perception/screen_map.py  —  Screen Understanding + App Navigation Graph
-
-Session 8 fixes:
-  - Canonical screen deduplication: filter-tab variants of HomeActivity all
-    resolve to one canonical screen_id so the graph stays small and coherent.
-  - Unknown-screen filter: screens with package=="unknown" are never registered.
-  - Call-overlay guard: screens whose labels include active-call markers
-    (Turn microphone off / Leave call / WhatsApp voice call) are recognised as
-    a call-overlay variant of their base screen and kept separate but labelled.
-  - get_canonical_id(): returns the highest-visit variant for a given activity
-    so controller.py and transition_memory.py always use a stable anchor node.
-
-Data stored in ~/workflows/screen_map.json:
-  screens:     fingerprinted UI states
-  transitions: (screen_id, action) → screen_id edges
-
-Usage:
-  from perception.screen_map import ScreenMap
-  sm = ScreenMap()
-  screen_id = sm.identify(activity, elements)
-  path = sm.find_path(start_id, target_id)
-"""
-
-import hashlib
-import json
-import re
-from pathlib import Path
-from typing import Optional
-
-MAP_FILE = Path.home() / "workflows" / "screen_map.json"
-
-# Elements to ignore when fingerprinting (too dynamic)
-_IGNORE_TEXTS = {
-    "", "1", "2", "3", "ok", "cancel", "back", "home", "done",
-}
-_IGNORE_PATTERNS = [
-    r"^\d{1,2}:\d{2}(:\d{2})?$",   # timestamps
-    r"^\d+$",                        # pure numbers
-    r"^[+\-]?\d+[\d.,]*$",          # numbers with decimals
-]
-
-# Destructive elements the crawler must never tap
-_DANGER_WORDS = {
-    "delete", "remove", "block", "unblock", "report", "pay", "purchase",
-    "buy", "uninstall", "clear", "reset", "erase", "format", "factory",
-    "logout", "sign out", "deactivate", "disable", "turn off",
-}
-
-# Labels that signal an active call overlay — screen is "tainted"
-_CALL_OVERLAY_LABELS = {
-    "turn microphone off",
-    "leave call",
-    "whatsapp voice call",
-    "minimize call",
-    "add person to call",
-}
-
-# Filter-tab labels in WhatsApp HomeActivity — these make the fingerprint
-# differ per tab but the screen is functionally the same home screen.
-# Presence of ANY of these does NOT make a new canonical screen.
-_HOME_FILTER_LABELS = {
-    "all filter, , selected",
-    "unread filter, 2, unselected",
-    "unread filter, 0, unselected",
-    "favourites filter, , unselected",
-    "groups filter, , unselected",
-    "family filter, , unselected",
-    "search unread chats",
-    "manage unread",
-    "search favourite chats",
-    "manage favourites",
-    "search group chats",
-    "search family",
-    "add new list",
-    "manage family",
-    # Search overlay pills
-    "unread", "photos", "videos", "links", "gifs", "audio",
-    "documents", "stickers", "polls",
-}
-
-
-def _is_dynamic(text: str) -> bool:
-    if text.lower() in _IGNORE_TEXTS:
-        return True
-    for pat in _IGNORE_PATTERNS:
-        if re.match(pat, text.strip()):
-            return True
-    return False
-
-
-def _is_dangerous(text: str) -> bool:
-    tl = text.lower()
-    return any(w in tl for w in _DANGER_WORDS)
-
-
-def _has_call_overlay(labels: list) -> bool:
-    """Return True if any call-overlay label is present in label list."""
-    low = {l.lower() for l in labels}
-    return any(cl in " ".join(low) for cl in _CALL_OVERLAY_LABELS)
-
-
-def _strip_filter_labels(labels: list) -> list:
-    """Remove filter-tab / search-overlay labels before fingerprinting."""
-    return [l for l in labels if l.lower() not in _HOME_FILTER_LABELS]
-
-
-class ScreenMap:
-    """
-    Stores screen fingerprints and navigation graph.
-
-    Screen fingerprint:
-      screen_id = md5(package + "/" + activity_tail + "|" + sorted_stable_labels)
-
-    Navigation graph:
-      transitions[(screen_id, element_text)] = target_screen_id
-    """
-
-    def __init__(self):
-        self._data = self._load()
-
-    # -- Persistence -----------------------------------------------------------
-
-    def _load(self) -> dict:
-        if MAP_FILE.exists():
-            try:
-                return json.loads(MAP_FILE.read_text())
-            except Exception:
-                pass
-        return {"screens": {}, "transitions": {}}
-
-    def _save(self):
-        MAP_FILE.parent.mkdir(parents=True, exist_ok=True)
-        MAP_FILE.write_text(json.dumps(self._data, indent=2))
-
-    # -- Fingerprinting --------------------------------------------------------
-
-    @staticmethod
-    def fingerprint(activity: str, elements: list) -> str:
-        """
-        Stable hash for a screen state.
-        Filter-tab variants of HomeActivity collapse to one fingerprint.
-        Call overlays get their own fingerprint (tainted screen).
-        """
-        pkg      = activity.split("/")[0] if "/" in activity else activity
-        act_tail = activity.split("/")[-1].split(".")[-1]
-
-        raw_labels = [
-            e.get("text", "") for e in elements
-            if e.get("text", "") and not _is_dynamic(e.get("text", ""))
-        ]
-
-        # For HomeActivity, strip filter/search labels before hashing
-        if "HomeActivity" in act_tail or "homeactivity" in act_tail.lower():
-            labels = _strip_filter_labels(raw_labels)
-        else:
-            labels = raw_labels
-
-        labels_sorted = sorted(set(labels))
-        blob = f"{pkg}/{act_tail}|{'|'.join(labels_sorted[:20])}"
-        return hashlib.md5(blob.encode()).hexdigest()[:12]
-
-    @staticmethod
-    def similarity(labels_a: list, labels_b: list) -> float:
-        """Overlap ratio between two element label sets."""
-        a = {t for t in labels_a if t and not _is_dynamic(t)}
-        b = {t for t in labels_b if t and not _is_dynamic(t)}
-        if not b:
-            return 0.0
-        return len(a & b) / len(b)
-
-    # -- Screen registry -------------------------------------------------------
-
-    def identify(self, activity: str, elements: list) -> Optional[str]:
-        """
-        Return screen_id for the current state.
-        Returns None for screens with unknown package (loading screens etc.)
-        Call-overlay screens are registered but labelled as tainted.
-        """
-        # Reject loading / transition screens
-        pkg = activity.split("/")[0] if "/" in activity else activity
-        if pkg in ("unknown", "") or not pkg:
-            return None
-
-        fp = self.fingerprint(activity, elements)
-        screens = self._data["screens"]
-
-        if fp in screens:
-            screens[fp]["visits"] = screens[fp].get("visits", 0) + 1
-            self._save()
-            return fp
-
-        # New screen — register it
-        act_tail = activity.split("/")[-1].split(".")[-1]
-        labels   = [
-            e.get("text", "") for e in elements
-            if e.get("text", "") and not _is_dynamic(e.get("text", ""))
-        ]
-
-        tainted = _has_call_overlay(labels)
-        name    = f"{pkg.split('.')[-1]}_{act_tail}".lower()
-        if tainted:
-            name += "_call_overlay"
-
-        screens[fp] = {
-            "screen_id":     fp,
-            "package":       pkg,
-            "activity":      activity,
-            "name":          name,
-            "labels":        labels[:30],
-            "visits":        1,
-            "tainted":       tainted,
-            "elements":      [
-                {k: v for k, v in e.items()
-                 if k in ("text", "resource_id", "cls", "x", "y")}
-                for e in elements[:40]
-            ],
-        }
-        self._save()
-        flag = " [CALL OVERLAY]" if tainted else ""
-        print(f"[map] new screen: {name} ({fp}){flag}")
-        return fp
-
-    def get_screen(self, screen_id: str) -> Optional[dict]:
-        return self._data["screens"].get(screen_id)
-
-    def get_canonical_id(self, activity: str) -> Optional[str]:
-        """
-        Return the screen_id with the most visits for a given activity string.
-        Used by controller to get a stable anchor when multiple fingerprint
-        variants exist for the same activity (e.g. WhatsApp home w/ filter tabs).
-        Ignores tainted (call-overlay) screens.
-        """
-        best_id, best_visits = None, -1
-        for sid, s in self._data["screens"].items():
-            if s.get("activity", "") != activity:
-                continue
-            if s.get("tainted", False):
-                continue
-            v = s.get("visits", 0)
-            if v > best_visits:
-                best_visits = v
-                best_id = sid
-        return best_id
-
-    def find_by_name(self, name: str) -> Optional[str]:
-        """Find screen_id by partial name match. Returns highest-visit match."""
-        name_l = name.lower()
-        best_id, best_visits = None, -1
-        for sid, s in self._data["screens"].items():
-            if s.get("tainted", False):
-                continue
-            if name_l in s.get("name", "").lower():
-                v = s.get("visits", 0)
-                if v > best_visits:
-                    best_visits = v
-                    best_id = sid
-        return best_id
-
-    def find_by_labels(self, labels: list, threshold=0.6) -> Optional[str]:
-        """Find screen_id by element label similarity. Ignores tainted screens."""
-        best_id, best_score = None, 0.0
-        for sid, s in self._data["screens"].items():
-            if s.get("tainted", False):
-                continue
-            score = self.similarity(labels, s.get("labels", []))
-            if score > best_score:
-                best_score = score
-                best_id = sid
-        if best_score >= threshold:
-            return best_id
-        return None
-
-    # -- Navigation graph ------------------------------------------------------
-
-    def record_transition(self, from_id: str, action_label: str, to_id: str):
-        """
-        Record a (screen, action) → screen edge.
-        Skips transitions involving tainted (call-overlay) screens.
-        """
-        if from_id == to_id:
-            return
-        if from_id is None or to_id is None:
-            return
-
-        from_screen = self._data["screens"].get(from_id, {})
-        to_screen   = self._data["screens"].get(to_id, {})
-        if from_screen.get("tainted") or to_screen.get("tainted"):
-            return  # don't record call-overlay transitions
-
-        key = f"{from_id}|{action_label}"
-        transitions = self._data["transitions"]
-        if transitions.get(key) != to_id:
-            transitions[key] = to_id
-            self._save()
-            from_name = from_screen.get("name", from_id[:8])
-            to_name   = to_screen.get("name",   to_id[:8])
-            print(f"[map] transition: {from_name} --[{action_label}]--> {to_name}")
-
-    def find_path(self, from_id: str, to_id: str, max_depth=8) -> Optional[list]:
-        """
-        BFS over transition graph to find action sequence from_id → to_id.
-        Returns list of (action_label, screen_id) tuples or None.
-        """
-        if from_id == to_id:
-            return []
-        if from_id is None or to_id is None:
-            return None
-
-        transitions = self._data["transitions"]
-        adj = {}
-        for key, target in transitions.items():
-            src, action = key.rsplit("|", 1)
-            adj.setdefault(src, []).append((action, target))
-
-        queue   = [(from_id, [])]
-        visited = {from_id}
-        while queue:
-            curr, path = queue.pop(0)
-            if len(path) >= max_depth:
-                continue
-            for action, nxt in adj.get(curr, []):
-                if nxt in visited:
-                    continue
-                new_path = path + [(action, nxt)]
-                if nxt == to_id:
-                    return new_path
-                visited.add(nxt)
-                queue.append((nxt, new_path))
-        return None
-
-    # -- Stats -----------------------------------------------------------------
-
-    def stats(self) -> dict:
-        screens     = self._data["screens"]
-        transitions = self._data["transitions"]
-        by_pkg = {}
-        tainted_count = 0
-        for s in screens.values():
-            pkg = s.get("package", "?")
-            by_pkg[pkg] = by_pkg.get(pkg, 0) + 1
-            if s.get("tainted"):
-                tainted_count += 1
-        return {
-            "total_screens":     len(screens),
-            "tainted_screens":   tainted_count,
-            "total_transitions": len(transitions),
-            "by_package":        by_pkg,
-        }
-
-    def print_stats(self):
-        st = self.stats()
-        print(f"\n  Screen Map: {st['total_screens']} screens "
-              f"({st['tainted_screens']} tainted), "
-              f"{st['total_transitions']} transitions")
-        for pkg, count in sorted(st["by_package"].items(),
-                                  key=lambda x: -x[1]):
-            print(f"    {pkg.split('.')[-1]:<20} {count} screens")
 
 

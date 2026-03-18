@@ -3219,7 +3219,7 @@
       "activity": "com.whatsapp/.home.ui.HomeActivity",
       "name": "whatsapp_homeactivity",
       "labels": [],
-      "visits": 22,
+      "visits": 23,
       "elements": []
     },
     "dc2700ccd673": {

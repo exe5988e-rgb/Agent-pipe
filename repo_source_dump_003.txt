@@ -4243,8 +4243,8 @@ if __name__ == "__main__":
   },
   "6dcc835738aa|tap:You": {
     "to": "47d448eaba6d",
-    "count": 5,
-    "last_seen": 1773840464.1526008
+    "count": 6,
+    "last_seen": 1773840479.60707
   }
 }
 
@@ -6402,6 +6402,167 @@ nohup: ignoring input
 [parser] DEBUG normalized: 'tap 30'
 [parser] INFO parsed 'tap 30' -> {'action': 'tap', 'target': 30}
 
+########################################################
+  JARVIS  |  Open WhatsApp and go to Calls tab
+  Device : 192.168.29.48:35253
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 470 screens (0 tainted), 583 transitions
+    whatsapp             166 screens
+    chrome               100 screens
+    youtube              84 screens
+    vending              30 screens
+    termux               25 screens
+    launcher             22 screens
+    settings             21 screens
+    claude               6 screens
+    wirelesssettings     5 screens
+    dialer               2 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+  TransitionMemory: 533 transitions (277 confirmed, threshold=2)
+[init] task_apps: ['whatsapp']
+[init] max_skill_steps: 20 (threshold: 12)
+
+========================================================
+  STEP 1  |  Open WhatsApp and go to Calls tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3311416 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Mostly cloudy'
+[ui_parser] OCR: (841,1475)-(1009,1671) → 'lt'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.android.launcher/.Launcher hash=e04ff91aa493 elements=26
+[step] UI: ['Clock', '18', ':', '55', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (5731aaff)
+[OPT4v2] launcher -> launching whatsapp (com.whatsapp)
+[llm] OPT4v2 am start: com.whatsapp
+
+========================================================
+  STEP 2  |  Open WhatsApp and go to Calls tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (410546 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,139) → 'FTS-01B(P1)_17-03-2026_Sol.pdf (26 pages)'
+[ui_parser] child: (0,937) → 'Door desgin ideas, group'
+[ui_parser] child: (0,951) → 'Door desgin ideas, group'
+[ui_parser] child: (0,1203) → 'Mummy Jio (You)'
+[ui_parser] child: (0,1217) → 'You'
+[ui_parser] child: (0,1469) → 'Papa'
+[ui_parser] child: (0,1483) → 'Papa'
+[ui_parser] child: (0,1735) → 'Mummy'
+[ui_parser] child: (0,1749) → 'Mummy'
+[ui_parser] child: (0,2001) → 'FTS-01B(P1)_17-03-2026_Sol.pdf (26 pages)'
+[ui_parser] child: (0,2015) → 'Yash Raj'
+[ui_parser] child: (0,2267) → 'Jio को चुनने के लिए आपका धन्यवाद! ❤️…'
+[ui_parser] child: (0,2281) → 'MyJio'
+[ui_parser] full parse -- 31 elements (31 labeled, 14 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.whatsapp/.home.ui.HomeActivity hash=2b661b4ce801 elements=31
+[step] UI: ['FTS-01B(P1)_17-03-2026_Sol.pdf (26 pages)', 'Scan to Pay', 'More options', 'Ask Meta AI or Search', 'Swipe down to reveal additional actions', 'Inbox filters, Radio Group', 'All filter, , selected', 'Unread filter, 2, unselected']
+[map] transition: launcher_launcher --[opt4_launch:whatsapp]--> whatsapp_homeactivity
+[map] screen: whatsapp_homeactivity (6dcc8357)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 30'
+[step] LLM: 'tap 30'
+[step] action: {'action': 'tap', 'target': 30}
+[input] dispatching: TouchEvent(x=868, y=2576)
+[input] dispatching: TouchEvent(x=868, y=2576)
+[input] adb -s 192.168.29.48:35253 shell input tap 868 2576
+[mem] invalidated com.whatsapp/.home.ui.HomeActivity
+[step] step=2/8 done=False history=['opt4_launch:whatsapp', 'tap [30] Calls']
+
+========================================================
+  STEP 3  |  Open WhatsApp and go to Calls tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (443027 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] dump failed: ''
+[step] UI: []
+[map] transition: whatsapp_homeactivity --[tap:You]--> whatsapp_homeactivity
+[map] screen: whatsapp_homeactivity (47d448ea)
+[step] empty UI (1/8)
+
+========================================================
+  STEP 4  |  Open WhatsApp and go to Calls tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (442842 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] dump failed: ''
+[step] UI: []
+[map] screen: whatsapp_homeactivity (47d448ea)
+[step] empty UI (2/8)
+
+========================================================
+  STEP 5  |  Open WhatsApp and go to Calls tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (443057 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] dump failed: ''
+[step] UI: []
+[map] screen: whatsapp_homeactivity (47d448ea)
+[step] empty UI (3/8)
+
+========================================================
+  STEP 6  |  Open WhatsApp and go to Calls tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (442293 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] dump failed: ''
+[step] UI: []
+[map] screen: whatsapp_homeactivity (47d448ea)
+[step] empty UI (4/8)
+
+========================================================
+  STEP 7  |  Open WhatsApp and go to Calls tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (442502 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] dump failed: ''
+[step] UI: []
+[map] screen: whatsapp_homeactivity (47d448ea)
+[step] empty UI (5/8)
+
+========================================================
+  STEP 8  |  Open WhatsApp and go to Calls tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (442665 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] dump failed: ''
 
 //===== TERMUXFILE: --task =====
 

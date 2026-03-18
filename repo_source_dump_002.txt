@@ -45910,6 +45910,66 @@
           "resource_id": ""
         }
       ]
+    },
+    "da4580ee1dee": {
+      "screen_id": "da4580ee1dee",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Open the homepage",
+        "Web View",
+        "element_3",
+        "google.com/search?q=boruto+two+blue+vortex+reddit&oq=&gs_lcrp=EgZjaHJvbWUqCQgCECMYJxjqAjIJCAAQIxgnGOoCMgkIARAjGCcY6gIyCQgCECMYJxjqAjIJCAMQIxgnGOoCMgkIBBAjGCcY",
+        "See 23 tabs",
+        "Customise and control Google Chrome"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "Web View",
+          "x": 620,
+          "y": 1455,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_3",
+          "x": 224,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "google.com/search?q=boruto+two+blue+vortex+reddit&oq=&gs_lcrp=EgZjaHJvbWUqCQgCECMYJxjqAjIJCAAQIxgnGOoCMgkIARAjGCcY6gIyCQgCECMYJxjqAjIJCAMQIxgnGOoCMgkIBBAjGCcY",
+          "x": 592,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "See 23 tabs",
+          "x": 988,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        }
+      ]
     }
   },
   "transitions": {
@@ -46288,7 +46348,7 @@
     "966005cab230|opt4_launch:whatsapp": "7c51d7e864c3",
     "2edcf1eb90cd|tap:None": "7c51d7e864c3",
     "635910cc4897|opt4_launch:chrome": "d8894d8bf6b5",
-    "d8894d8bf6b5|tap:Start voice search": "61c36514dee6",
+    "d8894d8bf6b5|tap:Start voice search": "da4580ee1dee",
     "61c36514dee6|swipe": "e0eb2b0591e0",
     "e0eb2b0591e0|tap:Wikipedia: wikipedia.org": "d8894d8bf6b5"
   }

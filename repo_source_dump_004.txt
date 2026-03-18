@@ -7843,6 +7843,8 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
 [map] screen: youtube_creationmodesactivity (d8f6b34a)
 [skill] matched: 'search for on youtube'  score=1.00  act=False[parser] DEBUG normalized: 'tap 1'
 [parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
+[parser] DEBUG normalized: 'tap 40'
+[parser] INFO parsed 'tap 40' -> {'action': 'tap', 'target': 40}
 
 
 //===== TERMUXFILE: --task =====

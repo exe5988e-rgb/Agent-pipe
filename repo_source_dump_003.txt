@@ -9531,7 +9531,22 @@ nohup: ignoring input
 [ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
 [mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
 [ui_parser] cache miss -- full uiautomator dump
-[ui_parser] child: (0,139) → 'Ahmedabad 98° Bengaluru 79° Bhopal 94° Chandigarh 79° Chennai 86° Delhi 87° Dispur 79° Faridabad 90° Guwahati 79° Jaipur 91° Kolkata 85° Lucknow 94° Ludhiana 71° Mumbai 85° New Delhi 89° Patna 93° Pune 89° Raipur 87° Ranchi 88° Surat 88°. Weather News See More · Hawaii Kona storm sweeps state with 135-mph winds,\xa0...'
+[ui_parser] child: (0,139) → 'Ahmedabad 98° Bengaluru 79° Bhopal 94° Chandigarh 79° Chennai 86° Delhi 87° Dispur 79° Faridabad 90° Guwahati 79° Jaipur 91° Kolkata 85° Lucknow 94° Ludhiana 71° Mumbai 85° New Delhi 89° Patna 93° Pune 89° Raipur 87° Ranchi 88° Surat 88°. Weather News See More · Hawaii Kona storm sweeps state with 135-mph winds,\xa0...'Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 271, in run
+    run_step(state, device=device, model_path=model_path,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             max_skill_steps=max_skill_steps)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 223, in run_step
+    llm_out = generate(prompt, model_path=model_path)
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/reasoning/llm_client.py", line 136, in generate
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
 
 //===== TERMUXFILE: --task =====
 

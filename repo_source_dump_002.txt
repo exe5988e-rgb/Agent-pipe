@@ -53834,7 +53834,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 23,
+      "visits": 25,
       "tainted": false,
       "elements": [
         {
@@ -55536,7 +55536,7 @@
       "activity": "ca.zgrs.clipper/.Main",
       "name": "clipper_main",
       "labels": [],
-      "visits": 6,
+      "visits": 7,
       "tainted": false,
       "elements": []
     },

@@ -3828,8 +3828,8 @@ if __name__ == "__main__":
   },
   "17d655c4f84a|tap:Instagram": {
     "to": "1777629e89ea",
-    "count": 6,
-    "last_seen": 1773812423.975118
+    "count": 7,
+    "last_seen": 1773840275.6546936
   },
   "4148e6457ea1|retry": {
     "to": "b47fc49a44e5",
@@ -6022,6 +6022,8 @@ nohup: ignoring input
     phone                1 screens
     membership           1 screens
   TransitionMemory: 532 transitions (277 confirmed, threshold=2)
+[parser] DEBUG normalized: 'tap 1'
+[parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
 
 
 //===== TERMUXFILE: --task =====

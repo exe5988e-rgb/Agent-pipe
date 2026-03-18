@@ -67217,7 +67217,7 @@
         "Communities",
         "Calls"
       ],
-      "visits": 5,
+      "visits": 6,
       "tainted": false,
       "elements": [
         {
@@ -81329,6 +81329,193 @@
           "resource_id": ""
         }
       ]
+    },
+    "c1027f04709d": {
+      "screen_id": "c1027f04709d",
+      "package": "com.whatsapp",
+      "activity": "com.whatsapp/.contact.ui.picker.ContactPicker",
+      "name": "whatsapp_contactpicker",
+      "labels": [
+        "Search",
+        "More options",
+        "New group",
+        "Add new contact via QR code",
+        "Add new contact via QR code",
+        "New community",
+        "Contacts on WhatsApp",
+        "Message yourself",
+        "+91 79911 96829",
+        "Available",
+        "Aakash",
+        "Aakash Asst",
+        "Aakash Asst",
+        "Aakash Mahaveer",
+        "Aakash Mahaveer",
+        "\"Immer nach vorne, nie zur\u00fcck\".",
+        "Abdul Akash",
+        "\"Immer nach vorne, nie zur\u00fcck\".",
+        "Abdul Qadir",
+        "Abdulbokaro",
+        "Abdulbokaro"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Back",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Search",
+          "x": 1016,
+          "y": 237,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/menuitem_search"
+        },
+        {
+          "text": "More options",
+          "x": 1170,
+          "y": 237,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/menuitem_overflow"
+        },
+        {
+          "text": "New group",
+          "x": 620,
+          "y": 475,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Add new contact via QR code",
+          "x": 620,
+          "y": 713,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/header_footer_row"
+        },
+        {
+          "text": "Add new contact via QR code",
+          "x": 1100,
+          "y": 713,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/contactpicker_button_two"
+        },
+        {
+          "text": "New community",
+          "x": 620,
+          "y": 951,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Contacts on WhatsApp",
+          "x": 620,
+          "y": 1131,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Message yourself",
+          "x": 620,
+          "y": 1311,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "+91 79911 96829",
+          "x": 126,
+          "y": 1311,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "Available",
+          "x": 620,
+          "y": 1549,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Aakash",
+          "x": 126,
+          "y": 1549,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "Aakash Asst",
+          "x": 620,
+          "y": 1787,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Aakash Asst",
+          "x": 126,
+          "y": 1787,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "Aakash Mahaveer",
+          "x": 620,
+          "y": 2025,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Aakash Mahaveer",
+          "x": 126,
+          "y": 2025,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "\"Immer nach vorne, nie zur\u00fcck\".",
+          "x": 620,
+          "y": 2263,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Abdul Akash",
+          "x": 126,
+          "y": 2263,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "\"Immer nach vorne, nie zur\u00fcck\".",
+          "x": 620,
+          "y": 2501,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Abdul Qadir",
+          "x": 126,
+          "y": 2501,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "Abdulbokaro",
+          "x": 620,
+          "y": 2668,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Abdulbokaro",
+          "x": 126,
+          "y": 2668,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        }
+      ]
     }
   },
   "transitions": {
@@ -81958,7 +82145,7 @@
     "b2867628ccaa|tap:25": "65840c1afc29",
     "99751df5ec71|tap:See 29 tabs": "cabb12a803f3",
     "a34183adf43f|home": "5731aaff4c94",
-    "1025dd6b857e|opt4_launch:whatsapp": "615edd0c907f",
+    "1025dd6b857e|opt4_launch:whatsapp": "6dcc835738aa",
     "af62a7d780e2|tap:WO": "a206f27488e6",
     "a206f27488e6|tap:Updates": "6dcc835738aa",
     "1025dd6b857e|opt4_launch:youtube": "0cfd22e776c8",
@@ -81986,7 +82173,8 @@
     "e921768c497c|tap:Search Google Play": "774d9889be8e",
     "774d9889be8e|type": "a5b9d401b079",
     "a5b9d401b079|tap:Refine search to 'spotify'": "815905513523",
-    "1025dd6b857e|tap:21": "d0e35202b7f2"
+    "1025dd6b857e|tap:21": "d0e35202b7f2",
+    "6dcc835738aa|tap:Jio \u0915\u094b \u091a\u0941\u0928\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f \u0906\u092a\u0915\u093e \u0927\u0928\u094d\u092f\u0935\u093e\u0926! \u2764\ufe0f\u2026": "c1027f04709d"
   }
 }
 

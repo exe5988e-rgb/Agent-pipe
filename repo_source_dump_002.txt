@@ -20184,7 +20184,7 @@
         "Communities",
         "Calls"
       ],
-      "visits": 9,
+      "visits": 10,
       "tainted": false,
       "elements": [
         {
@@ -49163,7 +49163,8 @@
     "4d84377e1164|swipe": "78311c064f1a",
     "78311c064f1a|tap:View map": "6e151b55eab4",
     "6e151b55eab4|tap:Establishment type": "78311c064f1a",
-    "78311c064f1a|swipe": "7367c3c94a53"
+    "78311c064f1a|swipe": "7367c3c94a53",
+    "7367c3c94a53|opt4_launch:whatsapp": "7c51d7e864c3"
   }
 }
 

@@ -4284,6 +4284,7 @@ if __name__ == "__main__":
 [18:55:47] 
 [8/33] [2★] [whatsapp] Open WhatsApp and go to Calls tab
 [18:55:47]   max_steps=8  skill_threshold=12  skills=0
+[18:58:03]   PASS  132.7s
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -5425,7 +5426,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-18T18:55:42.381747",
+  "run_at": "2026-03-18T18:58:03.172452",
   "skills_before": 0,
   "skills_current": 0,
   "results": [
@@ -5489,6 +5490,15 @@ if __name__ == "__main__":
       "difficulty": 1,
       "success": true,
       "elapsed_s": 42.2,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Open WhatsApp and go to Calls tab",
+      "category": "whatsapp",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 132.7,
       "error": null,
       "retried": false
     }
@@ -6563,6 +6573,35 @@ nohup: ignoring input
 [mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
 [ui_parser] cache miss -- full uiautomator dump
 [ui_parser] dump failed: ''
+[step] UI: []
+[map] screen: whatsapp_homeactivity (47d448ea)
+[step] empty UI (6/8)
+
+[controller] history:
+  1. opt4_launch:whatsapp
+  2. tap [30] Calls
+
+  Screen Map: 470 screens (0 tainted), 585 transitions
+    whatsapp             166 screens
+    chrome               100 screens
+    youtube              84 screens
+    vending              30 screens
+    termux               25 screens
+    launcher             22 screens
+    settings             21 screens
+    claude               6 screens
+    wirelesssettings     5 screens
+    dialer               2 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+  TransitionMemory: 535 transitions (278 confirmed, threshold=2)
+
 
 //===== TERMUXFILE: --task =====
 

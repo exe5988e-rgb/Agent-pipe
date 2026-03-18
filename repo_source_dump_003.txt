@@ -4238,8 +4238,8 @@ if __name__ == "__main__":
   },
   "5731aaff4c94|opt4_launch:whatsapp": {
     "to": "dea1606c9f7a",
-    "count": 2,
-    "last_seen": 1773841852.2396264
+    "count": 3,
+    "last_seen": 1773841873.7837043
   },
   "6dcc835738aa|tap:You": {
     "to": "47d448eaba6d",
@@ -4448,6 +4448,7 @@ if __name__ == "__main__":
 [19:20:58] 
 [24/33] [3★] [whatsapp] Send a WhatsApp message to Sadique faridi saying Hello brother
 [19:20:58]   max_steps=15  skill_threshold=12  skills=6
+[19:21:14]   PASS  13.3s
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -5589,7 +5590,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-18T19:20:53.202748",
+  "run_at": "2026-03-18T19:21:14.668081",
   "skills_before": 0,
   "skills_current": 6,
   "results": [
@@ -5799,6 +5800,15 @@ if __name__ == "__main__":
       "elapsed_s": 13.4,
       "error": null,
       "retried": false
+    },
+    {
+      "task": "Send a WhatsApp message to Sadique faridi saying Hello brother",
+      "category": "whatsapp",
+      "difficulty": 3,
+      "success": true,
+      "elapsed_s": 13.3,
+      "error": null,
+      "retried": false
     }
   ]
 }
@@ -5818,7 +5828,7 @@ if __name__ == "__main__":
         "action": "done"
       }
     ],
-    "uses": 3,
+    "uses": 4,
     "version": 3
   },
   {
@@ -9557,6 +9567,116 @@ nohup: ignoring input
   STEP 2  |  Send a WhatsApp message to Ayush Kumar saying Hey what is up
 ========================================================
 [device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (809976 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,139) → 'दिल्ली-एनसीआर में बदला मौसम, तेज हवाओं के साथ बारिश; रेवाड़ी में ओले गिरे    दिल्ली-एनसीआर में बुधवार शाम को मौसम का मिजाज बदल गया। आंधी और गरज के साथ'
+[ui_parser] child: (0,520) → 'Dr Masood Alam Vet, 4 unread statuses'
+[ui_parser] child: (1184,520) → 'Hidden'
+[ui_parser] child: (0,1194) → '28 unread'
+[ui_parser] child: (0,1460) → 'दिल्ली-एनसीआर में बदला मौसम, तेज हवाओं के साथ बारिश; रेवाड़ी में ओले गिरे    दिल्ली-एनसीआर में बुधवार शाम को मौसम का मिजाज बदल गया। आंधी और गरज के साथ'
+[ui_parser] child: (0,1726) → 'Dave Matthews got stranded…'
+[ui_parser] child: (0,1992) → 'इच्छामृत्यु पाने वाले हरीश की मां का दर्द: भगवान बेटे को इतना मत तड़पाना कि देख न पाऊं, अस्पताल में कर रहीं प्रार्थना   पढ़ें पूरी खबर-  https://dainik'
+[ui_parser] child: (0,2258) → 'बहरीन में जंग के बीच फंसे भारतीय परिवार की दर्दनाक कहानी सामने आई है। शाहजहांपुर की मॉडल Priyanka Pathak ने बताया कि कैसे उन्होंने 15 दिन तक मौत के सा'
+[ui_parser] full parse -- 31 elements (28 labeled, 8 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.whatsapp/.home.ui.HomeActivity hash=6346da576935 elements=31
+[step] UI: ['दिल्ली-एनसीआर में बदला मौसम, तेज हवाओं के साथ बारिश; रेवाड़ी में ओले गिरे    दिल्ली-एनसीआर में बुधवार शाम को मौसम का मिजाज बदल गया। आंधी और गरज के साथ', 'Search', 'More options', 'Dr Masood Alam Vet, 4 unread statuses', 'My status, tap to add new status', 'Shivang Gupta, 1 unread status', 'Dr Masood Alam Vet, 4 unread statuses', 'Mishra nursery, 1 unread status']
+[map] screen: whatsapp_homeactivity (dea1606c)
+[skill] matched: 'open whatsapp and go'  score=1.00  act=True
+[skill] executing 2 steps from memory
+[skill] action: {'action': 'tap', 'target': 28}
+[input] dispatching: TouchEvent(x=372, y=2576)
+[input] dispatching: TouchEvent(x=372, y=2576)
+[input] adb -s 192.168.29.48:35253 shell input tap 372 2576
+[mem] invalidated com.whatsapp/.home.ui.HomeActivity
+[skill] action: {'action': 'done'}
+[input] DONE — no dispatch
+[skill] done — skipped Claude
+[step] step=3/15 done=True history=['opt4_launch:whatsapp', 'tap [28] Updates', 'done']
+
+[controller] done in 3 steps
+
+[controller] history:
+  1. opt4_launch:whatsapp
+  2. tap [28] Updates
+  3. done
+
+  Screen Map: 489 screens (0 tainted), 605 transitions
+    whatsapp             169 screens
+    chrome               106 screens
+    youtube              88 screens
+    vending              35 screens
+    termux               25 screens
+    launcher             22 screens
+    settings             21 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               2 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+  TransitionMemory: 555 transitions (281 confirmed, threshold=2)
+
+########################################################
+  JARVIS  |  Send a WhatsApp message to Sadique faridi saying Hello brother
+  Device : 192.168.29.48:35253
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 489 screens (0 tainted), 605 transitions
+    whatsapp             169 screens
+    chrome               106 screens
+    youtube              88 screens
+    vending              35 screens
+    termux               25 screens
+    launcher             22 screens
+    settings             21 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               2 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+  TransitionMemory: 555 transitions (281 confirmed, threshold=2)
+[init] task_apps: ['whatsapp']
+[init] max_skill_steps: 20 (threshold: 12)
+
+========================================================
+  STEP 1  |  Send a WhatsApp message to Sadique faridi saying Hello brother
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3310529 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Mostly cloudy'
+[ui_parser] OCR: (841,1475)-(1009,1671) → 'lt'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.android.launcher/.Launcher hash=f73b7ac33ff3 elements=26
+[step] UI: ['Clock', '19', ':', '21', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (5731aaff)
+[OPT4v2] launcher -> launching whatsapp (com.whatsapp)
+[llm] OPT4v2 am start: com.whatsapp
+
+========================================================
+  STEP 2  |  Send a WhatsApp message to Sadique faridi saying Hello brother
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (809336 bytes)
 [ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
 [ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
 [mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity

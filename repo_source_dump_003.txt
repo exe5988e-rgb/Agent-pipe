@@ -4567,6 +4567,9 @@ if __name__ == "__main__":
 [11/33] [2★] [youtube] Open YouTube and go to Subscriptions
 [21:07:42]   max_steps=8  skill_threshold=12  skills=3
 [21:08:59]   PASS  73.1s
+[21:09:04] 
+[12/33] [2★] [youtube] Search for MrBeast on YouTube
+[21:09:04]   max_steps=10  skill_threshold=12  skills=3
 
 
 //===== TERMUXFILE: tap_logger.py =====

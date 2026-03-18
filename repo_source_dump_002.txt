@@ -79148,6 +79148,121 @@
           "resource_id": ""
         }
       ]
+    },
+    "228335378cda": {
+      "screen_id": "228335378cda",
+      "package": "com.oplus.battery",
+      "activity": "com.oplus.battery/com.oplus.powermanager.fuelgaue.PowerConsumptionActivity",
+      "name": "battery_powerconsumptionactivity",
+      "labels": [
+        "Used since last full charge",
+        "10)",
+        "High performance mode",
+        "Balanced mode",
+        "High performance mode",
+        "Can last about 19 h 51 min",
+        "Last 24 hours",
+        "Last 24 hours",
+        "Last 7 days",
+        "Used since last full charge",
+        "Used since last full charge",
+        "10)"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Back",
+          "x": 98,
+          "y": 230,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.oplus.battery:id/coui_toolbar_back_view"
+        },
+        {
+          "text": "Used since last full charge",
+          "x": 620,
+          "y": 1547,
+          "cls": "androidx.recyclerview.widget.RecyclerView",
+          "resource_id": "com.oplus.battery:id/recycler_view"
+        },
+        {
+          "text": "10)",
+          "x": 365,
+          "y": 775,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.oplus.battery:id/battery_mode_category_tips_icon"
+        },
+        {
+          "text": "High performance mode",
+          "x": 620,
+          "y": 1092,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Balanced mode",
+          "x": 262,
+          "y": 1095,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.oplus.battery:id/battery_mode_balanced_layout"
+        },
+        {
+          "text": "High performance mode",
+          "x": 977,
+          "y": 1095,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.oplus.battery:id/battery_mode_high_pref_layout"
+        },
+        {
+          "text": "Can last about 19 h 51 min",
+          "x": 620,
+          "y": 1473,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Last 24 hours",
+          "x": 620,
+          "y": 1888,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.oplus.battery:id/segment_button"
+        },
+        {
+          "text": "Last 24 hours",
+          "x": 373,
+          "y": 1888,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Last 7 days",
+          "x": 867,
+          "y": 1888,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Used since last full charge",
+          "x": 620,
+          "y": 2102,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.oplus.battery:id/battery_ui_use_time_view_new"
+        },
+        {
+          "text": "Used since last full charge",
+          "x": 384,
+          "y": 2070,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.oplus.battery:id/battery_ui_all_use_text_new"
+        },
+        {
+          "text": "10)",
+          "x": 629,
+          "y": 2070,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.oplus.battery:id/battery_ui_all_use_layout"
+        }
+      ]
     }
   },
   "transitions": {
@@ -79795,7 +79910,8 @@
     "2c1be995ec82|tap:Not connected": "bcfd9287cbfa",
     "2c1be995ec82|tap:Sound & vibration": "bda901bbd4b0",
     "2c1be995ec82|tap:13": "0c7572520870",
-    "2c1be995ec82|swipe": "049a76f6a15c"
+    "2c1be995ec82|swipe": "049a76f6a15c",
+    "049a76f6a15c|tap:14": "228335378cda"
   }
 }
 

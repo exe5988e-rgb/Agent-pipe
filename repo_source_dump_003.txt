@@ -8805,6 +8805,8 @@ nohup: ignoring input
 [parser] INFO parsed 'tap 2' -> {'action': 'tap', 'target': 2}
 [parser] DEBUG normalized: 'type Spotify'
 [parser] INFO parsed 'type Spotify' -> {'action': 'type', 'text': 'Spotify'}
+[parser] DEBUG normalized: 'tap 4'
+[parser] INFO parsed 'tap 4' -> {'action': 'tap', 'target': 4}
 
 
 //===== TERMUXFILE: --task =====

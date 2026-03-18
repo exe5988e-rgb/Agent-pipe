@@ -6604,6 +6604,150 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
 [parser] DEBUG normalized: 'tap 4'
 [parser] INFO parsed 'tap 4' -> {'action': 'tap', 'target': 4}
 
+########################################################
+  JARVIS  |  Send a WhatsApp message to Mummy saying Good night
+  Device : 192.168.29.48:33117
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 565 screens (0 tainted), 682 transitions
+    whatsapp             186 screens
+    youtube              119 screens
+    chrome               112 screens
+    vending              46 screens
+    termux               26 screens
+    settings             25 screens
+    launcher             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+    notificationmanager  1 screens
+    battery              1 screens
+  TransitionMemory: 632 transitions (285 confirmed, threshold=2)
+[init] task_apps: ['whatsapp']
+[init] max_skill_steps: 20 (threshold: 12)
+
+========================================================
+  STEP 1  |  Send a WhatsApp message to Mummy saying Good night
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3306874 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Mostly cloudy'
+[ui_parser] OCR: (841,1475)-(1009,1671) → 'lt'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.launcher/.Launcher hash=d8e941c17d92 elements=26
+[step] UI: ['Clock', '21', ':', '55', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (5731aaff)
+[OPT4v2] launcher -> launching whatsapp (com.whatsapp)
+[llm] OPT4v2 am start: com.whatsapp
+
+========================================================
+  STEP 2  |  Send a WhatsApp message to Mummy saying Good night
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (255482 bytes)
+[ui_parser] activity=com.whatsapp/.contact.ui.picker.ContactPicker
+[ui_parser] signal='com.whatsapp/.contact.ui.picker.ContactPicker'
+[mem] miss (unknown): com.whatsapp/.contact.ui.picker.ContactPicker
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (140,2040) → 'Network disabled for "WhatsApp"'
+[ui_parser] child: (56,2429) → 'Enable'
+[ui_parser] full parse -- 5 elements (5 labeled, 2 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.whatsapp/.contact.ui.picker.ContactPicker hash=1267d3e76ecc elements=5
+[step] UI: ['Network disabled for "WhatsApp"', "Don't remind me again", 'Later', 'Enable', 'Enable']
+[map] new screen: whatsapp_contactpicker (a5298e720b5a)
+[tm] transition changed: 5731aaff4c94|opt4_launch:whatsapp 397d0027 -> a5298e72
+[map] transition: launcher_launcher --[opt4_launch:whatsapp]--> whatsapp_contactpicker
+[map] screen: whatsapp_contactpicker (a5298e72)
+[skill] matched: 'open whatsapp'  score=1.00  act=False
+[skill] cannot resolve: 'Back'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 4'
+[step] LLM: 'tap 4'
+[step] action: {'action': 'tap', 'target': 4}
+[input] dispatching: TouchEvent(x=620, y=2530)
+[input] dispatching: TouchEvent(x=620, y=2530)
+[input] adb -s 192.168.29.48:33117 shell input tap 620 2530
+[step] step=2/15 done=False history=['opt4_launch:whatsapp', 'tap [4] Enable']
+
+========================================================
+  STEP 3  |  Send a WhatsApp message to Mummy saying Good night
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1592894 bytes)
+[ui_parser] activity=com.whatsapp/.Conversation
+[ui_parser] signal='com.whatsapp/.Conversation'
+[mem] miss (unknown): com.whatsapp/.Conversation
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (336,139) → 'Abdul Akash'
+[ui_parser] child: (0,335) → 'Tumlog baliapur se Jaa rhe?'
+[ui_parser] child: (56,1086) → 'Tumlog baliapur se Jaa rhe?'
+[ui_parser] full parse -- 14 elements (13 labeled, 3 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.whatsapp/.Conversation hash=d00d0b52089f elements=14
+[step] UI: ['Abdul Akash', 'Back', 'element_3', 'Video call', 'Voice call', 'More options', 'Tumlog baliapur se Jaa rhe?', 'Tumlog baliapur se Jaa rhe?']
+[map] new screen: whatsapp_conversation (045bb0062c24)
+[map] transition: whatsapp_contactpicker --[tap:Enable]--> whatsapp_conversation
+[map] screen: whatsapp_conversation (045bb006)
+[policy] wrong_contact: not from picker for 'Mummy' — going back
+[policy] matched — executing 1 actions
+[policy] action: {'action': 'back'}
+[input] dispatching: KeyEvent(BACK)
+[input] dispatching: KeyEvent(BACK)
+[input] adb -s 192.168.29.48:33117 shell input keyevent 4
+[mem] invalidated com.whatsapp/.Conversation
+[policy] done — skipped Claude
+[step] step=3/15 done=False history=['opt4_launch:whatsapp', 'tap [4] Enable', 'back']
+
+========================================================
+  STEP 4  |  Send a WhatsApp message to Mummy saying Good night
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (996631 bytes)
+[ui_parser] activity=com.whatsapp/.Conversation
+[ui_parser] signal='com.whatsapp/.Conversation'
+[mem] miss (unknown): com.whatsapp/.Conversation
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (336,139) → 'Abdul Akash'
+[ui_parser] child: (0,335) → '\u200c Messages and calls are end-to-end encrypted. Only people in this chat can read, listen to, or share them. Learn more.'
+[ui_parser] child: (56,2077) → 'Tumlog baliapur se Jaa rhe?'
+[ui_parser] full parse -- 15 elements (14 labeled, 3 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.whatsapp/.Conversation hash=846c8ca2edd4 elements=15
+[step] UI: ['Abdul Akash', 'Back', 'element_3', 'Video call', 'Voice call', 'More options', '\u200c Messages and calls are end-to-end encrypted. Only people in this chat can read, listen to, or share them. Learn more.', '\u200c Messages and calls are end-to-end encrypted. Only people in this chat can read, listen to, or share them. Learn more.']
+[map] new screen: whatsapp_conversation (551be7ca5a88)
+[map] transition: whatsapp_conversation --[back]--> whatsapp_conversation
+[map] screen: whatsapp_conversation (551be7ca)
+[policy] wrong_contact: not from picker for 'Mummy' — going back
+[policy] matched — executing 1 actions
+[policy] action: {'action': 'back'}
+[input] dispatching: KeyEvent(BACK)
+[input] dispatching: KeyEvent(BACK)
+[input] adb -s 192.168.29.48:33117 shell input keyevent 4
+[policy] done — skipped Claude
+[step] step=4/15 done=False history=['opt4_launch:whatsapp', 'tap [4] Enable', 'back', 'back']
+
+========================================================
+  STEP 5  |  Send a WhatsApp message to Mummy saying Good night
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (412368 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,139) → 'FTS-01B(P1)_17-03-2026_Sol.pdf (26 pages)'
 
 //===== TERMUXFILE: --task =====
 
@@ -9431,225 +9575,5 @@ class ScreenMap:
         for pkg, count in sorted(st["by_package"].items(),
                                   key=lambda x: -x[1]):
             print(f"    {pkg.split('.')[-1]:<20} {count} screens")
-
-
-//===== TERMUXFILE: perception/transition_memory.py =====
-"""
-perception/transition_memory.py  —  OPT 7: UI Transition Prediction
-
-Eliminates the perception wait after known actions by predicting the next
-screen before the dump is complete.
-
-How it works:
-  After every action is executed, record_transition() stores:
-    (current_screen_id, action_description) -> expected_next_screen_id
-
-  Before the next perception step, get_predicted_screen() returns the
-  expected next screen if the action is known. The controller can then:
-    1. Skip the full UI dump if the predicted screen is cached in ScreenMemory
-    2. Return the cached UI immediately (~0ms vs 900ms)
-    3. If prediction is wrong (actual != predicted), record the correction
-
-Integration in controller.py run_step():
-  BEFORE parse_ui():
-    predicted = tm.get_predicted_screen(current_screen_id, last_action_label)
-    if predicted:
-        ui = screen_memory.get_by_screen_id(predicted)
-        if ui: ... use cached UI ...
-
-  AFTER action executes:
-    tm.record(current_screen_id, action_label, new_screen_id)
-
-Data stored in ~/workflows/transition_memory.json
-
-Timing impact (from report targets):
-  Without prediction: 3.7s/step   (dump + parse + wait)
-  With prediction:    2.0s/step   (cache hit → no dump)
-  Novel steps still take full 3.7s (first time on a transition)
-"""
-
-import json
-import time
-from pathlib import Path
-from typing import Optional
-
-TM_FILE = Path.home() / "workflows" / "transition_memory.json"
-
-# How many seconds to wait before giving up on a predicted transition
-PREDICTION_TIMEOUT = 3.0
-
-# Minimum times a transition must be observed before we trust the prediction
-MIN_OBSERVATIONS = 2
-
-
-class TransitionMemory:
-    """
-    Stores observed (screen_id, action) -> screen_id transitions
-    with confidence counts.
-
-    Keys:   "{from_screen_id}|{action_label}"
-    Values: {"to": screen_id, "count": int, "last_seen": float}
-    """
-
-    def __init__(self):
-        self._data = self._load()
-        self._pending: Optional[tuple] = None   # (from_id, action_label, t_start)
-
-    # -- Persistence -----------------------------------------------------------
-
-    def _load(self) -> dict:
-        if TM_FILE.exists():
-            try:
-                return json.loads(TM_FILE.read_text())
-            except Exception:
-                pass
-        return {}
-
-    def _save(self):
-        TM_FILE.parent.mkdir(parents=True, exist_ok=True)
-        TM_FILE.write_text(json.dumps(self._data, indent=2))
-
-    # -- Recording -------------------------------------------------------------
-
-    def record(self, from_id: str, action_label: str, to_id: str):
-        """
-        Record an observed transition.
-        Called after every action executes and the new screen is identified.
-        """
-        if not from_id or not to_id or from_id == to_id:
-            return
-
-        key = f"{from_id}|{action_label}"
-        entry = self._data.get(key)
-
-        if entry and entry.get("to") == to_id:
-            # Same destination — increment confidence
-            entry["count"]     = entry.get("count", 1) + 1
-            entry["last_seen"] = time.time()
-        else:
-            # New or changed destination — reset with count=1
-            if entry and entry.get("to") != to_id:
-                print(f"[tm] transition changed: {key[:40]} "
-                      f"{entry['to'][:8]} -> {to_id[:8]}")
-            self._data[key] = {
-                "to":        to_id,
-                "count":     1,
-                "last_seen": time.time(),
-            }
-
-        self._save()
-
-    def set_pending(self, from_id: str, action_label: str):
-        """
-        Mark that we just executed an action and are waiting for the new screen.
-        Call this immediately after the action executes, before the next
-        perception step, so the controller can time the transition wait.
-        """
-        self._pending = (from_id, action_label, time.time())
-
-    def clear_pending(self):
-        self._pending = None
-
-    # -- Prediction ------------------------------------------------------------
-
-    def get_predicted_screen(self, from_id: str, action_label: str) -> Optional[str]:
-        """
-        Return predicted next screen_id if transition is known with sufficient
-        confidence, or None if unknown / low confidence.
-
-        Only returns predictions with MIN_OBSERVATIONS or more observations.
-        """
-        if not from_id or not action_label:
-            return None
-
-        key   = f"{from_id}|{action_label}"
-        entry = self._data.get(key)
-        if not entry:
-            return None
-
-        if entry.get("count", 0) < MIN_OBSERVATIONS:
-            return None
-
-        return entry["to"]
-
-    def get_pending_prediction(self) -> Optional[str]:
-        """
-        If set_pending() was called, return the predicted next screen for the
-        pending action. Returns None if no pending action or prediction unknown.
-        """
-        if not self._pending:
-            return None
-        from_id, action_label, _ = self._pending
-        return self.get_predicted_screen(from_id, action_label)
-
-    def pending_elapsed(self) -> float:
-        """Seconds since set_pending() was called."""
-        if not self._pending:
-            return 0.0
-        return time.time() - self._pending[2]
-
-    # -- Batch seeding ---------------------------------------------------------
-
-    def seed_from_screen_map(self, screen_map_data: dict):
-        """
-        Pre-populate TransitionMemory from an existing screen_map.json.
-        Uses count=MIN_OBSERVATIONS so seeded transitions are immediately trusted.
-
-        Call once after a crawl completes to bootstrap predictions.
-
-        Usage:
-            import json
-            from pathlib import Path
-            from perception.transition_memory import TransitionMemory
-
-            sm_data = json.loads((Path.home()/"workflows"/"screen_map.json").read_text())
-            tm = TransitionMemory()
-            tm.seed_from_screen_map(sm_data)
-        """
-        transitions = screen_map_data.get("transitions", {})
-        screens     = screen_map_data.get("screens", {})
-        seeded = 0
-
-        for key, to_id in transitions.items():
-            # Skip transitions involving tainted screens
-            to_screen = screens.get(to_id, {})
-            if to_screen.get("tainted"):
-                continue
-
-            from_id = key.split("|")[0]
-            from_screen = screens.get(from_id, {})
-            if from_screen.get("tainted"):
-                continue
-
-            # Only seed if not already known
-            if key not in self._data:
-                self._data[key] = {
-                    "to":        to_id,
-                    "count":     MIN_OBSERVATIONS,
-                    "last_seen": time.time(),
-                    "seeded":    True,
-                }
-                seeded += 1
-
-        if seeded:
-            self._save()
-            print(f"[tm] seeded {seeded} transitions from screen_map")
-
-    # -- Stats -----------------------------------------------------------------
-
-    def stats(self) -> dict:
-        total     = len(self._data)
-        confirmed = sum(1 for e in self._data.values()
-                        if e.get("count", 0) >= MIN_OBSERVATIONS)
-        return {
-            "total_transitions": total,
-            "confirmed":         confirmed,
-            "pending":           self._pending is not None,
-        }
-
-    def print_stats(self):
-        st = self.stats()
-        print(f"  TransitionMemory: {st['total_transitions']} transitions "
-              f"({st['confirmed']} confirmed, threshold={MIN_OBSERVATIONS})")
 
 

@@ -73137,6 +73137,170 @@
           "resource_id": ""
         }
       ]
+    },
+    "968cea81146b": {
+      "screen_id": "968cea81146b",
+      "package": "com.android.vending",
+      "activity": "com.android.vending/.AssetBrowserActivity",
+      "name": "vending_assetbrowseractivity",
+      "labels": [
+        "Navigate up",
+        "Search Apps & Games",
+        "Voice Search",
+        "More options",
+        "Instagram\nInstalled",
+        "Lenskart : Eyeglasses & More\nLenskart\nStar rating: 4.5\nDownloaded 50 million plus times",
+        "Picsart AI Photo Editor, Video\nEvent\nEnds in 2 days\nStar rating: 4.2\nDownloaded 1 billion plus times",
+        "Strava: Run, Bike, Walk\nEvent\nEnds on 01/04/2026\nStar rating: 4.7\nDownloaded 100 million plus times",
+        "Refine search to 'spotify'",
+        "Refine search to 'spotify'",
+        "Refine search to 'youtube music'",
+        "Refine search to 'youtube music'",
+        "Refine search to 'youtube'",
+        "Refine search to 'youtube'",
+        "Refine search to 'yt music'",
+        "Refine search to 'yt music'",
+        "re",
+        "Dee",
+        "re"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Search Apps & Games",
+          "x": 620,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": ""
+        },
+        {
+          "text": "Voice Search",
+          "x": 1142,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "More options",
+          "x": 1107,
+          "y": 388,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Instagram\nInstalled",
+          "x": 620,
+          "y": 566,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Lenskart : Eyeglasses & More\nLenskart\nStar rating: 4.5\nDownloaded 50 million plus times",
+          "x": 620,
+          "y": 798,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Picsart AI Photo Editor, Video\nEvent\nEnds in 2 days\nStar rating: 4.2\nDownloaded 1 billion plus times",
+          "x": 620,
+          "y": 1142,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Strava: Run, Bike, Walk\nEvent\nEnds on 01/04/2026\nStar rating: 4.7\nDownloaded 100 million plus times",
+          "x": 620,
+          "y": 1374,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'spotify'",
+          "x": 620,
+          "y": 1700,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'spotify'",
+          "x": 1107,
+          "y": 1700,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'youtube music'",
+          "x": 620,
+          "y": 1896,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'youtube music'",
+          "x": 1107,
+          "y": 1896,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'youtube'",
+          "x": 620,
+          "y": 2092,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'youtube'",
+          "x": 1107,
+          "y": 2092,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'yt music'",
+          "x": 620,
+          "y": 2288,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'yt music'",
+          "x": 1107,
+          "y": 2288,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "re",
+          "x": 155,
+          "y": 2744,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Dee",
+          "x": 465,
+          "y": 2744,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "re",
+          "x": 1085,
+          "y": 2744,
+          "cls": "android.view.View",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -73749,7 +73913,8 @@
     "80ff94df1647|type": "87fee6983a2f",
     "87fee6983a2f|tap:Edit suggestion warriyo mortals slowed reverb": "8bd4aa0f7819",
     "815905513523|tap:Voice Search": "3b20c5a1dd9f",
-    "3b20c5a1dd9f|type": "95f0bd34d77b"
+    "3b20c5a1dd9f|type": "95f0bd34d77b",
+    "95f0bd34d77b|tap:Refine search to 'spotify vlc'": "968cea81146b"
   }
 }
 

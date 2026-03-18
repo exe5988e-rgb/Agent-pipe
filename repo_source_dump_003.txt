@@ -8798,6 +8798,8 @@ nohup: ignoring input
 [mem] stored com.android.vending/.AssetBrowserActivity hash=ae0d36e3b20c elements=22
 [step] UI: ['Search Apps & Games', 'Search Google Play', 'Voice search', 'element_4', 'Bike racing games', 'Train station games', 'Bus games', 'Realistic games'][parser] DEBUG normalized: 'tap 2'
 [parser] INFO parsed 'tap 2' -> {'action': 'tap', 'target': 2}
+[parser] DEBUG normalized: 'type Spotify'
+[parser] INFO parsed 'type Spotify' -> {'action': 'type', 'text': 'Spotify'}
 
 
 //===== TERMUXFILE: --task =====

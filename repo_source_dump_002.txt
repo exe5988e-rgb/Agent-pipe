@@ -46142,6 +46142,170 @@
           "resource_id": ""
         }
       ]
+    },
+    "e80155e4c1b5": {
+      "screen_id": "e80155e4c1b5",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "element_1",
+        "element_2",
+        "best restaurants in dhanbad",
+        "Clear input",
+        "element_5",
+        "Switch to this tab.",
+        "element_7",
+        "Refine: best restaurants in dhanbad",
+        "element_9",
+        "Refine: best restaurants in dhanbad bank more",
+        "element_11",
+        "Refine: best restaurants in dhanbad for family",
+        "element_13",
+        "Refine: best restaurants in dhanbad jharkhand",
+        "Refine: best restaurants in dhanbad for birthday celebration",
+        "element_16",
+        "Refine: best restaurants in dhanbad for couples",
+        "element_18",
+        "Refine: best restaurants in dhanbad for party"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 620,
+          "y": 1455,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_2",
+          "x": 126,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "best restaurants in dhanbad",
+          "x": 634,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "Clear input",
+          "x": 1128,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/delete_button"
+        },
+        {
+          "text": "element_5",
+          "x": 620,
+          "y": 433,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Switch to this tab.",
+          "x": 1128,
+          "y": 433,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 629,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: best restaurants in dhanbad",
+          "x": 1128,
+          "y": 629,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_9",
+          "x": 620,
+          "y": 832,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: best restaurants in dhanbad bank more",
+          "x": 1128,
+          "y": 832,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_11",
+          "x": 620,
+          "y": 1042,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: best restaurants in dhanbad for family",
+          "x": 1128,
+          "y": 1042,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_13",
+          "x": 620,
+          "y": 1252,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: best restaurants in dhanbad jharkhand",
+          "x": 1128,
+          "y": 1252,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: best restaurants in dhanbad for birthday celebration",
+          "x": 1128,
+          "y": 1462,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_16",
+          "x": 620,
+          "y": 1672,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: best restaurants in dhanbad for couples",
+          "x": 1128,
+          "y": 1672,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_18",
+          "x": 620,
+          "y": 1779,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: best restaurants in dhanbad for party",
+          "x": 1128,
+          "y": 1779,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -46523,7 +46687,8 @@
     "d8894d8bf6b5|tap:Start voice search": "da4580ee1dee",
     "61c36514dee6|swipe": "e0eb2b0591e0",
     "e0eb2b0591e0|tap:Wikipedia: wikipedia.org": "d8894d8bf6b5",
-    "da4580ee1dee|tap:See 23 tabs": "3642b2e6fdba"
+    "da4580ee1dee|tap:See 23 tabs": "3642b2e6fdba",
+    "3642b2e6fdba|type": "e80155e4c1b5"
   }
 }
 

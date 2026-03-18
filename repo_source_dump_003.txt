@@ -4476,6 +4476,7 @@ if __name__ == "__main__":
 [20:53:29] 
 [1/33] [1★] [whatsapp] Open WhatsApp
 [20:53:29]   max_steps=5  skill_threshold=12  skills=0
+[20:55:33]   PASS  120.8s
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -5617,52 +5618,16 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-18T20:51:37.226319",
+  "run_at": "2026-03-18T20:55:33.834404",
   "skills_before": 0,
-  "skills_current": 0,
+  "skills_current": 1,
   "results": [
     {
       "task": "Open WhatsApp",
       "category": "whatsapp",
       "difficulty": 1,
       "success": true,
-      "elapsed_s": 18.8,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open YouTube",
-      "category": "youtube",
-      "difficulty": 1,
-      "success": true,
-      "elapsed_s": 18.6,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Settings",
-      "category": "settings",
-      "difficulty": 1,
-      "success": true,
-      "elapsed_s": 18.7,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Chrome",
-      "category": "chrome",
-      "difficulty": 1,
-      "success": true,
-      "elapsed_s": 15.6,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Play Store",
-      "category": "playstore",
-      "difficulty": 1,
-      "success": true,
-      "elapsed_s": 15.8,
+      "elapsed_s": 120.8,
       "error": null,
       "retried": false
     }
@@ -5670,7 +5635,24 @@ if __name__ == "__main__":
 }
 
 //===== TERMUXFILE: skills.json =====
-[]
+[
+  {
+    "pattern": "open whatsapp",
+    "activity": "com.whatsapp/.home.ui.HomeActivity",
+    "task_example": "Open WhatsApp",
+    "steps": [
+      {
+        "action": "tap",
+        "target": "Back"
+      },
+      {
+        "action": "done"
+      }
+    ],
+    "uses": 0,
+    "version": 3
+  }
+]
 
 //===== TERMUXFILE: keep_awake.sh =====
 #!/data/data/com.termux/files/usr/bin/bash
@@ -5804,6 +5786,87 @@ nohup: ignoring input
 [mem] stored com.whatsapp/.home.ui.HomeActivity hash=0a4609cb9648 elements=31
 [step] UI: ['प्रयागराज में बेटे के सामने पत्नी को मार डाला: मासूम पुलिस से बोला- पापा ने रात में मम्मी का गला दबाया, हमें डांटा   पढ़ें पूरी खबर- https://dainik.bh', 'Search', 'More options', 'Dr Masood Alam Vet, 4 unread statuses', 'My status, tap to add new status', 'Shivang Gupta, 1 unread status', 'Dr Masood Alam Vet, 4 unread statuses', 'Mishra nursery, 1 unread status'][parser] DEBUG normalized: 'tap 27'
 [parser] INFO parsed 'tap 27' -> {'action': 'tap', 'target': 27}
+[parser] DEBUG normalized: 'done'
+[parser] INFO parsed 'done' -> {'action': 'done'}
+
+[map] new screen: whatsapp_homeactivity (a206f27488e6)
+[map] transition: whatsapp_conversation --[tap:WO]--> whatsapp_homeactivity
+[map] screen: whatsapp_homeactivity (a206f274)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 27'
+[step] LLM: 'tap 27'
+[step] action: {'action': 'tap', 'target': 27}
+[input] dispatching: TouchEvent(x=124, y=2576)
+[input] dispatching: TouchEvent(x=124, y=2576)
+[input] adb -s 192.168.29.48:33117 shell input tap 124 2576
+[mem] invalidated com.whatsapp/.home.ui.HomeActivity
+[step] step=3/5 done=False history=['opt4_launch:whatsapp', 'tap [2] Back', 'tap [27] Chats, 2 new notifications']
+
+========================================================
+  STEP 4  |  Open WhatsApp
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (409849 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,139) → 'FTS-01B(P1)_17-03-2026_Sol.pdf (26 pages)'
+[ui_parser] child: (0,937) → 'Door desgin ideas, group'
+[ui_parser] child: (0,951) → 'Door desgin ideas, group'
+[ui_parser] child: (0,1203) → 'Mummy Jio (You)'
+[ui_parser] child: (0,1217) → 'You'
+[ui_parser] child: (0,1469) → 'Papa'
+[ui_parser] child: (0,1483) → 'Papa'
+[ui_parser] child: (0,1735) → 'Mummy'
+[ui_parser] child: (0,1749) → 'Mummy'
+[ui_parser] child: (0,2001) → 'FTS-01B(P1)_17-03-2026_Sol.pdf (26 pages)'
+[ui_parser] child: (0,2015) → 'Yash Raj'
+[ui_parser] child: (0,2267) → 'Jio को चुनने के लिए आपका धन्यवाद! ❤️…'
+[ui_parser] child: (0,2281) → 'MyJio'
+[ui_parser] full parse -- 31 elements (31 labeled, 14 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.whatsapp/.home.ui.HomeActivity hash=2b661b4ce801 elements=31
+[step] UI: ['FTS-01B(P1)_17-03-2026_Sol.pdf (26 pages)', 'Scan to Pay', 'More options', 'Ask Meta AI or Search', 'Swipe down to reveal additional actions', 'Inbox filters, Radio Group', 'All filter, , selected', 'Unread filter, 2, unselected']
+[map] transition: whatsapp_homeactivity --[tap:Updates]--> whatsapp_homeactivity
+[map] screen: whatsapp_homeactivity (6dcc8357)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'done'
+[step] LLM: 'done'
+[step] action: {'action': 'done'}
+[input] DONE — no dispatch
+[mem] invalidated com.whatsapp/.home.ui.HomeActivity
+[skill] skipping dynamic label: 'Chats, 2 new notifications'
+[skill] learned: 'open whatsapp'  (2 steps)  [HomeActivity]
+[step] step=4/5 done=True history=['opt4_launch:whatsapp', 'tap [2] Back', 'tap [27] Chats, 2 new notifications', 'done']
+
+[controller] done in 4 steps
+
+[controller] history:
+  1. opt4_launch:whatsapp
+  2. tap [2] Back
+  3. tap [27] Chats, 2 new notifications
+  4. done
+
+  Screen Map: 514 screens (0 tainted), 629 transitions
+    whatsapp             173 screens
+    chrome               106 screens
+    youtube              98 screens
+    vending              42 screens
+    termux               25 screens
+    launcher             23 screens
+    settings             21 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+  TransitionMemory: 579 transitions (280 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: --task =====

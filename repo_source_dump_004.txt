@@ -5575,6 +5575,8 @@ RuntimeError: No LLM backend available.
   TransitionMemory: 617 transitions (283 confirmed, threshold=2)
 [parser] DEBUG normalized: 'tap 2'
 [parser] INFO parsed 'tap 2' -> {'action': 'tap', 'target': 2}
+[parser] DEBUG normalized: 'type Warriyo Mortals'
+[parser] INFO parsed 'type Warriyo Mortals' -> {'action': 'type', 'text': 'Warriyo Mortals'}
 
 
 //===== TERMUXFILE: --task =====

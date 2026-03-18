@@ -4461,6 +4461,7 @@ if __name__ == "__main__":
 [20:23:22] 
 [1/33] [1★] [whatsapp] Open WhatsApp
 [20:23:22]   max_steps=5  skill_threshold=12  skills=0
+[20:23:44]   PASS  18.6s
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -5601,305 +5602,17 @@ if __name__ == "__main__":
 
 //===== TERMUXFILE: gauntlet_report.json =====
 {
-  "run_at": "2026-03-18T19:58:08.867502",
+  "in_progress": true,
+  "run_at": "2026-03-18T20:23:44.467357",
   "skills_before": 0,
-  "skills_after": 6,
-  "total_elapsed": 4212.3,
+  "skills_current": 0,
   "results": [
     {
       "task": "Open WhatsApp",
       "category": "whatsapp",
       "difficulty": 1,
       "success": true,
-      "elapsed_s": 178.5,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open YouTube",
-      "category": "youtube",
-      "difficulty": 1,
-      "success": true,
-      "elapsed_s": 39.2,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Settings",
-      "category": "settings",
-      "difficulty": 1,
-      "success": true,
-      "elapsed_s": 36.3,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Chrome",
-      "category": "chrome",
-      "difficulty": 1,
-      "success": true,
-      "elapsed_s": 44.1,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Play Store",
-      "category": "playstore",
-      "difficulty": 1,
-      "success": true,
-      "elapsed_s": 38.2,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Phone app",
-      "category": "phone",
-      "difficulty": 1,
-      "success": true,
-      "elapsed_s": 34.6,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Contacts",
-      "category": "phone",
-      "difficulty": 1,
-      "success": true,
-      "elapsed_s": 42.2,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open WhatsApp and go to Calls tab",
-      "category": "whatsapp",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 132.7,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open WhatsApp and go to Updates tab",
-      "category": "whatsapp",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 214.8,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open WhatsApp and search for Mummy in chats",
-      "category": "whatsapp",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 13.7,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open YouTube and go to Subscriptions",
-      "category": "youtube",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 77.3,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Search for MrBeast on YouTube",
-      "category": "youtube",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 105.7,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Settings and go to WiFi",
-      "category": "settings",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 70.9,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Settings and go to Display",
-      "category": "settings",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 47.7,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Settings and go to Notifications",
-      "category": "settings",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 46.1,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Settings and check battery percentage",
-      "category": "settings",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 43.8,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Chrome and go to google.com",
-      "category": "chrome",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 108.5,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Chrome and open a new tab",
-      "category": "chrome",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 114.1,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Search for weather today in Chrome",
-      "category": "chrome",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 118.9,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Search for Spotify on Play Store",
-      "category": "playstore",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 182.6,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Contacts and search for Mummy",
-      "category": "phone",
-      "difficulty": 2,
-      "success": true,
-      "elapsed_s": 75.6,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Send a WhatsApp message to Mummy saying Good morning",
-      "category": "whatsapp",
-      "difficulty": 3,
-      "success": true,
-      "elapsed_s": 13.7,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Send a WhatsApp message to Ayush Kumar saying Hey what is up",
-      "category": "whatsapp",
-      "difficulty": 3,
-      "success": true,
-      "elapsed_s": 13.4,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Send a WhatsApp message to Sadique faridi saying Hello brother",
-      "category": "whatsapp",
-      "difficulty": 3,
-      "success": true,
-      "elapsed_s": 13.3,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Play Warriyo Mortals on YouTube",
-      "category": "youtube",
-      "difficulty": 3,
-      "success": true,
-      "elapsed_s": 246.7,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Search for lofi hip hop on YouTube and play the first video",
-      "category": "youtube",
-      "difficulty": 3,
-      "success": true,
-      "elapsed_s": 456.2,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Search for VLC on Play Store and open its page",
-      "category": "playstore",
-      "difficulty": 3,
-      "success": true,
-      "elapsed_s": 375.9,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Send a WhatsApp message to Mummy saying Good night",
-      "category": "whatsapp",
-      "difficulty": 4,
-      "success": true,
-      "elapsed_s": 14.8,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Play Warriyo Mortals on YouTube",
-      "category": "youtube",
-      "difficulty": 4,
-      "success": true,
-      "elapsed_s": 38.9,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Search for lofi hip hop on YouTube and play the first video",
-      "category": "youtube",
-      "difficulty": 4,
-      "success": true,
-      "elapsed_s": 498.0,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Settings and go to WiFi",
-      "category": "settings",
-      "difficulty": 4,
-      "success": true,
-      "elapsed_s": 13.4,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy",
-      "category": "cross_app",
-      "difficulty": 5,
-      "success": true,
-      "elapsed_s": 368.5,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open Settings, check the WiFi network name, then send it via WhatsApp to Mummy",
-      "category": "cross_app",
-      "difficulty": 5,
-      "success": true,
-      "elapsed_s": 127.9,
+      "elapsed_s": 18.6,
       "error": null,
       "retried": false
     }
@@ -6009,6 +5722,87 @@ Traceback (most recent call last):
   File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/executor/device.py", line 119, in take_screenshot
     raise RuntimeError(f"screencap failed: {r.stderr.decode().strip()}")
 RuntimeError: screencap failed: error: device '192.168.29.48:35253' not found
+
+########################################################
+  JARVIS  |  Open WhatsApp
+  Device : 192.168.29.48:35253
+########################################################
+
+[init] backends: {'phone_b': False, 'proxy': False, 'llamafile': False, 'binary': None}
+[init] WARNING: no LLM backend reachable!
+
+  Screen Map: 511 screens (0 tainted), 626 transitions
+    whatsapp             171 screens
+    chrome               106 screens
+    youtube              98 screens
+    vending              42 screens
+    termux               25 screens
+    launcher             22 screens
+    settings             21 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+  TransitionMemory: 576 transitions (280 confirmed, threshold=2)
+[init] task_apps: ['whatsapp']
+[init] max_skill_steps: 20 (threshold: 12)
+
+========================================================
+  STEP 1  |  Open WhatsApp
+========================================================
+[controller] step error: screencap failed: error: device '192.168.29.48:35253' not found
+
+========================================================
+  STEP 2  |  Open WhatsApp
+========================================================
+[controller] step error: screencap failed: error: device '192.168.29.48:35253' not found
+
+========================================================
+  STEP 3  |  Open WhatsApp
+========================================================
+[controller] step error: screencap failed: error: device '192.168.29.48:35253' not found
+
+========================================================
+  STEP 4  |  Open WhatsApp
+========================================================
+[controller] step error: screencap failed: error: device '192.168.29.48:35253' not found
+
+========================================================
+  STEP 5  |  Open WhatsApp
+========================================================
+[controller] step error: screencap failed: error: device '192.168.29.48:35253' not found
+
+[controller] history:
+
+  Screen Map: 511 screens (0 tainted), 626 transitions
+    whatsapp             171 screens
+    chrome               106 screens
+    youtube              98 screens
+    vending              42 screens
+    termux               25 screens
+    launcher             22 screens
+    settings             21 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+  TransitionMemory: 576 transitions (280 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: --task =====

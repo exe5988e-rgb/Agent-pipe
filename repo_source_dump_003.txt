@@ -4841,6 +4841,9 @@ if __name__ == "__main__":
 [26/33] [3★] [youtube] Search for lofi hip hop on YouTube and play the first video
 [21:45:20]   max_steps=12  skill_threshold=12  skills=7
 [21:53:31]   PASS  488.3s
+[21:53:36] 
+[27/33] [3★] [playstore] Search for VLC on Play Store and open its page
+[21:53:36]   max_steps=12  skill_threshold=12  skills=7
 
 
 //===== TERMUXFILE: tap_logger.py =====

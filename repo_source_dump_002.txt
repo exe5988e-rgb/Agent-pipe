@@ -78507,6 +78507,293 @@
           "resource_id": "com.google.android.youtube:id/edit_suggestion"
         }
       ]
+    },
+    "c80ebc098a67": {
+      "screen_id": "c80ebc098a67",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Navigate up",
+        "Clear",
+        "Voice search",
+        "Cast",
+        "More options",
+        "mrbeast",
+        "Current setting is for all notifications. Tap to change your notification setting for MrBeast",
+        "Survive 30 Days Stranded With Your Ex, Win $250,000 \u2013 30 minutes, 4 seconds \u2013  \u2013 MrBeast - 94 million views - 10 days ago \u2013 play video",
+        "Go to channel",
+        "element_10",
+        "Options",
+        "View Channel",
+        "Survive 30 Days Stranded With Your Ex, Win $250,000 \u2013 30 minutes, 4 seconds \u2013  \u2013 MrBeast - 94 million views - 10 days ago \u2013 play video",
+        "Latest videos",
+        "Survive 30 Days Stranded With Your Ex, Win $250,000 \u2013 30 minutes, 4 seconds \u2013  \u2013 MrBeast - 94 million views - 10 days ago \u2013 play video",
+        "I Built 10 Schools Around The World \u2013 16 minutes, 5 seconds \u2013  \u2013 MrBeast - 52 million views - 3 weeks ago \u2013 play video",
+        "Go to channel MrBeast",
+        "Action menu",
+        "Go to channel MrBeast",
+        "Latest from MrBeast",
+        "Pop The Balloons, Win $10,000, 34 million views \u2013 play Short",
+        "Latest from MrBeast",
+        "Pop The Balloons, Win $10,000, 34 million views \u2013 play Short",
+        "Pop The Balloons, Win $10,000, 34 million views \u2013 play Short",
+        "5 Strangers Split $100,000, 35 million views \u2013 play Short",
+        "My Chocolate Factory Blew Up, 11 million views \u2013 play Short",
+        "New",
+        "More actions",
+        "New",
+        "More actions"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Clear",
+          "x": 680,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/search_clear"
+        },
+        {
+          "text": "Voice search",
+          "x": 848,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/voice_search"
+        },
+        {
+          "text": "Cast",
+          "x": 1016,
+          "y": 223,
+          "cls": "android.widget.Button",
+          "resource_id": "com.google.android.youtube:id/mdx_entry_point_button"
+        },
+        {
+          "text": "More options",
+          "x": 1170,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "mrbeast",
+          "x": 396,
+          "y": 223,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.google.android.youtube:id/search_query"
+        },
+        {
+          "text": "Current setting is for all notifications. Tap to change your notification setting for MrBeast",
+          "x": 620,
+          "y": 580,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Survive 30 Days Stranded With Your Ex, Win $250,000 \u2013 30 minutes, 4 seconds \u2013  \u2013 MrBeast - 94 million views - 10 days ago \u2013 play video",
+          "x": 620,
+          "y": 1539,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results"
+        },
+        {
+          "text": "Go to channel",
+          "x": 168,
+          "y": 503,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_10",
+          "x": 1170,
+          "y": 497,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Options",
+          "x": 324,
+          "y": 734,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "View Channel",
+          "x": 916,
+          "y": 734,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Survive 30 Days Stranded With Your Ex, Win $250,000 \u2013 30 minutes, 4 seconds \u2013  \u2013 MrBeast - 94 million views - 10 days ago \u2013 play video",
+          "x": 620,
+          "y": 1391,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Latest videos",
+          "x": 245,
+          "y": 937,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Survive 30 Days Stranded With Your Ex, Win $250,000 \u2013 30 minutes, 4 seconds \u2013  \u2013 MrBeast - 94 million views - 10 days ago \u2013 play video",
+          "x": 591,
+          "y": 1433,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "I Built 10 Schools Around The World \u2013 16 minutes, 5 seconds \u2013  \u2013 MrBeast - 52 million views - 3 weeks ago \u2013 play video",
+          "x": 1197,
+          "y": 1408,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Go to channel MrBeast",
+          "x": 119,
+          "y": 1732,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Action menu",
+          "x": 1099,
+          "y": 1700,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Go to channel MrBeast",
+          "x": 1211,
+          "y": 1732,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Latest from MrBeast",
+          "x": 620,
+          "y": 2098,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Pop The Balloons, Win $10,000, 34 million views \u2013 play Short",
+          "x": 620,
+          "y": 2393,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Latest from MrBeast",
+          "x": 682,
+          "y": 2098,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Pop The Balloons, Win $10,000, 34 million views \u2013 play Short",
+          "x": 620,
+          "y": 2477,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": ""
+        },
+        {
+          "text": "Pop The Balloons, Win $10,000, 34 million views \u2013 play Short",
+          "x": 313,
+          "y": 2477,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "5 Strangers Split $100,000, 35 million views \u2013 play Short",
+          "x": 870,
+          "y": 2477,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "My Chocolate Factory Blew Up, 11 million views \u2013 play Short",
+          "x": 1205,
+          "y": 2477,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "New",
+          "x": 150,
+          "y": 2244,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 525,
+          "y": 2241,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "New",
+          "x": 707,
+          "y": 2244,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 1082,
+          "y": 2241,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Home",
+          "x": 124,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 372,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Create",
+          "x": 620,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscriptions",
+          "x": 868,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "You",
+          "x": 1116,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -79149,7 +79436,8 @@
     "615edd0c907f|tap:Updates": "6dcc835738aa",
     "6dcc835738aa|tap:Swipe down to reveal additional actions": "462e8bea51f2",
     "0b5a9aba0337|tap:You": "0cfd22e776c8",
-    "0cfd22e776c8|tap:JensJulius Tejlgaard has new content": "80ff94df1647"
+    "0cfd22e776c8|tap:JensJulius Tejlgaard has new content": "80ff94df1647",
+    "83a7783f7b10|tap:Edit suggestion mrbeast new video": "c80ebc098a67"
   }
 }
 

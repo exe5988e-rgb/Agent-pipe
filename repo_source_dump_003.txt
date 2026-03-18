@@ -3635,6 +3635,11 @@ if __name__ == "__main__":
     "to": "f57d9a835af4",
     "count": 1,
     "last_seen": 1773794855.1310802
+  },
+  "f57d9a835af4|tap:Emoji, GIFs and stickers": {
+    "to": "120aaa05f405",
+    "count": 1,
+    "last_seen": 1773794955.6530075
   }
 }
 

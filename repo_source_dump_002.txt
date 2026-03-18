@@ -50577,6 +50577,42 @@
           "resource_id": "com.whatsapp:id/entry"
         }
       ]
+    },
+    "120aaa05f405": {
+      "screen_id": "120aaa05f405",
+      "package": "com.whatsapp",
+      "activity": "com.whatsapp/.Conversation",
+      "name": "whatsapp_conversation",
+      "labels": [
+        "element_1",
+        "Drag handle",
+        "CALL"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 620,
+          "y": 1427,
+          "cls": "android.view.View",
+          "resource_id": "com.whatsapp:id/touch_outside"
+        },
+        {
+          "text": "Drag handle",
+          "x": 620,
+          "y": 2259,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/wds_bottom_sheet_handle_view"
+        },
+        {
+          "text": "CALL",
+          "x": 620,
+          "y": 2590,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/start_group_call_button"
+        }
+      ]
     }
   },
   "transitions": {
@@ -50992,7 +51028,8 @@
     "7c51d7e864c3|tap:Swipe down to reveal additional actions": "4d9720e7da52",
     "4d9720e7da52|type": "d5969964a2f4",
     "d5969964a2f4|tap:element_6": "366c9a634a55",
-    "366c9a634a55|tap:17": "f57d9a835af4"
+    "366c9a634a55|tap:17": "f57d9a835af4",
+    "f57d9a835af4|tap:Emoji, GIFs and stickers": "120aaa05f405"
   }
 }
 

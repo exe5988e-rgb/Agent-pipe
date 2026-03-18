@@ -76092,7 +76092,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 25,
+      "visits": 26,
       "tainted": false,
       "elements": [
         {
@@ -79660,7 +79660,7 @@
         "More options",
         "Nearly 90 Ships Cross Strait Of Hormuz As Iran Exports Millions Of Barrels Of Oil Despite War NDTV 10h"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {
@@ -80504,7 +80504,7 @@
     "5f41671576ab|tap:Voice search": "0b5a9aba0337",
     "1025dd6b857e|opt4_launch:settings": "2c1be995ec82",
     "f6f258ae70ad|tap:On": "2c1be995ec82",
-    "1025dd6b857e|opt4_launch:chrome": "99751df5ec71",
+    "1025dd6b857e|opt4_launch:chrome": "24491ecc0614",
     "1025dd6b857e|opt4_launch:play store": "73181ac31bda",
     "615edd0c907f|tap:Updates": "6dcc835738aa",
     "6dcc835738aa|tap:Swipe down to reveal additional actions": "462e8bea51f2",

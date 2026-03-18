@@ -86251,6 +86251,129 @@
           "resource_id": "android:id/button1"
         }
       ]
+    },
+    "045bb0062c24": {
+      "screen_id": "045bb0062c24",
+      "package": "com.whatsapp",
+      "activity": "com.whatsapp/.Conversation",
+      "name": "whatsapp_conversation",
+      "labels": [
+        "Abdul Akash",
+        "element_3",
+        "Video call",
+        "Voice call",
+        "More options",
+        "Tumlog baliapur se Jaa rhe?",
+        "Tumlog baliapur se Jaa rhe?",
+        "Emoji, GIFs and stickers",
+        "Attach",
+        "Payment",
+        "Camera",
+        "Voice message, Button. Double tap and hold to record, slide left to cancel recording, slide up to lock recording on. Release to send.",
+        "Message"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Abdul Akash",
+          "x": 550,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/conversation_contact"
+        },
+        {
+          "text": "Back",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/whatsapp_toolbar_home"
+        },
+        {
+          "text": "element_3",
+          "x": 252,
+          "y": 237,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_photo_view"
+        },
+        {
+          "text": "Video call",
+          "x": 848,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Voice call",
+          "x": 1016,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "More options",
+          "x": 1170,
+          "y": 237,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/menuitem_overflow"
+        },
+        {
+          "text": "Tumlog baliapur se Jaa rhe?",
+          "x": 620,
+          "y": 933,
+          "cls": "android.widget.ListView",
+          "resource_id": "android:id/list"
+        },
+        {
+          "text": "Tumlog baliapur se Jaa rhe?",
+          "x": 399,
+          "y": 1170,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/quoted_message_frame"
+        },
+        {
+          "text": "Emoji, GIFs and stickers",
+          "x": 98,
+          "y": 1626,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/emoji_picker_btn"
+        },
+        {
+          "text": "Attach",
+          "x": 627,
+          "y": 1626,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/input_attach_button"
+        },
+        {
+          "text": "Payment",
+          "x": 795,
+          "y": 1626,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/payment_button"
+        },
+        {
+          "text": "Camera",
+          "x": 956,
+          "y": 1626,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/camera_btn"
+        },
+        {
+          "text": "Voice message, Button. Double tap and hold to record, slide left to cancel recording, slide up to lock recording on. Release to send.",
+          "x": 1141,
+          "y": 1626,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/voice_note_btn"
+        },
+        {
+          "text": "Message",
+          "x": 362,
+          "y": 1625,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.whatsapp:id/entry"
+        }
+      ]
     }
   },
   "transitions": {
@@ -86935,7 +87058,8 @@
     "2e2486088817|tap:Edit suggestion lofi hip hop songs hindi": "923e7b2582d4",
     "923e7b2582d4|tap:Go to channel: Karl Kite.": "2f2fddf125c9",
     "2f2fddf125c9|tap:1 A.M Study Session \ud83d\udcda [lofi hip hop] \u2013 1 hour, 1 minute, 14 seconds \u2013  \u2013 Lofi Girl - 131 million views - 6 years ago \u2013 play video": "8bd4aa0f7819",
-    "815905513523|tap:Books": "e921768c497c"
+    "815905513523|tap:Books": "e921768c497c",
+    "a5298e720b5a|tap:Enable": "045bb0062c24"
   }
 }
 

@@ -45605,6 +45605,16 @@
           "resource_id": ""
         }
       ]
+    },
+    "256ee3a364af": {
+      "screen_id": "256ee3a364af",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [],
+      "visits": 1,
+      "tainted": false,
+      "elements": []
     }
   },
   "transitions": {
@@ -45982,7 +45992,8 @@
     "0bb5585ab8d0|opt4_launch:whatsapp": "7c51d7e864c3",
     "966005cab230|opt4_launch:whatsapp": "7c51d7e864c3",
     "2edcf1eb90cd|tap:None": "7c51d7e864c3",
-    "635910cc4897|opt4_launch:chrome": "d8894d8bf6b5"
+    "635910cc4897|opt4_launch:chrome": "d8894d8bf6b5",
+    "d8894d8bf6b5|tap:Start voice search": "256ee3a364af"
   }
 }
 

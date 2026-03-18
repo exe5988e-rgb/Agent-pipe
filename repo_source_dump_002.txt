@@ -82243,6 +82243,105 @@
           "resource_id": ""
         }
       ]
+    },
+    "e1cc226022e2": {
+      "screen_id": "e1cc226022e2",
+      "package": "com.whatsapp",
+      "activity": "com.whatsapp/.contact.ui.picker.ContactPicker",
+      "name": "whatsapp_contactpicker",
+      "labels": [
+        "Ayush Kumar",
+        "Show dial pad keyboard",
+        "Contacts on WhatsApp",
+        "Contacts on WhatsApp",
+        "Ayush Kumar",
+        "Ayush Kumar",
+        "More",
+        "New contact",
+        "Share invite link",
+        "Contacts help"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Ayush Kumar",
+          "x": 620,
+          "y": 223,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.whatsapp:id/search_src_text"
+        },
+        {
+          "text": "Show dial pad keyboard",
+          "x": 1100,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/trailing_button"
+        },
+        {
+          "text": "Back",
+          "x": 140,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/back"
+        },
+        {
+          "text": "Contacts on WhatsApp",
+          "x": 620,
+          "y": 1030,
+          "cls": "android.widget.ListView",
+          "resource_id": "android:id/list"
+        },
+        {
+          "text": "Contacts on WhatsApp",
+          "x": 620,
+          "y": 417,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Ayush Kumar",
+          "x": 620,
+          "y": 597,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Ayush Kumar",
+          "x": 126,
+          "y": 597,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "More",
+          "x": 620,
+          "y": 777,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "New contact",
+          "x": 620,
+          "y": 957,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Share invite link",
+          "x": 620,
+          "y": 1195,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Contacts help",
+          "x": 620,
+          "y": 1433,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -82903,7 +83002,7 @@
     "1025dd6b857e|tap:21": "d0e35202b7f2",
     "6dcc835738aa|tap:Jio \u0915\u094b \u091a\u0941\u0928\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f \u0906\u092a\u0915\u093e \u0927\u0928\u094d\u092f\u0935\u093e\u0926! \u2764\ufe0f\u2026": "c1027f04709d",
     "c1027f04709d|tap:More options": "35cc9568adf1",
-    "35cc9568adf1|type": "6d26e82dd7ee",
+    "35cc9568adf1|type": "e1cc226022e2",
     "6d26e82dd7ee|tap:None": "67d20aa8828e",
     "67d20aa8828e|type": "40a382601216",
     "67d20aa8828e|back": "eb822f47a422",

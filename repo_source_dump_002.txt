@@ -79263,6 +79263,194 @@
           "resource_id": "com.oplus.battery:id/battery_ui_all_use_layout"
         }
       ]
+    },
+    "cabb12a803f3": {
+      "screen_id": "cabb12a803f3",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "element_1",
+        "Connection is secure",
+        "Search Google or type URL",
+        "Start voice search",
+        "Search with your camera using Google Lens",
+        "17 suggested items in list below.",
+        "Share link to search results page for: weather today. Source: google.com",
+        "Share link to search results page for: weather today. Source: google.com",
+        "Copy link to search results page for: weather today. Source: google.com",
+        "Edit search query: weather today",
+        "Refine: weather tomorrow",
+        "Refine: weather tomorrow",
+        "Refine: weather report",
+        "Refine: weather report",
+        "Refine: weather today at my location",
+        "Refine: weather today at my location",
+        "Refine: restaurants nearby",
+        "Refine: restaurants nearby",
+        "Refine: weather today rain",
+        "Refine: weather today rain",
+        "Refine: weather this week",
+        "Refine: weather this week"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 620,
+          "y": 1455,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Connection is secure",
+          "x": 126,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "Search Google or type URL",
+          "x": 550,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "Start voice search",
+          "x": 960,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/mic_button"
+        },
+        {
+          "text": "Search with your camera using Google Lens",
+          "x": 1128,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/lens_camera_button"
+        },
+        {
+          "text": "17 suggested items in list below.",
+          "x": 620,
+          "y": 1058,
+          "cls": "androidx.recyclerview.widget.RecyclerView",
+          "resource_id": "com.android.chrome:id/omnibox_suggestions_dropdown"
+        },
+        {
+          "text": "Share link to search results page for: weather today. Source: google.com",
+          "x": 620,
+          "y": 433,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Share link to search results page for: weather today. Source: google.com",
+          "x": 792,
+          "y": 433,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Copy link to search results page for: weather today. Source: google.com",
+          "x": 960,
+          "y": 433,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Edit search query: weather today",
+          "x": 1128,
+          "y": 433,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: weather tomorrow",
+          "x": 620,
+          "y": 769,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: weather tomorrow",
+          "x": 1128,
+          "y": 769,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: weather report",
+          "x": 620,
+          "y": 965,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: weather report",
+          "x": 1128,
+          "y": 965,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: weather today at my location",
+          "x": 620,
+          "y": 1161,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: weather today at my location",
+          "x": 1128,
+          "y": 1161,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: restaurants nearby",
+          "x": 620,
+          "y": 1357,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: restaurants nearby",
+          "x": 1128,
+          "y": 1357,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: weather today rain",
+          "x": 620,
+          "y": 1553,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: weather today rain",
+          "x": 1128,
+          "y": 1553,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: weather this week",
+          "x": 620,
+          "y": 1716,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: weather this week",
+          "x": 1128,
+          "y": 1716,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -79890,7 +80078,7 @@
     "c35eb75a1a4a|type": "1d16b25e8e24",
     "1d16b25e8e24|tap:Edit suggestion lofi hip hop no lyrics music": "b2867628ccaa",
     "b2867628ccaa|tap:25": "65840c1afc29",
-    "99751df5ec71|tap:See 29 tabs": "a34183adf43f",
+    "99751df5ec71|tap:See 29 tabs": "cabb12a803f3",
     "a34183adf43f|home": "5731aaff4c94",
     "1025dd6b857e|opt4_launch:whatsapp": "615edd0c907f",
     "af62a7d780e2|tap:WO": "a206f27488e6",

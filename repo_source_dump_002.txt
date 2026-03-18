@@ -68215,7 +68215,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 29,
+      "visits": 30,
       "tainted": false,
       "elements": [
         {
@@ -72217,7 +72217,7 @@
         "Communities",
         "Calls"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {

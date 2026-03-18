@@ -6503,30 +6503,6 @@ if __name__ == "__main__":
     "version": 3
   },
   {
-    "pattern": "search for on youtube",
-    "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
-    "task_example": "Search for MrBeast on YouTube",
-    "steps": [
-      {
-        "action": "tap",
-        "target": "Search"
-      },
-      {
-        "action": "type",
-        "text": "$QUERY"
-      },
-      {
-        "action": "tap",
-        "target": "Edit suggestion mrbeast"
-      },
-      {
-        "action": "done"
-      }
-    ],
-    "uses": 0,
-    "version": 3
-  },
-  {
     "pattern": "open settings",
     "activity": "com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity",
     "task_example": "Open Settings",
@@ -6576,66 +6552,6 @@ if __name__ == "__main__":
       }
     ],
     "uses": 1,
-    "version": 3
-  },
-  {
-    "pattern": "search for on play",
-    "activity": "com.android.vending/.AssetBrowserActivity",
-    "task_example": "Search for Spotify on Play Store",
-    "steps": [
-      {
-        "action": "tap",
-        "target": "Search"
-      },
-      {
-        "action": "tap",
-        "target": "Search Apps & Games"
-      },
-      {
-        "action": "type",
-        "text": "$QUERY"
-      },
-      {
-        "action": "tap",
-        "target": "Refine search to 'spotify'"
-      },
-      {
-        "action": "done"
-      }
-    ],
-    "uses": 1,
-    "version": 3
-  },
-  {
-    "pattern": "play on youtube",
-    "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
-    "task_example": "Play Warriyo Mortals on YouTube",
-    "steps": [
-      {
-        "action": "tap",
-        "target": "Search"
-      },
-      {
-        "action": "type",
-        "text": "$QUERY"
-      },
-      {
-        "action": "tap",
-        "target": "Edit suggestion warriyo mortals"
-      },
-      {
-        "action": "tap",
-        "target": "Close ad panel"
-      },
-      {
-        "action": "tap",
-        "target": "Expand Mini Player"
-      },
-      {
-        "action": "done"
-      }
-    ],
-    "uses": 0,
     "version": 3
   }
 ]

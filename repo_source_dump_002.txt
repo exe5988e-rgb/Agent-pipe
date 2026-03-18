@@ -50064,7 +50064,7 @@
         "6. Luxus Inn Hotel 4.7 of 5 bubbles (3 reviews) Save to a trip Chinese, Indian Open now",
         "\u201cExcellent service by Luxus inn team\u201d \u201cExcellent hospitality\u201d"
       ],
-      "visits": 6,
+      "visits": 7,
       "tainted": false,
       "elements": [
         {

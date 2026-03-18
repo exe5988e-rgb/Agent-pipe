@@ -8908,6 +8908,8 @@ nohup: ignoring input
     notificationmanager  1 screens
     battery              1 screens
   TransitionMemory: 596 transitions (279 confirmed, threshold=2)
+[parser] DEBUG normalized: 'tap 3'
+[parser] INFO parsed 'tap 3' -> {'action': 'tap', 'target': 3}
 
 
 //===== TERMUXFILE: --task =====

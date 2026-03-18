@@ -4340,6 +4340,9 @@ if __name__ == "__main__":
 [13/33] [2★] [settings] Open Settings and go to WiFi
 [19:05:32]   max_steps=8  skill_threshold=12  skills=2
 [19:06:46]   PASS  70.9s
+[19:06:51] 
+[14/33] [2★] [settings] Open Settings and go to Display
+[19:06:51]   max_steps=8  skill_threshold=12  skills=3
 
 
 //===== TERMUXFILE: tap_logger.py =====

@@ -4653,6 +4653,10 @@ if __name__ == "__main__":
 [21:22:53] 
 [19/33] [2★] [chrome] Search for weather today in Chrome
 [21:22:53]   max_steps=10  skill_threshold=12  skills=5
+[21:30:57]   TIMEOUT after 480s — killing
+[21:30:57]   FAIL  480.0s  timeout
+[21:30:57]   Retrying...
+[21:30:57]   Recovering...
 
 
 //===== TERMUXFILE: tap_logger.py =====

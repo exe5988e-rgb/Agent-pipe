@@ -33208,7 +33208,7 @@
       "activity": "com.google.android.dialer/com.android.dialer.incall.activity.ui.InCallActivity",
       "name": "dialer_incallactivity",
       "labels": [],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": []
     },
@@ -75236,7 +75236,8 @@
     "ab87f07727b4|tap:Install on more devices": "878450f0a90b",
     "878450f0a90b|back": "ab87f07727b4",
     "ab87f07727b4|tap:Content rating Rated for 3+": "4c38e663dba1",
-    "a2a7a2e70c76|tap:Auto-play is off": "c9ef977845dc"
+    "a2a7a2e70c76|tap:Auto-play is off": "c9ef977845dc",
+    "c9ef977845dc|tap:Voice search": "a878aeaaaae9"
   }
 }
 

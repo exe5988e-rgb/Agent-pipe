@@ -93756,6 +93756,497 @@
           "resource_id": ""
         }
       ]
+    },
+    "5d3c6ae315c5": {
+      "screen_id": "5d3c6ae315c5",
+      "package": "com.android.launcher",
+      "activity": "com.android.launcher/.Launcher",
+      "name": "launcher_launcher",
+      "labels": [
+        "Clock",
+        ":",
+        "Partly cloudy",
+        "21\u200e\u00b0\u200e",
+        "Thu 19 Mar",
+        "At a Glance",
+        "Thursday 19 Mar",
+        "More",
+        "Cloudy",
+        "element_12",
+        "2 ae",
+        "element_14",
+        "element_15",
+        "element_16",
+        "Google Search",
+        "Play Store",
+        "Weather",
+        "Maps",
+        "Meet (original)",
+        "SearchButton",
+        "Phone",
+        "Messages",
+        "Photos",
+        "Camera"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Clock",
+          "x": 620,
+          "y": 418,
+          "cls": "com.android.launcher3.widget.CustomLauncherAppWidgetHostView",
+          "resource_id": ""
+        },
+        {
+          "text": "00",
+          "x": 197,
+          "y": 397,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.oneplus.deskclock:id/local_hour_txt"
+        },
+        {
+          "text": ":",
+          "x": 335,
+          "y": 390,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.oneplus.deskclock:id/local_colon_txt"
+        },
+        {
+          "text": "21",
+          "x": 474,
+          "y": 397,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.oneplus.deskclock:id/local_minutes_txt"
+        },
+        {
+          "text": "Partly cloudy",
+          "x": 1054,
+          "y": 380,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.oneplus.deskclock:id/local_weather_description"
+        },
+        {
+          "text": "21\u200e\u00b0\u200e",
+          "x": 1116,
+          "y": 379,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.oneplus.deskclock:id/local_weather_info_txt"
+        },
+        {
+          "text": "Thu 19 Mar",
+          "x": 1008,
+          "y": 459,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.oneplus.deskclock:id/local_date_info_txt"
+        },
+        {
+          "text": "At a Glance",
+          "x": 620,
+          "y": 996,
+          "cls": "com.android.launcher3.widget.CustomLauncherAppWidgetHostView",
+          "resource_id": ""
+        },
+        {
+          "text": "Thursday 19 Mar",
+          "x": 411,
+          "y": 995,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "More",
+          "x": 746,
+          "y": 995,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Cloudy",
+          "x": 996,
+          "y": 995,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_12",
+          "x": 147,
+          "y": 1573,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_google_logo"
+        },
+        {
+          "text": "2 ae",
+          "x": 452,
+          "y": 1573,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_text_search"
+        },
+        {
+          "text": "element_14",
+          "x": 757,
+          "y": 1573,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_shortcut"
+        },
+        {
+          "text": "element_15",
+          "x": 925,
+          "y": 1573,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_voice_search"
+        },
+        {
+          "text": "element_16",
+          "x": 1093,
+          "y": 1573,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_lens"
+        },
+        {
+          "text": "Google Search",
+          "x": 620,
+          "y": 1573,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_background"
+        },
+        {
+          "text": "Play Store",
+          "x": 152,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Weather",
+          "x": 386,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Maps",
+          "x": 620,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Meet (original)",
+          "x": 854,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "SearchButton",
+          "x": 620,
+          "y": 2280,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.android.launcher:id/page_indicator"
+        },
+        {
+          "text": "Phone",
+          "x": 269,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Messages",
+          "x": 503,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Photos",
+          "x": 737,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Camera",
+          "x": 971,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        }
+      ]
+    },
+    "7503cdb792c3": {
+      "screen_id": "7503cdb792c3",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Cast",
+        "Notifications, 9+",
+        "Search",
+        "filters",
+        "Explore menu",
+        "All",
+        "Music",
+        "Mixes",
+        "Gaming",
+        "Boruto: Naruto Next Generations",
+        "Expand Mini Player",
+        "Sponsored \u2013 Create high-quality videos in Gemini - no tech skills needed! \u2013 20 seconds \u2013 Anyone can be a creator with Gemini. Visualize and share your ideas in minutes \u2013 Google One \u2013 play video",
+        "Sponsored \u2013 Create high-quality videos in Gemini - no tech skills needed! \u2013 20 seconds \u2013 Anyone can be a creator with Gemini. Visualize and share your ideas in minutes \u2013 Google One \u2013 play video",
+        "Tap to mute or unmute playback audio",
+        "Captions",
+        "More options",
+        "l.",
+        "More options",
+        "Action menu",
+        "Shorts",
+        "Yuji's hoodie hides something important. #viral #anime #jjk #edit \u2013 play Short",
+        "GTA 6 will be EXPENSIVE! \u2013 play Short",
+        "More actions",
+        "More actions",
+        "Shorts",
+        "Create",
+        "Subscriptions: New content is available",
+        "You",
+        "AI Removes Eye Patch Apple vs Samsung vs Pixel | Shocking Results! #AI #Apple #Samsung #Pixel #Tech \u2013 play Short",
+        "Why do A and S Rank Hunters look Strong in Solo Leveling Ragnarok!? \u2013 play Short"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Cast",
+          "x": 820,
+          "y": 223,
+          "cls": "android.widget.Button",
+          "resource_id": "com.google.android.youtube:id/mdx_entry_point_button"
+        },
+        {
+          "text": "Notifications, 9+",
+          "x": 988,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/menu_item_view"
+        },
+        {
+          "text": "Search",
+          "x": 1156,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/menu_item_view"
+        },
+        {
+          "text": "filters",
+          "x": 620,
+          "y": 391,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": ""
+        },
+        {
+          "text": "Explore menu",
+          "x": 115,
+          "y": 391,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "All",
+          "x": 315,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Music",
+          "x": 521,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Mixes",
+          "x": 765,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Gaming",
+          "x": 1027,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Boruto: Naruto Next Generations",
+          "x": 1211,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Expand Mini Player",
+          "x": 620,
+          "y": 823,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/player_overlays"
+        },
+        {
+          "text": "Sponsored \u2013 Create high-quality videos in Gemini - no tech skills needed! \u2013 20 seconds \u2013 Anyone can be a creator with Gemini. Visualize and share your ideas in minutes \u2013 Google One \u2013 play video",
+          "x": 620,
+          "y": 992,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Sponsored \u2013 Create high-quality videos in Gemini - no tech skills needed! \u2013 20 seconds \u2013 Anyone can be a creator with Gemini. Visualize and share your ideas in minutes \u2013 Google One \u2013 play video",
+          "x": 620,
+          "y": 1623,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results"
+        },
+        {
+          "text": "Tap to mute or unmute playback audio",
+          "x": 1142,
+          "y": 573,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/audio_toggle"
+        },
+        {
+          "text": "Captions",
+          "x": 1142,
+          "y": 741,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/caption_toggle"
+        },
+        {
+          "text": "More options",
+          "x": 620,
+          "y": 1319,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "l.",
+          "x": 105,
+          "y": 1277,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "More options",
+          "x": 1142,
+          "y": 1256,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Action menu",
+          "x": 1142,
+          "y": 1628,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 318,
+          "y": 1628,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Yuji's hoodie hides something important. #viral #anime #jjk #edit \u2013 play Short",
+          "x": 324,
+          "y": 2143,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "GTA 6 will be EXPENSIVE! \u2013 play Short",
+          "x": 916,
+          "y": 2143,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 560,
+          "y": 1780,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 1152,
+          "y": 1780,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Home",
+          "x": 124,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 372,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Create",
+          "x": 620,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscriptions: New content is available",
+          "x": 868,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "You",
+          "x": 1116,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "AI Removes Eye Patch Apple vs Samsung vs Pixel | Shocking Results! #AI #Apple #Samsung #Pixel #Tech \u2013 play Short",
+          "x": 324,
+          "y": 2683,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Why do A and S Rank Hunters look Strong in Solo Leveling Ragnarok!? \u2013 play Short",
+          "x": 916,
+          "y": 2683,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 560,
+          "y": 2654,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 1152,
+          "y": 2654,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -94478,7 +94969,8 @@
     "9aeac80999f5|tap:Warriyo Mortals": "96db6b6511e3",
     "1feb688015be|tap:More": "453ba5ac8d59",
     "453ba5ac8d59|type": "87fee6983a2f",
-    "a7ca998b0b4e|tap:38": "8bd4aa0f7819"
+    "a7ca998b0b4e|tap:38": "8bd4aa0f7819",
+    "5d3c6ae315c5|opt4_launch:youtube": "7503cdb792c3"
   }
 }
 

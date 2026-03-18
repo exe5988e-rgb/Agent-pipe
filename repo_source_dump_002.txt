@@ -68215,7 +68215,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 48,
+      "visits": 49,
       "tainted": false,
       "elements": [
         {
@@ -86604,6 +86604,242 @@
           "resource_id": "com.whatsapp:id/entry"
         }
       ]
+    },
+    "9cd54d2c0f76": {
+      "screen_id": "9cd54d2c0f76",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Expand Mini Player",
+        "Minimise",
+        "Auto-play is off",
+        "Cast",
+        "Captions",
+        "More options",
+        "Previous video",
+        "Next video",
+        "View products",
+        "Dismiss",
+        "4 minutes 33 seconds elapsed of 1 hour 1 minute 14 seconds",
+        "Fatb - Cotton Cloud",
+        "Enter full screen",
+        "4 minutes 32 seconds of 1 hour 1 minute 13 seconds",
+        "131m views. 6 years ago. 3 products ...more",
+        "Sponsored \u2013 Limited time offer\nGemini puts video creation at your fingertips. Create videos on the go with Veo 3.\nGoogle One \u2013 Sign up",
+        "Lofi Girl, Official Artist Channel 15.7m subscribers",
+        "Lofi Girl, Official Artist Channel 15.7m subscribers",
+        "Subscribe to Lofi Girl.",
+        "like this video along with 2,101,723 other people",
+        "Dislike this video",
+        "Share",
+        "Ask",
+        "I am here to proudly announce that it is 3am and I have finished all of my homework",
+        "Comments",
+        "I am here to proudly announce that it is 3am and I have finished all of my homework",
+        "element_27",
+        "Sponsored \u2013 Limited time offer\nGemini puts video creation at your fingertips. Create videos on the go with Veo 3.\nGoogle One \u2013 Sign up"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Expand Mini Player",
+          "x": 620,
+          "y": 488,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/player_overlays"
+        },
+        {
+          "text": "Minimise",
+          "x": 84,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/player_collapse_button"
+        },
+        {
+          "text": "Auto-play is off",
+          "x": 624,
+          "y": 230,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.youtube:id/autonav_toggle"
+        },
+        {
+          "text": "Cast",
+          "x": 806,
+          "y": 230,
+          "cls": "android.widget.Button",
+          "resource_id": "com.google.android.youtube:id/player_mdx_entry_point_button"
+        },
+        {
+          "text": "Captions",
+          "x": 988,
+          "y": 230,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/player_subtitle_button"
+        },
+        {
+          "text": "More options",
+          "x": 1156,
+          "y": 230,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/player_overflow_button"
+        },
+        {
+          "text": "Previous video",
+          "x": 312,
+          "y": 488,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/player_control_previous_button"
+        },
+        {
+          "text": "Next video",
+          "x": 928,
+          "y": 488,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/player_control_next_button"
+        },
+        {
+          "text": "View products",
+          "x": 305,
+          "y": 592,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Dismiss",
+          "x": 512,
+          "y": 592,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "4 minutes 33 seconds elapsed of 1 hour 1 minute 14 seconds",
+          "x": 178,
+          "y": 753,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.google.android.youtube:id/timestamps_container"
+        },
+        {
+          "text": "Fatb - Cotton Cloud",
+          "x": 571,
+          "y": 753,
+          "cls": "android.widget.Button",
+          "resource_id": "com.google.android.youtube:id/time_bar_entry_point_tap_container"
+        },
+        {
+          "text": "Enter full screen",
+          "x": 1135,
+          "y": 753,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/fullscreen_button"
+        },
+        {
+          "text": "4 minutes 32 seconds of 1 hour 1 minute 13 seconds",
+          "x": 620,
+          "y": 834,
+          "cls": "android.widget.SeekBar",
+          "resource_id": ""
+        },
+        {
+          "text": "131m views. 6 years ago. 3 products ...more",
+          "x": 620,
+          "y": 954,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Sponsored \u2013 Limited time offer\nGemini puts video creation at your fingertips. Create videos on the go with Veo 3.\nGoogle One \u2013 Sign up",
+          "x": 620,
+          "y": 1776,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/watch_list"
+        },
+        {
+          "text": "Lofi Girl, Official Artist Channel 15.7m subscribers",
+          "x": 105,
+          "y": 1149,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Lofi Girl, Official Artist Channel 15.7m subscribers",
+          "x": 255,
+          "y": 1149,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscribe to Lofi Girl.",
+          "x": 339,
+          "y": 1149,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "like this video along with 2,101,723 other people",
+          "x": 635,
+          "y": 1149,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Dislike this video",
+          "x": 823,
+          "y": 1149,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Share",
+          "x": 985,
+          "y": 1149,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Ask",
+          "x": 1161,
+          "y": 1149,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "I am here to proudly announce that it is 3am and I have finished all of my homework",
+          "x": 620,
+          "y": 1397,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Comments",
+          "x": 620,
+          "y": 1306,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "I am here to proudly announce that it is 3am and I have finished all of my homework",
+          "x": 619,
+          "y": 1443,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_27",
+          "x": 1197,
+          "y": 1443,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Sponsored \u2013 Limited time offer\nGemini puts video creation at your fingertips. Create videos on the go with Veo 3.\nGoogle One \u2013 Sign up",
+          "x": 620,
+          "y": 2156,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -87193,7 +87429,7 @@
     "5731aaff4c94|opt4_launch:whatsapp": "a5298e720b5a",
     "6dcc835738aa|tap:You": "13dcb6504714",
     "13dcb6504714|tap:Communities": "615edd0c907f",
-    "5731aaff4c94|opt4_launch:youtube": "0e2e17571165",
+    "5731aaff4c94|opt4_launch:youtube": "9cd54d2c0f76",
     "b94fe430b394|tap:You": "caf601112185",
     "caf601112185|tap:JensJulius Tejlgaard has new content": "6dd8030404cd",
     "6dd8030404cd|tap:Edit suggestion mrbeast": "571ebe27696a",
@@ -87291,7 +87527,8 @@
     "815905513523|tap:Books": "e921768c497c",
     "a5298e720b5a|tap:Enable": "045bb0062c24",
     "045bb0062c24|back": "551be7ca5a88",
-    "551be7ca5a88|back": "eb822f47a422"
+    "551be7ca5a88|back": "eb822f47a422",
+    "67d20aa8828e|home": "5731aaff4c94"
   }
 }
 

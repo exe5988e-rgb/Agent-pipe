@@ -76932,6 +76932,265 @@
           "resource_id": "com.google.android.youtube:id/edit_suggestion"
         }
       ]
+    },
+    "0b5a9aba0337": {
+      "screen_id": "0b5a9aba0337",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Cast",
+        "Notifications, 9+",
+        "Search",
+        "filters",
+        "Explore menu",
+        "All",
+        "Music",
+        "Mixes",
+        "Boruto: Naruto Next Generations",
+        "Expand Mini Player",
+        "Sponsored \u2013 See your ideas in motion with Google's Veo 3 and share unique videos! \u2013 20 seconds \u2013 Turn your words into stunning videos in minutes with Gemini. \u2013 Google One \u2013 play video",
+        "Sponsored \u2013 See your ideas in motion with Google's Veo 3 and share unique videos! \u2013 20 seconds \u2013 Turn your words into stunning videos in minutes with Gemini. \u2013 Google One \u2013 play video",
+        "Tap to mute or unmute playback audio",
+        "Captions",
+        "More options",
+        "4)",
+        "More options",
+        "Watch",
+        "Sign up",
+        "Sign up",
+        "Action menu",
+        "Shorts",
+        "How Toji Can See Curses \ud83d\ude33 #jujutsukaisen #shorts \u2013 play Short",
+        "2TB iPhone 17 Pro\u2026 we made it! The unique iPhone 17 Pro 2 TB Storage Upgrade \u2013 play Short",
+        "More actions",
+        "More actions",
+        "Shorts",
+        "Create",
+        "Subscriptions: New content is available",
+        "You"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Cast",
+          "x": 820,
+          "y": 223,
+          "cls": "android.widget.Button",
+          "resource_id": "com.google.android.youtube:id/mdx_entry_point_button"
+        },
+        {
+          "text": "Notifications, 9+",
+          "x": 988,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/menu_item_view"
+        },
+        {
+          "text": "Search",
+          "x": 1156,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/menu_item_view"
+        },
+        {
+          "text": "filters",
+          "x": 620,
+          "y": 391,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": ""
+        },
+        {
+          "text": "Explore menu",
+          "x": 115,
+          "y": 391,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "All",
+          "x": 315,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Music",
+          "x": 521,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Mixes",
+          "x": 765,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Boruto: Naruto Next Generations",
+          "x": 1070,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Expand Mini Player",
+          "x": 620,
+          "y": 823,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/player_overlays"
+        },
+        {
+          "text": "Sponsored \u2013 See your ideas in motion with Google's Veo 3 and share unique videos! \u2013 20 seconds \u2013 Turn your words into stunning videos in minutes with Gemini. \u2013 Google One \u2013 play video",
+          "x": 620,
+          "y": 1139,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Sponsored \u2013 See your ideas in motion with Google's Veo 3 and share unique videos! \u2013 20 seconds \u2013 Turn your words into stunning videos in minutes with Gemini. \u2013 Google One \u2013 play video",
+          "x": 620,
+          "y": 1623,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results"
+        },
+        {
+          "text": "Tap to mute or unmute playback audio",
+          "x": 1142,
+          "y": 573,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/audio_toggle"
+        },
+        {
+          "text": "Captions",
+          "x": 1142,
+          "y": 741,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/caption_toggle"
+        },
+        {
+          "text": "More options",
+          "x": 620,
+          "y": 1382,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "4)",
+          "x": 105,
+          "y": 1277,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "More options",
+          "x": 1142,
+          "y": 1256,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Watch",
+          "x": 324,
+          "y": 1656,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Sign up",
+          "x": 620,
+          "y": 1677,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Sign up",
+          "x": 916,
+          "y": 1656,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Action menu",
+          "x": 1142,
+          "y": 1922,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 318,
+          "y": 1922,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "How Toji Can See Curses \ud83d\ude33 #jujutsukaisen #shorts \u2013 play Short",
+          "x": 324,
+          "y": 2393,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "2TB iPhone 17 Pro\u2026 we made it! The unique iPhone 17 Pro 2 TB Storage Upgrade \u2013 play Short",
+          "x": 916,
+          "y": 2393,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 560,
+          "y": 2074,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 1152,
+          "y": 2074,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Home",
+          "x": 124,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 372,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Create",
+          "x": 620,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscriptions: New content is available",
+          "x": 868,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "You",
+          "x": 1116,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -77565,7 +77824,8 @@
     "af62a7d780e2|tap:WO": "a206f27488e6",
     "a206f27488e6|tap:Updates": "6dcc835738aa",
     "1025dd6b857e|opt4_launch:youtube": "740ae23375a8",
-    "740ae23375a8|tap:Watch most of YouTube ad-free, offline and in the background": "5f41671576ab"
+    "740ae23375a8|tap:Watch most of YouTube ad-free, offline and in the background": "5f41671576ab",
+    "5f41671576ab|tap:Voice search": "0b5a9aba0337"
   }
 }
 

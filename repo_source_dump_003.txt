@@ -4475,6 +4475,11 @@ if __name__ == "__main__":
     "to": "5f41671576ab",
     "count": 1,
     "last_seen": 1773847587.1196294
+  },
+  "5f41671576ab|tap:Voice search": {
+    "to": "0b5a9aba0337",
+    "count": 1,
+    "last_seen": 1773847628.7549095
   }
 }
 
@@ -5885,6 +5890,138 @@ nohup: ignoring input
 [parser] DEBUG normalized: 'tap 1'
 [parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
 
+########################################################
+  JARVIS  |  Open YouTube
+  Device : 192.168.29.48:33117
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 514 screens (0 tainted), 629 transitions
+    whatsapp             173 screens
+    chrome               106 screens
+    youtube              98 screens
+    vending              42 screens
+    termux               25 screens
+    launcher             23 screens
+    settings             21 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+  TransitionMemory: 579 transitions (280 confirmed, threshold=2)
+[init] task_apps: ['youtube']
+[init] max_skill_steps: 20 (threshold: 12)
+
+========================================================
+  STEP 1  |  Open YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3310506 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Cloudy'
+[ui_parser] OCR: (841,1475)-(1009,1671) → 'lt'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.launcher/.Launcher hash=806525858612 elements=26
+[step] UI: ['Clock', '20', ':', '55', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (1025dd6b)
+[OPT4v2] launcher -> launching youtube (com.google.android.youtube)
+[llm] OPT4v2 am start: com.google.android.youtube
+
+========================================================
+  STEP 2  |  Open YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (48506 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,0) → 'Watch most of YouTube ad-free, offline and in the background'
+[ui_parser] child: (0,315) → 'Watch most of YouTube ad-free, offline and in the background'
+[ui_parser] child: (0,315) → 'Watch most of YouTube ad-free, offline and in the background'
+[ui_parser] full parse -- 7 elements (7 labeled, 3 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=ca4f4111dc28 elements=7
+[step] UI: ['Watch most of YouTube ad-free, offline and in the background', 'Close', 'Watch most of YouTube ad-free, offline and in the background', 'Watch most of YouTube ad-free, offline and in the background', 'Try 1 month for ₹0', 'Terms apply. Cancel at any time.', 'Terms apply.']
+[map] new screen: youtube_shell$homeactivity (740ae23375a8)
+[map] transition: launcher_launcher --[opt4_launch:youtube]--> youtube_shell$homeactivity
+[map] screen: youtube_shell$homeactivity (740ae233)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 2'
+[step] LLM: 'tap 2'
+[step] action: {'action': 'tap', 'target': 2}
+[input] dispatching: TouchEvent(x=1092, y=238)
+[input] dispatching: TouchEvent(x=1092, y=238)
+[input] adb -s 192.168.29.48:33117 shell input tap 1092 238
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[step] step=2/5 done=False history=['opt4_launch:youtube', 'tap [2] Close']
+
+========================================================
+  STEP 3  |  Open YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1549290 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,307) → 'Edit suggestion let the world burn'
+[ui_parser] child: (0,475) → 'Edit suggestion luz roja'
+[ui_parser] child: (0,643) → 'Edit suggestion tiki tiki slowed'
+[ui_parser] child: (0,811) → 'Edit suggestion headlights'
+[ui_parser] child: (0,979) → 'Edit suggestion golden brown'
+[ui_parser] child: (0,1147) → 'Edit suggestion interstellar'
+[ui_parser] child: (0,1315) → 'Edit suggestion funk universo'
+[ui_parser] child: (0,1483) → 'Edit suggestion let the world burn'
+[ui_parser] child: (0,1651) → 'Edit suggestion nf'
+[ui_parser] full parse -- 21 elements (21 labeled, 9 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=8fd92f31d551 elements=21
+[step] UI: ['Navigate up', 'Voice search', 'Search YouTube', 'Edit suggestion let the world burn', 'Edit suggestion luz roja', 'Edit suggestion luz roja', 'Edit suggestion tiki tiki slowed', 'Edit suggestion tiki tiki slowed']
+[map] new screen: youtube_shell$homeactivity (5f41671576ab)
+[map] transition: youtube_shell$homeactivity --[tap:Watch most of YouTube ad-free, offline and in the background]--> youtube_shell$homeactivity
+[map] screen: youtube_shell$homeactivity (5f416715)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 1'
+[step] LLM: 'tap 1'
+[step] action: {'action': 'tap', 'target': 1}
+[input] dispatching: TouchEvent(x=98, y=223)
+[input] dispatching: TouchEvent(x=98, y=223)
+[input] adb -s 192.168.29.48:33117 shell input tap 98 223
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[step] step=3/5 done=False history=['opt4_launch:youtube', 'tap [2] Close', 'tap [1] Navigate up']
+
+========================================================
+  STEP 4  |  Open YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1502747 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (245,335) → 'All'
+[ui_parser] child: (413,335) → 'Music'
+[ui_parser] child: (658,335) → 'Mixes'
+[ui_parser] child: (901,335) → 'Boruto: Naruto Next Generations'
+[ui_parser] child: (0,475) → "Sponsored – See your ideas in motion with Google's Veo 3 and share unique videos! – 20 seconds – Turn your words into stunning videos in minutes with Gemini. – Google One – play video"
+[ui_parser] child: (0,1172) → 'More options'
+[ui_parser] OCR: (42,1214)-(168,1340) → '4)'
+[ui_parser] child: (42,1593) → 'Sign up'
+[ui_parser] full parse -- 31 elements (31 labeled, 8 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=172a1adb819e elements=31
+[step] UI: ['Cast', 'Notifications, 9+', 'Search', 'filters', 'Explore menu', 'All', 'Music', 'Mixes']
+[map] new screen: youtube_shell$homeactivity (0b5a9aba0337)
+[map] transition: youtube_shell$homeactivity --[tap:Voice search]--> youtube_shell$homeactivity
 
 //===== TERMUXFILE: --task =====
 

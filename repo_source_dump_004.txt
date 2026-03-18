@@ -6045,7 +6045,9 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
 [ui_parser] child: (481,335) → 'Videos'
 [ui_parser] child: (744,335) → 'Unwatched'
 [ui_parser] child: (1100,335) → 'Watched'
-[ui_parser] child: (0,475) → 'warriyo - mortals (feat. laura brehm) Mahabharat#bhagvadgita #srikrishna #jayshreeram #slok, 1 million views, Urban headshot, 1 year ago – play Short'
+[ui_parser] child: (0,475) → 'warriyo - mortals (feat. laura brehm) Mahabharat#bhagvadgita #srikrishna #jayshreeram #slok, 1 million views, Urban headshot, 1 year ago – play Short'[parser] DEBUG normalized: 'type lofi hip hop'
+[parser] INFO parsed 'type lofi hip hop' -> {'action': 'type', 'text': 'lofi hip hop'}
+
 
 //===== TERMUXFILE: --task =====
 

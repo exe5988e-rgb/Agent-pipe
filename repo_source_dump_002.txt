@@ -67651,7 +67651,7 @@
         "Dubbed",
         "Select"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {
@@ -68215,7 +68215,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 13,
+      "visits": 14,
       "tainted": false,
       "elements": [
         {
@@ -70614,7 +70614,8 @@
     "6dd8030404cd|tap:Edit suggestion mrbeast": "571ebe27696a",
     "5731aaff4c94|opt4_launch:settings": "bcfd9287cbfa",
     "edd4f565ccb7|tap:Not connected": "bcfd9287cbfa",
-    "bcfd9287cbfa|tap:Scan": "edd4f565ccb7"
+    "bcfd9287cbfa|tap:Scan": "edd4f565ccb7",
+    "5731aaff4c94|opt4_launch:chrome": "0dc27a148200"
   }
 }
 

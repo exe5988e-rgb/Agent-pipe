@@ -4305,6 +4305,11 @@ if __name__ == "__main__":
     "to": "5b8b2957dadb",
     "count": 1,
     "last_seen": 1773841340.0869732
+  },
+  "5b8b2957dadb|tap:New Incognito tab": {
+    "to": "7c92bc2f95a3",
+    "count": 1,
+    "last_seen": 1773841379.523103
   }
 }
 

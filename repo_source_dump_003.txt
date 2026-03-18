@@ -11676,7 +11676,9 @@ RuntimeError: No LLM backend available.
   STEP 5  |  Send a WhatsApp message to Sadique faridi saying Hello brother
 ========================================================
 [device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (313338 bytes)
-[ui_parser] activity=com.whatsapp/.contact.ui.picker.ContactPicker
+[ui_parser] activity=com.whatsapp/.contact.ui.picker.ContactPicker[parser] DEBUG normalized: 'swipe up'
+[parser] INFO parsed 'swipe up' -> {'action': 'swipe', 'x1': 540, 'y1': 900, 'x2': 540, 'y2': 500, 'duration_ms': 150}
+
 
 //===== TERMUXFILE: --task =====
 

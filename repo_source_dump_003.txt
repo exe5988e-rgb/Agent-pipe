@@ -8791,7 +8791,9 @@ nohup: ignoring input
 [ui_parser] child: (930,2492) → 'Books'
 [ui_parser] full parse -- 22 elements (21 labeled, 20 via OCR/rid/child) from 192.168.29.48:35253
 [mem] stored com.android.vending/.AssetBrowserActivity hash=ae0d36e3b20c elements=22
-[step] UI: ['Search Apps & Games', 'Search Google Play', 'Voice search', 'element_4', 'Bike racing games', 'Train station games', 'Bus games', 'Realistic games']
+[step] UI: ['Search Apps & Games', 'Search Google Play', 'Voice search', 'element_4', 'Bike racing games', 'Train station games', 'Bus games', 'Realistic games'][parser] DEBUG normalized: 'tap 2'
+[parser] INFO parsed 'tap 2' -> {'action': 'tap', 'target': 2}
+
 
 //===== TERMUXFILE: --task =====
 

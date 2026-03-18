@@ -73474,7 +73474,7 @@
         "Search",
         "Books"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {
@@ -74296,7 +74296,8 @@
     "95f0bd34d77b|tap:Refine search to 'spotify vlc'": "968cea81146b",
     "968cea81146b|type": "a7d826671887",
     "a7d826671887|tap:Refine search to 'vlc'": "ab87f07727b4",
-    "ab87f07727b4|tap:Install on more devices": "878450f0a90b"
+    "ab87f07727b4|tap:Install on more devices": "878450f0a90b",
+    "878450f0a90b|back": "ab87f07727b4"
   }
 }
 

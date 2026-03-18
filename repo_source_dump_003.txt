@@ -8305,6 +8305,147 @@ nohup: ignoring input
 [parser] DEBUG normalized: 'tap 11'
 [parser] INFO parsed 'tap 11' -> {'action': 'tap', 'target': 11}
 
+########################################################
+  JARVIS  |  Open Settings and go to Display
+  Device : 192.168.29.48:33117
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 525 screens (0 tainted), 642 transitions
+    whatsapp             175 screens
+    chrome               106 screens
+    youtube              104 screens
+    vending              43 screens
+    termux               25 screens
+    launcher             23 screens
+    settings             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+  TransitionMemory: 592 transitions (279 confirmed, threshold=2)
+[init] task_apps: ['settings']
+[init] max_skill_steps: 20 (threshold: 12)
+
+========================================================
+  STEP 1  |  Open Settings and go to Display
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3304428 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Cloudy'
+[ui_parser] OCR: (841,1475)-(1009,1671) → 'lt'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.launcher/.Launcher hash=c5452e561a86 elements=26
+[step] UI: ['Clock', '21', ':', '14', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (1025dd6b)
+[OPT4v2] launcher -> launching settings (com.android.settings)
+[llm] OPT4v2 am start: com.android.settings
+
+========================================================
+  STEP 2  |  Open Settings and go to Display
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (168229 bytes)
+[ui_parser] activity=com.oplus.wirelesssettings/com.android.settings.SettingsActivity
+[ui_parser] signal='com.oplus.wirelesssettings/com.android.settings.SettingsActivity'
+[mem] miss (unknown): com.oplus.wirelesssettings/com.android.settings.SettingsActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,139) → 'Available networks'
+[ui_parser] child: (0,363) → 'Wi-Fi'
+[ui_parser] child: (0,538) → 'Wi-Fi Assistant'
+[ui_parser] child: (0,882) → 'Wi-Fi details'
+[ui_parser] child: (0,1269) → 'JioFiber-bfeMq'
+[ui_parser] child: (0,1480) → 'Wi-Fi details'
+[ui_parser] child: (0,1684) → 'JioFiber-bfeMq_5G'
+[ui_parser] child: (0,1888) → 'Wi-Fi details'
+[ui_parser] child: (0,2092) → 'Add network'
+[ui_parser] full parse -- 18 elements (18 labeled, 9 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.oplus.wirelesssettings/com.android.settings.SettingsActivity hash=4c607f6f422a elements=18
+[step] UI: ['Available networks', 'Navigate up', 'Scan', 'More options', 'Wi-Fi', 'Wi-Fi Assistant', 'Wi-Fi details', 'Wi-Fi details']
+[tm] transition changed: 1025dd6b857e|opt4_launch:settings 2c1be995 -> bcfd9287
+[map] transition: launcher_launcher --[opt4_launch:settings]--> wirelesssettings_settingsactivity
+[map] screen: wirelesssettings_settingsactivity (bcfd9287)
+[skill] matched: 'open settings and go'  score=1.00  act=True
+[skill] cannot resolve: 'JioFiber-ia1'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 2'
+[step] LLM: 'tap 2'
+[step] action: {'action': 'tap', 'target': 2}
+[input] dispatching: TouchEvent(x=98, y=230)
+[input] dispatching: TouchEvent(x=98, y=230)
+[input] adb -s 192.168.29.48:33117 shell input tap 98 230
+[step] step=2/8 done=False history=['opt4_launch:settings', 'tap [2] Navigate up']
+
+========================================================
+  STEP 3  |  Open Settings and go to Display
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (227468 bytes)
+[ui_parser] activity=com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity
+[ui_parser] signal='com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity'
+[mem] miss (unknown): com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,694) → 'Enjoy exclusive benefits and services designed for you!'
+[ui_parser] child: (0,736) → 'Enjoy exclusive benefits and services designed for you!'
+[ui_parser] child: (0,1049) → 'Aeroplane mode'
+[ui_parser] child: (0,1238) → 'JioFiber-ia1'
+[ui_parser] child: (0,1420) → 'Not connected'
+[ui_parser] child: (0,1602) → 'Mobile network'
+[ui_parser] child: (0,1784) → 'Device Connect'
+[ui_parser] child: (0,2029) → 'Home screen, Lock screen & style'
+[ui_parser] child: (0,2260) → 'Display & brightness'
+[ui_parser] child: (0,2505) → 'Sound & vibration'
+[ui_parser] child: (0,2694) → 'Notifications & Quick Settings'
+[ui_parser] full parse -- 13 elements (13 labeled, 11 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.settings/com.oplus.settings.feature.homepage.OplusSettingsHomepageActivity hash=526863f8fbf6 elements=13
+[step] UI: ['Search box', 'Search', 'Enjoy exclusive benefits and services designed for you!', 'Enjoy exclusive benefits and services designed for you!', 'Aeroplane mode', 'JioFiber-ia1', 'Not connected', 'Mobile network']
+[tm] transition changed: bcfd9287cbfa|tap:Scan edd4f565 -> 2c1be995
+[map] transition: wirelesssettings_settingsactivity --[tap:Scan]--> settings_oplussettingshomepageactivity
+[map] screen: settings_oplussettingshomepageactivity (2c1be995)
+[skill] matched: 'open settings'  score=1.00  act=True
+[skill] cannot resolve: 'Back'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 11'
+[step] LLM: 'tap 11'
+[step] action: {'action': 'tap', 'target': 11}
+[input] dispatching: TouchEvent(x=620, y=2354)
+[input] dispatching: TouchEvent(x=620, y=2354)
+[input] adb -s 192.168.29.48:33117 shell input tap 620 2354
+[step] step=3/8 done=False history=['opt4_launch:settings', 'tap [2] Navigate up', 'tap [11] Display & brightness']
+
+========================================================
+  STEP 4  |  Open Settings and go to Display
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (322109 bytes)
+[ui_parser] activity=com.android.settings/.Settings$DisplaySettingsActivity
+[ui_parser] signal='com.android.settings/.Settings$DisplaySettingsActivity'
+[mem] miss (unknown): com.android.settings/.Settings$DisplaySettingsActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,321) → 'Switch to Light mode at 06:00'
+[ui_parser] child: (154,489) → 'Light mode'
+[ui_parser] child: (620,489) → 'Dark mode'
+[ui_parser] child: (0,1507) → 'Switch to Light mode at 06:00'
+[ui_parser] child: (0,1714) → 'Dark mode settings'
+[ui_parser] child: (0,2072) → '5186,Brightness'
+[ui_parser] child: (0,2317) → 'Auto brightness'
+[ui_parser] child: (0,2562) → 'Screen colour mode'
+[ui_parser] OCR: (0,2751)-(1240,2772) → 'ee...'
+[ui_parser] full parse -- 12 elements (10 labeled, 9 via OCR/rid/child) from 192.168.29.48:33117
 
 //===== TERMUXFILE: --task =====
 
@@ -13253,39 +13394,5 @@ class InputManager:
 
     def __repr__(self):
         return f"InputManager(device={self.device.serial}, events={len(self.events)})"
-
-
-//===== TERMUXFILE: jarvis-agent/executor/adb_executor.py =====
-"""
-executor/adb_executor.py
-
-Thin facade — controller.py calls only this.
-Manages module-level Device + InputManager singletons.
-Swap to full DroidBot later by changing only this file.
-"""
-
-import os
-from executor.device        import Device
-from executor.input_manager import InputManager
-
-_device:  Device       = None
-_manager: InputManager = None
-
-def _get_manager(adb_device: str) -> InputManager:
-    global _device, _manager
-    if _manager is None or _device.serial != adb_device:
-        _device  = Device(
-            device_serial = adb_device,
-            output_dir    = os.path.join(os.path.dirname(__file__), "..", "screenshots")
-        )
-        _manager = InputManager(_device, event_interval=0.5)
-    return _manager
-
-def execute(action: dict, ui_elements: list, adb_device: str) -> bool:
-    return _get_manager(adb_device).execute_action(action, ui_elements)
-
-def get_device(adb_device: str) -> Device:
-    _get_manager(adb_device)
-    return _device
 
 

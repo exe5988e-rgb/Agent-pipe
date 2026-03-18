@@ -4570,6 +4570,11 @@ if __name__ == "__main__":
     "to": "91b98e24a7db",
     "count": 1,
     "last_seen": 1773849231.4003282
+  },
+  "b18147a134e5|tap:Books": {
+    "to": "e921768c497c",
+    "count": 1,
+    "last_seen": 1773849832.5733447
   }
 }
 
@@ -10080,6 +10085,151 @@ RuntimeError: No LLM backend available.
 [parser] DEBUG normalized: 'tap 21'
 [parser] INFO parsed 'tap 21' -> {'action': 'tap', 'target': 21}
 
+########################################################
+  JARVIS  |  Search for Spotify on Play Store
+  Device : 192.168.29.48:33117
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 535 screens (0 tainted), 650 transitions
+    whatsapp             175 screens
+    chrome               112 screens
+    youtube              104 screens
+    vending              43 screens
+    termux               25 screens
+    settings             25 screens
+    launcher             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+    notificationmanager  1 screens
+    battery              1 screens
+  TransitionMemory: 600 transitions (281 confirmed, threshold=2)
+[init] task_apps: ['spotify', 'play store']
+[init] max_skill_steps: 20 (threshold: 12)
+
+========================================================
+  STEP 1  |  Search for Spotify on Play Store
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3301445 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Cloudy'
+[ui_parser] OCR: (841,1475)-(1009,1671) → 'lt'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.launcher/.Launcher hash=886541b5d528 elements=26
+[step] UI: ['Clock', '21', ':', '33', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (1025dd6b)
+[OPT4v2] launcher -> launching spotify (com.spotify.music)
+[llm] OPT4v2 am start: com.spotify.music
+[mem] invalidated com.android.launcher/.Launcher
+
+========================================================
+  STEP 2  |  Search for Spotify on Play Store
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3301737 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Cloudy'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.launcher/.Launcher hash=886541b5d528 elements=26
+[step] UI: ['Clock', '21', ':', '33', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (1025dd6b)
+[OPT4v2] launcher -> launching play store (com.android.vending)
+[llm] OPT4v2 am start: com.android.vending
+
+========================================================
+  STEP 3  |  Search for Spotify on Play Store
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1104319 bytes)
+[ui_parser] activity=com.android.vending/.AssetBrowserActivity
+[ui_parser] signal='com.android.vending/.AssetBrowserActivity'
+[mem] miss (unknown): com.android.vending/.AssetBrowserActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (862,153) → 'Show notifications and offers. 2 new notifications available.'
+[ui_parser] child: (0,335) → 'For you'
+[ui_parser] child: (270,335) → 'Top charts'
+[ui_parser] child: (659,335) → 'Children'
+[ui_parser] child: (995,335) → 'Premium'
+[ui_parser] child: (42,559) → 'Tomb Raider™\nFeral Interactive\nStar rating: 4.8\nRated for 16+'
+[ui_parser] child: (1197,559) → 'Brave the cold'
+[ui_parser] child: (42,1071) → 'Tomb Raider™\nFeral Interactive\nStar rating: 4.8\nRated for 16+'
+[ui_parser] child: (848,1138) → 'Buy for ₹549.00'
+[ui_parser] child: (21,1646) → 'Crunchyroll: Anime Streaming\nEntertainment\nStreaming content\nStar rating: 4.4\n74 MB'
+[ui_parser] child: (21,1962) → 'Groww Stock, Mutual Fund, Gold\nFinance\nStock\nFund\nStar rating: 4.8\n43 MB\nVerified'
+[ui_parser] child: (21,2278) → 'Facebook\nSocial\nNetworking\nStar rating: 4.4\n92 MB'
+[ui_parser] child: (0,2492) → 'Games'
+[ui_parser] child: (310,2492) → 'Apps'
+[ui_parser] child: (620,2492) → 'Search'
+[ui_parser] child: (930,2492) → 'Books'
+[ui_parser] full parse -- 22 elements (17 labeled, 16 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.vending/.AssetBrowserActivity hash=d4938b0db994 elements=22
+[step] UI: ['Show notifications and offers. 2 new notifications available.', 'element_2', 'For you', 'Top charts', 'Children', 'Premium', 'Tomb Raider™\nFeral Interactive\nStar rating: 4.8\nRated for 16+', 'Brave the cold']
+[map] new screen: vending_assetbrowseractivity (b18147a134e5)
+[tm] transition changed: 1025dd6b857e|opt4_launch:play store 73181ac3 -> b18147a1
+[map] transition: launcher_launcher --[opt4_launch:play store]--> vending_assetbrowseractivity
+[map] screen: vending_assetbrowseractivity (b18147a1)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 21'
+[step] LLM: 'tap 21'
+[step] action: {'action': 'tap', 'target': 21}
+[input] dispatching: TouchEvent(x=775, y=2604)
+[input] dispatching: TouchEvent(x=775, y=2604)
+[input] adb -s 192.168.29.48:33117 shell input tap 775 2604
+[mem] invalidated com.android.vending/.AssetBrowserActivity
+[step] step=3/10 done=False history=['opt4_launch:spotify', 'opt4_launch:play store', 'tap [21] Search']
+
+========================================================
+  STEP 4  |  Search for Spotify on Play Store
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (622275 bytes)
+[ui_parser] activity=com.android.vending/.AssetBrowserActivity
+[ui_parser] signal='com.android.vending/.AssetBrowserActivity'
+[mem] miss (unknown): com.android.vending/.AssetBrowserActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (42,153) → 'Search Apps & Games'
+[ui_parser] child: (70,153) → 'Search Google Play'
+[ui_parser] child: (806,153) → 'Voice search'
+[ui_parser] child: (42,517) → 'Bike racing games'
+[ui_parser] child: (648,517) → 'Train station games'
+[ui_parser] child: (648,748) → 'Bus games'
+[ui_parser] child: (648,979) → 'Realistic games'
+[ui_parser] child: (21,1399) → 'Instagram\nInstalled'
+[ui_parser] child: (310,1399) → 'Crunchyroll: Anime Streaming\nStar rating: 4.4'
+[ui_parser] child: (599,1399) → 'Unacademy: Learn & Crack Exams\nStar rating: 4.0'
+[ui_parser] child: (888,1399) → 'WePlay-Game & Party\nStar rating: 4.2'
+[ui_parser] child: (1177,1399) → 'Free Fire MAX x JUJUTSU KAISEN\nStar rating: 4.3'
+[ui_parser] child: (42,2079) → 'Police games'
+[ui_parser] child: (639,2079) → 'Hunting games'
+[ui_parser] child: (42,2247) → 'Fashion games'
+[ui_parser] child: (680,2247) → 'Watch videos'
+[ui_parser] child: (0,2492) → 'Games'
+[ui_parser] child: (310,2492) → 'Apps'
+[ui_parser] child: (620,2492) → 'Search'
+[ui_parser] child: (930,2492) → 'Books'
+[ui_parser] full parse -- 22 elements (21 labeled, 20 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.vending/.AssetBrowserActivity hash=ae0d36e3b20c elements=22
+[step] UI: ['Search Apps & Games', 'Search Google Play', 'Voice search', 'element_4', 'Bike racing games', 'Train station games', 'Bus games', 'Realistic games']
 
 //===== TERMUXFILE: --task =====
 
@@ -12270,44 +12420,5 @@ if __name__ == '__main__':
     except KeyboardInterrupt:
         print("\n🛑 Shutting down...")
         server.shutdown()
-
-
-//===== TERMUXFILE: test/extract_ai_output.sh =====
-#!/data/data/com.termux/files/usr/bin/bash
-# Extract all files from ai-output.txt
-# Usage: bash ~/extract_ai_output.sh [/path/to/ai-output.txt]
-INPUT="${1:-$HOME/ai-output.txt}"
-BASE="$HOME"
-[ -f "$INPUT" ] || { echo "Not found: $INPUT"; exit 1; }
-echo "Extracting: $INPUT"
-current_file=""; current_content=""; count=0
-while IFS= read -r line || [ -n "$line" ]; do
-    if [[ "$line" =~ ^=====\ FILE:\ (.+)\ =====$ ]]; then
-        if [ -n "$current_file" ] && [ -n "$current_content" ]; then
-            dest="$BASE/$current_file"
-            mkdir -p "$(dirname "$dest")"
-            printf '%s\n' "$current_content" > "$dest"
-            [[ "$dest" == *.sh ]] && chmod +x "$dest"
-            echo "  ✓ $current_file"; count=$((count+1))
-        fi
-        current_file="${BASH_REMATCH[1]}"; current_content=""
-    elif [ -n "$current_file" ]; then
-        [ -z "$current_content" ] && current_content="$line" \
-            || current_content="$current_content"$'\n'"$line"
-    fi
-done < "$INPUT"
-if [ -n "$current_file" ] && [ -n "$current_content" ]; then
-    dest="$BASE/$current_file"; mkdir -p "$(dirname "$dest")"
-    printf '%s\n' "$current_content" > "$dest"
-    [[ "$dest" == *.sh ]] && chmod +x "$dest"
-    echo "  ✓ $current_file"; count=$((count+1))
-fi
-echo ""
-echo "Extracted $count files."
-echo ""
-echo "Start system:"
-echo "  bash ~/jarvis_server_init.sh"
-echo "  bash ~/jarvis_executor.sh &"
-echo "  cd ~/jarvis-agent && python3 agent/controller.py"
 
 

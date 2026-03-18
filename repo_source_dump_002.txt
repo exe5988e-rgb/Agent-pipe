@@ -69879,6 +69879,146 @@
           "resource_id": ""
         }
       ]
+    },
+    "bcfd9287cbfa": {
+      "screen_id": "bcfd9287cbfa",
+      "package": "com.oplus.wirelesssettings",
+      "activity": "com.oplus.wirelesssettings/com.android.settings.SettingsActivity",
+      "name": "wirelesssettings_settingsactivity",
+      "labels": [
+        "Available networks",
+        "Navigate up",
+        "Scan",
+        "More options",
+        "Wi-Fi",
+        "Wi-Fi Assistant",
+        "Wi-Fi details",
+        "Wi-Fi details",
+        "Refresh",
+        "JioFiber-bfeMq",
+        "Wi-Fi details",
+        "JioFiber-bfeMq_5G",
+        "Wi-Fi details",
+        "Wi-Fi details",
+        "Wi-Fi details",
+        "Add network"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Available networks",
+          "x": 620,
+          "y": 1455,
+          "cls": "androidx.recyclerview.widget.RecyclerView",
+          "resource_id": "com.oplus.wirelesssettings:id/recycler_view"
+        },
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 230,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.oplus.wirelesssettings:id/coui_toolbar_back_view"
+        },
+        {
+          "text": "Scan",
+          "x": 974,
+          "y": 230,
+          "cls": "android.widget.Button",
+          "resource_id": "com.oplus.wirelesssettings:id/scan_entry"
+        },
+        {
+          "text": "More options",
+          "x": 1142,
+          "y": 230,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Wi-Fi",
+          "x": 620,
+          "y": 450,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Wi-Fi Assistant",
+          "x": 620,
+          "y": 625,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Wi-Fi details",
+          "x": 620,
+          "y": 991,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Wi-Fi details",
+          "x": 1100,
+          "y": 991,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.oplus.wirelesssettings:id/pref_item_arrow"
+        },
+        {
+          "text": "Refresh",
+          "x": 1054,
+          "y": 1212,
+          "cls": "android.widget.Button",
+          "resource_id": "com.oplus.wirelesssettings:id/text_button"
+        },
+        {
+          "text": "JioFiber-bfeMq",
+          "x": 620,
+          "y": 1374,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Wi-Fi details",
+          "x": 1100,
+          "y": 1378,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.oplus.wirelesssettings:id/pref_item_arrow"
+        },
+        {
+          "text": "JioFiber-bfeMq_5G",
+          "x": 620,
+          "y": 1582,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Wi-Fi details",
+          "x": 1100,
+          "y": 1582,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.oplus.wirelesssettings:id/pref_item_arrow"
+        },
+        {
+          "text": "Wi-Fi details",
+          "x": 620,
+          "y": 1786,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Wi-Fi details",
+          "x": 1100,
+          "y": 1786,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.oplus.wirelesssettings:id/pref_item_arrow"
+        },
+        {
+          "text": "Add network",
+          "x": 620,
+          "y": 1975,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -70472,7 +70612,8 @@
     "b94fe430b394|tap:You": "caf601112185",
     "caf601112185|tap:JensJulius Tejlgaard has new content": "6dd8030404cd",
     "6dd8030404cd|tap:Edit suggestion mrbeast": "571ebe27696a",
-    "5731aaff4c94|opt4_launch:settings": "edd4f565ccb7"
+    "5731aaff4c94|opt4_launch:settings": "edd4f565ccb7",
+    "edd4f565ccb7|tap:Not connected": "bcfd9287cbfa"
   }
 }
 

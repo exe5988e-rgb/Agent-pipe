@@ -4466,6 +4466,9 @@ if __name__ == "__main__":
 [2/33] [1★] [youtube] Open YouTube
 [20:50:01]   max_steps=5  skill_threshold=12  skills=0
 [20:50:22]   PASS  18.6s
+[20:50:28] 
+[3/33] [1★] [settings] Open Settings
+[20:50:28]   max_steps=5  skill_threshold=12  skills=0
 
 
 //===== TERMUXFILE: tap_logger.py =====

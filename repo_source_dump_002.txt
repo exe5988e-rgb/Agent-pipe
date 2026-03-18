@@ -68215,7 +68215,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 11,
+      "visits": 12,
       "tainted": false,
       "elements": [
         {
@@ -69903,7 +69903,7 @@
         "Wi-Fi details",
         "Add network"
       ],
-      "visits": 2,
+      "visits": 3,
       "tainted": false,
       "elements": [
         {

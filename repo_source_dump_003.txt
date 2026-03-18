@@ -4273,8 +4273,8 @@ if __name__ == "__main__":
   },
   "5731aaff4c94|opt4_launch:settings": {
     "to": "bcfd9287cbfa",
-    "count": 1,
-    "last_seen": 1773841028.1978598
+    "count": 2,
+    "last_seen": 1773841082.7698858
   },
   "edd4f565ccb7|tap:Not connected": {
     "to": "bcfd9287cbfa",

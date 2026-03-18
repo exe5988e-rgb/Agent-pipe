@@ -95021,6 +95021,314 @@
           "resource_id": "com.google.android.youtube:id/edit_suggestion"
         }
       ]
+    },
+    "92dea947f771": {
+      "screen_id": "92dea947f771",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Navigate up",
+        "Clear",
+        "Voice search",
+        "Cast",
+        "More options",
+        "mortals funk remix",
+        "All",
+        "Shorts",
+        "Videos",
+        "Unwatched",
+        "Watched",
+        "LXNGVX, Warriyo - Mortals Funk Remix (Official Music) \u2013 2 minutes, 27 seconds \u2013 Go to channel LXNGVX \u2013 LXNGVX - 12 million views - 1 year ago \u2013 play video",
+        "Expand Mini Player",
+        "Majed reacts to LXNGVX - Mortals (brazilian PHONK), 6.5 million views, TheonlyMajed, 1 year ago \u2013 play Short",
+        "Mortals Funk Remix (Super Slowed) \ud83d\udde3\ufe0f\ud83c\udfa7| Original vs FUNK \ud83d\udde3\ufe0f\ud83c\udfa7, 57 thousand views, Push Music Songs, 9 months ago \u2013 play Short",
+        "More actions",
+        "More actions",
+        "Tap to mute or unmute playback audio",
+        "Go to channel TheonlyMajed",
+        "Go to channel Push Music Songs",
+        "6.5m views \u00b7 1 yr ago",
+        "57k views \u00b7 9 mo ago",
+        "NCS - Mortals Funk Remix is \ud83d\udd25\ud83d\udd25, 280 thousand views, Trihoof, 1 year ago \u2013 play Short",
+        "NCS - Mortals Funk Remix is \ud83d\udd25\ud83d\udd25, 280 thousand views, Trihoof, 1 year ago \u2013 play Short",
+        "MORTALS FUNK REMIX \ud83d\udd25\ud83e\udd2b \u2022 #funk #phonk #phonkdrift #phonkmusic #bass #aveeplayer, 514 thousand views, BAKA K E N, 1 year ago \u2013 play Short",
+        "MORTALS FUNK REMIX \ud83d\udd25\ud83e\udd2b \u2022 #funk #phonk #phonkdrift #phonkmusic #bass #aveeplayer, 514 thousand views, BAKA K E N, 1 year ago \u2013 play Short",
+        "More actions",
+        "More actions",
+        "Go to channel Trihoof",
+        "Go to channel BAKA K E N"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Clear",
+          "x": 680,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/search_clear"
+        },
+        {
+          "text": "Voice search",
+          "x": 848,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/voice_search"
+        },
+        {
+          "text": "Cast",
+          "x": 1016,
+          "y": 223,
+          "cls": "android.widget.Button",
+          "resource_id": "com.google.android.youtube:id/mdx_entry_point_button"
+        },
+        {
+          "text": "More options",
+          "x": 1170,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "mortals funk remix",
+          "x": 396,
+          "y": 223,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.google.android.youtube:id/search_query"
+        },
+        {
+          "text": "All",
+          "x": 126,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 338,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Videos",
+          "x": 598,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Unwatched",
+          "x": 908,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Watched",
+          "x": 1170,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "LXNGVX, Warriyo - Mortals Funk Remix (Official Music) \u2013 2 minutes, 27 seconds \u2013 Go to channel LXNGVX \u2013 LXNGVX - 12 million views - 1 year ago \u2013 play video",
+          "x": 620,
+          "y": 1623,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results"
+        },
+        {
+          "text": "Expand Mini Player",
+          "x": 324,
+          "y": 899,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/player_overlays"
+        },
+        {
+          "text": "Majed reacts to LXNGVX - Mortals (brazilian PHONK), 6.5 million views, TheonlyMajed, 1 year ago \u2013 play Short",
+          "x": 324,
+          "y": 992,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Mortals Funk Remix (Super Slowed) \ud83d\udde3\ufe0f\ud83c\udfa7| Original vs FUNK \ud83d\udde3\ufe0f\ud83c\udfa7, 57 thousand views, Push Music Songs, 9 months ago \u2013 play Short",
+          "x": 916,
+          "y": 992,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 550,
+          "y": 547,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 1142,
+          "y": 547,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Tap to mute or unmute playback audio",
+          "x": 536,
+          "y": 694,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/audio_toggle"
+        },
+        {
+          "text": "Go to channel TheonlyMajed",
+          "x": 105,
+          "y": 1413,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Go to channel Push Music Songs",
+          "x": 697,
+          "y": 1413,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "6.5m views \u00b7 1 yr ago",
+          "x": 392,
+          "y": 1449,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "57k views \u00b7 9 mo ago",
+          "x": 984,
+          "y": 1449,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "NCS - Mortals Funk Remix is \ud83d\udd25\ud83d\udd25, 280 thousand views, Trihoof, 1 year ago \u2013 play Short",
+          "x": 309,
+          "y": 2093,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "NCS - Mortals Funk Remix is \ud83d\udd25\ud83d\udd25, 280 thousand views, Trihoof, 1 year ago \u2013 play Short",
+          "x": 324,
+          "y": 2052,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "MORTALS FUNK REMIX \ud83d\udd25\ud83e\udd2b \u2022 #funk #phonk #phonkdrift #phonkmusic #bass #aveeplayer, 514 thousand views, BAKA K E N, 1 year ago \u2013 play Short",
+          "x": 931,
+          "y": 2093,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "MORTALS FUNK REMIX \ud83d\udd25\ud83e\udd2b \u2022 #funk #phonk #phonkdrift #phonkmusic #bass #aveeplayer, 514 thousand views, BAKA K E N, 1 year ago \u2013 play Short",
+          "x": 916,
+          "y": 2052,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 550,
+          "y": 1607,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 1142,
+          "y": 1607,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Go to channel Trihoof",
+          "x": 105,
+          "y": 2473,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Go to channel BAKA K E N",
+          "x": 697,
+          "y": 2473,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "280k views \u00b7 1 yr ago",
+          "x": 390,
+          "y": 2509,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "514k views \u00b7 1 yr ago",
+          "x": 982,
+          "y": 2509,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Home",
+          "x": 124,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 372,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Create",
+          "x": 620,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscriptions: New content is available",
+          "x": 868,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "You",
+          "x": 1116,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "LXNGVX, Warriyo - Mortals Funk Remix (Official Music) \u2013 2 minutes, 27 seconds \u2013 Go to channel LXNGVX \u2013 LXNGVX - 12 million views - 1 year ago \u2013 play video",
+          "x": 620,
+          "y": 2725,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -95747,7 +96055,8 @@
     "5d3c6ae315c5|opt4_launch:youtube": "7503cdb792c3",
     "219af60faf7e|tap:filters": "8956165ab3cb",
     "8956165ab3cb|type": "87fee6983a2f",
-    "3b3035cfafec|tap:More": "aab361294bb9"
+    "3b3035cfafec|tap:More": "aab361294bb9",
+    "aab361294bb9|tap:Edit suggestion mortals funk remix": "92dea947f771"
   }
 }
 

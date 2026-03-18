@@ -4340,6 +4340,11 @@ if __name__ == "__main__":
     "to": "2a3055394a68",
     "count": 1,
     "last_seen": 1773841666.4618173
+  },
+  "2a3055394a68|tap:Refine search to 'spotify'": {
+    "to": "815905513523",
+    "count": 1,
+    "last_seen": 1773841697.2296107
   }
 }
 

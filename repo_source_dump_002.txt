@@ -71983,6 +71983,202 @@
           "resource_id": ""
         }
       ]
+    },
+    "815905513523": {
+      "screen_id": "815905513523",
+      "package": "com.android.vending",
+      "activity": "com.android.vending/.AssetBrowserActivity",
+      "name": "vending_assetbrowseractivity",
+      "labels": [
+        "spotify",
+        "Navigate up",
+        "Search Google Play",
+        "Voice Search",
+        "More options",
+        "Spotify: Music and Podcasts\nSpotify AB\nContains ads",
+        "Install",
+        "Average rating 4.1 stars in 33 million reviews",
+        "Content rating Rated for 12+",
+        "35 MB",
+        "Can I download music and podcasts for offline listening?",
+        "Install on more devices",
+        "Install on more devices",
+        "Average rating 4.1 stars in 33 million reviews",
+        "Content rating Rated for 12+",
+        "35 MB",
+        "Ask a question about this app",
+        "Can I download music and podcasts for offline listening?",
+        "What types of audio content are available besides music?",
+        "Games",
+        "Apps",
+        "Search",
+        "Books"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "spotify",
+          "x": 536,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Search Google Play",
+          "x": 974,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Voice Search",
+          "x": 1142,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "More options",
+          "x": 1153,
+          "y": 435,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Spotify: Music and Podcasts\nSpotify AB\nContains ads",
+          "x": 641,
+          "y": 833,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Install",
+          "x": 1030,
+          "y": 647,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Average rating 4.1 stars in 33 million reviews",
+          "x": 191,
+          "y": 935,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Content rating Rated for 12+",
+          "x": 685,
+          "y": 935,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "35 MB",
+          "x": 1135,
+          "y": 935,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Can I download music and podcasts for offline listening?",
+          "x": 620,
+          "y": 1855,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Install on more devices",
+          "x": 995,
+          "y": 1359,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Install on more devices",
+          "x": 1114,
+          "y": 1359,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Average rating 4.1 stars in 33 million reviews",
+          "x": 191,
+          "y": 1647,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Content rating Rated for 12+",
+          "x": 685,
+          "y": 1647,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "35 MB",
+          "x": 1135,
+          "y": 1647,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Ask a question about this app",
+          "x": 620,
+          "y": 2039,
+          "cls": "android.widget.EditText",
+          "resource_id": ""
+        },
+        {
+          "text": "Can I download music and podcasts for offline listening?",
+          "x": 662,
+          "y": 2235,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "What types of audio content are available besides music?",
+          "x": 662,
+          "y": 2403,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Games",
+          "x": 155,
+          "y": 2604,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Apps",
+          "x": 465,
+          "y": 2604,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Search",
+          "x": 775,
+          "y": 2604,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Books",
+          "x": 1085,
+          "y": 2604,
+          "cls": "android.view.View",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -72589,7 +72785,8 @@
     "5731aaff4c94|opt4_launch:play store": "c3c160d6730f",
     "c3c160d6730f|tap:Books": "e921768c497c",
     "e921768c497c|tap:Voice search": "fc4050d517f1",
-    "fc4050d517f1|type": "2a3055394a68"
+    "fc4050d517f1|type": "2a3055394a68",
+    "2a3055394a68|tap:Refine search to 'spotify'": "815905513523"
   }
 }
 

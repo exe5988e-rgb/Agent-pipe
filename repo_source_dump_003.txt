@@ -4285,6 +4285,9 @@ if __name__ == "__main__":
 [8/33] [2★] [whatsapp] Open WhatsApp and go to Calls tab
 [18:55:47]   max_steps=8  skill_threshold=12  skills=0
 [18:58:03]   PASS  132.7s
+[18:58:08] 
+[9/33] [2★] [whatsapp] Open WhatsApp and go to Updates tab
+[18:58:08]   max_steps=8  skill_threshold=12  skills=0
 
 
 //===== TERMUXFILE: tap_logger.py =====

@@ -4922,6 +4922,7 @@ if __name__ == "__main__":
 [21:56:48] 
 [29/33] [4★] [youtube] Play Warriyo Mortals on YouTube
 [21:56:48]   max_steps=12  skill_threshold=12  skills=7
+[22:05:14]   PASS  503.0s
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -6063,7 +6064,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-18T21:56:43.210957",
+  "run_at": "2026-03-18T22:05:14.415555",
   "skills_before": 0,
   "skills_current": 7,
   "results": [
@@ -6316,6 +6317,15 @@ if __name__ == "__main__":
       "difficulty": 4,
       "success": true,
       "elapsed_s": 95.3,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Play Warriyo Mortals on YouTube",
+      "category": "youtube",
+      "difficulty": 4,
+      "success": true,
+      "elapsed_s": 503.0,
       "error": null,
       "retried": false
     }

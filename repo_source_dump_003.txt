@@ -3752,9 +3752,9 @@ if __name__ == "__main__":
     "last_seen": 1773808732.2304149
   },
   "17d655c4f84a|opt4_launch:whatsapp": {
-    "to": "9630709f3ce0",
-    "count": 5,
-    "last_seen": 1773813057.5695674
+    "to": "6dcc835738aa",
+    "count": 1,
+    "last_seen": 1773839892.156853
   },
   "38208cfc0ea1|back": {
     "to": "955fca488005",

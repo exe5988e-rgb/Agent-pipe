@@ -3668,8 +3668,8 @@ if __name__ == "__main__":
   },
   "f358bf809a6b|type": {
     "to": "bba95fb596dd",
-    "count": 1,
-    "last_seen": 1773796040.4947584
+    "count": 2,
+    "last_seen": 1773796047.5319917
   }
 }
 

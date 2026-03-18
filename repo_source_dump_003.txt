@@ -4403,6 +4403,7 @@ if __name__ == "__main__":
 [19:13:32] 
 [19/33] [2★] [chrome] Search for weather today in Chrome
 [19:13:32]   max_steps=10  skill_threshold=12  skills=4
+[19:15:35]   PASS  118.9s
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -5544,9 +5545,9 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-18T19:13:27.874546",
+  "run_at": "2026-03-18T19:15:35.018165",
   "skills_before": 0,
-  "skills_current": 4,
+  "skills_current": 5,
   "results": [
     {
       "task": "Open WhatsApp",
@@ -5709,6 +5710,15 @@ if __name__ == "__main__":
       "elapsed_s": 114.1,
       "error": null,
       "retried": false
+    },
+    {
+      "task": "Search for weather today in Chrome",
+      "category": "chrome",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 118.9,
+      "error": null,
+      "retried": false
     }
   ]
 }
@@ -5779,6 +5789,26 @@ if __name__ == "__main__":
       {
         "action": "tap",
         "target": "New tab"
+      },
+      {
+        "action": "done"
+      }
+    ],
+    "uses": 0,
+    "version": 3
+  },
+  {
+    "pattern": "search for in chrome",
+    "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+    "task_example": "Search for weather today in Chrome",
+    "steps": [
+      {
+        "action": "tap",
+        "target": "Search Google or type URL"
+      },
+      {
+        "action": "tap",
+        "target": "Refine: weather today"
       },
       {
         "action": "done"
@@ -8550,7 +8580,62 @@ nohup: ignoring input
 [ui_parser] child: (885,706) → 'Videos'
 [ui_parser] child: (1127,706) → 'Forums'
 [ui_parser] child: (0,877) → 'Home Rohraband, Jharkhand'
-[ui_parser] child: (0,1182) → 'Current Dhanbad weather condition is Sunny with real-time temperature (36°C), humidity 13%, wind 10.8km/h, pressure (1007mb), UV (6.9), visibility (10km) in\xa0...'
+[ui_parser] child: (0,1182) → 'Current Dhanbad weather condition is Sunny with real-time temperature (36°C), humidity 13%, wind 10.8km/h, pressure (1007mb), UV (6.9), visibility (10km) in\xa0...'[parser] DEBUG normalized: 'done'
+[parser] INFO parsed 'done' -> {'action': 'done'}
+
+[ui_parser] child: (0,1182) → 'More options for Weather'
+[ui_parser] child: (0,1378) → 'Wed, Partly cloudy, High of 36, Low of 21, Selected'
+[ui_parser] child: (56,1392) → 'Now, 26°C, Mostly cloudy, Feels like 26°C'
+[ui_parser] child: (0,1721) → '11\u202fpm,23°C,Partly cloudy'
+[ui_parser] child: (0,2508) → 'Wed, Partly cloudy, High of 36, Low of 21, Selected'
+[ui_parser] child: (56,2508) → 'Wed, Partly cloudy, High of 36, Low of 21, Selected'
+[ui_parser] child: (294,2508) → 'Thu, Partly sunny, High of 34, Low of 21'
+[ui_parser] child: (770,2508) → 'Sat, Rain, High of 28, Low of 17'
+[ui_parser] child: (1008,2508) → 'Sun, Partly sunny, High of 29, Low of 18'
+[ui_parser] full parse -- 43 elements (35 labeled, 20 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=61f602daf47e elements=43
+[step] UI: ['Open the homepage', 'Connection is secure', 'google.com/search?q=weather+today&oq=&gs_lcrp=EgZjaHJvbWUqCQgEECMYJxjqAjIPCAAQIxgnGOoCGPAFGJ4GMgkIARAjGCcY6gIyDwgCECMYJxjqAhjwBRieBjIJCAMQIxgnGOoCMgkIBBAjGCcY', 'See 29 tabs', 'Customise and control Google Chrome', 'Current Dhanbad weather condition is Sunny with real-time temperature (36°C), humidity 13%, wind 10.8km/h, pressure (1007mb), UV (6.9), visibility (10km) in\xa0...', 'Google', 'Google Account: Amir Shams (amirshamse8@gmail.com)']
+[map] new screen: chrome_main (99751df5ec71)
+[map] transition: chrome_main --[tap:Refine: weather today]--> chrome_main
+[map] screen: chrome_main (99751df5)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'done'
+[step] LLM: 'done'
+[step] action: {'action': 'done'}
+[input] DONE — no dispatch
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[skill] learned: 'search for in chrome'  (3 steps)  [Main]
+[step] step=4/10 done=True history=['opt4_launch:chrome', 'tap [6] Search Google or type URL', 'tap [18] Refine: weather today', 'done']
+
+[controller] done in 4 steps
+
+[controller] history:
+  1. opt4_launch:chrome
+  2. tap [6] Search Google or type URL
+  3. tap [18] Refine: weather today
+  4. done
+
+  Screen Map: 483 screens (0 tainted), 600 transitions
+    whatsapp             168 screens
+    chrome               106 screens
+    youtube              88 screens
+    vending              30 screens
+    termux               25 screens
+    launcher             22 screens
+    settings             21 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               2 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+  TransitionMemory: 550 transitions (280 confirmed, threshold=2)
+
 
 //===== TERMUXFILE: --task =====
 
@@ -13359,170 +13444,5 @@ class Device:
 
     def __repr__(self):
         return f"Device({self.serial})"
-
-
-//===== TERMUXFILE: jarvis-agent/executor/input_manager.py =====
-"""
-executor/input_manager.py
-
-Extracted from DroidBot/droidbot/input_manager.py
-Source: https://github.com/honeynet/droidbot
-
-What we keep:
-  __init__    device reference, event_interval
-  add_event   dispatch one event to device + sleep (DroidBot pattern)
-
-What we drop (all require exploration policies we don't use):
-  get_input_policy (UtgBased*, Greedy*, Replay*, Manual*, Monkey, LLM)
-  start / stop (policy loop runner)
-  app, policy_name, random_input, script_path, profiling_method
-
-New addition:
-  execute_action(action_dict, ui_elements) — agent loop interface.
-  Maps action dicts from action_parser → InputEvent → add_event.
-"""
-
-import time
-from executor.input_event import (
-    InputEvent, KeyEvent, TouchEvent, SwipeEvent, SetTextEvent, from_action
-)
-from executor.device import Device
-
-
-class InputManager:
-    """
-    Dispatches InputEvent objects to device via ADB.
-    DroidBot InputManager interface (policy-free subset).
-    """
-
-    def __init__(self, device: Device, event_interval: float = 0.5):
-        """
-        DroidBot InputManager.__init__ (subset).
-        :param device: Device instance
-        :param event_interval: seconds to sleep after each event (DroidBot default=1s)
-        """
-        self.device         = device
-        self.event_interval = event_interval
-        self.events         = []   # DroidBot keeps event history
-
-    def add_event(self, event: InputEvent) -> bool:
-        """
-        DroidBot InputManager.add_event():
-          1. Appends to self.events
-          2. Calls event_log.start() → device.send_event(event)
-          3. Sleeps event_interval
-          4. Calls event_log.stop()
-
-        We skip EventLog (requires App + DeviceState), keep the core:
-          device.send_event(event) + sleep.
-        """
-        if event is None:
-            return False
-
-        self.events.append(event)
-
-        import subprocess
-        cmd = ["adb", "-s", self.device.serial, "shell"] + event.to_adb_cmd()
-        print(f"[input] {' '.join(cmd)}")
-
-        try:
-            result = subprocess.run(cmd, capture_output=True, text=True, timeout=10)
-            if result.returncode != 0 and result.stderr:
-                print(f"[input] stderr: {result.stderr.strip()}")
-            success = result.returncode == 0
-        except subprocess.TimeoutExpired:
-            print(f"[input] timeout: {event}")
-            success = False
-        except Exception as e:
-            print(f"[input] error: {e}")
-            success = False
-
-        time.sleep(self.event_interval)
-        return success
-
-    # ── Typed helpers (convenience, not in DroidBot InputManager) ────────────
-
-    def tap(self, x: int, y: int) -> bool:
-        return self.add_event(TouchEvent(x=x, y=y))
-
-    def swipe(self, start_x, start_y, end_x, end_y, duration=400) -> bool:
-        return self.add_event(SwipeEvent(
-            start_x=start_x, start_y=start_y,
-            end_x=end_x, end_y=end_y, duration=duration))
-
-    def key(self, name: str) -> bool:
-        return self.add_event(KeyEvent(name=name))
-
-    def type_text(self, text: str) -> bool:
-        return self.add_event(SetTextEvent(text=text))
-
-    def back(self)  -> bool: return self.key("BACK")
-    def home(self)  -> bool: return self.key("HOME")
-    def enter(self) -> bool: return self.key("ENTER")
-
-    # ── Agent interface ───────────────────────────────────────────────────────
-
-    def execute_action(self, action: dict, ui_elements: list) -> bool:
-        """
-        Execute a parsed action dict from action_parser.
-        This is the primary interface called by adb_executor / controller.
-
-        Args:
-            action      : {"action": "tap", "target": 1} etc.
-            ui_elements : current UI element list {id, text, x, y}
-
-        Returns:
-            True if dispatched, False if skipped
-        """
-        act = action.get("action", "").lower()
-
-        if act == "done":
-            print("[input] DONE — no dispatch")
-            return False
-
-        event = from_action(action, ui_elements)
-        if event is None:
-            print(f"[input] cannot build event from: {action}")
-            return False
-
-        print(f"[input] dispatching: {event}")
-        return self.add_event(event)
-
-    def __repr__(self):
-        return f"InputManager(device={self.device.serial}, events={len(self.events)})"
-
-
-//===== TERMUXFILE: jarvis-agent/executor/adb_executor.py =====
-"""
-executor/adb_executor.py
-
-Thin facade — controller.py calls only this.
-Manages module-level Device + InputManager singletons.
-Swap to full DroidBot later by changing only this file.
-"""
-
-import os
-from executor.device        import Device
-from executor.input_manager import InputManager
-
-_device:  Device       = None
-_manager: InputManager = None
-
-def _get_manager(adb_device: str) -> InputManager:
-    global _device, _manager
-    if _manager is None or _device.serial != adb_device:
-        _device  = Device(
-            device_serial = adb_device,
-            output_dir    = os.path.join(os.path.dirname(__file__), "..", "screenshots")
-        )
-        _manager = InputManager(_device, event_interval=0.5)
-    return _manager
-
-def execute(action: dict, ui_elements: list, adb_device: str) -> bool:
-    return _get_manager(adb_device).execute_action(action, ui_elements)
-
-def get_device(adb_device: str) -> Device:
-    _get_manager(adb_device)
-    return _device
 
 

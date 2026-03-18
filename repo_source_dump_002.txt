@@ -77287,7 +77287,7 @@
         "Sound & vibration",
         "Notifications & Quick Settings"
       ],
-      "visits": 2,
+      "visits": 3,
       "tainted": false,
       "elements": [
         {
@@ -79389,7 +79389,7 @@
     "6dd8030404cd|tap:Edit suggestion mrbeast": "571ebe27696a",
     "5731aaff4c94|opt4_launch:settings": "bcfd9287cbfa",
     "edd4f565ccb7|tap:Not connected": "bcfd9287cbfa",
-    "bcfd9287cbfa|tap:Scan": "edd4f565ccb7",
+    "bcfd9287cbfa|tap:Scan": "2c1be995ec82",
     "5731aaff4c94|opt4_launch:chrome": "99751df5ec71",
     "0dc27a148200|tap:See 28 tabs": "550b970f5034",
     "550b970f5034|tap:Directory listing for /: [::]": "7a90c98cab66",

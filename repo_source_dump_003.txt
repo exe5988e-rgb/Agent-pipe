@@ -9171,6 +9171,8 @@ nohup: ignoring input
 [input] dispatching: TouchEvent(x=620, y=418)
 [input] adb -s 192.168.29.48:35253 shell input tap 620 418[parser] DEBUG normalized: 'tap 1'
 [parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
+[parser] DEBUG normalized: 'tap 1'
+[parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
 
 
 //===== TERMUXFILE: --task =====

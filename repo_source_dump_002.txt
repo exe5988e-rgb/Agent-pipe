@@ -23566,7 +23566,7 @@
       "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
       "name": "youtube_shell$homeactivity",
       "labels": [],
-      "visits": 39,
+      "visits": 40,
       "tainted": false,
       "elements": []
     },
@@ -73267,7 +73267,7 @@
     "5731aaff4c94|opt4_launch:whatsapp": "dea1606c9f7a",
     "6dcc835738aa|tap:You": "47d448eaba6d",
     "13dcb6504714|tap:Communities": "e593131cf7fc",
-    "5731aaff4c94|opt4_launch:youtube": "571ebe27696a",
+    "5731aaff4c94|opt4_launch:youtube": "8bd4aa0f7819",
     "b94fe430b394|tap:You": "caf601112185",
     "caf601112185|tap:JensJulius Tejlgaard has new content": "6dd8030404cd",
     "6dd8030404cd|tap:Edit suggestion mrbeast": "571ebe27696a",

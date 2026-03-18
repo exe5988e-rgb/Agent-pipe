@@ -5038,6 +5038,7 @@ if __name__ == "__main__":
 [22:17:10]   Report: /data/data/com.termux/files/home/workflows/gauntlet_report.json
 [22:17:10]   Recovering...
 [22:17:17]   Notifying Mummy...
+[22:18:03]   Notification: sent
 
 
 //===== TERMUXFILE: tap_logger.py =====

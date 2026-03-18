@@ -76092,7 +76092,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 23,
+      "visits": 24,
       "tainted": false,
       "elements": [
         {
@@ -77287,7 +77287,7 @@
         "Sound & vibration",
         "Notifications & Quick Settings"
       ],
-      "visits": 4,
+      "visits": 5,
       "tainted": false,
       "elements": [
         {

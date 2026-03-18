@@ -80683,6 +80683,194 @@
           "resource_id": ""
         }
       ]
+    },
+    "b18147a134e5": {
+      "screen_id": "b18147a134e5",
+      "package": "com.android.vending",
+      "activity": "com.android.vending/.AssetBrowserActivity",
+      "name": "vending_assetbrowseractivity",
+      "labels": [
+        "Show notifications and offers. 2 new notifications available.",
+        "element_2",
+        "For you",
+        "Top charts",
+        "Children",
+        "Premium",
+        "Tomb Raider\u2122\nFeral Interactive\nStar rating: 4.8\nRated for 16+",
+        "Brave the cold",
+        "Tomb Raider\u2122\nFeral Interactive\nStar rating: 4.8\nRated for 16+",
+        "element_10",
+        "Buy for \u20b9549.00",
+        "More options",
+        "Crunchyroll: Anime Streaming\nEntertainment\nStreaming content\nStar rating: 4.4\n74 MB",
+        "element_14",
+        "Groww Stock, Mutual Fund, Gold\nFinance\nStock\nFund\nStar rating: 4.8\n43 MB\nVerified",
+        "element_16",
+        "Facebook\nSocial\nNetworking\nStar rating: 4.4\n92 MB",
+        "element_18",
+        "Games",
+        "Apps",
+        "Search",
+        "Books"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Show notifications and offers. 2 new notifications available.",
+          "x": 946,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_2",
+          "x": 1114,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "For you",
+          "x": 135,
+          "y": 419,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Top charts",
+          "x": 464,
+          "y": 419,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Children",
+          "x": 827,
+          "y": 419,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Premium",
+          "x": 1117,
+          "y": 419,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Tomb Raider\u2122\nFeral Interactive\nStar rating: 4.8\nRated for 16+",
+          "x": 598,
+          "y": 976,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Brave the cold",
+          "x": 1218,
+          "y": 976,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Tomb Raider\u2122\nFeral Interactive\nStar rating: 4.8\nRated for 16+",
+          "x": 598,
+          "y": 1232,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_10",
+          "x": 1218,
+          "y": 1232,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Buy for \u20b9549.00",
+          "x": 1001,
+          "y": 1222,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "More options",
+          "x": 1142,
+          "y": 1548,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Crunchyroll: Anime Streaming\nEntertainment\nStreaming content\nStar rating: 4.4\n74 MB",
+          "x": 598,
+          "y": 1804,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_14",
+          "x": 1208,
+          "y": 1804,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Groww Stock, Mutual Fund, Gold\nFinance\nStock\nFund\nStar rating: 4.8\n43 MB\nVerified",
+          "x": 598,
+          "y": 2120,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_16",
+          "x": 1208,
+          "y": 2120,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Facebook\nSocial\nNetworking\nStar rating: 4.4\n92 MB",
+          "x": 598,
+          "y": 2385,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_18",
+          "x": 1208,
+          "y": 2385,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Games",
+          "x": 155,
+          "y": 2604,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Apps",
+          "x": 465,
+          "y": 2604,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Search",
+          "x": 775,
+          "y": 2604,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Books",
+          "x": 1085,
+          "y": 2604,
+          "cls": "android.view.View",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -81321,7 +81509,7 @@
     "1025dd6b857e|opt4_launch:settings": "2c1be995ec82",
     "f6f258ae70ad|tap:On": "2c1be995ec82",
     "1025dd6b857e|opt4_launch:chrome": "33be04de2357",
-    "1025dd6b857e|opt4_launch:play store": "73181ac31bda",
+    "1025dd6b857e|opt4_launch:play store": "b18147a134e5",
     "615edd0c907f|tap:Updates": "6dcc835738aa",
     "6dcc835738aa|tap:Swipe down to reveal additional actions": "462e8bea51f2",
     "0b5a9aba0337|tap:You": "0cfd22e776c8",

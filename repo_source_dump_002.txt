@@ -80039,6 +80039,328 @@
           "resource_id": ""
         }
       ]
+    },
+    "9422593bf3dd": {
+      "screen_id": "9422593bf3dd",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Open the homepage",
+        "Ahmedabad 98\u00b0 Bengaluru 79\u00b0 Bhopal 94\u00b0 Chandigarh 79\u00b0 Chennai 86\u00b0 Delhi 87\u00b0 Dispur 79\u00b0 Faridabad 90\u00b0 Guwahati 79\u00b0 Jaipur 91\u00b0 Kolkata 85\u00b0 Lucknow 94\u00b0 Ludhiana 71\u00b0 Mumbai 85\u00b0 New Delhi 89\u00b0 Patna 93\u00b0 Pune 89\u00b0 Raipur 87\u00b0 Ranchi 88\u00b0 Surat 88\u00b0. Weather News See More \u00b7 Hawaii Kona storm sweeps state with 135-mph winds,\u00a0...",
+        "Connection is secure",
+        "google.com/search?q=weather+today&oq=&gs_lcrp=EgZjaHJvbWUqCQgBECMYJxjqAjIPCAAQIxgnGOoCGPAFGJ4GMgkIARAjGCcY6gIyCQgCECMYJxjqAjIJCAMQIxgnGOoCMgkIBBAjGCcY6gIyCQgF",
+        "See 30 tabs",
+        "Customise and control Google Chrome",
+        "Ahmedabad 98\u00b0 Bengaluru 79\u00b0 Bhopal 94\u00b0 Chandigarh 79\u00b0 Chennai 86\u00b0 Delhi 87\u00b0 Dispur 79\u00b0 Faridabad 90\u00b0 Guwahati 79\u00b0 Jaipur 91\u00b0 Kolkata 85\u00b0 Lucknow 94\u00b0 Ludhiana 71\u00b0 Mumbai 85\u00b0 New Delhi 89\u00b0 Patna 93\u00b0 Pune 89\u00b0 Raipur 87\u00b0 Ranchi 88\u00b0 Surat 88\u00b0. Weather News See More \u00b7 Hawaii Kona storm sweeps state with 135-mph winds,\u00a0...",
+        "Google",
+        "Google Account: Amir Shams (amirshamse8@gmail.com)",
+        "Search Labs",
+        "Google Search",
+        "element_12",
+        "Clear Search",
+        "Search by voice",
+        "weather today",
+        "Filters and topics",
+        "AI Mode",
+        "element_18",
+        "All",
+        "News",
+        "Images",
+        "Videos",
+        "Forums",
+        "Home Rohraband, Jharkhand",
+        "How location is used",
+        "Use precise location",
+        "Ahmedabad 98\u00b0 Bengaluru 79\u00b0 Bhopal 94\u00b0 Chandigarh 79\u00b0 Chennai 86\u00b0 Delhi 87\u00b0 Dispur 79\u00b0 Faridabad 90\u00b0 Guwahati 79\u00b0 Jaipur 91\u00b0 Kolkata 85\u00b0 Lucknow 94\u00b0 Ludhiana 71\u00b0 Mumbai 85\u00b0 New Delhi 89\u00b0 Patna 93\u00b0 Pune 89\u00b0 Raipur 87\u00b0 Ranchi 88\u00b0 Surat 88\u00b0. Weather News See More \u00b7 Hawaii Kona storm sweeps state with 135-mph winds,\u00a0...",
+        "More options for Weather",
+        "More options for Weather",
+        "Wed, Partly cloudy, High of 36, Low of 21, Selected"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "Ahmedabad 98\u00b0 Bengaluru 79\u00b0 Bhopal 94\u00b0 Chandigarh 79\u00b0 Chennai 86\u00b0 Delhi 87\u00b0 Dispur 79\u00b0 Faridabad 90\u00b0 Guwahati 79\u00b0 Jaipur 91\u00b0 Kolkata 85\u00b0 Lucknow 94\u00b0 Ludhiana 71\u00b0 Mumbai 85\u00b0 New Delhi 89\u00b0 Patna 93\u00b0 Pune 89\u00b0 Raipur 87\u00b0 Ranchi 88\u00b0 Surat 88\u00b0. Weather News See More \u00b7 Hawaii Kona storm sweeps state with 135-mph winds,\u00a0...",
+          "x": 620,
+          "y": 1455,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.android.chrome:id/compositor_view_holder"
+        },
+        {
+          "text": "Connection is secure",
+          "x": 224,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "google.com/search?q=weather+today&oq=&gs_lcrp=EgZjaHJvbWUqCQgBECMYJxjqAjIPCAAQIxgnGOoCGPAFGJ4GMgkIARAjGCcY6gIyCQgCECMYJxjqAjIJCAMQIxgnGOoCMgkIBBAjGCcY6gIyCQgF",
+          "x": 592,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "See 30 tabs",
+          "x": 988,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        },
+        {
+          "text": "Ahmedabad 98\u00b0 Bengaluru 79\u00b0 Bhopal 94\u00b0 Chandigarh 79\u00b0 Chennai 86\u00b0 Delhi 87\u00b0 Dispur 79\u00b0 Faridabad 90\u00b0 Guwahati 79\u00b0 Jaipur 91\u00b0 Kolkata 85\u00b0 Lucknow 94\u00b0 Ludhiana 71\u00b0 Mumbai 85\u00b0 New Delhi 89\u00b0 Patna 93\u00b0 Pune 89\u00b0 Raipur 87\u00b0 Ranchi 88\u00b0 Surat 88\u00b0. Weather News See More \u00b7 Hawaii Kona storm sweeps state with 135-mph winds,\u00a0...",
+          "x": 620,
+          "y": 1526,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Google",
+          "x": 621,
+          "y": 457,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Google Account: Amir Shams (amirshamse8@gmail.com)",
+          "x": 1128,
+          "y": 448,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Search Labs",
+          "x": 99,
+          "y": 447,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Google Search",
+          "x": 140,
+          "y": 632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_12",
+          "x": 621,
+          "y": 639,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Clear Search",
+          "x": 929,
+          "y": 632,
+          "cls": "android.widget.Button",
+          "resource_id": "tsuid_ssq6adOOBJmTseMPyszZmA4_3"
+        },
+        {
+          "text": "Search by voice",
+          "x": 1100,
+          "y": 632,
+          "cls": "android.widget.Button",
+          "resource_id": "Q7Ulpb"
+        },
+        {
+          "text": "weather today",
+          "x": 535,
+          "y": 632,
+          "cls": "android.widget.EditText",
+          "resource_id": ""
+        },
+        {
+          "text": "Filters and topics",
+          "x": 620,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "AI Mode",
+          "x": 152,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_18",
+          "x": 621,
+          "y": 716,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "All",
+          "x": 358,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "News",
+          "x": 533,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Images",
+          "x": 764,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Videos",
+          "x": 1007,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Forums",
+          "x": 1183,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Home Rohraband, Jharkhand",
+          "x": 620,
+          "y": 1017,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "How location is used",
+          "x": 1155,
+          "y": 964,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Use precise location",
+          "x": 365,
+          "y": 1068,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Ahmedabad 98\u00b0 Bengaluru 79\u00b0 Bhopal 94\u00b0 Chandigarh 79\u00b0 Chennai 86\u00b0 Delhi 87\u00b0 Dispur 79\u00b0 Faridabad 90\u00b0 Guwahati 79\u00b0 Jaipur 91\u00b0 Kolkata 85\u00b0 Lucknow 94\u00b0 Ludhiana 71\u00b0 Mumbai 85\u00b0 New Delhi 89\u00b0 Patna 93\u00b0 Pune 89\u00b0 Raipur 87\u00b0 Ranchi 88\u00b0 Surat 88\u00b0. Weather News See More \u00b7 Hawaii Kona storm sweeps state with 135-mph winds,\u00a0...",
+          "x": 620,
+          "y": 1949,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "More options for Weather",
+          "x": 620,
+          "y": 1281,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "More options for Weather",
+          "x": 1135,
+          "y": 1309,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Wed, Partly cloudy, High of 36, Low of 21, Selected",
+          "x": 620,
+          "y": 2047,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Now, 25\u00b0C, Mostly cloudy, Feels like 26\u00b0C",
+          "x": 621,
+          "y": 1826,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Now, 25\u00b0C, Mostly cloudy, Feels like 26\u00b0C",
+          "x": 621,
+          "y": 1558,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "10\u202fpm,25\u00b0C,Partly cloudy",
+          "x": 620,
+          "y": 1883,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_34",
+          "x": 175,
+          "y": 1883,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_35",
+          "x": 371,
+          "y": 1883,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_36",
+          "x": 568,
+          "y": 1883,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_37",
+          "x": 764,
+          "y": 1883,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_38",
+          "x": 959,
+          "y": 1883,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_39",
+          "x": 1156,
+          "y": 1883,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Wed, Partly cloudy, High of 36, Low of 21, Selected",
+          "x": 620,
+          "y": 2612,
+          "cls": "android.view.View",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -80641,7 +80963,7 @@
     "7a90c98cab66|tap:Open source Mamba 3 arrives to surpass Transformer architecture with nearly 4% improved language modeling, reduced latency VentureBeat 14h": "5b8b2957dadb",
     "5b8b2957dadb|tap:New Incognito tab": "55537c11ef86",
     "7c92bc2f95a3|tap:Start voice search": "91b98e24a7db",
-    "91b98e24a7db|tap:Refine: weather today": "99751df5ec71",
+    "91b98e24a7db|tap:Refine: weather today": "9422593bf3dd",
     "5731aaff4c94|opt4_launch:play store": "815905513523",
     "c3c160d6730f|tap:Books": "e921768c497c",
     "e921768c497c|tap:Voice search": "fc4050d517f1",

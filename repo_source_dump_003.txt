@@ -4318,8 +4318,8 @@ if __name__ == "__main__":
   },
   "91b98e24a7db|tap:Refine: weather today": {
     "to": "9422593bf3dd",
-    "count": 3,
-    "last_seen": 1773849561.1008117
+    "count": 4,
+    "last_seen": 1773849568.3702734
   },
   "5731aaff4c94|opt4_launch:play store": {
     "to": "815905513523",
@@ -9655,7 +9655,22 @@ RuntimeError: No LLM backend available.
   STEP 7  |  Search for weather today in Chrome
 ========================================================
 [device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (716016 bytes)
-[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.MainTraceback (most recent call last):
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 271, in run
+    run_step(state, device=device, model_path=model_path,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             max_skill_steps=max_skill_steps)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 223, in run_step
+    llm_out = generate(prompt, model_path=model_path)
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/reasoning/llm_client.py", line 136, in generate
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+
 
 //===== TERMUXFILE: --task =====
 

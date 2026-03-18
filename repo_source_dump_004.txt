@@ -9187,5 +9187,19 @@ RuntimeError: screencap failed: error: device '192.168.29.48:33117' not found
 [22:17:10]   ✓ [4★] Play Warriyo Mortals on YouTube                  503.0s
 [22:17:10]   ✓ [4★] Search for lofi hip hop on YouTube and play the  368.0s
 [22:17:10]   ✓ [4★] Open Settings and go to WiFi                      68.8s
-[22:17:10]   ✓ [5★] Open Chrome, search for wikipedia.org, then open 119.9s
+[22:17:10]   ✓ [5★] Open Chrome, search for wikipedia.org, then open 119.9sTraceback (most recent call last):
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 271, in run
+    run_step(state, device=device, model_path=model_path,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             max_skill_steps=max_skill_steps)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 124, in run_step
+    img = capture_screen(adb_device=device)
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/perception/screen_capture.py", line 15, in capture_screen
+    return _cache[adb_device].take_screenshot(filename=filename)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/executor/device.py", line 119, in take_screenshot
+    raise RuntimeError(f"screencap failed: {r.stderr.decode().strip()}")
+RuntimeError: screencap failed: error: device '192.168.29.48:33117' not found
+
 

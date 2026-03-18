@@ -7120,7 +7120,9 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
 [ui_parser] child: (788,930) → '467k views · 5 mo ago'
 [ui_parser] child: (0,1128) → '1 A.M Study Session 📚 [lofi hip hop] – 1 hour, 1 minute, 14 seconds –  – Lofi Girl - 131 million views - 6 years ago – play video'
 [ui_parser] child: (42,2119) → '28 chapters'
-[ui_parser] full parse -- 34 elements (34 labeled, 11 via OCR/rid/child) from 192.168.29.48:33117
+[ui_parser] full parse -- 34 elements (34 labeled, 11 via OCR/rid/child) from 192.168.29.48:33117[parser] DEBUG normalized: 'tap 6'
+[parser] INFO parsed 'tap 6' -> {'action': 'tap', 'target': 6}
+
 
 //===== TERMUXFILE: --task =====
 

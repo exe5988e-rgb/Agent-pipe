@@ -5591,13 +5591,17 @@ if __name__ == "__main__":
     "version": 3
   },
   {
-    "pattern": "open youtube and go",
+    "pattern": "search for on youtube",
     "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
-    "task_example": "Open YouTube and go to Subscriptions",
+    "task_example": "Search for MrBeast on YouTube",
     "steps": [
       {
         "action": "tap",
-        "target": "Subscriptions: New content is available"
+        "target": "Search"
+      },
+      {
+        "action": "tap",
+        "target": "Edit suggestion mrbeast"
       },
       {
         "action": "done"
@@ -7235,7 +7239,58 @@ nohup: ignoring input
 [ui_parser] cache miss -- full uiautomator dump
 [ui_parser] child: (0,307) → 'Current setting is for all notifications. Tap to change your notification setting for MrBeast'
 [ui_parser] child: (0,307) → 'Survive 30 Days Stranded With Your Ex, Win $250,000 – 30 minutes, 4 seconds –  – MrBeast - 94 million views - 10 days ago – play video'
-[ui_parser] child: (0,853) → 'Survive 30 Days Stranded With Your Ex, Win $250,000 – 30 minutes, 4 seconds –  – MrBeast - 94 million views - 10 days ago – play video'
+[ui_parser] child: (0,853) → 'Survive 30 Days Stranded With Your Ex, Win $250,000 – 30 minutes, 4 seconds –  – MrBeast - 94 million views - 10 days ago – play video'[parser] DEBUG normalized: 'done'
+[parser] INFO parsed 'done' -> {'action': 'done'}
+
+[ui_parser] child: (0,2014) → 'Pop The Balloons, Win $10,000, 30 million views – play Short'
+[ui_parser] child: (0,2182) → 'Pop The Balloons, Win $10,000, 30 million views – play Short'
+[ui_parser] full parse -- 35 elements (34 labeled, 5 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=11fdcaa906ed elements=35
+[step] UI: ['Navigate up', 'Clear', 'Voice search', 'Cast', 'More options', 'mrbeast', 'Current setting is for all notifications. Tap to change your notification setting for MrBeast', 'Survive 30 Days Stranded With Your Ex, Win $250,000 – 30 minutes, 4 seconds –  – MrBeast - 94 million views - 10 days ago – play video']
+[map] new screen: youtube_shell$homeactivity (571ebe27696a)
+[map] transition: youtube_shell$homeactivity --[tap:Edit suggestion mrbeast]--> youtube_shell$homeactivity
+[map] screen: youtube_shell$homeactivity (571ebe27)
+[skill] matched: 'open youtube and go'  score=1.00  act=True
+[skill] cannot resolve: 'Subscriptions: New content is available'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'done'
+[step] LLM: 'done'
+[step] action: {'action': 'done'}
+[input] DONE — no dispatch
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[skill] replacing shorter skill with better version (2 → 3 steps)
+[step] step=4/10 done=True history=['opt4_launch:youtube', 'tap [3] Search', 'tap [5] Edit suggestion mrbeast', 'done']
+
+[controller] done in 4 steps
+
+[controller] history:
+  1. opt4_launch:youtube
+  2. tap [3] Search
+  3. tap [5] Edit suggestion mrbeast
+  4. done
+
+  Screen Map: 476 screens (0 tainted), 590 transitions
+    whatsapp             168 screens
+    chrome               100 screens
+    youtube              88 screens
+    vending              30 screens
+    termux               25 screens
+    launcher             22 screens
+    settings             21 screens
+    claude               6 screens
+    wirelesssettings     5 screens
+    dialer               2 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+  TransitionMemory: 540 transitions (278 confirmed, threshold=2)
+
 
 //===== TERMUXFILE: --task =====
 

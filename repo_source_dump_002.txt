@@ -50044,6 +50044,114 @@
           "resource_id": ""
         }
       ]
+    },
+    "f8874e498a0c": {
+      "screen_id": "f8874e498a0c",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Open the homepage",
+        "element_2",
+        "tripadvisor.in/Restaurants-g1011999-Dhanbad_Dhanbad_District_Jharkhand.html",
+        "See 23 tabs",
+        "Customise and control Google Chrome",
+        "element_6",
+        "\u201cour stay was comfortable, facilities were good & staff helpful. Food at the...\u201d \u201cDinner time\u201d",
+        "40Ft Bar counter Entry Seating Area Our most loved item on the menu, Philadelphia Cheese Dimsums Favourite lunch spot Crafting cocktails",
+        "5. Vue Dhanbad 5 of 5 bubbles (4 reviews) Save to a trip Italian, Japanese \u00b7\u20b9\u20b9 - \u20b9\u20b9\u20b9 Closed now \u00b7 Menu",
+        "MULTI CUISINE RESTUARENT LOBBY AREA RESTUARENT FAMILY MULTI CUISINE RESTUARENT HOTEL LOBBY HOTEL LUXUS INN DHANBAD ROOM SUITE ROOM",
+        "6. Luxus Inn Hotel 4.7 of 5 bubbles (3 reviews) Save to a trip Chinese, Indian Open now",
+        "\u201cExcellent service by Luxus inn team\u201d \u201cExcellent hospitality\u201d"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "element_2",
+          "x": 224,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "tripadvisor.in/Restaurants-g1011999-Dhanbad_Dhanbad_District_Jharkhand.html",
+          "x": 592,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "See 23 tabs",
+          "x": 988,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        },
+        {
+          "text": "element_6",
+          "x": 620,
+          "y": 1553,
+          "cls": "android.view.View",
+          "resource_id": "lithium-root"
+        },
+        {
+          "text": "\u201cour stay was comfortable, facilities were good & staff helpful. Food at the...\u201d \u201cDinner time\u201d",
+          "x": 619,
+          "y": 398,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "40Ft Bar counter Entry Seating Area Our most loved item on the menu, Philadelphia Cheese Dimsums Favourite lunch spot Crafting cocktails",
+          "x": 619,
+          "y": 797,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "5. Vue Dhanbad 5 of 5 bubbles (4 reviews) Save to a trip Italian, Japanese \u00b7\u20b9\u20b9 - \u20b9\u20b9\u20b9 Closed now \u00b7 Menu",
+          "x": 619,
+          "y": 1190,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "MULTI CUISINE RESTUARENT LOBBY AREA RESTUARENT FAMILY MULTI CUISINE RESTUARENT HOTEL LOBBY HOTEL LUXUS INN DHANBAD ROOM SUITE ROOM",
+          "x": 619,
+          "y": 2046,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "6. Luxus Inn Hotel 4.7 of 5 bubbles (3 reviews) Save to a trip Chinese, Indian Open now",
+          "x": 619,
+          "y": 2440,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u201cExcellent service by Luxus inn team\u201d \u201cExcellent hospitality\u201d",
+          "x": 619,
+          "y": 2719,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -50453,7 +50561,8 @@
     "4fe13740dde6|tap:\u201cour stay was comfortable, facilities were good & staff helpful. Food at the...\u201d \u201cDinner time\u201d": "3723d0d9b6da",
     "3723d0d9b6da|back": "54ab1d5cd380",
     "54ab1d5cd380|swipe": "4098d83e5b9a",
-    "4098d83e5b9a|swipe": "36e8ae87b6fc"
+    "4098d83e5b9a|swipe": "36e8ae87b6fc",
+    "36e8ae87b6fc|swipe": "f8874e498a0c"
   }
 }
 

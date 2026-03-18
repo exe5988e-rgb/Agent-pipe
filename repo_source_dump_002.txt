@@ -69412,6 +69412,186 @@
           "resource_id": ""
         }
       ]
+    },
+    "6dd8030404cd": {
+      "screen_id": "6dd8030404cd",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Navigate up",
+        "Voice search",
+        "Search YouTube",
+        "Edit suggestion let the world burn",
+        "Edit suggestion mrbeast",
+        "Edit suggestion mrbeast",
+        "Edit suggestion babydoll",
+        "Edit suggestion babydoll",
+        "Edit suggestion golden brown",
+        "Edit suggestion golden brown",
+        "Edit suggestion luz roja",
+        "Edit suggestion luz roja",
+        "Edit suggestion missing piece",
+        "Edit suggestion missing piece",
+        "Edit suggestion solo leveling",
+        "Edit suggestion solo leveling",
+        "Edit suggestion funk sereno",
+        "Edit suggestion funk sereno",
+        "Voice search",
+        "Edit suggestion let the world burn",
+        "Edit suggestion let the world burn"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Voice search",
+          "x": 1156,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/voice_search"
+        },
+        {
+          "text": "Search YouTube",
+          "x": 634,
+          "y": 223,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.google.android.youtube:id/search_edit_text"
+        },
+        {
+          "text": "Edit suggestion let the world burn",
+          "x": 620,
+          "y": 1016,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results_recycler_view"
+        },
+        {
+          "text": "Edit suggestion mrbeast",
+          "x": 620,
+          "y": 559,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion mrbeast",
+          "x": 1156,
+          "y": 559,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion babydoll",
+          "x": 620,
+          "y": 727,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion babydoll",
+          "x": 1156,
+          "y": 727,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion golden brown",
+          "x": 620,
+          "y": 895,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion golden brown",
+          "x": 1156,
+          "y": 895,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion luz roja",
+          "x": 620,
+          "y": 1063,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion luz roja",
+          "x": 1156,
+          "y": 1063,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion missing piece",
+          "x": 620,
+          "y": 1231,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion missing piece",
+          "x": 1156,
+          "y": 1231,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion solo leveling",
+          "x": 620,
+          "y": 1399,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion solo leveling",
+          "x": 1156,
+          "y": 1399,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion funk sereno",
+          "x": 620,
+          "y": 1567,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion funk sereno",
+          "x": 1156,
+          "y": 1567,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Voice search",
+          "x": 1114,
+          "y": 1655,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/fab"
+        },
+        {
+          "text": "Edit suggestion let the world burn",
+          "x": 620,
+          "y": 1688,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion let the world burn",
+          "x": 1156,
+          "y": 1688,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        }
+      ]
     }
   },
   "transitions": {
@@ -70002,7 +70182,8 @@
     "6dcc835738aa|tap:You": "47d448eaba6d",
     "13dcb6504714|tap:Communities": "e593131cf7fc",
     "5731aaff4c94|opt4_launch:youtube": "caf601112185",
-    "b94fe430b394|tap:You": "caf601112185"
+    "b94fe430b394|tap:You": "caf601112185",
+    "caf601112185|tap:JensJulius Tejlgaard has new content": "6dd8030404cd"
   }
 }
 

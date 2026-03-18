@@ -7389,6 +7389,8 @@ nohup: ignoring input
     membership           1 screens
     permissioncontroller 1 screens
   TransitionMemory: 586 transitions (279 confirmed, threshold=2)
+[parser] DEBUG normalized: 'tap 27'
+[parser] INFO parsed 'tap 27' -> {'action': 'tap', 'target': 27}
 
 
 //===== TERMUXFILE: --task =====

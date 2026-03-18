@@ -72438,6 +72438,50 @@
           "resource_id": ""
         }
       ]
+    },
+    "80ff94df1647": {
+      "screen_id": "80ff94df1647",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Navigate up",
+        "Voice search",
+        "Search YouTube",
+        "Voice search"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Voice search",
+          "x": 1156,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/voice_search"
+        },
+        {
+          "text": "Search YouTube",
+          "x": 634,
+          "y": 223,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.google.android.youtube:id/search_edit_text"
+        },
+        {
+          "text": "Voice search",
+          "x": 1114,
+          "y": 1655,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/fab"
+        }
+      ]
     }
   },
   "transitions": {
@@ -73045,7 +73089,8 @@
     "c3c160d6730f|tap:Books": "e921768c497c",
     "e921768c497c|tap:Voice search": "fc4050d517f1",
     "fc4050d517f1|type": "2a3055394a68",
-    "2a3055394a68|tap:Refine search to 'spotify'": "815905513523"
+    "2a3055394a68|tap:Refine search to 'spotify'": "815905513523",
+    "571ebe27696a|tap:Voice search": "80ff94df1647"
   }
 }
 

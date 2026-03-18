@@ -75321,6 +75321,217 @@
           "resource_id": "com.google.android.youtube:id/floaty_bar_time_bar_view"
         }
       ]
+    },
+    "b2867628ccaa": {
+      "screen_id": "b2867628ccaa",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Navigate up",
+        "Clear",
+        "Voice search",
+        "Cast",
+        "More options",
+        "lofi hip hop",
+        "Best of lofi hip hop 2021 \u2728 [beats to relax/study to] \u2013 6 hours, 10 minutes, 58 seconds \u2013  \u2013 Lofi Girl - 53 million views - 4 years ago \u2013 play video",
+        "Sponsored \u2013 Obsidian Flow | Deep Melodic Techno Mix 2026 \u2013 2 hours, 9 minutes \u2013 Streamed 10 days ago \u2013 edmylmz | Music \u2013 play video",
+        "Go to channel: edmylmz | Music.",
+        "More options",
+        "1 A.M Study Session \ud83d\udcda [lofi hip hop] \u2013 1 hour, 1 minute, 14 seconds \u2013  \u2013 Lofi Girl - 131 million views - 6 years ago \u2013 play video",
+        "1 A.M Study Session \ud83d\udcda [lofi hip hop] \u2013 1 hour, 1 minute, 14 seconds \u2013  \u2013 Lofi Girl - 131 million views - 6 years ago \u2013 play video",
+        "Tap to watch live, Lofi Girl channel",
+        "Action menu",
+        "Minimised player",
+        "Play video",
+        "Close minimised player",
+        "28 chapters",
+        "1 minute 32 seconds of 3 minutes 48 seconds",
+        "Shorts",
+        "Create",
+        "Subscriptions",
+        "You",
+        "Best of lofi hip hop 2021 \u2728 [beats to relax/study to] \u2013 6 hours, 10 minutes, 58 seconds \u2013  \u2013 Lofi Girl - 53 million views - 4 years ago \u2013 play video"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Clear",
+          "x": 680,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/search_clear"
+        },
+        {
+          "text": "Voice search",
+          "x": 848,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/voice_search"
+        },
+        {
+          "text": "Cast",
+          "x": 1016,
+          "y": 223,
+          "cls": "android.widget.Button",
+          "resource_id": "com.google.android.youtube:id/mdx_entry_point_button"
+        },
+        {
+          "text": "More options",
+          "x": 1170,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "lofi hip hop",
+          "x": 396,
+          "y": 223,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.google.android.youtube:id/search_query"
+        },
+        {
+          "text": "Best of lofi hip hop 2021 \u2728 [beats to relax/study to] \u2013 6 hours, 10 minutes, 58 seconds \u2013  \u2013 Lofi Girl - 53 million views - 4 years ago \u2013 play video",
+          "x": 620,
+          "y": 1539,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results"
+        },
+        {
+          "text": "Sponsored \u2013 Obsidian Flow | Deep Melodic Techno Mix 2026 \u2013 2 hours, 9 minutes \u2013 Streamed 10 days ago \u2013 edmylmz | Music \u2013 play video",
+          "x": 620,
+          "y": 852,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Go to channel: edmylmz | Music.",
+          "x": 105,
+          "y": 1137,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More options",
+          "x": 1142,
+          "y": 1116,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "1 A.M Study Session \ud83d\udcda [lofi hip hop] \u2013 1 hour, 1 minute, 14 seconds \u2013  \u2013 Lofi Girl - 131 million views - 6 years ago \u2013 play video",
+          "x": 620,
+          "y": 1871,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "1 A.M Study Session \ud83d\udcda [lofi hip hop] \u2013 1 hour, 1 minute, 14 seconds \u2013  \u2013 Lofi Girl - 131 million views - 6 years ago \u2013 play video",
+          "x": 620,
+          "y": 2004,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Tap to watch live, Lofi Girl channel",
+          "x": 105,
+          "y": 2213,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Action menu",
+          "x": 1142,
+          "y": 2178,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Minimised player",
+          "x": 876,
+          "y": 2331,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.youtube:id/floaty_bar_controls_view"
+        },
+        {
+          "text": "Play video",
+          "x": 624,
+          "y": 2226,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/modern_miniplayer_overlay_action_button"
+        },
+        {
+          "text": "Close minimised player",
+          "x": 1128,
+          "y": 2226,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/modern_miniplayer_close"
+        },
+        {
+          "text": "28 chapters",
+          "x": 620,
+          "y": 2458,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "1 minute 32 seconds of 3 minutes 48 seconds",
+          "x": 876,
+          "y": 2517,
+          "cls": "android.widget.SeekBar",
+          "resource_id": "com.google.android.youtube:id/floaty_bar_time_bar_view"
+        },
+        {
+          "text": "Home",
+          "x": 124,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 372,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Create",
+          "x": 620,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscriptions",
+          "x": 868,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "You",
+          "x": 1116,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Best of lofi hip hop 2021 \u2728 [beats to relax/study to] \u2013 6 hours, 10 minutes, 58 seconds \u2013  \u2013 Lofi Girl - 53 million views - 4 years ago \u2013 play video",
+          "x": 620,
+          "y": 2692,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -75945,7 +76156,8 @@
     "ffe4b24675ad|back": "c9ef977845dc",
     "c9ef977845dc|tap:Warriyo - Mortals (ft. Laura Brehm) \u2013 3 minutes, 49 seconds \u2013 Go to channel Warriyo \u2013 Warriyo - 37 million views - 9 years ago \u2013 play video": "ddedcea55765",
     "ddedcea55765|tap:warriyo mortals": "c35eb75a1a4a",
-    "c35eb75a1a4a|type": "1d16b25e8e24"
+    "c35eb75a1a4a|type": "1d16b25e8e24",
+    "1d16b25e8e24|tap:Edit suggestion lofi hip hop no lyrics music": "b2867628ccaa"
   }
 }
 

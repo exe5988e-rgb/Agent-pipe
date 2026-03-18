@@ -8360,6 +8360,8 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
     notificationmanager  1 screens
     battery              1 screens
   TransitionMemory: 656 transitions (287 confirmed, threshold=2)
+[parser] DEBUG normalized: 'tap 5'
+[parser] INFO parsed 'tap 5' -> {'action': 'tap', 'target': 5}
 
 
 //===== TERMUXFILE: --task =====

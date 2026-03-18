@@ -47966,6 +47966,130 @@
           "resource_id": "pv-/g/11shtc1zmz"
         }
       ]
+    },
+    "521f5ee7f089": {
+      "screen_id": "521f5ee7f089",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Open the homepage",
+        "element_2",
+        "element_3",
+        "google.com/search?client=ms-android-oneplus-terr1-rso3&hs=WuC&sca_esv=9d975e0fdc86a6e5&sxsrf=ANbL-n72AAjlz-j94IXN5Fc8-9PiPABE9w%3A1773793142545&q=Best+Restaur",
+        "See 23 tabs",
+        "Customise and control Google Chrome",
+        "element_7",
+        "element_8",
+        "element_9",
+        "Remove Top rated",
+        "Remove Open now",
+        "Show more AI Overview",
+        "Expand map",
+        "Vibes rooftop restro and cafe Rated 4.4 out of 5, 90 user reviews \u00b7 \u20b9200\u2013400 Chinese \u00b7 Vibes Dine-in\u00b7 Drive-through\u00b7 Delivery Order delivery Menu Directions Share"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "element_2",
+          "x": 620,
+          "y": 1455,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.android.chrome:id/compositor_view_holder"
+        },
+        {
+          "text": "element_3",
+          "x": 224,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "google.com/search?client=ms-android-oneplus-terr1-rso3&hs=WuC&sca_esv=9d975e0fdc86a6e5&sxsrf=ANbL-n72AAjlz-j94IXN5Fc8-9PiPABE9w%3A1773793142545&q=Best+Restaur",
+          "x": 592,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "See 23 tabs",
+          "x": 988,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 1526,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_8",
+          "x": 620,
+          "y": 602,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_9",
+          "x": 621,
+          "y": 462,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Remove Top rated",
+          "x": 252,
+          "y": 427,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Remove Open now",
+          "x": 652,
+          "y": 427,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Show more AI Overview",
+          "x": 620,
+          "y": 711,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Expand map",
+          "x": 1100,
+          "y": 1190,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Vibes rooftop restro and cafe Rated 4.4 out of 5, 90 user reviews \u00b7 \u20b9200\u2013400 Chinese \u00b7 Vibes Dine-in\u00b7 Drive-through\u00b7 Delivery Order delivery Menu Directions Share",
+          "x": 620,
+          "y": 2206,
+          "cls": "android.widget.Button",
+          "resource_id": "pv-/g/11shtc1zmz"
+        }
+      ]
     }
   },
   "transitions": {
@@ -48356,7 +48480,8 @@
     "8a7ad9916fb6|tap:element_37": "1def2c77ddc7",
     "1def2c77ddc7|swipe": "e28b49f9232a",
     "e28b49f9232a|tap:View 3 corroboration links": "ec0b6ebb8948",
-    "ec0b6ebb8948|swipe": "00bc2bbcd4eb"
+    "ec0b6ebb8948|swipe": "00bc2bbcd4eb",
+    "00bc2bbcd4eb|swipe": "521f5ee7f089"
   }
 }
 

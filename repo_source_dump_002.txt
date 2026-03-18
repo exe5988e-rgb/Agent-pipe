@@ -91364,6 +91364,178 @@
           "resource_id": ""
         }
       ]
+    },
+    "f025aa4a0cd3": {
+      "screen_id": "f025aa4a0cd3",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Expand Mini Player",
+        "Visit advertiser",
+        "Skip ad",
+        "Sponsored",
+        "Close ad panel",
+        "Drag handle",
+        "More options",
+        "Close ad panel",
+        "More info",
+        "4)",
+        "element_11",
+        "one.google.com",
+        "More info",
+        "More info",
+        "More info",
+        "Gemini for Business",
+        "Ger",
+        "More info",
+        "More info",
+        "Sign up"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Expand Mini Player",
+          "x": 620,
+          "y": 488,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/player_overlays"
+        },
+        {
+          "text": "Visit advertiser",
+          "x": 1048,
+          "y": 230,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.google.android.youtube:id/player_learn_more_button"
+        },
+        {
+          "text": "Skip ad",
+          "x": 1118,
+          "y": 585,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.youtube:id/skip_ad_button"
+        },
+        {
+          "text": "Sponsored",
+          "x": 168,
+          "y": 753,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.google.android.youtube:id/ad_progress_text"
+        },
+        {
+          "text": "Close ad panel",
+          "x": 620,
+          "y": 942,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.google.android.youtube:id/header_container"
+        },
+        {
+          "text": "Drag handle",
+          "x": 620,
+          "y": 858,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/arrow_drag_handle"
+        },
+        {
+          "text": "More options",
+          "x": 974,
+          "y": 963,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Close ad panel",
+          "x": 1156,
+          "y": 963,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "More info",
+          "x": 620,
+          "y": 1881,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results"
+        },
+        {
+          "text": "4)",
+          "x": 182,
+          "y": 1229,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_11",
+          "x": 646,
+          "y": 1229,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "one.google.com",
+          "x": 501,
+          "y": 1282,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "More info",
+          "x": 619,
+          "y": 1945,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": ""
+        },
+        {
+          "text": "More info",
+          "x": 532,
+          "y": 1945,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "More info",
+          "x": 1145,
+          "y": 1945,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Gemini for Business",
+          "x": 525,
+          "y": 1767,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Ger",
+          "x": 1173,
+          "y": 1767,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "More info",
+          "x": 249,
+          "y": 2114,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "More info",
+          "x": 1173,
+          "y": 2114,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Sign up",
+          "x": 619,
+          "y": 2598,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -92074,7 +92246,8 @@
     "33be04de2357|tap:See 28 tabs": "6a196709544c",
     "6a196709544c|type": "ea824627166e",
     "cce393f689c6|tap:filters": "e6e2d7bad11c",
-    "e6e2d7bad11c|type": "87fee6983a2f"
+    "e6e2d7bad11c|type": "87fee6983a2f",
+    "99af5f5e5dfc|tap:Warriyo - Mortals (ft. Laura Brehm) \u2013 3 minutes, 49 seconds \u2013 Go to channel Warriyo \u2013 Warriyo - 37 million views - 9 years ago \u2013 play video": "f025aa4a0cd3"
   }
 }
 

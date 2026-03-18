@@ -4325,6 +4325,11 @@ if __name__ == "__main__":
     "to": "c3c160d6730f",
     "count": 1,
     "last_seen": 1773841563.9167635
+  },
+  "c3c160d6730f|tap:Books": {
+    "to": "e921768c497c",
+    "count": 1,
+    "last_seen": 1773841601.809572
   }
 }
 
@@ -8646,6 +8651,147 @@ nohup: ignoring input
 [parser] DEBUG normalized: 'tap 20'
 [parser] INFO parsed 'tap 20' -> {'action': 'tap', 'target': 20}
 
+########################################################
+  JARVIS  |  Search for Spotify on Play Store
+  Device : 192.168.29.48:35253
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 483 screens (0 tainted), 600 transitions
+    whatsapp             168 screens
+    chrome               106 screens
+    youtube              88 screens
+    vending              30 screens
+    termux               25 screens
+    launcher             22 screens
+    settings             21 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               2 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+  TransitionMemory: 550 transitions (280 confirmed, threshold=2)
+[init] task_apps: ['spotify', 'play store']
+[init] max_skill_steps: 20 (threshold: 12)
+
+========================================================
+  STEP 1  |  Search for Spotify on Play Store
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3311414 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Mostly cloudy'
+[ui_parser] OCR: (841,1475)-(1009,1671) → 'lt'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.android.launcher/.Launcher hash=fa1a0d26815a elements=26
+[step] UI: ['Clock', '19', ':', '15', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (5731aaff)
+[OPT4v2] launcher -> launching spotify (com.spotify.music)
+[llm] OPT4v2 am start: com.spotify.music
+[mem] invalidated com.android.launcher/.Launcher
+
+========================================================
+  STEP 2  |  Search for Spotify on Play Store
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3310956 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Mostly cloudy'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.android.launcher/.Launcher hash=fa1a0d26815a elements=26
+[step] UI: ['Clock', '19', ':', '15', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (5731aaff)
+[OPT4v2] launcher -> launching play store (com.android.vending)
+[llm] OPT4v2 am start: com.android.vending
+
+========================================================
+  STEP 3  |  Search for Spotify on Play Store
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1048588 bytes)
+[ui_parser] activity=com.android.vending/.AssetBrowserActivity
+[ui_parser] signal='com.android.vending/.AssetBrowserActivity'
+[mem] miss (unknown): com.android.vending/.AssetBrowserActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (862,153) → 'Show notifications and offers. 2 new notifications available.'
+[ui_parser] child: (0,335) → 'For you'
+[ui_parser] child: (270,335) → 'Top charts'
+[ui_parser] child: (659,335) → 'Children'
+[ui_parser] child: (995,335) → 'Premium'
+[ui_parser] child: (42,559) → 'Subnautica: Below Zero\nUnknown Worlds\nStar rating: 4.7\nRated for 12+'
+[ui_parser] child: (1197,559) → 'Charting 30 years of Pokémon'
+[ui_parser] child: (42,1071) → 'Subnautica: Below Zero\nUnknown Worlds\nStar rating: 4.7\nRated for 12+'
+[ui_parser] child: (847,1138) → 'Buy for ₹270.00'
+[ui_parser] child: (21,1646) → 'Unacademy: Learn & Crack Exams\nEducation\nStudy guides\nStar rating: 4.0\n76 MB'
+[ui_parser] child: (21,1962) → 'Crunchyroll: Anime Streaming\nEntertainment\nStreaming content\nStar rating: 4.4\n74 MB'
+[ui_parser] child: (21,2278) → 'Free Fire MAX x JUJUTSU KAISEN\nAction\nTactical shooter\nMulti-player\nNinja\nStar rating: 4.3\n382 MB'
+[ui_parser] child: (0,2492) → 'Games'
+[ui_parser] child: (310,2492) → 'Apps'
+[ui_parser] child: (620,2492) → 'Search'
+[ui_parser] child: (930,2492) → 'Books'
+[ui_parser] full parse -- 21 elements (17 labeled, 16 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.android.vending/.AssetBrowserActivity hash=69531133f113 elements=21
+[step] UI: ['Show notifications and offers. 2 new notifications available.', 'element_2', 'For you', 'Top charts', 'Children', 'Premium', 'Subnautica: Below Zero\nUnknown Worlds\nStar rating: 4.7\nRated for 12+', 'Charting 30 years of Pokémon']
+[map] new screen: vending_assetbrowseractivity (c3c160d6730f)
+[map] transition: launcher_launcher --[opt4_launch:play store]--> vending_assetbrowseractivity
+[map] screen: vending_assetbrowseractivity (c3c160d6)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 20'
+[step] LLM: 'tap 20'
+[step] action: {'action': 'tap', 'target': 20}
+[input] dispatching: TouchEvent(x=775, y=2604)
+[input] dispatching: TouchEvent(x=775, y=2604)
+[input] adb -s 192.168.29.48:35253 shell input tap 775 2604
+[mem] invalidated com.android.vending/.AssetBrowserActivity
+[step] step=3/10 done=False history=['opt4_launch:spotify', 'opt4_launch:play store', 'tap [20] Search']
+
+========================================================
+  STEP 4  |  Search for Spotify on Play Store
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (637048 bytes)
+[ui_parser] activity=com.android.vending/.AssetBrowserActivity
+[ui_parser] signal='com.android.vending/.AssetBrowserActivity'
+[mem] miss (unknown): com.android.vending/.AssetBrowserActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (42,153) → 'Search Apps & Games'
+[ui_parser] child: (70,153) → 'Search Google Play'
+[ui_parser] child: (806,153) → 'Voice search'
+[ui_parser] child: (42,517) → 'Bike racing games'
+[ui_parser] child: (648,517) → 'Train station games'
+[ui_parser] child: (648,748) → 'Bus games'
+[ui_parser] child: (648,979) → 'Realistic games'
+[ui_parser] child: (21,1399) → 'Instagram\nInstalled'
+[ui_parser] child: (310,1399) → 'Crunchyroll: Anime Streaming\nStar rating: 4.4'
+[ui_parser] child: (599,1399) → 'Unacademy: Learn & Crack Exams\nStar rating: 4.0'
+[ui_parser] child: (888,1399) → 'WePlay-Game & Party\nStar rating: 4.2'
+[ui_parser] child: (1177,1399) → 'Free Fire MAX x JUJUTSU KAISEN\nStar rating: 4.3'
+[ui_parser] child: (42,2079) → 'Police games'
+[ui_parser] child: (639,2079) → 'Hunting games'
+[ui_parser] child: (42,2247) → 'Fashion games'
+[ui_parser] child: (680,2247) → 'Watch videos'
+[ui_parser] child: (0,2492) → 'Games'
+[ui_parser] child: (310,2492) → 'Apps'
+[ui_parser] child: (620,2492) → 'Search'
+[ui_parser] child: (930,2492) → 'Books'
+[ui_parser] full parse -- 22 elements (21 labeled, 20 via OCR/rid/child) from 192.168.29.48:35253
+[mem] stored com.android.vending/.AssetBrowserActivity hash=ae0d36e3b20c elements=22
+[step] UI: ['Search Apps & Games', 'Search Google Play', 'Voice search', 'element_4', 'Bike racing games', 'Train station games', 'Bus games', 'Realistic games']
 
 //===== TERMUXFILE: --task =====
 
@@ -13254,205 +13400,5 @@ def from_action(action: dict, ui_elements: list):
         return None
 
     return None
-
-
-//===== TERMUXFILE: jarvis-agent/executor/device.py =====
-"""
-executor/device.py
-
-Extracted from DroidBot/droidbot/device.py
-Source: https://github.com/honeynet/droidbot
-
-What we keep:
-  __init__    serial, output_dir, display_info cache
-  get_width / get_height   (from get_display_info — DroidBot pattern)
-  take_screenshot          (ADB screencap via exec-out, not minicap)
-  key_press                → adb shell input keyevent
-  view_touch               → adb shell input tap
-  view_drag                → adb shell input swipe
-  view_set_text            → adb shell input text
-  get_top_activity_name    (dumpsys, DroidBot regex)
-  unlock                   (simple keyevent wake)
-
-What we drop (all require DroidBot adapters we don't have):
-  All adapter setup (ADB, Minicap, DroidBotApp, Telnet, Logcat, IME)
-  install_app, uninstall_app, send_intent, send_sms, GPS, shake, etc.
-  get_current_state (requires DeviceState import)
-  get_views (requires DroidBotApp or CV module)
-
-ADB calls: raw subprocess instead of DroidBot's ADB adapter class.
-"""
-
-import os
-import re
-import subprocess
-import time
-
-
-class Device:
-    """
-    Minimal ADB device — DroidBot Device interface, ADB-only backend.
-    """
-
-    def __init__(self, device_serial=None, output_dir=None):
-        """
-        DroidBot Device.__init__ signature (subset).
-        :param device_serial: e.g. "192.168.29.48:37891"
-        :param output_dir: local dir to save screenshots
-        """
-        self.serial     = device_serial
-        self.output_dir = output_dir or os.path.expanduser("~/jarvis-agent/screenshots")
-        os.makedirs(self.output_dir, exist_ok=True)
-
-        # DroidBot caches display_info dict — we do the same
-        self.display_info = None
-
-    # ── Raw ADB ──────────────────────────────────────────────────────────────
-
-    def _adb(self, *args, timeout=15) -> subprocess.CompletedProcess:
-        cmd = ["adb", "-s", self.serial] + list(str(a) for a in args)
-        return subprocess.run(cmd, capture_output=True, timeout=timeout)
-
-    def _shell(self, *args, timeout=15) -> str:
-        """Run adb shell, return stdout string. Mirrors DroidBot adb.shell()."""
-        r = self._adb("shell", *args, timeout=timeout)
-        return r.stdout.decode(errors="replace").strip()
-
-    # ── Connection (DroidBot Device.connect / check_connectivity) ────────────
-
-    def connect(self):
-        """Connect WiFi ADB. DroidBot Device.connect() calls adapter.connect()."""
-        result = subprocess.run(
-            ["adb", "connect", self.serial],
-            capture_output=True, text=True, timeout=10
-        )
-        ok = "connected" in result.stdout.lower()
-        print(f"[device] connect {self.serial}: {result.stdout.strip()}")
-        return ok
-
-    def is_connected(self) -> bool:
-        r = subprocess.run(["adb", "devices"], capture_output=True, text=True, timeout=5)
-        return self.serial in r.stdout
-
-    # ── Display info (DroidBot Device.get_display_info / get_width / get_height) ─
-
-    def get_display_info(self, refresh=True) -> dict:
-        """
-        DroidBot Device.get_display_info() calls self.adb.get_display_info().
-        We replicate by parsing `adb shell wm size`.
-        Returns dict with 'width' and 'height' keys (DroidBot format).
-        """
-        if self.display_info is None or refresh:
-            out = self._shell("wm", "size")
-            m = re.search(r"(\d+)x(\d+)", out)
-            if m:
-                self.display_info = {
-                    "width":  int(m.group(1)),
-                    "height": int(m.group(2)),
-                }
-            else:
-                self.display_info = {"width": 1080, "height": 2400}
-            print(f"[device] display_info: {self.display_info}")
-        return self.display_info
-
-    def get_width(self, refresh=False) -> int:
-        """DroidBot Device.get_width()"""
-        return self.get_display_info(refresh=refresh).get("width", 1080)
-
-    def get_height(self, refresh=False) -> int:
-        """DroidBot Device.get_height()"""
-        return self.get_display_info(refresh=refresh).get("height", 2400)
-
-    # ── Screenshot (DroidBot Device.take_screenshot — screencap path) ────────
-
-    def take_screenshot(self, filename="screen.png") -> str:
-        """
-        DroidBot Device.take_screenshot() uses minicap or screencap+pull.
-        We always use exec-out screencap -p (faster, no temp file on device).
-        Returns local path to saved PNG.
-        """
-        local_path = os.path.join(self.output_dir, filename)
-
-        r = self._adb("exec-out", "screencap", "-p", timeout=15)
-        if r.returncode != 0:
-            raise RuntimeError(f"screencap failed: {r.stderr.decode().strip()}")
-        if len(r.stdout) < 100:
-            raise RuntimeError("screencap: empty output")
-
-        with open(local_path, "wb") as f:
-            f.write(r.stdout)
-
-        print(f"[device] screenshot → {local_path} ({len(r.stdout)} bytes)")
-        return local_path
-
-    # ── Input dispatch (DroidBot Device view_touch / view_drag / key_press) ──
-
-    def key_press(self, key_code):
-        """DroidBot Device.key_press() → self.adb.press(key_code)"""
-        from executor.input_event import KeyEvent
-        ev = KeyEvent(name=str(key_code))
-        cmd = ["adb", "-s", self.serial, "shell"] + ev.to_adb_cmd()
-        subprocess.run(cmd, capture_output=True, timeout=10)
-
-    def view_touch(self, x, y):
-        """DroidBot Device.view_touch() → self.adb.touch(x, y)"""
-        self._shell("input", "tap", str(int(x)), str(int(y)))
-
-    def view_long_touch(self, x, y, duration=200):
-        """
-        DroidBot Device.view_long_touch() → self.adb.long_touch(x, y, duration).
-        For agent taps, duration=200ms is fine.
-        """
-        self._shell("input", "swipe",
-                    str(int(x)), str(int(y)),
-                    str(int(x)), str(int(y)),
-                    str(int(duration)))
-
-    def view_drag(self, start_xy, end_xy, duration):
-        """DroidBot Device.view_drag() → self.adb.drag(start_xy, end_xy, duration)"""
-        sx, sy = start_xy
-        ex, ey = end_xy
-        self._shell("input", "swipe",
-                    str(int(sx)), str(int(sy)),
-                    str(int(ex)), str(int(ey)),
-                    str(int(duration)))
-
-    def view_set_text(self, text: str):
-        """DroidBot Device.view_set_text() → adb.type(text)"""
-        safe = (text.replace(" ", "%s")
-                    .replace("'", "\\'")
-                    .replace('"', '\\"'))
-        self._shell("input", "text", safe)
-
-    def unlock(self):
-        """DroidBot Device.unlock() — wake + swipe up."""
-        self._shell("input", "keyevent", "224")   # KEYCODE_WAKEUP
-        time.sleep(0.3)
-        w = self.get_width()
-        h = self.get_height()
-        cx = w // 2
-        self._shell("input", "swipe",
-                    str(cx), str(int(h * 0.8)),
-                    str(cx), str(int(h * 0.2)), "400")
-        time.sleep(0.5)
-
-    # ── Activity info (DroidBot Device.get_top_activity_name) ────────────────
-
-    def get_top_activity_name(self):
-        """
-        DroidBot Device.get_top_activity_name() — same dumpsys regex.
-        """
-        r = self._shell("dumpsys", "activity", "activities")
-        m = re.search(r'\*\s*Hist\s*#\d+:\s*ActivityRecord\{[^ ]+\s*[^ ]+\s*([^ ]+)\s*t\d+\}', r)
-        if m:
-            return m.group(1)
-        return None
-
-    def send_event(self, event):
-        """DroidBot Device.send_event(event) → event.send(self)"""
-        event.send(self)
-
-    def __repr__(self):
-        return f"Device({self.serial})"
 
 

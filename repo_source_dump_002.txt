@@ -71491,6 +71491,194 @@
           "resource_id": ""
         }
       ]
+    },
+    "e921768c497c": {
+      "screen_id": "e921768c497c",
+      "package": "com.android.vending",
+      "activity": "com.android.vending/.AssetBrowserActivity",
+      "name": "vending_assetbrowseractivity",
+      "labels": [
+        "Search Apps & Games",
+        "Search Google Play",
+        "Voice search",
+        "element_4",
+        "Bike racing games",
+        "Train station games",
+        "Bus games",
+        "Realistic games",
+        "More options",
+        "Instagram\nInstalled",
+        "Crunchyroll: Anime Streaming\nStar rating: 4.4",
+        "Unacademy: Learn & Crack Exams\nStar rating: 4.0",
+        "WePlay-Game & Party\nStar rating: 4.2",
+        "Free Fire MAX x JUJUTSU KAISEN\nStar rating: 4.3",
+        "Police games",
+        "Hunting games",
+        "Fashion games",
+        "Watch videos",
+        "Games",
+        "Apps",
+        "Search",
+        "Books"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Search Apps & Games",
+          "x": 515,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Search Google Play",
+          "x": 154,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Voice search",
+          "x": 890,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_4",
+          "x": 1114,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Bike racing games",
+          "x": 331,
+          "y": 860,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Train station games",
+          "x": 923,
+          "y": 629,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Bus games",
+          "x": 923,
+          "y": 860,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Realistic games",
+          "x": 923,
+          "y": 1091,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "More options",
+          "x": 1142,
+          "y": 1301,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Instagram\nInstalled",
+          "x": 165,
+          "y": 1641,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Crunchyroll: Anime Streaming\nStar rating: 4.4",
+          "x": 454,
+          "y": 1641,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Unacademy: Learn & Crack Exams\nStar rating: 4.0",
+          "x": 743,
+          "y": 1641,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "WePlay-Game & Party\nStar rating: 4.2",
+          "x": 1032,
+          "y": 1641,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Free Fire MAX x JUJUTSU KAISEN\nStar rating: 4.3",
+          "x": 1208,
+          "y": 1641,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Police games",
+          "x": 326,
+          "y": 2163,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Hunting games",
+          "x": 939,
+          "y": 2163,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Fashion games",
+          "x": 347,
+          "y": 2331,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Watch videos",
+          "x": 954,
+          "y": 2331,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Games",
+          "x": 155,
+          "y": 2604,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Apps",
+          "x": 465,
+          "y": 2604,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Search",
+          "x": 775,
+          "y": 2604,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Books",
+          "x": 1085,
+          "y": 2604,
+          "cls": "android.view.View",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -72094,7 +72282,8 @@
     "5b8b2957dadb|tap:New Incognito tab": "7c92bc2f95a3",
     "7c92bc2f95a3|tap:Start voice search": "91b98e24a7db",
     "91b98e24a7db|tap:Refine: weather today": "99751df5ec71",
-    "5731aaff4c94|opt4_launch:play store": "c3c160d6730f"
+    "5731aaff4c94|opt4_launch:play store": "c3c160d6730f",
+    "c3c160d6730f|tap:Books": "e921768c497c"
   }
 }
 

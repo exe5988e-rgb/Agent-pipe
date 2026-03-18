@@ -7124,6 +7124,8 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
 [parser] INFO parsed 'tap 6' -> {'action': 'tap', 'target': 6}
 [parser] DEBUG normalized: 'type Warriyo Mortals'
 [parser] INFO parsed 'type Warriyo Mortals' -> {'action': 'type', 'text': 'Warriyo Mortals'}
+[parser] DEBUG normalized: 'tap 2'
+[parser] INFO parsed 'tap 2' -> {'action': 'tap', 'target': 2}
 
 
 //===== TERMUXFILE: --task =====

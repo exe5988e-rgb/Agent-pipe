@@ -7244,7 +7244,9 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
 [step] action: {'action': 'type', 'text': 'Warriyo Mortals'}
 [input] dispatching: SetTextEvent('Warriyo Mortals')
 [input] dispatching: SetTextEvent('Warriyo Mortals')
-[input] adb -s 192.168.29.48:33117 shell input text Warriyo%sMortals
+[input] adb -s 192.168.29.48:33117 shell input text Warriyo%sMortals[parser] DEBUG normalized: 'tap 4'
+[parser] INFO parsed 'tap 4' -> {'action': 'tap', 'target': 4}
+
 
 //===== TERMUXFILE: --task =====
 

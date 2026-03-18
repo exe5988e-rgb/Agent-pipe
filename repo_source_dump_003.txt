@@ -4349,6 +4349,9 @@ if __name__ == "__main__":
 [14/33] [2★] [settings] Open Settings and go to Display
 [19:06:51]   max_steps=8  skill_threshold=12  skills=3
 [19:07:42]   PASS  47.7s
+[19:07:47] 
+[15/33] [2★] [settings] Open Settings and go to Notifications
+[19:07:47]   max_steps=8  skill_threshold=12  skills=3
 
 
 //===== TERMUXFILE: tap_logger.py =====

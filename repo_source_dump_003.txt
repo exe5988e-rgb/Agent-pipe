@@ -4280,6 +4280,11 @@ if __name__ == "__main__":
     "to": "bcfd9287cbfa",
     "count": 1,
     "last_seen": 1773840978.2948313
+  },
+  "bcfd9287cbfa|tap:Scan": {
+    "to": "edd4f565ccb7",
+    "count": 1,
+    "last_seen": 1773841061.7821732
   }
 }
 
@@ -5659,7 +5664,7 @@ if __name__ == "__main__":
         "action": "done"
       }
     ],
-    "uses": 0,
+    "uses": 1,
     "version": 3
   }
 ]

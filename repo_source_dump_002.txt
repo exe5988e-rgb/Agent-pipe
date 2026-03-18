@@ -67518,7 +67518,7 @@
         "Sound & vibration",
         "Notifications & Quick Settings"
       ],
-      "visits": 2,
+      "visits": 3,
       "tainted": false,
       "elements": [
         {
@@ -70613,7 +70613,8 @@
     "caf601112185|tap:JensJulius Tejlgaard has new content": "6dd8030404cd",
     "6dd8030404cd|tap:Edit suggestion mrbeast": "571ebe27696a",
     "5731aaff4c94|opt4_launch:settings": "bcfd9287cbfa",
-    "edd4f565ccb7|tap:Not connected": "bcfd9287cbfa"
+    "edd4f565ccb7|tap:Not connected": "bcfd9287cbfa",
+    "bcfd9287cbfa|tap:Scan": "edd4f565ccb7"
   }
 }
 

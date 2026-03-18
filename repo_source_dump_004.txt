@@ -5976,6 +5976,20 @@ Traceback (most recent call last):
   File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/executor/device.py", line 119, in take_screenshot
     raise RuntimeError(f"screencap failed: {r.stderr.decode().strip()}")
 RuntimeError: screencap failed: error: device offline
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 271, in run
+    run_step(state, device=device, model_path=model_path,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             max_skill_steps=max_skill_steps)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 124, in run_step
+    img = capture_screen(adb_device=device)
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/perception/screen_capture.py", line 15, in capture_screen
+    return _cache[adb_device].take_screenshot(filename=filename)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/executor/device.py", line 119, in take_screenshot
+    raise RuntimeError(f"screencap failed: {r.stderr.decode().strip()}")
+RuntimeError: screencap failed: error: device offline
 
 
 //===== TERMUXFILE: --task =====
@@ -10110,29 +10124,5 @@ def capture_screen(adb_device: str, filename="screen.png") -> str:
             output_dir    = os.path.join(ROOT, "screenshots")
         )
     return _cache[adb_device].take_screenshot(filename=filename)
-
-
-//===== TERMUXFILE: jarvis-agent/perception/ui_mock_parser.py =====
-"""
-perception/ui_mock_parser.py
-Mock until OmniParser integration.
-Same interface: parse_ui(image_path) -> list[{id,text,x,y}]
-"""
-MOCK_ELEMENTS = [
-    {"id": 1,  "text": "WhatsApp",   "x": 160,  "y": 1200},
-    {"id": 2,  "text": "Chrome",     "x": 480,  "y": 1200},
-    {"id": 3,  "text": "Camera",     "x": 800,  "y": 1200},
-    {"id": 4,  "text": "Settings",   "x": 160,  "y": 1600},
-    {"id": 5,  "text": "YouTube",    "x": 480,  "y": 1600},
-    {"id": 6,  "text": "Files",      "x": 800,  "y": 1600},
-    {"id": 7,  "text": "Search bar", "x": 540,  "y": 200},
-    {"id": 8,  "text": "Gmail",      "x": 160,  "y": 800},
-    {"id": 9,  "text": "Maps",       "x": 480,  "y": 800},
-    {"id": 10, "text": "Clock",      "x": 800,  "y": 800},
-]
-
-def parse_ui(image_path: str) -> list:
-    print(f"[parser] mock — {len(MOCK_ELEMENTS)} elements")
-    return [dict(e) for e in MOCK_ELEMENTS]
 
 

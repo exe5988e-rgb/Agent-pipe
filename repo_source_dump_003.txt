@@ -4865,6 +4865,11 @@ if __name__ == "__main__":
     "to": "f025aa4a0cd3",
     "count": 1,
     "last_seen": 1773858509.951579
+  },
+  "f025aa4a0cd3|tap:Sponsored": {
+    "to": "8bd4aa0f7819",
+    "count": 1,
+    "last_seen": 1773858557.1738327
   }
 }
 

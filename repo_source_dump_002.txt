@@ -23566,7 +23566,7 @@
       "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
       "name": "youtube_shell$homeactivity",
       "labels": [],
-      "visits": 47,
+      "visits": 48,
       "tainted": false,
       "elements": []
     },
@@ -92247,7 +92247,8 @@
     "6a196709544c|type": "ea824627166e",
     "cce393f689c6|tap:filters": "e6e2d7bad11c",
     "e6e2d7bad11c|type": "87fee6983a2f",
-    "99af5f5e5dfc|tap:Warriyo - Mortals (ft. Laura Brehm) \u2013 3 minutes, 49 seconds \u2013 Go to channel Warriyo \u2013 Warriyo - 37 million views - 9 years ago \u2013 play video": "f025aa4a0cd3"
+    "99af5f5e5dfc|tap:Warriyo - Mortals (ft. Laura Brehm) \u2013 3 minutes, 49 seconds \u2013 Go to channel Warriyo \u2013 Warriyo - 37 million views - 9 years ago \u2013 play video": "f025aa4a0cd3",
+    "f025aa4a0cd3|tap:Sponsored": "8bd4aa0f7819"
   }
 }
 

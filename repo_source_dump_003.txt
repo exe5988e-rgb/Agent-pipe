@@ -4608,6 +4608,9 @@ if __name__ == "__main__":
 [15/33] [2★] [settings] Open Settings and go to Notifications
 [21:16:04]   max_steps=8  skill_threshold=12  skills=4
 [21:16:56]   PASS  48.1s
+[21:17:01] 
+[16/33] [2★] [settings] Open Settings and check battery percentage
+[21:17:01]   max_steps=8  skill_threshold=12  skills=4
 
 
 //===== TERMUXFILE: tap_logger.py =====

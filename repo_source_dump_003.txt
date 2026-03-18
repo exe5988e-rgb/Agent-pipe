@@ -4580,6 +4580,7 @@ if __name__ == "__main__":
 [21:09:04] 
 [12/33] [2★] [youtube] Search for MrBeast on YouTube
 [21:09:04]   max_steps=10  skill_threshold=12  skills=3
+[21:13:15]   PASS  247.9s
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -5721,7 +5722,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-18T21:08:59.120814",
+  "run_at": "2026-03-18T21:13:15.238935",
   "skills_before": 0,
   "skills_current": 3,
   "results": [
@@ -5823,6 +5824,15 @@ if __name__ == "__main__":
       "elapsed_s": 73.1,
       "error": null,
       "retried": false
+    },
+    {
+      "task": "Search for MrBeast on YouTube",
+      "category": "youtube",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 247.9,
+      "error": null,
+      "retried": false
     }
   ]
 }
@@ -5846,17 +5856,21 @@ if __name__ == "__main__":
     "version": 3
   },
   {
-    "pattern": "open youtube",
+    "pattern": "search for on youtube",
     "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
-    "task_example": "Open YouTube",
+    "task_example": "Search for MrBeast on YouTube",
     "steps": [
       {
         "action": "tap",
-        "target": "Close"
+        "target": "Search"
+      },
+      {
+        "action": "type",
+        "text": "$QUERY"
       },
       {
         "action": "tap",
-        "target": "Navigate up"
+        "target": "Edit suggestion mrbeast"
       },
       {
         "action": "done"
@@ -8034,7 +8048,67 @@ nohup: ignoring input
 [device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (2098148 bytes)
 [ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
 [ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
-[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity[parser] DEBUG normalized: 'done'
+[parser] INFO parsed 'done' -> {'action': 'done'}
+
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,307) → 'Current setting is for all notifications. Tap to change your notification setting for MrBeast'
+[ui_parser] child: (0,307) → 'Survive 30 Days Stranded With Your Ex, Win $250,000 – 30 minutes, 4 seconds –  – MrBeast - 94 million views - 10 days ago – play video'
+[ui_parser] child: (0,853) → 'Survive 30 Days Stranded With Your Ex, Win $250,000 – 30 minutes, 4 seconds –  – MrBeast - 94 million views - 10 days ago – play video'
+[ui_parser] child: (0,2014) → 'Pop The Balloons, Win $10,000, 34 million views – play Short'
+[ui_parser] child: (0,2182) → 'Pop The Balloons, Win $10,000, 34 million views – play Short'
+[ui_parser] full parse -- 35 elements (34 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=b2025f8df48c elements=35
+[step] UI: ['Navigate up', 'Clear', 'Voice search', 'Cast', 'More options', 'mrbeast', 'Current setting is for all notifications. Tap to change your notification setting for MrBeast', 'Survive 30 Days Stranded With Your Ex, Win $250,000 – 30 minutes, 4 seconds –  – MrBeast - 94 million views - 10 days ago – play video']
+[map] new screen: youtube_shell$homeactivity (c80ebc098a67)
+[map] transition: youtube_shell$homeactivity --[tap:Edit suggestion mrbeast new video]--> youtube_shell$homeactivity
+[map] screen: youtube_shell$homeactivity (c80ebc09)
+[skill] matched: 'open youtube'  score=1.00  act=True
+[skill] cannot resolve: 'Close'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'done'
+[step] LLM: 'done'
+[step] action: {'action': 'done'}
+[input] DONE — no dispatch
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[skill] replacing shorter skill with better version (3 → 4 steps)
+[step] step=8/10 done=True history=['opt4_launch:youtube', 'retry', 'retry', 'retry', 'tap [3] Search', "type 'MrBeast'", 'tap [4] Edit suggestion mrbeast', 'done']
+
+[controller] done in 8 steps
+
+[controller] history:
+  1. opt4_launch:youtube
+  2. retry
+  3. retry
+  4. retry
+  5. tap [3] Search
+  6. type 'MrBeast'
+  7. tap [4] Edit suggestion mrbeast
+  8. done
+
+  Screen Map: 525 screens (0 tainted), 641 transitions
+    whatsapp             175 screens
+    chrome               106 screens
+    youtube              104 screens
+    vending              43 screens
+    termux               25 screens
+    launcher             23 screens
+    settings             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+  TransitionMemory: 591 transitions (279 confirmed, threshold=2)
+
 
 //===== TERMUXFILE: --task =====
 

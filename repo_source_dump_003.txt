@@ -3475,6 +3475,11 @@ if __name__ == "__main__":
     "to": "f26fcd5f93eb",
     "count": 1,
     "last_seen": 1773793142.8619695
+  },
+  "f26fcd5f93eb|swipe": {
+    "to": "1f432998f498",
+    "count": 1,
+    "last_seen": 1773793174.9672356
   }
 }
 

@@ -76092,7 +76092,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {
@@ -76681,6 +76681,74 @@
           "x": 1116,
           "y": 2576,
           "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        }
+      ]
+    },
+    "740ae23375a8": {
+      "screen_id": "740ae23375a8",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Watch most of YouTube ad-free, offline and in the background",
+        "Close",
+        "Watch most of YouTube ad-free, offline and in the background",
+        "Watch most of YouTube ad-free, offline and in the background",
+        "Try 1 month for \u20b90",
+        "Terms apply. Cancel at any time.",
+        "Terms apply."
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Watch most of YouTube ad-free, offline and in the background",
+          "x": 620,
+          "y": 1386,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Close",
+          "x": 1092,
+          "y": 238,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Watch most of YouTube ad-free, offline and in the background",
+          "x": 620,
+          "y": 1543,
+          "cls": "android.widget.ScrollView",
+          "resource_id": ""
+        },
+        {
+          "text": "Watch most of YouTube ad-free, offline and in the background",
+          "x": 620,
+          "y": 1266,
+          "cls": "android.widget.ScrollView",
+          "resource_id": ""
+        },
+        {
+          "text": "Try 1 month for \u20b90",
+          "x": 620,
+          "y": 2372,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Terms apply. Cancel at any time.",
+          "x": 620,
+          "y": 2614,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Terms apply.",
+          "x": 405,
+          "y": 2572,
+          "cls": "android.widget.Button",
           "resource_id": ""
         }
       ]
@@ -77315,7 +77383,8 @@
     "a34183adf43f|home": "5731aaff4c94",
     "1025dd6b857e|opt4_launch:whatsapp": "af62a7d780e2",
     "af62a7d780e2|tap:WO": "a206f27488e6",
-    "a206f27488e6|tap:Updates": "6dcc835738aa"
+    "a206f27488e6|tap:Updates": "6dcc835738aa",
+    "1025dd6b857e|opt4_launch:youtube": "740ae23375a8"
   }
 }
 

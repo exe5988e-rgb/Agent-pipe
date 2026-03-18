@@ -68123,6 +68123,66 @@
           "resource_id": ""
         }
       ]
+    },
+    "22cbdc77930c": {
+      "screen_id": "22cbdc77930c",
+      "package": "com.android.launcher",
+      "activity": "com.android.launcher/.Launcher",
+      "name": "launcher_launcher",
+      "labels": [
+        "element_1",
+        "SearchButton",
+        "Phone",
+        "Messages",
+        "Photos",
+        "Camera"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 620,
+          "y": 1188,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": "com.brunoschalch.timeuntil:id/widgetlayoutrelativelayout"
+        },
+        {
+          "text": "SearchButton",
+          "x": 620,
+          "y": 2280,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.android.launcher:id/page_indicator"
+        },
+        {
+          "text": "Phone",
+          "x": 269,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Messages",
+          "x": 503,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Photos",
+          "x": 737,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Camera",
+          "x": 971,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {

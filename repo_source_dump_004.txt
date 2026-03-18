@@ -5862,6 +5862,8 @@ RuntimeError: No LLM backend available.
     membership           1 screens
     permissioncontroller 1 screens
   TransitionMemory: 576 transitions (280 confirmed, threshold=2)
+[parser] DEBUG normalized: 'tap 5'
+[parser] INFO parsed 'tap 5' -> {'action': 'tap', 'target': 5}
 
 
 //===== TERMUXFILE: --task =====

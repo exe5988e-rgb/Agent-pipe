@@ -52149,6 +52149,145 @@
           "resource_id": ""
         }
       ]
+    },
+    "87338470af2a": {
+      "screen_id": "87338470af2a",
+      "package": "com.termux",
+      "activity": "com.termux/.app.TermuxActivity",
+      "name": "termux_termuxactivity",
+      "labels": [
+        "ho -n \"Top 5: 1. Caramel (4.8) 2. Vue [5.0] & more\" | base64)                                   adb -s 192.168.29.48:39237 shell am broadcast -a clipper.set.b64 --es text \"$B64\"                                                                       Broadcasting: Intent { act=clipper.set.b64 flg=0x400000 (has extras) }                  Broadcast completed: result=0                   ~/.../shared/Download $ adb -s 192.168.29.48:39237 shell am broadcast -a clipper.set --es text \"hello\"                                          Broadcasting: Intent { act=clipper.set flg=0x400000 (has extras) }                              Broadcast completed: result=0\n~/.../shared/Download $ adb -s 192.168.29.48:39237 shell dumpsys package ca.zgrs.clipper | grep -E \"versionName|versionCode\"                                versionCode=2 minSdk=21 targetSdk=36                                        versionName=1.3-jarvis                                  ~/.../shared/Download $ adb -s 192.168.29.48:39237 shell dumpsys package ca.zgrs.clipper | grep -E \"versionName|versionCode\"",
+        "ESC",
+        "element_3",
+        "\u2630",
+        "\u21f3",
+        "\u2191",
+        "END",
+        "PGUP",
+        "\u21b9",
+        "CTRL",
+        "ALT",
+        "\u2190",
+        "\u2193",
+        "\u2192",
+        "PGDN"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "ho -n \"Top 5: 1. Caramel (4.8) 2. Vue [5.0] & more\" | base64)                                   adb -s 192.168.29.48:39237 shell am broadcast -a clipper.set.b64 --es text \"$B64\"                                                                       Broadcasting: Intent { act=clipper.set.b64 flg=0x400000 (has extras) }                  Broadcast completed: result=0                   ~/.../shared/Download $ adb -s 192.168.29.48:39237 shell am broadcast -a clipper.set --es text \"hello\"                                          Broadcasting: Intent { act=clipper.set flg=0x400000 (has extras) }                              Broadcast completed: result=0\n~/.../shared/Download $ adb -s 192.168.29.48:39237 shell dumpsys package ca.zgrs.clipper | grep -E \"versionName|versionCode\"                                versionCode=2 minSdk=21 targetSdk=36                                        versionName=1.3-jarvis                                  ~/.../shared/Download $ adb -s 192.168.29.48:39237 shell dumpsys package ca.zgrs.clipper | grep -E \"versionName|versionCode\"",
+          "x": 620,
+          "y": 727,
+          "cls": "android.view.View",
+          "resource_id": "com.termux:id/terminal_view"
+        },
+        {
+          "text": "ESC",
+          "x": 97,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_3",
+          "x": 620,
+          "y": 1447,
+          "cls": "androidx.viewpager.widget.ViewPager",
+          "resource_id": "com.termux:id/terminal_toolbar_view_pager"
+        },
+        {
+          "text": "\u2630",
+          "x": 271,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u21f3",
+          "x": 445,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "HOME",
+          "x": 619,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u2191",
+          "x": 794,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "END",
+          "x": 968,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "PGUP",
+          "x": 1143,
+          "y": 1381,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u21b9",
+          "x": 97,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "CTRL",
+          "x": 271,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "ALT",
+          "x": 445,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u2190",
+          "x": 619,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u2193",
+          "x": 794,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u2192",
+          "x": 968,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "PGDN",
+          "x": 1143,
+          "y": 1512,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -52575,7 +52714,8 @@
     "54f6f8d6e985|type": "f358bf809a6b",
     "1b8fd8109759|tap:11": "f358bf809a6b",
     "5e932108d73c|tap:16": "f358bf809a6b",
-    "5193b772df54|opt4_launch:whatsapp": "f358bf809a6b"
+    "5193b772df54|opt4_launch:whatsapp": "f358bf809a6b",
+    "f358bf809a6b|retry": "87338470af2a"
   }
 }
 

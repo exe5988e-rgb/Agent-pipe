@@ -47521,6 +47521,279 @@
           "resource_id": ""
         }
       ]
+    },
+    "ec0b6ebb8948": {
+      "screen_id": "ec0b6ebb8948",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Open the homepage",
+        "element_2",
+        "element_3",
+        "google.com/search?client=ms-android-oneplus-terr1-rso3&hs=WuC&sca_esv=9d975e0fdc86a6e5&sxsrf=ANbL-n72AAjlz-j94IXN5Fc8-9PiPABE9w%3A1773793142545&q=Best+Restaur",
+        "See 23 tabs",
+        "Customise and control Google Chrome",
+        "element_7",
+        "Google",
+        "Google Account: Amir Shams (amirshamse8@gmail.com)",
+        "Search Labs",
+        "Google Search",
+        "element_12",
+        "Clear Search",
+        "Search by voice",
+        "Best Restaurants in Dhanbad open now",
+        "AI Mode",
+        "element_17",
+        "All",
+        "Short videos",
+        "Maps",
+        "Forums",
+        "Remove Top rated",
+        "Remove Open now",
+        "Choose area",
+        "How location is used",
+        "element_26",
+        "View 3 corroboration links",
+        "About this result",
+        "Change language to Hindi",
+        "Listen"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "element_2",
+          "x": 620,
+          "y": 1455,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.android.chrome:id/compositor_view_holder"
+        },
+        {
+          "text": "element_3",
+          "x": 224,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "google.com/search?client=ms-android-oneplus-terr1-rso3&hs=WuC&sca_esv=9d975e0fdc86a6e5&sxsrf=ANbL-n72AAjlz-j94IXN5Fc8-9PiPABE9w%3A1773793142545&q=Best+Restaur",
+          "x": 592,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "See 23 tabs",
+          "x": 988,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 1526,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Google",
+          "x": 621,
+          "y": 457,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Google Account: Amir Shams (amirshamse8@gmail.com)",
+          "x": 1128,
+          "y": 448,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Search Labs",
+          "x": 99,
+          "y": 447,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Google Search",
+          "x": 140,
+          "y": 632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_12",
+          "x": 621,
+          "y": 639,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Clear Search",
+          "x": 929,
+          "y": 632,
+          "cls": "android.widget.Button",
+          "resource_id": "tsuid_du-5aef3IN6I4-EPzOSa0A0_3"
+        },
+        {
+          "text": "Search by voice",
+          "x": 1100,
+          "y": 632,
+          "cls": "android.widget.Button",
+          "resource_id": "Q7Ulpb"
+        },
+        {
+          "text": "Best Restaurants in Dhanbad open now",
+          "x": 535,
+          "y": 632,
+          "cls": "android.widget.EditText",
+          "resource_id": ""
+        },
+        {
+          "text": "AI Mode",
+          "x": 152,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_17",
+          "x": 621,
+          "y": 716,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "All",
+          "x": 358,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Short videos",
+          "x": 614,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Maps",
+          "x": 903,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Forums",
+          "x": 1122,
+          "y": 793,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Remove Top rated",
+          "x": 252,
+          "y": 980,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Remove Open now",
+          "x": 652,
+          "y": 980,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Choose area",
+          "x": 796,
+          "y": 1136,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "How location is used",
+          "x": 1155,
+          "y": 1155,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_26",
+          "x": 620,
+          "y": 1855,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "View 3 corroboration links",
+          "x": 958,
+          "y": 1337,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "About this result",
+          "x": 1153,
+          "y": 1337,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Change language to Hindi",
+          "x": 559,
+          "y": 1337,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Listen",
+          "x": 719,
+          "y": 1337,
+          "cls": "android.widget.ToggleButton",
+          "resource_id": ""
+        },
+        {
+          "text": "element_31",
+          "x": 621,
+          "y": 2073,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_32",
+          "x": 621,
+          "y": 1810,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Show more AI Overview",
+          "x": 620,
+          "y": 2310,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -47909,7 +48182,8 @@
     "1f432998f498|swipe": "7f10a5188f17",
     "7f10a5188f17|tap:element_9": "8a7ad9916fb6",
     "8a7ad9916fb6|tap:element_37": "1def2c77ddc7",
-    "1def2c77ddc7|swipe": "e28b49f9232a"
+    "1def2c77ddc7|swipe": "e28b49f9232a",
+    "e28b49f9232a|tap:View 3 corroboration links": "ec0b6ebb8948"
   }
 }
 

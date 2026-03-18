@@ -6376,6 +6376,152 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
 [parser] DEBUG normalized: 'tap 1'
 [parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
 
+########################################################
+  JARVIS  |  Search for VLC on Play Store and open its page
+  Device : 192.168.29.48:33117
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 565 screens (0 tainted), 681 transitions
+    whatsapp             186 screens
+    youtube              119 screens
+    chrome               112 screens
+    vending              46 screens
+    termux               26 screens
+    settings             25 screens
+    launcher             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+    notificationmanager  1 screens
+    battery              1 screens
+  TransitionMemory: 631 transitions (283 confirmed, threshold=2)
+[init] task_apps: ['play store']
+[init] max_skill_steps: 20 (threshold: 12)
+
+========================================================
+  STEP 1  |  Search for VLC on Play Store and open its page
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3310509 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Mostly cloudy'
+[ui_parser] OCR: (841,1475)-(1009,1671) → 'lt'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.launcher/.Launcher hash=3f2e4e07a3bf elements=26
+[step] UI: ['Clock', '21', ':', '53', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (5731aaff)
+[OPT4v2] launcher -> launching play store (com.android.vending)
+[llm] OPT4v2 am start: com.android.vending
+
+========================================================
+  STEP 2  |  Search for VLC on Play Store and open its page
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (329506 bytes)
+[ui_parser] activity=com.android.vending/.AssetBrowserActivity
+[ui_parser] signal='com.android.vending/.AssetBrowserActivity'
+[mem] miss (unknown): com.android.vending/.AssetBrowserActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (196,139) → 'spotify'
+[ui_parser] child: (14,153) → 'Navigate up'
+[ui_parser] child: (890,153) → 'Search Google Play'
+[ui_parser] child: (1058,153) → 'Voice Search'
+[ui_parser] child: (42,507) → 'Spotify: Music and Podcasts\nSpotify AB\nContains ads'
+[ui_parser] child: (905,563) → 'Install'
+[ui_parser] child: (0,1219) → 'Can I download music and podcasts for offline listening?'
+[ui_parser] child: (793,1289) → 'Install on more devices'
+[ui_parser] child: (1030,1289) → 'Install on more devices'
+[ui_parser] child: (84,1955) → 'Ask a question about this app'
+[ui_parser] child: (84,2179) → 'Can I download music and podcasts for offline listening?'
+[ui_parser] child: (84,2347) → 'What types of audio content are available besides music?'
+[ui_parser] child: (0,2492) → 'Games'
+[ui_parser] child: (310,2492) → 'Apps'
+[ui_parser] child: (620,2492) → 'Search'
+[ui_parser] child: (930,2492) → 'Books'
+[ui_parser] full parse -- 23 elements (23 labeled, 16 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.vending/.AssetBrowserActivity hash=8ccfb0cbb882 elements=23
+[step] UI: ['spotify', 'Navigate up', 'Search Google Play', 'Voice Search', 'More options', 'Spotify: Music and Podcasts\nSpotify AB\nContains ads', 'Install', 'Average rating 4.1 stars in 33 million reviews']
+[map] screen: vending_assetbrowseractivity (81590551)
+[skill] matched: 'search for on play'  score=1.00  act=True
+[skill] cannot resolve: 'Search Apps & Games'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 22'
+[step] LLM: 'tap 22'
+[step] action: {'action': 'tap', 'target': 22}
+[input] dispatching: TouchEvent(x=775, y=2604)
+[input] dispatching: TouchEvent(x=775, y=2604)
+[input] adb -s 192.168.29.48:33117 shell input tap 775 2604
+[mem] invalidated com.android.vending/.AssetBrowserActivity
+[step] step=2/12 done=False history=['opt4_launch:play store', 'tap [22] Search']
+
+========================================================
+  STEP 3  |  Search for VLC on Play Store and open its page
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (626035 bytes)
+[ui_parser] activity=com.android.vending/.AssetBrowserActivity
+[ui_parser] signal='com.android.vending/.AssetBrowserActivity'
+[mem] miss (unknown): com.android.vending/.AssetBrowserActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (42,153) → 'Search Apps & Games'
+[ui_parser] child: (70,153) → 'Search Google Play'
+[ui_parser] child: (806,153) → 'Voice search'
+[ui_parser] child: (42,517) → 'Bike racing games'
+[ui_parser] child: (648,517) → 'Train station games'
+[ui_parser] child: (648,748) → 'Bus games'
+[ui_parser] child: (648,979) → 'Realistic games'
+[ui_parser] child: (21,1399) → 'Instagram\nInstalled'
+[ui_parser] child: (310,1399) → 'Crunchyroll: Anime Streaming\nStar rating: 4.4'
+[ui_parser] child: (599,1399) → 'Unacademy: Learn & Crack Exams\nStar rating: 4.0'
+[ui_parser] child: (888,1399) → 'WePlay-Game & Party\nStar rating: 4.2'
+[ui_parser] child: (1177,1399) → 'Free Fire MAX x JUJUTSU KAISEN\nStar rating: 4.3'
+[ui_parser] child: (42,2079) → 'Police games'
+[ui_parser] child: (639,2079) → 'Hunting games'
+[ui_parser] child: (42,2247) → 'Fashion games'
+[ui_parser] child: (680,2247) → 'Watch videos'
+[ui_parser] child: (0,2492) → 'Games'
+[ui_parser] child: (310,2492) → 'Apps'
+[ui_parser] child: (620,2492) → 'Search'
+[ui_parser] child: (930,2492) → 'Books'
+[ui_parser] full parse -- 22 elements (21 labeled, 20 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.vending/.AssetBrowserActivity hash=ae0d36e3b20c elements=22
+[step] UI: ['Search Apps & Games', 'Search Google Play', 'Voice search', 'element_4', 'Bike racing games', 'Train station games', 'Bus games', 'Realistic games']
+[map] transition: vending_assetbrowseractivity --[tap:Books]--> vending_assetbrowseractivity
+[map] screen: vending_assetbrowseractivity (e921768c)
+[skill] matched: 'search for on play'  score=1.00  act=True
+[skill] cannot resolve: "Refine search to 'spotify'"
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 1'
+[step] LLM: 'tap 1'
+[step] action: {'action': 'tap', 'target': 1}
+[input] dispatching: TouchEvent(x=515, y=237)
+[input] dispatching: TouchEvent(x=515, y=237)
+[input] adb -s 192.168.29.48:33117 shell input tap 515 237
+[mem] invalidated com.android.vending/.AssetBrowserActivity
+[step] step=3/12 done=False history=['opt4_launch:play store', 'tap [22] Search', 'tap [1] Search Apps & Games']
+
+========================================================
+  STEP 4  |  Search for VLC on Play Store and open its page
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1228911 bytes)
+[ui_parser] activity=com.android.vending/.AssetBrowserActivity
+[ui_parser] signal='com.android.vending/.AssetBrowserActivity'
 
 //===== TERMUXFILE: --task =====
 
@@ -9424,199 +9570,4 @@ class TransitionMemory:
         print(f"  TransitionMemory: {st['total_transitions']} transitions "
               f"({st['confirmed']} confirmed, threshold={MIN_OBSERVATIONS})")
 
-
-//===== TERMUXFILE: perception/__pycache__/screen_map.cpython-313.pyc =====
-
-
-    i1                         S r SSKrSSKrSSKrSSKJr  SSKJr  \R                  " 5       S-  S-  r	1 Skr
-/ SQr1 S	kr1 S
-kr
-1 SkrS\S
-\4S jrS\S
-\4S jrS\S
-\4S jrS\S
-\4S jr " S S5      rg)u  
-perception/screen_map.py  —  Screen Understanding + App Navigation Graph
-
-Session 8 fixes:
-  - Canonical screen deduplication: filter-tab variants of HomeActivity all
-    resolve to one canonical screen_id so the graph stays small and coherent.
-  - Unknown-screen filter: screens with package=="unknown" are never registered.
-  - Call-overlay guard: screens whose labels include active-call markers
-    (Turn microphone off / Leave call / WhatsApp voice call) are recognised as
-    a call-overlay variant of their base screen and kept separate but labelled.
-  - get_canonical_id(): returns the highest-visit variant for a given activity
-    so controller.py and transition_memory.py always use a stable anchor node.
-
-Data stored in ~/workflows/screen_map.json:
-  screens:     fingerprinted UI states
-  transitions: (screen_id, action) → screen_id edges
-
-Usage:
-  from perception.screen_map import ScreenMap
-  sm = ScreenMap()
-  screen_id = sm.identify(activity, elements)
-  path = sm.find_path(start_id, target_id)
-    N)Path)Optional	workflowszscreen_map.json>	    123okbackdonehomecancel)z^\d{1,2}:\d{2}(:\d{2})?$z^\d+$z^[+\-]?\d+[\d.,]*$>   buypayblockcleareraseresetdeleteformatlogoutremovereportdisablefactoryunblockpurchase	uninstall
-deactivatesign outturn off>   
-leave call
-minimize calladd person to callturn microphone offwhatsapp voice call>   gifsaudiolinkspollsphotosunreadvideosstickers	documentsadd new list
-manage family
-manage unread
-search familymanage favouritessearch group chatssearch unread chatsall filter, , selectedsearch favourite chatsfamily filter, , unselectedgroups filter, , unselectedunread filter, 0, unselectedunread filter, 2, unselectedfavourites filter, , unselectedtextreturnc                     U R                  5       [        ;   a  g[         H.  n[        R                  " XR                  5       5      (       d  M.    g   g)NTF)lower
-_IGNORE_TEXTS_IGNORE_PATTERNSrematchstrip)r>   pats     C/data/data/com.termux/files/home/workflows/perception/screen_map.py_is_dynamicrI   S   s:    zz|}$
-88C&&       c                 V   ^ U R                  5       m[        U4S j[         5       5      $ )Nc              3   ,   >#    U  H	  oT;   v   M     g 7fN ).0wtls     rH   	<genexpr> _is_dangerous.<locals>.<genexpr>^   s     .
-1Bw
-s   )rA   any
-_DANGER_WORDS)r>   rQ   s    @rH   
-_is_dangerousrV   \   s    	
-B.
-...rJ   labelsc                    ^ U  Vs1 s H  oR                  5       iM     snm[        U4S j[         5       5      $ s  snf )z?Return True if any call-overlay label is present in label list.c              3   J   >#    U  H  oS R                  T5      ;   v   M     g7f) N)join)rO   cllows     rH   rR   $_has_call_overlay.<locals>.<genexpr>d   s     B-ArSXXc]"-As    #)rA   rT   _CALL_OVERLAY_LABELS)rW   lr]   s     @rH   _has_call_overlayra   a   s2    $
-%f779f
-%CB-ABBB &s   ;c                 d    U  Vs/ s H  oR                  5       [        ;  d  M  UPM      sn$ s  snf )z@Remove filter-tab / search-overlay labels before fingerprinting.)rA   _HOME_FILTER_LABELS)rW   r`   s     rH   _strip_filter_labelsrd   g   s&    Fv!2E!EAvFFFs   --c                   <   \ rS rSrSrS rS\4S jrS r\	S\
-S\S\
-4S	 j5       r\	S
-\S\S\
-4S j5       rS\
-S\S\\
-   4S
- jrS\
-S\\   4S jrS\
-S\\
-   4S jrS\
-S\\
-   4S jrSS\S\\
-   4S jjrS\
-S\
-S\
-4S jrSS\
-S\
-S\\   4S jjrS\4S jrS rSrg) 	ScreenMapl   z
-Stores screen fingerprints and navigation graph.
-
-Screen fingerprint:
-  screen_id = md5(package + "/" + activity_tail + "|" + sorted_stable_labels)
-
-Navigation graph:
-  transitions[(screen_id, element_text)] = target_screen_id
-c                 .    U R                  5       U l        g rM   )_load_dataselfs    rH   __init__ScreenMap.__init__w   s    ZZ\
-rJ   r?   c                     [         R                  5       (       a)   [        R                  " [         R	                  5       5      $ 0 0 S.$ ! [
-         a     Nf = f)N)screenstransitions)MAP_FILEexistsjsonloads	read_text	Exceptionrk   s    rH   ri   ScreenMap._load|   sM    ??
-zz("4"4"677 b11  
-
-s   'A 
-AAc                     [         R                  R                  SSS9  [         R                  [        R
-                  " U R                  SS95        g )NT)parentsexist_ok   )indent)rr   parentmkdir
-write_textrt   dumpsrj   rk   s    rH   _saveScreenMap._save   s6    dT:DJJtzz!<=rJ   activityelementsc           	      d   SU ;   a  U R                  S5      S   OU nU R                  S5      S   R                  S5      S   nU Vs/ s HP  nUR                  SS5      (       d  M  [        UR                  SS5      5      (       a  M>  UR                  SS5      PMR     nnSU;   d  SUR                  5       ;   a  [	        U5      nOUn[        [
-        U5      5      nU SU S	S	R                  US
-S 5       3n[        R                  " UR                  5       5      R                  5       S
-S $ s  snf )
-z
-Stable hash for a screen state.
-Filter-tab variants of HomeActivity collapse to one fingerprint.
-Call overlays get their own fingerprint (tainted screen).
-/r   .r>   r   HomeActivityhomeactivity|N      )splitgetrI   rA   rd   sortedsetr[   hashlibmd5encode	hexdigest)	r   r   pkgact_taile
-raw_labelsrW   
-labels_sortedblobs	            rH   fingerprintScreenMap.fingerprint   s    .1H_8>>#&q)(>>#&r*005b9 (0
-'/!uuVR  
-)4QUU625F)G 
-AEE&"x 	 
- X%8>>;K)K)*5FFs6{+
-az388M#2,>#?"@A{{4;;=)335cr::
-s   D-&D-D-labels_alabels_bc                    U  Vs1 s H  o"(       d  M  [        U5      (       a  M  UiM!     nnU Vs1 s H  o"(       d  M  [        U5      (       a  M  UiM!     nnU(       d  g[        X4-  5      [        U5      -  $ s  snf s  snf )z-Overlap ratio between two element label sets.        )rI   len)r   r   tabs        rH   
-similarityScreenMap.similarity   sc     !=1AQk!nQ= =1AQk!nQ=15zCF""	 
->=s   
-A:A:A:
-A?A?A?c                    SU;   a  UR                  S5      S   OUnUS;   d  U(       d  gU R                  X5      nU R                  S   nXE;   a.  XT   R                  SS5      S-   XT   S'   U R	                  5         U$ UR                  S5      S   R                  S	5      S   nU Vs/ s HP  nUR                  S
-S5      (       d  M  [        UR                  S
-S5      5      (       a  M>  UR                  S
-S5      PMR     nn[
-        U5      n	UR                  S	5      S    SU 3R                  5       n
-U	(       a  U
-S
--
-  n
-UUUU
-USS SU	USS  VVVs/ s H0  nUR                  5        VVs0 s H  u  pUS;   d  M
-  X_M     snnPM2     snnnS.XT'   U R	                  5         U	(       a  SOSn
-[        SU
- SU SU
- 35        U$ s  snf s  snnf s  snnnf )z
-Return screen_id for the current state.
-Returns None for screens with unknown package (loading screens etc.)
-Call-overlay screens are registered but labelled as tainted.
-r   r   )unknownr   Nrp   visits   r   r   r>   r   _
-_call_overlay   (   )r>   resource_idclsxy)	screen_idpackager   namerW   r   taintedr   z [CALL OVERLAY]z[map] new screen: z ())
-r   r   rj   r   r   rI   ra   rA   itemsprint)rl   r   r   r   fprp   r   r   rW   r   r   kvflags                 rH   identifyScreenMap.identify   s    ),xhnnS!!$X/!
-
-
-h
-1**Y'
-=$+KOOHa$@1$DGK!JJLI >>#&r*005b9'/
-'/!uuVR  
-)4QUU625F)G 
-AEE&"x 	 
-
- $F+YYs^B'((4::<O#D   %!#CR[$ "#2 'A #$'') C)$!AA ) C&
-
- 	
-
-$+ 
-"4&2$av67	7
-&Cs0   (GG)GG+G;GGGr   c                 >    U R                   S   R                  U5      $ )Nrp   )rj   r   )rl   r   s     rH   
-get_screenScreenMap.get_screen   s    zz)$((33rJ   c                     Su  p#U R                   S   R                  5        HS  u  pEUR                  SS5      U:w  a  M  UR                  SS5      (       a  M6  UR                  SS5      nXc:  d  MO  UnUnMU     U$ )	z
-Return the screen_id with the most visits for a given activity string.
-Used by controller to get a stable anchor when multiple fingerprint
-variants exist for the same activity (e.g. WhatsApp home w/ filter tabs).
-Ignores tainted (call-overlay) screens.
-Nr   rp   r   r   r   Fr   r   )rj   r   r   )rl   r   best_idbest_visitssidsr   s          rH   get_canonical_idScreenMap.get_canonical_id   sz      (jj+113FCuuZ$0uuY&&h"A 4 rJ   r   c                 0   UR                  5       nSu  p4U R                  S   R                  5        H`  u  pVUR                  SS5      (       a  M  X&R                  SS5      R                  5       ;   d  MC  UR                  SS5      nXt:  d  M\  UnUnMb     U$ )	zBFind screen_id by partial name match. Returns highest-visit match.r   rp   r   Fr   r   r   r   )rA   rj   r   r   )rl   r   name_lr   r   r   r   r   s           rH   find_by_nameScreenMap.find_by_name   s    'jj+113FCuuY&&vr*0022EE(A&?"#K!G 4 rJ   rW   c                     Su  p4U R                   S   R                  5        HJ  u  pVUR                  SS5      (       a  M  U R                  XR                  S/ 5      5      nXt:  d  MF  UnUnML     XB:  a  U$ g)zDFind screen_id by element label similarity. Ignores tainted screens.)Nr   rp   r   FrW   N)rj   r   r   r   )rl   rW   	thresholdr   
-best_scorer   r   scores           rH   find_by_labelsScreenMap.find_by_labels  su    'jj+113FCuuY&&OOFEE(B,?@E!"
-
- 4 "NrJ   from_idaction_labelto_idc                    X:X  a  gUb  Uc  gU R                   S   R                  U0 5      nU R                   S   R                  U0 5      nUR                  S5      (       d  UR                  S5      (       a  gU SU 3nU R                   S   nUR                  U5      U:w  aS  X7U'   U R                  5         UR                  SUSS 5      nUR                  SUSS 5      n	[        SU S	U S
-U	 35        gg)uh   
-Record a (screen, action) → screen edge.
-Skips transitions involving tainted (call-overlay) screens.
-Nrp   r   r   rq   r      z[map] transition: z --[z]--> )rj   r   r   r   )
-rl   r   r   r   from_screen	to_screenkeyrq   	from_nameto_names
-             rH   record_transitionScreenMap.record_transition  s    
- ?emjj+//<jj+//r:	??9%%y)A)A	<.)jj/??35($JJL#<I!
-
-fbq	:G&ykl^5	RS )rJ   c                    X:X  a  / $ Ub  Uc  gU R                   S   n0 nUR                  5        H;  u  pgUR                  SS5      u  pUR                  U/ 5      R	                  X45        M=     U/ 4/n
-U1nU
-(       a  U
-R                  S5      u  p[
-        U
-5      U:  a  M+  UR                  U/ 5       H?  u  pX;   a  M  XU4/-   nX:X  a  Us  $ UR                  U5        U
-R	                  X45        MA     U
-(       a  M  g)u   
-BFS over transition graph to find action sequence from_id → to_id.
-Returns list of (action_label, screen_id) tuples or None.
-Nrq   r   r   r   )	rj   r   rsplit
-setdefaultappendpopr   r   add)rl   r   r   	max_depthrq   adjr   targetsrcactionqueuevisitedcurrpathnxtnew_paths                   rH   	find_pathScreenMap.find_path,  s   
- I?emjj/&,,.KC**S!,KCNN3#**F+;< / R=/)1JD4yI%"wwtR0>C=/1<#OC c_-  1	 e rJ   c                 2   U R                   S   nU R                   S   n0 nSnUR                  5        HI  nUR                  SS5      nUR                  US5      S-   X6'   UR                  S5      (       d  MD  US-
-  nMK     [        U5      U[        U5      US.$ )	Nrp   rq   r   r   ?r   r   )
-total_screenstainted_screenstotal_transitions
-by_package)rj   valuesr   r   )rl   rp   rq   by_pkg
-tainted_countr   r   s          rH   statsScreenMap.statsN  s    jj+jj/
-!A%%	3'C **S!,q0FKuuY"
-	 " "%W!.!$[!1!'	
- 	
-rJ   c           	          U R                  5       n[        SUS    SUS    SUS    S35        [        US   R                  5       S	 S
-9 H*  u  p#[        SUR	                  S5      S
-   S SU S35        M,     g )Nz
-  Screen Map: r   z
- screens (r   z tainted), r   z transitionsr   c                     U S   * $ )Nr   rN   )r   s    rH   <lambda>'ScreenMap.print_stats.<locals>.<lambda>e  s
-    1rJ   )r   z    r   r   z<20rZ   z screens)r   r   r   r   r   )rl   str   counts       rH   print_statsScreenMap.print_stats_  s    
-ZZ\
- O!4 5 6&'('()7 	8 !L!1!7!7!9&57JCD3+C0%AB7rJ   )rj   N)g333333?)r   )__name__
-__module____qualname____firstlineno____doc__rm   dictri   r   staticmethodstrlistr   floatr   r   r   r   r   r   r   r   r   r   r  __static_attributes__rN   rJ   rH   rf   rf   l   s9   "
-2t 2> ;c ;T ;c ; ;0 #T #T #e # #0 0 0# 0d4C 4HTN 4 # & # T Xc]  T TC T T0 S (4. D
-t 
-"CrJ   rf   )r
-  r   rt   rD   pathlibr   typingr   r
-   rr   rB   rC   rU   r_   rc   r  boolrI   rV   r  ra   rd   rf   rN   rJ   rH   <module>r     s   0   	  99;$'88
- 
-  *c d / / /
-Cd Ct CG G$ G
-zC zCrJ   
 

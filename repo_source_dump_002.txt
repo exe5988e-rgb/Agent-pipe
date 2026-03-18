@@ -48510,6 +48510,114 @@
           "resource_id": ""
         }
       ]
+    },
+    "6e151b55eab4": {
+      "screen_id": "6e151b55eab4",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Open the homepage",
+        "element_2",
+        "element_3",
+        "tripadvisor.in/Restaurants-g1011999-Dhanbad_Dhanbad_District_Jharkhand.html",
+        "See 23 tabs",
+        "Customise and control Google Chrome",
+        "Close",
+        "Establishment type",
+        "Meal type",
+        "Cuisines",
+        "Apply",
+        "Reset"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "element_2",
+          "x": 620,
+          "y": 1455,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.android.chrome:id/compositor_view_holder"
+        },
+        {
+          "text": "element_3",
+          "x": 224,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "tripadvisor.in/Restaurants-g1011999-Dhanbad_Dhanbad_District_Jharkhand.html",
+          "x": 592,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "See 23 tabs",
+          "x": 988,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        },
+        {
+          "text": "Close",
+          "x": 1128,
+          "y": 448,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Establishment type",
+          "x": 621,
+          "y": 768,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Meal type",
+          "x": 621,
+          "y": 1545,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Cuisines",
+          "x": 621,
+          "y": 2154,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Apply",
+          "x": 1025,
+          "y": 2650,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Reset",
+          "x": 155,
+          "y": 2648,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -48904,7 +49012,8 @@
     "00bc2bbcd4eb|swipe": "521f5ee7f089",
     "521f5ee7f089|swipe": "00d209027475",
     "00d209027475|tap:About this result": "4d84377e1164",
-    "4d84377e1164|swipe": "78311c064f1a"
+    "4d84377e1164|swipe": "78311c064f1a",
+    "78311c064f1a|tap:View map": "6e151b55eab4"
   }
 }
 

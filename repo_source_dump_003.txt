@@ -3530,6 +3530,11 @@ if __name__ == "__main__":
     "to": "78311c064f1a",
     "count": 1,
     "last_seen": 1773793559.3287919
+  },
+  "78311c064f1a|tap:View map": {
+    "to": "6e151b55eab4",
+    "count": 1,
+    "last_seen": 1773793590.4539397
   }
 }
 

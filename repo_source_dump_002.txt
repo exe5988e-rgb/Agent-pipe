@@ -90486,6 +90486,90 @@
           "resource_id": ""
         }
       ]
+    },
+    "d8f6b34a2f10": {
+      "screen_id": "d8f6b34a2f10",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/com.google.android.apps.youtube.app.extensions.creationmodes.main.CreationModesActivity",
+      "name": "youtube_creationmodesactivity",
+      "labels": [
+        "Close",
+        "Camera",
+        "Add from gallery",
+        "element_4",
+        "Open settings",
+        "Video",
+        "Short",
+        "Live",
+        "Post"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Close",
+          "x": 112,
+          "y": 240,
+          "cls": "android.widget.Button",
+          "resource_id": "com.google.android.youtube:id/unified_permissions_close_button"
+        },
+        {
+          "text": "Camera",
+          "x": 620,
+          "y": 1241,
+          "cls": "android.view.View",
+          "resource_id": "com.google.android.youtube:id/shorts_camera_canvas_accessibility_view"
+        },
+        {
+          "text": "Add from gallery",
+          "x": 620,
+          "y": 1979,
+          "cls": "android.widget.Button",
+          "resource_id": "com.google.android.youtube:id/unified_permissions_primary_button"
+        },
+        {
+          "text": "element_4",
+          "x": 895,
+          "y": 2070,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.youtube:id/shorts_camera_effect_picker_prominent_delegate"
+        },
+        {
+          "text": "Open settings",
+          "x": 620,
+          "y": 2175,
+          "cls": "android.widget.Button",
+          "resource_id": "com.google.android.youtube:id/unified_permissions_open_settings_button"
+        },
+        {
+          "text": "Video",
+          "x": 385,
+          "y": 2530,
+          "cls": "android.widget.Button",
+          "resource_id": "com.google.android.youtube:id/creation_mode_button"
+        },
+        {
+          "text": "Short",
+          "x": 620,
+          "y": 2530,
+          "cls": "android.widget.Button",
+          "resource_id": "com.google.android.youtube:id/creation_mode_button"
+        },
+        {
+          "text": "Live",
+          "x": 836,
+          "y": 2530,
+          "cls": "android.widget.Button",
+          "resource_id": "com.google.android.youtube:id/creation_mode_button"
+        },
+        {
+          "text": "Post",
+          "x": 1042,
+          "y": 2530,
+          "cls": "android.widget.Button",
+          "resource_id": "com.google.android.youtube:id/creation_mode_button"
+        }
+      ]
     }
   },
   "transitions": {
@@ -91190,7 +91274,8 @@
     "aa00584ce02f|type": "30bc8a798cd1",
     "30bc8a798cd1|tap:Edit suggestion lofi hip hop songs hindi": "f36939de0715",
     "f36939de0715|swipe": "3c7ef8df5fb2",
-    "3c7ef8df5fb2|tap:40": "65840c1afc29"
+    "3c7ef8df5fb2|tap:40": "65840c1afc29",
+    "65840c1afc29|tap:3": "d8f6b34a2f10"
   }
 }
 

@@ -4461,6 +4461,7 @@ if __name__ == "__main__":
 [20:47:13] 
 [1/33] [1★] [whatsapp] Open WhatsApp
 [20:47:13]   max_steps=5  skill_threshold=12  skills=0
+[20:47:31]   PASS  15.7s
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -5602,7 +5603,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-18T20:33:34.280884",
+  "run_at": "2026-03-18T20:47:31.997326",
   "skills_before": 0,
   "skills_current": 0,
   "results": [
@@ -5611,16 +5612,7 @@ if __name__ == "__main__":
       "category": "whatsapp",
       "difficulty": 1,
       "success": true,
-      "elapsed_s": 18.6,
-      "error": null,
-      "retried": false
-    },
-    {
-      "task": "Open YouTube",
-      "category": "youtube",
-      "difficulty": 1,
-      "success": true,
-      "elapsed_s": 18.5,
+      "elapsed_s": 15.7,
       "error": null,
       "retried": false
     }
@@ -5716,6 +5708,100 @@ Traceback (most recent call last):
   File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/executor/device.py", line 119, in take_screenshot
     raise RuntimeError(f"screencap failed: {r.stderr.decode().strip()}")
 RuntimeError: screencap failed: error: device '192.168.29.48:35253' not found
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 271, in run
+    run_step(state, device=device, model_path=model_path,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             max_skill_steps=max_skill_steps)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 124, in run_step
+    img = capture_screen(adb_device=device)
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/perception/screen_capture.py", line 15, in capture_screen
+    return _cache[adb_device].take_screenshot(filename=filename)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/executor/device.py", line 119, in take_screenshot
+    raise RuntimeError(f"screencap failed: {r.stderr.decode().strip()}")
+RuntimeError: screencap failed: error: device '192.168.29.48:35253' not found
+
+########################################################
+  JARVIS  |  Open WhatsApp
+  Device : 192.168.29.48:35253
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 511 screens (0 tainted), 626 transitions
+    whatsapp             171 screens
+    chrome               106 screens
+    youtube              98 screens
+    vending              42 screens
+    termux               25 screens
+    launcher             22 screens
+    settings             21 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+  TransitionMemory: 576 transitions (280 confirmed, threshold=2)
+[init] task_apps: ['whatsapp']
+[init] max_skill_steps: 20 (threshold: 12)
+
+========================================================
+  STEP 1  |  Open WhatsApp
+========================================================
+[controller] step error: screencap failed: error: device '192.168.29.48:35253' not found
+
+========================================================
+  STEP 2  |  Open WhatsApp
+========================================================
+[controller] step error: screencap failed: error: device '192.168.29.48:35253' not found
+
+========================================================
+  STEP 3  |  Open WhatsApp
+========================================================
+[controller] step error: screencap failed: error: device '192.168.29.48:35253' not found
+
+========================================================
+  STEP 4  |  Open WhatsApp
+========================================================
+[controller] step error: screencap failed: error: device '192.168.29.48:35253' not found
+
+========================================================
+  STEP 5  |  Open WhatsApp
+========================================================
+[controller] step error: screencap failed: error: device '192.168.29.48:35253' not found
+
+[controller] history:
+
+  Screen Map: 511 screens (0 tainted), 626 transitions
+    whatsapp             171 screens
+    chrome               106 screens
+    youtube              98 screens
+    vending              42 screens
+    termux               25 screens
+    launcher             22 screens
+    settings             21 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+  TransitionMemory: 576 transitions (280 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: --task =====

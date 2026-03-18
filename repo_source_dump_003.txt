@@ -4543,6 +4543,7 @@ if __name__ == "__main__":
 [21:03:46] 
 [9/33] [2★] [whatsapp] Open WhatsApp and go to Updates tab
 [21:03:46]   max_steps=8  skill_threshold=12  skills=3
+[21:06:11]   PASS  141.4s
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -5684,7 +5685,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-18T21:03:41.396442",
+  "run_at": "2026-03-18T21:06:11.016516",
   "skills_before": 0,
   "skills_current": 3,
   "results": [
@@ -5757,6 +5758,15 @@ if __name__ == "__main__":
       "difficulty": 2,
       "success": true,
       "elapsed_s": 69.4,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Open WhatsApp and go to Updates tab",
+      "category": "whatsapp",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 141.4,
       "error": null,
       "retried": false
     }
@@ -7289,6 +7299,93 @@ nohup: ignoring input
 [ui_parser] child: (0,520) → 'Dr Masood Alam Vet, 4 unread statuses'
 [ui_parser] child: (1184,520) → 'Hidden'
 [ui_parser] child: (0,1194) → 'रणवीर सिंह की फिल्म को लेकर जबरदस्त क्रेज देखने को मिल रहा है। Dhurandhar 2: The Revenge की शुरुआत भगवद गीता के श्लोक से हुई, जिसने फिल्म को एक दमदार'[parser] DEBUG normalized: 'Still working on it...'
+[parser] DEBUG normalized: 'done'
+[parser] INFO parsed 'done' -> {'action': 'done'}
+
+[ui_parser] child: (0,1460) → 'In China, some foreigners are hired just for being white — a practice locals call “white monkey.” They’re paid to pose as executives or attend events'
+[ui_parser] child: (0,1726) → "होर्मुज पर 'अंडरग्राउंड वॉर: ईरान के गढ़ में अमेरिका ने कैसे किया हमला? अब समुद्र में होगा महायुद्ध  पश्चिम एशिया में तनाव के बीच, अमेरिका ने होर्मुज"
+[ui_parser] child: (0,1992) → 'Favourite dish? 😋'
+[ui_parser] child: (0,2258) → '🇮🇷 Iran has ordered evacuations of major oil refineries in the gulf states.  They are preparing for a major strike at oil.'
+[ui_parser] full parse -- 31 elements (28 labeled, 8 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.whatsapp/.home.ui.HomeActivity hash=2f28e46d1c52 elements=31
+[step] UI: ['रणवीर सिंह की फिल्म को लेकर जबरदस्त क्रेज देखने को मिल रहा है। Dhurandhar 2: The Revenge की शुरुआत भगवद गीता के श्लोक से हुई, जिसने फिल्म को एक दमदार', 'Search', 'More options', 'Dr Masood Alam Vet, 4 unread statuses', 'My status, tap to add new status', 'Shivang Gupta, 1 unread status', 'Dr Masood Alam Vet, 4 unread statuses', 'Mishra nursery, 1 unread status']
+[map] new screen: whatsapp_homeactivity (615edd0c907f)
+[tm] transition changed: 13dcb6504714|tap:Communities e593131c -> 615edd0c
+[map] transition: whatsapp_homeactivity --[tap:Communities]--> whatsapp_homeactivity
+[map] screen: whatsapp_homeactivity (615edd0c)
+[skill] matched: 'open whatsapp'  score=1.00  act=True
+[skill] cannot resolve: 'Back'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'Still working on it...'
+[step] LLM: 'Still working on it...'
+[step] action: {'action': 'retry', '_warn': "unrecognised: 'Still working on it...'"}
+[input] cannot build event from: {'action': 'retry', '_warn': "unrecognised: 'Still working on it...'"}
+[mem] invalidated com.whatsapp/.home.ui.HomeActivity
+[step] step=4/8 done=False history=['opt4_launch:whatsapp', 'retry', 'tap [33] Updates', 'retry']
+
+========================================================
+  STEP 5  |  Open WhatsApp and go to Updates tab
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (819871 bytes)
+[ui_parser] activity=com.whatsapp/.home.ui.HomeActivity
+[ui_parser] signal='com.whatsapp/.home.ui.HomeActivity'
+[mem] miss (unknown): com.whatsapp/.home.ui.HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,139) → 'रणवीर सिंह की फिल्म को लेकर जबरदस्त क्रेज देखने को मिल रहा है। Dhurandhar 2: The Revenge की शुरुआत भगवद गीता के श्लोक से हुई, जिसने फिल्म को एक दमदार'
+[ui_parser] child: (0,520) → 'Dr Masood Alam Vet, 4 unread statuses'
+[ui_parser] child: (1184,520) → 'Hidden'
+[ui_parser] child: (0,1194) → 'रणवीर सिंह की फिल्म को लेकर जबरदस्त क्रेज देखने को मिल रहा है। Dhurandhar 2: The Revenge की शुरुआत भगवद गीता के श्लोक से हुई, जिसने फिल्म को एक दमदार'
+[ui_parser] child: (0,1460) → 'In China, some foreigners are hired just for being white — a practice locals call “white monkey.” They’re paid to pose as executives or attend events'
+[ui_parser] child: (0,1726) → "होर्मुज पर 'अंडरग्राउंड वॉर: ईरान के गढ़ में अमेरिका ने कैसे किया हमला? अब समुद्र में होगा महायुद्ध  पश्चिम एशिया में तनाव के बीच, अमेरिका ने होर्मुज"
+[ui_parser] child: (0,1992) → 'Favourite dish? 😋'
+[ui_parser] child: (0,2258) → '🇮🇷 Iran has ordered evacuations of major oil refineries in the gulf states.  They are preparing for a major strike at oil.'
+[ui_parser] full parse -- 31 elements (28 labeled, 8 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.whatsapp/.home.ui.HomeActivity hash=2f28e46d1c52 elements=31
+[step] UI: ['रणवीर सिंह की फिल्म को लेकर जबरदस्त क्रेज देखने को मिल रहा है। Dhurandhar 2: The Revenge की शुरुआत भगवद गीता के श्लोक से हुई, जिसने फिल्म को एक दमदार', 'Search', 'More options', 'Dr Masood Alam Vet, 4 unread statuses', 'My status, tap to add new status', 'Shivang Gupta, 1 unread status', 'Dr Masood Alam Vet, 4 unread statuses', 'Mishra nursery, 1 unread status']
+[map] screen: whatsapp_homeactivity (615edd0c)
+[skill] matched: 'open whatsapp'  score=1.00  act=True
+[skill] cannot resolve: 'Back'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'done'
+[step] LLM: 'done'
+[step] action: {'action': 'done'}
+[input] DONE — no dispatch
+[mem] invalidated com.whatsapp/.home.ui.HomeActivity
+[skill] similar skill exists — skipping
+[step] step=5/8 done=True history=['opt4_launch:whatsapp', 'retry', 'tap [33] Updates', 'retry', 'done']
+
+[controller] done in 5 steps
+
+[controller] history:
+  1. opt4_launch:whatsapp
+  2. retry
+  3. tap [33] Updates
+  4. retry
+  5. done
+
+  Screen Map: 521 screens (0 tainted), 636 transitions
+    whatsapp             174 screens
+    chrome               106 screens
+    youtube              101 screens
+    vending              43 screens
+    termux               25 screens
+    launcher             23 screens
+    settings             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+  TransitionMemory: 586 transitions (279 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: --task =====

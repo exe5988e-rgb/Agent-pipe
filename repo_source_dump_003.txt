@@ -3443,8 +3443,8 @@ if __name__ == "__main__":
   },
   "635910cc4897|opt4_launch:chrome": {
     "to": "d8894d8bf6b5",
-    "count": 1,
-    "last_seen": 1773792107.153442
+    "count": 2,
+    "last_seen": 1773792114.3238482
   }
 }
 

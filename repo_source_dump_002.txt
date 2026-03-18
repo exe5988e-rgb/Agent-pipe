@@ -78794,6 +78794,113 @@
           "resource_id": ""
         }
       ]
+    },
+    "bda901bbd4b0": {
+      "screen_id": "bda901bbd4b0",
+      "package": "com.android.settings",
+      "activity": "com.android.settings/.Settings$DisplaySettingsActivity",
+      "name": "settings_settings$displaysettingsactivity",
+      "labels": [
+        "Switch to Light mode at 06:00",
+        "Light mode",
+        "Dark mode",
+        "element_5",
+        "element_6",
+        "Switch to Light mode at 06:00",
+        "Dark mode settings",
+        "5186,Brightness",
+        "Auto brightness",
+        "Screen colour mode",
+        "ee..."
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Back",
+          "x": 98,
+          "y": 230,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.settings:id/coui_toolbar_back_view"
+        },
+        {
+          "text": "Switch to Light mode at 06:00",
+          "x": 620,
+          "y": 1546,
+          "cls": "androidx.recyclerview.widget.RecyclerView",
+          "resource_id": "com.android.settings:id/recycler_view"
+        },
+        {
+          "text": "Light mode",
+          "x": 387,
+          "y": 963,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.settings:id/layout_light_theme"
+        },
+        {
+          "text": "Dark mode",
+          "x": 853,
+          "y": 963,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.settings:id/layout_dark_theme"
+        },
+        {
+          "text": "element_5",
+          "x": 360,
+          "y": 1395,
+          "cls": "android.widget.RadioButton",
+          "resource_id": "com.android.settings:id/rb_light_button"
+        },
+        {
+          "text": "element_6",
+          "x": 879,
+          "y": 1395,
+          "cls": "android.widget.RadioButton",
+          "resource_id": "com.android.settings:id/rb_dark_button"
+        },
+        {
+          "text": "Switch to Light mode at 06:00",
+          "x": 620,
+          "y": 1610,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Dark mode settings",
+          "x": 620,
+          "y": 1808,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "5186,Brightness",
+          "x": 620,
+          "y": 2194,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Auto brightness",
+          "x": 620,
+          "y": 2411,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Screen colour mode",
+          "x": 620,
+          "y": 2656,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "ee...",
+          "x": 620,
+          "y": 2761,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -79438,7 +79545,8 @@
     "0b5a9aba0337|tap:You": "0cfd22e776c8",
     "0cfd22e776c8|tap:JensJulius Tejlgaard has new content": "80ff94df1647",
     "83a7783f7b10|tap:Edit suggestion mrbeast new video": "c80ebc098a67",
-    "2c1be995ec82|tap:Not connected": "bcfd9287cbfa"
+    "2c1be995ec82|tap:Not connected": "bcfd9287cbfa",
+    "2c1be995ec82|tap:Sound & vibration": "bda901bbd4b0"
   }
 }
 

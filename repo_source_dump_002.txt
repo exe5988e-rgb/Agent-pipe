@@ -45754,6 +45754,162 @@
           "resource_id": ""
         }
       ]
+    },
+    "e0eb2b0591e0": {
+      "screen_id": "e0eb2b0591e0",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "element_1",
+        "element_2",
+        "Directory listing for /: [::]",
+        "element_4",
+        "Search Google or type URL",
+        "Wikipedia: wikipedia.org",
+        "Build APK \u00b7 exe5988e-rgb/JarvisMerged@d5529f8: github.com",
+        "Start voice search",
+        "Google: google.com",
+        "Search with your camera using Google Lens",
+        ": 192.168.29.110",
+        "element_12",
+        "Share Robert Downey Jr, Chris Evans Have Avengers Reunion at Oscars",
+        "Card menu Robert Downey Jr, Chris Evans Have Avengers Reunion at Oscars",
+        "element_15",
+        "Share Claude Can Now Create Complex Diagrams \u2014 I Tested 21 Prompts (Goodbye Canva!)",
+        "Card menu Claude Can Now Create Complex Diagrams \u2014 I Tested 21 Prompts (Goodbye Canva!)",
+        "element_18"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 620,
+          "y": 1455,
+          "cls": "androidx.recyclerview.widget.RecyclerView",
+          "resource_id": "com.android.chrome:id/feed_stream_recycler_view"
+        },
+        {
+          "text": "element_2",
+          "x": 620,
+          "y": 282,
+          "cls": "android.widget.HorizontalScrollView",
+          "resource_id": "com.android.chrome:id/mv_tiles_container"
+        },
+        {
+          "text": "Directory listing for /: [::]",
+          "x": 238,
+          "y": 243,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_4",
+          "x": 154,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "Search Google or type URL",
+          "x": 550,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "Wikipedia: wikipedia.org",
+          "x": 504,
+          "y": 243,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Build APK \u00b7 exe5988e-rgb/JarvisMerged@d5529f8: github.com",
+          "x": 770,
+          "y": 243,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Start voice search",
+          "x": 932,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/mic_button"
+        },
+        {
+          "text": "Google: google.com",
+          "x": 1036,
+          "y": 243,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Search with your camera using Google Lens",
+          "x": 1100,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/lens_camera_button"
+        },
+        {
+          "text": ": 192.168.29.110",
+          "x": 1173,
+          "y": 243,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_12",
+          "x": 620,
+          "y": 761,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Share Robert Downey Jr, Chris Evans Have Avengers Reunion at Oscars",
+          "x": 929,
+          "y": 957,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Card menu Robert Downey Jr, Chris Evans Have Avengers Reunion at Oscars",
+          "x": 1097,
+          "y": 957,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_15",
+          "x": 620,
+          "y": 1589,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Share Claude Can Now Create Complex Diagrams \u2014 I Tested 21 Prompts (Goodbye Canva!)",
+          "x": 929,
+          "y": 2049,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Card menu Claude Can Now Create Complex Diagrams \u2014 I Tested 21 Prompts (Goodbye Canva!)",
+          "x": 1097,
+          "y": 2049,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_18",
+          "x": 620,
+          "y": 2454,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -46132,7 +46288,8 @@
     "966005cab230|opt4_launch:whatsapp": "7c51d7e864c3",
     "2edcf1eb90cd|tap:None": "7c51d7e864c3",
     "635910cc4897|opt4_launch:chrome": "d8894d8bf6b5",
-    "d8894d8bf6b5|tap:Start voice search": "61c36514dee6"
+    "d8894d8bf6b5|tap:Start voice search": "61c36514dee6",
+    "61c36514dee6|swipe": "e0eb2b0591e0"
   }
 }
 

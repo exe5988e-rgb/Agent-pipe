@@ -4278,8 +4278,8 @@ if __name__ == "__main__":
   },
   "edd4f565ccb7|tap:Not connected": {
     "to": "bcfd9287cbfa",
-    "count": 1,
-    "last_seen": 1773840978.2948313
+    "count": 2,
+    "last_seen": 1773852142.541854
   },
   "bcfd9287cbfa|tap:Scan": {
     "to": "2c1be995ec82",

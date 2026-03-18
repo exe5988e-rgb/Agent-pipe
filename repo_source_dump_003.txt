@@ -4375,6 +4375,7 @@ if __name__ == "__main__":
 [19:09:33] 
 [17/33] [2★] [chrome] Open Chrome and go to google.com
 [19:09:33]   max_steps=10  skill_threshold=12  skills=3
+[19:11:25]   PASS  108.5s
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -5516,9 +5517,9 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-18T19:09:28.964311",
+  "run_at": "2026-03-18T19:11:25.616332",
   "skills_before": 0,
-  "skills_current": 3,
+  "skills_current": 4,
   "results": [
     {
       "task": "Open WhatsApp",
@@ -5663,6 +5664,15 @@ if __name__ == "__main__":
       "elapsed_s": 43.8,
       "error": null,
       "retried": false
+    },
+    {
+      "task": "Open Chrome and go to google.com",
+      "category": "chrome",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 108.5,
+      "error": null,
+      "retried": false
     }
   ]
 }
@@ -5719,6 +5729,22 @@ if __name__ == "__main__":
       }
     ],
     "uses": 3,
+    "version": 3
+  },
+  {
+    "pattern": "open chrome and go to",
+    "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+    "task_example": "Open Chrome and go to google.com",
+    "steps": [
+      {
+        "action": "tap",
+        "target": "animex.one/watch/dragon-ball-223-episode-70"
+      },
+      {
+        "action": "done"
+      }
+    ],
+    "uses": 0,
     "version": 3
   }
 ]
@@ -8119,7 +8145,50 @@ nohup: ignoring input
 [ui_parser] full parse -- 29 elements (27 labeled, 5 via OCR/rid/child) from 192.168.29.48:35253
 [mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=28f56142327a elements=29
 [step] UI: ['Open the homepage', 'Open source Mamba 3 arrives to surpass Transformer architecture with nearly 4% improved language modeling, reduced latency VentureBeat 14h', 'Connection is secure', 'google.com', 'See 28 tabs', 'Customise and control Google Chrome', 'Open source Mamba 3 arrives to surpass Transformer architecture with nearly 4% improved language modeling, reduced latency VentureBeat 14h', 'IMAGES']
-[map] new screen: chrome_main (7a90c98cab66)
+[map] new screen: chrome_main (7a90c98cab66)[parser] DEBUG normalized: 'done'
+[parser] INFO parsed 'done' -> {'action': 'done'}
+
+[map] transition: chrome_main --[tap:Directory listing for /: [::]]--> chrome_main
+[map] screen: chrome_main (7a90c98c)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'done'
+[step] LLM: 'done'
+[step] action: {'action': 'done'}
+[input] DONE — no dispatch
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[skill] skipping dynamic label: 'Google: google.com'
+[skill] learned: 'open chrome and go to'  (2 steps)  [Main]
+[step] step=4/10 done=True history=['opt4_launch:chrome', 'tap [3] animex.one/watch/dragon-ball-223-episode-70', 'tap [13] Google: google.com', 'done']
+
+[controller] done in 4 steps
+
+[controller] history:
+  1. opt4_launch:chrome
+  2. tap [3] animex.one/watch/dragon-ball-223-episode-70
+  3. tap [13] Google: google.com
+  4. done
+
+  Screen Map: 479 screens (0 tainted), 596 transitions
+    whatsapp             168 screens
+    chrome               102 screens
+    youtube              88 screens
+    vending              30 screens
+    termux               25 screens
+    launcher             22 screens
+    settings             21 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               2 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+  TransitionMemory: 546 transitions (280 confirmed, threshold=2)
+
 
 //===== TERMUXFILE: --task =====
 

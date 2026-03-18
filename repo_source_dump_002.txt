@@ -45970,6 +45970,178 @@
           "resource_id": "com.android.chrome:id/menu_button"
         }
       ]
+    },
+    "3642b2e6fdba": {
+      "screen_id": "3642b2e6fdba",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "element_1",
+        "element_2",
+        "Search Google or type URL",
+        "Start voice search",
+        "Search with your camera using Google Lens",
+        "17 suggested items in list below.",
+        "element_7",
+        "Share link to search results page for: boruto two blue vortex reddit. Source: google.com",
+        "Copy link to search results page for: boruto two blue vortex reddit. Source: google.com",
+        "Edit search query: boruto two blue vortex reddit",
+        "element_11",
+        "Refine: read boruto two blue vortex reddit",
+        "element_13",
+        "Refine: boruto two blue vortex reddit",
+        "element_15",
+        "Refine: yandex",
+        "element_17",
+        "Refine: best restaurants in dhanbad",
+        "element_19",
+        "Refine: github"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 620,
+          "y": 1455,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_2",
+          "x": 126,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "Search Google or type URL",
+          "x": 550,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "Start voice search",
+          "x": 960,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/mic_button"
+        },
+        {
+          "text": "Search with your camera using Google Lens",
+          "x": 1128,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/lens_camera_button"
+        },
+        {
+          "text": "17 suggested items in list below.",
+          "x": 620,
+          "y": 1058,
+          "cls": "androidx.recyclerview.widget.RecyclerView",
+          "resource_id": "com.android.chrome:id/omnibox_suggestions_dropdown"
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 433,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Share link to search results page for: boruto two blue vortex reddit. Source: google.com",
+          "x": 792,
+          "y": 433,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Copy link to search results page for: boruto two blue vortex reddit. Source: google.com",
+          "x": 960,
+          "y": 433,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Edit search query: boruto two blue vortex reddit",
+          "x": 1128,
+          "y": 433,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_11",
+          "x": 620,
+          "y": 776,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: read boruto two blue vortex reddit",
+          "x": 1128,
+          "y": 776,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_13",
+          "x": 620,
+          "y": 1119,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: boruto two blue vortex reddit",
+          "x": 1128,
+          "y": 1119,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_15",
+          "x": 620,
+          "y": 1315,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: yandex",
+          "x": 1128,
+          "y": 1315,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_17",
+          "x": 620,
+          "y": 1511,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: best restaurants in dhanbad",
+          "x": 1128,
+          "y": 1511,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_19",
+          "x": 620,
+          "y": 1695,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine: github",
+          "x": 1128,
+          "y": 1695,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -46350,7 +46522,8 @@
     "635910cc4897|opt4_launch:chrome": "d8894d8bf6b5",
     "d8894d8bf6b5|tap:Start voice search": "da4580ee1dee",
     "61c36514dee6|swipe": "e0eb2b0591e0",
-    "e0eb2b0591e0|tap:Wikipedia: wikipedia.org": "d8894d8bf6b5"
+    "e0eb2b0591e0|tap:Wikipedia: wikipedia.org": "d8894d8bf6b5",
+    "da4580ee1dee|tap:See 23 tabs": "3642b2e6fdba"
   }
 }
 

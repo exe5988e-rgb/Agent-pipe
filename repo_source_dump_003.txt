@@ -4468,6 +4468,9 @@ if __name__ == "__main__":
 [25/33] [3★] [youtube] Play Warriyo Mortals on YouTube
 [19:21:19]   max_steps=12  skill_threshold=12  skills=6
 [19:25:29]   PASS  246.7s
+[19:25:34] 
+[26/33] [3★] [youtube] Search for lofi hip hop on YouTube and play the first video
+[19:25:34]   max_steps=12  skill_threshold=12  skills=6
 
 
 //===== TERMUXFILE: tap_logger.py =====

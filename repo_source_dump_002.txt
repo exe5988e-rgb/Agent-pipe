@@ -81647,6 +81647,129 @@
           "resource_id": "com.whatsapp:id/contact_selector"
         }
       ]
+    },
+    "6d26e82dd7ee": {
+      "screen_id": "6d26e82dd7ee",
+      "package": "com.whatsapp",
+      "activity": "com.whatsapp/.contact.ui.picker.ContactPicker",
+      "name": "whatsapp_contactpicker",
+      "labels": [
+        "Mummy",
+        "Show dial pad keyboard",
+        "Contacts on WhatsApp",
+        "Contacts on WhatsApp",
+        "Mummy",
+        "Mummy",
+        "Mummy Ziono",
+        "Mummy Ziono",
+        "Message yourself",
+        "+91 79911 96829",
+        "More",
+        "New contact",
+        "Share invite link"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Mummy",
+          "x": 620,
+          "y": 223,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.whatsapp:id/search_src_text"
+        },
+        {
+          "text": "Show dial pad keyboard",
+          "x": 1100,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/trailing_button"
+        },
+        {
+          "text": "Back",
+          "x": 140,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/back"
+        },
+        {
+          "text": "Contacts on WhatsApp",
+          "x": 620,
+          "y": 1030,
+          "cls": "android.widget.ListView",
+          "resource_id": "android:id/list"
+        },
+        {
+          "text": "Contacts on WhatsApp",
+          "x": 620,
+          "y": 417,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Mummy",
+          "x": 620,
+          "y": 597,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Mummy",
+          "x": 126,
+          "y": 597,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "Mummy Ziono",
+          "x": 620,
+          "y": 835,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Mummy Ziono",
+          "x": 126,
+          "y": 835,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "Message yourself",
+          "x": 620,
+          "y": 1073,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "+91 79911 96829",
+          "x": 126,
+          "y": 1073,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "More",
+          "x": 620,
+          "y": 1253,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "New contact",
+          "x": 620,
+          "y": 1433,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Share invite link",
+          "x": 620,
+          "y": 1638,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -82306,7 +82429,8 @@
     "a5b9d401b079|tap:Refine search to 'spotify'": "815905513523",
     "1025dd6b857e|tap:21": "d0e35202b7f2",
     "6dcc835738aa|tap:Jio \u0915\u094b \u091a\u0941\u0928\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f \u0906\u092a\u0915\u093e \u0927\u0928\u094d\u092f\u0935\u093e\u0926! \u2764\ufe0f\u2026": "c1027f04709d",
-    "c1027f04709d|tap:More options": "35cc9568adf1"
+    "c1027f04709d|tap:More options": "35cc9568adf1",
+    "35cc9568adf1|type": "6d26e82dd7ee"
   }
 }
 

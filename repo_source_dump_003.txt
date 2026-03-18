@@ -4493,8 +4493,8 @@ if __name__ == "__main__":
   },
   "1025dd6b857e|opt4_launch:chrome": {
     "to": "33be04de2357",
-    "count": 5,
-    "last_seen": 1773849717.0079784
+    "count": 6,
+    "last_seen": 1773849724.3341496
   },
   "1025dd6b857e|opt4_launch:play store": {
     "to": "73181ac31bda",
@@ -9823,6 +9823,21 @@ RuntimeError: No LLM backend available.
 ========================================================
   STEP 4  |  Search for weather today in Chrome
 ========================================================Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 271, in run
+    run_step(state, device=device, model_path=model_path,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             max_skill_steps=max_skill_steps)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 223, in run_step
+    llm_out = generate(prompt, model_path=model_path)
+  File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/reasoning/llm_client.py", line 136, in generate
+    raise RuntimeError(
+    ...<3 lines>...
+    )
+RuntimeError: No LLM backend available.
+  Phone B offline? Check: curl http://192.168.29.110:8890/health
+  Local LLM down? Run:    bash ~/jarvis_server_init.sh
+Traceback (most recent call last):
   File "/data/data/com.termux/files/home/workflows/test/jarvis-agent/agent/controller.py", line 271, in run
     run_step(state, device=device, model_path=model_path,
     ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -49472,6 +49472,114 @@
           "resource_id": ""
         }
       ]
+    },
+    "f35a0da7c44b": {
+      "screen_id": "f35a0da7c44b",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Open the homepage",
+        "element_2",
+        "tripadvisor.in/Restaurants-g1011999-Dhanbad_Dhanbad_District_Jharkhand.html",
+        "See 23 tabs",
+        "Customise and control Google Chrome",
+        "element_6",
+        "Perfect for date nights, family dinners, or simply treating yourself. A fresh take on global flavors\u2014our menu is inventive, playful, and full of surprises. Where great food meets laughter, love, and unforgettable memories. Not just a meal, but an experience designed to relax and inspire Refreshing drinks and creative cocktails that bring tropical vibes to your table. Bright, cozy, and stylish\u2014perfect for a laid-back meal or a lively evening with friends. Step into a tropical-inspired escape with chic art deco seating and lush vibes that make every visit unforgettable. Not just a meal, but an experience designed to relax and inspire. From colorful platters to indulgent bites, every dish is crafted to delight your taste buds. Refreshing drinks and creative cocktails that bring tropical vibes to your table",
+        "3. The Other Side of Seventeen Degrees 4.1 of 5 bubbles (7 reviews) Save to a trip Chinese, Indian \u00b7\u20b9\u20b9\u20b9\u20b9 Closed now \u00b7 Menu",
+        "\u201cVery good ambience,clean restaurant.\u201d \u201cNice Bar Restaurant in great location too...\u201d",
+        "element_10",
+        "element_11",
+        "Where great taste meets consistency, every single time Lobby A perfect blend of flavor, freshness, and presentation. Every plate tells a story of taste and quality at 17 Degrees. Lobby2 Restaurant Relax, unwind, and soak in the ambience at 17 Degrees. Relax, unwind, and soak in the ambience at 17 Degrees. Where great taste meets consistency, every single time. Restaurant"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "element_2",
+          "x": 224,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/location_bar_status"
+        },
+        {
+          "text": "tripadvisor.in/Restaurants-g1011999-Dhanbad_Dhanbad_District_Jharkhand.html",
+          "x": 592,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/url_bar"
+        },
+        {
+          "text": "See 23 tabs",
+          "x": 988,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        },
+        {
+          "text": "element_6",
+          "x": 620,
+          "y": 1553,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Perfect for date nights, family dinners, or simply treating yourself. A fresh take on global flavors\u2014our menu is inventive, playful, and full of surprises. Where great food meets laughter, love, and unforgettable memories. Not just a meal, but an experience designed to relax and inspire Refreshing drinks and creative cocktails that bring tropical vibes to your table. Bright, cozy, and stylish\u2014perfect for a laid-back meal or a lively evening with friends. Step into a tropical-inspired escape with chic art deco seating and lush vibes that make every visit unforgettable. Not just a meal, but an experience designed to relax and inspire. From colorful platters to indulgent bites, every dish is crafted to delight your taste buds. Refreshing drinks and creative cocktails that bring tropical vibes to your table",
+          "x": 619,
+          "y": 492,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "3. The Other Side of Seventeen Degrees 4.1 of 5 bubbles (7 reviews) Save to a trip Chinese, Indian \u00b7\u20b9\u20b9\u20b9\u20b9 Closed now \u00b7 Menu",
+          "x": 619,
+          "y": 872,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "\u201cVery good ambience,clean restaurant.\u201d \u201cNice Bar Restaurant in great location too...\u201d",
+          "x": 619,
+          "y": 1283,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_10",
+          "x": 621,
+          "y": 1953,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "element_11",
+          "x": 1088,
+          "y": 1546,
+          "cls": "android.view.View",
+          "resource_id": "abgc"
+        },
+        {
+          "text": "Where great taste meets consistency, every single time Lobby A perfect blend of flavor, freshness, and presentation. Every plate tells a story of taste and quality at 17 Degrees. Lobby2 Restaurant Relax, unwind, and soak in the ambience at 17 Degrees. Relax, unwind, and soak in the ambience at 17 Degrees. Where great taste meets consistency, every single time. Restaurant",
+          "x": 619,
+          "y": 2645,
+          "cls": "android.view.View",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -49875,7 +49983,8 @@
     "a3b75eb433e2|opt4_launch:chrome": "09c7f03831f6",
     "09c7f03831f6|swipe": "71802160f49b",
     "71802160f49b|swipe": "9ea2df66c0e6",
-    "9ea2df66c0e6|swipe": "4fe13740dde6"
+    "9ea2df66c0e6|swipe": "4fe13740dde6",
+    "4fe13740dde6|swipe": "f35a0da7c44b"
   }
 }
 

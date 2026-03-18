@@ -96332,6 +96332,314 @@
           "resource_id": "com.google.android.youtube:id/edit_suggestion"
         }
       ]
+    },
+    "469fb4fe932d": {
+      "screen_id": "469fb4fe932d",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Navigate up",
+        "Clear",
+        "Voice search",
+        "Cast",
+        "More options",
+        "warriyo mortals",
+        "All",
+        "Shorts",
+        "Videos",
+        "Unwatched",
+        "Watched",
+        "warriyo - mortals (feat. laura brehm) Mahabharat#bhagvadgita #srikrishna #jayshreeram #slok, 1 million views, Urban headshot, 1 year ago \u2013 play Short",
+        "Expand Mini Player",
+        "ITACHI X SASUKE | MORTALS - WARRIYO -, 136 thousand views, THEGREATPLACE , 1 year ago \u2013 play Short",
+        "Never Give Up \ud83d\uddff\ud83d\udd25 - Rock Lee Edit | Warriyo - Mortals (Slowed & Reverb), 1 million views, XUCHIHA, 5 months ago \u2013 play Short",
+        "More actions",
+        "More actions",
+        "Tap to mute or unmute playback audio",
+        "Go to channel THEGREATPLACE",
+        "Go to channel XUCHIHA",
+        "136k views \u00b7 1 yr ago",
+        "1m views \u00b7 5 mo ago",
+        "warriyo - mortals (feat. laura brehm) Mahabharat#bhagvadgita #srikrishna #jayshreeram #slok, 1 million views, Urban headshot, 1 year ago \u2013 play Short",
+        "warriyo - mortals (feat. laura brehm) Mahabharat#bhagvadgita #srikrishna #jayshreeram #slok, 1 million views, Urban headshot, 1 year ago \u2013 play Short",
+        "Warriyo - mortals, 504 thousand views, \ud835\udc39\ud835\udc367, 1 year ago \u2013 play Short",
+        "Warriyo - mortals, 504 thousand views, \ud835\udc39\ud835\udc367, 1 year ago \u2013 play Short",
+        "More actions",
+        "More actions",
+        "Go to channel Urban headshot",
+        "Go to channel \ud835\udc39\ud835\udc367"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Clear",
+          "x": 680,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/search_clear"
+        },
+        {
+          "text": "Voice search",
+          "x": 848,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/voice_search"
+        },
+        {
+          "text": "Cast",
+          "x": 1016,
+          "y": 223,
+          "cls": "android.widget.Button",
+          "resource_id": "com.google.android.youtube:id/mdx_entry_point_button"
+        },
+        {
+          "text": "More options",
+          "x": 1170,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "warriyo mortals",
+          "x": 396,
+          "y": 223,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.google.android.youtube:id/search_query"
+        },
+        {
+          "text": "All",
+          "x": 126,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 338,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Videos",
+          "x": 598,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Unwatched",
+          "x": 908,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Watched",
+          "x": 1170,
+          "y": 391,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "warriyo - mortals (feat. laura brehm) Mahabharat#bhagvadgita #srikrishna #jayshreeram #slok, 1 million views, Urban headshot, 1 year ago \u2013 play Short",
+          "x": 620,
+          "y": 1623,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results"
+        },
+        {
+          "text": "Expand Mini Player",
+          "x": 324,
+          "y": 899,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/player_overlays"
+        },
+        {
+          "text": "ITACHI X SASUKE | MORTALS - WARRIYO -, 136 thousand views, THEGREATPLACE , 1 year ago \u2013 play Short",
+          "x": 324,
+          "y": 992,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Never Give Up \ud83d\uddff\ud83d\udd25 - Rock Lee Edit | Warriyo - Mortals (Slowed & Reverb), 1 million views, XUCHIHA, 5 months ago \u2013 play Short",
+          "x": 916,
+          "y": 992,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 550,
+          "y": 547,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 1142,
+          "y": 547,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Tap to mute or unmute playback audio",
+          "x": 536,
+          "y": 694,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/audio_toggle"
+        },
+        {
+          "text": "Go to channel THEGREATPLACE",
+          "x": 105,
+          "y": 1413,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Go to channel XUCHIHA",
+          "x": 697,
+          "y": 1413,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "136k views \u00b7 1 yr ago",
+          "x": 390,
+          "y": 1449,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "1m views \u00b7 5 mo ago",
+          "x": 980,
+          "y": 1449,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "warriyo - mortals (feat. laura brehm) Mahabharat#bhagvadgita #srikrishna #jayshreeram #slok, 1 million views, Urban headshot, 1 year ago \u2013 play Short",
+          "x": 309,
+          "y": 2093,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "warriyo - mortals (feat. laura brehm) Mahabharat#bhagvadgita #srikrishna #jayshreeram #slok, 1 million views, Urban headshot, 1 year ago \u2013 play Short",
+          "x": 324,
+          "y": 2052,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Warriyo - mortals, 504 thousand views, \ud835\udc39\ud835\udc367, 1 year ago \u2013 play Short",
+          "x": 931,
+          "y": 2093,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Warriyo - mortals, 504 thousand views, \ud835\udc39\ud835\udc367, 1 year ago \u2013 play Short",
+          "x": 916,
+          "y": 2052,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 550,
+          "y": 1607,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "More actions",
+          "x": 1142,
+          "y": 1607,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Go to channel Urban headshot",
+          "x": 105,
+          "y": 2473,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Go to channel \ud835\udc39\ud835\udc367",
+          "x": 697,
+          "y": 2473,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "1m views \u00b7 1 yr ago",
+          "x": 374,
+          "y": 2509,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "504k views \u00b7 1 yr ago",
+          "x": 982,
+          "y": 2509,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Home",
+          "x": 124,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 372,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Create",
+          "x": 620,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscriptions: New content is available",
+          "x": 868,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "You",
+          "x": 1116,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Warriyo - Mortals (ft. Laura Brehm) \u2013 3 minutes, 49 seconds \u2013 Go to channel Warriyo \u2013 Warriyo - 37 million views - 9 years ago \u2013 play video",
+          "x": 620,
+          "y": 2725,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -97064,7 +97372,8 @@
     "598ffb8d71c4|type": "b05565f390c0",
     "b05565f390c0|tap:Edit suggestion warriyo mortals slowed": "4347dab37f93",
     "4347dab37f93|tap:warriyo mortals": "27ae579c1b34",
-    "27ae579c1b34|type": "b05565f390c0"
+    "27ae579c1b34|type": "b05565f390c0",
+    "b05565f390c0|tap:Edit suggestion warriyo mortals slowed reverb": "469fb4fe932d"
   }
 }
 

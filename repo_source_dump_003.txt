@@ -4518,6 +4518,7 @@ if __name__ == "__main__":
 [20:59:16] 
 [4/33] [1★] [chrome] Open Chrome
 [20:59:16]   max_steps=5  skill_threshold=12  skills=3
+[21:00:01]   PASS  41.0s
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -5659,7 +5660,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-18T20:59:11.985549",
+  "run_at": "2026-03-18T21:00:01.254924",
   "skills_before": 0,
   "skills_current": 3,
   "results": [
@@ -5687,6 +5688,15 @@ if __name__ == "__main__":
       "difficulty": 1,
       "success": true,
       "elapsed_s": 86.2,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Open Chrome",
+      "category": "chrome",
+      "difficulty": 1,
+      "success": true,
+      "elapsed_s": 41.0,
       "error": null,
       "retried": false
     }
@@ -6288,6 +6298,129 @@ nohup: ignoring input
     membership           1 screens
     permissioncontroller 1 screens
   TransitionMemory: 584 transitions (280 confirmed, threshold=2)
+[parser] DEBUG normalized: 'done'
+[parser] INFO parsed 'done' -> {'action': 'done'}
+
+########################################################
+  JARVIS  |  Open Chrome
+  Device : 192.168.29.48:33117
+########################################################
+
+[init] backends: {'phone_b': True, 'proxy': False, 'llamafile': False, 'binary': None}
+
+  Screen Map: 519 screens (0 tainted), 634 transitions
+    whatsapp             173 screens
+    chrome               106 screens
+    youtube              101 screens
+    vending              42 screens
+    termux               25 screens
+    launcher             23 screens
+    settings             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+  TransitionMemory: 584 transitions (280 confirmed, threshold=2)
+[init] task_apps: ['chrome']
+[init] max_skill_steps: 20 (threshold: 12)
+
+========================================================
+  STEP 1  |  Open Chrome
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (3313560 bytes)
+[ui_parser] activity=com.android.launcher/.Launcher
+[ui_parser] signal='com.android.launcher/.Launcher'
+[mem] miss (unknown): com.android.launcher/.Launcher
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (953,336) → 'Partly cloudy'
+[ui_parser] child: (161,857) → 'Wednesday 18 Mar'
+[ui_parser] child: (662,857) → 'More'
+[ui_parser] child: (858,857) → 'Cloudy'
+[ui_parser] OCR: (841,1475)-(1009,1671) → 'lt'
+[ui_parser] full parse -- 26 elements (22 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.launcher/.Launcher hash=fd3c9571f65a elements=26
+[step] UI: ['Clock', '20', ':', '59', 'Partly cloudy', '21\u200e°\u200e', 'Wed 18 Mar', 'At a Glance']
+[map] screen: launcher_launcher (1025dd6b)
+[OPT4v2] launcher -> launching chrome (com.android.chrome)
+[llm] OPT4v2 am start: com.android.chrome
+
+========================================================
+  STEP 2  |  Open Chrome
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (493812 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (168,139) → 'Connection is secure'
+[ui_parser] child: (0,335) → 'Current Dhanbad weather condition is Sunny with real-time temperature (36°C), humidity 13%, wind 10.8km/h, pressure (1007mb), UV (6.9), visibility (10km) in\xa0...'
+[ui_parser] child: (0,706) → 'Filters and topics'
+[ui_parser] child: (14,706) → 'AI Mode'
+[ui_parser] child: (287,706) → 'All'
+[ui_parser] child: (427,706) → 'News'
+[ui_parser] child: (637,706) → 'Images'
+[ui_parser] child: (885,706) → 'Videos'
+[ui_parser] child: (1127,706) → 'Forums'
+[ui_parser] child: (0,877) → 'Home Rohraband, Jharkhand'
+[ui_parser] child: (0,1182) → 'Current Dhanbad weather condition is Sunny with real-time temperature (36°C), humidity 13%, wind 10.8km/h, pressure (1007mb), UV (6.9), visibility (10km) in\xa0...'
+[ui_parser] child: (0,1182) → 'More options for Weather'
+[ui_parser] child: (0,1378) → 'Wed, Partly cloudy, High of 36, Low of 21, Selected'
+[ui_parser] child: (56,1392) → 'Now, 26°C, Mostly cloudy, Feels like 26°C'
+[ui_parser] child: (0,1721) → '11\u202fpm,23°C,Partly cloudy'
+[ui_parser] child: (0,2508) → 'Wed, Partly cloudy, High of 36, Low of 21, Selected'
+[ui_parser] child: (56,2508) → 'Wed, Partly cloudy, High of 36, Low of 21, Selected'
+[ui_parser] child: (294,2508) → 'Thu, Partly sunny, High of 34, Low of 21'
+[ui_parser] child: (770,2508) → 'Sat, Rain, High of 28, Low of 17'
+[ui_parser] child: (1008,2508) → 'Sun, Partly sunny, High of 29, Low of 18'
+[ui_parser] full parse -- 43 elements (35 labeled, 20 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=61f602daf47e elements=43
+[step] UI: ['Open the homepage', 'Connection is secure', 'google.com/search?q=weather+today&oq=&gs_lcrp=EgZjaHJvbWUqCQgEECMYJxjqAjIPCAAQIxgnGOoCGPAFGJ4GMgkIARAjGCcY6gIyDwgCECMYJxjqAhjwBRieBjIJCAMQIxgnGOoCMgkIBBAjGCcY', 'See 29 tabs', 'Customise and control Google Chrome', 'Current Dhanbad weather condition is Sunny with real-time temperature (36°C), humidity 13%, wind 10.8km/h, pressure (1007mb), UV (6.9), visibility (10km) in\xa0...', 'Google', 'Google Account: Amir Shams (amirshamse8@gmail.com)']
+[map] transition: launcher_launcher --[opt4_launch:chrome]--> chrome_main
+[map] screen: chrome_main (99751df5)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'done'
+[step] LLM: 'done'
+[step] action: {'action': 'done'}
+[input] DONE — no dispatch
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[skill] too few steps (1) — not saving
+[step] step=2/5 done=True history=['opt4_launch:chrome', 'done']
+
+[controller] done in 2 steps
+
+[controller] history:
+  1. opt4_launch:chrome
+  2. done
+
+  Screen Map: 519 screens (0 tainted), 635 transitions
+    whatsapp             173 screens
+    chrome               106 screens
+    youtube              101 screens
+    vending              42 screens
+    termux               25 screens
+    launcher             23 screens
+    settings             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+  TransitionMemory: 585 transitions (280 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: --task =====

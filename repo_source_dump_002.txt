@@ -82671,6 +82671,105 @@
           "resource_id": "com.whatsapp:id/entry"
         }
       ]
+    },
+    "6f1ebc2312ae": {
+      "screen_id": "6f1ebc2312ae",
+      "package": "com.whatsapp",
+      "activity": "com.whatsapp/.contact.ui.picker.ContactPicker",
+      "name": "whatsapp_contactpicker",
+      "labels": [
+        "Sadique faridi",
+        "Show dial pad keyboard",
+        "Can't talk, WhatsApp only",
+        "Contacts on WhatsApp",
+        "Can't talk, WhatsApp only",
+        "Sadique faridi",
+        "More",
+        "New contact",
+        "Share invite link",
+        "Contacts help"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Sadique faridi",
+          "x": 620,
+          "y": 223,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.whatsapp:id/search_src_text"
+        },
+        {
+          "text": "Show dial pad keyboard",
+          "x": 1100,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/trailing_button"
+        },
+        {
+          "text": "Back",
+          "x": 140,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/back"
+        },
+        {
+          "text": "Can't talk, WhatsApp only",
+          "x": 620,
+          "y": 1030,
+          "cls": "android.widget.ListView",
+          "resource_id": "android:id/list"
+        },
+        {
+          "text": "Contacts on WhatsApp",
+          "x": 620,
+          "y": 417,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Can't talk, WhatsApp only",
+          "x": 620,
+          "y": 597,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Sadique faridi",
+          "x": 126,
+          "y": 597,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "More",
+          "x": 620,
+          "y": 777,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "New contact",
+          "x": 620,
+          "y": 957,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Share invite link",
+          "x": 620,
+          "y": 1195,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Contacts help",
+          "x": 620,
+          "y": 1433,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -83339,7 +83438,8 @@
     "e1cc226022e2|tap:None": "b71e73538af0",
     "b71e73538af0|type": "3981e099e0a9",
     "397d0027180a|back": "b71e73538af0",
-    "b71e73538af0|back": "eb822f47a422"
+    "b71e73538af0|back": "eb822f47a422",
+    "5731aaff4c94|swipe": "6f1ebc2312ae"
   }
 }
 

@@ -5797,7 +5797,9 @@ nohup: ignoring input
 [ui_parser] child: (0,2258) → 'प्रयागराज में बेटे के सामने पत्नी को मार डाला: मासूम पुलिस से बोला- पापा ने रात में मम्मी का गला दबाया, हमें डांटा   पढ़ें पूरी खबर- https://dainik.bh'
 [ui_parser] full parse -- 31 elements (28 labeled, 8 via OCR/rid/child) from 192.168.29.48:33117
 [mem] stored com.whatsapp/.home.ui.HomeActivity hash=0a4609cb9648 elements=31
-[step] UI: ['प्रयागराज में बेटे के सामने पत्नी को मार डाला: मासूम पुलिस से बोला- पापा ने रात में मम्मी का गला दबाया, हमें डांटा   पढ़ें पूरी खबर- https://dainik.bh', 'Search', 'More options', 'Dr Masood Alam Vet, 4 unread statuses', 'My status, tap to add new status', 'Shivang Gupta, 1 unread status', 'Dr Masood Alam Vet, 4 unread statuses', 'Mishra nursery, 1 unread status']
+[step] UI: ['प्रयागराज में बेटे के सामने पत्नी को मार डाला: मासूम पुलिस से बोला- पापा ने रात में मम्मी का गला दबाया, हमें डांटा   पढ़ें पूरी खबर- https://dainik.bh', 'Search', 'More options', 'Dr Masood Alam Vet, 4 unread statuses', 'My status, tap to add new status', 'Shivang Gupta, 1 unread status', 'Dr Masood Alam Vet, 4 unread statuses', 'Mishra nursery, 1 unread status'][parser] DEBUG normalized: 'tap 27'
+[parser] INFO parsed 'tap 27' -> {'action': 'tap', 'target': 27}
+
 
 //===== TERMUXFILE: --task =====
 

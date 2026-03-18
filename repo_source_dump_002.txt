@@ -79867,6 +79867,178 @@
           "resource_id": ""
         }
       ]
+    },
+    "55537c11ef86": {
+      "screen_id": "55537c11ef86",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "Open the homepage",
+        "Card menu Will Privacy Display come to Galaxy S25 and other devices with One UI 8.5?",
+        "Signed in as Amir Shams. amirshamse8@gmail.com. Opens settings.",
+        "See 30 tabs",
+        "Customise and control Google Chrome",
+        "Search Google or type URL",
+        "Start voice search",
+        "Search with your camera using Google Lens",
+        "Ask AI Mode",
+        "New Incognito tab",
+        "Build APK \u00b7 exe5988e-rgb/JarvisMerged@d5529f8: github.com",
+        "Google: google.com",
+        "Wikipedia: wikipedia.org",
+        "Directory listing for /: [::]",
+        "Build APK \u00b7 exe5988e-rgb/JarvisMerged@d5529f8: github.com",
+        ": 192.168.29.110",
+        "Card menu Will Privacy Display come to Galaxy S25 and other devices with One UI 8.5?",
+        "Share Will Privacy Display come to Galaxy S25 and other devices with One UI 8.5?",
+        "Card menu Will Privacy Display come to Galaxy S25 and other devices with One UI 8.5?",
+        "See Ce"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Open the homepage",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/home_button"
+        },
+        {
+          "text": "Card menu Will Privacy Display come to Galaxy S25 and other devices with One UI 8.5?",
+          "x": 620,
+          "y": 1455,
+          "cls": "androidx.recyclerview.widget.RecyclerView",
+          "resource_id": "com.android.chrome:id/feed_stream_recycler_view"
+        },
+        {
+          "text": "Signed in as Amir Shams. amirshamse8@gmail.com. Opens settings.",
+          "x": 813,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/optional_toolbar_button"
+        },
+        {
+          "text": "See 30 tabs",
+          "x": 988,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/tab_switcher_button"
+        },
+        {
+          "text": "Customise and control Google Chrome",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        },
+        {
+          "text": "Search Google or type URL",
+          "x": 529,
+          "y": 755,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.android.chrome:id/search_box_text"
+        },
+        {
+          "text": "Start voice search",
+          "x": 890,
+          "y": 755,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.android.chrome:id/voice_search_button"
+        },
+        {
+          "text": "Search with your camera using Google Lens",
+          "x": 1058,
+          "y": 755,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.android.chrome:id/lens_camera_button"
+        },
+        {
+          "text": "Ask AI Mode",
+          "x": 331,
+          "y": 990,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/composeplate_button"
+        },
+        {
+          "text": "New Incognito tab",
+          "x": 909,
+          "y": 990,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/incognito_button"
+        },
+        {
+          "text": "Build APK \u00b7 exe5988e-rgb/JarvisMerged@d5529f8: github.com",
+          "x": 620,
+          "y": 1366,
+          "cls": "android.widget.HorizontalScrollView",
+          "resource_id": "com.android.chrome:id/mv_tiles_container"
+        },
+        {
+          "text": "Google: google.com",
+          "x": 238,
+          "y": 1357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Wikipedia: wikipedia.org",
+          "x": 504,
+          "y": 1357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Directory listing for /: [::]",
+          "x": 770,
+          "y": 1357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Build APK \u00b7 exe5988e-rgb/JarvisMerged@d5529f8: github.com",
+          "x": 1036,
+          "y": 1357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": ": 192.168.29.110",
+          "x": 1173,
+          "y": 1357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Card menu Will Privacy Display come to Galaxy S25 and other devices with One UI 8.5?",
+          "x": 620,
+          "y": 1955,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Share Will Privacy Display come to Galaxy S25 and other devices with One UI 8.5?",
+          "x": 929,
+          "y": 2193,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Card menu Will Privacy Display come to Galaxy S25 and other devices with One UI 8.5?",
+          "x": 1097,
+          "y": 2193,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "See Ce",
+          "x": 620,
+          "y": 2526,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -80467,7 +80639,7 @@
     "0dc27a148200|tap:See 28 tabs": "550b970f5034",
     "550b970f5034|tap:Directory listing for /: [::]": "7a90c98cab66",
     "7a90c98cab66|tap:Open source Mamba 3 arrives to surpass Transformer architecture with nearly 4% improved language modeling, reduced latency VentureBeat 14h": "5b8b2957dadb",
-    "5b8b2957dadb|tap:New Incognito tab": "7c92bc2f95a3",
+    "5b8b2957dadb|tap:New Incognito tab": "55537c11ef86",
     "7c92bc2f95a3|tap:Start voice search": "91b98e24a7db",
     "91b98e24a7db|tap:Refine: weather today": "99751df5ec71",
     "5731aaff4c94|opt4_launch:play store": "815905513523",

@@ -8241,6 +8241,126 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
 [parser] DEBUG normalized: 'type wikipedia.org'
 [parser] INFO parsed 'type wikipedia.org' -> {'action': 'type', 'text': 'wikipedia.org'}
 
+[step] UI: ['element_1', 'Your connection to this site is not secure', 'Search Google or type URL', 'Start voice search', 'Search with your camera using Google Lens', '17 suggested items in list below.', 'Share link to search results page for: weather today. Source: google.com', 'Share link to search results page for: weather today. Source: google.com']
+[map] new screen: chrome_main (6a196709544c)
+[map] transition: chrome_main --[tap:See 28 tabs]--> chrome_main
+[map] screen: chrome_main (6a196709)
+[skill] matched: 'open chrome and go to'  score=1.00  act=True
+[skill] cannot resolve: 'Switch to this tab.'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 3'
+[step] LLM: 'tap 3'
+[step] action: {'action': 'tap', 'target': 3}
+[input] dispatching: TouchEvent(x=550, y=237)
+[input] dispatching: TouchEvent(x=550, y=237)
+[input] adb -s 192.168.29.48:33117 shell input tap 550 237
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[step] step=3/30 done=False history=['opt4_launch:chrome', 'tap [3] google.com/search?q=weather+today&oq=&gs_lcrp=EgZjaHJvbWUqCQgBECMYJxjqAjIPCAAQIxgnGOoCGPAFGJ4GMgkIARAjGCcY6gIyCQgCECMYJxjqAjIJCAMQIxgnGOoCMgkIBBAjGCcY6gIyCQgF', 'tap [3] Search Google or type URL']
+
+========================================================
+  STEP 4  |  Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1154739 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (70,139) → 'Your connection to this site is not secure'
+[ui_parser] child: (28,335) → 'Share link to search results page for: weather today. Source: google.com'
+[ui_parser] child: (28,671) → 'Refine: weather tomorrow'
+[ui_parser] child: (28,867) → 'Refine: weather report'
+[ui_parser] child: (28,1063) → 'Refine: weather today at my location'
+[ui_parser] child: (28,1259) → 'Refine: restaurants nearby'
+[ui_parser] child: (28,1455) → 'Refine: weather today rain'
+[ui_parser] child: (28,1651) → 'Refine: weather this week'
+[ui_parser] full parse -- 22 elements (21 labeled, 8 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=1e73f94692ef elements=22
+[step] UI: ['element_1', 'Your connection to this site is not secure', 'Search Google or type URL', 'Start voice search', 'Search with your camera using Google Lens', '17 suggested items in list below.', 'Share link to search results page for: weather today. Source: google.com', 'Share link to search results page for: weather today. Source: google.com']
+[map] screen: chrome_main (6a196709)
+[skill] matched: 'open chrome and go to'  score=1.00  act=True
+[skill] cannot resolve: 'Switch to this tab.'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'type wikipedia.org'
+[step] LLM: 'type wikipedia.org'
+[step] action: {'action': 'type', 'text': 'wikipedia.org'}
+[input] dispatching: SetTextEvent('wikipedia.org')
+[input] dispatching: SetTextEvent('wikipedia.org')
+[input] adb -s 192.168.29.48:33117 shell input text wikipedia.org
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[step] step=4/30 done=False history=['opt4_launch:chrome', 'tap [3] google.com/search?q=weather+today&oq=&gs_lcrp=EgZjaHJvbWUqCQgBECMYJxjqAjIPCAAQIxgnGOoCGPAFGJ4GMgkIARAjGCcY6gIyCQgCECMYJxjqAjIJCAMQIxgnGOoCMgkIBBAjGCcY6gIyCQgF', 'tap [3] Search Google or type URL', "type 'wikipedia.org'"]
+
+========================================================
+  STEP 5  |  Open Chrome, search for wikipedia.org, then open WhatsApp and send the link to Mummy
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1153637 bytes)
+[ui_parser] activity=com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] signal='com.android.chrome/com.google.android.apps.chrome.Main'
+[mem] miss (unknown): com.android.chrome/com.google.android.apps.chrome.Main
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (70,139) → 'Your connection to this site is not secure'
+[ui_parser] child: (28,335) → 'Switch to this tab.'
+[ui_parser] child: (28,531) → 'wikipedia.org'
+[ui_parser] child: (28,727) → 'Refine: wikipedia.org/wiki/castle'
+[ui_parser] child: (28,923) → 'Refine: wikipedia.org/wiki/main_page'
+[ui_parser] full parse -- 12 elements (11 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=c4339c0d79d9 elements=12
+[step] UI: ['element_1', 'Your connection to this site is not secure', 'wikipedia.org', 'Clear input', '4 suggested items in list below.', 'Switch to this tab.', 'Switch to this tab.', 'wikipedia.org']
+[map] new screen: chrome_main (ea824627166e)
+[map] transition: chrome_main --[type]--> chrome_main
+[map] screen: chrome_main (ea824627)
+[skill] matched: 'open chrome and go to'  score=1.00  act=True
+[skill] executing 3 steps from memory
+[skill] action: {'action': 'type', 'text': '$URL'}
+[input] dispatching: SetTextEvent('$URL')
+[input] dispatching: SetTextEvent('$URL')
+[input] adb -s 192.168.29.48:33117 shell input text \$URL
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[skill] action: {'action': 'tap', 'target': 6}
+[input] dispatching: TouchEvent(x=620, y=433)
+[input] dispatching: TouchEvent(x=620, y=433)
+[input] adb -s 192.168.29.48:33117 shell input tap 620 433
+[skill] action: {'action': 'done'}
+[input] DONE — no dispatch
+[skill] done — skipped Claude
+[step] step=7/30 done=True history=['opt4_launch:chrome', 'tap [3] google.com/search?q=weather+today&oq=&gs_lcrp=EgZjaHJvbWUqCQgBECMYJxjqAjIPCAAQIxgnGOoCGPAFGJ4GMgkIARAjGCcY6gIyCQgCECMYJxjqAjIJCAMQIxgnGOoCMgkIBBAjGCcY6gIyCQgF', 'tap [3] Search Google or type URL', "type 'wikipedia.org'", "type '$URL'", 'tap [6] Switch to this tab.', 'done']
+
+[controller] done in 7 steps
+
+[controller] history:
+  1. opt4_launch:chrome
+  2. tap [3] google.com/search?q=weather+today&oq=&gs_lcrp=EgZjaHJvbWUqCQgBECMYJxjqAjIPCAAQIxgnGOoCGPAFGJ4GMgkIARAjGCcY6gIyCQgCECMYJxjqAjIJCAMQIxgnGOoCMgkIBBAjGCcY6gIyCQgF
+  3. tap [3] Search Google or type URL
+  4. type 'wikipedia.org'
+  5. type '$URL'
+  6. tap [6] Switch to this tab.
+  7. done
+
+  Screen Map: 589 screens (0 tainted), 706 transitions
+    whatsapp             190 screens
+    youtube              137 screens
+    chrome               114 screens
+    vending              46 screens
+    termux               26 screens
+    settings             25 screens
+    launcher             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+    notificationmanager  1 screens
+    battery              1 screens
+  TransitionMemory: 656 transitions (287 confirmed, threshold=2)
+
 
 //===== TERMUXFILE: --task =====
 
@@ -8249,248 +8369,5 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
 
 
 //===== TERMUXFILE: --max-steps =====
-
-
-//===== TERMUXFILE: scripts/build_runner.sh =====
-#!/data/data/com.termux/files/usr/bin/bash
-#
-# build_runner.sh — Autonomous-safe version
-#
-# Build status contract:
-#   /sdcard/ai-automation/build_status.txt    → "SUCCESS" or "FAILURE"
-#   /sdcard/ai-automation/build_complete.flag → touched last, always
-#
-# Android reads build_status.txt for result. Folder existence never used.
-
-set -euo pipefail
-
-REPO_DIR="/data/data/com.termux/files/home/jarvis"
-BASE_DIR="/sdcard/ai-automation"
-AI_OUTPUT="$BASE_DIR/ai-output.txt"
-DOWNLOAD_DIR="/sdcard/Download"
-COMPLETE_FLAG="$BASE_DIR/build_complete.flag"
-ASSEMBLED_FLAG="$BASE_DIR/downloads_assembled.flag"
-SNAPSHOT_FILE="$BASE_DIR/download_snapshot.txt"
-STATUS_FILE="$BASE_DIR/build_status.txt"
-LOG_DIR="$BASE_DIR/logs"
-ERROR_LOG_DIR="$BASE_DIR/build_error_logs"
-
-mkdir -p "$LOG_DIR"
-exec >> "$LOG_DIR/build_runner.log" 2>&1
-
-echo ""
-echo "=== build_runner.sh START $(date) args=${*:-none} ==="
-
-# ─────────────────────────────────────────────────────────────
-# MODE: snapshot
-# ─────────────────────────────────────────────────────────────
-if [[ "${1:-}" == "--snapshot" ]]; then
-    echo "[snapshot] Recording existing files"
-    rm -f "$SNAPSHOT_FILE"
-    find "$DOWNLOAD_DIR" -maxdepth 1 -type f -exec basename {} \; \
-        > "$SNAPSHOT_FILE" 2>/dev/null || true
-    echo "[snapshot] Done"
-    exit 0
-fi
-
-# ─────────────────────────────────────────────────────────────
-# MODE: assemble downloaded files
-# ─────────────────────────────────────────────────────────────
-if [[ "${1:-}" == "--assemble-downloads" ]]; then
-    echo "[assemble] Starting"
-
-    declare -A BEFORE
-    if [[ -f "$SNAPSHOT_FILE" ]]; then
-        while IFS= read -r name; do
-            BEFORE["$name"]=1
-        done < "$SNAPSHOT_FILE"
-    fi
-
-    CODE_EXTS="kt java py txt xml json gradle kts sh cpp c h ts js md"
-    NEW_FILES=()
-    DEADLINE=$(( $(date +%s) + 30 ))
-
-    while (( $(date +%s) < DEADLINE )); do
-        while IFS= read -r -d '' f; do
-            NAME=$(basename "$f")
-            EXT="${NAME##*.}"
-            if [[ -z "${BEFORE[$NAME]+_}" ]] && \
-               [[ -s "$f" ]] && \
-               echo "$CODE_EXTS" | grep -qw "$EXT"; then
-                NEW_FILES+=("$f")
-            fi
-        done < <(find "$DOWNLOAD_DIR" -maxdepth 1 -type f -print0 2>/dev/null)
-        [[ ${#NEW_FILES[@]} -gt 0 ]] && break
-        sleep 1
-    done
-
-    if [[ ${#NEW_FILES[@]} -eq 0 ]]; then
-        echo "[assemble] ERROR: No new files"
-        exit 1
-    fi
-
-    > "$AI_OUTPUT"
-    for f in "${NEW_FILES[@]}"; do
-        NAME=$(basename "$f")
-        printf '//===== FILE: %s =====\n' "$NAME" >> "$AI_OUTPUT"
-        cat "$f" >> "$AI_OUTPUT"
-        printf '\n\n' >> "$AI_OUTPUT"
-    done
-
-    touch "$ASSEMBLED_FLAG"
-    rm -f "$SNAPSHOT_FILE"
-    echo "[assemble] DONE"
-    exit 0
-fi
-
-# ─────────────────────────────────────────────────────────────
-# MODE: normal build
-# ─────────────────────────────────────────────────────────────
-
-# Stale state cleanup — always before a new build
-echo "[cleanup] Removing stale flags and error logs"
-rm -f "$COMPLETE_FLAG"
-rm -f "$STATUS_FILE"
-rm -rf "$ERROR_LOG_DIR"
-mkdir -p "$ERROR_LOG_DIR"
-
-echo "[normal] Starting build mode"
-cd "$REPO_DIR"
-
-# Clean old error logs from repo before reset to prevent re-detection
-echo "[cleanup] Removing old build_error_logs from repo"
-rm -rf "$REPO_DIR/build_error_logs"
-
-echo "[sync] Force syncing with origin/main"
-git fetch origin main
-git reset --hard origin/main
-echo "[sync] Repo synced"
-
-echo "[copy] Updating ai-output.txt"
-cp "$AI_OUTPUT" "$REPO_DIR/ai-output.txt"
-
-git config user.name  "AutoBuild Bot"
-git config user.email "bot@autobuild.local"
-
-git add ai-output.txt
-git commit -m "AutoBuild: update ai-output.txt" || echo "[skip] Nothing to commit"
-git push origin main || echo "[warn] git push failed"
-
-echo "[wait] Waiting 20s for workflows to queue..."
-sleep 20
-
-# ─────────────────────────────────────────────────────────────
-# Watch APK workflow
-# ─────────────────────────────────────────────────────────────
-APK_WORKFLOW_NAME="Build APK"
-CONCLUSION=""
-
-echo "[watch] Looking for APK workflow run..."
-APK_RUN_ID=$(gh run list \
-    --workflow="$APK_WORKFLOW_NAME" \
-    --limit=1 \
-    --json databaseId \
-    -q '.[0].databaseId' 2>/dev/null || true)
-
-if [[ -z "${APK_RUN_ID:-}" ]]; then
-    echo "[warn] No APK workflow run found — writing FAILURE"
-    echo "FAILURE" > "$STATUS_FILE"
-    touch "$COMPLETE_FLAG"
-    echo "=== build_runner.sh DONE (no run found) $(date) ==="
-    exit 0
-fi
-
-echo "[watch] Watching run $APK_RUN_ID..."
-gh run watch "$APK_RUN_ID" --exit-status || true
-
-# Deterministic result via gh run view
-echo "[status] Querying conclusion for run $APK_RUN_ID..."
-CONCLUSION=$(gh run view "$APK_RUN_ID" \
-    --json conclusion \
-    -q '.conclusion' 2>/dev/null || echo "unknown")
-echo "[status] Conclusion = $CONCLUSION"
-
-# Final sync to fetch any committed error logs
-echo "[sync] Final git pull"
-git fetch origin main
-git reset --hard origin/main
-
-# Write build_status.txt and handle logs
-if [[ "$CONCLUSION" == "success" ]]; then
-    echo "[result] BUILD SUCCESS"
-    echo "SUCCESS" > "$STATUS_FILE"
-    rm -rf "$ERROR_LOG_DIR"
-    mkdir -p "$ERROR_LOG_DIR"
-    echo "[result] Cleared error logs from shared storage"
-else
-    echo "[result] BUILD FAILURE (conclusion=$CONCLUSION)"
-    echo "FAILURE" > "$STATUS_FILE"
-
-    if [[ -d "$REPO_DIR/build_error_logs" ]] && \
-       [[ -f "$REPO_DIR/build_error_logs/error_summary.txt" ]]; then
-        rm -rf "$ERROR_LOG_DIR"
-        mkdir -p "$ERROR_LOG_DIR"
-        cp -f "$REPO_DIR/build_error_logs/"* "$ERROR_LOG_DIR/" 2>/dev/null || true
-        echo "[result] Error logs copied to $ERROR_LOG_DIR"
-    else
-        echo "[warn] FAILURE but no error_summary.txt found in repo"
-        mkdir -p "$ERROR_LOG_DIR"
-        echo "Build failed but no error_summary.txt was committed." \
-            > "$ERROR_LOG_DIR/error_summary.txt"
-        echo "(gh conclusion=$CONCLUSION, no log files found)" \
-            >> "$ERROR_LOG_DIR/error_summary.txt"
-    fi
-fi
-
-# Always touch build_complete.flag last
-echo "[final] Touching build_complete.flag"
-touch "$COMPLETE_FLAG" || true
-
-echo "=== build_runner.sh DONE (conclusion=$CONCLUSION) $(date) ==="
-
-
-//===== TERMUXFILE: workflows/Ai-codegen.yml =====
-name: AI Code Generator
-
-on:
-  workflow_dispatch:
-  push:
-    paths:
-      - ai-output.txt
-
-permissions:
-  contents: write
-
-jobs:
-  generate:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Set up Python (GitHub runner only)
-        if: ${{ !env.ACT }}
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Use system Python (Termux / act)
-        if: ${{ env.ACT }}
-        run: |
-          echo "Using Termux Python"
-          python --version
-
-      - name: Run AI Code Generator
-        run: |
-          python ai-code.py ~/storage/shared/Download/ai-output.txt
-
-      - name: Clean act cache (local only)
-        if: ${{ env.ACT }}
-        run: |
-          echo "Cleaning act cache..."
-          rm -rf ~/.cache/act || true
 
 

@@ -67518,7 +67518,7 @@
         "Sound & vibration",
         "Notifications & Quick Settings"
       ],
-      "visits": 5,
+      "visits": 6,
       "tainted": false,
       "elements": [
         {
@@ -68215,7 +68215,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 37,
+      "visits": 38,
       "tainted": false,
       "elements": [
         {
@@ -76161,7 +76161,7 @@
     "b94fe430b394|tap:You": "caf601112185",
     "caf601112185|tap:JensJulius Tejlgaard has new content": "6dd8030404cd",
     "6dd8030404cd|tap:Edit suggestion mrbeast": "571ebe27696a",
-    "5731aaff4c94|opt4_launch:settings": "bcfd9287cbfa",
+    "5731aaff4c94|opt4_launch:settings": "edd4f565ccb7",
     "edd4f565ccb7|tap:Not connected": "bcfd9287cbfa",
     "bcfd9287cbfa|tap:Scan": "edd4f565ccb7",
     "5731aaff4c94|opt4_launch:chrome": "7c92bc2f95a3",

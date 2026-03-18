@@ -1,3 +1,337 @@
+//===== TERMUXFILE: scripts/build_runner.sh =====
+#!/data/data/com.termux/files/usr/bin/bash
+#
+# build_runner.sh — Autonomous-safe version
+#
+# Build status contract:
+#   /sdcard/ai-automation/build_status.txt    → "SUCCESS" or "FAILURE"
+#   /sdcard/ai-automation/build_complete.flag → touched last, always
+#
+# Android reads build_status.txt for result. Folder existence never used.
+
+set -euo pipefail
+
+REPO_DIR="/data/data/com.termux/files/home/jarvis"
+BASE_DIR="/sdcard/ai-automation"
+AI_OUTPUT="$BASE_DIR/ai-output.txt"
+DOWNLOAD_DIR="/sdcard/Download"
+COMPLETE_FLAG="$BASE_DIR/build_complete.flag"
+ASSEMBLED_FLAG="$BASE_DIR/downloads_assembled.flag"
+SNAPSHOT_FILE="$BASE_DIR/download_snapshot.txt"
+STATUS_FILE="$BASE_DIR/build_status.txt"
+LOG_DIR="$BASE_DIR/logs"
+ERROR_LOG_DIR="$BASE_DIR/build_error_logs"
+
+mkdir -p "$LOG_DIR"
+exec >> "$LOG_DIR/build_runner.log" 2>&1
+
+echo ""
+echo "=== build_runner.sh START $(date) args=${*:-none} ==="
+
+# ─────────────────────────────────────────────────────────────
+# MODE: snapshot
+# ─────────────────────────────────────────────────────────────
+if [[ "${1:-}" == "--snapshot" ]]; then
+    echo "[snapshot] Recording existing files"
+    rm -f "$SNAPSHOT_FILE"
+    find "$DOWNLOAD_DIR" -maxdepth 1 -type f -exec basename {} \; \
+        > "$SNAPSHOT_FILE" 2>/dev/null || true
+    echo "[snapshot] Done"
+    exit 0
+fi
+
+# ─────────────────────────────────────────────────────────────
+# MODE: assemble downloaded files
+# ─────────────────────────────────────────────────────────────
+if [[ "${1:-}" == "--assemble-downloads" ]]; then
+    echo "[assemble] Starting"
+
+    declare -A BEFORE
+    if [[ -f "$SNAPSHOT_FILE" ]]; then
+        while IFS= read -r name; do
+            BEFORE["$name"]=1
+        done < "$SNAPSHOT_FILE"
+    fi
+
+    CODE_EXTS="kt java py txt xml json gradle kts sh cpp c h ts js md"
+    NEW_FILES=()
+    DEADLINE=$(( $(date +%s) + 30 ))
+
+    while (( $(date +%s) < DEADLINE )); do
+        while IFS= read -r -d '' f; do
+            NAME=$(basename "$f")
+            EXT="${NAME##*.}"
+            if [[ -z "${BEFORE[$NAME]+_}" ]] && \
+               [[ -s "$f" ]] && \
+               echo "$CODE_EXTS" | grep -qw "$EXT"; then
+                NEW_FILES+=("$f")
+            fi
+        done < <(find "$DOWNLOAD_DIR" -maxdepth 1 -type f -print0 2>/dev/null)
+        [[ ${#NEW_FILES[@]} -gt 0 ]] && break
+        sleep 1
+    done
+
+    if [[ ${#NEW_FILES[@]} -eq 0 ]]; then
+        echo "[assemble] ERROR: No new files"
+        exit 1
+    fi
+
+    > "$AI_OUTPUT"
+    for f in "${NEW_FILES[@]}"; do
+        NAME=$(basename "$f")
+        printf '//===== FILE: %s =====\n' "$NAME" >> "$AI_OUTPUT"
+        cat "$f" >> "$AI_OUTPUT"
+        printf '\n\n' >> "$AI_OUTPUT"
+    done
+
+    touch "$ASSEMBLED_FLAG"
+    rm -f "$SNAPSHOT_FILE"
+    echo "[assemble] DONE"
+    exit 0
+fi
+
+# ─────────────────────────────────────────────────────────────
+# MODE: normal build
+# ─────────────────────────────────────────────────────────────
+
+# Stale state cleanup — always before a new build
+echo "[cleanup] Removing stale flags and error logs"
+rm -f "$COMPLETE_FLAG"
+rm -f "$STATUS_FILE"
+rm -rf "$ERROR_LOG_DIR"
+mkdir -p "$ERROR_LOG_DIR"
+
+echo "[normal] Starting build mode"
+cd "$REPO_DIR"
+
+# Clean old error logs from repo before reset to prevent re-detection
+echo "[cleanup] Removing old build_error_logs from repo"
+rm -rf "$REPO_DIR/build_error_logs"
+
+echo "[sync] Force syncing with origin/main"
+git fetch origin main
+git reset --hard origin/main
+echo "[sync] Repo synced"
+
+echo "[copy] Updating ai-output.txt"
+cp "$AI_OUTPUT" "$REPO_DIR/ai-output.txt"
+
+git config user.name  "AutoBuild Bot"
+git config user.email "bot@autobuild.local"
+
+git add ai-output.txt
+git commit -m "AutoBuild: update ai-output.txt" || echo "[skip] Nothing to commit"
+git push origin main || echo "[warn] git push failed"
+
+echo "[wait] Waiting 20s for workflows to queue..."
+sleep 20
+
+# ─────────────────────────────────────────────────────────────
+# Watch APK workflow
+# ─────────────────────────────────────────────────────────────
+APK_WORKFLOW_NAME="Build APK"
+CONCLUSION=""
+
+echo "[watch] Looking for APK workflow run..."
+APK_RUN_ID=$(gh run list \
+    --workflow="$APK_WORKFLOW_NAME" \
+    --limit=1 \
+    --json databaseId \
+    -q '.[0].databaseId' 2>/dev/null || true)
+
+if [[ -z "${APK_RUN_ID:-}" ]]; then
+    echo "[warn] No APK workflow run found — writing FAILURE"
+    echo "FAILURE" > "$STATUS_FILE"
+    touch "$COMPLETE_FLAG"
+    echo "=== build_runner.sh DONE (no run found) $(date) ==="
+    exit 0
+fi
+
+echo "[watch] Watching run $APK_RUN_ID..."
+gh run watch "$APK_RUN_ID" --exit-status || true
+
+# Deterministic result via gh run view
+echo "[status] Querying conclusion for run $APK_RUN_ID..."
+CONCLUSION=$(gh run view "$APK_RUN_ID" \
+    --json conclusion \
+    -q '.conclusion' 2>/dev/null || echo "unknown")
+echo "[status] Conclusion = $CONCLUSION"
+
+# Final sync to fetch any committed error logs
+echo "[sync] Final git pull"
+git fetch origin main
+git reset --hard origin/main
+
+# Write build_status.txt and handle logs
+if [[ "$CONCLUSION" == "success" ]]; then
+    echo "[result] BUILD SUCCESS"
+    echo "SUCCESS" > "$STATUS_FILE"
+    rm -rf "$ERROR_LOG_DIR"
+    mkdir -p "$ERROR_LOG_DIR"
+    echo "[result] Cleared error logs from shared storage"
+else
+    echo "[result] BUILD FAILURE (conclusion=$CONCLUSION)"
+    echo "FAILURE" > "$STATUS_FILE"
+
+    if [[ -d "$REPO_DIR/build_error_logs" ]] && \
+       [[ -f "$REPO_DIR/build_error_logs/error_summary.txt" ]]; then
+        rm -rf "$ERROR_LOG_DIR"
+        mkdir -p "$ERROR_LOG_DIR"
+        cp -f "$REPO_DIR/build_error_logs/"* "$ERROR_LOG_DIR/" 2>/dev/null || true
+        echo "[result] Error logs copied to $ERROR_LOG_DIR"
+    else
+        echo "[warn] FAILURE but no error_summary.txt found in repo"
+        mkdir -p "$ERROR_LOG_DIR"
+        echo "Build failed but no error_summary.txt was committed." \
+            > "$ERROR_LOG_DIR/error_summary.txt"
+        echo "(gh conclusion=$CONCLUSION, no log files found)" \
+            >> "$ERROR_LOG_DIR/error_summary.txt"
+    fi
+fi
+
+# Always touch build_complete.flag last
+echo "[final] Touching build_complete.flag"
+touch "$COMPLETE_FLAG" || true
+
+echo "=== build_runner.sh DONE (conclusion=$CONCLUSION) $(date) ==="
+
+
+//===== TERMUXFILE: workflows/Ai-codegen.yml =====
+name: AI Code Generator
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ai-output.txt
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python (GitHub runner only)
+        if: ${{ !env.ACT }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Use system Python (Termux / act)
+        if: ${{ env.ACT }}
+        run: |
+          echo "Using Termux Python"
+          python --version
+
+      - name: Run AI Code Generator
+        run: |
+          python ai-code.py ~/storage/shared/Download/ai-output.txt
+
+      - name: Clean act cache (local only)
+        if: ${{ env.ACT }}
+        run: |
+          echo "Cleaning act cache..."
+          rm -rf ~/.cache/act || true
+
+
+//===== TERMUXFILE: workflows/jarvis_start.sh =====
+#!/data/data/com.termux/files/usr/bin/bash
+# ================================================================
+#  jarvis_start.sh  —  Minimal Phone A startup
+#  Only starts what is essential for the A→B agent loop:
+#    1. ADB connect Phone A + Phone B
+#    2. Verify Phone B Claude bridge is reachable
+#
+#  Phone A : 192.168.29.48:37891
+#  Phone B : 192.168.29.110:45999  (Claude brain)
+#
+#  Usage:
+#    bash ~/workflows/jarvis_start.sh
+#    bash ~/workflows/jarvis_start.sh --stop
+# ================================================================
+
+PHONE_A="192.168.29.48:37891"
+PHONE_B="192.168.29.110:45999"
+PHONE_B_BRIDGE="http://192.168.29.110:8890"
+
+GREEN="\033[0;32m"; YELLOW="\033[1;33m"; RED="\033[0;31m"; NC="\033[0m"
+log()  { echo -e "${GREEN}[jarvis]${NC} $*"; }
+warn() { echo -e "${YELLOW}[jarvis]${NC} $*"; }
+err()  { echo -e "${RED}[jarvis]${NC} $*"; }
+
+# ── Stop mode ────────────────────────────────────────────────────────────────
+if [ "$1" = "--stop" ]; then
+    log "Disconnecting ADB devices..."
+    adb disconnect "$PHONE_A" 2>/dev/null && log "  ✓ Phone A disconnected" || true
+    adb disconnect "$PHONE_B" 2>/dev/null && log "  ✓ Phone B disconnected" || true
+    log "Done."; exit 0
+fi
+
+echo ""
+echo "╔══════════════════════════════════════════════════════╗"
+echo "║   JARVIS START  —  Agent Loop (A → B)               ║"
+echo "╚══════════════════════════════════════════════════════╝"
+echo ""
+
+# ── 1. ADB connect ───────────────────────────────────────────────────────────
+log "Connecting ADB devices..."
+
+adb connect "$PHONE_A" 2>&1 | grep -q "connected" \
+    && log "  ✓ Phone A ($PHONE_A)" \
+    || warn "  ✗ Phone A failed — screencap will fail"
+
+adb connect "$PHONE_B" 2>&1 | grep -q "connected" \
+    && log "  ✓ Phone B ($PHONE_B)" \
+    || warn "  ✗ Phone B failed — bridge unreachable"
+
+# ── 2. Verify Phone B bridge ─────────────────────────────────────────────────
+log "Checking Phone B Claude bridge..."
+HEALTH=$(curl -sf --max-time 5 "$PHONE_B_BRIDGE/health")
+if [ $? -eq 0 ]; then
+    log "  ✓ Bridge online — Claude brain ACTIVE"
+    log "  $HEALTH"
+else
+    err "  ✗ Bridge offline!"
+    err "  On Phone B run: python3 ~/claude_bridge.py"
+    echo ""
+    exit 1
+fi
+
+# ── 3. Quick A→B smoke test ──────────────────────────────────────────────────
+log "Running A→B smoke test..."
+RESULT=$(curl -sf --max-time 30 -X POST "$PHONE_B_BRIDGE/chat" \
+    -H "Content-Type: application/json" \
+    -d '{"prompt": "Reply with only the word: ready"}')
+if echo "$RESULT" | grep -q '"success":true'; then
+    log "  ✓ A→B round-trip OK"
+    log "  Response: $RESULT"
+else
+    warn "  ✗ Smoke test failed or timed out"
+    warn "  Raw: $RESULT"
+fi
+
+# ── Summary ──────────────────────────────────────────────────────────────────
+echo ""
+echo "╔══════════════════════════════════════════════════════╗"
+echo "║   READY                                              ║"
+echo "╚══════════════════════════════════════════════════════╝"
+echo ""
+log "Phone A (agent)  : $PHONE_A"
+log "Phone B (brain)  : $PHONE_B_BRIDGE"
+echo ""
+log "Run agent:"
+log "  cd ~/workflows"
+log "  python3 test/jarvis-agent/agent/controller.py --task 'Open WhatsApp' --device '$PHONE_A'"
+echo ""
+
+
 //===== TERMUXFILE: workflows/claude_bridge.py =====
 #!/usr/bin/env python3
 """

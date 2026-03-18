@@ -5819,7 +5819,9 @@ RuntimeError: No LLM backend available.
 [ui_parser] child: (0,2537) → 'Shorts remixing this video, 9.6k Shorts'
 [ui_parser] full parse -- 17 elements (17 labeled, 5 via OCR/rid/child) from 192.168.29.48:33117
 [mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=e6bca3abec5b elements=17
-[step] UI: ['Expand Mini Player', 'Drag handle', 'Drag handle', 'Close', 'Spotify 🎧: https://open.spotify.c...\u200b\nItunes 💿: https://itunes.apple.c...\u200b\n\nSupport on all platforms: https://ncs.lnk.to/Mor...\u200b\n\n...more', '472,046 likes', '37,739,650 views', '15 Dec 2016']
+[step] UI: ['Expand Mini Player', 'Drag handle', 'Drag handle', 'Close', 'Spotify 🎧: https://open.spotify.c...\u200b\nItunes 💿: https://itunes.apple.c...\u200b\n\nSupport on all platforms: https://ncs.lnk.to/Mor...\u200b\n\n...more', '472,046 likes', '37,739,650 views', '15 Dec 2016'][parser] DEBUG normalized: 'tap 1'
+[parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
+
 
 //===== TERMUXFILE: --task =====
 

@@ -8643,6 +8643,8 @@ nohup: ignoring input
     phone                1 screens
     membership           1 screens
   TransitionMemory: 550 transitions (280 confirmed, threshold=2)
+[parser] DEBUG normalized: 'tap 20'
+[parser] INFO parsed 'tap 20' -> {'action': 'tap', 'target': 20}
 
 
 //===== TERMUXFILE: --task =====

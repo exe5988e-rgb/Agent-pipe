@@ -3613,8 +3613,8 @@ if __name__ == "__main__":
   },
   "a3b75eb433e2|opt4_launch:whatsapp": {
     "to": "7c51d7e864c3",
-    "count": 1,
-    "last_seen": 1773794689.2931142
+    "count": 2,
+    "last_seen": 1773794696.1609955
   }
 }
 

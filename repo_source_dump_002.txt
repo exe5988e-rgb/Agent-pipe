@@ -73061,6 +73061,82 @@
           "resource_id": ""
         }
       ]
+    },
+    "95f0bd34d77b": {
+      "screen_id": "95f0bd34d77b",
+      "package": "com.android.vending",
+      "activity": "com.android.vending/.AssetBrowserActivity",
+      "name": "vending_assetbrowseractivity",
+      "labels": [
+        "Navigate up",
+        "spotifyVLC",
+        "Clear",
+        "Refine search to 'spotify vlc'",
+        "Refine search to 'spotify vlc'",
+        "re",
+        "Dee",
+        "re"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "spotifyVLC",
+          "x": 620,
+          "y": 237,
+          "cls": "android.widget.EditText",
+          "resource_id": ""
+        },
+        {
+          "text": "Clear",
+          "x": 1142,
+          "y": 237,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'spotify vlc'",
+          "x": 620,
+          "y": 437,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Refine search to 'spotify vlc'",
+          "x": 1107,
+          "y": 437,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "re",
+          "x": 155,
+          "y": 2744,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Dee",
+          "x": 465,
+          "y": 2744,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "re",
+          "x": 1085,
+          "y": 2744,
+          "cls": "android.view.View",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -73672,7 +73748,8 @@
     "571ebe27696a|tap:Voice search": "80ff94df1647",
     "80ff94df1647|type": "87fee6983a2f",
     "87fee6983a2f|tap:Edit suggestion warriyo mortals slowed reverb": "8bd4aa0f7819",
-    "815905513523|tap:Voice Search": "3b20c5a1dd9f"
+    "815905513523|tap:Voice Search": "3b20c5a1dd9f",
+    "3b20c5a1dd9f|type": "95f0bd34d77b"
   }
 }
 

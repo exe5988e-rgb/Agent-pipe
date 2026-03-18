@@ -81358,7 +81358,7 @@
         "Abdulbokaro",
         "Abdulbokaro"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {
@@ -81982,6 +81982,265 @@
           "y": 1625,
           "cls": "android.widget.EditText",
           "resource_id": "com.whatsapp:id/entry"
+        }
+      ]
+    },
+    "eb822f47a422": {
+      "screen_id": "eb822f47a422",
+      "package": "com.whatsapp",
+      "activity": "com.whatsapp/.home.ui.HomeActivity",
+      "name": "whatsapp_homeactivity",
+      "labels": [
+        "FTS-01B(P1)_17-03-2026_Sol.pdf (26 pages)",
+        "Scan to Pay",
+        "More options",
+        "Ask Meta AI or Search",
+        "Swipe down to reveal additional actions",
+        "Inbox filters, Radio Group",
+        "All filter, , selected",
+        "Unread filter, 2, unselected",
+        "Favourites filter, , unselected",
+        "Groups filter, , unselected",
+        "Family filter, , unselected",
+        "Archived",
+        "Door desgin ideas, group",
+        "Door desgin ideas, group",
+        "Mummy Jio (You)",
+        "You",
+        "Good morning",
+        "Mummy",
+        "Papa",
+        "Papa",
+        "Message your assistant",
+        "FTS-01B(P1)_17-03-2026_Sol.pdf (26 pages)",
+        "Yash Raj",
+        "New chat",
+        "Jio \u0915\u094b \u091a\u0941\u0928\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f \u0906\u092a\u0915\u093e \u0927\u0928\u094d\u092f\u0935\u093e\u0926! \u2764\ufe0f\u2026",
+        "MyJio",
+        "Chats, 2 new notifications",
+        "Updates",
+        "Communities",
+        "Calls"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "FTS-01B(P1)_17-03-2026_Sol.pdf (26 pages)",
+          "x": 620,
+          "y": 1286,
+          "cls": "androidx.viewpager.widget.ViewPager",
+          "resource_id": "com.whatsapp:id/pager"
+        },
+        {
+          "text": "Scan to Pay",
+          "x": 1016,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/menuitem_payment_qr"
+        },
+        {
+          "text": "More options",
+          "x": 1170,
+          "y": 237,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/menuitem_overflow"
+        },
+        {
+          "text": "Ask Meta AI or Search",
+          "x": 620,
+          "y": 433,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/my_search_bar"
+        },
+        {
+          "text": "Swipe down to reveal additional actions",
+          "x": 620,
+          "y": 1489,
+          "cls": "androidx.recyclerview.widget.RecyclerView",
+          "resource_id": "android:id/list"
+        },
+        {
+          "text": "Inbox filters, Radio Group",
+          "x": 620,
+          "y": 671,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "All filter, , selected",
+          "x": 126,
+          "y": 657,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Unread filter, 2, unselected",
+          "x": 356,
+          "y": 657,
+          "cls": "android.widget.RadioButton",
+          "resource_id": "com.whatsapp:id/conversations_filter_debug_view_id_unread"
+        },
+        {
+          "text": "Favourites filter, , unselected",
+          "x": 671,
+          "y": 657,
+          "cls": "android.widget.RadioButton",
+          "resource_id": "com.whatsapp:id/conversations_filter_debug_view_id_favorite"
+        },
+        {
+          "text": "Groups filter, , unselected",
+          "x": 969,
+          "y": 657,
+          "cls": "android.widget.RadioButton",
+          "resource_id": "com.whatsapp:id/conversations_filter_debug_view_id_groups"
+        },
+        {
+          "text": "Family filter, , unselected",
+          "x": 1175,
+          "y": 657,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Archived",
+          "x": 620,
+          "y": 853,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/conversations_archive_header"
+        },
+        {
+          "text": "Door desgin ideas, group",
+          "x": 620,
+          "y": 1070,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "Door desgin ideas, group",
+          "x": 126,
+          "y": 1070,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "Mummy Jio (You)",
+          "x": 620,
+          "y": 1336,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "You",
+          "x": 126,
+          "y": 1336,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "Good morning",
+          "x": 620,
+          "y": 1602,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "Mummy",
+          "x": 126,
+          "y": 1602,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "Papa",
+          "x": 620,
+          "y": 1868,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "Papa",
+          "x": 126,
+          "y": 1868,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "Message your assistant",
+          "x": 1082,
+          "y": 2042,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/extended_mini_fab"
+        },
+        {
+          "text": "FTS-01B(P1)_17-03-2026_Sol.pdf (26 pages)",
+          "x": 620,
+          "y": 2134,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "Yash Raj",
+          "x": 126,
+          "y": 2134,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "New chat",
+          "x": 1086,
+          "y": 2280,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/fab"
+        },
+        {
+          "text": "Jio \u0915\u094b \u091a\u0941\u0928\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f \u0906\u092a\u0915\u093e \u0927\u0928\u094d\u092f\u0935\u093e\u0926! \u2764\ufe0f\u2026",
+          "x": 620,
+          "y": 2350,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/contact_row_container"
+        },
+        {
+          "text": "MyJio",
+          "x": 126,
+          "y": 2357,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_selector"
+        },
+        {
+          "text": "Chats, 2 new notifications",
+          "x": 124,
+          "y": 2576,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Updates",
+          "x": 372,
+          "y": 2576,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Communities",
+          "x": 620,
+          "y": 2576,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Calls",
+          "x": 868,
+          "y": 2576,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "You",
+          "x": 1116,
+          "y": 2576,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
         }
       ]
     }
@@ -82646,7 +82905,9 @@
     "c1027f04709d|tap:More options": "35cc9568adf1",
     "35cc9568adf1|type": "6d26e82dd7ee",
     "6d26e82dd7ee|tap:None": "67d20aa8828e",
-    "67d20aa8828e|type": "40a382601216"
+    "67d20aa8828e|type": "40a382601216",
+    "67d20aa8828e|back": "eb822f47a422",
+    "eb822f47a422|tap:Jio \u0915\u094b \u091a\u0941\u0928\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f \u0906\u092a\u0915\u093e \u0927\u0928\u094d\u092f\u0935\u093e\u0926! \u2764\ufe0f\u2026": "c1027f04709d"
   }
 }
 

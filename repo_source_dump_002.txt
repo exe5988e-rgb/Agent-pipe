@@ -51291,6 +51291,328 @@
           "resource_id": "com.whatsapp:id/entry"
         }
       ]
+    },
+    "f743c33195f7": {
+      "screen_id": "f743c33195f7",
+      "package": "com.whatsapp",
+      "activity": "com.whatsapp/.Conversation",
+      "name": "whatsapp_conversation",
+      "labels": [
+        "Now Playing",
+        "Clock",
+        ":",
+        "element_6",
+        "Open Now Playing",
+        "element_8",
+        "21\u200e\u00b0\u200e",
+        "Next track",
+        "Play",
+        "Wed 18 Mar",
+        "previous track",
+        "Calendar schedule",
+        "element_15",
+        "At a Glance",
+        "Folder: Google",
+        "Wed 18 Mar",
+        "Create new event",
+        "element_20",
+        "element_21",
+        "element_22",
+        "element_23",
+        "element_24",
+        "Google",
+        "element_26",
+        "Game Assistant",
+        "element_28",
+        "element_29",
+        "element_30",
+        "element_31",
+        "Folder: OnePlus"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Now Playing",
+          "x": 854,
+          "y": 389,
+          "cls": "com.android.launcher3.widget.CustomLauncherAppWidgetHostView",
+          "resource_id": ""
+        },
+        {
+          "text": "Clock",
+          "x": 620,
+          "y": 418,
+          "cls": "com.android.launcher3.widget.CustomLauncherAppWidgetHostView",
+          "resource_id": ""
+        },
+        {
+          "text": "06",
+          "x": 197,
+          "y": 397,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.oneplus.deskclock:id/local_hour_txt"
+        },
+        {
+          "text": ":",
+          "x": 335,
+          "y": 390,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.oneplus.deskclock:id/local_colon_txt"
+        },
+        {
+          "text": "31",
+          "x": 474,
+          "y": 397,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.oneplus.deskclock:id/local_minutes_txt"
+        },
+        {
+          "text": "element_6",
+          "x": 777,
+          "y": 374,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.apple.android.music:id/appwidget_header_container_info"
+        },
+        {
+          "text": "Open Now Playing",
+          "x": 604,
+          "y": 459,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.apple.android.music:id/appwidget_header_imageview"
+        },
+        {
+          "text": "element_8",
+          "x": 1054,
+          "y": 380,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.oneplus.deskclock:id/local_weather_description"
+        },
+        {
+          "text": "21\u200e\u00b0\u200e",
+          "x": 1116,
+          "y": 379,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.oneplus.deskclock:id/local_weather_info_txt"
+        },
+        {
+          "text": "Next track",
+          "x": 1181,
+          "y": 491,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.apple.android.music:id/next"
+        },
+        {
+          "text": "Play",
+          "x": 986,
+          "y": 509,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.apple.android.music:id/play"
+        },
+        {
+          "text": "Wed 18 Mar",
+          "x": 1002,
+          "y": 459,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.oneplus.deskclock:id/local_date_info_txt"
+        },
+        {
+          "text": "previous track",
+          "x": 720,
+          "y": 526,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.apple.android.music:id/prev"
+        },
+        {
+          "text": "Calendar schedule",
+          "x": 854,
+          "y": 1394,
+          "cls": "com.android.launcher3.widget.CustomLauncherAppWidgetHostView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_15",
+          "x": 668,
+          "y": 1385,
+          "cls": "android.widget.RelativeLayout",
+          "resource_id": "com.google.android.calendar:id/base_layout"
+        },
+        {
+          "text": "At a Glance",
+          "x": 620,
+          "y": 996,
+          "cls": "com.android.launcher3.widget.CustomLauncherAppWidgetHostView",
+          "resource_id": ""
+        },
+        {
+          "text": "Folder: Google",
+          "x": 1088,
+          "y": 803,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Wed 18 Mar",
+          "x": 585,
+          "y": 724,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.google.android.calendar:id/day_divider"
+        },
+        {
+          "text": "Create new event",
+          "x": 963,
+          "y": 713,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.calendar:id/widget_add_new_event"
+        },
+        {
+          "text": "element_20",
+          "x": 908,
+          "y": 715,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "element_21",
+          "x": 668,
+          "y": 871,
+          "cls": "android.appwidget.AppWidgetHostView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_22",
+          "x": 411,
+          "y": 995,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_23",
+          "x": 746,
+          "y": 995,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_24",
+          "x": 996,
+          "y": 995,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Google",
+          "x": 1088,
+          "y": 938,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.android.launcher:id/folder_icon_name"
+        },
+        {
+          "text": "element_26",
+          "x": 668,
+          "y": 975,
+          "cls": "android.appwidget.AppWidgetHostView",
+          "resource_id": ""
+        },
+        {
+          "text": "Game Assistant",
+          "x": 1088,
+          "y": 1188,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_28",
+          "x": 545,
+          "y": 1090,
+          "cls": "android.appwidget.AppWidgetHostView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_29",
+          "x": 531,
+          "y": 1206,
+          "cls": "android.appwidget.AppWidgetHostView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_30",
+          "x": 519,
+          "y": 1311,
+          "cls": "android.appwidget.AppWidgetHostView",
+          "resource_id": ""
+        },
+        {
+          "text": "element_31",
+          "x": 513,
+          "y": 1427,
+          "cls": "android.appwidget.AppWidgetHostView",
+          "resource_id": ""
+        },
+        {
+          "text": "Folder: OnePlus",
+          "x": 1088,
+          "y": 1573,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_33",
+          "x": 875,
+          "y": 1557,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_lens"
+        },
+        {
+          "text": "element_34",
+          "x": 719,
+          "y": 1563,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_voice_search"
+        },
+        {
+          "text": "element_35",
+          "x": 558,
+          "y": 1568,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_shortcut"
+        },
+        {
+          "text": "element_36",
+          "x": 249,
+          "y": 1581,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_text_search"
+        },
+        {
+          "text": "Google Search",
+          "x": 497,
+          "y": 1577,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_background"
+        },
+        {
+          "text": "Camera search",
+          "x": 917,
+          "y": 1560,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_lens_btn"
+        },
+        {
+          "text": "Voice search",
+          "x": 759,
+          "y": 1565,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_voice_btn"
+        },
+        {
+          "text": "AI Mode",
+          "x": 597,
+          "y": 1569,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_shortcut_btn"
+        }
+      ]
     }
   },
   "transitions": {

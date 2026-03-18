@@ -4478,6 +4478,9 @@ if __name__ == "__main__":
 [5/33] [1★] [playstore] Open Play Store
 [20:51:18]   max_steps=5  skill_threshold=12  skills=0
 [20:51:37]   PASS  15.8s
+[20:51:42] 
+[6/33] [1★] [phone] Open Phone app
+[20:51:42]   max_steps=5  skill_threshold=12  skills=0
 
 
 //===== TERMUXFILE: tap_logger.py =====

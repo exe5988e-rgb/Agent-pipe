@@ -4433,6 +4433,9 @@ if __name__ == "__main__":
 [20/33] [2★] [playstore] Search for Spotify on Play Store
 [19:15:40]   max_steps=10  skill_threshold=12  skills=5
 [19:18:45]   PASS  182.6s
+[19:18:50] 
+[21/33] [2★] [phone] Open Contacts and search for Mummy
+[19:18:50]   max_steps=10  skill_threshold=12  skills=6
 
 
 //===== TERMUXFILE: tap_logger.py =====

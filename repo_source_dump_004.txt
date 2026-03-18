@@ -7126,7 +7126,125 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
 [parser] INFO parsed 'type Warriyo Mortals' -> {'action': 'type', 'text': 'Warriyo Mortals'}
 [parser] DEBUG normalized: 'tap 2'
 [parser] INFO parsed 'tap 2' -> {'action': 'tap', 'target': 2}
+[parser] DEBUG normalized: 'type Warriyo Mortals'
+[parser] INFO parsed 'type Warriyo Mortals' -> {'action': 'type', 'text': 'Warriyo Mortals'}
 
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=02c859dd4370 elements=34
+[step] UI: ['Navigate up', 'Clear', 'Voice search', 'Cast', 'More options', 'lofi hip hop', 'All', 'Shorts']
+[map] new screen: youtube_shell$homeactivity (c5a08195b577)
+[map] transition: youtube_shell$homeactivity --[tap:Auto-play is off]--> youtube_shell$homeactivity
+[map] screen: youtube_shell$homeactivity (c5a08195)
+[skill] matched: 'play on youtube'  score=1.00  act=True
+[skill] cannot resolve: 'Edit suggestion warriyo mortals'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 6'
+[step] LLM: 'tap 6'
+[step] action: {'action': 'tap', 'target': 6}
+[input] dispatching: TouchEvent(x=396, y=223)
+[input] dispatching: TouchEvent(x=396, y=223)
+[input] adb -s 192.168.29.48:33117 shell input tap 396 223
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[step] step=4/12 done=False history=['home', 'opt4_launch:youtube', 'tap [2] Minimise', 'tap [6] lofi hip hop']
+
+========================================================
+  STEP 5  |  Play Warriyo Mortals on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1443632 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,307) → 'Edit suggestion lofi hip hop'
+[ui_parser] child: (0,307) → 'Edit suggestion lofi hip hop no lyrics music'
+[ui_parser] child: (0,475) → 'Edit suggestion lofi hip hop no lyrics'
+[ui_parser] child: (0,643) → 'Edit suggestion lofi hip hop music'
+[ui_parser] child: (0,811) → 'Edit suggestion lofi hip hop song'
+[ui_parser] child: (0,979) → 'Edit suggestion lofi hip hop beats'
+[ui_parser] child: (0,1147) → 'Edit suggestion lofi hip hop songs hindi'
+[ui_parser] child: (0,1315) → 'Edit suggestion lofi hip hop lyrics'
+[ui_parser] child: (0,1483) → 'Edit suggestion lofi hip hop soft'
+[ui_parser] child: (0,1651) → 'Edit suggestion lofi hip hop no lyrics music'
+[ui_parser] full parse -- 26 elements (26 labeled, 10 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=80cb22e11312 elements=26
+[step] UI: ['Navigate up', 'Clear', 'lofi hip hop', 'Edit suggestion lofi hip hop', 'Edit suggestion lofi hip hop no lyrics music', 'Edit suggestion lofi hip hop', 'Edit suggestion lofi hip hop no lyrics', 'Edit suggestion lofi hip hop no lyrics']
+[map] new screen: youtube_shell$homeactivity (24e847386b90)
+[map] transition: youtube_shell$homeactivity --[tap:All]--> youtube_shell$homeactivity
+[map] screen: youtube_shell$homeactivity (24e84738)
+[skill] matched: 'play on youtube'  score=1.00  act=True
+[skill] cannot resolve: 'Search'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'type Warriyo Mortals'
+[step] LLM: 'type Warriyo Mortals'
+[step] action: {'action': 'type', 'text': 'Warriyo Mortals'}
+[input] dispatching: SetTextEvent('Warriyo Mortals')
+[input] dispatching: SetTextEvent('Warriyo Mortals')
+[input] adb -s 192.168.29.48:33117 shell input text Warriyo%sMortals
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[step] step=5/12 done=False history=['home', 'opt4_launch:youtube', 'tap [2] Minimise', 'tap [6] lofi hip hop', "type 'Warriyo Mortals'"]
+
+========================================================
+  STEP 6  |  Play Warriyo Mortals on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1365016 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,307) → 'Edit suggestion … mortals 1 hour'
+[ui_parser] full parse -- 9 elements (9 labeled, 1 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=6da2e6f60c04 elements=9
+[step] UI: ['Navigate up', 'Clear', 'lofi hip hopWarriyo Mortals', 'Edit suggestion … mortals 1 hour', 'Edit suggestion … mortals 1 hour', 'Minimised player', 'Play video', 'Close minimised player']
+[map] new screen: youtube_shell$homeactivity (c9ac5d3f0adc)
+[map] transition: youtube_shell$homeactivity --[type]--> youtube_shell$homeactivity
+[map] screen: youtube_shell$homeactivity (c9ac5d3f)
+[skill] matched: 'play on youtube'  score=1.00  act=True
+[skill] cannot resolve: 'Search'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'tap 2'
+[step] LLM: 'tap 2'
+[step] action: {'action': 'tap', 'target': 2}
+[input] dispatching: TouchEvent(x=1156, y=223)
+[input] dispatching: TouchEvent(x=1156, y=223)
+[input] adb -s 192.168.29.48:33117 shell input tap 1156 223
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[step] step=6/12 done=False history=['home', 'opt4_launch:youtube', 'tap [2] Minimise', 'tap [6] lofi hip hop', "type 'Warriyo Mortals'", 'tap [2] Clear']
+
+========================================================
+  STEP 7  |  Play Warriyo Mortals on YouTube
+========================================================
+[device] screenshot → /data/data/com.termux/files/home/workflows/test/jarvis-agent/screenshots/screen.png (1556149 bytes)
+[ui_parser] activity=com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] signal='com.google.android.youtube/.app.honeycomb.Shell$HomeActivity'
+[mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[ui_parser] cache miss -- full uiautomator dump
+[ui_parser] child: (0,307) → 'Edit suggestion study music'
+[ui_parser] child: (0,307) → 'Edit suggestion minecraft soundtrack'
+[ui_parser] child: (0,475) → 'Edit suggestion xauusd live'
+[ui_parser] child: (0,811) → 'Edit suggestion lofi music'
+[ui_parser] child: (0,979) → 'Edit suggestion itachi theme'
+[ui_parser] child: (0,1147) → 'Edit suggestion minecraft soundtrack'
+[ui_parser] child: (0,1315) → 'Edit suggestion mozart'
+[ui_parser] child: (0,1483) → 'Edit suggestion 40 hz'
+[ui_parser] child: (0,1651) → 'Edit suggestion naruto opening'
+[ui_parser] full parse -- 24 elements (24 labeled, 9 via OCR/rid/child) from 192.168.29.48:33117
+[mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=cad66d52cf73 elements=24
+[step] UI: ['Navigate up', 'Voice search', 'Search YouTube', 'Edit suggestion study music', 'Edit suggestion minecraft soundtrack', 'Edit suggestion study music', 'Edit suggestion xauusd live', 'Edit suggestion xauusd live']
+[map] new screen: youtube_shell$homeactivity (1d584d7b8369)
+[map] transition: youtube_shell$homeactivity --[tap:lofi hip hopWarriyo Mortals]--> youtube_shell$homeactivity
+[map] screen: youtube_shell$homeactivity (1d584d7b)
+[skill] matched: 'play on youtube'  score=1.00  act=True
+[skill] cannot resolve: 'Edit suggestion warriyo mortals'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'type Warriyo Mortals'
+[step] LLM: 'type Warriyo Mortals'
+[step] action: {'action': 'type', 'text': 'Warriyo Mortals'}
+[input] dispatching: SetTextEvent('Warriyo Mortals')
+[input] dispatching: SetTextEvent('Warriyo Mortals')
+[input] adb -s 192.168.29.48:33117 shell input text Warriyo%sMortals
 
 //===== TERMUXFILE: --task =====
 
@@ -8914,447 +9032,5 @@ if __name__ == '__main__':
     except KeyboardInterrupt:
         print("\n🛑 Shutting down...")
         server.shutdown()
-
-
-//===== TERMUXFILE: test/llamafile_proxy_lan.py =====
-#!/usr/bin/env python3
-"""
-ENHANCED JARVIS PROXY - Now with LAN pairing support!
-Compatible with JARVIS Android app LAN client pairing
-"""
-from http.server import HTTPServer, BaseHTTPRequestHandler
-import json
-import requests
-import subprocess
-import os
-import time
-import secrets
-import hashlib
-from pathlib import Path
-from datetime import datetime
-
-LLAMAFILE_URL = "http://127.0.0.1:8080"
-PORT = 8889
-
-# Command queue directory
-QUEUE_DIR = Path.home() / ".jarvis_queue"
-QUEUE_DIR.mkdir(exist_ok=True)
-
-# Security: Pairing and device management
-DEVICES_FILE = Path.home() / ".jarvis_devices.json"
-pairing_enabled = False
-pairing_expiry = 0
-devices = {}
-
-def load_devices():
-    global devices
-    if DEVICES_FILE.exists():
-        try:
-            devices = json.loads(DEVICES_FILE.read_text())
-        except:
-            devices = {}
-
-def save_devices():
-    DEVICES_FILE.write_text(json.dumps(devices, indent=2))
-
-def hash_token(token):
-    return hashlib.sha256(token.encode()).hexdigest()
-
-def generate_token():
-    return secrets.token_hex(32)
-
-def generate_device_id():
-    return f"dev_{int(time.time())}_{secrets.randbelow(9000) + 1000}"
-
-def is_pairing_enabled():
-    global pairing_enabled, pairing_expiry
-    if not pairing_enabled:
-        return False
-    if time.time() > pairing_expiry:
-        pairing_enabled = False
-        return False
-    return True
-
-load_devices()
-
-class EnhancedProxyHandler(BaseHTTPRequestHandler):
-    def log_message(self, format, *args):
-        print(f"[{self.log_date_time_string()}] {format % args}")
-    
-    def send_json(self, code, data):
-        response = json.dumps(data, indent=2).encode()
-        self.send_response(code)
-        self.send_header('Content-Type', 'application/json')
-        self.send_header('Access-Control-Allow-Origin', '*')
-        self.send_header('Access-Control-Allow-Headers', 'Content-Type, Authorization')
-        self.send_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
-        self.end_headers()
-        self.wfile.write(response)
-    
-    def get_client_ip(self):
-        return self.client_address[0]
-    
-    def authenticate(self):
-        """Check Bearer token authentication"""
-        auth_header = self.headers.get('Authorization', '')
-        if not auth_header.startswith('Bearer '):
-            return None
-        
-        token = auth_header[7:].strip()
-        token_hash = hash_token(token)
-        
-        # Find device with this token
-        for device_id, device_data in devices.items():
-            if device_data.get('token_hash') == token_hash:
-                # Update last seen
-                device_data['last_seen'] = int(time.time() * 1000)
-                save_devices()
-                return device_data
-        
-        return None
-    
-    def do_OPTIONS(self):
-        self.send_response(200)
-        self.send_header('Access-Control-Allow-Origin', '*')
-        self.send_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
-        self.send_header('Access-Control-Allow-Headers', 'Content-Type, Authorization')
-        self.end_headers()
-    
-    def do_GET(self):
-        # Health check - no auth required
-        if self.path == '/health' or self.path == '/api/v1/health':
-            try:
-                response = requests.get(f"{LLAMAFILE_URL}/health", timeout=2)
-                if response.status_code == 200:
-                    self.send_json(200, {
-                        "success": True,
-                        "data": {
-                            "status": "healthy",
-                            "backends": "termux,llama",
-                            "executor": "file-based"
-                        }
-                    })
-                else:
-                    self.send_json(503, {
-                        "success": False,
-                        "error": "Backend unhealthy"
-                    })
-            except:
-                self.send_json(503, {
-                    "success": False,
-                    "error": "Backend unreachable"
-                })
-        
-        # Device list - requires auth
-        elif self.path == '/devices' or self.path == '/api/v1/devices':
-            device = self.authenticate()
-            if not device:
-                self.send_json(401, {
-                    "success": False,
-                    "error": "Unauthorized"
-                })
-                return
-            
-            device_list = [
-                {
-                    "id": did,
-                    "name": d.get("name", "Unknown"),
-                    "ip": d.get("ip", "Unknown"),
-                    "paired_at": d.get("paired_at", 0),
-                    "last_seen": d.get("last_seen", 0)
-                }
-                for did, d in devices.items()
-            ]
-            
-            self.send_json(200, {
-                "success": True,
-                "data": {"devices": device_list}
-            })
-        else:
-            self.send_json(404, {"success": False, "error": "Not found"})
-    
-    def do_POST(self):
-        try:
-            content_length = int(self.headers.get('Content-Length', 0))
-            body = self.rfile.read(content_length) if content_length > 0 else b'{}'
-            data = json.loads(body.decode())
-            
-            # ======= PAIRING ENDPOINT (NO AUTH) =======
-            if self.path == '/pair' or self.path == '/api/v1/pair':
-                if not is_pairing_enabled():
-                    self.send_json(403, {
-                        "success": False,
-                        "error": "Pairing mode disabled."
-                    })
-                    return
-                
-                device_name = data.get('device_name', '').strip()
-                if not device_name:
-                    self.send_json(400, {
-                        "success": False,
-                        "error": "Missing device_name"
-                    })
-                    return
-                
-                # Generate credentials
-                device_id = generate_device_id()
-                token = generate_token()
-                token_hash = hash_token(token)
-                
-                # Save device
-                devices[device_id] = {
-                    "name": device_name,
-                    "token_hash": token_hash,
-                    "ip": self.get_client_ip(),
-                    "paired_at": int(time.time() * 1000),
-                    "last_seen": int(time.time() * 1000)
-                }
-                save_devices()
-                
-                print(f"\n✅ Device paired: {device_name} ({device_id})")
-                
-                self.send_json(200, {
-                    "success": True,
-                    "data": {
-                        "device_id": device_id,
-                        "token": token
-                    }
-                })
-                return
-            
-            # ======= ALL OTHER ENDPOINTS REQUIRE AUTH =======
-            device = self.authenticate()
-            if not device:
-                self.send_json(401, {
-                    "success": False,
-                    "error": "Unauthorized - missing or invalid token"
-                })
-                return
-            
-            # ======= CHAT ENDPOINT =======
-            if self.path == '/chat_sync' or self.path == '/chat' or self.path == '/api/v1/chat':
-                query = data.get('query', '').strip() or data.get('prompt', '').strip()
-                if not query:
-                    self.send_json(400, {"success": False, "error": "Missing query"})
-                    return
-                
-                print(f"\n[CHAT] {device.get('name')}: {query}")
-                
-                response = requests.post(
-                    f"{LLAMAFILE_URL}/v1/chat/completions",
-                    json={
-                        "messages": [{"role": "user", "content": query}],
-                        "max_tokens": 100,
-                        "temperature": 0.7
-                    },
-                    timeout=30
-                )
-                
-                if response.status_code != 200:
-                    self.send_json(500, {"success": False, "error": "LLM error"})
-                    return
-                
-                result = response.json()
-                text = result['choices'][0]['message']['content']
-                print(f"[RESPONSE] {text[:100]}...")
-                
-                self.send_json(200, {"success": True, "data": {"response": text}})
-            
-            # ======= COMMAND GENERATION =======
-            elif self.path == '/generate_sync' or self.path == '/generate' or self.path == '/api/v1/generate':
-                query = data.get('query', '').strip() or data.get('prompt', '').strip()
-                if not query:
-                    self.send_json(400, {"success": False, "error": "Missing query"})
-                    return
-                
-                print(f"\n[GENERATE] {device.get('name')}: {query}")
-                
-                prompt = f"""Generate a Termux/Android shell command for: {query}
-
-Requirements:
-- Single line command only
-- Use Termux-compatible syntax
-- No placeholders or variables
-- Use termux-* commands when appropriate
-- Output ONLY the command
-
-Command:"""
-                
-                response = requests.post(
-                    f"{LLAMAFILE_URL}/v1/chat/completions",
-                    json={
-                        "messages": [{"role": "user", "content": prompt}],
-                        "max_tokens": 50,
-                        "temperature": 0.3,
-                        "stop": ["\n"]
-                    },
-                    timeout=30
-                )
-                
-                if response.status_code != 200:
-                    self.send_json(500, {"success": False, "error": "LLM error"})
-                    return
-                
-                result = response.json()
-                command = result['choices'][0]['message']['content'].strip().strip('`"\'')
-                
-                print(f"[COMMAND] {command}")
-                
-                self.send_json(200, {
-                    "success": True,
-                    "data": {
-                        "command": command,
-                        "response": command
-                    }
-                })
-            
-            # ======= COMMAND EXECUTION =======
-            elif self.path == '/execute' or self.path == '/api/v1/execute':
-                command = data.get('command', '').strip()
-                if not command:
-                    self.send_json(400, {"success": False, "error": "Missing command"})
-                    return
-                
-                print(f"\n[EXECUTE] {device.get('name')}: {command}")
-                
-                try:
-                    result = subprocess.run(
-                        command,
-                        shell=True,
-                        capture_output=True,
-                        text=True,
-                        timeout=30,
-                        cwd=str(Path.home())
-                    )
-                    
-                    output = result.stdout + result.stderr
-                    success = result.returncode == 0
-                    
-                    print(f"[EXIT CODE] {result.returncode}")
-                    
-                    self.send_json(200, {
-                        "success": success,
-                        "data": {
-                            "output": output if output else "Command executed (no output)",
-                            "exit_code": result.returncode
-                        }
-                    })
-                    
-                except subprocess.TimeoutExpired:
-                    self.send_json(500, {
-                        "success": False,
-                        "error": "Command timeout (>30s)"
-                    })
-                except Exception as e:
-                    self.send_json(500, {
-                        "success": False,
-                        "error": f"Execution failed: {e}"
-                    })
-            
-            else:
-                self.send_json(404, {"success": False, "error": "Endpoint not found"})
-                
-        except Exception as e:
-            print(f"[ERROR] {e}")
-            import traceback
-            traceback.print_exc()
-            self.send_json(500, {"success": False, "error": str(e)})
-
-def enable_pairing(duration_seconds=60):
-    global pairing_enabled, pairing_expiry
-    pairing_enabled = True
-    pairing_expiry = time.time() + duration_seconds
-    print(f"\n🔓 PAIRING MODE ENABLED for {duration_seconds} seconds")
-    print(f"   Expires at: {datetime.fromtimestamp(pairing_expiry).strftime('%H:%M:%S')}")
-    print(f"   Clients can pair to: http://<this-ip>:{PORT}/api/v1/pair")
-    print()
-
-if __name__ == '__main__':
-    print("="*70)
-    print("🤖 JARVIS PROXY SERVER - LAN ENABLED")
-    print("="*70)
-    print(f"Port: {PORT}")
-    print(f"Backend: {LLAMAFILE_URL}")
-    print(f"Queue: {QUEUE_DIR}")
-    print(f"Devices: {len(devices)} paired")
-    print()
-    print("Features:")
-    print("  ✅ LAN device pairing")
-    print("  ✅ Token authentication")
-    print("  ✅ Command execution")
-    print("  ✅ AI chat & generation")
-    print()
-    print("Endpoints:")
-    print("  GET  /health              - Health check")
-    print("  POST /pair                - Pair new device (pairing mode)")
-    print("  GET  /devices             - List devices (auth)")
-    print("  POST /chat                - AI chat (auth)")
-    print("  POST /generate            - Generate command (auth)")
-    print("  POST /execute             - Execute command (auth)")
-    print("="*70)
-    print()
-    print("⚠️  PAIRING IS DISABLED BY DEFAULT")
-    print("    To enable pairing, press Ctrl+C then restart with --pair flag")
-    print("    Or call: enable_pairing() from Python")
-    print()
-    
-    # Check for --pair flag
-    import sys
-    if '--pair' in sys.argv:
-        duration = 300  # 5 minutes default
-        if '--duration' in sys.argv:
-            idx = sys.argv.index('--duration')
-            duration = int(sys.argv[idx + 1])
-        enable_pairing(duration)
-    
-    server = HTTPServer(('0.0.0.0', PORT), EnhancedProxyHandler)
-    
-    try:
-        print(f"🚀 Server listening on 0.0.0.0:{PORT}")
-        print(f"   Access from LAN: http://<this-device-ip>:{PORT}")
-        print()
-        server.serve_forever()
-    except KeyboardInterrupt:
-        print("\n🛑 Shutting down...")
-        server.shutdown()
-
-
-//===== TERMUXFILE: test/extract_ai_output.sh =====
-#!/data/data/com.termux/files/usr/bin/bash
-# Extract all files from ai-output.txt
-# Usage: bash ~/extract_ai_output.sh [/path/to/ai-output.txt]
-INPUT="${1:-$HOME/ai-output.txt}"
-BASE="$HOME"
-[ -f "$INPUT" ] || { echo "Not found: $INPUT"; exit 1; }
-echo "Extracting: $INPUT"
-current_file=""; current_content=""; count=0
-while IFS= read -r line || [ -n "$line" ]; do
-    if [[ "$line" =~ ^=====\ FILE:\ (.+)\ =====$ ]]; then
-        if [ -n "$current_file" ] && [ -n "$current_content" ]; then
-            dest="$BASE/$current_file"
-            mkdir -p "$(dirname "$dest")"
-            printf '%s\n' "$current_content" > "$dest"
-            [[ "$dest" == *.sh ]] && chmod +x "$dest"
-            echo "  ✓ $current_file"; count=$((count+1))
-        fi
-        current_file="${BASH_REMATCH[1]}"; current_content=""
-    elif [ -n "$current_file" ]; then
-        [ -z "$current_content" ] && current_content="$line" \
-            || current_content="$current_content"$'\n'"$line"
-    fi
-done < "$INPUT"
-if [ -n "$current_file" ] && [ -n "$current_content" ]; then
-    dest="$BASE/$current_file"; mkdir -p "$(dirname "$dest")"
-    printf '%s\n' "$current_content" > "$dest"
-    [[ "$dest" == *.sh ]] && chmod +x "$dest"
-    echo "  ✓ $current_file"; count=$((count+1))
-fi
-echo ""
-echo "Extracted $count files."
-echo ""
-echo "Start system:"
-echo "  bash ~/jarvis_server_init.sh"
-echo "  bash ~/jarvis_executor.sh &"
-echo "  cd ~/jarvis-agent && python3 agent/controller.py"
 
 

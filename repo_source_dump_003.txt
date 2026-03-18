@@ -4680,6 +4680,11 @@ if __name__ == "__main__":
     "to": "0de04f35ed6a",
     "count": 1,
     "last_seen": 1773850490.1193602
+  },
+  "0e2e17571165|tap:Spotify \ud83c\udfa7: https://open.spotify.c...\u200b\nItunes \ud83d\udcbf: https://itunes.apple.c...\u200b\n\nSupport on all platforms: https://ncs.lnk.to/Mor...\u200b\n\n...more": {
+    "to": "3ae0a21c45be",
+    "count": 1,
+    "last_seen": 1773850568.3861132
   }
 }
 

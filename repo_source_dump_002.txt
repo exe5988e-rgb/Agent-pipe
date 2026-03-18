@@ -84117,6 +84117,226 @@
           "resource_id": ""
         }
       ]
+    },
+    "3ae0a21c45be": {
+      "screen_id": "3ae0a21c45be",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Expand Mini Player",
+        "Minimise",
+        "Auto-play is off",
+        "Cast",
+        "Captions",
+        "More options",
+        "Previous video",
+        "Next video",
+        "1 minute 27 seconds elapsed of 3 minutes 48 seconds",
+        "Enter full screen",
+        "1 minute 26 seconds of 3 minutes 48 seconds",
+        "Warriyo - Mortals (ft. Laura Brehm)",
+        "Sponsored \u2013 Get 30 GB+ of cloud storage\nGet expanded cloud storage for photos, videos, and files.\nGoogle \u2013 Visit site",
+        "Warriyo, Official Artist Channel 129k subscribers",
+        "Warriyo, Official Artist Channel 129k subscribers",
+        "Subscribe to Warriyo.",
+        "like this video along with 472,047 other people",
+        "Dislike this video",
+        "Share",
+        "Ask",
+        "Save to playlist",
+        "March listeners \u2764\ufe0f\ud83d\udd25",
+        "Comments",
+        "March listeners \u2764\ufe0f\ud83d\udd25",
+        "element_25",
+        "Sponsored \u2013 Get 30 GB+ of cloud storage\nGet expanded cloud storage for photos, videos, and files.\nGoogle \u2013 Visit site"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Expand Mini Player",
+          "x": 620,
+          "y": 488,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/player_overlays"
+        },
+        {
+          "text": "Minimise",
+          "x": 84,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/player_collapse_button"
+        },
+        {
+          "text": "Auto-play is off",
+          "x": 624,
+          "y": 230,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.youtube:id/autonav_toggle"
+        },
+        {
+          "text": "Cast",
+          "x": 806,
+          "y": 230,
+          "cls": "android.widget.Button",
+          "resource_id": "com.google.android.youtube:id/player_mdx_entry_point_button"
+        },
+        {
+          "text": "Captions",
+          "x": 988,
+          "y": 230,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/player_subtitle_button"
+        },
+        {
+          "text": "More options",
+          "x": 1156,
+          "y": 230,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/player_overflow_button"
+        },
+        {
+          "text": "Previous video",
+          "x": 312,
+          "y": 488,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/player_control_previous_button"
+        },
+        {
+          "text": "Next video",
+          "x": 928,
+          "y": 488,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/player_control_next_button"
+        },
+        {
+          "text": "1 minute 27 seconds elapsed of 3 minutes 48 seconds",
+          "x": 149,
+          "y": 753,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.google.android.youtube:id/timestamps_container"
+        },
+        {
+          "text": "Enter full screen",
+          "x": 1135,
+          "y": 753,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/fullscreen_button"
+        },
+        {
+          "text": "1 minute 26 seconds of 3 minutes 48 seconds",
+          "x": 620,
+          "y": 834,
+          "cls": "android.widget.SeekBar",
+          "resource_id": ""
+        },
+        {
+          "text": "Warriyo - Mortals (ft. Laura Brehm)",
+          "x": 620,
+          "y": 954,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Sponsored \u2013 Get 30 GB+ of cloud storage\nGet expanded cloud storage for photos, videos, and files.\nGoogle \u2013 Visit site",
+          "x": 620,
+          "y": 1776,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/watch_list"
+        },
+        {
+          "text": "Warriyo, Official Artist Channel 129k subscribers",
+          "x": 91,
+          "y": 1149,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Warriyo, Official Artist Channel 129k subscribers",
+          "x": 241,
+          "y": 1149,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscribe to Warriyo.",
+          "x": 311,
+          "y": 1149,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "like this video along with 472,047 other people",
+          "x": 606,
+          "y": 1149,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Dislike this video",
+          "x": 792,
+          "y": 1149,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Share",
+          "x": 954,
+          "y": 1149,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Ask",
+          "x": 1130,
+          "y": 1149,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Save to playlist",
+          "x": 1236,
+          "y": 1149,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "March listeners \u2764\ufe0f\ud83d\udd25",
+          "x": 620,
+          "y": 1397,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Comments",
+          "x": 620,
+          "y": 1306,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "March listeners \u2764\ufe0f\ud83d\udd25",
+          "x": 619,
+          "y": 1443,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "element_25",
+          "x": 1197,
+          "y": 1443,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Sponsored \u2013 Get 30 GB+ of cloud storage\nGet expanded cloud storage for photos, videos, and files.\nGoogle \u2013 Visit site",
+          "x": 620,
+          "y": 2156,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -84791,7 +85011,8 @@
     "0ef41110984b|type": "87fee6983a2f",
     "308993855721|tap:Home": "34a0308428f7",
     "34a0308428f7|tap:Drag handle": "f128da47c0b8",
-    "f128da47c0b8|tap:Drag handle": "0de04f35ed6a"
+    "f128da47c0b8|tap:Drag handle": "0de04f35ed6a",
+    "0e2e17571165|tap:Spotify \ud83c\udfa7: https://open.spotify.c...\u200b\nItunes \ud83d\udcbf: https://itunes.apple.c...\u200b\n\nSupport on all platforms: https://ncs.lnk.to/Mor...\u200b\n\n...more": "3ae0a21c45be"
   }
 }
 

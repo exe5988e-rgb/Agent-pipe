@@ -74406,6 +74406,217 @@
           "resource_id": ""
         }
       ]
+    },
+    "c9ef977845dc": {
+      "screen_id": "c9ef977845dc",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Navigate up",
+        "Clear",
+        "Voice search",
+        "Cast",
+        "More options",
+        "warriyo mortals",
+        "Warriyo - Mortals (ft. Laura Brehm) \u2013 3 minutes, 49 seconds \u2013 Go to channel Warriyo \u2013 Warriyo - 37 million views - 9 years ago \u2013 play video",
+        "Warriyo - Mortals (feat. Laura Brehm) | Future Trap | NCS - Copyright Free Music \u2013 3 minutes, 50 seconds \u2013 Go to channel NoCopyrightSounds \u2013 NoCopyrightSounds - 311 million views - 9 years ago \u2013 play video",
+        "Warriyo - Mortals (ft. Laura Brehm) \u2013 3 minutes, 49 seconds \u2013 Go to channel Warriyo \u2013 Warriyo - 37 million views - 9 years ago \u2013 play video",
+        "Go to channel Warriyo",
+        "Action menu",
+        "Warriyo - Mortals (feat. Laura Brehm) | Future Trap | NCS - Copyright Free Music \u2013 3 minutes, 50 seconds \u2013 Go to channel NoCopyrightSounds \u2013 NoCopyrightSounds - 311 million views - 9 years ago \u2013 play video",
+        "Warriyo - Mortals (feat. Laura Brehm) | Future Trap | NCS - Copyright Free Music \u2013 3 minutes, 50 seconds \u2013 Go to channel NoCopyrightSounds \u2013 NoCopyrightSounds - 311 million views - 9 years ago \u2013 play video",
+        "Go to channel NoCopyrightSounds",
+        "Action menu",
+        "Minimised player",
+        "Play video",
+        "Close minimised player",
+        "Warriyo - Mortals (ft. Laura Brehm) (Slowed) \u2013 4 minutes, 34 seconds \u2013 Go to channel Warriyo \u2013 Warriyo - 6.3 million views - 1 year ago \u2013 play video",
+        "1 minute 32 seconds of 3 minutes 48 seconds",
+        "Shorts",
+        "Create",
+        "Subscriptions",
+        "You"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Clear",
+          "x": 680,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/search_clear"
+        },
+        {
+          "text": "Voice search",
+          "x": 848,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/voice_search"
+        },
+        {
+          "text": "Cast",
+          "x": 1016,
+          "y": 223,
+          "cls": "android.widget.Button",
+          "resource_id": "com.google.android.youtube:id/mdx_entry_point_button"
+        },
+        {
+          "text": "More options",
+          "x": 1170,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "warriyo mortals",
+          "x": 396,
+          "y": 223,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.google.android.youtube:id/search_query"
+        },
+        {
+          "text": "Warriyo - Mortals (ft. Laura Brehm) \u2013 3 minutes, 49 seconds \u2013 Go to channel Warriyo \u2013 Warriyo - 37 million views - 9 years ago \u2013 play video",
+          "x": 620,
+          "y": 781,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Warriyo - Mortals (feat. Laura Brehm) | Future Trap | NCS - Copyright Free Music \u2013 3 minutes, 50 seconds \u2013 Go to channel NoCopyrightSounds \u2013 NoCopyrightSounds - 311 million views - 9 years ago \u2013 play video",
+          "x": 620,
+          "y": 1539,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results"
+        },
+        {
+          "text": "Warriyo - Mortals (ft. Laura Brehm) \u2013 3 minutes, 49 seconds \u2013 Go to channel Warriyo \u2013 Warriyo - 37 million views - 9 years ago \u2013 play video",
+          "x": 620,
+          "y": 823,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Go to channel Warriyo",
+          "x": 105,
+          "y": 1109,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Action menu",
+          "x": 1142,
+          "y": 1088,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Warriyo - Mortals (feat. Laura Brehm) | Future Trap | NCS - Copyright Free Music \u2013 3 minutes, 50 seconds \u2013 Go to channel NoCopyrightSounds \u2013 NoCopyrightSounds - 311 million views - 9 years ago \u2013 play video",
+          "x": 620,
+          "y": 1814,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Warriyo - Mortals (feat. Laura Brehm) | Future Trap | NCS - Copyright Free Music \u2013 3 minutes, 50 seconds \u2013 Go to channel NoCopyrightSounds \u2013 NoCopyrightSounds - 311 million views - 9 years ago \u2013 play video",
+          "x": 620,
+          "y": 1856,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Go to channel NoCopyrightSounds",
+          "x": 105,
+          "y": 2142,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Action menu",
+          "x": 1142,
+          "y": 2121,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Minimised player",
+          "x": 876,
+          "y": 2331,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.youtube:id/floaty_bar_controls_view"
+        },
+        {
+          "text": "Play video",
+          "x": 624,
+          "y": 2226,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/modern_miniplayer_overlay_action_button"
+        },
+        {
+          "text": "Close minimised player",
+          "x": 1128,
+          "y": 2226,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/modern_miniplayer_close"
+        },
+        {
+          "text": "Warriyo - Mortals (ft. Laura Brehm) (Slowed) \u2013 4 minutes, 34 seconds \u2013 Go to channel Warriyo \u2013 Warriyo - 6.3 million views - 1 year ago \u2013 play video",
+          "x": 620,
+          "y": 2572,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "1 minute 32 seconds of 3 minutes 48 seconds",
+          "x": 876,
+          "y": 2517,
+          "cls": "android.widget.SeekBar",
+          "resource_id": "com.google.android.youtube:id/floaty_bar_time_bar_view"
+        },
+        {
+          "text": "Home",
+          "x": 124,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 372,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Create",
+          "x": 620,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscriptions",
+          "x": 868,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "You",
+          "x": 1116,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -75024,7 +75235,8 @@
     "a7d826671887|tap:Refine search to 'vlc'": "ab87f07727b4",
     "ab87f07727b4|tap:Install on more devices": "878450f0a90b",
     "878450f0a90b|back": "ab87f07727b4",
-    "ab87f07727b4|tap:Content rating Rated for 3+": "4c38e663dba1"
+    "ab87f07727b4|tap:Content rating Rated for 3+": "4c38e663dba1",
+    "a2a7a2e70c76|tap:Auto-play is off": "c9ef977845dc"
   }
 }
 

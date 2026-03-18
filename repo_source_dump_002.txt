@@ -73653,6 +73653,33 @@
           "resource_id": ""
         }
       ]
+    },
+    "878450f0a90b": {
+      "screen_id": "878450f0a90b",
+      "package": "com.android.vending",
+      "activity": "com.android.vending/com.google.android.finsky.screenshotsactivity.ScreenshotsActivityV2",
+      "name": "vending_screenshotsactivityv2",
+      "labels": [
+        "Screenshot for 'VLC for Android'"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Screenshot for 'VLC for Android'",
+          "x": 620,
+          "y": 1386,
+          "cls": "androidx.viewpager.widget.ViewPager",
+          "resource_id": "com.android.vending:id/0_resource_name_obfuscated"
+        },
+        {
+          "text": "Back",
+          "x": 98,
+          "y": 237,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.android.vending:id/0_resource_name_obfuscated"
+        }
+      ]
     }
   },
   "transitions": {
@@ -74268,7 +74295,8 @@
     "3b20c5a1dd9f|type": "95f0bd34d77b",
     "95f0bd34d77b|tap:Refine search to 'spotify vlc'": "968cea81146b",
     "968cea81146b|type": "a7d826671887",
-    "a7d826671887|tap:Refine search to 'vlc'": "ab87f07727b4"
+    "a7d826671887|tap:Refine search to 'vlc'": "ab87f07727b4",
+    "ab87f07727b4|tap:Install on more devices": "878450f0a90b"
   }
 }
 

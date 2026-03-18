@@ -4326,6 +4326,9 @@ if __name__ == "__main__":
 [12/33] [2★] [youtube] Search for MrBeast on YouTube
 [19:03:38]   max_steps=10  skill_threshold=12  skills=2
 [19:05:27]   PASS  105.7s
+[19:05:32] 
+[13/33] [2★] [settings] Open Settings and go to WiFi
+[19:05:32]   max_steps=8  skill_threshold=12  skills=2
 
 
 //===== TERMUXFILE: tap_logger.py =====

@@ -6164,7 +6164,9 @@ Support on all platforms: https://ncs.lnk.to/Mor...​
 [mem] miss (unknown): com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
 [ui_parser] cache miss -- full uiautomator dump
 [ui_parser] child: (0,307) → 'Edit suggestion warriyo mortals'
-[ui_parser] child: (0,307) → 'Edit suggestion mortals funk remix'
+[ui_parser] child: (0,307) → 'Edit suggestion mortals funk remix'[parser] DEBUG normalized: 'type lofi hip hop'
+[parser] INFO parsed 'type lofi hip hop' -> {'action': 'type', 'text': 'lofi hip hop'}
+
 
 //===== TERMUXFILE: --task =====
 

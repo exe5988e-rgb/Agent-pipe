@@ -10751,7 +10751,9 @@ RuntimeError: No LLM backend available.
 [step] UI: ['[21:22:48]   PASS  109.6s\n[21:22:53]\n[19/33] [2★] [chrome] Search for weather today in Chrome\n[21:22:53]   max_steps=10  skill_threshold=12  skills=5\n[21:30:57]   TIMEOUT after 480s — killing\n[21:30:57]   FAIL  480.0s  timeout\n[21:30:57]   Retrying...\n[21:30:57]   Recovering...\n[21:32:51]   Retry: PASS  102.1s\n[21:32:56]\n[20/33] [2★] [playstore] Search for Spotify on Play Store\n[21:32:56]   max_steps=10  skill_threshold=12  skills=5\n[21:35:55]   PASS  176.6s\n[21:36:00]\n[21/33] [2★] [phone] Open Contacts and search for Mummy\n[21:36:00]   max_steps=10  skill_threshold=12  skills=6', 'ESC', 'HOME', '☰', '⇳', 'HOME', '↑', 'END']
 [map] new screen: termux_termuxactivity (d0e35202b7f2)
 [map] transition: launcher_launcher --[tap:21]--> termux_termuxactivity
-[map] screen: termux_termuxactivity (d0e35202)
+[map] screen: termux_termuxactivity (d0e35202)[parser] DEBUG normalized: 'home'
+[parser] INFO parsed 'home' -> {'action': 'home'}
+
 
 //===== TERMUXFILE: --task =====
 

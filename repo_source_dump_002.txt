@@ -95329,6 +95329,193 @@
           "resource_id": ""
         }
       ]
+    },
+    "32b120725efd": {
+      "screen_id": "32b120725efd",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "This Guy Does The Most Dangerous Thing Ever @soyferdemar",
+        "Search",
+        "More",
+        "like this video along with 83 thousand other people",
+        "Dislike this video",
+        "View 465 comments",
+        "Share this video",
+        "Remix this Short along with 1.2 million other remixes",
+        "@SwiftDiscovery",
+        "Go to channel",
+        "@SwiftDiscovery",
+        "Subscribe to @SwiftDiscovery.",
+        "This Guy Does The Most Dangerous Thing Ever @soyferdemar",
+        "See more videos using this sound",
+        "NO BATID\u00c3O \u00b7 ZXKAI & slxughter",
+        "NO BATID\u00c3O \u00b7 ZXKAI & slxughter",
+        "0 minutes 2 seconds of 0 minutes 25 seconds",
+        "Shorts",
+        "Create",
+        "Subscriptions: New content is available",
+        "You"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "This Guy Does The Most Dangerous Thing Ever @soyferdemar",
+          "x": 620,
+          "y": 1343,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/reel_recycler"
+        },
+        {
+          "text": "Search",
+          "x": 988,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/menu_item_view"
+        },
+        {
+          "text": "More",
+          "x": 1156,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/menu_item_view"
+        },
+        {
+          "text": "like this video along with 83 thousand other people",
+          "x": 1128,
+          "y": 1379,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Dislike this video",
+          "x": 1128,
+          "y": 1589,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "View 465 comments",
+          "x": 1128,
+          "y": 1799,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Share this video",
+          "x": 1128,
+          "y": 2009,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Remix this Short along with 1.2 million other remixes",
+          "x": 1128,
+          "y": 2219,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "@SwiftDiscovery",
+          "x": 324,
+          "y": 2219,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Go to channel",
+          "x": 112,
+          "y": 2219,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "@SwiftDiscovery",
+          "x": 380,
+          "y": 2219,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscribe to @SwiftDiscovery.",
+          "x": 729,
+          "y": 2219,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "This Guy Does The Most Dangerous Thing Ever @soyferdemar",
+          "x": 508,
+          "y": 2334,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "See more videos using this sound",
+          "x": 1128,
+          "y": 2436,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "NO BATID\u00c3O \u00b7 ZXKAI & slxughter",
+          "x": 508,
+          "y": 2443,
+          "cls": "android.widget.HorizontalScrollView",
+          "resource_id": ""
+        },
+        {
+          "text": "NO BATID\u00c3O \u00b7 ZXKAI & slxughter",
+          "x": 474,
+          "y": 2443,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "0 minutes 2 seconds of 0 minutes 25 seconds",
+          "x": 620,
+          "y": 2546,
+          "cls": "android.widget.SeekBar",
+          "resource_id": ""
+        },
+        {
+          "text": "Home",
+          "x": 124,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 372,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Create",
+          "x": 620,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscriptions: New content is available",
+          "x": 868,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "You",
+          "x": 1116,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -96046,7 +96233,7 @@
     "32a8f23fc5b4|opt4_launch:youtube": "99a966bcf5c6",
     "99a966bcf5c6|tap:filters": "d384472fe1e3",
     "07617e22c1ec|tap:Edit suggestion experience ludovico einaudi": "32a8f23fc5b4",
-    "1ff15ddd3b71|opt4_launch:youtube": "3b3035cfafec",
+    "1ff15ddd3b71|opt4_launch:youtube": "32b120725efd",
     "d384472fe1e3|type": "9aeac80999f5",
     "9aeac80999f5|tap:Warriyo Mortals": "96db6b6511e3",
     "1feb688015be|tap:More": "453ba5ac8d59",

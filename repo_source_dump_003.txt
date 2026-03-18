@@ -11314,6 +11314,8 @@ RuntimeError: No LLM backend available.
 [mem] miss (unknown): com.google.android.dialer/com.android.dialer.incall.activity.ui.InCallActivity
 [ui_parser] cache miss -- full uiautomator dump[parser] DEBUG normalized: 'back'
 [parser] INFO parsed 'back' -> {'action': 'back'}
+[parser] DEBUG normalized: 'type lofi hip hop'
+[parser] INFO parsed 'type lofi hip hop' -> {'action': 'type', 'text': 'lofi hip hop'}
 
 
 //===== TERMUXFILE: --task =====

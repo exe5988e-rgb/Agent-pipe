@@ -76060,6 +76060,371 @@
           "resource_id": ""
         }
       ]
+    },
+    "1025dd6b857e": {
+      "screen_id": "1025dd6b857e",
+      "package": "com.android.launcher",
+      "activity": "com.android.launcher/.Launcher",
+      "name": "launcher_launcher",
+      "labels": [
+        "Clock",
+        ":",
+        "Partly cloudy",
+        "21\u200e\u00b0\u200e",
+        "Wed 18 Mar",
+        "At a Glance",
+        "Wednesday 18 Mar",
+        "More",
+        "Cloudy",
+        "element_12",
+        "element_13",
+        "element_14",
+        "lt",
+        "element_16",
+        "Google Search",
+        "Play Store",
+        "Weather",
+        "Maps",
+        "Meet (original)",
+        "SearchButton",
+        "Phone",
+        "Messages",
+        "Photos",
+        "Camera"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Clock",
+          "x": 620,
+          "y": 418,
+          "cls": "com.android.launcher3.widget.CustomLauncherAppWidgetHostView",
+          "resource_id": ""
+        },
+        {
+          "text": "20",
+          "x": 197,
+          "y": 397,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.oneplus.deskclock:id/local_hour_txt"
+        },
+        {
+          "text": ":",
+          "x": 335,
+          "y": 390,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.oneplus.deskclock:id/local_colon_txt"
+        },
+        {
+          "text": "53",
+          "x": 474,
+          "y": 397,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.oneplus.deskclock:id/local_minutes_txt"
+        },
+        {
+          "text": "Partly cloudy",
+          "x": 1054,
+          "y": 380,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.oneplus.deskclock:id/local_weather_description"
+        },
+        {
+          "text": "21\u200e\u00b0\u200e",
+          "x": 1116,
+          "y": 379,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.oneplus.deskclock:id/local_weather_info_txt"
+        },
+        {
+          "text": "Wed 18 Mar",
+          "x": 1002,
+          "y": 459,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.oneplus.deskclock:id/local_date_info_txt"
+        },
+        {
+          "text": "At a Glance",
+          "x": 620,
+          "y": 996,
+          "cls": "com.android.launcher3.widget.CustomLauncherAppWidgetHostView",
+          "resource_id": ""
+        },
+        {
+          "text": "Wednesday 18 Mar",
+          "x": 411,
+          "y": 995,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "More",
+          "x": 746,
+          "y": 995,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Cloudy",
+          "x": 996,
+          "y": 995,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_12",
+          "x": 147,
+          "y": 1573,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_google_logo"
+        },
+        {
+          "text": "element_13",
+          "x": 452,
+          "y": 1573,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_text_search"
+        },
+        {
+          "text": "element_14",
+          "x": 757,
+          "y": 1573,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_shortcut"
+        },
+        {
+          "text": "lt",
+          "x": 925,
+          "y": 1573,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_voice_search"
+        },
+        {
+          "text": "element_16",
+          "x": 1093,
+          "y": 1573,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_ghost_lens"
+        },
+        {
+          "text": "Google Search",
+          "x": 620,
+          "y": 1573,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.googlequicksearchbox:id/googleapp_search_widget_background"
+        },
+        {
+          "text": "Play Store",
+          "x": 152,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Weather",
+          "x": 386,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Maps",
+          "x": 620,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Meet (original)",
+          "x": 854,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "SearchButton",
+          "x": 620,
+          "y": 2280,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.android.launcher:id/page_indicator"
+        },
+        {
+          "text": "Phone",
+          "x": 269,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Messages",
+          "x": 503,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Photos",
+          "x": 737,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Camera",
+          "x": 971,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        }
+      ]
+    },
+    "af62a7d780e2": {
+      "screen_id": "af62a7d780e2",
+      "package": "com.whatsapp",
+      "activity": "com.whatsapp/.Conversation",
+      "name": "whatsapp_conversation",
+      "labels": [
+        "Nani",
+        "WO",
+        "Video call",
+        "Voice call",
+        "More options",
+        "You are an Android control agent.\nChoose ONE action. Reply with ONLY the action. No explanation. No punctuation.\n\nTASK: Open Chrome and open a new tab\n\nScreen: Chrome browser\n\nSCREEN ELEMENTS:\n  1  Navigate up\n  2  Help and feedback\n  3  element_3\n  4  element_4\n  5  element_5\n  6  element_6\n  7  element_7\n  8  element_8\n  9  element_9\n  10  element_10\n  11  element_11\n  12  element_12\n\nRECENT ACTIONS:\n  opt4_launch:chrome\n  tap [3] Signed in as Amir Shams. amirshamse8@gmail.com. Opens settings.\n\nNavigation Strategy:\n  On home screen / launcher:\n    - If target app visible: tap it directly\n    - If not visible: swipe up to open app drawer, then tap the app\n\n  Inside an app to search for something:\n    - Look for elements with text: Search, Search YouTube, Fi... Read more",
+        "amirshamse8@gmail.com",
+        "Read more",
+        "Shared via Claude, an AI assistant from Anthropic",
+        "Forward to\u2026",
+        "Emoji, GIFs and stickers",
+        "Attach",
+        "Payment",
+        "Camera",
+        "Voice message, Button. Double tap and hold to record, slide left to cancel recording, slide up to lock recording on. Release to send.",
+        "Message"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Nani",
+          "x": 550,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.whatsapp:id/conversation_contact"
+        },
+        {
+          "text": "Back",
+          "x": 84,
+          "y": 237,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/whatsapp_toolbar_home"
+        },
+        {
+          "text": "WO",
+          "x": 252,
+          "y": 237,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/contact_photo_view"
+        },
+        {
+          "text": "Video call",
+          "x": 848,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Voice call",
+          "x": 1016,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "More options",
+          "x": 1170,
+          "y": 237,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/menuitem_overflow"
+        },
+        {
+          "text": "You are an Android control agent.\nChoose ONE action. Reply with ONLY the action. No explanation. No punctuation.\n\nTASK: Open Chrome and open a new tab\n\nScreen: Chrome browser\n\nSCREEN ELEMENTS:\n  1  Navigate up\n  2  Help and feedback\n  3  element_3\n  4  element_4\n  5  element_5\n  6  element_6\n  7  element_7\n  8  element_8\n  9  element_9\n  10  element_10\n  11  element_11\n  12  element_12\n\nRECENT ACTIONS:\n  opt4_launch:chrome\n  tap [3] Signed in as Amir Shams. amirshamse8@gmail.com. Opens settings.\n\nNavigation Strategy:\n  On home screen / launcher:\n    - If target app visible: tap it directly\n    - If not visible: swipe up to open app drawer, then tap the app\n\n  Inside an app to search for something:\n    - Look for elements with text: Search, Search YouTube, Fi... Read more",
+          "x": 620,
+          "y": 1428,
+          "cls": "android.widget.ListView",
+          "resource_id": "android:id/list"
+        },
+        {
+          "text": "amirshamse8@gmail.com",
+          "x": 404,
+          "y": 990,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Read more",
+          "x": 550,
+          "y": 1816,
+          "cls": "android.view.View",
+          "resource_id": ""
+        },
+        {
+          "text": "Shared via Claude, an AI assistant from Anthropic",
+          "x": 1081,
+          "y": 2256,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.whatsapp:id/link_preview_frame"
+        },
+        {
+          "text": "Forward to\u2026",
+          "x": 880,
+          "y": 2290,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.whatsapp:id/action_button"
+        },
+        {
+          "text": "Emoji, GIFs and stickers",
+          "x": 98,
+          "y": 2617,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/emoji_picker_btn"
+        },
+        {
+          "text": "Attach",
+          "x": 627,
+          "y": 2617,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/input_attach_button"
+        },
+        {
+          "text": "Payment",
+          "x": 795,
+          "y": 2617,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/payment_button"
+        },
+        {
+          "text": "Camera",
+          "x": 956,
+          "y": 2617,
+          "cls": "android.widget.Button",
+          "resource_id": "com.whatsapp:id/camera_btn"
+        },
+        {
+          "text": "Voice message, Button. Double tap and hold to record, slide left to cancel recording, slide up to lock recording on. Release to send.",
+          "x": 1141,
+          "y": 2617,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.whatsapp:id/voice_note_btn"
+        },
+        {
+          "text": "Message",
+          "x": 362,
+          "y": 2616,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.whatsapp:id/entry"
+        }
+      ]
     }
   },
   "transitions": {
@@ -76688,7 +77053,8 @@
     "1d16b25e8e24|tap:Edit suggestion lofi hip hop no lyrics music": "b2867628ccaa",
     "b2867628ccaa|tap:25": "65840c1afc29",
     "99751df5ec71|tap:See 29 tabs": "a34183adf43f",
-    "a34183adf43f|home": "5731aaff4c94"
+    "a34183adf43f|home": "5731aaff4c94",
+    "1025dd6b857e|opt4_launch:whatsapp": "af62a7d780e2"
   }
 }
 

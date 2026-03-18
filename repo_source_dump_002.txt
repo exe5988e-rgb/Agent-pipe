@@ -96136,6 +96136,202 @@
           "resource_id": "com.google.android.youtube:id/edit_suggestion"
         }
       ]
+    },
+    "27ae579c1b34": {
+      "screen_id": "27ae579c1b34",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Navigate up",
+        "Voice search",
+        "Search YouTube",
+        "Edit suggestion experience ludovico einaudi",
+        "Edit suggestion mortals funk remix",
+        "Edit suggestion mortals funk remix",
+        "Edit suggestion manasha",
+        "Edit suggestion manasha",
+        "Edit suggestion after dark",
+        "Edit suggestion after dark",
+        "Edit suggestion luz roja",
+        "Edit suggestion luz roja",
+        "Edit suggestion tiki tiki slowed",
+        "Edit suggestion tiki tiki slowed",
+        "Edit suggestion experience ludovico einaudi",
+        "Edit suggestion experience ludovico einaudi",
+        "Edit suggestion legend never die",
+        "Edit suggestion legend never die",
+        "Edit suggestion alone",
+        "Edit suggestion alone",
+        "Voice search",
+        "Edit suggestion funk universo",
+        "Edit suggestion funk universo"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Voice search",
+          "x": 1156,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/voice_search"
+        },
+        {
+          "text": "Search YouTube",
+          "x": 634,
+          "y": 223,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.google.android.youtube:id/search_edit_text"
+        },
+        {
+          "text": "Edit suggestion experience ludovico einaudi",
+          "x": 620,
+          "y": 1016,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results_recycler_view"
+        },
+        {
+          "text": "Edit suggestion mortals funk remix",
+          "x": 620,
+          "y": 392,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion mortals funk remix",
+          "x": 1156,
+          "y": 392,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion manasha",
+          "x": 620,
+          "y": 560,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion manasha",
+          "x": 1156,
+          "y": 560,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion after dark",
+          "x": 620,
+          "y": 728,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion after dark",
+          "x": 1156,
+          "y": 728,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion luz roja",
+          "x": 620,
+          "y": 896,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion luz roja",
+          "x": 1156,
+          "y": 896,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion tiki tiki slowed",
+          "x": 620,
+          "y": 1064,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion tiki tiki slowed",
+          "x": 1156,
+          "y": 1064,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion experience ludovico einaudi",
+          "x": 620,
+          "y": 1232,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion experience ludovico einaudi",
+          "x": 1156,
+          "y": 1232,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion legend never die",
+          "x": 620,
+          "y": 1400,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion legend never die",
+          "x": 1156,
+          "y": 1400,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion alone",
+          "x": 620,
+          "y": 1568,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion alone",
+          "x": 1156,
+          "y": 1568,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Voice search",
+          "x": 1114,
+          "y": 1655,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/fab"
+        },
+        {
+          "text": "Edit suggestion funk universo",
+          "x": 620,
+          "y": 1688,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion funk universo",
+          "x": 1156,
+          "y": 1688,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        }
+      ]
     }
   },
   "transitions": {
@@ -96866,7 +97062,8 @@
     "aab361294bb9|tap:Edit suggestion mortals funk remix": "92dea947f771",
     "32b120725efd|tap:More": "598ffb8d71c4",
     "598ffb8d71c4|type": "b05565f390c0",
-    "b05565f390c0|tap:Edit suggestion warriyo mortals slowed": "4347dab37f93"
+    "b05565f390c0|tap:Edit suggestion warriyo mortals slowed": "4347dab37f93",
+    "4347dab37f93|tap:warriyo mortals": "27ae579c1b34"
   }
 }
 

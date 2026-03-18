@@ -4622,6 +4622,9 @@ if __name__ == "__main__":
 [16/33] [2★] [settings] Open Settings and check battery percentage
 [21:17:01]   max_steps=8  skill_threshold=12  skills=4
 [21:18:19]   PASS  75.0s
+[21:18:24] 
+[17/33] [2★] [chrome] Open Chrome and go to google.com
+[21:18:24]   max_steps=10  skill_threshold=12  skills=4
 
 
 //===== TERMUXFILE: tap_logger.py =====

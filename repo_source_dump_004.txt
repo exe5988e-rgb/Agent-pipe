@@ -7166,6 +7166,11 @@ All bypass decisions are made on Phone A (controller + llm_client).
 Prompts that reach this bridge always go to Claude — no bypass logic here.
 
 All Session 2/3/4 optimizations (OPT 1/2/3) preserved.
+
+Session 10 fix:
+  POLL_INTERVAL 0.7 → 0.4s, STABLE_COUNT 2 → 1.
+  Claude response is already complete when Stop button disappears.
+  One stable read is sufficient — saves 0.7-1.4s per Claude call.
 """
 
 import base64
@@ -7179,8 +7184,8 @@ from pathlib import Path
 PORT             = 8890
 CLAUDE_PKG       = "com.anthropic.claude"
 CLAUDE_ACTIVITY  = "com.anthropic.claude/.mainactivity.MainActivity"
-POLL_INTERVAL    = 0.7
-STABLE_COUNT     = 2
+POLL_INTERVAL    = 0.4   # was 0.7 — tighter poll, less wait after Claude finishes
+STABLE_COUNT     = 1     # was 2 — one stable read is enough after Stop disappears
 MAX_WAIT         = 120
 SCREEN_W         = 720
 SCREEN_H         = 1520
@@ -7380,6 +7385,9 @@ SKIP_TEXTS = {
     "Start speech input", "Voice Mode", "Toggle ghost mode",
     "Send", "Stop", "Retry",
     "Claude can make mistakes.", "Please double check responses.",
+    "Please double-check responses.",
+    "Claude is AI and can make mistakes.",
+    "Claude is AI and can make mistakes. Please double-check responses.",
     "Sonnet 4.6", "Sonnet 4.6\ufffd",
     "Today", "New chat", "Chats", "Projects", "Artifacts",
     "Recents", "Search Chats", "Select", "Open menu",
@@ -7393,6 +7401,7 @@ SKIP_PREFIXES = (
     "Output ONLY", "Choose ONE", "RECENT ACTIONS", "WARNING:",
     "It looks like", "Is this a test", "Parsing this",
     "Sonnet", "Get more", "How can I help",
+    "Please double-check", "Claude is AI",
 )
 
 def is_still_generating(dump_xml: str) -> bool:
@@ -7522,7 +7531,7 @@ if __name__ == "__main__":
     print(f"  Serial  : {SERIAL}")
     print(f"  ADB     : {ADB}")
     print(f"  Typing  : {'Clipper file-based (OPT 1)' if USE_CLIPBOARD else 'word-by-word (fallback)'}")
-    print(f"  Poll    : {POLL_INTERVAL}s (OPT 2)")
+    print(f"  Poll    : {POLL_INTERVAL}s  Stable: {STABLE_COUNT}x  (Session 10)")
     print(f"  OPT 4   : bypass handled by Phone A — bridge is stateless")
     print()
     server = HTTPServer(("0.0.0.0", PORT), BridgeHandler)

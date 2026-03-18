@@ -83445,6 +83445,162 @@
           "resource_id": ""
         }
       ]
+    },
+    "34a0308428f7": {
+      "screen_id": "34a0308428f7",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Expand Mini Player",
+        "Visit advertiser",
+        "Sponsored",
+        "Close ad panel",
+        "Drag handle",
+        "More options",
+        "Close ad panel",
+        "Angel One - Stock Market, Demat Account & IPO",
+        "Angel One - Stock Market, Demat Account & IPO",
+        "wn",
+        "Angel One - Stock Market, Demat Account & IPO",
+        "Learn more",
+        "Install",
+        "1.7M reviews",
+        "Downloads",
+        "Category",
+        "App image 1",
+        "App image 2"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Expand Mini Player",
+          "x": 620,
+          "y": 488,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/player_overlays"
+        },
+        {
+          "text": "Visit advertiser",
+          "x": 1048,
+          "y": 230,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.google.android.youtube:id/player_learn_more_button"
+        },
+        {
+          "text": "Sponsored",
+          "x": 168,
+          "y": 753,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.google.android.youtube:id/ad_progress_text"
+        },
+        {
+          "text": "Close ad panel",
+          "x": 620,
+          "y": 942,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.google.android.youtube:id/header_container"
+        },
+        {
+          "text": "Drag handle",
+          "x": 620,
+          "y": 858,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/arrow_drag_handle"
+        },
+        {
+          "text": "More options",
+          "x": 974,
+          "y": 963,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Close ad panel",
+          "x": 1156,
+          "y": 963,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Angel One - Stock Market, Demat Account & IPO",
+          "x": 620,
+          "y": 1881,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results"
+        },
+        {
+          "text": "Angel One - Stock Market, Demat Account & IPO",
+          "x": 634,
+          "y": 1212,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "wn",
+          "x": 182,
+          "y": 1173,
+          "cls": "android.widget.ImageView",
+          "resource_id": ""
+        },
+        {
+          "text": "Angel One - Stock Market, Demat Account & IPO",
+          "x": 781,
+          "y": 1212,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Learn more",
+          "x": 331,
+          "y": 1496,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Install",
+          "x": 909,
+          "y": 1496,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "1.7M reviews",
+          "x": 244,
+          "y": 1692,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Downloads",
+          "x": 620,
+          "y": 1692,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Category",
+          "x": 996,
+          "y": 1692,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "App image 1",
+          "x": 324,
+          "y": 2274,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "App image 2",
+          "x": 916,
+          "y": 2274,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -84116,7 +84272,8 @@
     "b71e73538af0|back": "eb822f47a422",
     "5731aaff4c94|swipe": "6f1ebc2312ae",
     "4811387dbea0|tap:More": "0ef41110984b",
-    "0ef41110984b|type": "87fee6983a2f"
+    "0ef41110984b|type": "87fee6983a2f",
+    "308993855721|tap:Home": "34a0308428f7"
   }
 }
 

@@ -4690,6 +4690,7 @@ if __name__ == "__main__":
 [21:36:00] 
 [21/33] [2★] [phone] Open Contacts and search for Mummy
 [21:36:00]   max_steps=10  skill_threshold=12  skills=6
+[21:37:46]   PASS  102.0s
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -5831,7 +5832,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-18T21:35:55.935660",
+  "run_at": "2026-03-18T21:37:46.184300",
   "skills_before": 0,
   "skills_current": 6,
   "results": [
@@ -6012,6 +6013,15 @@ if __name__ == "__main__":
       "difficulty": 2,
       "success": true,
       "elapsed_s": 176.6,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Open Contacts and search for Mummy",
+      "category": "phone",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 102.0,
       "error": null,
       "retried": false
     }
@@ -10753,6 +10763,53 @@ RuntimeError: No LLM backend available.
 [map] transition: launcher_launcher --[tap:21]--> termux_termuxactivity
 [map] screen: termux_termuxactivity (d0e35202)[parser] DEBUG normalized: 'home'
 [parser] INFO parsed 'home' -> {'action': 'home'}
+
+[step] repeat warning: 'tap [1] Clock'
+[llm] prompt tail: ..."our action:\nWARNING: 'tap [1] Clock' repeated 3+ times — try a different action."
+[llm] Phone B (Claude): 'home'
+[step] LLM: 'home'
+[step] action: {'action': 'home'}
+[input] dispatching: KeyEvent(HOME)
+[input] dispatching: KeyEvent(HOME)
+[input] adb -s 192.168.29.48:33117 shell input keyevent 3
+[mem] invalidated com.android.launcher/.Launcher
+[step] step=10/10 done=False history=['opt4_launch:contacts', 'tap [1] Clock', 'tap [1] Clock', 'tap [1] Clock', 'tap [1] Clock', 'tap [1] Clock', 'tap [1] Clock', 'tap [1] Clock', 'tap [1] Clock', 'home']
+
+[controller] history:
+  1. opt4_launch:contacts
+  2. tap [1] Clock
+  3. tap [1] Clock
+  4. tap [1] Clock
+  5. tap [1] Clock
+  6. tap [1] Clock
+  7. tap [1] Clock
+  8. tap [1] Clock
+  9. tap [1] Clock
+  10. home
+
+  Screen Map: 539 screens (0 tainted), 655 transitions
+    whatsapp             175 screens
+    chrome               112 screens
+    youtube              104 screens
+    vending              46 screens
+    termux               26 screens
+    settings             25 screens
+    launcher             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+    notificationmanager  1 screens
+    battery              1 screens
+  TransitionMemory: 605 transitions (281 confirmed, threshold=2)
 
 
 //===== TERMUXFILE: --task =====

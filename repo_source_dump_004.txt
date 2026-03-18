@@ -5714,6 +5714,8 @@ RuntimeError: No LLM backend available.
 [parser] INFO parsed 'tap 4' -> {'action': 'tap', 'target': 4}
 [parser] DEBUG normalized: 'tap 31'
 [parser] INFO parsed 'tap 31' -> {'action': 'tap', 'target': 31}
+[parser] DEBUG normalized: 'tap 4'
+[parser] INFO parsed 'tap 4' -> {'action': 'tap', 'target': 4}
 
 
 //===== TERMUXFILE: --task =====

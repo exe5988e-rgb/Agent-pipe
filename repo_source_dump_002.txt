@@ -77191,6 +77191,81 @@
           "resource_id": ""
         }
       ]
+    },
+    "f6f258ae70ad": {
+      "screen_id": "f6f258ae70ad",
+      "package": "com.android.settings",
+      "activity": "com.android.settings/.SubSettings",
+      "name": "settings_subsettings",
+      "labels": [
+        "On",
+        "OnePlus Nord 3 5G",
+        "IP address and port",
+        "Pair new devices using QR code scanner",
+        "Pair new devices using six-digit code",
+        "Currently connected",
+        "Currently connected"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Back",
+          "x": 98,
+          "y": 230,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.settings:id/coui_toolbar_back_view"
+        },
+        {
+          "text": "On",
+          "x": 620,
+          "y": 461,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "OnePlus Nord 3 5G",
+          "x": 620,
+          "y": 728,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "IP address and port",
+          "x": 620,
+          "y": 954,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Pair new devices using QR code scanner",
+          "x": 620,
+          "y": 1271,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Pair new devices using six-digit code",
+          "x": 620,
+          "y": 1535,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Currently connected",
+          "x": 620,
+          "y": 1929,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Currently connected",
+          "x": 620,
+          "y": 2148,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -77825,7 +77900,8 @@
     "a206f27488e6|tap:Updates": "6dcc835738aa",
     "1025dd6b857e|opt4_launch:youtube": "740ae23375a8",
     "740ae23375a8|tap:Watch most of YouTube ad-free, offline and in the background": "5f41671576ab",
-    "5f41671576ab|tap:Voice search": "0b5a9aba0337"
+    "5f41671576ab|tap:Voice search": "0b5a9aba0337",
+    "1025dd6b857e|opt4_launch:settings": "f6f258ae70ad"
   }
 }
 

@@ -68215,7 +68215,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 47,
+      "visits": 48,
       "tainted": false,
       "elements": [
         {
@@ -86199,6 +86199,58 @@
           "resource_id": ""
         }
       ]
+    },
+    "a5298e720b5a": {
+      "screen_id": "a5298e720b5a",
+      "package": "com.whatsapp",
+      "activity": "com.whatsapp/.contact.ui.picker.ContactPicker",
+      "name": "whatsapp_contactpicker",
+      "labels": [
+        "Network disabled for \"WhatsApp\"",
+        "Don't remind me again",
+        "Later",
+        "Enable",
+        "Enable"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Network disabled for \"WhatsApp\"",
+          "x": 620,
+          "y": 2085,
+          "cls": "android.widget.ScrollView",
+          "resource_id": "com.oplus.trafficmonitor:id/alert_title_scroll_view"
+        },
+        {
+          "text": "Don't remind me again",
+          "x": 390,
+          "y": 2387,
+          "cls": "android.widget.CompoundButton",
+          "resource_id": "com.oplus.trafficmonitor:id/coui_security_alert_dialog_checkbox"
+        },
+        {
+          "text": "Later",
+          "x": 337,
+          "y": 2530,
+          "cls": "android.widget.Button",
+          "resource_id": "android:id/button2"
+        },
+        {
+          "text": "Enable",
+          "x": 620,
+          "y": 2530,
+          "cls": "android.widget.ScrollView",
+          "resource_id": ""
+        },
+        {
+          "text": "Enable",
+          "x": 903,
+          "y": 2530,
+          "cls": "android.widget.Button",
+          "resource_id": "android:id/button1"
+        }
+      ]
     }
   },
   "transitions": {
@@ -86785,7 +86837,7 @@
     "831d7ec0ebae|back": "f3100103b174",
     "f3100103b174|tap:element_7": "5e14b687adda",
     "22cbdc77930c|opt4_launch:contacts": "5731aaff4c94",
-    "5731aaff4c94|opt4_launch:whatsapp": "397d0027180a",
+    "5731aaff4c94|opt4_launch:whatsapp": "a5298e720b5a",
     "6dcc835738aa|tap:You": "13dcb6504714",
     "13dcb6504714|tap:Communities": "615edd0c907f",
     "5731aaff4c94|opt4_launch:youtube": "0e2e17571165",

@@ -4644,6 +4644,7 @@ if __name__ == "__main__":
 [21:20:56] 
 [18/33] [2★] [chrome] Open Chrome and open a new tab
 [21:20:56]   max_steps=8  skill_threshold=12  skills=5
+[21:22:48]   PASS  109.6s
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -5785,7 +5786,7 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-18T21:20:51.227121",
+  "run_at": "2026-03-18T21:22:48.986579",
   "skills_before": 0,
   "skills_current": 5,
   "results": [
@@ -5939,6 +5940,15 @@ if __name__ == "__main__":
       "difficulty": 2,
       "success": true,
       "elapsed_s": 143.8,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Open Chrome and open a new tab",
+      "category": "chrome",
+      "difficulty": 2,
+      "success": true,
+      "elapsed_s": 109.6,
       "error": null,
       "retried": false
     }
@@ -9328,7 +9338,59 @@ nohup: ignoring input
 [ui_parser] child: (56,1155) → 'Build APK · exe5988e-rgb/JarvisMerged@d5529f8: github.com'
 [ui_parser] child: (56,1633) → 'Card menu Will Privacy Display come to Galaxy S25 and other devices with One UI 8.5?'
 [ui_parser] OCR: (56,2281)-(1184,2772) → 'See Ce'
-[ui_parser] full parse -- 20 elements (20 labeled, 4 via OCR/rid/child) from 192.168.29.48:33117
+[ui_parser] full parse -- 20 elements (20 labeled, 4 via OCR/rid/child) from 192.168.29.48:33117[parser] DEBUG normalized: 'done'
+[parser] INFO parsed 'done' -> {'action': 'done'}
+
+[mem] stored com.android.chrome/com.google.android.apps.chrome.Main hash=ed8fdcf878bd elements=20
+[step] UI: ['Open the homepage', 'Card menu Will Privacy Display come to Galaxy S25 and other devices with One UI 8.5?', 'Signed in as Amir Shams. amirshamse8@gmail.com. Opens settings.', 'See 30 tabs', 'Customise and control Google Chrome', 'Search Google or type URL', 'Start voice search', 'Search with your camera using Google Lens']
+[map] new screen: chrome_main (55537c11ef86)
+[tm] transition changed: 5b8b2957dadb|tap:New Incognito tab 7c92bc2f -> 55537c11
+[map] transition: chrome_main --[tap:New Incognito tab]--> chrome_main
+[map] screen: chrome_main (55537c11)
+[skill] matched: 'open chrome and go to'  score=1.00  act=True
+[skill] cannot resolve: 'Switch to this tab.'
+[skill] resolution failed — falling through to LLM
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'done'
+[step] LLM: 'done'
+[step] action: {'action': 'done'}
+[input] DONE — no dispatch
+[mem] invalidated com.android.chrome/com.google.android.apps.chrome.Main
+[skill] similar skill exists — skipping
+[step] step=4/8 done=True history=['opt4_launch:chrome', 'tap [6] Customise and control Google Chrome', 'tap [6] New tab', 'done']
+
+[controller] done in 4 steps
+
+[controller] history:
+  1. opt4_launch:chrome
+  2. tap [6] Customise and control Google Chrome
+  3. tap [6] New tab
+  4. done
+
+  Screen Map: 533 screens (0 tainted), 649 transitions
+    whatsapp             175 screens
+    chrome               110 screens
+    youtube              104 screens
+    vending              43 screens
+    termux               25 screens
+    settings             25 screens
+    launcher             23 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+    notificationmanager  1 screens
+    battery              1 screens
+  TransitionMemory: 599 transitions (279 confirmed, threshold=2)
+
 
 //===== TERMUXFILE: --task =====
 

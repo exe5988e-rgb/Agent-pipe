@@ -48984,6 +48984,162 @@
           "resource_id": ""
         }
       ]
+    },
+    "09c7f03831f6": {
+      "screen_id": "09c7f03831f6",
+      "package": "com.android.chrome",
+      "activity": "com.android.chrome/com.google.android.apps.chrome.Main",
+      "name": "chrome_main",
+      "labels": [
+        "element_1",
+        "Manage open tabs",
+        "New tab",
+        "element_4",
+        "23 standard tabs",
+        "Tab groups",
+        "element_7",
+        "element_8",
+        "Close Google tab",
+        "element_10",
+        "Close Wikipedia tab",
+        "element_12",
+        "element_13",
+        "element_14",
+        "Close restaurants near me open now within 0.2 mi - Google Search tab",
+        "Close Best Restaurants in Dhanbad - Google Search tab",
+        "element_17",
+        "Close THE 10 BEST Restaurants in Dhanbad (Updated March 2026) tab"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "element_1",
+          "x": 620,
+          "y": 1455,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.android.chrome:id/compositor_view_holder"
+        },
+        {
+          "text": "Manage open tabs",
+          "x": 1156,
+          "y": 237,
+          "cls": "android.widget.ImageButton",
+          "resource_id": "com.android.chrome:id/menu_button"
+        },
+        {
+          "text": "New tab",
+          "x": 126,
+          "y": 237,
+          "cls": "android.widget.Button",
+          "resource_id": "com.android.chrome:id/toolbar_action_button"
+        },
+        {
+          "text": "element_4",
+          "x": 620,
+          "y": 237,
+          "cls": "android.widget.HorizontalScrollView",
+          "resource_id": "com.android.chrome:id/pane_switcher"
+        },
+        {
+          "text": "23 standard tabs",
+          "x": 543,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Tab groups",
+          "x": 697,
+          "y": 237,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_7",
+          "x": 620,
+          "y": 1553,
+          "cls": "android.widget.GridView",
+          "resource_id": "com.android.chrome:id/tab_list_recycler_view"
+        },
+        {
+          "text": "element_8",
+          "x": 324,
+          "y": 718,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Close Google tab",
+          "x": 522,
+          "y": 406,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.android.chrome:id/action_button"
+        },
+        {
+          "text": "element_10",
+          "x": 916,
+          "y": 718,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Close Wikipedia tab",
+          "x": 1114,
+          "y": 406,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.android.chrome:id/action_button"
+        },
+        {
+          "text": "element_12",
+          "x": 620,
+          "y": 433,
+          "cls": "android.widget.LinearLayout",
+          "resource_id": "com.android.chrome:id/search_box"
+        },
+        {
+          "text": "element_13",
+          "x": 324,
+          "y": 1505,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "element_14",
+          "x": 916,
+          "y": 1505,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Close restaurants near me open now within 0.2 mi - Google Search tab",
+          "x": 522,
+          "y": 1200,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.android.chrome:id/action_button"
+        },
+        {
+          "text": "Close Best Restaurants in Dhanbad - Google Search tab",
+          "x": 1114,
+          "y": 1200,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.android.chrome:id/action_button"
+        },
+        {
+          "text": "element_17",
+          "x": 324,
+          "y": 2312,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Close THE 10 BEST Restaurants in Dhanbad (Updated March 2026) tab",
+          "x": 522,
+          "y": 2007,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.android.chrome:id/action_button"
+        }
+      ]
     }
   },
   "transitions": {
@@ -49383,7 +49539,8 @@
     "6e151b55eab4|tap:Establishment type": "78311c064f1a",
     "78311c064f1a|swipe": "7367c3c94a53",
     "7367c3c94a53|opt4_launch:whatsapp": "7c51d7e864c3",
-    "635910cc4897|tap:06": "a3b75eb433e2"
+    "635910cc4897|tap:06": "a3b75eb433e2",
+    "a3b75eb433e2|opt4_launch:chrome": "09c7f03831f6"
   }
 }
 

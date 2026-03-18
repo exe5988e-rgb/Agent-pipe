@@ -4495,6 +4495,7 @@ if __name__ == "__main__":
 [20:55:38] 
 [2/33] [1★] [youtube] Open YouTube
 [20:55:38]   max_steps=5  skill_threshold=12  skills=1
+[20:57:37]   PASS  115.4s
 
 
 //===== TERMUXFILE: tap_logger.py =====
@@ -5636,9 +5637,9 @@ if __name__ == "__main__":
 //===== TERMUXFILE: gauntlet_report.json =====
 {
   "in_progress": true,
-  "run_at": "2026-03-18T20:55:33.834404",
+  "run_at": "2026-03-18T20:57:37.519073",
   "skills_before": 0,
-  "skills_current": 1,
+  "skills_current": 2,
   "results": [
     {
       "task": "Open WhatsApp",
@@ -5646,6 +5647,15 @@ if __name__ == "__main__":
       "difficulty": 1,
       "success": true,
       "elapsed_s": 120.8,
+      "error": null,
+      "retried": false
+    },
+    {
+      "task": "Open YouTube",
+      "category": "youtube",
+      "difficulty": 1,
+      "success": true,
+      "elapsed_s": 115.4,
       "error": null,
       "retried": false
     }
@@ -5662,6 +5672,26 @@ if __name__ == "__main__":
       {
         "action": "tap",
         "target": "Back"
+      },
+      {
+        "action": "done"
+      }
+    ],
+    "uses": 0,
+    "version": 3
+  },
+  {
+    "pattern": "open youtube",
+    "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+    "task_example": "Open YouTube",
+    "steps": [
+      {
+        "action": "tap",
+        "target": "Close"
+      },
+      {
+        "action": "tap",
+        "target": "Navigate up"
       },
       {
         "action": "done"
@@ -6021,7 +6051,49 @@ nohup: ignoring input
 [mem] stored com.google.android.youtube/.app.honeycomb.Shell$HomeActivity hash=172a1adb819e elements=31
 [step] UI: ['Cast', 'Notifications, 9+', 'Search', 'filters', 'Explore menu', 'All', 'Music', 'Mixes']
 [map] new screen: youtube_shell$homeactivity (0b5a9aba0337)
-[map] transition: youtube_shell$homeactivity --[tap:Voice search]--> youtube_shell$homeactivity
+[map] transition: youtube_shell$homeactivity --[tap:Voice search]--> youtube_shell$homeactivity[parser] DEBUG normalized: 'done'
+[parser] INFO parsed 'done' -> {'action': 'done'}
+
+[map] screen: youtube_shell$homeactivity (0b5a9aba)
+[llm] prompt tail: ...'p 3 is CORRECT, tap Search is WRONG\n  - Do NOT explain your choice\n\nYour action:'
+[llm] Phone B (Claude): 'done'
+[step] LLM: 'done'
+[step] action: {'action': 'done'}
+[input] DONE — no dispatch
+[mem] invalidated com.google.android.youtube/.app.honeycomb.Shell$HomeActivity
+[skill] learned: 'open youtube'  (3 steps)  [Shell$HomeActivity]
+[step] step=4/5 done=True history=['opt4_launch:youtube', 'tap [2] Close', 'tap [1] Navigate up', 'done']
+
+[controller] done in 4 steps
+
+[controller] history:
+  1. opt4_launch:youtube
+  2. tap [2] Close
+  3. tap [1] Navigate up
+  4. done
+
+  Screen Map: 517 screens (0 tainted), 632 transitions
+    whatsapp             173 screens
+    chrome               106 screens
+    youtube              101 screens
+    vending              42 screens
+    termux               25 screens
+    launcher             23 screens
+    settings             21 screens
+    wirelesssettings     6 screens
+    claude               6 screens
+    dialer               4 screens
+    googlequicksearchbox 2 screens
+    unknown              1 screens
+    android              1 screens
+    standardadb          1 screens
+    clipper              1 screens
+    truecaller           1 screens
+    phone                1 screens
+    membership           1 screens
+    permissioncontroller 1 screens
+  TransitionMemory: 582 transitions (280 confirmed, threshold=2)
+
 
 //===== TERMUXFILE: --task =====
 

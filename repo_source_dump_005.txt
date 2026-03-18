@@ -1,3 +1,58 @@
+//===== TERMUXFILE: jarvis-agent/agent/state.py =====
+from dataclasses import dataclass, field
+
+@dataclass
+class AgentState:
+    task: str
+    step: int = 0
+    history: list = field(default_factory=list)
+    last_screen: str = ""
+    last_ui: list = field(default_factory=list)
+    done: bool = False
+    max_steps: int = 20
+
+    def record(self, action: dict, ui_elements: list) -> None:
+        act = action.get("action", "?")
+        if act == "tap":
+            tid = action.get("target")
+            if tid is not None:
+                label = next((e["text"] for e in ui_elements if e["id"] == tid), f"id={tid}")
+                self.history.append(f"tap [{tid}] {label}")
+            else:
+                self.history.append(f"tap ({action.get('x')},{action.get('y')})")
+        elif act == "type":
+            self.history.append(f"type {action.get('text','')!r}")
+        elif act == "swipe":
+            self.history.append(f"swipe ({action.get('x1')},{action.get('y1')})→({action.get('x2')},{action.get('y2')})")
+        else:
+            self.history.append(act)
+        self.step += 1
+
+    def is_finished(self) -> bool:
+        return self.done or self.step >= self.max_steps
+
+    def summary(self) -> str:
+        return f"step={self.step}/{self.max_steps} done={self.done} history={self.history}"
+
+
+//===== TERMUXFILE: jarvis-agent/perception/screen_capture.py =====
+"""perception/screen_capture.py — wraps Device.take_screenshot()"""
+import os, sys
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, ROOT)
+from executor.device import Device
+
+_cache = {}
+
+def capture_screen(adb_device: str, filename="screen.png") -> str:
+    if adb_device not in _cache:
+        _cache[adb_device] = Device(
+            device_serial = adb_device,
+            output_dir    = os.path.join(ROOT, "screenshots")
+        )
+    return _cache[adb_device].take_screenshot(filename=filename)
+
+
 //===== TERMUXFILE: jarvis-agent/perception/ui_mock_parser.py =====
 """
 perception/ui_mock_parser.py

@@ -10236,6 +10236,8 @@ RuntimeError: No LLM backend available.
 [mem] stored com.android.vending/.AssetBrowserActivity hash=ae0d36e3b20c elements=22
 [step] UI: ['Search Apps & Games', 'Search Google Play', 'Voice search', 'element_4', 'Bike racing games', 'Train station games', 'Bus games', 'Realistic games'][parser] DEBUG normalized: 'tap 1'
 [parser] INFO parsed 'tap 1' -> {'action': 'tap', 'target': 1}
+[parser] DEBUG normalized: 'type spotify'
+[parser] INFO parsed 'type spotify' -> {'action': 'type', 'text': 'spotify'}
 
 
 //===== TERMUXFILE: --task =====

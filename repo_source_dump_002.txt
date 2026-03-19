@@ -99212,7 +99212,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 2,
+      "visits": 3,
       "tainted": false,
       "elements": [
         {
@@ -100714,6 +100714,177 @@
           "resource_id": "com.google.android.youtube:id/edit_suggestion"
         }
       ]
+    },
+    "802ab20dad68": {
+      "screen_id": "802ab20dad68",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Lamborghini Manifesto: The $1.4M Electric Monster \ud83d\ude31\ud83d\udd25",
+        "Search",
+        "More",
+        "Like this video",
+        "Dislike this video",
+        "View 1,594 comments",
+        "Share this video",
+        "Remix this Short along with 15 other remixes",
+        "@GulbaharTechnical",
+        "Go to channel",
+        "@GulbaharTechnical",
+        "Subscribe to @GulbaharTechnical.",
+        "See more videos using this sound",
+        "Lamborghini Manifesto: The $1.4M Electric Monster \ud83d\ude31\ud83d\udd25",
+        "Bro Cleaned the Windshield in 8K Quality \ud83d\ude02\ud83d\ude97",
+        "Shorts",
+        "Create",
+        "Subscriptions: New content is available",
+        "You"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Lamborghini Manifesto: The $1.4M Electric Monster \ud83d\ude31\ud83d\udd25",
+          "x": 620,
+          "y": 1343,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/reel_recycler"
+        },
+        {
+          "text": "Search",
+          "x": 988,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/menu_item_view"
+        },
+        {
+          "text": "More",
+          "x": 1156,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/menu_item_view"
+        },
+        {
+          "text": "Like this video",
+          "x": 1128,
+          "y": 1379,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Dislike this video",
+          "x": 1128,
+          "y": 1589,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "View 1,594 comments",
+          "x": 1128,
+          "y": 1799,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Share this video",
+          "x": 1128,
+          "y": 2009,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Remix this Short along with 15 other remixes",
+          "x": 1128,
+          "y": 2219,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "@GulbaharTechnical",
+          "x": 365,
+          "y": 2260,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Go to channel",
+          "x": 112,
+          "y": 2260,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "@GulbaharTechnical",
+          "x": 420,
+          "y": 2260,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscribe to @GulbaharTechnical.",
+          "x": 810,
+          "y": 2260,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "See more videos using this sound",
+          "x": 1128,
+          "y": 2436,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Lamborghini Manifesto: The $1.4M Electric Monster \ud83d\ude31\ud83d\udd25",
+          "x": 508,
+          "y": 2372,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Bro Cleaned the Windshield in 8K Quality \ud83d\ude02\ud83d\ude97",
+          "x": 508,
+          "y": 2460,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Home",
+          "x": 124,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 372,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Create",
+          "x": 620,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscriptions: New content is available",
+          "x": 868,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "You",
+          "x": 1116,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -101459,7 +101630,7 @@
     "3a04d0679ee9|retry": "5596b6690ec8",
     "5596b6690ec8|retry": "98613a3a14f2",
     "98613a3a14f2|retry": "d3ea7c4c18f5",
-    "d47f737cac7e|opt4_launch:youtube": "c0b2f7604a0c",
+    "d47f737cac7e|opt4_launch:youtube": "802ab20dad68",
     "ccab2504780d|tap:Home": "b5f380d4f84a",
     "b5f380d4f84a|tap:More": "eb19316e3e34",
     "eb19316e3e34|type": "87fee6983a2f",

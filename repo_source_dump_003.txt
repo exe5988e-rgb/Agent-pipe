@@ -7,7 +7,7 @@
 #    2. Verify Phone B Claude bridge is reachable
 #
 #  Phone A : 192.168.29.48:39427
-#  Phone B : 192.168.29.110:8890  (Claude brain)
+#  Phone B : 192.168.29.110:36429  (Claude brain)
 #
 #  Usage:
 #    bash ~/workflows/jarvis_start.sh
@@ -16,7 +16,7 @@
 
 PHONE_A="192.168.29.48:39427"
 PHONE_B="192.168.29.110:36429"
-PHONE_B_BRIDGE="http://192.168.29.110:8890"
+PHONE_B_BRIDGE="http://192.168.29.110:36429"
 
 GREEN="\033[0;32m"; YELLOW="\033[1;33m"; RED="\033[0;31m"; NC="\033[0m"
 log()  { echo -e "${GREEN}[jarvis]${NC} $*"; }

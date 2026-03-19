@@ -99212,7 +99212,7 @@
         "Photos",
         "Camera"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {
@@ -100355,6 +100355,185 @@
           "resource_id": ""
         }
       ]
+    },
+    "c0b2f7604a0c": {
+      "screen_id": "c0b2f7604a0c",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "like this video along with 789 thousand other people",
+        "Search",
+        "More",
+        "like this video along with 789 thousand other people",
+        "Dislike this video",
+        "View 3,951 comments",
+        "Share this video",
+        "Remix this Short along with 2 other remixes",
+        "Go to channel",
+        "Go to channel",
+        "@khiankb",
+        "Subscribe to @khiankb.",
+        "See more videos using this sound",
+        "NEVER CHALLENGE ME! #funny\u200b #comedy\u200b #funnycomedy\u200b",
+        "#funny",
+        "#comed",
+        "Shorts",
+        "Create",
+        "Subscriptions: New content is available",
+        "You"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "like this video along with 789 thousand other people",
+          "x": 620,
+          "y": 1343,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/reel_recycler"
+        },
+        {
+          "text": "Search",
+          "x": 988,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/menu_item_view"
+        },
+        {
+          "text": "More",
+          "x": 1156,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/menu_item_view"
+        },
+        {
+          "text": "like this video along with 789 thousand other people",
+          "x": 1128,
+          "y": 1379,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Dislike this video",
+          "x": 1128,
+          "y": 1589,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "View 3,951 comments",
+          "x": 1128,
+          "y": 1799,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Share this video",
+          "x": 1128,
+          "y": 2009,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Remix this Short along with 2 other remixes",
+          "x": 1128,
+          "y": 2219,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Go to channel",
+          "x": 248,
+          "y": 2345,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Go to channel",
+          "x": 112,
+          "y": 2345,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "@khiankb",
+          "x": 304,
+          "y": 2345,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscribe to @khiankb.",
+          "x": 576,
+          "y": 2345,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "See more videos using this sound",
+          "x": 1128,
+          "y": 2436,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "NEVER CHALLENGE ME! #funny\u200b #comedy\u200b #funnycomedy\u200b",
+          "x": 508,
+          "y": 2460,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "#funny",
+          "x": 679,
+          "y": 2460,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "#comed",
+          "x": 857,
+          "y": 2460,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Home",
+          "x": 124,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 372,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Create",
+          "x": 620,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscriptions: New content is available",
+          "x": 868,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "You",
+          "x": 1116,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -101100,7 +101279,7 @@
     "3a04d0679ee9|retry": "5596b6690ec8",
     "5596b6690ec8|retry": "98613a3a14f2",
     "98613a3a14f2|retry": "d3ea7c4c18f5",
-    "d47f737cac7e|opt4_launch:youtube": "ccab2504780d",
+    "d47f737cac7e|opt4_launch:youtube": "c0b2f7604a0c",
     "ccab2504780d|tap:Home": "b5f380d4f84a",
     "b5f380d4f84a|tap:More": "eb19316e3e34",
     "eb19316e3e34|type": "87fee6983a2f",

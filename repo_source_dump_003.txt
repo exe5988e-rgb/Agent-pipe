@@ -6726,6 +6726,30 @@ if __name__ == "__main__":
     ],
     "uses": 1,
     "version": 3
+  },
+  {
+    "pattern": "play on youtube",
+    "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+    "task_example": "Play Warriyo Mortals on YouTube",
+    "steps": [
+      {
+        "action": "tap",
+        "target": "Search"
+      },
+      {
+        "action": "tap",
+        "target": "Search YouTube"
+      },
+      {
+        "action": "type",
+        "text": "$QUERY"
+      },
+      {
+        "action": "done"
+      }
+    ],
+    "uses": 0,
+    "version": 4
   }
 ]
 

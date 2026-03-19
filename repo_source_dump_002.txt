@@ -97237,6 +97237,202 @@
           "resource_id": ""
         }
       ]
+    },
+    "67609c1d2981": {
+      "screen_id": "67609c1d2981",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Navigate up",
+        "Clear",
+        "warriyo mortals",
+        "Edit suggestion warriyo mortals slowed",
+        "Edit suggestion lxngvx warriyo mortals funk remix",
+        "Edit suggestion warriyo mortals slowed",
+        "Edit suggestion warriyo mortals funk",
+        "Edit suggestion warriyo mortals funk",
+        "Edit suggestion warriyo mortals remix",
+        "Edit suggestion warriyo mortals remix",
+        "Edit suggestion warriyo mortals slowed reverb",
+        "Edit suggestion warriyo mortals slowed reverb",
+        "Edit suggestion lxngvx warriyo mortals funk remix",
+        "Edit suggestion lxngvx warriyo mortals funk remix",
+        "Edit suggestion warriyo mortals ringtone",
+        "Edit suggestion warriyo mortals ringtone",
+        "Edit suggestion warriyo mortals song",
+        "Edit suggestion warriyo mortals song",
+        "Edit suggestion warriyo mortals lyrics",
+        "Edit suggestion warriyo mortals lyrics",
+        "Voice search",
+        "Edit suggestion warriyo mortals edit",
+        "Edit suggestion warriyo mortals edit"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Navigate up",
+          "x": 98,
+          "y": 223,
+          "cls": "android.widget.ImageButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Clear",
+          "x": 1156,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/search_clear"
+        },
+        {
+          "text": "warriyo mortals",
+          "x": 634,
+          "y": 223,
+          "cls": "android.widget.EditText",
+          "resource_id": "com.google.android.youtube:id/search_edit_text"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals slowed",
+          "x": 620,
+          "y": 391,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion lxngvx warriyo mortals funk remix",
+          "x": 620,
+          "y": 1016,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/results_recycler_view"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals slowed",
+          "x": 1156,
+          "y": 391,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals funk",
+          "x": 620,
+          "y": 559,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals funk",
+          "x": 1156,
+          "y": 559,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals remix",
+          "x": 620,
+          "y": 727,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals remix",
+          "x": 1156,
+          "y": 727,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals slowed reverb",
+          "x": 620,
+          "y": 895,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals slowed reverb",
+          "x": 1156,
+          "y": 895,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion lxngvx warriyo mortals funk remix",
+          "x": 620,
+          "y": 1063,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion lxngvx warriyo mortals funk remix",
+          "x": 1156,
+          "y": 1063,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals ringtone",
+          "x": 620,
+          "y": 1231,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals ringtone",
+          "x": 1156,
+          "y": 1231,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals song",
+          "x": 620,
+          "y": 1399,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals song",
+          "x": 1156,
+          "y": 1399,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals lyrics",
+          "x": 620,
+          "y": 1567,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals lyrics",
+          "x": 1156,
+          "y": 1567,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        },
+        {
+          "text": "Voice search",
+          "x": 1114,
+          "y": 1655,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/fab"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals edit",
+          "x": 620,
+          "y": 1688,
+          "cls": "android.view.ViewGroup",
+          "resource_id": "com.google.android.youtube:id/linearLayout"
+        },
+        {
+          "text": "Edit suggestion warriyo mortals edit",
+          "x": 1156,
+          "y": 1688,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/edit_suggestion"
+        }
+      ]
     }
   },
   "transitions": {
@@ -97973,7 +98169,8 @@
     "b05565f390c0|tap:Edit suggestion warriyo mortals slowed reverb": "469fb4fe932d",
     "469fb4fe932d|tap:38": "242f1044b84b",
     "b58a8472c4bd|opt4_launch:youtube": "5d8b33fe74c0",
-    "5d8b33fe74c0|tap:More": "80ff94df1647"
+    "5d8b33fe74c0|tap:More": "80ff94df1647",
+    "87fee6983a2f|tap:Edit suggestion warriyo mortals slowed": "67609c1d2981"
   }
 }
 

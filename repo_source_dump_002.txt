@@ -96934,6 +96934,309 @@
           "resource_id": ""
         }
       ]
+    },
+    "b58a8472c4bd": {
+      "screen_id": "b58a8472c4bd",
+      "package": "com.android.launcher",
+      "activity": "com.android.launcher/.Launcher",
+      "name": "launcher_launcher",
+      "labels": [
+        "Folder: Tools",
+        "Tools",
+        "Grok",
+        "Roblox",
+        "Hollow Knight",
+        "Discord",
+        "OC Auto Clicker",
+        "DevTools",
+        "Gemini",
+        "System boost",
+        "SearchButton",
+        "Phone",
+        "Messages",
+        "Photos",
+        "Camera"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Folder: Tools",
+          "x": 620,
+          "y": 803,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Tools",
+          "x": 620,
+          "y": 938,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.android.launcher:id/folder_icon_name"
+        },
+        {
+          "text": "Grok",
+          "x": 152,
+          "y": 1188,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Roblox",
+          "x": 386,
+          "y": 1188,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Hollow Knight",
+          "x": 152,
+          "y": 1573,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Discord",
+          "x": 386,
+          "y": 1573,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "OC Auto Clicker",
+          "x": 152,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "DevTools",
+          "x": 386,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Gemini",
+          "x": 620,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "System boost",
+          "x": 854,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "SearchButton",
+          "x": 620,
+          "y": 2280,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.android.launcher:id/page_indicator"
+        },
+        {
+          "text": "Phone",
+          "x": 269,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Messages",
+          "x": 503,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Photos",
+          "x": 737,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Camera",
+          "x": 971,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        }
+      ]
+    },
+    "5d8b33fe74c0": {
+      "screen_id": "5d8b33fe74c0",
+      "package": "com.google.android.youtube",
+      "activity": "com.google.android.youtube/.app.honeycomb.Shell$HomeActivity",
+      "name": "youtube_shell$homeactivity",
+      "labels": [
+        "Deadpool dance Bye-bye-bye 4k | Deadpool and wolverine \u00b7 @JuicyEDITS77",
+        "Search",
+        "More",
+        "like this video along with 39 thousand other people",
+        "Dislike this video",
+        "View 900 comments",
+        "Share this video",
+        "Remix this Short along with 16 thousand other remixes",
+        "@Chloethevalkyrie",
+        "Go to channel",
+        "@Chloethevalkyrie",
+        "Subscribe to @Chloethevalkyrie.",
+        "Deadpool vs The Mask",
+        "See more videos using this sound",
+        "Deadpool dance Bye-bye-bye 4k | Deadpool and wolverine \u00b7 @JuicyEDITS77",
+        "Shorts",
+        "Create",
+        "Subscriptions: New content is available",
+        "You"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "Deadpool dance Bye-bye-bye 4k | Deadpool and wolverine \u00b7 @JuicyEDITS77",
+          "x": 620,
+          "y": 1343,
+          "cls": "android.support.v7.widget.RecyclerView",
+          "resource_id": "com.google.android.youtube:id/reel_recycler"
+        },
+        {
+          "text": "Search",
+          "x": 988,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/menu_item_view"
+        },
+        {
+          "text": "More",
+          "x": 1156,
+          "y": 223,
+          "cls": "android.widget.ImageView",
+          "resource_id": "com.google.android.youtube:id/menu_item_view"
+        },
+        {
+          "text": "like this video along with 39 thousand other people",
+          "x": 1128,
+          "y": 1379,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "Dislike this video",
+          "x": 1128,
+          "y": 1589,
+          "cls": "android.widget.RadioButton",
+          "resource_id": ""
+        },
+        {
+          "text": "View 900 comments",
+          "x": 1128,
+          "y": 1799,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Share this video",
+          "x": 1128,
+          "y": 2009,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Remix this Short along with 16 thousand other remixes",
+          "x": 1128,
+          "y": 2219,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "@Chloethevalkyrie",
+          "x": 342,
+          "y": 2219,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "Go to channel",
+          "x": 112,
+          "y": 2219,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "@Chloethevalkyrie",
+          "x": 398,
+          "y": 2219,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscribe to @Chloethevalkyrie.",
+          "x": 765,
+          "y": 2219,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Deadpool vs The Mask",
+          "x": 508,
+          "y": 2334,
+          "cls": "android.view.ViewGroup",
+          "resource_id": ""
+        },
+        {
+          "text": "See more videos using this sound",
+          "x": 1128,
+          "y": 2436,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Deadpool dance Bye-bye-bye 4k | Deadpool and wolverine \u00b7 @JuicyEDITS77",
+          "x": 536,
+          "y": 2443,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Home",
+          "x": 124,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Shorts",
+          "x": 372,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Create",
+          "x": 620,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "Subscriptions: New content is available",
+          "x": 868,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        },
+        {
+          "text": "You",
+          "x": 1116,
+          "y": 2632,
+          "cls": "android.widget.Button",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -97668,7 +97971,8 @@
     "4347dab37f93|tap:warriyo mortals": "27ae579c1b34",
     "27ae579c1b34|type": "b05565f390c0",
     "b05565f390c0|tap:Edit suggestion warriyo mortals slowed reverb": "469fb4fe932d",
-    "469fb4fe932d|tap:38": "242f1044b84b"
+    "469fb4fe932d|tap:38": "242f1044b84b",
+    "b58a8472c4bd|opt4_launch:youtube": "5d8b33fe74c0"
   }
 }
 

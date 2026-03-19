@@ -5015,9 +5015,9 @@ if __name__ == "__main__":
     "last_seen": 1773909223.3663626
   },
   "e3b9e28ba7ee|retry": {
-    "to": "8bd4aa0f7819",
-    "count": 5,
-    "last_seen": 1773909366.2928593
+    "to": "d7d4ac593e75",
+    "count": 1,
+    "last_seen": 1773909375.4728823
   }
 }
 

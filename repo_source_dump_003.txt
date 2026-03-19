@@ -97,6 +97,17 @@ Run on either Phone A or Phone B — patches all relevant files.
 
 Usage:
   python3 ~/set_ports.py
+
+Ports explained:
+  Phone A ADB port  — changes on reboot (e.g. 39427)
+  Phone B ADB port  — changes on reboot (e.g. 36429) → goes into claude_bridge.py SERIAL
+  Phone B HTTP port — FIXED at 8890, never changes    → goes into llm_client.py PHONE_B_URL
+
+Session 10 fix:
+  - Separated Phone B ADB port (SERIAL in bridge) from Phone B HTTP port (URL in llm_client).
+    Old script conflated them — setting bridge port to 8890 instead of ADB serial.
+  - Added workflows/claude_bridge.py to PATCHES.
+  - Fixed no-match issues by checking actual file content for variable names.
 """
 
 import os
@@ -105,7 +116,6 @@ import sys
 
 HOME = os.path.expanduser("~")
 
-# ── ANSI colors ───────────────────────────────────────────────────────────────
 R   = "\033[1;31m"
 G   = "\033[1;32m"
 Y   = "\033[1;33m"
@@ -116,62 +126,7 @@ DIM = "\033[2m"
 RST = "\033[0m"
 LINE = f"{DIM}{'─'*54}{RST}"
 
-# ── Files to patch ────────────────────────────────────────────────────────────
-# (relative_path, [(label, pattern, replacement)])
-# {A_IP}, {A_PORT}, {B_IP}, {B_PORT} substituted at apply time
-
-PATCHES = [
-    # Phone B bridge
-    ("claude_bridge.py", [
-        ("SERIAL",
-         r'(SERIAL\s*=\s*")[^"]+(")',
-         r'\g<1>{B_IP}:{B_PORT}\g<2>'),
-    ]),
-    # Phone A agent controller
-    ("test/jarvis-agent/agent/controller.py", [
-        ("DEFAULT_DEVICE",
-         r'(DEFAULT_DEVICE\s*=\s*")[^"]+(")',
-         r'\g<1>{A_IP}:{A_PORT}\g<2>'),
-    ]),
-    ("workflows/test/jarvis-agent/agent/controller.py", [
-        ("DEFAULT_DEVICE",
-         r'(DEFAULT_DEVICE\s*=\s*")[^"]+(")',
-         r'\g<1>{A_IP}:{A_PORT}\g<2>'),
-    ]),
-    # llm_client — both Phone A serial and Phone B URL
-    ("test/jarvis-agent/reasoning/llm_client.py", [
-        ("PHONE_B_URL",
-         r'(PHONE_B_URL\s*=\s*"http://)[^/]+(:\d+)(")',
-         r'\g<1>{B_IP}:{B_PORT}\g<3>'),
-        ("PHONE_A_SERIAL",
-         r'(PHONE_A_SERIAL\s*=\s*")[^"]+(")',
-         r'\g<1>{A_IP}:{A_PORT}\g<2>'),
-    ]),
-    ("workflows/test/jarvis-agent/reasoning/llm_client.py", [
-        ("PHONE_B_URL",
-         r'(PHONE_B_URL\s*=\s*"http://)[^/]+(:\d+)(")',
-         r'\g<1>{B_IP}:{B_PORT}\g<3>'),
-        ("PHONE_A_SERIAL",
-         r'(PHONE_A_SERIAL\s*=\s*")[^"]+(")',
-         r'\g<1>{A_IP}:{A_PORT}\g<2>'),
-    ]),
-    # init scripts
-("jarvis_server_init.sh", [
-    ("Phone A/B ports",
-     r'192\.168\.\d+\.\d+:\d+',
-     None),
-]),
-("workflows/jarvis_server_init.sh", [
-    ("Phone A/B ports",
-     r'192\.168\.\d+\.\d+:\d+',
-     None),
-]),
-("workflows/jarvis_start.sh", [
-    ("Phone A/B ports",
-     r'192\.168\.\d+\.\d+:\d+',
-     None),
-]),
-]
+BRIDGE_HTTP_PORT = "8890"  # fixed, never changes
 
 def banner():
     os.system("clear")
@@ -184,148 +139,156 @@ def banner():
 
 def read_current():
     """Read current ports from existing files."""
-    a_ip, a_port = "192.168.29.48", "37891"
-    b_ip, b_port = "192.168.29.110", "39991"
+    a_ip, a_port   = "192.168.29.48",  "39427"
+    b_ip, b_adb    = "192.168.29.110", "36429"
 
-    bridge = os.path.join(HOME, "claude_bridge.py")
-    if os.path.exists(bridge):
-        m = re.search(r'SERIAL\s*=\s*"([^":]+):(\d+)"', open(bridge).read())
-        if m:
-            b_ip, b_port = m.group(1), m.group(2)
+    # Phone B ADB serial from claude_bridge.py
+    for bridge_path in ["claude_bridge.py", "workflows/claude_bridge.py"]:
+        full = os.path.join(HOME, bridge_path)
+        if os.path.exists(full):
+            m = re.search(r'SERIAL\s*=\s*"([^":]+):(\d+)"', open(full).read())
+            if m:
+                b_ip   = m.group(1)
+                b_adb  = m.group(2)
+            break
 
+    # Phone A serial from llm_client.py
     for llm_path in [
         "test/jarvis-agent/reasoning/llm_client.py",
         "workflows/test/jarvis-agent/reasoning/llm_client.py",
     ]:
         full = os.path.join(HOME, llm_path)
         if os.path.exists(full):
-            text = open(full).read()
-            m = re.search(r'PHONE_A_SERIAL\s*=\s*"([^":]+):(\d+)"', text)
+            m = re.search(r'PHONE_A_SERIAL\s*=\s*"([^":]+):(\d+)"', open(full).read())
             if m:
-                a_ip, a_port = m.group(1), m.group(2)
-            m2 = re.search(r'PHONE_B_URL\s*=\s*"http://([^/:]+):(\d+)"', text)
-            if m2:
-                b_ip, b_port = m2.group(1), m2.group(2)
+                a_ip  = m.group(1)
+                a_port = m.group(2)
             break
 
-    return a_ip, a_port, b_ip, b_port
+    return a_ip, a_port, b_ip, b_adb
 
-def ask_device(name, color, cur_ip, cur_port):
-    print(f"  {color}● {name}{RST}")
-    print(f"  {DIM}Current: {cur_ip}:{cur_port}{RST}\n")
+def ask(prompt, default):
+    val = input(f"  {prompt} [{default}]: ").strip()
+    return val if val else default
 
-    ip_in = input(f"  IP   [{cur_ip}]: ").strip()
-    ip = ip_in if ip_in else cur_ip
-
-    port_in = input(f"  Port [{cur_port}]: ").strip()
-    if port_in and re.match(r'^\d+$', port_in):
-        port = port_in
-    else:
-        port = cur_port
-        if port_in:
-            print(f"  {Y}Invalid port — keeping {cur_port}{RST}")
-
-    print()
-    return ip, port
-
-def apply_simple(rel, label, pattern, repl, a_ip, a_port, b_ip, b_port):
-    full = os.path.join(HOME, rel)
+def patch_file(path, replacements):
+    """Apply list of (pattern, replacement) to file. replacement uses {A_IP} etc."""
+    full = os.path.join(HOME, path)
     if not os.path.exists(full):
+        print(f"  {DIM}~  not found — {path}{RST}")
         return
-
-    text = open(full).read()
-    r = repl.replace("{A_IP}", a_ip).replace("{A_PORT}", a_port) \
-            .replace("{B_IP}", b_ip).replace("{B_PORT}", b_port)
-    new = re.sub(pattern, r, text)
-
-    if new != text:
-        open(full, "w").write(new)
-        print(f"  {G}✓{RST}  {label:<20} {DIM}{rel}{RST}")
-    else:
-        print(f"  {DIM}~  {label:<20} no match — {rel}{RST}")
-
-def apply_init_sh(rel, a_ip, a_port, b_ip, b_port):
-    """Replace all IP:port pairs in shell scripts mapping old→new."""
-    full = os.path.join(HOME, rel)
-    if not os.path.exists(full):
-        return
-
     text = open(full).read()
     original = text
-
-    # collect all unique IP:port pairs in file
-    pairs = re.findall(r'(192\.168\.\d+\.\d+):(\d+)', text)
-    if not pairs:
-        print(f"  {DIM}~  no IP:port found — {rel}{RST}")
-        return
-
-    # heuristic: lower port → Phone A, higher port or second IP → Phone B
-    # just replace all — user controls which is A vs B via prompt
-    unique = list(dict.fromkeys(pairs))  # preserve order, dedupe
-
-    if len(unique) >= 2:
-        old_a_ip, old_a_port = unique[0]
-        old_b_ip, old_b_port = unique[1]
-        text = text.replace(f"{old_a_ip}:{old_a_port}", f"{a_ip}:{a_port}")
-        text = text.replace(f"{old_b_ip}:{old_b_port}", f"{b_ip}:{b_port}")
-    elif len(unique) == 1:
-        old_ip, old_port = unique[0]
-        text = text.replace(f"{old_ip}:{old_port}", f"{b_ip}:{b_port}")
-
+    for label, pattern, repl in replacements:
+        new = re.sub(pattern, repl, text)
+        if new != text:
+            print(f"  {G}✓{RST}  {label:<22} {DIM}{path}{RST}")
+            text = new
+        else:
+            print(f"  {DIM}~  {label:<22} no match — {path}{RST}")
     if text != original:
         open(full, "w").write(text)
-        print(f"  {G}✓{RST}  ports updated      {DIM}{rel}{RST}")
-    else:
-        print(f"  {DIM}~  no changes        {rel}{RST}")
 
-def confirm(a_ip, a_port, b_ip, b_port):
-    print(LINE)
-    print(f"\n  {W}Summary:{RST}\n")
-    print(f"  {B}Phone A (OPPO){RST}              {a_ip}:{a_port}")
-    print(f"  {C}Phone B (Galaxy A10s){RST}       {b_ip}:{b_port}")
-    print()
-    ans = input(f"  Apply? [{G}Y{RST}/{R}n{RST}]: ").strip().lower()
-    return ans in ("", "y", "yes")
+def patch_sh(path, a_ip, a_port, b_ip, b_adb):
+    """Replace all IP:port pairs in shell scripts."""
+    full = os.path.join(HOME, path)
+    if not os.path.exists(full):
+        return
+    text = open(full).read()
+    original = text
+    pairs = list(dict.fromkeys(re.findall(r'(192\.168\.\d+\.\d+):(\d+)', text)))
+    if not pairs:
+        print(f"  {DIM}~  no IP:port found — {path}{RST}")
+        return
+    if len(pairs) >= 2:
+        text = text.replace(f"{pairs[0][0]}:{pairs[0][1]}", f"{a_ip}:{a_port}")
+        text = text.replace(f"{pairs[1][0]}:{pairs[1][1]}", f"{b_ip}:{b_adb}")
+    elif len(pairs) == 1:
+        text = text.replace(f"{pairs[0][0]}:{pairs[0][1]}", f"{a_ip}:{a_port}")
+    if text != original:
+        open(full, "w").write(text)
+        print(f"  {G}✓{RST}  ports updated      {DIM}{path}{RST}")
+    else:
+        print(f"  {DIM}~  no changes        {path}{RST}")
 
 def main():
     banner()
 
-    a_ip, a_port, b_ip, b_port = read_current()
+    a_ip, a_port, b_ip, b_adb = read_current()
 
     print(f"  {W}Current:{RST}")
-    print(f"  {B}Phone A{RST}  {a_ip}:{a_port}")
-    print(f"  {C}Phone B{RST}  {b_ip}:{b_port}")
+    print(f"  {B}Phone A{RST}  ADB: {a_ip}:{a_port}")
+    print(f"  {C}Phone B{RST}  ADB: {b_ip}:{b_adb}  HTTP: {b_ip}:{BRIDGE_HTTP_PORT} (fixed)")
     print(f"\n{LINE}\n")
     print(f"  Press {G}Enter{RST} to keep current value\n")
 
-    print(f"{B}  PHONE A — OPPO (agent loop){RST}")
-    a_ip, a_port = ask_device("Phone A", B, a_ip, a_port)
-
-    print(LINE)
+    print(f"{B}  PHONE A — OPPO (agent loop){RST}\n")
+    a_ip   = ask("IP  ", a_ip)
+    a_port = ask("ADB Port", a_port)
     print()
 
-    print(f"{C}  PHONE B — Samsung Galaxy A10s (bridge){RST}")
-    b_ip, b_port = ask_device("Phone B", C, b_ip, b_port)
+    print(LINE)
+    print(f"\n{C}  PHONE B — Samsung Galaxy A10s (bridge){RST}\n")
+    b_ip   = ask("IP  ", b_ip)
+    b_adb  = ask("ADB Port (changes on reboot)", b_adb)
+    print()
 
-    if not confirm(a_ip, a_port, b_ip, b_port):
+    print(LINE)
+    print(f"\n  {W}Summary:{RST}\n")
+    print(f"  {B}Phone A{RST}  {a_ip}:{a_port}")
+    print(f"  {C}Phone B{RST}  ADB={b_ip}:{b_adb}  HTTP={b_ip}:{BRIDGE_HTTP_PORT}")
+    print()
+    ans = input(f"  Apply? [{G}Y{RST}/{R}n{RST}]: ").strip().lower()
+    if ans not in ("", "y", "yes"):
         print(f"\n  {Y}Cancelled.{RST}\n")
         sys.exit(0)
 
     print(f"\n{LINE}")
     print(f"  {W}Applying...{RST}\n")
 
-    for rel, patches in PATCHES:
-        for label, pattern, repl in patches:
-            if repl is None:
-                apply_init_sh(rel, a_ip, a_port, b_ip, b_port)
-                break
-            else:
-                apply_simple(rel, label, pattern, repl, a_ip, a_port, b_ip, b_port)
+    # ── claude_bridge.py: SERIAL = Phone B ADB ──────────────────────────────
+    for path in ["claude_bridge.py", "workflows/claude_bridge.py"]:
+        patch_file(path, [
+            ("SERIAL (Phone B ADB)",
+             r'(SERIAL\s*=\s*")[^"]+(")',
+             f'\\g<1>{b_ip}:{b_adb}\\g<2>'),
+        ])
+
+    # ── controller.py: DEFAULT_DEVICE = Phone A ADB ─────────────────────────
+    for path in [
+        "test/jarvis-agent/agent/controller.py",
+        "workflows/test/jarvis-agent/agent/controller.py",
+    ]:
+        patch_file(path, [
+            ("DEFAULT_DEVICE (Phone A)",
+             r'(DEFAULT_DEVICE\s*=\s*")[^"]+(")',
+             f'\\g<1>{a_ip}:{a_port}\\g<2>'),
+        ])
+
+    # ── llm_client.py: PHONE_A_SERIAL + PHONE_B_URL (HTTP port stays 8890) ──
+    for path in [
+        "test/jarvis-agent/reasoning/llm_client.py",
+        "workflows/test/jarvis-agent/reasoning/llm_client.py",
+    ]:
+        patch_file(path, [
+            ("PHONE_A_SERIAL",
+             r'(PHONE_A_SERIAL\s*=\s*")[^"]+(")',
+             f'\\g<1>{a_ip}:{a_port}\\g<2>'),
+            ("PHONE_B_URL",
+             r'(PHONE_B_URL\s*=\s*"http://)[^"]+(")',
+             f'\\g<1>{b_ip}:{BRIDGE_HTTP_PORT}\\g<2>'),
+        ])
+
+    # ── shell scripts ────────────────────────────────────────────────────────
+    for path in ["jarvis_server_init.sh", "workflows/jarvis_server_init.sh",
+                 "workflows/jarvis_start.sh"]:
+        patch_sh(path, a_ip, a_port, b_ip, b_adb)
 
     print(f"\n{LINE}")
     print(f"\n  {G}Done.{RST}\n")
-    print(f"  {DIM}Phone B — restart bridge:{RST}")
-    print(f"  pkill -f claude_bridge && python3 ~/claude_bridge.py\n")
+    print(f"  {DIM}Restart bridge on Phone B:{RST}")
+    print(f"  adb -s {b_ip}:{b_adb} shell am startservice ca.zgrs.clipper/.ClipboardService")
+    print(f"  pkill -f claude_bridge.py && python3 ~/claude_bridge.py\n")
 
 if __name__ == "__main__":
     main()

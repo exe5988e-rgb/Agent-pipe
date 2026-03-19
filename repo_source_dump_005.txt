@@ -2236,6 +2236,11 @@ Run on either Phone A or Phone B — patches all relevant files.
 
 Usage:
   python3 ~/set_ports.py
+
+Session 10 fix:
+  - PHONE_B_URL regex fixed: now replaces both IP and port
+    (old regex kept the old port from the file — only IP was updated)
+  - Added workflows/claude_bridge.py to PATCHES
 """
 
 import os
@@ -2260,8 +2265,13 @@ LINE = f"{DIM}{'─'*54}{RST}"
 # {A_IP}, {A_PORT}, {B_IP}, {B_PORT} substituted at apply time
 
 PATCHES = [
-    # Phone B bridge
+    # Phone B bridge (both locations)
     ("claude_bridge.py", [
+        ("SERIAL",
+         r'(SERIAL\s*=\s*")[^"]+(")',
+         r'\g<1>{B_IP}:{B_PORT}\g<2>'),
+    ]),
+    ("workflows/claude_bridge.py", [
         ("SERIAL",
          r'(SERIAL\s*=\s*")[^"]+(")',
          r'\g<1>{B_IP}:{B_PORT}\g<2>'),
@@ -2277,19 +2287,19 @@ PATCHES = [
          r'(DEFAULT_DEVICE\s*=\s*")[^"]+(")',
          r'\g<1>{A_IP}:{A_PORT}\g<2>'),
     ]),
-    # llm_client — both Phone A serial and Phone B URL
+    # llm_client — Phone A serial + Phone B URL (IP AND port)
     ("test/jarvis-agent/reasoning/llm_client.py", [
         ("PHONE_B_URL",
-         r'(PHONE_B_URL\s*=\s*"http://)[^/]+(:\d+)(")',
-         r'\g<1>{B_IP}:{B_PORT}\g<3>'),
+         r'(PHONE_B_URL\s*=\s*"http://)[^"]+(")',
+         r'\g<1>{B_IP}:{B_PORT}\g<2>'),
         ("PHONE_A_SERIAL",
          r'(PHONE_A_SERIAL\s*=\s*")[^"]+(")',
          r'\g<1>{A_IP}:{A_PORT}\g<2>'),
     ]),
     ("workflows/test/jarvis-agent/reasoning/llm_client.py", [
         ("PHONE_B_URL",
-         r'(PHONE_B_URL\s*=\s*"http://)[^/]+(:\d+)(")',
-         r'\g<1>{B_IP}:{B_PORT}\g<3>'),
+         r'(PHONE_B_URL\s*=\s*"http://)[^"]+(")',
+         r'\g<1>{B_IP}:{B_PORT}\g<2>'),
         ("PHONE_A_SERIAL",
          r'(PHONE_A_SERIAL\s*=\s*")[^"]+(")',
          r'\g<1>{A_IP}:{A_PORT}\g<2>'),
@@ -2387,15 +2397,12 @@ def apply_init_sh(rel, a_ip, a_port, b_ip, b_port):
     text = open(full).read()
     original = text
 
-    # collect all unique IP:port pairs in file
     pairs = re.findall(r'(192\.168\.\d+\.\d+):(\d+)', text)
     if not pairs:
         print(f"  {DIM}~  no IP:port found — {rel}{RST}")
         return
 
-    # heuristic: lower port → Phone A, higher port or second IP → Phone B
-    # just replace all — user controls which is A vs B via prompt
-    unique = list(dict.fromkeys(pairs))  # preserve order, dedupe
+    unique = list(dict.fromkeys(pairs))
 
     if len(unique) >= 2:
         old_a_ip, old_a_port = unique[0]

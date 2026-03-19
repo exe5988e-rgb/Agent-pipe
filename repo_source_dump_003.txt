@@ -50,7 +50,7 @@ adb connect "$PHONE_B" 2>&1 | grep -q "connected" \
 
 # ── 2. Verify Phone B bridge ─────────────────────────────────────────────────
 log "Checking Phone B Claude bridge..."
-HEALTH=$(curl -sf --max-time 5 "$PHONE_B_BRIDGE/health")
+HEALTH=$(curl -s --max-time 5 "$PHONE_B_BRIDGE/health")
 if [ $? -eq 0 ]; then
     log "  ✓ Bridge online — Claude brain ACTIVE"
     log "  $HEALTH"

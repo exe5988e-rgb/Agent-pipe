@@ -72450,7 +72450,7 @@
         "Search YouTube",
         "Voice search"
       ],
-      "visits": 2,
+      "visits": 3,
       "tainted": false,
       "elements": [
         {
@@ -97972,7 +97972,8 @@
     "27ae579c1b34|type": "b05565f390c0",
     "b05565f390c0|tap:Edit suggestion warriyo mortals slowed reverb": "469fb4fe932d",
     "469fb4fe932d|tap:38": "242f1044b84b",
-    "b58a8472c4bd|opt4_launch:youtube": "5d8b33fe74c0"
+    "b58a8472c4bd|opt4_launch:youtube": "5d8b33fe74c0",
+    "5d8b33fe74c0|tap:More": "80ff94df1647"
   }
 }
 

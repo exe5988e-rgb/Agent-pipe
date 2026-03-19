@@ -67451,7 +67451,7 @@
         "Subscriptions: New content is available",
         "You"
       ],
-      "visits": 1,
+      "visits": 2,
       "tainted": false,
       "elements": [
         {
@@ -99182,6 +99182,194 @@
           "resource_id": ""
         }
       ]
+    },
+    "d47f737cac7e": {
+      "screen_id": "d47f737cac7e",
+      "package": "com.android.launcher",
+      "activity": "com.android.launcher/.Launcher",
+      "name": "launcher_launcher",
+      "labels": [
+        "WhatsApp",
+        "Apple Music",
+        "Aakash iTutor",
+        "CarInfo",
+        "Flipkart",
+        "MyJio",
+        "Quran",
+        "ZArchiver",
+        "Telegram",
+        "myAakash",
+        "Amazon",
+        "Zapya",
+        "Meet (original)",
+        "Folder: Folder",
+        "Folder",
+        "Vehicle Information",
+        "Lens",
+        "SearchButton",
+        "Phone",
+        "Messages",
+        "Photos",
+        "Camera"
+      ],
+      "visits": 1,
+      "tainted": false,
+      "elements": [
+        {
+          "text": "WhatsApp",
+          "x": 152,
+          "y": 418,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Apple Music",
+          "x": 386,
+          "y": 418,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Aakash iTutor",
+          "x": 620,
+          "y": 418,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "CarInfo",
+          "x": 854,
+          "y": 418,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Flipkart",
+          "x": 1088,
+          "y": 418,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "MyJio",
+          "x": 152,
+          "y": 803,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Quran",
+          "x": 386,
+          "y": 803,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "ZArchiver",
+          "x": 620,
+          "y": 803,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Telegram",
+          "x": 854,
+          "y": 803,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "myAakash",
+          "x": 1088,
+          "y": 803,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Amazon",
+          "x": 152,
+          "y": 1188,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Zapya",
+          "x": 386,
+          "y": 1188,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Meet (original)",
+          "x": 620,
+          "y": 1188,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Folder: Folder",
+          "x": 971,
+          "y": 1381,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": ""
+        },
+        {
+          "text": "Folder",
+          "x": 971,
+          "y": 1708,
+          "cls": "android.widget.TextView",
+          "resource_id": "com.android.launcher:id/folder_icon_name"
+        },
+        {
+          "text": "Vehicle Information",
+          "x": 152,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Lens",
+          "x": 854,
+          "y": 1958,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "SearchButton",
+          "x": 620,
+          "y": 2280,
+          "cls": "android.widget.FrameLayout",
+          "resource_id": "com.android.launcher:id/page_indicator"
+        },
+        {
+          "text": "Phone",
+          "x": 269,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Messages",
+          "x": 503,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Photos",
+          "x": 737,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        },
+        {
+          "text": "Camera",
+          "x": 971,
+          "y": 2544,
+          "cls": "android.widget.TextView",
+          "resource_id": ""
+        }
+      ]
     }
   },
   "transitions": {
@@ -99926,7 +100114,8 @@
     "aa436d0824fc|opt4_launch:youtube": "3a04d0679ee9",
     "3a04d0679ee9|retry": "5596b6690ec8",
     "5596b6690ec8|retry": "98613a3a14f2",
-    "98613a3a14f2|retry": "d3ea7c4c18f5"
+    "98613a3a14f2|retry": "d3ea7c4c18f5",
+    "d47f737cac7e|opt4_launch:youtube": "ccab2504780d"
   }
 }
 
